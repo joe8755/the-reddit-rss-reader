@@ -2,10 +2,836 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://joe8755.github.io/the-reddit-rss-reader/index.html</id>
     <title>the reddit rss reader</title>
-    <updated>2024-05-14T00:27:55.912Z</updated>
+    <updated>2024-05-15T00:09:14.090Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://joe8755.github.io/the-reddit-rss-reader/index.html"/>
     <link rel="self" href="https://joe8755.github.io/the-reddit-rss-reader/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[Compiling error with gcc "free" and "malloc" not declared but the error is in the cstdlib file, not in my code...]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1cs73h5/compiling_error_with_gcc_free_and_malloc_not/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1cs73h5/compiling_error_with_gcc_free_and_malloc_not/"/>
+        <updated>2024-05-14T23:57:31.000Z</updated>
+        <summary type="html"><![CDATA[I'm having this error
+ /usr/local/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/c++/12.3.1/cstdlib:147:11: error: 'free' has not been declared in '::'
+ 147 | using ::free;
+ | ^~~~
+ /usr/local/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/c++/12.3.1/cstdlib:151:11: error: 'malloc' has not been declared in '::'
+ 151 | using ::malloc;
+ | ^~~~~~
+ I've found this explanation, but I compile with cmake.
+ If I comment out these lines inside cstdlib it compiles without error, but I shouldn't be modifying a standard library header... Can anyone explain?
+    submitted by    /u/Responsible-Nature20    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[What is "NB commment US 101 on the CD " in P0767R1: Deprecate POD?]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1cs6t4t/what_is_nb_commment_us_101_on_the_cd_in_p0767r1/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1cs6t4t/what_is_nb_commment_us_101_on_the_cd_in_p0767r1/"/>
+        <updated>2024-05-14T23:44:03.000Z</updated>
+        <summary type="html"><![CDATA[The first two lines.
+ Whaaat? Please tell me what is NB, US and CD means here? What entities are they?
+ https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0767r1.html
+    submitted by    /u/truth_and_fate    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Partial template specialization]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1cs5yf0/partial_template_specialization/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1cs5yf0/partial_template_specialization/"/>
+        <updated>2024-05-14T23:04:57.000Z</updated>
+        <summary type="html"><![CDATA[https://godbolt.org/z/dzePjs8W9
+ This is my problem. I have a templated struct S which has the compare function. But when I do specialization which inherits from another class the compare function is no longer available in my specialization. Why is that? 
+    submitted by    /u/ontariow23    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Would C++26's introduction of reflection push vendors towards an ABI break?]]></title>
+        <id>https://www.reddit.com/r/cpp/comments/1cs5v48/would_c26s_introduction_of_reflection_push/</id>
+        <link href="https://www.reddit.com/r/cpp/comments/1cs5v48/would_c26s_introduction_of_reflection_push/"/>
+        <updated>2024-05-14T23:00:58.000Z</updated>
+        <summary type="html"><![CDATA[As you know, one of the main gripes with C++ development is related to compilation time. Compiler vendors constantly strive to make improvements in this area, in spite of new STL features being constantly added. C++26 is going to be quite special in this regard though afaik, having the reflections proposal accepted. Reflections being probably the biggest metaprogramming extensions ever added to the language, even bigger than concepts and require clauses.
+ I'm saying this because I was watching this particular talk by Alexander Fokin describing it: https://youtu.be/FqzrQf6Xr8g?si=oe6L0askoOzQjSlC&t=3592 . What immediately caught my attention was the example of how you could implement std::tuple (almost fully) in what? 20 lines of code? For reference, MSVC's implementation is a header with more than 1000 lines of code ( https://github.com/microsoft/STL/blob/main/stl/inc/tuple ), containing dozens of helper class template instantiated for each instance of std::tuple used in real code. A fair assumption would be that the std::meta version would be far faster to compile, reflections being a very straight-forward way of expressing your intent to the compiler. In real life scenarios this could results in an immense amount of time saved at compilation time. And better yet, the opportunity of rewritting std::tuple would be a big bonus too since none of the standard implementations are optimal ( https://www.reddit.com/r/cpp/comments/ilujab/it_turns_out_stdtuple_is_not_a_zerocost/ ).
+ Again, I'm not talking just about std::tuple here, I'm assuming there are dozens of STL components that could use being rewritten using reflections, if for nothing else, at least for the sake of compilation time. I'm wondering if this new feature couldn't be the push vendors have needed to take into consideration a real ABI break with one of their future releases, considering the compilation time improvements now available on the table. 
+    submitted by    /u/cristi1990an    to    r/cpp  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[The cherno cpp playlist vs learncpp.com?]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1cs45zv/the_cherno_cpp_playlist_vs_learncppcom/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1cs45zv/the_cherno_cpp_playlist_vs_learncppcom/"/>
+        <updated>2024-05-14T21:47:13.000Z</updated>
+        <summary type="html"><![CDATA[Which is best to learn c++?
+    submitted by    /u/manly_trip    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[If the standard library died (due to ABI concerns), is there a "stdlib killer"?]]></title>
+        <id>https://www.reddit.com/r/cpp/comments/1cs3n4f/if_the_standard_library_died_due_to_abi_concerns/</id>
+        <link href="https://www.reddit.com/r/cpp/comments/1cs3n4f/if_the_standard_library_died_due_to_abi_concerns/"/>
+        <updated>2024-05-14T21:24:48.000Z</updated>
+        <summary type="html"><![CDATA[So, if 2020 marked the day the standard library died (allegedly), then what do I use instead?
+ In other words and in a more serious tone: is there a "best" general-purpose C++ primitives library that could theoretically become "the new stdlib", if we could magically disregard all existing code?
+ Or in yet other words: is there a library, or a set of libraries, that I should seriously consider using instead of stdlib and STL (on performance, ergonomics and usability grounds) in new projects where backward compatibility and simplicity of deployment is not a concern?
+    submitted by    /u/intelfx    to    r/cpp  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How do I swap out an object atomically? N Reader, 1 Writer]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1cs3mm6/how_do_i_swap_out_an_object_atomically_n_reader_1/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1cs3mm6/how_do_i_swap_out_an_object_atomically_n_reader_1/"/>
+        <updated>2024-05-14T21:24:14.000Z</updated>
+        <summary type="html"><![CDATA[Questions in the comments. Whats the best way to handle this scenerio? struct Item { std::string name; size_t id; }; static std::atomic<Item*> current_item = item_ptr_set_on_init; void writer_got_update(Item item) { // Runs on 1 writer_thread // Got copy of the update // Update current_item atomically Item* expected_item = current_item.load(); Item* desired_item = new Item(item); current_item.compare_and_exchange(expected_item, desired_item); // Need to delete expected_item // How do I know expected_item can be deleted? // Reader thread might still have gotten pointer to it } void reader_keep_reading() { // N threads read the item Item* item = current_item.load(); std::cout << "Name: " << current_item->name << "id: " << current_item->id << std::endl; } 
+    submitted by    /u/kagbeni    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Microsoft only wanted their IP not the studios]]></title>
+        <id>https://www.reddit.com/r/gamedev/comments/1cs313e/microsoft_only_wanted_their_ip_not_the_studios/</id>
+        <link href="https://www.reddit.com/r/gamedev/comments/1cs313e/microsoft_only_wanted_their_ip_not_the_studios/"/>
+        <updated>2024-05-14T20:59:14.000Z</updated>
+        <summary type="html"><![CDATA[Arkane Studios dev goes off on video game executives following 4 studio closures by Xbox:
+ “video games are an entertainment/cultural industry, and your business as a corporation is to take care of your artists/entertainers and help them create value for you.”
+ https://www.dexerto.com/gaming/microsoft-closes-the-developers-behind-hi-fi-rush-redfall-in-shocking-cuts-2697570/
+    submitted by    /u/-_-mrfuzzy  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : gamedev</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Learning programming for non-CS people]]></title>
+        <id>https://www.reddit.com/r/C_Programming/comments/1cs2k2u/learning_programming_for_noncs_people/</id>
+        <link href="https://www.reddit.com/r/C_Programming/comments/1cs2k2u/learning_programming_for_noncs_people/"/>
+        <updated>2024-05-14T20:39:27.000Z</updated>
+        <summary type="html"><![CDATA[How long do you think it takes to learn programming well enough for everyday use? With everday use I mean for people who has no CS background but they need to learn how to code due to their jobs, e.g., someone in Finance who has to develop or run a machine learning model for predicting some trends in stock or bonus markets or someone working in Research and need to perform programming due their research is quantitative and they have to perform some coding. 
+    submitted by    /u/Traditional-Top-1504  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Suggestions on implementing threadpool concept with pthread]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1cs1q4u/suggestions_on_implementing_threadpool_concept/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1cs1q4u/suggestions_on_implementing_threadpool_concept/"/>
+        <updated>2024-05-14T20:06:07.000Z</updated>
+        <summary type="html"><![CDATA[I want to write a header file with parent threadpool class and methods such as—
+ Pool creation, Pool initialisation, Submit function to pool, Once all function done then shutdown the pool.
+ Thanks in advance for any suggestions and help.
+ PS: i have read about mutexes and conditional locks, but havent worked with them before 
+    submitted by    /u/Big_Bumblebee_7146    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Writing a backend for Web application in C++]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1cs14xe/writing_a_backend_for_web_application_in_c/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1cs14xe/writing_a_backend_for_web_application_in_c/"/>
+        <updated>2024-05-14T19:42:01.000Z</updated>
+        <summary type="html"><![CDATA[I want to expose an existing c++ library into a web application that is written in JS. From what I understand I have 2 options: - Either I can compile my c++ library into webassembly - Or I can write JS Bindings for the library. 
+ Which of the approaches offers better performace and least overhead. I'm a complete noob in web developpement so the above approaches may not be correct. Please explain like ELI5. 
+    submitted by    /u/Pale_Emphasis_4119    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[If I don't specify any copy/move constructors/assignments, are they made by default?]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1cs0f35/if_i_dont_specify_any_copymove/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1cs0f35/if_i_dont_specify_any_copymove/"/>
+        <updated>2024-05-14T19:12:07.000Z</updated>
+        <summary type="html"><![CDATA[Trying to look this up and Im struggling to get a specific answer. My understanding is that if you don't specify any of the Rule of 5, then all of them are made by default, but I'm not 100% certain of this.
+    submitted by    /u/Raknarg    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Going from embedded Linux to low latency distributed systems]]></title>
+        <id>https://www.reddit.com/r/cpp/comments/1cs00mr/going_from_embedded_linux_to_low_latency/</id>
+        <link href="https://www.reddit.com/r/cpp/comments/1cs00mr/going_from_embedded_linux_to_low_latency/"/>
+        <updated>2024-05-14T18:55:48.000Z</updated>
+        <summary type="html"><![CDATA[Hi all,
+ My first job out of college has primarily involved writing code that runs in a real time Linux environment. The code I've written wasn't the kind that focused on being ultra optimized. Instead, the focus was moreso on readability and reliability. We usually are not allowed to use most modern C++ features. Our coding standard is often described as "C with classes."
+ I have an interview coming up for a low latency position that also involves distributed systems. What would this kind of C++ development entail compared to what I'm currently doing?
+ In other words:
+  
+What are some high level concepts I might want to familiarize myself with before the interview?
+ 
+More broadly speaking -- if, against all odds, I manage to land the position, what new skills might I be learning? What might I need to study up on in my own time? What would my day to day development look like? How might this differ from the development of an embedded software engineer?
+ 
+ Thanks!
+    submitted by    /u/boreddolphin98    to    r/cpp  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Double pack expansion]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1crzipy/double_pack_expansion/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1crzipy/double_pack_expansion/"/>
+        <updated>2024-05-14T18:35:40.000Z</updated>
+        <summary type="html"><![CDATA[For the code look at https://godbolt.org/z/rdPnfqnY3.
+ When compiling with MSVC, I get the following error:
+  
+error C3528: 'Is': the number of elements in this pack expansion does not match the number of elements in 'Tuples'
+  
+In essence, I expand two packs in a single statement:
+ else if constexpr ((std::is_void_v<invoke_at_result_t<Is, F, Tuples...>> || ...)) 
+ I am not too well versed with the spec to know if it is problematic or not. To me it seems obvious what it should expand to, for example if Is = 0, 1 and Tuples = Tuple1, Tuple2, Tuple3, then it should expand to:
+ std::is_void_v<invoke_at_result_t<0, F, Tuple1, Tuple2, Tuple3>> || std::is_void_v<invoke_at_result_t<1, F, Tuple1, Tuple2, Tuple3>> 
+ It is stranger that the code compiles with Clang or GCC. What's even more stranger is when I refactor it
+ template <class F, std::size_t... Is, class... Tuples> constexpr bool tuple_void_output = (std::is_void_v<invoke_at_result_t<Is, F, Tuples...>> || ...); 
+ and then use it as
+ else if constexpr (tuple_void_output<F, Is..., Tuples...>) 
+ then it also works in MSVC (you can change the define from 0 to 1 to activate this refactoring in the godbolt link). My IDE (CLion) is giving red squiggles though with messages:
+  
+For the definition of tuple_void_output "Template parameter pack must be the last template parameter"
+ When instantiating the template variable: "Template argument for non-type template parameter must be an expression"
+  
+So my questions:
+  
+Is there something wrong with my code?
+ Which compiler is correct?
+  
+   submitted by    /u/SimonMarynissen    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Good idea to learn SDL to become Software engineer?]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1crzhhh/good_idea_to_learn_sdl_to_become_software_engineer/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1crzhhh/good_idea_to_learn_sdl_to_become_software_engineer/"/>
+        <updated>2024-05-14T18:34:17.000Z</updated>
+        <summary type="html"><![CDATA[Hey everyone! Currently i am learnig SDL to make some gaming projects but i am not sure as my aim is to become a software engineer. Currently i am in 3rd year(soon will be in 4th) and don't have any projects. So should i continue to learn SDL and make a gaming project or should i switch to something else releated to more SE
+    submitted by    /u/Life-Loss-7268    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Came out of an interview feeling very down…]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1crzbae/came_out_of_an_interview_feeling_very_down/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1crzbae/came_out_of_an_interview_feeling_very_down/"/>
+        <updated>2024-05-14T18:27:12.000Z</updated>
+        <summary type="html"><![CDATA[I used GeeksForGeeks as a source to learn CPP. Coming out of an interview, I think what I learned is probably not very accurate. Reading further about people’s opinions on GeeksForGeeks, I think I may just be right.
+ I now own C++ Primer by Stanley Lippman. People who used this book / a book to learn: any tips? 
+ I plan to answer all the questions which come up. I’m worried that only doing this, I will most likely just forget everything I read. It is a very fat book.
+    submitted by    /u/silverloot2    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[C++ DevContainer]]></title>
+        <id>https://www.reddit.com/r/cpp/comments/1crz3x4/c_devcontainer/</id>
+        <link href="https://www.reddit.com/r/cpp/comments/1crz3x4/c_devcontainer/"/>
+        <updated>2024-05-14T18:19:03.000Z</updated>
+        <summary type="html"><![CDATA[Just created a simple up to date .devcontainer to try out modules with c++23. All gcc, clang and msvc build fine and seem to work, only major problem is still intellisense. Check it out and try if for yourself, feel free to leave a star:
+ https://github.com/vitaliy-ostapchuk93/cpp-dev-sandbox 
+    submitted by    /u/vitaliy_os    to    r/cpp  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Watercolors in C++]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1cryg1p/watercolors_in_c/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1cryg1p/watercolors_in_c/"/>
+        <updated>2024-05-14T17:52:29.000Z</updated>
+        <summary type="html"><![CDATA[Hi everyone,
+ Do you know some good C++ library that can be used to simulate the behaviour of a watercolor brush on a paper?
+ I was thinking to OpenGL, but I would like to check for something more specific. 
+ Many thanks in advance 
+    submitted by    /u/pietrolc    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[A little discouraged after trying a simple task]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1crxvkm/a_little_discouraged_after_trying_a_simple_task/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1crxvkm/a_little_discouraged_after_trying_a_simple_task/"/>
+        <updated>2024-05-14T17:29:43.000Z</updated>
+        <summary type="html"><![CDATA[Hey, not really a giving up moment but a rather sobering one, I have been learning C# for about 2 years now on and off (whenever time permits) and recently transitioned to C++. I started working with unreal and started messing around and found it rather simple.
+ I then asked a programmer friend of mine for some tasks I could do to improve my knowledge, and suggested I try create a single Linked List, after multiple days, nothing, I could not figure it out to save my life. What bothers me is after looking up solutions online it looked like something extremely simple, and i realized just how much unreal does in the backend, now I just feel disheartened with a simple Linked List brought me to my knees. Anyways, not thinking of giving up, just more for those struggling to keep pushing and maybe some words of encouragement if this is the right place to ask/turn to. Thanks
+    submitted by    /u/CosmicSlothKing    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[do shared objects have the ability to contain code line info? and if compiled with clang. does it still retain debug info?]]></title>
+        <id>https://www.reddit.com/r/C_Programming/comments/1crw59h/do_shared_objects_have_the_ability_to_contain/</id>
+        <link href="https://www.reddit.com/r/C_Programming/comments/1crw59h/do_shared_objects_have_the_ability_to_contain/"/>
+        <updated>2024-05-14T16:19:04.000Z</updated>
+        <summary type="html"><![CDATA[by "code line info". i mean the ones that show the current line of source code being executed. I disabled optimizations with -O0
+    submitted by    /u/paintedirondoor  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Is it possible to create custom constuctors for std::unique_ptr? Advice welcome.]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1crvxqz/is_it_possible_to_create_custom_constuctors_for/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1crvxqz/is_it_possible_to_create_custom_constuctors_for/"/>
+        <updated>2024-05-14T16:10:03.000Z</updated>
+        <summary type="html"><![CDATA[I thought it'd be nice to provide some type of modern wrapper around SDL, and I've been struggling to create a proper wrapper as you'd need to define a custom constructor for it. This is fraught with errors 
+ auto make_unique_window(const std::string &title, int x, int y, int w, int h) { auto window = SDL_CreateWindow(title.c_str(), x, y, w, h, SDL_WINDOW_FULLSCREEN); auto custom_deleter_for_sdl_window = [window]() { SDL_DestroyWindow(window); }; std::unique_ptr<SDL_Window, decltype(custom_deleter_for_sdl_window)> some_window; return some_window; } 
+ I also thought it would make sense to inherit from SDL_Window to add a constructor.
+  class window : public SDL_Window {}; 
+ but SDL_Window's definition isn't exposed to the user, and thus, it is an incomplete type. Thoughts on what I could do?
+ Maybe something like
+ namespace sdl { class window { private: SDL_Window* m_window; public: window(const std::string &title, int x, int y, int w, int h) : m_ window { SDL_CreateWindow(title.c_str(), x, y, w, h, SDL_WINDOW_FULLSCREEN) } {} ~window() { SDL_DestrowWindow(m_window); } }; } // namespace sdl 
+ Usage would look like
+ auto my_window = sdl::window { "Title", 480, 640, 256, 256 }; 
+    submitted by    /u/NextYam3704    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[I’m coming back to Cpp, what’s the best book in your opinion?]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1crvjsm/im_coming_back_to_cpp_whats_the_best_book_in_your/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1crvjsm/im_coming_back_to_cpp_whats_the_best_book_in_your/"/>
+        <updated>2024-05-14T15:53:55.000Z</updated>
+        <summary type="html"><![CDATA[Hi all,
+ I’ve been coding in C/C++ for over a decade, but I wouldn’t ever say I’m great enough to say submit commits to the Linux Kernel. 
+ For the past 3 years I’ve deployed complex workloads into AWS Fargate/lambda for a large IoT company. 
+ I want to take a step back and grab a really great C++ book. What would you recommend?
+ Any other great resources, in a similar vein as the Crust of Rust on YouTube by Jon Gjengset.
+ Thanks!
+    submitted by    /u/ExternCrateAlloc    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Just got blindsided by a layoff. How is everyone who got laid off recently doing?]]></title>
+        <id>https://www.reddit.com/r/cscareerquestions/comments/1crv5kg/just_got_blindsided_by_a_layoff_how_is_everyone/</id>
+        <link href="https://www.reddit.com/r/cscareerquestions/comments/1crv5kg/just_got_blindsided_by_a_layoff_how_is_everyone/"/>
+        <updated>2024-05-14T15:37:19.000Z</updated>
+        <summary type="html"><![CDATA[Found out this morning when HR joined a meeting that I thought was just going to be a catch up with my manager and I... I’m remote so I didn’t get to say goodbye to anyone, just got immediately locked out of everything which really hurt, ngl. 
+ I feel like this couldn’t have happened at a worse time. The job market is absolutely terrible right now and my severance package will only last me a month and a half so I’m honestly terrified. If anyone is dealing with the same right now any advice is welcome. 
+    submitted by    /u/Square_Chocolate8998  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : cscareerquestions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Update to I thought I was doing my job as a Team Lead (1 year later)]]></title>
+        <id>https://www.reddit.com/r/ExperiencedDevs/comments/1cruxz6/update_to_i_thought_i_was_doing_my_job_as_a_team/</id>
+        <link href="https://www.reddit.com/r/ExperiencedDevs/comments/1cruxz6/update_to_i_thought_i_was_doing_my_job_as_a_team/"/>
+        <updated>2024-05-14T15:28:30.000Z</updated>
+        <summary type="html"><![CDATA[Original Post https://www.reddit.com/r/ExperiencedDevs/comments/13m6f7l/i_thought_i_was_doing_my_job_as_a_team_lead/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button
+  
+This is catharsis for me more than anything, just writing what's happened in the past year. I don't expect anybody to read/care, this is for me: 
+ Starting from a few days after the OG post was created:
+  
+Effective immediately, I was demoted from Team Lead while another took over the role (I was pretty okay with this actually, until boss made a big deal about it in an email to everyone. It was embarrassing.)
+ Boss kept going hot and cold during our 1v1s; my attitude was not cheerful enough, or not serious enough, despite me checking in with new Team Lead multiple times a month (who sa…]]></summary>
+        <author>
+            <name>top scoring links : ExperiencedDevs</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Another guide to Istio Authorization Policies and Request Authentication, but combined with IAM automation]]></title>
+        <id>https://www.reddit.com/r/devops/comments/1cruw5h/another_guide_to_istio_authorization_policies_and/</id>
+        <link href="https://www.reddit.com/r/devops/comments/1cruw5h/another_guide_to_istio_authorization_policies_and/"/>
+        <updated>2024-05-14T15:26:19.000Z</updated>
+        <summary type="html"><![CDATA[When speaking to folks who have deployed Istio in production, I'm always surprised that only a few utilize anything more than mTLS. Sometimes they're not even aware that if they don't change the namespace defaults, they end up with the default service account attached to every pod, which means a single certificate is used for workload authentication—kind of defeating the purpose!
+ Anyway, this is my attempt at demystifying Authorization Policies, Request Authentication, and OIDC/JWT user authentication workflows. Additionally, what if you could automatically generate Authorization Policies by letting a Network Mapper analyze your actual application traffic and pull metrics from Envoy directly? This is a very cool open-source project. Check out the details in the guide:
+ https://otterize.com/blog/Istio-authz-and-ingress-authn
+    submitted by    /u/scarlet_Zealot06  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : devops</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[C-level execs wants engineers to broadcast our “failures” to learn from them. What is a good argument against it?]]></title>
+        <id>https://www.reddit.com/r/cscareerquestions/comments/1crudzt/clevel_execs_wants_engineers_to_broadcast_our/</id>
+        <link href="https://www.reddit.com/r/cscareerquestions/comments/1crudzt/clevel_execs_wants_engineers_to_broadcast_our/"/>
+        <updated>2024-05-14T15:05:11.000Z</updated>
+        <summary type="html"><![CDATA[Recently the CEO and CFO of our mid size startup (300+) company have been bugging the engineers (15 SWEs), with new changes they want to implement. It is a flat hierarchy for the engineers with one Engineering VP. Recently, they told one of my work friends that other departments have people be held accountable for mistakes and publicly talk about “lessons learned” and things to make us grow. They said they have no insight on what the tech team does (we are the only full remote team) and want us to be like the other depts and talk about our failures, what we did wrong, what bugs we caused, and how we fix them. This seems so strange. We will sometimes have these talks internally with our own teammates but to publicly put us on blast in front of the whole company, or at least the top dogs? They don’t even mention our successes, why they hell do they want our failures? But anyway, I have a meeting with these execs tomorrow to “pick my brain” and because I was made aware of this beforehand, I’d love some advice on a good rebuttal that won’t get me fired or have a target on my back.
+ Edited to add: The CTO either resigned or was fired, we don’t actually know since it was very ominous and quick. I see now that our CTO did a great job shielding the team from the execs because they are now suddenly joining our meetings and getting more involved.
+    submitted by    /u/leghairdontcare59  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : cscareerquestions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How We Saved 10s of Thousands of Dollars Deploying Low Cost Open Source AI Technologies At Scale with Kubernetes]]></title>
+        <id>https://www.reddit.com/r/programming/comments/1crucoc/how_we_saved_10s_of_thousands_of_dollars/</id>
+        <link href="https://www.reddit.com/r/programming/comments/1crucoc/how_we_saved_10s_of_thousands_of_dollars/"/>
+        <updated>2024-05-14T15:03:37.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/jpmmcb  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : programming</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Boss hired his bad friend who I have to manage.]]></title>
+        <id>https://www.reddit.com/r/ExperiencedDevs/comments/1cru7uy/boss_hired_his_bad_friend_who_i_have_to_manage/</id>
+        <link href="https://www.reddit.com/r/ExperiencedDevs/comments/1cru7uy/boss_hired_his_bad_friend_who_i_have_to_manage/"/>
+        <updated>2024-05-14T14:58:20.000Z</updated>
+        <summary type="html"><![CDATA[I joined a new company a few months back as a Principal Data Engineer/Technical Lead. I lead a very small team of two other engineers. One of them is great, good attitude and when he makes mistakes always willing to improve. Good code reviews etc. The other one is horrible. I come to find out that my manager and him are friends and my manager hired him.
+ I am at a loss for what to do to handle the situation. He was hired by my boss as a “Lead Data Engineer” but has absolutely no leadership skills. I myself am Indian, but have extreme difficulty understanding him, he also lacks comprehension. My boss has split his work into two teams, me and the other manager have 1:1s and he is also having having difficulty managing him on his side.
+ I have given him specific examples of where his work did…]]></summary>
+        <author>
+            <name>top scoring links : ExperiencedDevs</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[The story of how I suspect a Big Chinese Publisher "stole" my game idea.]]></title>
+        <id>https://www.reddit.com/r/gamedev/comments/1crtzld/the_story_of_how_i_suspect_a_big_chinese/</id>
+        <link href="https://www.reddit.com/r/gamedev/comments/1crtzld/the_story_of_how_i_suspect_a_big_chinese/"/>
+        <updated>2024-05-14T14:48:36.000Z</updated>
+        <summary type="html"><![CDATA[I've been in contact with this publisher for several months, they really liked the game but never went on with an offer, saying they needed at least another build update to compare and make an evaluation.
+ Months passed and we got back in contact as we had a build update, but once again they didn't go with an offer as they thought we weren't gathering enough wishlists for them to feel confident, they gave us some slides with their in-depth evaluation which we actually appreciated, then basically closed contact as it's clear they're not interested...
+ ...Until a new game demo just came out on steam, with a strikingly similar concept, execution, and even short/long descriptions.
+ This is supposed to be the debut project of a "three-person team" (just how we presented ourselves to the publisher), "coincidentially" Chinese, but it's impossible to track who's behind.
+ What is even weirder is the marketing quality and precision of this game and its usage of Steam algorithm and events, which is too much of a coincidence to assume that they were just doing everything right on the first try as a studio.
+ Cherry on the cake is that we received this publisher's report the same day they put their demo out and started engaging with their discord.
+ I don't think the concept of "stealing ideas" even exist, my game itself is a re-elaboration of other devs ideas, but the fact that we directly came in contact with this publisher and everything is laid out to look like a coincidence, still makes me feel viciously stolen of something.
+ Thanks for reading up to this point.
+ Curious to hear any thoughts you have about this.
+  
+EDIT: I care to specify that I don't have 100% proof that this isn't just the biggest coincidence I've witnessed in my life, it's just an educated guess. The publisher I got in contact with itself said that they're under the "big hand of Chinese gaming", so they don't even need to publish it under their own name.
+    submitted by    /u/ilPolka  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : gamedev</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Which code is correct for the problem: Implement a function in C to concatenate two strings using pointers.]]></title>
+        <id>https://www.reddit.com/r/C_Programming/comments/1crt4ko/which_code_is_correct_for_the_problem_implement_a/</id>
+        <link href="https://www.reddit.com/r/C_Programming/comments/1crt4ko/which_code_is_correct_for_the_problem_implement_a/"/>
+        <updated>2024-05-14T14:10:40.000Z</updated>
+        <summary type="html"><![CDATA[// First code
+ #include <stdio.h>
+ #include <string.h>
+ #include <stdlib.h>
+ char* cat(char* a, char* b) {
+ int a1 = strlen(a);
+ int b1 = strlen(b);
+ int ab = a1 + b1 + 1;
+ char* str = calloc(ab, sizeof(*str));
+ for(int i = 0; i < a1; i++) {
+ str[i] = a[i];
+ }
+ for(int j = 0; j < b1; j++) {
+ str[j+a1] = b[j]; 
+ }
+ str[ab - 1] = '\0';
+ return str;
+ }
+ int main() {
+ char a[] = "hello";
+ char b[] = "world";
+ char *s = cat(a,b);
+ printf("s: %s\n", s);
+ free(s);
+ return 0;
+ }
+ // Second Code
+ #include <stdio.h>
+ void strcon(char *str1, const char *str2) {
+ while (*str1 != '\0') {
+ str1++;
+ }
+ while (*str2 != '\0') {
+ *str1 = *str2;
+ str2++;
+ str1++;
+ }
+ *str1 = '\0';
+ }
+ int main() {
+ char str1[] = "hello";
+ char str2[] = "world";
+ printf("original string: %s\n\n", str1);
+ strcon(str1, str2);
+ printf("concatenated string: %s", str1);
+ return 0;
+ }
+    submitted by    /u/RoyalChallengers  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Declarative GUI Slint v1.6 released with Design Mode (WYSIWYG) Improvements]]></title>
+        <id>https://www.reddit.com/r/cpp/comments/1crsfns/declarative_gui_slint_v16_released_with_design/</id>
+        <link href="https://www.reddit.com/r/cpp/comments/1crsfns/declarative_gui_slint_v16_released_with_design/"/>
+        <updated>2024-05-14T13:41:08.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/madnirua    to    r/cpp  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[programmingLanguageTierList]]></title>
+        <id>https://www.reddit.com/r/ProgrammerHumor/comments/1crscax/programminglanguagetierlist/</id>
+        <link href="https://www.reddit.com/r/ProgrammerHumor/comments/1crscax/programminglanguagetierlist/"/>
+        <updated>2024-05-14T13:36:59.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/a_useless_communist  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : ProgrammerHumor</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[I wrote a slot machine game that you play over VNC (RFB protocol)]]></title>
+        <id>https://www.reddit.com/r/C_Programming/comments/1crrtij/i_wrote_a_slot_machine_game_that_you_play_over/</id>
+        <link href="https://www.reddit.com/r/C_Programming/comments/1crrtij/i_wrote_a_slot_machine_game_that_you_play_over/"/>
+        <updated>2024-05-14T13:13:01.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/greg_kennedy  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Very very confused how to run c++ on Linux using VS Code]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1crr8xo/very_very_confused_how_to_run_c_on_linux_using_vs/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1crr8xo/very_very_confused_how_to_run_c_on_linux_using_vs/"/>
+        <updated>2024-05-14T12:45:15.000Z</updated>
+        <summary type="html"><![CDATA[I have a basic C++ program I'm compiling just to test to make sure my VS Code works. On Windows, I got it to work just fine following Microsoft's YouTube tutorial. On Kali Linux, however, I cannot get this damn error resolved... CTRL+SHIFT+B to build, it works perfectly:
+  
+* Executing task: C/C++: g++ build active file 
+ Starting build...
+ /usr/bin/g++ -fdiagnostics-color=always -g '/home/kali/Documents/cpp files/deletehelloworld.cpp' -o '/home/kali/Documents/cpp files/deletehelloworld'
+ Build finished successfully.
+  
+So I get a build finished successfully, ok cool, it worked. Now let's run it and output hello world. I use '(gdb) Launch' and it tells me that I'm missing a launch task? This is extremely confusing as I've never had this issue even once on Windows.... 
+ Here's my launch.json, have no idea what this is or why I need it
+ { "version": "0.2.0", "configurations": [ { "name": "C++ Launch", "type": "cppdbg", "request": "launch", "program": "a.out", "args": [], "stopAtEntry": false, "cwd": "${workspaceFolder}", "environment": [], "externalConsole": false, "MIMode": "gdb", "setupCommands": [ { "description": "Enable pretty-printing for gdb", "text": "-enable-pretty-printing", "ignoreFailures": true } ], "preLaunchTask": "C/C++: g++ build active file" } ] } 
+    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How to arrange printed symbols in a custom amount of blank space]]></title>
+        <id>https://www.reddit.com/r/C_Programming/comments/1crqdct/how_to_arrange_printed_symbols_in_a_custom_amount/</id>
+        <link href="https://www.reddit.com/r/C_Programming/comments/1crqdct/how_to_arrange_printed_symbols_in_a_custom_amount/"/>
+        <updated>2024-05-14T12:00:01.000Z</updated>
+        <summary type="html"><![CDATA[Not sure if i expressed my desire appropriately, but i want my matrices values to print out in the same number of placeholding blank spaces, if this makes any sense...
+ '''
+ include<stdio.h>
+ define MAX 100
+ int main() { int a[MAX][MAX],b,i,j,m,n;
+ printf("Vrsta m: "); scanf("%d",&m); printf("Kolona n: "); scanf("%d",&n); printf("Unesi elemente matrice: /n"); for(i=0;i<m;i++){ for(j=0;j<n;j++){ printf("element[%d][%d]: ",i,j); scanf("%d",&a[i][j]); } } for(i=0;i<m;i++){ for(j=0;j<n;j++){ printf("%d ",a[i][j]); } printf("\n"); } return 0; 
+ }
+ '''
+ This is my code, and the output looks like this....
+ '''
+ Vrsta m: 2 Kolona n: 2 Unesi elemente matrice: /nelement[0][0]: 12345 element[0][1]: 12345 element[1][0]: 123456 element[1][1]: 123456 12345 12345 123456 123456
+ [Program finished]
+ '''
+ I want my numbers i am printing out, to have custom number of space that they go into...For example i want both the 12345 and 123456 numbers to have 10 blank spaces they can go into, if that makes any sense.
+    submitted by    /u/Kajle_kajla  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Yup that's definitely intended]]></title>
+        <id>https://www.reddit.com/r/godot/comments/1crq66x/yup_thats_definitely_intended/</id>
+        <link href="https://www.reddit.com/r/godot/comments/1crq66x/yup_thats_definitely_intended/"/>
+        <updated>2024-05-14T11:48:52.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/jijigri_  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : godot</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How to constrain a function to only accept containers that implement SequenceContainer?]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1croxwq/how_to_constrain_a_function_to_only_accept/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1croxwq/how_to_constrain_a_function_to_only_accept/"/>
+        <updated>2024-05-14T10:35:00.000Z</updated>
+        <summary type="html"><![CDATA[I want to write a function that takes in a container of std::string, but I want to constrain the function to only accept SequenceContainers. Therefore, it should accept vector, list, forward_list, array, deque, but not queue, stack, setetc. Also I don't want to limit my function to standard containers. How can I write a custom concept for this?
+ template <typename Container> concept StringSequenceContainer = requires { requires std::is_same_v<typename Container::value_type, std::string>; requires ???; }; void foo(const StringSequenceContainer auto& input); 
+    submitted by    /u/jun_null    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[noComplaints]]></title>
+        <id>https://www.reddit.com/r/ProgrammerHumor/comments/1crooop/nocomplaints/</id>
+        <link href="https://www.reddit.com/r/ProgrammerHumor/comments/1crooop/nocomplaints/"/>
+        <updated>2024-05-14T10:17:59.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/TypeScriptWizard  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : ProgrammerHumor</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[I'm almost math illiterate, how do I educate myself?]]></title>
+        <id>https://www.reddit.com/r/gamedev/comments/1crnaly/im_almost_math_illiterate_how_do_i_educate_myself/</id>
+        <link href="https://www.reddit.com/r/gamedev/comments/1crnaly/im_almost_math_illiterate_how_do_i_educate_myself/"/>
+        <updated>2024-05-14T08:40:37.000Z</updated>
+        <summary type="html"><![CDATA[So, I did all the basics of math in school and I took an upgraded course before I could study comp. science at university.
+ I was bad at it, and Math doesn't actually interest me. The sciences never did, so it's weird I've landed myself in Computer science, and truth be told, I'm not a particularly skilled programmer either. My field of interest lie in the aesthetics, the creative, and the collaboration of thinking of, and implementing games. I did just well enough in projects that I didn't feel discouraged from the entire field, and now I still want to be a contributor in game dev. That said, I feel like math or just my inattention to detail is a problem.
+ During the higher education I encountered a few instances where I would tell someone "Err, so I don't actually know how to write this" and they'd say "It's just phytagoras. I can't tell you what to do." and I had to figure something out on my own to make a cube move on the screen or something, and I ended up kinda not figuring it out, and I think eventually whoever said something about pythagoras did something on his own.
+ And it's not like I don't know the pythagoras sentence, it's just that in practice I suck at math and barely know how to apply it. I remember some shit we drew on a blackboard but it doesn't come naturally to me to think mathematically.
+ But now I'm facing specific needs like, I wanna figure out how to make an eye shader, cuz I have a 3D model where I'm dissatisfied with how glassy the eyes look. But people give me math stuff to figure it out. I'll be running in circles with some design I'm trying to code until some smart guy shows me some x = y2 + i > 0 ???? math that apparently solves it in one sentence.
+ So I'm a bit agitated by my lack of appliccable knowledge. Do you find that Math is important to your average game work? And if I were to learn about how to develop my own shaders, is there some kind of book that could help me?
+    submitted by    /u/linkenski  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : gamedev</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Amazon Research Awards for automated C/C++ to Rust conversion]]></title>
+        <id>https://www.reddit.com/r/rust/comments/1crn4vf/amazon_research_awards_for_automated_cc_to_rust/</id>
+        <link href="https://www.reddit.com/r/rust/comments/1crn4vf/amazon_research_awards_for_automated_cc_to_rust/"/>
+        <updated>2024-05-14T08:28:24.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/dochtman  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : rust</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Machine learning in C?]]></title>
+        <id>https://www.reddit.com/r/C_Programming/comments/1crmmtq/machine_learning_in_c/</id>
+        <link href="https://www.reddit.com/r/C_Programming/comments/1crmmtq/machine_learning_in_c/"/>
+        <updated>2024-05-14T07:51:20.000Z</updated>
+        <summary type="html"><![CDATA[Hi I'm a C newbie and I come from an ML background. I've been learning c for some time and I recently had a project idea that might make me slightly better at using C if I implemented some ml algos. So I was thinking of making a decision tree clustering algorithm, where I'll substitute the criterion for measuring the variance with the f score and then use that for clustering algorithm. Just some idea had when I was studying decison trees and I wanna see if it works. 
+ Is it even feasible? What approaches would you try? How can I do matrix multiplications and additions? Will I have to use the c for loops for that sort of thing, or is there a library for optimising the additions?
+    submitted by    /u/high_dead_man  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Postfix vs prefix incrementarion]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1crm6sf/postfix_vs_prefix_incrementarion/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1crm6sf/postfix_vs_prefix_incrementarion/"/>
+        <updated>2024-05-14T07:17:59.000Z</updated>
+        <summary type="html"><![CDATA[I understand the difference between (++i and i++), but which is preferred. When learning cs50x and after that in C, I've always done postfix incrementaiton. Rcecetnly starting learning cpp from learncpp.com, and they strongly recommened us to use prefix incrementation which looks a bit weird. Should i make the change or just keep using postfix incrementation since Im more accustomed to it
+    submitted by    /u/Ok_Opportunity_3197    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Picking a game name is always the hardest thing]]></title>
+        <id>https://www.reddit.com/r/gamedev/comments/1crl8q1/picking_a_game_name_is_always_the_hardest_thing/</id>
+        <link href="https://www.reddit.com/r/gamedev/comments/1crl8q1/picking_a_game_name_is_always_the_hardest_thing/"/>
+        <updated>2024-05-14T06:11:44.000Z</updated>
+        <summary type="html"><![CDATA[I always have a bit of writers block when it comes to this. I should probably just slap on a working title and go.
+ I am reading advice that says "Keep the game name short and not to use words a 7th grader cannot spell", but the problem is essentially this:
+ 1) Every freaking combination of common words are taken and potentially trademarked items (much like you can't get the web domain name you want)
+ 2) Common words don't fare well as a search term.
+ 3) Lots of successful games historically have featured a non-word or made up name.
+ The title really makes or breaks the game in terms of mood or seriousness. Naming it something ambiguous like Nox Arcanum or Ultima sorta has the benefit that they don't really "say" anything about the game, and do not constrain the developer in terms of story or design.
+ And of course I don't want to get sued if something is "too close" to something else. I have this paranoia that corporate behemoths are always going to try to squash indies that aren't inside their financial tent. :D
+ What do you guys do? Does anyone else find this decision absolutely paralyzing? I can think of a million parody names and say them in a Beavis & Butthead voice, but coming up with a single serious and marketable name is exhausting.
+ Should I just put a number on the end like a username? 😆 Fantasy Adventure 3000?
+ I almost think Teenage Mutant Ninja Turtles was borne of this same frustration. "Let's just string a bunch of crap together that probably hasn't ever occurred in sequence until now" 😆
+    submitted by    /u/apparunem  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : gamedev</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Benchmarking two log management engines: Loki and Quickwit]]></title>
+        <id>https://www.reddit.com/r/devops/comments/1crkj6y/benchmarking_two_log_management_engines_loki_and/</id>
+        <link href="https://www.reddit.com/r/devops/comments/1crkj6y/benchmarking_two_log_management_engines_loki_and/"/>
+        <updated>2024-05-14T05:25:14.000Z</updated>
+        <summary type="html"><![CDATA[Hi there,
+ I wrote a blog post comparing Loki and Quickwit on a simple log management use case. I'm working on Quickwit engine so I'm obviously biased but:
+  
+I tried, as best as I can, to balance my view on focusing on the tradeoffs between the two engines: basically Loki is faster at ingestion and Quickwit is faster at query time.
+ I met many DevOps who were not understanding the architecture/datastructures/tradeoffs of Loki and Quickwit, I think it's worth sharing the results at it will help users to make the right choice given their use case.
+  
+And I would love to get feedback on this, the benchmark code is available on github.
+ Blog post: https://quickwit.io/blog/benchmarking-quickwit-loki
+ Benchmark repo: https://github.com/quickwit-oss/benchmarks/blob/main/loki_quickwit_benchmark.md
+    submitted by    /u/massus  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : devops</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[On-the-fly lexical analysis in an embedded context]]></title>
+        <id>https://www.reddit.com/r/C_Programming/comments/1crk5dw/onthefly_lexical_analysis_in_an_embedded_context/</id>
+        <link href="https://www.reddit.com/r/C_Programming/comments/1crk5dw/onthefly_lexical_analysis_in_an_embedded_context/"/>
+        <updated>2024-05-14T05:01:10.000Z</updated>
+        <summary type="html"><![CDATA[I'm working in embedded C. The device receives ascii text one character at a time over a serial port and I would like to recognize when certain regex patterns appear in the stream. The character rate is highly variable and there are other tasks to perform, so I can't simply block on the serial port and collect data as a string.
+ What I want is something like PEARL with various rules and actions, but with a one-char-at-a-time input. And it has to play nice with other round-robin tasks.
+ The goal would be to do something like stringRecognizer() in the code below. The pattern rules would be regex that are pre-compiled by the lex-generator for (e.g.) recognizing the strings "CAT", "DOG" and "PIG" and returning an appropriate enum value that would trigger an action.
+ The function is stateful, so it knows if it has seen (e.g.) C and then A, so a subsequent T would return ACTION_CAT but an R (or anything else) would return ACTION_NOT_DONE and move on. A D would also return ACTION_NOT_DONE but move the state into the DOG rule (so CADOG would eventually trigger the DOG rule). There might be a rule to reset the state machine when a new-line or carriage-return is seen.
+ I've looked at lex, flex and re2c but none provides a stateful pattern recognizer. In all cases the state machine pulls data from either a string or an input stream, but is otherwise fully blocking. When the lex() function returns (to main()) all state is lost and restarts when a new string is supplied.
+ while(1) { doTask1(); // blink led doTask2(); // read a sensor if (serialInputHasData()) { char c = getch(); action_t action = stringRecognizer(c); switch(action) { case ACTION_CAT: doCatFunction(); break; case ACTION_DOG: doDogFunction(); break; case ACTION_PIG: doPigFunction(); break; case ACTION_NOT_DONE: break; default: break; } } } 
+    submitted by    /u/somewhereAtC  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Are standard libraries dynamically linked?]]></title>
+        <id>https://www.reddit.com/r/C_Programming/comments/1criwbi/are_standard_libraries_dynamically_linked/</id>
+        <link href="https://www.reddit.com/r/C_Programming/comments/1criwbi/are_standard_libraries_dynamically_linked/"/>
+        <updated>2024-05-14T03:47:47.000Z</updated>
+        <summary type="html"><![CDATA[When I look at the Assembly generated by the compiler from some simple code using standard library functions, I can't find the code for the standard library functions that I used even though there are branches to those functions in the Assembly. Would this mean that standard library functions are dynamically linked or am I missing something?
+    submitted by    /u/SomeKindOfSorbet  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Scanf question]]></title>
+        <id>https://www.reddit.com/r/C_Programming/comments/1crirn4/scanf_question/</id>
+        <link href="https://www.reddit.com/r/C_Programming/comments/1crirn4/scanf_question/"/>
+        <updated>2024-05-14T03:40:24.000Z</updated>
+        <summary type="html"><![CDATA[YES I UNDERSTAND SCANF IS BAD AND I SHOULD USE FGETS INSTEAD! I'm simply trying to get a better understanding of how scanf works. 
+ Why doesn't the scanf call below work? It only prints the first name of an input. For instance, if the user inputs John Doe it only prints out Hello John! It seems as if the [^\n] is doing absolutely nothing. 
+ #include <stdio.h> int main(void) { char name[20]; printf("What's your name? "); scanf("%19s[^\n]", name); printf("Hello %s!\n", name); return 0 ; } 
+ ​
+    submitted by    /u/OldSkater7619  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Announcement: https://github.com/orgs/SingleStepTests for individual-instruction tests in volume]]></title>
+        <id>https://www.reddit.com/r/EmuDev/comments/1cri7w9/announcement_httpsgithubcomorgssinglesteptests/</id>
+        <link href="https://www.reddit.com/r/EmuDev/comments/1cri7w9/announcement_httpsgithubcomorgssinglesteptests/"/>
+        <updated>2024-05-14T03:10:09.000Z</updated>
+        <summary type="html"><![CDATA[Some might be aware of the old TomHarte/ProcessorTests repository, which was initially:
+  
+10,000 tests per opcode, for every 8-bit member of the 6502 family;
+ each providing the before and after processor state for that opcode only, along with relevant memory values;
+ with captured bus activity;
+ expressed in JSON.
+  
+Over time that repository had become ungainly, covering additional processors and types of test gathered with varying degrees of rigour by a mix of authors.
+ That resource has therefore given way to https://github.com/orgs/SingleStepTests/, an organisation rather than a single destination, allowing each repository to be:
+  
+much more focussed, on either a single processor or a small number of extremely-similar ones; and
+ autonomously authored and maintained.
+  
+The old ProcessorTests repository also lingers there for now, but will be marked as archived in the near future.
+ So: check it out if you're working on a new processor emulation. Compared to traditional test programs all collections should be both more comprehensive and more communicative in the case of a digression.
+ Also please don't hesitate to contribute if you have the means to do so.
+    submitted by    /u/thommyh  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>Developing Emulators</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[What’s the best company you’ve worked for?]]></title>
+        <id>https://www.reddit.com/r/cscareerquestions/comments/1crhxni/whats_the_best_company_youve_worked_for/</id>
+        <link href="https://www.reddit.com/r/cscareerquestions/comments/1crhxni/whats_the_best_company_youve_worked_for/"/>
+        <updated>2024-05-14T02:55:24.000Z</updated>
+        <summary type="html"><![CDATA[Following on the worst company thread from a fellow Redditor (very helpful), I think we’d all like to know some good companies to work for. And what made them a good place to work?
+    submitted by    /u/pensivepuffin  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : cscareerquestions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Asynchronous C without multi-threading]]></title>
+        <id>https://www.reddit.com/r/C_Programming/comments/1crhbok/asynchronous_c_without_multithreading/</id>
+        <link href="https://www.reddit.com/r/C_Programming/comments/1crhbok/asynchronous_c_without_multithreading/"/>
+        <updated>2024-05-14T02:23:49.000Z</updated>
+        <summary type="html"><![CDATA[Does anyone have resources on how to go about learning asynchronous programming without multithreading? My previous experience with async programming has been with Go (which uses green threads managed by the runtime) and with Rust (which uses async-await and internally generates state machines that can cooperatively achieve asynchronous execution).
+ Obviously, C is pretty bare bones, so I would be implementing the asynchronous mechanism from scratch. However, most resources online only show multithreading as a way to achieve async execution.
+ EDIT: I understand that this might actually be impractical, which is why so much engineering effort is contributed to making languages such as Go. I'm mostly just interested in this for educational purposes.
+    submitted by    /u/nimaipatel  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Automatically allocating/freeing memory in C]]></title>
+        <id>https://www.reddit.com/r/C_Programming/comments/1crgbt8/automatically_allocatingfreeing_memory_in_c/</id>
+        <link href="https://www.reddit.com/r/C_Programming/comments/1crgbt8/automatically_allocatingfreeing_memory_in_c/"/>
+        <updated>2024-05-14T01:33:22.000Z</updated>
+        <summary type="html"><![CDATA[So right now I'm writing an arena allocator in C and I figured out how to silently initialize and free everything without the user having to do a single thing:
+  #include "arena.h" int main() { void* p; for(int i = 0; i < 500; i++) { p = arena_alloc(100); // similar to malloc } for(int i = 0; i < 50; i++) { p = block_alloc(100, sizeof(int)); // similar to calloc } return 0; } 
+ The arena which owns all the memory is getting initialized and freed automatically with no memory leaks (in fact it's completely hidden from the user). So how is that possible?
+ You can do this for almost any type of program but I'll use my arena allocator as an example.
+ Global instance
+ Anytime I'm writing a standalone C program, I always do something like this in the header - put all of the global variables into …]]></summary>
+        <author>
+            <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[this community right now]]></title>
+        <id>https://www.reddit.com/r/godot/comments/1crf4g2/this_community_right_now/</id>
+        <link href="https://www.reddit.com/r/godot/comments/1crf4g2/this_community_right_now/"/>
+        <updated>2024-05-14T00:33:49.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/yougoodcunt  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : godot</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[When to do a gather operation]]></title>
         <id>https://www.reddit.com/r/cpp/comments/1crej78/when_to_do_a_gather_operation/</id>
@@ -33,6 +859,19 @@
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[What you built that made you love rust?]]></title>
+        <id>https://www.reddit.com/r/rust/comments/1crdoq2/what_you_built_that_made_you_love_rust/</id>
+        <link href="https://www.reddit.com/r/rust/comments/1crdoq2/what_you_built_that_made_you_love_rust/"/>
+        <updated>2024-05-13T23:24:36.000Z</updated>
+        <summary type="html"><![CDATA[Hi all, hope all is well. I’m new to rust and I’m thinking what can I build in rust to learn it and also, appreciate it better. Like, I’m currently learning how to write a ray tracer in cpp and also, trying to build the same in rust and even though I’m just starting, I starting to feel that this is hard to start with. Can you please give me ideas on what I can build in some language I already know (python, c, cpp, clojure, js) and also, build the same in Rust and see how and why rust is better here. This way I want to appreciate it better. I know Rust is memory safe, cargo is king and all, but want to see it practically. Waiting for that aha moment. 
+ Thank you all. 
+    submitted by    /u/_its_all_goodman  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : rust</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Difference between glibc and musl]]></title>
         <id>https://www.reddit.com/r/C_Programming/comments/1crcs2m/difference_between_glibc_and_musl/</id>
         <link href="https://www.reddit.com/r/C_Programming/comments/1crcs2m/difference_between_glibc_and_musl/"/>
@@ -46,6 +885,37 @@
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[References are like jumps]]></title>
+        <id>https://www.reddit.com/r/rust/comments/1crcp77/references_are_like_jumps/</id>
+        <link href="https://www.reddit.com/r/rust/comments/1crcp77/references_are_like_jumps/"/>
+        <updated>2024-05-13T22:40:49.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/desiringmachines  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : rust</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Best certifications to break into DevOps.]]></title>
+        <id>https://www.reddit.com/r/devops/comments/1crc2gy/best_certifications_to_break_into_devops/</id>
+        <link href="https://www.reddit.com/r/devops/comments/1crc2gy/best_certifications_to_break_into_devops/"/>
+        <updated>2024-05-13T22:13:50.000Z</updated>
+        <summary type="html"><![CDATA[I know that experience > certs, but sometimes you need certs just to get your foot in the door. 
+ I have 3 years in IT (networking). I have a CCNA got my RHCSA last month, and expect to have AZ104 by the end of this month. I work at an MSP NOC and while we don’t do any DevOps, it looks like we will get some small cloud projects soon. So I’ll be able to get some cloud experience. 
+ After I get my AZ104 what would be the next best cert to get out of the below?
+  
+AZ400
+ RHCE
+ CKA
+  
+While it’s been about 5 years, I did a Front end bootcamp. I forgot a lot but I’ve found that scripting comes pretty easy to me since I did spend time learning React.js, Git, HMTL, CSS, etc. So I’m also itching to pick up Python at some point. Probably wouldn’t be too hard for me to get the basics. 
+    submitted by    /u/SnooSongs8773  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : devops</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[School 42]]></title>
         <id>https://www.reddit.com/r/C_Programming/comments/1crbt8d/school_42/</id>
         <link href="https://www.reddit.com/r/C_Programming/comments/1crbt8d/school_42/"/>
@@ -55,6 +925,25 @@
  [link]   [comments]]]></summary>
         <author>
             <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How do you deal with coworkers reaching out to you for help but providing no context?]]></title>
+        <id>https://www.reddit.com/r/ExperiencedDevs/comments/1crbrau/how_do_you_deal_with_coworkers_reaching_out_to/</id>
+        <link href="https://www.reddit.com/r/ExperiencedDevs/comments/1crbrau/how_do_you_deal_with_coworkers_reaching_out_to/"/>
+        <updated>2024-05-13T22:00:44.000Z</updated>
+        <summary type="html"><![CDATA[This is mainly for people working at a large company, as I imagine this would be less of an issue at a startup where everyone knows each other.
+ My name is circulated semi-often as someone to contact when help is needed to fix issues in testing environments. From time to time, when someone reaches out to me for help, this is the entire message they send:
+  
+Hello u/idemockle
+  
+I have never talked to or heard of this person before, let alone know what they work on, so naturally I don't respond immediately. This greeting message is left to sit for hours before the person tries to reach out again, and most of the time, when they do reach out again, they still do not give any introduction or background into what they want.
+ Any tips on how to deal with this behavior? I feel kind of bad just not responding, but I also find it incredibly rude to reach out to someone you don't know for help then make them have to pull teeth to get any information about it. Usually, I don't respond until they give more context (if they ever do).
+ I'm curious if others on here have encountered the same thing, if you think not responding is justified, and if not, then what you do to get the information you need in order to help without wasting a bunch of time on a back and forth.
+    submitted by    /u/idemockle  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : ExperiencedDevs</name>
         </author>
     </entry>
     <entry>
@@ -83,6 +972,23 @@
  #include <iostream> #include <vector> #include <stack> #include <algorithm> //for std::shuffle…]]></summary>
         <author>
             <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Rayon isn't any faster than loop despite 16x more CPU usage]]></title>
+        <id>https://www.reddit.com/r/rust/comments/1cra4i8/rayon_isnt_any_faster_than_loop_despite_16x_more/</id>
+        <link href="https://www.reddit.com/r/rust/comments/1cra4i8/rayon_isnt_any_faster_than_loop_despite_16x_more/"/>
+        <updated>2024-05-13T20:52:31.000Z</updated>
+        <summary type="html"><![CDATA[I have made a prime number calculator and I don't get the speed increase from rayon I'd expect. Here is the simple code behind it:
+ let max = args() .nth(1) .ok_or(eyre!("No argument provided"))? .parse::<usize>()?; let mut primes: Vec<bool> = vec![true; max + 1]; primes[0] = false; primes[1] = false; let max_check = (max as f32).sqrt().ceil() as usize; eprintln!("Finding primes up to {}...", max); for i in 2..=max_check { if primes[i] { // Single-threaded let mut j = 2; while i * j <= max { primes[i * j] = false; j += 1; } // Multithreaded using rayon primes .par_iter_mut() .skip(i * 2) .step_by(i) .for_each(|is_prime| *is_prime = false) } } 
+ It is a basic Sieve of Eratosthenes.
+ In the multithreaded version the work of turning multiples of i into non-primes is spread across all 16 threads of my computer, however the execution time of both methods are essentially the same, even though every core is maxed out in the multithreaded version.
+ Any idea why I don't get a 16x speed increase? Does it have to do with rayon or is my code just bad?
+ I have about 1 billion booleans in my array, so rayon seems like a good idea
+    submitted by    /u/_antosser_  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : rust</name>
         </author>
     </entry>
     <entry>
@@ -192,6 +1098,17 @@ Organize with Workspaces: Create and manage workspaces to efficiently organize y
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[workingWithLegacyCodeIsAlwaysFun]]></title>
+        <id>https://www.reddit.com/r/ProgrammerHumor/comments/1cr7oxo/workingwithlegacycodeisalwaysfun/</id>
+        <link href="https://www.reddit.com/r/ProgrammerHumor/comments/1cr7oxo/workingwithlegacycodeisalwaysfun/"/>
+        <updated>2024-05-13T19:15:03.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/erazorix  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : ProgrammerHumor</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Why does gcc-generated code segfault using boost ptree?]]></title>
         <id>https://www.reddit.com/r/cpp_questions/comments/1cr6neg/why_does_gccgenerated_code_segfault_using_boost/</id>
         <link href="https://www.reddit.com/r/cpp_questions/comments/1cr6neg/why_does_gccgenerated_code_segfault_using_boost/"/>
@@ -205,6 +1122,17 @@ Organize with Workspaces: Create and manage workspaces to efficiently organize y
  [link]   [comments]]]></summary>
         <author>
             <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[hahaAssemblyGoBrrrrr]]></title>
+        <id>https://www.reddit.com/r/ProgrammerHumor/comments/1cr5mec/hahaassemblygobrrrrr/</id>
+        <link href="https://www.reddit.com/r/ProgrammerHumor/comments/1cr5mec/hahaassemblygobrrrrr/"/>
+        <updated>2024-05-13T17:52:14.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/yaktoma2007  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : ProgrammerHumor</name>
         </author>
     </entry>
     <entry>
@@ -243,6 +1171,17 @@ Organize with Workspaces: Create and manage workspaces to efficiently organize y
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Garbage collectors are scary]]></title>
+        <id>https://www.reddit.com/r/programming/comments/1cr519j/garbage_collectors_are_scary/</id>
+        <link href="https://www.reddit.com/r/programming/comments/1cr519j/garbage_collectors_are_scary/"/>
+        <updated>2024-05-13T17:28:24.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/ketralnis  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : programming</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[C++ code that will run for a certain time]]></title>
         <id>https://www.reddit.com/r/cpp_questions/comments/1cr4h15/c_code_that_will_run_for_a_certain_time/</id>
         <link href="https://www.reddit.com/r/cpp_questions/comments/1cr4h15/c_code_that_will_run_for_a_certain_time/"/>
@@ -277,6 +1216,19 @@ Organize with Workspaces: Create and manage workspaces to efficiently organize y
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : cscareerquestions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Can I jump from eJPT to PNPT directly?]]></title>
+        <id>https://www.reddit.com/r/hacking/comments/1cr4blj/can_i_jump_from_ejpt_to_pnpt_directly/</id>
+        <link href="https://www.reddit.com/r/hacking/comments/1cr4blj/can_i_jump_from_ejpt_to_pnpt_directly/"/>
+        <updated>2024-05-13T16:59:53.000Z</updated>
+        <summary type="html"><![CDATA[Ive recently passed the eJPT cert. I took a break for a month and have been following the TryHackMe pentester rooms the past few days. A lot of it I know more or less. But should I have any specific paths completed in THM before I enroll in the PNPT cert? Or am I okay to jump right in? 
+ I really just wanna make the step up to (what I consider) level 2 pentesting where it's active directory environments and domain controllers. I'm just not sure if I'm ready or if I should spend time in other areas first. How would you go about it?
+    submitted by    /u/error_therror  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : hacking</name>
         </author>
     </entry>
     <entry>
@@ -374,6 +1326,18 @@ Direct Contact devs
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[I've learned failure starts with scope]]></title>
+        <id>https://www.reddit.com/r/gamedev/comments/1cr2auq/ive_learned_failure_starts_with_scope/</id>
+        <link href="https://www.reddit.com/r/gamedev/comments/1cr2auq/ive_learned_failure_starts_with_scope/"/>
+        <updated>2024-05-13T15:36:27.000Z</updated>
+        <summary type="html"><![CDATA[I've worked on a lot of projects at this point. I've been in the industry for years and this year I've begun a solo chapter in my journey since health issues began and I'm a stay-at-home husband now.
+ A year or so ago I began a Metroidavnia with a good friend of mine, he did all the programming as I am an artist and writer. We had a ton of fun working on it, got really good feedback on initial marketing and still would like to finish it one day. However the scope was too large, my friend and I both had day jobs at other studios and we were just too busy to finish at the time. "Solo" Failure 1.
+ I took a break from development for a while and just did my job at the studio because the halt on that project broke my heart a bit. Then it was time for round two. I started working on an 2D ARPG b…]]></summary>
+        <author>
+            <name>top scoring links : gamedev</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[a TCP server in C with event loop]]></title>
         <id>https://www.reddit.com/r/C_Programming/comments/1cr220x/a_tcp_server_in_c_with_event_loop/</id>
         <link href="https://www.reddit.com/r/C_Programming/comments/1cr220x/a_tcp_server_in_c_with_event_loop/"/>
@@ -432,6 +1396,20 @@ i would appreciate your critiques.
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[How is animation done on extreme low poly characters?]]></title>
+        <id>https://www.reddit.com/r/gamedev/comments/1cr1aui/how_is_animation_done_on_extreme_low_poly/</id>
+        <link href="https://www.reddit.com/r/gamedev/comments/1cr1aui/how_is_animation_done_on_extreme_low_poly/"/>
+        <updated>2024-05-13T14:54:39.000Z</updated>
+        <summary type="html"><![CDATA[I've modeled up a very low poly character to use as a base. However, when animating the deformations are horrible for example . Im not a particularly skilled artist for modeling or animating so wonder what it is im doing wrong.
+ Can anyone point me in the direction of some tutorials for animating models this low in poly count? Any help greatly appreciated. 
+ for referance, this is the model: https://imgur.com/a/9L0jd15
+    submitted by    /u/Winter_Hat_5080  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : gamedev</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[How do you use a library ?]]></title>
         <id>https://www.reddit.com/r/cpp_questions/comments/1cr1a8h/how_do_you_use_a_library/</id>
         <link href="https://www.reddit.com/r/cpp_questions/comments/1cr1a8h/how_do_you_use_a_library/"/>
@@ -442,6 +1420,42 @@ i would appreciate your critiques.
  [link]   [comments]]]></summary>
         <author>
             <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How do you deal with this system design quirk?]]></title>
+        <id>https://www.reddit.com/r/ExperiencedDevs/comments/1cr0t46/how_do_you_deal_with_this_system_design_quirk/</id>
+        <link href="https://www.reddit.com/r/ExperiencedDevs/comments/1cr0t46/how_do_you_deal_with_this_system_design_quirk/"/>
+        <updated>2024-05-13T14:33:15.000Z</updated>
+        <summary type="html"><![CDATA[Encountering this problem a lot lately:
+ Say I have an entity and a kafka topic related to that entity.
+ I need to publish an event related to that entity once, and prevent further attempts to publish.
+ I can have a "published" column in my db that I check before publishing the event.
+ If !published, proceed to publish the event, then update published = true for that row.
+ The problem: if my publish succeeds, but my update fails, the column remains false for that row. If another publish attempt occurs, I will read !published again and try to publish when I shouldn't.
+ I could update the published column before the publish has occurred, but 1) this is an anti pattern since the publish hasn't occurred yet and 2) if the db update succeeds but the publish fails, I'll again have a column that is inaccurate.
+ I suppose in this particular circumstance I could just roll back the db update - but that could also fail.
+ If this happens 25,000 times in one day, I need to know which ones are inaccurate etc.
+ Are there more sophisticated/elegant ways for handling this sort of problem?
+ Edit:
+ Thanks everyone for all the feedback. I guess I should add: there is UI involvement here where we want to allow the user to take the action that causes the publish only once. We want to disallow taking that action on the UI more than once. We also want to enforce the constraint in the backend. IMO it is bad design to let the user believe they can take action when they can't. We could let them sit there and click buttons all day and just let the backend decide and return an error code when they shouldn't have initiated the action, or we could stop them from taking the action in the first place which is what we're doing.
+    submitted by    /u/lsrwlf  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : ExperiencedDevs</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How much is the defense industry paying experienced devs these days?]]></title>
+        <id>https://www.reddit.com/r/cscareerquestions/comments/1cr0q9d/how_much_is_the_defense_industry_paying/</id>
+        <link href="https://www.reddit.com/r/cscareerquestions/comments/1cr0q9d/how_much_is_the_defense_industry_paying/"/>
+        <updated>2024-05-13T14:30:03.000Z</updated>
+        <summary type="html"><![CDATA[(I know, less than commercial, let alone FAANG). 
+ There's a lot of data points for entry level, which seems to range anywhere from $65k-95k. But how about 5 YOE? 10 YOE? Etc.
+    submitted by    /u/honeywellair  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : cscareerquestions</name>
         </author>
     </entry>
     <entry>
@@ -464,6 +1478,19 @@ i would appreciate your critiques.
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : programming</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Channels]]></title>
+        <id>https://www.reddit.com/r/golang/comments/1cqyyhu/channels/</id>
+        <link href="https://www.reddit.com/r/golang/comments/1cqyyhu/channels/"/>
+        <updated>2024-05-13T13:11:29.000Z</updated>
+        <summary type="html"><![CDATA[Hi everyone,
+ I have a Java background and have been writing golang on and off for about 2 years now but still can’t wrap my head around when to use channels… what are some design decisions on why you chose to use them when writing code?
+    submitted by    /u/Easy-Novel-8134  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : golang</name>
         </author>
     </entry>
     <entry>
@@ -542,6 +1569,34 @@ i would appreciate your critiques.
  [link]   [comments]]]></summary>
         <author>
             <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Recent Docker BuildKit Features You’re Missing Out On]]></title>
+        <id>https://www.reddit.com/r/devops/comments/1cqwpl1/recent_docker_buildkit_features_youre_missing_out/</id>
+        <link href="https://www.reddit.com/r/devops/comments/1cqwpl1/recent_docker_buildkit_features_youre_missing_out/"/>
+        <updated>2024-05-13T11:13:26.000Z</updated>
+        <summary type="html"><![CDATA[Hi /r/DevOps,
+ Today I published an article titled "Recent Docker BuildKit Features You're Missing Out On" - Where I explore some of the recent features of BuildKit - the improved builder backend for Docker - including new Dockerfile syntax, built-in debugger and more
+ Here's the link: https://levelup.gitconnected.com/recent-docker-buildkit-features-youre-missing-out-on-a25aed8689fe
+ Feedback is very much appreciated!
+    submitted by    /u/Am4t3uR  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : devops</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Most technically accomplished game using Godot?]]></title>
+        <id>https://www.reddit.com/r/godot/comments/1cqwnoq/most_technically_accomplished_game_using_godot/</id>
+        <link href="https://www.reddit.com/r/godot/comments/1cqwnoq/most_technically_accomplished_game_using_godot/"/>
+        <updated>2024-05-13T11:10:12.000Z</updated>
+        <summary type="html"><![CDATA[Given the amount of attention Godot is getting within the games industry, what's the most technically accomplished game that you can think of that uses the Godot engine?
+ I think Human Diaspora is pretty accomplished, but it's also a few years old now (May 2022). I am pretty sure that a number of other titles have come out since that raise the bar - especially considering how much more interest Godot has gotten in recent months after Unity started having problems.
+    submitted by    /u/prankster999  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : godot</name>
         </author>
     </entry>
     <entry>
@@ -888,6 +1943,17 @@ I'm currently working for porting existing libraries like magic_enum, fastgltf a
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : cscareerquestions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[The Power of "Boring" Code]]></title>
+        <id>https://www.reddit.com/r/programming/comments/1cqn44g/the_power_of_boring_code/</id>
+        <link href="https://www.reddit.com/r/programming/comments/1cqn44g/the_power_of_boring_code/"/>
+        <updated>2024-05-13T01:10:31.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/palettecat  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : programming</name>
         </author>
     </entry>
     <entry>
@@ -1358,6 +2424,19 @@ You can't pass NULL to memset/memcpy/memmove, even with a zero length. (Really a
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Build your own CI system in Go (Part 1)]]></title>
+        <id>https://www.reddit.com/r/golang/comments/1cq9cnt/build_your_own_ci_system_in_go_part_1/</id>
+        <link href="https://www.reddit.com/r/golang/comments/1cq9cnt/build_your_own_ci_system_in_go_part_1/"/>
+        <updated>2024-05-12T14:40:21.000Z</updated>
+        <summary type="html"><![CDATA[Hello everyone. I've just finished first article in a series of posts on how to build your own CI system. Would really appreciate constructive feedback, starting from the "Is it any useful at all?", till minor tweaks and suggestions about what I have probably missed 
+ https://x-dvr.github.io/dev-blog/posts/building-ci-in-go-1/
+    submitted by    /u/x-dvr  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : golang</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Issue with Code Runner extension]]></title>
         <id>https://www.reddit.com/r/C_Programming/comments/1cq8sdv/issue_with_code_runner_extension/</id>
         <link href="https://www.reddit.com/r/C_Programming/comments/1cq8sdv/issue_with_code_runner_extension/"/>
@@ -1660,6 +2739,23 @@ You can't pass NULL to memset/memcpy/memmove, even with a zero length. (Really a
         <summary type="html"><![CDATA[So I've built this lock-free single produce multiple consumer queue. The queue works fine on x86 (amd & intel procs), but seems to choke on aarch64. For both architectures I am using gcc 13.2 with ( -mcpu=neoverse-v1) specified for aarch64. I have run with both -O2 and -O3 and see the issue repo with both. The issue that I am seeing is that occasionally when multiple consumers concurrently consume from the queue two consumers end up with the same 'item' value even with a different tail value. For example, given 3 threads T1, T2, T2; if T1 is the producer and stores a value A at index 1 (head == 1), and B at index 2 (head == 2). Concurrently T2 and T3 are dequeuing, T2 gets A (tail == 1) and T3 sees tail == 2, but still gets the value A (not B). So even though T3 has the proper tail value i…]]></summary>
         <author>
             <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Why the behaviour of range and for loop is different when looping over string]]></title>
+        <id>https://www.reddit.com/r/golang/comments/1cpyxl9/why_the_behaviour_of_range_and_for_loop_is/</id>
+        <link href="https://www.reddit.com/r/golang/comments/1cpyxl9/why_the_behaviour_of_range_and_for_loop_is/"/>
+        <updated>2024-05-12T03:45:59.000Z</updated>
+        <summary type="html"><![CDATA[Edit: I just realised it's not difference between for loop or range but how the variable is accessed. My question still remains though.
+ In below code why type of v and s[k] are different. They should be same, right?
+ Go playground
+ package main import ( "fmt" "reflect" ) func main() { s := "PAYPALISHIRING" for k, v := range s { fmt.Println(reflect.TypeOf(v), reflect.TypeOf(s[k])) break } } 
+ result:
+ int32 uint8 
+    submitted by    /u/a_sugarcane  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : golang</name>
         </author>
     </entry>
     <entry>
@@ -2038,6 +3134,18 @@ The fade-out anima…]]></summary>
  A lesson learned is that marketability (appeal and readability) of the game is super important, and …]]></summary>
         <author>
             <name>top scoring links : gamedev</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[nakedI18n: a simple, naive, painless, composable i18n golang package.]]></title>
+        <id>https://www.reddit.com/r/golang/comments/1cpoc3e/nakedi18n_a_simple_naive_painless_composable_i18n/</id>
+        <link href="https://www.reddit.com/r/golang/comments/1cpoc3e/nakedi18n_a_simple_naive_painless_composable_i18n/"/>
+        <updated>2024-05-11T18:50:37.000Z</updated>
+        <summary type="html"><![CDATA[Created this after years of using painful alternatives: https://github.com/salihzain/nakedi18n
+    submitted by    /u/vivid-software-2020  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : golang</name>
         </author>
     </entry>
     <entry>
@@ -2843,6 +3951,17 @@ Of course the answer is always to look for a new job. But how can I get better a
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Python 3.13 Beta: The New Features and Fixes Coming Soon]]></title>
+        <id>https://www.reddit.com/r/programming/comments/1cp6jn2/python_313_beta_the_new_features_and_fixes_coming/</id>
+        <link href="https://www.reddit.com/r/programming/comments/1cp6jn2/python_313_beta_the_new_features_and_fixes_coming/"/>
+        <updated>2024-05-11T02:05:14.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/Puzzleheaded_Ad4030  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : programming</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[You Don’t Need a CSS Framework]]></title>
         <id>https://www.reddit.com/r/programming/comments/1cp61lb/you_dont_need_a_css_framework/</id>
         <link href="https://www.reddit.com/r/programming/comments/1cp61lb/you_dont_need_a_css_framework/"/>
@@ -3425,6 +4544,29 @@ It would be nice to learn a new language and it's ecosystem even if I were to be
  [link]   [comments]]]></summary>
         <author>
             <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Contributing/copying your code into a project at work.]]></title>
+        <id>https://www.reddit.com/r/ExperiencedDevs/comments/1copevh/contributingcopying_your_code_into_a_project_at/</id>
+        <link href="https://www.reddit.com/r/ExperiencedDevs/comments/1copevh/contributingcopying_your_code_into_a_project_at/"/>
+        <updated>2024-05-10T13:20:42.000Z</updated>
+        <summary type="html"><![CDATA[I’ve written some code for my own project in my own time. And it would greatly help fix a number of bugs and improve the product at my place of employment if i add it to the codebase. 
+ However i’m concerned that if i do copy the code into the repo, then that code will suddenly become property of the company i work for.
+ I’m not sure whether to raise the issue or who/how to raise it.
+ Has anyone here navigated this issue before?
+ Some thoughts are:
+  
+I could create an open git repo with the code and publish it as a package with the appropriate license, then install that package in the product at work.
+ 
+See if i can rewrite the code so it works the same way but looks a little different somehow/ or ask an LLM to rewrite and mix it up a bit so it’s not the same syntax 
+ 
+Setup a contract that somehow states that both i and the business have a perpetual license to do whatever we want with the code (even writing it down here sounds stupid and is likely impossible/problematic legally)
+ 
+    submitted by    /u/Adept-Result-67  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : ExperiencedDevs</name>
         </author>
     </entry>
     <entry>
@@ -4332,6 +5474,18 @@ Currently the comments include heavy support from libertarian think t…]]></sum
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[How many jr level (0-2 yoe) have gotten jobs here in 2024?]]></title>
+        <id>https://www.reddit.com/r/cscareerquestions/comments/1co2pp3/how_many_jr_level_02_yoe_have_gotten_jobs_here_in/</id>
+        <link href="https://www.reddit.com/r/cscareerquestions/comments/1co2pp3/how_many_jr_level_02_yoe_have_gotten_jobs_here_in/"/>
+        <updated>2024-05-09T17:24:47.000Z</updated>
+        <summary type="html"><![CDATA[Understandably, there’ll be huge selection bias in the replies. Just losing my mind over here
+    submitted by    /u/spiderm-n  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : cscareerquestions</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[My first Emulation project :)]]></title>
         <id>https://www.reddit.com/r/EmuDev/comments/1co2eo4/my_first_emulation_project/</id>
         <link href="https://www.reddit.com/r/EmuDev/comments/1co2eo4/my_first_emulation_project/"/>
@@ -4514,6 +5668,17 @@ Edit: Fixed units in 1. from cycles/sec -> cycles/frame
  [link]   [comments]]]></summary>
         <author>
             <name>Developing Emulators</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Update (4 days into game jam)]]></title>
+        <id>https://www.reddit.com/r/godot/comments/1cnz4om/update_4_days_into_game_jam/</id>
+        <link href="https://www.reddit.com/r/godot/comments/1cnz4om/update_4_days_into_game_jam/"/>
+        <updated>2024-05-09T14:50:52.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/Turbulent-Fly-6339  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : godot</name>
         </author>
     </entry>
     <entry>
@@ -5580,6 +6745,18 @@ Only 2 rules in programming
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Mono repo or not?]]></title>
+        <id>https://www.reddit.com/r/golang/comments/1cn3uj6/mono_repo_or_not/</id>
+        <link href="https://www.reddit.com/r/golang/comments/1cn3uj6/mono_repo_or_not/"/>
+        <updated>2024-05-08T12:53:47.000Z</updated>
+        <summary type="html"><![CDATA[What's best for a Golang project with a few cli tools and a server: - each in a repo? - or all in one repo?
+    submitted by    /u/web3samy  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : golang</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Golang for a startup?]]></title>
         <id>https://www.reddit.com/r/golang/comments/1cn3m2c/golang_for_a_startup/</id>
         <link href="https://www.reddit.com/r/golang/comments/1cn3m2c/golang_for_a_startup/"/>
@@ -5651,6 +6828,23 @@ Only 2 rules in programming
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : godot</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Just got accepted into college at 27]]></title>
+        <id>https://www.reddit.com/r/cscareerquestions/comments/1cn2ff3/just_got_accepted_into_college_at_27/</id>
+        <link href="https://www.reddit.com/r/cscareerquestions/comments/1cn2ff3/just_got_accepted_into_college_at_27/"/>
+        <updated>2024-05-08T11:40:42.000Z</updated>
+        <summary type="html"><![CDATA[I’m looking for any tips or things I should try to do or get done while I’m in school. My situation is a little unique. 
+ I’m 27, veteran, family, house, the whole 9. 
+ An opportunity came up where I qualified for something where my schooling, any certs, software, tech stuff, are all paid for I just have to request and prove why I would need it. 
+ Knowing that, is there anything you can think of I should make sure I acquire while I don’t have to foot the bill, and can prove it might be necessary to my post degree career? 
+ Thanks in advance! 
+ Edit: Also if anyone could recommend some high tier and mid tier laptops for school, thanks!
+    submitted by    /u/itsNateDawg  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : cscareerquestions</name>
         </author>
     </entry>
     <entry>
