@@ -2,10 +2,256 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://joe8755.github.io/the-reddit-rss-reader/index.html</id>
     <title>the reddit rss reader</title>
-    <updated>2024-05-18T01:21:47.314Z</updated>
+    <updated>2024-05-18T12:33:41.056Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://joe8755.github.io/the-reddit-rss-reader/index.html"/>
     <link rel="self" href="https://joe8755.github.io/the-reddit-rss-reader/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[What's the error here (That took me half an hour to see)]]></title>
+        <id>https://www.reddit.com/r/cpp/comments/1cuw1ce/whats_the_error_here_that_took_me_half_an_hour_to/</id>
+        <link href="https://www.reddit.com/r/cpp/comments/1cuw1ce/whats_the_error_here_that_took_me_half_an_hour_to/"/>
+        <updated>2024-05-18T12:17:03.000Z</updated>
+        <summary type="html"><![CDATA[// a and b are integers if (a - b > vec.size()) { foo(); } 
+    submitted by    /u/angelman7    to    r/cpp  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Does this code pattern violate strict aliasing rules?]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1cuvw1e/does_this_code_pattern_violate_strict_aliasing/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1cuvw1e/does_this_code_pattern_violate_strict_aliasing/"/>
+        <updated>2024-05-18T12:08:50.000Z</updated>
+        <summary type="html"><![CDATA[Hi. I'm working as a C++ dev, and there's a pattern that's everywhere in my company's codebase. But I'm still quite early in my career so tbh it has my doubting myself. I thought this violated strict-aliasing rules so was undefined behaviour, but with how much I'm seeing it in our code it has me doubting myself. As this is written by people with a lot more experience then me.
+ If you have a char* or uint8_t* you've read off a socket or character device:
+ char buffer[512]; // or std::uint8_t buffer[512] // imagine we're reading from a device or socket into the buffer here... // then later: const std::uint32_t *ptr = reinterpret_cast<const std::uint32_t*>(buffer); const uint32_t n = ntohl(*ptr); // etc... 
+ I don't see -fno-strict-aliasing in our compiler flags either. But I thought that while you can cast a pointer to any type to a char/uint8_t pointer, it doesn't work the other way round. The compiler is free to optimise based on that assumption, not to mention issues with alignment, caching etc. 
+ If I'm wrong can someone explain where how? I may have misunderstood aliasing rules. Thanks a lot!
+    submitted by    /u/DiligentBit3311    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Where do IntelX and Google darkweb monitoring getting their lesser-known / private leaks? (NOT from BreachForums or torrents)]]></title>
+        <id>https://www.reddit.com/r/hacking/comments/1cuvd4p/where_do_intelx_and_google_darkweb_monitoring/</id>
+        <link href="https://www.reddit.com/r/hacking/comments/1cuvd4p/where_do_intelx_and_google_darkweb_monitoring/"/>
+        <updated>2024-05-18T11:37:32.000Z</updated>
+        <summary type="html"><![CDATA[Disclaimer: It's not really hacking, but I couldn't find a sub fitting more for my question.
+ Hello everyone, I am wondering where IntelX and Google's darkweb monitoring service are getting their lesser known / private leaks? For an example, there is a site called selfstore.hu, an sql dump from their site can be found both on IntelX and Google's darkweb monitoring service but not on any other leak search engine site, only on those two. So where do they get those? Is there some clearner or darkweb forum where people randomly post these for credits (Similary to BreachForums) or just for bragging?
+ I want to point out again, these are not from BreachForums. I also tried to look it up in DHT search engines, but I got zero results.
+ I appreciate the answers, have a nice day :)
+    submitted by    /u/SellLimp7399  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : hacking</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How bad is the Dinkumware std implementation?]]></title>
+        <id>https://www.reddit.com/r/cpp/comments/1cuua7c/how_bad_is_the_dinkumware_std_implementation/</id>
+        <link href="https://www.reddit.com/r/cpp/comments/1cuua7c/how_bad_is_the_dinkumware_std_implementation/"/>
+        <updated>2024-05-18T10:27:00.000Z</updated>
+        <summary type="html"><![CDATA[Since the beginning of the year I have had write C++ in an environment that unfortunately uses the the Dinkumware implementation of the std lib: C++Builder 11. During this time I’ve been bitten by a plethora of in your face bugs that have forced me to invest a bunch of time into understanding and then circumventing the issues. To name just a few:
+  
+std::optional<bool> doesn’t compile
+ std::optional<NonDefaultConstructible> doesn’t compile
+ std::visit is broken
+ std::variant::operator = will silently mess things up by setting the wrong index
+ std::unordered_set::extract will return a handle that when destroyed decrements the number of elements in the collection. So one extract causes two sides decrements.
+  
+Fortunately, the last version of C++ Builder seems to be moving away from Dinkumware, but until I upgrade, is anyone here aware of a broader list of Dinkumware bugs? Is Dinkumware such a poor quality implementation? Has it always been like that?
+    submitted by    /u/soldiersided    to    r/cpp  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Why can't I find the injected name of a templated class's templated base class? - The Old New Thing]]></title>
+        <id>https://www.reddit.com/r/cpp/comments/1cutf3q/why_cant_i_find_the_injected_name_of_a_templated/</id>
+        <link href="https://www.reddit.com/r/cpp/comments/1cutf3q/why_cant_i_find_the_injected_name_of_a_templated/"/>
+        <updated>2024-05-18T09:23:51.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/pavel_v    to    r/cpp  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[What is the most efficient way to paralelise a portion of code in C++ (a for loop) without using vectors?]]></title>
+        <id>https://www.reddit.com/r/C_Programming/comments/1cut9wq/what_is_the_most_efficient_way_to_paralelise_a/</id>
+        <link href="https://www.reddit.com/r/C_Programming/comments/1cut9wq/what_is_the_most_efficient_way_to_paralelise_a/"/>
+        <updated>2024-05-18T09:13:28.000Z</updated>
+        <summary type="html"><![CDATA[Hello,
+ I'm trying to find a way to increase the speed of a for loop, that that gets executed hundreds of times - what would be the most efficient way, if I don't want to use vectors (because from my testing, using them as the range for a FOR loop is inefficient).
+    submitted by    /u/DesperateGame  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Hitag2 Crack2 implementation working on Proxmark3]]></title>
+        <id>https://www.reddit.com/r/hacking/comments/1cut6bt/hitag2_crack2_implementation_working_on_proxmark3/</id>
+        <link href="https://www.reddit.com/r/hacking/comments/1cut6bt/hitag2_crack2_implementation_working_on_proxmark3/"/>
+        <updated>2024-05-18T09:06:15.000Z</updated>
+        <summary type="html"><![CDATA[The second key recovery vector outlined in the Gone in 360 seconds paper by F Garcia et al, implemented by Kev Sheldrake in RFIDLer 2017, now work in Proxmark3. 
+ It is a time/trade memory attack, with a online part and a secondary offline part.
+ We can now gather the 2048 bits of crypto key stream needed for the second part of the attack in the pm3 client. 
+ You all need to create the 1.2tb lookup database file in order to execute the offline part of the attack. 
+ You find all you need in tools\hitag2crack\crack2
+    submitted by    /u/iceman2001  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : hacking</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Developers spend close to 57% of their time firefighting than innovating- Cisco survey]]></title>
+        <id>https://www.reddit.com/r/programming/comments/1curlmb/developers_spend_close_to_57_of_their_time/</id>
+        <link href="https://www.reddit.com/r/programming/comments/1curlmb/developers_spend_close_to_57_of_their_time/"/>
+        <updated>2024-05-18T07:11:00.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/john83672  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : programming</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Youngling C programmer needs help]]></title>
+        <id>https://www.reddit.com/r/C_Programming/comments/1cuqztb/youngling_c_programmer_needs_help/</id>
+        <link href="https://www.reddit.com/r/C_Programming/comments/1cuqztb/youngling_c_programmer_needs_help/"/>
+        <updated>2024-05-18T06:30:08.000Z</updated>
+        <summary type="html"><![CDATA[Just started my programming course and I have to submit this assignment tomorrow. Keeping things short... I need to round up values to two digits after the "." but keeping 4 digits after the "." Eg: $18.6784 should be $18.6800.
+ For this I am writing Taxes = sub_total * TAX Printf("Taxes. :$%.4f\n", Total);
+ I am not here just for the result, if someone could explain so I can learn I will be appreciated :)
+    submitted by    /u/MrStassi  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Help understanding?]]></title>
+        <id>https://www.reddit.com/r/C_Programming/comments/1cuqd4e/help_understanding/</id>
+        <link href="https://www.reddit.com/r/C_Programming/comments/1cuqd4e/help_understanding/"/>
+        <updated>2024-05-18T05:48:03.000Z</updated>
+        <summary type="html"><![CDATA[Problem (1): The code below uses the following struct: struct Data 1{ struct Data *data1; int data2; int *data3; }; typedef struct Data Data;
+ In the code below, declarations for d1, d2, and d3 are missing. (Recall that a variable declaration gives the type and tells the compiler about a variable; e.g., int n; would declare the variable n.) Each of a1 and d2 have one of the following types: Data, Data, and/or Data * First, write three lines of code declaring variables d1, d2, and d3. Then, draw a memory diagram, including clearly differentiating between the stack and the heap, for the snippet of code shown below. d1.data2 = 10; d2 = malloc (sizeof (Data)) ; (d2) .data1 = &d1; d2->data2 = d1. data2; d1. data1 = d2; d1. data3 = malloc (sizeof (int)) ; * (d.data3) = 7; d2-›data3 = d1. data3; d3 = & (d2→>data3) ; I think my answer for the first problem is Data d1; Data d2; int** d3; correct me if I’m wrong but could someone please help with the diagram? 
+    submitted by    /u/RelationshipTop3696  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[My connection]]></title>
+        <id>https://www.reddit.com/r/C_Programming/comments/1cup4ro/my_connection/</id>
+        <link href="https://www.reddit.com/r/C_Programming/comments/1cup4ro/my_connection/"/>
+        <updated>2024-05-18T04:30:11.000Z</updated>
+        <summary type="html"><![CDATA[Hi all. Im having major issues with my connection on my client side, it just does not run the way its supposed if anyone can help that will be greatly appreciated. Im new to using fd sets & working with nonblocking cons
+ ```
+ static void setup_connection(void) { struct sockaddr_in addr;
+ fd = socket(AF_INET, SOCK_STREAM, 0); if(fd == -1) return; addr.sin_family = AF_INET; addr.sin_port = htons(6774); addr.sin_addr.s_addr = inet_addr("host"); // put your host here fcntl(fd, F_SETFL, O_NONBLOCK); connect(fd, (struct sockaddr *)&addr, sizeof(struct sockaddr_in)); return; 
+ }
+ static void disconnect(void) { if(fd != -1) close(fd); fd = -1; connected = FALSE; sleep(5); }
+ int main(int argc, char *argv[]) { while(TRUE) { sleep(1);
+  int err = 0; socklen_t err_len = sizeof(err); FD_ZERO(&read_set); FD_ZERO(&write_set); if(!connected) setup_connection(); if(!fd) continue; if(connected) // check if we are connected to determine our next action FD_SET(fd, &read_set); else FD_SET(fd, &write_set); select(fd + 1, &read_set, &write_set, NULL, &tv); if(FD_ISSET(fd, &write_set)) // write { err = 0; socklen_t err_len = sizeof(err); getsockopt(fd, SOL_SOCKET, SO_ERROR, &err, &err_len); if(err != 0) { 
+ ifdef DBG
+  printf("[main] failed to connect! \n"); 
+ endif
+  disconnect(); continue; } 
+ ifdef DBG
+  printf("[main] Connected! \n"); 
+ endif
+  connected = TRUE; } if(!connected) { disconnect(); continue; } if(FD_ISSET(fd, &read_set)) // read { int val = recv(fd, buffer, sizeof(buffer), MSG_NOSIGNAL); if(val == 0) { disconnect(); continue; } memset(buffer, 0, sizeof(buffer)); } } 
+ } ```
+    submitted by    /u/ryanjones42  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Memory]]></title>
+        <id>https://www.reddit.com/r/C_Programming/comments/1cunqua/memory/</id>
+        <link href="https://www.reddit.com/r/C_Programming/comments/1cunqua/memory/"/>
+        <updated>2024-05-18T03:10:41.000Z</updated>
+        <summary type="html"><![CDATA[Anyone have advice for saving memory? Im new to C, should i use structs, enums, correct data types? I also tend to do stuff like char string [1024] & usually just set it to 1024 by default if im not sure how much ill need, whats some better ways to be accurate 
+    submitted by    /u/ryanjones42  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Got pip’ed over a well intentioned comment the tech lead made outside of work, should I leave with no notice for a 10k raise?]]></title>
+        <id>https://www.reddit.com/r/cscareerquestions/comments/1cumzmh/got_piped_over_a_well_intentioned_comment_the/</id>
+        <link href="https://www.reddit.com/r/cscareerquestions/comments/1cumzmh/got_piped_over_a_well_intentioned_comment_the/"/>
+        <updated>2024-05-18T02:29:22.000Z</updated>
+        <summary type="html"><![CDATA[The situation is kind of weird but in a nutshell, tech lead and I (senior level) are friends from college (he’s 3 years older) so we went out for a drink after work one day and he was teasing me a bit about being online more often while doing remote work, something like “dude you be slaking off too much on remote Fridays” (so I can get promoted to staff).
+ Somehow, this conversation gets heard by someone in management and after some weird stuff goes on I get put on pip. I talked to the tech lead about it and he was very apologetic to me and mad at management. 
+ Recently, I got an offer for the same level at a F100 fintech firm that’s also 3 days in office and slightly better benefits along with 10k more base salary and a comparable bonus structure. I’m super mad at management so I’m thinking about just quitting on Monday with no notice but maybe I’ll screw over my friend a bit too much. Thoughts?
+    submitted by    /u/Left_Construction174  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : cscareerquestions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Focus Exporter, A Prometheus Exporter to track my Focus]]></title>
+        <id>https://www.reddit.com/r/devops/comments/1cumxc6/focus_exporter_a_prometheus_exporter_to_track_my/</id>
+        <link href="https://www.reddit.com/r/devops/comments/1cumxc6/focus_exporter_a_prometheus_exporter_to_track_my/"/>
+        <updated>2024-05-18T02:25:58.000Z</updated>
+        <summary type="html"><![CDATA[I got inspired by Microsoft Viva Insights and decided to create my own version, leveraging Prometheus. This turned out to be a great reason to learn some Go! As such, I'm happy to share my first software project. 
+ Please check out Focus Exporter. A tool that helps track metrics related to focused windows, user activity, and meeting durations on Windows.
+ Focus Exporter surfaces data about time spent in various applications, including meetings on Microsoft Teams and Zoom. The metrics are exposed via a Prometheus http endpoint, which can be integrated into existing monitoring setups.
+ Features:
+  
+Tracking focused-window metrics
+ Monitoring activity/inactivity
+ Measuring meeting durations
+ Privacy mode for sensitive window titles
+ Configurable through command-line parameters
+  
+check it out on GitHub: Focus Exporter
+ Feedback and suggestions are welcome, this is a learning project for me!
+    submitted by    /u/vinistois  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : devops</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Best Approach?]]></title>
+        <id>https://www.reddit.com/r/hacking/comments/1cumc29/best_approach/</id>
+        <link href="https://www.reddit.com/r/hacking/comments/1cumc29/best_approach/"/>
+        <updated>2024-05-18T01:54:48.000Z</updated>
+        <summary type="html"><![CDATA[My wife has not been able to play a game for a few weeks due to bad development. I've reviewed the crash logs generated by game, and it appears there is one particular item, a fountain, that is placed in her game that is causing the crash. The profile.json is encrypted, so I can't just go in there and find that entry and remove it. I'm guessing it uses AES encryption since the crash log mentions Rijndael. What would the best approach be to digging for the key? I've opened up files with ghidra, but for some reason, findcrypt isn't showing up for me to use in analysis. My wife loves this game and I really want to figure this out for her. Is there a better approach to doing this?
+ Update:
+ Here are the dmp details. 
+ EXCEPTION_RECORD: (.exr -1)
+ ExceptionAddress: 00007ffc989b6196 (GameAssembly!mono_class_has_parent+0x00000000005a0606)
+ ExceptionCode: c0000005 (Access violation)
+ ExceptionFlags: 00000000
+ NumberParameters: 2
+ Parameter[0]: 0000000000000000
+ Parameter[1]: ffffffffffffffff
+ Attempt to read from address ffffffffffffffff
+ Here are the log details:
+ Unloading 2 Unused Serialized files (Serialized files now loaded: 1724)
+ Unloading 4307 unused Assets to reduce memory usage. Loaded Objects now: 85482.
+ Total: 177.784700 ms (FindLiveObjects: 11.103100 ms CreateObjectMapping: 4.718700 ms MarkObjects: 159.846400 ms DeleteObjects: 2.116200 ms)
+ Exception: Fountain01(Clone) not found in Profile.World.Keyholes (IsKeyHole: False, guid: )
+    submitted by    /u/Catdad08  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : hacking</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Automatic differentiation and dual numbers in C++ are pretty neat, with a single exception]]></title>
         <id>https://www.reddit.com/r/cpp/comments/1cujs0l/automatic_differentiation_and_dual_numbers_in_c/</id>
@@ -121,6 +367,46 @@
  [link]   [comments]]]></summary>
         <author>
             <name>Developing Emulators</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[There is a severe shortage of good IT talent in the US...]]></title>
+        <id>https://www.reddit.com/r/cscareerquestions/comments/1cui30m/there_is_a_severe_shortage_of_good_it_talent_in/</id>
+        <link href="https://www.reddit.com/r/cscareerquestions/comments/1cui30m/there_is_a_severe_shortage_of_good_it_talent_in/"/>
+        <updated>2024-05-17T22:24:47.000Z</updated>
+        <summary type="html"><![CDATA[Hiring Manager: I need a Salesforce developer with 5 years of salesforce experience.
+ HR: Bob here is a talented Java developer with 10 years of experience and is eager to learn Salesforce. He’s also a US citizen and with maybe 6 months of training in Salesforce, can do a far better job than someone with just 5 years of ”Salesforce only” experience. Do you want to interview Bob?
+ Hiring Manager: No. Bob is not qualified…it’s so hard to find qualified candidates these days. We’ll have to sponsor H1-B visa for “qualified” candidates.
+ HR: Ok, we’ll get the process started…it might take 3 months with the hiring and visa process…is that okay?
+ Hiring Manager: That’s fine.
+ 3 months go by…
+ HR: we have our candidate and his visa was approved. We had to “change” the job description to suit his exact skill set to submit to the labor department for labor certification. We made sure “no one else” could possibly be remotely qualified for this position except our visa candidate.
+ Hiring Manager: Great work!
+ HR: Yep, we do this a lot! We know all the tricks.
+ Hiring Manager: The candidate will need 3 months to “ramp up”.
+ HR: Wait…we could have hired Bob three months ago and he would be half way through getting trained in Salesforce by now.
+ Hiring Manager: Forget Bob.
+ …months go by… Bob eventually finds work as a Java developer. He never learns Salesforce even though he wanted to….the company is sponsoring the visa holder for a green card…they will be posting his job description on the job board at the back of the building right next to the dumpster (you can’t get to the board…there are some shipping crates blocking it), per the labor certification process (citizens are encouraged to apply)…
+ …15 years go by…the visa candidate now has a green card and is ready to move on to greener pastures….he wants to get into AI….he can’t…he’s not qualified…the hiring manager at the AI company will be sponsoring H1-B visa as he can’t find “qualified” candidates.
+    submitted by    /u/TimeForTaachiTime  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : cscareerquestions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Unethical Way of Getting Hired?]]></title>
+        <id>https://www.reddit.com/r/devops/comments/1cui0vn/unethical_way_of_getting_hired/</id>
+        <link href="https://www.reddit.com/r/devops/comments/1cui0vn/unethical_way_of_getting_hired/"/>
+        <updated>2024-05-17T22:22:09.000Z</updated>
+        <summary type="html"><![CDATA[Around every year I put in applications to multiple companies to see what stack is popular these days and, if the salary is good enough, switch over to them.
+ I noticed these past year that unless the company is not specifically looking for the "Devops" in name, they will outright not contact you. I applied to multiple positions and almost got every call that was looking for "Devops Engineers", but would get a few answers back if the role was "SRE", "Platform Engineer", or "Software Engineer"; even though the requirements would be identical and my experience 100% matched! I remember I applied to a SRE position where I had every requirement they wanted and they never called me back.
+ I wonder if hiring managers are breezing through the resumes and if they see the title of your current job is off they just pass you?
+ I am wondering if it would be unethical if you just switch your job title to what they want and explain during the first call you get back that you are technically a "devops engineer" but your experience matches their requirements?
+    submitted by    /u/Turkey_Caruncle  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : devops</name>
         </author>
     </entry>
     <entry>
@@ -298,6 +584,17 @@ Low Latency
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Generic Concurrency in Go]]></title>
+        <id>https://www.reddit.com/r/golang/comments/1cubk6c/generic_concurrency_in_go/</id>
+        <link href="https://www.reddit.com/r/golang/comments/1cubk6c/generic_concurrency_in_go/"/>
+        <updated>2024-05-17T17:47:01.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/gobwas  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : golang</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Full-scale Game Boy Advance dev jam is back after two-year hiatus -- C language was a popular choice for this ARM handheld back in the day]]></title>
         <id>https://www.reddit.com/r/C_Programming/comments/1cub5av/fullscale_game_boy_advance_dev_jam_is_back_after/</id>
         <link href="https://www.reddit.com/r/C_Programming/comments/1cub5av/fullscale_game_boy_advance_dev_jam_is_back_after/"/>
@@ -309,6 +606,34 @@ Low Latency
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[What projects did you built or working on right now?]]></title>
+        <id>https://www.reddit.com/r/golang/comments/1cuaykn/what_projects_did_you_built_or_working_on_right/</id>
+        <link href="https://www.reddit.com/r/golang/comments/1cuaykn/what_projects_did_you_built_or_working_on_right/"/>
+        <updated>2024-05-17T17:23:06.000Z</updated>
+        <summary type="html"><![CDATA[I work as a platform engineer and I've recently built a service to serve reactjs apps from an S3 bucket.
+ It has an API service that builds the react app and uploads the build folder to the S3 bucket.
+ A reverse proxy server listening on *.faas.dev.aws where * is the deployment name. Users can deploy their react apps using the api service with a unique name and they can access them with a url like my-react-app.faas.dev.aws
+ Apart from this, I've also built a k8s operator that pulls secrets from our vault and stores them as native k8s secrets.
+ What projects did you built or currently working on?
+    submitted by    /u/previouslyanywhere  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : golang</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[What game made you realise *this* is what you want to do?]]></title>
+        <id>https://www.reddit.com/r/gamedev/comments/1cu9fyp/what_game_made_you_realise_this_is_what_you_want/</id>
+        <link href="https://www.reddit.com/r/gamedev/comments/1cu9fyp/what_game_made_you_realise_this_is_what_you_want/"/>
+        <updated>2024-05-17T16:21:37.000Z</updated>
+        <summary type="html"><![CDATA[Also what specifically about that game? And does that relate to what you do now?
+    submitted by    /u/Hellgwyn  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : gamedev</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[How can I set a breakpoint on a source file in a subdirectory?]]></title>
         <id>https://www.reddit.com/r/cpp_questions/comments/1cu9aov/how_can_i_set_a_breakpoint_on_a_source_file_in_a/</id>
         <link href="https://www.reddit.com/r/cpp_questions/comments/1cu9aov/how_can_i_set_a_breakpoint_on_a_source_file_in_a/"/>
@@ -317,6 +642,17 @@ Low Latency
  [link]   [comments]]]></summary>
         <author>
             <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Questions about animating a boss fight in Top-Down]]></title>
+        <id>https://www.reddit.com/r/godot/comments/1cu92rt/questions_about_animating_a_boss_fight_in_topdown/</id>
+        <link href="https://www.reddit.com/r/godot/comments/1cu92rt/questions_about_animating_a_boss_fight_in_topdown/"/>
+        <updated>2024-05-17T16:06:48.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/iammitchconner82  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : godot</name>
         </author>
     </entry>
     <entry>
@@ -403,6 +739,17 @@ Low Latency
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[pleaseNoNotAnotherBaseClassHelper]]></title>
+        <id>https://www.reddit.com/r/ProgrammerHumor/comments/1cu7f29/pleasenonotanotherbaseclasshelper/</id>
+        <link href="https://www.reddit.com/r/ProgrammerHumor/comments/1cu7f29/pleasenonotanotherbaseclasshelper/"/>
+        <updated>2024-05-17T15:00:38.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/StolenStutz  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : ProgrammerHumor</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[How to use CMakePresets.json in a "multi-project" project]]></title>
         <id>https://www.reddit.com/r/cpp_questions/comments/1cu6m8n/how_to_use_cmakepresetsjson_in_a_multiproject/</id>
         <link href="https://www.reddit.com/r/cpp_questions/comments/1cu6m8n/how_to_use_cmakepresetsjson_in_a_multiproject/"/>
@@ -417,6 +764,21 @@ Low Latency
  [link]   [comments]]]></summary>
         <author>
             <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Ego inflated Tech Lead]]></title>
+        <id>https://www.reddit.com/r/cscareerquestions/comments/1cu6dpr/ego_inflated_tech_lead/</id>
+        <link href="https://www.reddit.com/r/cscareerquestions/comments/1cu6dpr/ego_inflated_tech_lead/"/>
+        <updated>2024-05-17T14:18:44.000Z</updated>
+        <summary type="html"><![CDATA[Basically tittle. How do I work with this dude who hangs up in middle of call if he feels like it. 
+ He’s filled his whole team with his friends and relatives from his country (state). They are all part of his Yes-Man team. 
+ If I try approaching him, he simply ignores my message. 
+ They speak their own language even in Daily Scrum and refinement. 
+    submitted by    /u/baaka_cupboard  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : cscareerquestions</name>
         </author>
     </entry>
     <entry>
@@ -609,6 +971,17 @@ Bend - a massively parallel language.
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[returnTrue]]></title>
+        <id>https://www.reddit.com/r/ProgrammerHumor/comments/1cu2nxm/returntrue/</id>
+        <link href="https://www.reddit.com/r/ProgrammerHumor/comments/1cu2nxm/returntrue/"/>
+        <updated>2024-05-17T11:19:16.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/TheKeppler  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : ProgrammerHumor</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Bitcoin 27.0 Denial-of-Service & OOM Crash (Zero-Day Exploit)]]></title>
         <id>https://www.reddit.com/r/hacking/comments/1cu2at6/bitcoin_270_denialofservice_oom_crash_zeroday/</id>
         <link href="https://www.reddit.com/r/hacking/comments/1cu2at6/bitcoin_270_denialofservice_oom_crash_zeroday/"/>
@@ -647,6 +1020,18 @@ Bend - a massively parallel language.
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Would you take a pay cut to work fewer hours?]]></title>
+        <id>https://www.reddit.com/r/ExperiencedDevs/comments/1cu1mjw/would_you_take_a_pay_cut_to_work_fewer_hours/</id>
+        <link href="https://www.reddit.com/r/ExperiencedDevs/comments/1cu1mjw/would_you_take_a_pay_cut_to_work_fewer_hours/"/>
+        <updated>2024-05-17T10:12:03.000Z</updated>
+        <summary type="html"><![CDATA[Need to save ${target}/yr. I’d personally take a 15-17.5% pay cut to go from 5d/wk to 4d/wk. The 15-17.5% pay cut hits the ${target}/yr saving. Work pattern would be 4-on, 4-off, 4-on, 2-off (teams decide for coverage on alternating m/f with tue-thur as core days). What would be your reception, and why?
+    submitted by    /u/golden-archer  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : ExperiencedDevs</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Working Environment for C]]></title>
         <id>https://www.reddit.com/r/C_Programming/comments/1cu1drj/working_environment_for_c/</id>
         <link href="https://www.reddit.com/r/C_Programming/comments/1cu1drj/working_environment_for_c/"/>
@@ -674,6 +1059,17 @@ Bend - a massively parallel language.
  [link]   [comments]]]></summary>
         <author>
             <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[whyIsntSlackReactionLimitSomeBase2Number]]></title>
+        <id>https://www.reddit.com/r/ProgrammerHumor/comments/1cu12lm/whyisntslackreactionlimitsomebase2number/</id>
+        <link href="https://www.reddit.com/r/ProgrammerHumor/comments/1cu12lm/whyisntslackreactionlimitsomebase2number/"/>
+        <updated>2024-05-17T09:32:53.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/dimitarnestorov  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : ProgrammerHumor</name>
         </author>
     </entry>
     <entry>
@@ -1573,6 +1969,24 @@ Has this sort of thing happened to anyone else?
  [link]   [comments]]]></summary>
         <author>
             <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How to "scale through others" when the "others" lack the right experience?]]></title>
+        <id>https://www.reddit.com/r/ExperiencedDevs/comments/1ctbf66/how_to_scale_through_others_when_the_others_lack/</id>
+        <link href="https://www.reddit.com/r/ExperiencedDevs/comments/1ctbf66/how_to_scale_through_others_when_the_others_lack/"/>
+        <updated>2024-05-16T12:11:39.000Z</updated>
+        <summary type="html"><![CDATA[The current issue I am facing is learning to "scale through others". I can handle the technical stuff, I can figure out solutions and paths to complex problems and code them, or if I can't, I know how to find the right people and the right knowledge to see my project through.
+ The problem is that there are only so many things one can do, eventually, if the task is monumental, you become a bottle neck. This is where this whole "scaling through others" comes in.
+ A good "senior" or "lead engineer" is a force multiplier greater than 1. A bad one is a bottle neck.
+ So I was in the unfortunate situation where i had to lead a team who overall lacked the right kind of skillset for what the project demanded. We did deliver on time, but it was very stressful for me, and there's still a lot of things that need to be refined yet. 
+ So I guess the question is, how do help your team deliver when they lack a lot of the basics for the given domain? My team was mostly backend and infrastructure engineers, and they now need to work on something related to compilers and software analysis.
+ Had it been just me, the project would have taken a month, but with a team it took 4 times longer, and there's still too much friction in certain areas. Granted long term there are 5 engineers who can work on it vs 1, which is positive, but still, it was a struggle.
+ I have the hunch that building a core / skeleton and then having people explore / solve isolated problems is the right way to go, but then people find excuses or avoid diving in the codebase. 
+    submitted by    /u/dangling-putter  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : ExperiencedDevs</name>
         </author>
     </entry>
     <entry>
@@ -2535,6 +2949,32 @@ Code: https://github.com/inngest/expr
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : gamedev</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[PROGRESS REPORT: Web Export in 4.3]]></title>
+        <id>https://www.reddit.com/r/godot/comments/1cso7zx/progress_report_web_export_in_43/</id>
+        <link href="https://www.reddit.com/r/godot/comments/1cso7zx/progress_report_web_export_in_43/"/>
+        <updated>2024-05-15T15:54:18.000Z</updated>
+        <summary type="html"><![CDATA[Listen up 🔊
+ The Web platform is getting some quality of life upgrades, snuck in right before the 4.3 feature freeze 🥶❄
+ Read the Progress Report: 
+ https://godotengine.org/article/progress-report-web-export-in-4-3/
+ Highlights:
+  
+New single-threaded export option
+ Web Audio samples prototype
+ PWA COOP/COEP helper
+ Boot screen displayed while loading
+  
+Featuring Catburglar🐱💎
+  
+Help yourself to the city's valuables in *Catburglar*, a stealth platformer inspired by *Trilby: The Art of Theft.* Play as Cynth, and use your wits and agility to steal through a series of highrise apartments, outwitting guards and security cameras as you make your way to your goal.
+  
+   submitted by    /u/GodotTeam  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : godot</name>
         </author>
     </entry>
     <entry>
@@ -5387,6 +5827,22 @@ I'm currently working for porting existing libraries like magic_enum, fastgltf a
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : programming</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Ask Experienced Devs Weekly Thread: A weekly thread for inexperienced developers to ask experienced ones]]></title>
+        <id>https://www.reddit.com/r/ExperiencedDevs/comments/1cqlqzv/ask_experienced_devs_weekly_thread_a_weekly/</id>
+        <link href="https://www.reddit.com/r/ExperiencedDevs/comments/1cqlqzv/ask_experienced_devs_weekly_thread_a_weekly/"/>
+        <updated>2024-05-13T00:00:27.000Z</updated>
+        <summary type="html"><![CDATA[A thread for Developers and IT folks with less experience to ask more experienced souls questions about the industry.
+ ​
+ Please keep top level comments limited to Inexperienced Devs. Most rules do not apply, but keep it civil. Being a jerk will not be tolerated.
+ ​
+ Inexperienced Devs should refrain from answering other Inexperienced Devs' questions.
+    submitted by    /u/AutoModerator  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : ExperiencedDevs</name>
         </author>
     </entry>
     <entry>

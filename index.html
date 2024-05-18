@@ -22,6 +22,455 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-05-18 datetime="2024-05-18T12:17:03.000Z">2024-05-18</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-05-18 datetime="2024-05-18T12:17:03.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >posts from cpp, cpp_questions</button>
+                  <a class="source-heading__link" href="https://www.reddit.com/r/cpp+cpp_questions/">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/cpp/comments/1cuw1ce/whats_the_error_here_that_took_me_half_an_hour_to/"
+                        open
+                      >
+                        <summary class="article-expander__title">What&#x27;s the error here (That took me half an hour to see)</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/cpp/comments/1cuw1ce/whats_the_error_here_that_took_me_half_an_hour_to/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>// a and b are integers if (a - b &gt; vec.size()) { foo(); } 
+    submitted by    /u/angelman7    to    r/cpp  
+ [link]   [comments]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/cpp_questions/comments/1cuvw1e/does_this_code_pattern_violate_strict_aliasing/"
+                        open
+                      >
+                        <summary class="article-expander__title">Does this code pattern violate strict aliasing rules?</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/cpp_questions/comments/1cuvw1e/does_this_code_pattern_violate_strict_aliasing/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Hi. I&#x27;m working as a C++ dev, and there&#x27;s a pattern that&#x27;s everywhere in my company&#x27;s codebase. But I&#x27;m still quite early in my career so tbh it has my doubting myself. I thought this violated strict-aliasing rules so was undefined behaviour, but with how much I&#x27;m seeing it in our code it has me doubting myself. As this is written by people with a lot more experience then me.
+ If you have a char* or uint8_t* you&#x27;ve read off a socket or character device:
+ char buffer[512]; // or std::uint8_t buffer[512] // imagine we&#x27;re reading from a device or socket into the buffer here... // then later: const std::uint32_t *ptr &#x3D; reinterpret_cast(buffer); const uint32_t n &#x3D; ntohl(*ptr); // etc... 
+ I don&#x27;t see -fno-strict-aliasing in our compiler flags either. But I thought that while you can cast a pointer to any type to a char/uint8_t pointer, it doesn&#x27;t work the other way round. The compiler is free to optimise based on that assumption, not to mention issues with alignment, caching etc. 
+ If I&#x27;m wrong can someone explain where how? I may have misunderstood aliasing rules. Thanks a lot!
+    submitted by    /u/DiligentBit3311    to    r/cpp_questions  
+ [link]   [comments]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/cpp/comments/1cuua7c/how_bad_is_the_dinkumware_std_implementation/"
+                        open
+                      >
+                        <summary class="article-expander__title">How bad is the Dinkumware std implementation?</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/cpp/comments/1cuua7c/how_bad_is_the_dinkumware_std_implementation/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Since the beginning of the year I have had write C++ in an environment that unfortunately uses the the Dinkumware implementation of the std lib: C++Builder 11. During this time I’ve been bitten by a plethora of in your face bugs that have forced me to invest a bunch of time into understanding and then circumventing the issues. To name just a few:
+  
+std::optional doesn’t compile
+ std::optional doesn’t compile
+ std::visit is broken
+ std::variant::operator &#x3D; will silently mess things up by setting the wrong index
+ std::unordered_set::extract will return a handle that when destroyed decrements the number of elements in the collection. So one extract causes two sides decrements.
+  
+Fortunately, the last version of C++ Builder seems to be moving away from Dinkumware, but until I upgrade, is anyone here aware of a broader list of Dinkumware bugs? Is Dinkumware such a poor quality implementation? Has it always been like that?
+    submitted by    /u/soldiersided    to    r/cpp  
+ [link]   [comments]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/cpp/comments/1cutf3q/why_cant_i_find_the_injected_name_of_a_templated/"
+                        open
+                      >
+                        <summary class="article-expander__title">Why can&#x27;t I find the injected name of a templated class&#x27;s templated base class? - The Old New Thing</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/cpp/comments/1cutf3q/why_cant_i_find_the_injected_name_of_a_templated/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>submitted by    /u/pavel_v    to    r/cpp  
+ [link]   [comments]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >top scoring links : hacking</button>
+                  <a class="source-heading__link" href="https://www.reddit.com/r/hacking/top/?t&#x3D;week">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/hacking/comments/1cuvd4p/where_do_intelx_and_google_darkweb_monitoring/"
+                        open
+                      >
+                        <summary class="article-expander__title">Where do IntelX and Google darkweb monitoring getting their lesser-known / private leaks? (NOT from BreachForums or torrents)</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/hacking/comments/1cuvd4p/where_do_intelx_and_google_darkweb_monitoring/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Disclaimer: It&#x27;s not really hacking, but I couldn&#x27;t find a sub fitting more for my question.
+ Hello everyone, I am wondering where IntelX and Google&#x27;s darkweb monitoring service are getting their lesser known / private leaks? For an example, there is a site called selfstore.hu, an sql dump from their site can be found both on IntelX and Google&#x27;s darkweb monitoring service but not on any other leak search engine site, only on those two. So where do they get those? Is there some clearner or darkweb forum where people randomly post these for credits (Similary to BreachForums) or just for bragging?
+ I want to point out again, these are not from BreachForums. I also tried to look it up in DHT search engines, but I got zero results.
+ I appreciate the answers, have a nice day :)
+    submitted by    /u/SellLimp7399  
+ [link]   [comments]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/hacking/comments/1cut6bt/hitag2_crack2_implementation_working_on_proxmark3/"
+                        open
+                      >
+                        <summary class="article-expander__title">Hitag2 Crack2 implementation working on Proxmark3</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/hacking/comments/1cut6bt/hitag2_crack2_implementation_working_on_proxmark3/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>The second key recovery vector outlined in the Gone in 360 seconds paper by F Garcia et al, implemented by Kev Sheldrake in RFIDLer 2017, now work in Proxmark3. 
+ It is a time/trade memory attack, with a online part and a secondary offline part.
+ We can now gather the 2048 bits of crypto key stream needed for the second part of the attack in the pm3 client. 
+ You all need to create the 1.2tb lookup database file in order to execute the offline part of the attack. 
+ You find all you need in tools\hitag2crack\crack2
+    submitted by    /u/iceman2001  
+ [link]   [comments]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/hacking/comments/1cumc29/best_approach/"
+                        open
+                      >
+                        <summary class="article-expander__title">Best Approach?</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/hacking/comments/1cumc29/best_approach/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>My wife has not been able to play a game for a few weeks due to bad development. I&#x27;ve reviewed the crash logs generated by game, and it appears there is one particular item, a fountain, that is placed in her game that is causing the crash. The profile.json is encrypted, so I can&#x27;t just go in there and find that entry and remove it. I&#x27;m guessing it uses AES encryption since the crash log mentions Rijndael. What would the best approach be to digging for the key? I&#x27;ve opened up files with ghidra, but for some reason, findcrypt isn&#x27;t showing up for me to use in analysis. My wife loves this game and I really want to figure this out for her. Is there a better approach to doing this?
+ Update:
+ Here are the dmp details. 
+ EXCEPTION_RECORD: (.exr -1)
+ ExceptionAddress: 00007ffc989b6196 (GameAssembly!mono_class_has_parent+0x00000000005a0606)
+ ExceptionCode: c0000005 (Access violation)
+ ExceptionFlags: 00000000
+ NumberParameters: 2
+ Parameter[0]: 0000000000000000
+ Parameter[1]: ffffffffffffffff
+ Attempt to read from address ffffffffffffffff
+ Here are the log details:
+ Unloading 2 Unused Serialized files (Serialized files now loaded: 1724)
+ Unloading 4307 unused Assets to reduce memory usage. Loaded Objects now: 85482.
+ Total: 177.784700 ms (FindLiveObjects: 11.103100 ms CreateObjectMapping: 4.718700 ms MarkObjects: 159.846400 ms DeleteObjects: 2.116200 ms)
+ Exception: Fountain01(Clone) not found in Profile.World.Keyholes (IsKeyHole: False, guid: )
+    submitted by    /u/Catdad08  
+ [link]   [comments]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >C</button>
+                  <a class="source-heading__link" href="https://www.reddit.com/r/C_Programming/">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/C_Programming/comments/1cut9wq/what_is_the_most_efficient_way_to_paralelise_a/"
+                        open
+                      >
+                        <summary class="article-expander__title">What is the most efficient way to paralelise a portion of code in C++ (a for loop) without using vectors?</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/C_Programming/comments/1cut9wq/what_is_the_most_efficient_way_to_paralelise_a/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Hello,
+ I&#x27;m trying to find a way to increase the speed of a for loop, that that gets executed hundreds of times - what would be the most efficient way, if I don&#x27;t want to use vectors (because from my testing, using them as the range for a FOR loop is inefficient).
+    submitted by    /u/DesperateGame  
+ [link]   [comments]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/C_Programming/comments/1cuqztb/youngling_c_programmer_needs_help/"
+                        open
+                      >
+                        <summary class="article-expander__title">Youngling C programmer needs help</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/C_Programming/comments/1cuqztb/youngling_c_programmer_needs_help/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Just started my programming course and I have to submit this assignment tomorrow. Keeping things short... I need to round up values to two digits after the &quot;.&quot; but keeping 4 digits after the &quot;.&quot; Eg: $18.6784 should be $18.6800.
+ For this I am writing Taxes &#x3D; sub_total * TAX Printf(&quot;Taxes. :$%.4f\n&quot;, Total);
+ I am not here just for the result, if someone could explain so I can learn I will be appreciated :)
+    submitted by    /u/MrStassi  
+ [link]   [comments]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/C_Programming/comments/1cuqd4e/help_understanding/"
+                        open
+                      >
+                        <summary class="article-expander__title">Help understanding?</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/C_Programming/comments/1cuqd4e/help_understanding/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Problem (1): The code below uses the following struct: struct Data 1{ struct Data *data1; int data2; int *data3; }; typedef struct Data Data;
+ In the code below, declarations for d1, d2, and d3 are missing. (Recall that a variable declaration gives the type and tells the compiler about a variable; e.g., int n; would declare the variable n.) Each of a1 and d2 have one of the following types: Data, Data, and/or Data * First, write three lines of code declaring variables d1, d2, and d3. Then, draw a memory diagram, including clearly differentiating between the stack and the heap, for the snippet of code shown below. d1.data2 &#x3D; 10; d2 &#x3D; malloc (sizeof (Data)) ; (d2) .data1 &#x3D; &amp;d1; d2-&gt;data2 &#x3D; d1. data2; d1. data1 &#x3D; d2; d1. data3 &#x3D; malloc (sizeof (int)) ; * (d.data3) &#x3D; 7; d2-›data3 &#x3D; d1. data3; d3 &#x3D; &amp; (d2→&gt;data3) ; I think my answer for the first problem is Data d1; Data d2; int** d3; correct me if I’m wrong but could someone please help with the diagram? 
+    submitted by    /u/RelationshipTop3696  
+ [link]   [comments]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/C_Programming/comments/1cup4ro/my_connection/"
+                        open
+                      >
+                        <summary class="article-expander__title">My connection</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/C_Programming/comments/1cup4ro/my_connection/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Hi all. Im having major issues with my connection on my client side, it just does not run the way its supposed if anyone can help that will be greatly appreciated. Im new to using fd sets &amp; working with nonblocking cons
+ &#x60;&#x60;&#x60;
+ static void setup_connection(void) { struct sockaddr_in addr;
+ fd &#x3D; socket(AF_INET, SOCK_STREAM, 0); if(fd &#x3D;&#x3D; -1) return; addr.sin_family &#x3D; AF_INET; addr.sin_port &#x3D; htons(6774); addr.sin_addr.s_addr &#x3D; inet_addr(&quot;host&quot;); // put your host here fcntl(fd, F_SETFL, O_NONBLOCK); connect(fd, (struct sockaddr *)&amp;addr, sizeof(struct sockaddr_in)); return; 
+ }
+ static void disconnect(void) { if(fd !&#x3D; -1) close(fd); fd &#x3D; -1; connected &#x3D; FALSE; sleep(5); }
+ int main(int argc, char *argv[]) { while(TRUE) { sleep(1);
+  int err &#x3D; 0; socklen_t err_len &#x3D; sizeof(err); FD_ZERO(&amp;read_set); FD_ZERO(&amp;write_set); if(!connected) setup_connection(); if(!fd) continue; if(connected) // check if we are connected to determine our next action FD_SET(fd, &amp;read_set); else FD_SET(fd, &amp;write_set); select(fd + 1, &amp;read_set, &amp;write_set, NULL, &amp;tv); if(FD_ISSET(fd, &amp;write_set)) // write { err &#x3D; 0; socklen_t err_len &#x3D; sizeof(err); getsockopt(fd, SOL_SOCKET, SO_ERROR, &amp;err, &amp;err_len); if(err !&#x3D; 0) { 
+ ifdef DBG
+  printf(&quot;[main] failed to connect! \n&quot;); 
+ endif
+  disconnect(); continue; } 
+ ifdef DBG
+  printf(&quot;[main] Connected! \n&quot;); 
+ endif
+  connected &#x3D; TRUE; } if(!connected) { disconnect(); continue; } if(FD_ISSET(fd, &amp;read_set)) // read { int val &#x3D; recv(fd, buffer, sizeof(buffer), MSG_NOSIGNAL); if(val &#x3D;&#x3D; 0) { disconnect(); continue; } memset(buffer, 0, sizeof(buffer)); } } 
+ } &#x60;&#x60;&#x60;
+    submitted by    /u/ryanjones42  
+ [link]   [comments]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/C_Programming/comments/1cunqua/memory/"
+                        open
+                      >
+                        <summary class="article-expander__title">Memory</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/C_Programming/comments/1cunqua/memory/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Anyone have advice for saving memory? Im new to C, should i use structs, enums, correct data types? I also tend to do stuff like char string [1024] &amp; usually just set it to 1024 by default if im not sure how much ill need, whats some better ways to be accurate 
+    submitted by    /u/ryanjones42  
+ [link]   [comments]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >top scoring links : programming</button>
+                  <a class="source-heading__link" href="https://www.reddit.com/r/programming/top/?t&#x3D;week">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/programming/comments/1curlmb/developers_spend_close_to_57_of_their_time/"
+                        open
+                      >
+                        <summary class="article-expander__title">Developers spend close to 57% of their time firefighting than innovating- Cisco survey</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/programming/comments/1curlmb/developers_spend_close_to_57_of_their_time/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>submitted by    /u/john83672  
+ [link]   [comments]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >top scoring links : cscareerquestions</button>
+                  <a class="source-heading__link" href="https://www.reddit.com/r/cscareerquestions/top/?t&#x3D;week">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/cscareerquestions/comments/1cumzmh/got_piped_over_a_well_intentioned_comment_the/"
+                        open
+                      >
+                        <summary class="article-expander__title">Got pip’ed over a well intentioned comment the tech lead made outside of work, should I leave with no notice for a 10k raise?</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/cscareerquestions/comments/1cumzmh/got_piped_over_a_well_intentioned_comment_the/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>The situation is kind of weird but in a nutshell, tech lead and I (senior level) are friends from college (he’s 3 years older) so we went out for a drink after work one day and he was teasing me a bit about being online more often while doing remote work, something like “dude you be slaking off too much on remote Fridays” (so I can get promoted to staff).
+ Somehow, this conversation gets heard by someone in management and after some weird stuff goes on I get put on pip. I talked to the tech lead about it and he was very apologetic to me and mad at management. 
+ Recently, I got an offer for the same level at a F100 fintech firm that’s also 3 days in office and slightly better benefits along with 10k more base salary and a comparable bonus structure. I’m super mad at management so I’m thinking about just quitting on Monday with no notice but maybe I’ll screw over my friend a bit too much. Thoughts?
+    submitted by    /u/Left_Construction174  
+ [link]   [comments]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >top scoring links : devops</button>
+                  <a class="source-heading__link" href="https://www.reddit.com/r/devops/top/?t&#x3D;week">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/devops/comments/1cumxc6/focus_exporter_a_prometheus_exporter_to_track_my/"
+                        open
+                      >
+                        <summary class="article-expander__title">Focus Exporter, A Prometheus Exporter to track my Focus</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/devops/comments/1cumxc6/focus_exporter_a_prometheus_exporter_to_track_my/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>I got inspired by Microsoft Viva Insights and decided to create my own version, leveraging Prometheus. This turned out to be a great reason to learn some Go! As such, I&#x27;m happy to share my first software project. 
+ Please check out Focus Exporter. A tool that helps track metrics related to focused windows, user activity, and meeting durations on Windows.
+ Focus Exporter surfaces data about time spent in various applications, including meetings on Microsoft Teams and Zoom. The metrics are exposed via a Prometheus http endpoint, which can be integrated into existing monitoring setups.
+ Features:
+  
+Tracking focused-window metrics
+ Monitoring activity/inactivity
+ Measuring meeting durations
+ Privacy mode for sensitive window titles
+ Configurable through command-line parameters
+  
+check it out on GitHub: Focus Exporter
+ Feedback and suggestions are welcome, this is a learning project for me!
+    submitted by    /u/vinistois  
+ [link]   [comments]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
             <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-05-17 datetime="2024-05-17T23:44:04.000Z">2024-05-17</time>
             <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-05-17 datetime="2024-05-17T23:44:04.000Z"></time>
           </button>
@@ -1028,6 +1477,214 @@ Low Latency
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
+                  >top scoring links : cscareerquestions</button>
+                  <a class="source-heading__link" href="https://www.reddit.com/r/cscareerquestions/top/?t&#x3D;week">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/cscareerquestions/comments/1cui30m/there_is_a_severe_shortage_of_good_it_talent_in/"
+                        open
+                      >
+                        <summary class="article-expander__title">There is a severe shortage of good IT talent in the US...</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/cscareerquestions/comments/1cui30m/there_is_a_severe_shortage_of_good_it_talent_in/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Hiring Manager: I need a Salesforce developer with 5 years of salesforce experience.
+ HR: Bob here is a talented Java developer with 10 years of experience and is eager to learn Salesforce. He’s also a US citizen and with maybe 6 months of training in Salesforce, can do a far better job than someone with just 5 years of ”Salesforce only” experience. Do you want to interview Bob?
+ Hiring Manager: No. Bob is not qualified…it’s so hard to find qualified candidates these days. We’ll have to sponsor H1-B visa for “qualified” candidates.
+ HR: Ok, we’ll get the process started…it might take 3 months with the hiring and visa process…is that okay?
+ Hiring Manager: That’s fine.
+ 3 months go by…
+ HR: we have our candidate and his visa was approved. We had to “change” the job description to suit his exact skill set to submit to the labor department for labor certification. We made sure “no one else” could possibly be remotely qualified for this position except our visa candidate.
+ Hiring Manager: Great work!
+ HR: Yep, we do this a lot! We know all the tricks.
+ Hiring Manager: The candidate will need 3 months to “ramp up”.
+ HR: Wait…we could have hired Bob three months ago and he would be half way through getting trained in Salesforce by now.
+ Hiring Manager: Forget Bob.
+ …months go by… Bob eventually finds work as a Java developer. He never learns Salesforce even though he wanted to….the company is sponsoring the visa holder for a green card…they will be posting his job description on the job board at the back of the building right next to the dumpster (you can’t get to the board…there are some shipping crates blocking it), per the labor certification process (citizens are encouraged to apply)…
+ …15 years go by…the visa candidate now has a green card and is ready to move on to greener pastures….he wants to get into AI….he can’t…he’s not qualified…the hiring manager at the AI company will be sponsoring H1-B visa as he can’t find “qualified” candidates.
+    submitted by    /u/TimeForTaachiTime  
+ [link]   [comments]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/cscareerquestions/comments/1cu6dpr/ego_inflated_tech_lead/"
+                        open
+                      >
+                        <summary class="article-expander__title">Ego inflated Tech Lead</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/cscareerquestions/comments/1cu6dpr/ego_inflated_tech_lead/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Basically tittle. How do I work with this dude who hangs up in middle of call if he feels like it. 
+ He’s filled his whole team with his friends and relatives from his country (state). They are all part of his Yes-Man team. 
+ If I try approaching him, he simply ignores my message. 
+ They speak their own language even in Daily Scrum and refinement. 
+    submitted by    /u/baaka_cupboard  
+ [link]   [comments]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/cscareerquestions/comments/1cu61bo/is_it_ever_ok_to_throw_shade_like_this_on_your/"
+                        open
+                      >
+                        <summary class="article-expander__title">Is it ever ok to throw shade like this on your way out?</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/cscareerquestions/comments/1cu61bo/is_it_ever_ok_to_throw_shade_like_this_on_your/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>https://imgur.com/33z6r5F
+ Highlighted the portion I thought was particularly salty seems mean to do that to current employees and doesn&#x27;t seem particularly constructive at this point and forum.
+    submitted by    /u/likwitsnake  
+ [link]   [comments]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/cscareerquestions/comments/1cu45cv/why_do_they_keep_pushing_this_narrative/"
+                        open
+                      >
+                        <summary class="article-expander__title">Why do they keep pushing this narrative ?</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/cscareerquestions/comments/1cu45cv/why_do_they_keep_pushing_this_narrative/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Headline reads :
+ “Computer science worker shortage pushes Tri-Cities college to develop new degree”
+ Why would you say there is a shortage if you have thousands upon thousands of people in this sector looking for jobs ?
+ https://amp.tri-cityherald.com/news/local/education/article288493549.html
+    submitted by    /u/Unique-Engineering-6  
+ [link]   [comments]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >top scoring links : devops</button>
+                  <a class="source-heading__link" href="https://www.reddit.com/r/devops/top/?t&#x3D;week">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/devops/comments/1cui0vn/unethical_way_of_getting_hired/"
+                        open
+                      >
+                        <summary class="article-expander__title">Unethical Way of Getting Hired?</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/devops/comments/1cui0vn/unethical_way_of_getting_hired/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Around every year I put in applications to multiple companies to see what stack is popular these days and, if the salary is good enough, switch over to them.
+ I noticed these past year that unless the company is not specifically looking for the &quot;Devops&quot; in name, they will outright not contact you. I applied to multiple positions and almost got every call that was looking for &quot;Devops Engineers&quot;, but would get a few answers back if the role was &quot;SRE&quot;, &quot;Platform Engineer&quot;, or &quot;Software Engineer&quot;; even though the requirements would be identical and my experience 100% matched! I remember I applied to a SRE position where I had every requirement they wanted and they never called me back.
+ I wonder if hiring managers are breezing through the resumes and if they see the title of your current job is off they just pass you?
+ I am wondering if it would be unethical if you just switch your job title to what they want and explain during the first call you get back that you are technically a &quot;devops engineer&quot; but your experience matches their requirements?
+    submitted by    /u/Turkey_Caruncle  
+ [link]   [comments]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/devops/comments/1cu7xp1/adaptivereactive_ratelimiter/"
+                        open
+                      >
+                        <summary class="article-expander__title">Adaptive/reactive rate-limiter?</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/devops/comments/1cu7xp1/adaptivereactive_ratelimiter/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>So I have worked for many companies both from small to FAANG, and I have always seen that the rate limiting is just a fixed number of requests per IP/user/etc... Is there any open-source limiter that limits, for example, when the response time of a specific endpoint increases beyond some threshold? Or maybe we can hook it up to the metrics of the resource causing the bottleneck (ex: user-info-db-cpu) and decide when to start dropping requests?
+ And one additional feature might be: automatically enqueue the requests or convert them to Kafka messages for example? I can consider writing such a service if there is no such thing in the market.
+    submitted by    /u/ahmedyarub  
+ [link]   [comments]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/devops/comments/1cu0ugv/looking_for_guidance_on_hiring_devops_engineers/"
+                        open
+                      >
+                        <summary class="article-expander__title">Looking for guidance on hiring DevOps engineers.</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/devops/comments/1cu0ugv/looking_for_guidance_on_hiring_devops_engineers/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Any good blogs, tips, or hacks for hiring good DevOps talent? 
+    submitted by    /u/Abali1994  
+ [link]   [comments]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/devops/comments/1ctwpo8/migration_from_az_devops_to_github/"
+                        open
+                      >
+                        <summary class="article-expander__title">Migration from AZ DevOps to GitHub</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/devops/comments/1ctwpo8/migration_from_az_devops_to_github/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Microsoft was encouraging our company with incentives to move from ado to github. You can can just import repository from ado to github, but you can&#x27;t migrate work items. 
+ Because of this, I created pwsh migration script. In this script you perserve issue hierarchy, by your choice with either github beta tasklist or task list. It adds labes based on ado tag and work item type (feature,user story...). 
+ It maps users based on github username and ado email which you have to provide as a json format. It save issue state, open or closed. Copies comments to github with metadata.
+ Since github issues have 50 000 char limit in issues description, html to md is implemented since work item descriptions in ado are saved as html. This can balloon pretty fast if you have tabels in ado.
+ Created github action for this script. Is this something that is needed? Should I publish this on on github marketplace?
+    submitted by    /u/Hairy-Bear9494  
+ [link]   [comments]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >top scoring links : programming</button>
                   <a class="source-heading__link" href="https://www.reddit.com/r/programming/top/?t&#x3D;week">Open</a>
                 </h3>
@@ -1178,6 +1835,47 @@ Low Latency
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/golang/comments/1cubk6c/generic_concurrency_in_go/"
+                        open
+                      >
+                        <summary class="article-expander__title">Generic Concurrency in Go</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/golang/comments/1cubk6c/generic_concurrency_in_go/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>submitted by    /u/gobwas  
+ [link]   [comments]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/golang/comments/1cuaykn/what_projects_did_you_built_or_working_on_right/"
+                        open
+                      >
+                        <summary class="article-expander__title">What projects did you built or working on right now?</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/golang/comments/1cuaykn/what_projects_did_you_built_or_working_on_right/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>I work as a platform engineer and I&#x27;ve recently built a service to serve reactjs apps from an S3 bucket.
+ It has an API service that builds the react app and uploads the build folder to the S3 bucket.
+ A reverse proxy server listening on *.faas.dev.aws where * is the deployment name. Users can deploy their react apps using the api service with a unique name and they can access them with a url like my-react-app.faas.dev.aws
+ Apart from this, I&#x27;ve also built a k8s operator that pulls secrets from our vault and stores them as native k8s secrets.
+ What projects did you built or currently working on?
+    submitted by    /u/previouslyanywhere  
+ [link]   [comments]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://www.reddit.com/r/golang/comments/1cu40ly/state_farm_using_go_for_etl/"
                         open
                       >
@@ -1232,24 +1930,23 @@ Some bug fixes
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
-                  >top scoring links : devops</button>
-                  <a class="source-heading__link" href="https://www.reddit.com/r/devops/top/?t&#x3D;week">Open</a>
+                  >top scoring links : gamedev</button>
+                  <a class="source-heading__link" href="https://www.reddit.com/r/gamedev/top/?t&#x3D;week">Open</a>
                 </h3>
                 <section class="articles-per-source">
                     <article>
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="https://www.reddit.com/r/devops/comments/1cu7xp1/adaptivereactive_ratelimiter/"
+                        data-accordion-key="https://www.reddit.com/r/gamedev/comments/1cu9fyp/what_game_made_you_realise_this_is_what_you_want/"
                         open
                       >
-                        <summary class="article-expander__title">Adaptive/reactive rate-limiter?</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/devops/comments/1cu7xp1/adaptivereactive_ratelimiter/">
+                        <summary class="article-expander__title">What game made you realise *this* is what you want to do?</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/gamedev/comments/1cu9fyp/what_game_made_you_realise_this_is_what_you_want/">
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
-                              <span>So I have worked for many companies both from small to FAANG, and I have always seen that the rate limiting is just a fixed number of requests per IP/user/etc... Is there any open-source limiter that limits, for example, when the response time of a specific endpoint increases beyond some threshold? Or maybe we can hook it up to the metrics of the resource causing the bottleneck (ex: user-info-db-cpu) and decide when to start dropping requests?
- And one additional feature might be: automatically enqueue the requests or convert them to Kafka messages for example? I can consider writing such a service if there is no such thing in the market.
-    submitted by    /u/ahmedyarub  
+                              <span>Also what specifically about that game? And does that relate to what you do now?
+    submitted by    /u/Hellgwyn  
  [link]   [comments]</span>
                             </span>
                           </div>
@@ -1260,15 +1957,20 @@ Some bug fixes
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="https://www.reddit.com/r/devops/comments/1cu0ugv/looking_for_guidance_on_hiring_devops_engineers/"
+                        data-accordion-key="https://www.reddit.com/r/gamedev/comments/1cu0u1k/why_dont_games_offer_a_buy_one_and_play_with_your/"
                         open
                       >
-                        <summary class="article-expander__title">Looking for guidance on hiring DevOps engineers.</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/devops/comments/1cu0ugv/looking_for_guidance_on_hiring_devops_engineers/">
+                        <summary class="article-expander__title">Why don&#x27;t games offer a &quot;buy one and play with your friends&quot;?</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/gamedev/comments/1cu0u1k/why_dont_games_offer_a_buy_one_and_play_with_your/">
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
-                              <span>Any good blogs, tips, or hacks for hiring good DevOps talent? 
-    submitted by    /u/Abali1994  
+                              <span>Okay, I understand money reasons, but hear me out. 
+ I see lots of games that are clearly made to be played with friends. But they are also not free games, so if you have a group of, say, 2-3 people you might want to play with, that means you have to get 3 copies... Which now makes the total cost a AAA game. 
+ And, depending on who you play with, it might just be a fun few hours and never play it again. 
+ But we used to have couch play, so you wouldn&#x27;t need to buy multiple copies of games, just get one and get your friends to your hause and call it a day. 
+ So, wouldn&#x27;t a game that you could buy and get a few codes to give to your friends, but they can only play the game as long as you are playing the game increase sells? 
+ I&#x27;m talking from a place of ignorance and just from a place of &quot;wow, that game looks fun, but I can&#x27;t sink 60 bucks to play it for a few hours&quot;. It just seems that could fix that issue and the solution seems to be relatively simple. Get the game on steam, give friends code, friends can now only play if you are in a party with them. 
+    submitted by    /u/Luised2094  
  [link]   [comments]</span>
                             </span>
                           </div>
@@ -1279,19 +1981,27 @@ Some bug fixes
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="https://www.reddit.com/r/devops/comments/1ctwpo8/migration_from_az_devops_to_github/"
+                        data-accordion-key="https://www.reddit.com/r/gamedev/comments/1cttgoc/a_blogspot_user_stole_my_game_demo_what_to_do/"
                         open
                       >
-                        <summary class="article-expander__title">Migration from AZ DevOps to GitHub</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/devops/comments/1ctwpo8/migration_from_az_devops_to_github/">
+                        <summary class="article-expander__title">A Blogspot user stole my game demo - what to do?</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/gamedev/comments/1cttgoc/a_blogspot_user_stole_my_game_demo_what_to_do/">
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
-                              <span>Microsoft was encouraging our company with incentives to move from ado to github. You can can just import repository from ado to github, but you can&#x27;t migrate work items. 
- Because of this, I created pwsh migration script. In this script you perserve issue hierarchy, by your choice with either github beta tasklist or task list. It adds labes based on ado tag and work item type (feature,user story...). 
- It maps users based on github username and ado email which you have to provide as a json format. It save issue state, open or closed. Copies comments to github with metadata.
- Since github issues have 50 000 char limit in issues description, html to md is implemented since work item descriptions in ado are saved as html. This can balloon pretty fast if you have tabels in ado.
- Created github action for this script. Is this something that is needed? Should I publish this on on github marketplace?
-    submitted by    /u/Hairy-Bear9494  
+                              <span>Today I got a tip from a helpful community member that someone on Discord asked him to playtest &quot;his&quot; game. The request came with a link to a Blogspot with only one post, containing a description, screenshots, and download link to the demo.
+ The problem? The game in question is mine, and whoever did this is definitely did not have my permission to share it. The entire text of the blog post is 100% copy/pasted from my own website. The copypasted description does include a link to one of my own pages (yeah, how lazy is that?), but otherwise it doesn&#x27;t credit me as the author or link to me at all.
+ Judging from the download size, it looks like this only contains my free, years-old demo with only the first few levels - not the paid package with the whole game.
+ So, my questions are:
+  
+How worried should I be about this? Could this be a threat to my sales or my brand?
+ 
+What actions can I take against this plagiarist?
+ 
+What exactly does the plagiarist stand to game by offering a free game demo and asking random people to &quot;test&quot; something they clearly aren&#x27;t going to be able to finish?
+ 
+Has this sort of thing happened to anyone else?
+ 
+    submitted by    /u/MoscowModder  
  [link]   [comments]</span>
                             </span>
                           </div>
@@ -1308,24 +2018,22 @@ Some bug fixes
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
-                  >top scoring links : cscareerquestions</button>
-                  <a class="source-heading__link" href="https://www.reddit.com/r/cscareerquestions/top/?t&#x3D;week">Open</a>
+                  >top scoring links : godot</button>
+                  <a class="source-heading__link" href="https://www.reddit.com/r/godot/top/?t&#x3D;week">Open</a>
                 </h3>
                 <section class="articles-per-source">
                     <article>
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="https://www.reddit.com/r/cscareerquestions/comments/1cu61bo/is_it_ever_ok_to_throw_shade_like_this_on_your/"
+                        data-accordion-key="https://www.reddit.com/r/godot/comments/1cu92rt/questions_about_animating_a_boss_fight_in_topdown/"
                         open
                       >
-                        <summary class="article-expander__title">Is it ever ok to throw shade like this on your way out?</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/cscareerquestions/comments/1cu61bo/is_it_ever_ok_to_throw_shade_like_this_on_your/">
+                        <summary class="article-expander__title">Questions about animating a boss fight in Top-Down</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/godot/comments/1cu92rt/questions_about_animating_a_boss_fight_in_topdown/">
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
-                              <span>https://imgur.com/33z6r5F
- Highlighted the portion I thought was particularly salty seems mean to do that to current employees and doesn&#x27;t seem particularly constructive at this point and forum.
-    submitted by    /u/likwitsnake  
+                              <span>submitted by    /u/iammitchconner82  
  [link]   [comments]</span>
                             </span>
                           </div>
@@ -1336,18 +2044,100 @@ Some bug fixes
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="https://www.reddit.com/r/cscareerquestions/comments/1cu45cv/why_do_they_keep_pushing_this_narrative/"
+                        data-accordion-key="https://www.reddit.com/r/godot/comments/1cu4ncz/my_buggy_flying_enemy_is_actually_working_now/"
                         open
                       >
-                        <summary class="article-expander__title">Why do they keep pushing this narrative ?</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/cscareerquestions/comments/1cu45cv/why_do_they_keep_pushing_this_narrative/">
+                        <summary class="article-expander__title">My buggy flying enemy is actually working now!</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/godot/comments/1cu4ncz/my_buggy_flying_enemy_is_actually_working_now/">
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
-                              <span>Headline reads :
- “Computer science worker shortage pushes Tri-Cities college to develop new degree”
- Why would you say there is a shortage if you have thousands upon thousands of people in this sector looking for jobs ?
- https://amp.tri-cityherald.com/news/local/education/article288493549.html
-    submitted by    /u/Unique-Engineering-6  
+                              <span>submitted by    /u/jijigri_  
+ [link]   [comments]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >top scoring links : ProgrammerHumor</button>
+                  <a class="source-heading__link" href="https://www.reddit.com/r/ProgrammerHumor/top/?t&#x3D;week">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/ProgrammerHumor/comments/1cu7f29/pleasenonotanotherbaseclasshelper/"
+                        open
+                      >
+                        <summary class="article-expander__title">pleaseNoNotAnotherBaseClassHelper</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/ProgrammerHumor/comments/1cu7f29/pleasenonotanotherbaseclasshelper/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>submitted by    /u/StolenStutz  
+ [link]   [comments]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/ProgrammerHumor/comments/1cu2nxm/returntrue/"
+                        open
+                      >
+                        <summary class="article-expander__title">returnTrue</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/ProgrammerHumor/comments/1cu2nxm/returntrue/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>submitted by    /u/TheKeppler  
+ [link]   [comments]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/ProgrammerHumor/comments/1cu29u2/guyswehaveanenemy/"
+                        open
+                      >
+                        <summary class="article-expander__title">guysWeHaveAnEnemy</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/ProgrammerHumor/comments/1cu29u2/guyswehaveanenemy/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>submitted by    /u/Individual-Link-8233  
+ [link]   [comments]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/ProgrammerHumor/comments/1cu12lm/whyisntslackreactionlimitsomebase2number/"
+                        open
+                      >
+                        <summary class="article-expander__title">whyIsntSlackReactionLimitSomeBase2Number</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/ProgrammerHumor/comments/1cu12lm/whyisntslackreactionlimitsomebase2number/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>submitted by    /u/dimitarnestorov  
  [link]   [comments]</span>
                             </span>
                           </div>
@@ -1453,38 +2243,6 @@ Bend - a massively parallel language.
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
-                  >top scoring links : godot</button>
-                  <a class="source-heading__link" href="https://www.reddit.com/r/godot/top/?t&#x3D;week">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://www.reddit.com/r/godot/comments/1cu4ncz/my_buggy_flying_enemy_is_actually_working_now/"
-                        open
-                      >
-                        <summary class="article-expander__title">My buggy flying enemy is actually working now!</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/godot/comments/1cu4ncz/my_buggy_flying_enemy_is_actually_working_now/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>submitted by    /u/jijigri_  
- [link]   [comments]</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >top scoring links : ExperiencedDevs</button>
                   <a class="source-heading__link" href="https://www.reddit.com/r/ExperiencedDevs/top/?t&#x3D;week">Open</a>
                 </h3>
@@ -1530,101 +2288,19 @@ Bend - a massively parallel language.
                         </a>
                       </details>
                     </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >top scoring links : ProgrammerHumor</button>
-                  <a class="source-heading__link" href="https://www.reddit.com/r/ProgrammerHumor/top/?t&#x3D;week">Open</a>
-                </h3>
-                <section class="articles-per-source">
                     <article>
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="https://www.reddit.com/r/ProgrammerHumor/comments/1cu29u2/guyswehaveanenemy/"
+                        data-accordion-key="https://www.reddit.com/r/ExperiencedDevs/comments/1cu1mjw/would_you_take_a_pay_cut_to_work_fewer_hours/"
                         open
                       >
-                        <summary class="article-expander__title">guysWeHaveAnEnemy</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/ProgrammerHumor/comments/1cu29u2/guyswehaveanenemy/">
+                        <summary class="article-expander__title">Would you take a pay cut to work fewer hours?</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/ExperiencedDevs/comments/1cu1mjw/would_you_take_a_pay_cut_to_work_fewer_hours/">
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
-                              <span>submitted by    /u/Individual-Link-8233  
- [link]   [comments]</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >top scoring links : gamedev</button>
-                  <a class="source-heading__link" href="https://www.reddit.com/r/gamedev/top/?t&#x3D;week">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://www.reddit.com/r/gamedev/comments/1cu0u1k/why_dont_games_offer_a_buy_one_and_play_with_your/"
-                        open
-                      >
-                        <summary class="article-expander__title">Why don&#x27;t games offer a &quot;buy one and play with your friends&quot;?</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/gamedev/comments/1cu0u1k/why_dont_games_offer_a_buy_one_and_play_with_your/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>Okay, I understand money reasons, but hear me out. 
- I see lots of games that are clearly made to be played with friends. But they are also not free games, so if you have a group of, say, 2-3 people you might want to play with, that means you have to get 3 copies... Which now makes the total cost a AAA game. 
- And, depending on who you play with, it might just be a fun few hours and never play it again. 
- But we used to have couch play, so you wouldn&#x27;t need to buy multiple copies of games, just get one and get your friends to your hause and call it a day. 
- So, wouldn&#x27;t a game that you could buy and get a few codes to give to your friends, but they can only play the game as long as you are playing the game increase sells? 
- I&#x27;m talking from a place of ignorance and just from a place of &quot;wow, that game looks fun, but I can&#x27;t sink 60 bucks to play it for a few hours&quot;. It just seems that could fix that issue and the solution seems to be relatively simple. Get the game on steam, give friends code, friends can now only play if you are in a party with them. 
-    submitted by    /u/Luised2094  
- [link]   [comments]</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://www.reddit.com/r/gamedev/comments/1cttgoc/a_blogspot_user_stole_my_game_demo_what_to_do/"
-                        open
-                      >
-                        <summary class="article-expander__title">A Blogspot user stole my game demo - what to do?</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/gamedev/comments/1cttgoc/a_blogspot_user_stole_my_game_demo_what_to_do/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>Today I got a tip from a helpful community member that someone on Discord asked him to playtest &quot;his&quot; game. The request came with a link to a Blogspot with only one post, containing a description, screenshots, and download link to the demo.
- The problem? The game in question is mine, and whoever did this is definitely did not have my permission to share it. The entire text of the blog post is 100% copy/pasted from my own website. The copypasted description does include a link to one of my own pages (yeah, how lazy is that?), but otherwise it doesn&#x27;t credit me as the author or link to me at all.
- Judging from the download size, it looks like this only contains my free, years-old demo with only the first few levels - not the paid package with the whole game.
- So, my questions are:
-  
-How worried should I be about this? Could this be a threat to my sales or my brand?
- 
-What actions can I take against this plagiarist?
- 
-What exactly does the plagiarist stand to game by offering a free game demo and asking random people to &quot;test&quot; something they clearly aren&#x27;t going to be able to finish?
- 
-Has this sort of thing happened to anyone else?
- 
-    submitted by    /u/MoscowModder  
+                              <span>Need to save ${target}/yr. I’d personally take a 15-17.5% pay cut to go from 5d/wk to 4d/wk. The 15-17.5% pay cut hits the ${target}/yr saving. Work pattern would be 4-on, 4-off, 4-on, 2-off (teams decide for coverage on alternating m/f with tue-thur as core days). What would be your reception, and why?
+    submitted by    /u/golden-archer  
  [link]   [comments]</span>
                             </span>
                           </div>
@@ -3015,6 +3691,31 @@ With CMake, even the official &quot;Basic Starting Point&quot; is a multi-step p
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/ExperiencedDevs/comments/1ctbf66/how_to_scale_through_others_when_the_others_lack/"
+                        open
+                      >
+                        <summary class="article-expander__title">How to &quot;scale through others&quot; when the &quot;others&quot; lack the right experience?</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/ExperiencedDevs/comments/1ctbf66/how_to_scale_through_others_when_the_others_lack/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>The current issue I am facing is learning to &quot;scale through others&quot;. I can handle the technical stuff, I can figure out solutions and paths to complex problems and code them, or if I can&#x27;t, I know how to find the right people and the right knowledge to see my project through.
+ The problem is that there are only so many things one can do, eventually, if the task is monumental, you become a bottle neck. This is where this whole &quot;scaling through others&quot; comes in.
+ A good &quot;senior&quot; or &quot;lead engineer&quot; is a force multiplier greater than 1. A bad one is a bottle neck.
+ So I was in the unfortunate situation where i had to lead a team who overall lacked the right kind of skillset for what the project demanded. We did deliver on time, but it was very stressful for me, and there&#x27;s still a lot of things that need to be refined yet. 
+ So I guess the question is, how do help your team deliver when they lack a lot of the basics for the given domain? My team was mostly backend and infrastructure engineers, and they now need to work on something related to compilers and software analysis.
+ Had it been just me, the project would have taken a month, but with a team it took 4 times longer, and there&#x27;s still too much friction in certain areas. Granted long term there are 5 engineers who can work on it vs 1, which is positive, but still, it was a struggle.
+ I have the hunch that building a core / skeleton and then having people explore / solve isolated problems is the right way to go, but then people find excuses or avoid diving in the codebase. 
+    submitted by    /u/dangling-putter  
+ [link]   [comments]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://www.reddit.com/r/ExperiencedDevs/comments/1ct4zsk/need_help_with_someone_who_cant_investigate/"
                         open
                       >
@@ -3775,6 +4476,39 @@ I really liked the last one, but maybe there&#x27;s some fundamental stuff I&#x2
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>submitted by    /u/rayuumie  
+ [link]   [comments]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/godot/comments/1cso7zx/progress_report_web_export_in_43/"
+                        open
+                      >
+                        <summary class="article-expander__title">PROGRESS REPORT: Web Export in 4.3</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/godot/comments/1cso7zx/progress_report_web_export_in_43/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Listen up 🔊
+ The Web platform is getting some quality of life upgrades, snuck in right before the 4.3 feature freeze 🥶❄
+ Read the Progress Report: 
+ https://godotengine.org/article/progress-report-web-export-in-4-3/
+ Highlights:
+  
+New single-threaded export option
+ Web Audio samples prototype
+ PWA COOP/COEP helper
+ Boot screen displayed while loading
+  
+Featuring Catburglar🐱💎
+  
+Help yourself to the city&#x27;s valuables in *Catburglar*, a stealth platformer inspired by *Trilby: The Art of Theft.* Play as Cynth, and use your wits and agility to steal through a series of highrise apartments, outwitting guards and security cameras as you make your way to your goal.
+  
+   submitted by    /u/GodotTeam  
  [link]   [comments]</span>
                             </span>
                           </div>
@@ -7751,6 +8485,29 @@ I have never talked to or heard of this person before, let alone know what they 
  This past weekend, I was recovering from a surgery, so I decided to &quot;hack&quot; this new project. I terraformed the infrastructure, and creating a workable prototype (limited functionality). I built this entire system in two days. It would have taken my team weeks/months, if they had started working on it from 0%.
  Now, I can delegate the 20% of the work (refactoring, optimzation, etc) to my team and just relax this upcoming quarter. Does anyone else do this type of &quot;runway&quot;, getting ahead of the team sprints?
     submitted by    /u/Gordon101  
+ [link]   [comments]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/ExperiencedDevs/comments/1cqlqzv/ask_experienced_devs_weekly_thread_a_weekly/"
+                        open
+                      >
+                        <summary class="article-expander__title">Ask Experienced Devs Weekly Thread: A weekly thread for inexperienced developers to ask experienced ones</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/ExperiencedDevs/comments/1cqlqzv/ask_experienced_devs_weekly_thread_a_weekly/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>A thread for Developers and IT folks with less experience to ask more experienced souls questions about the industry.
+ ​
+ Please keep top level comments limited to Inexperienced Devs. Most rules do not apply, but keep it civil. Being a jerk will not be tolerated.
+ ​
+ Inexperienced Devs should refrain from answering other Inexperienced Devs&#x27; questions.
+    submitted by    /u/AutoModerator  
  [link]   [comments]</span>
                             </span>
                           </div>
@@ -26281,8 +27038,8 @@ https://reddit.com/link/1cafdum/video/xym92zed52wc1/player
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/joe8755/the-reddit-rss-reader/actions/runs/9136200760">
-        <time id="build-timestamp" datetime="2024-05-18T01:21:47.267Z">2024-05-18T01:21:47.267Z</time>
+      <a class="footer-link" href="https://github.com/joe8755/the-reddit-rss-reader/actions/runs/9139887027">
+        <time id="build-timestamp" datetime="2024-05-18T12:33:41.010Z">2024-05-18T12:33:41.010Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>

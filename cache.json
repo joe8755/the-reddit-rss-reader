@@ -6,6 +6,56 @@
       "siteUrl": "https://www.reddit.com/r/C_Programming/",
       "articles": [
         {
+          "id": "https://www.reddit.com/r/C_Programming/comments/1cut9wq/what_is_the_most_efficient_way_to_paralelise_a/",
+          "author": null,
+          "description": "Hello,\n I'm trying to find a way to increase the speed of a for loop, that that gets executed hundreds of times - what would be the most efficient way, if I don't want to use vectors (because from my testing, using them as the range for a FOR loop is inefficient).\n    submitted by    /u/DesperateGame  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/C_Programming/comments/1cut9wq/what_is_the_most_efficient_way_to_paralelise_a/",
+          "publishedOn": "2024-05-18T09:13:28.000Z",
+          "wordCount": null,
+          "title": "What is the most efficient way to paralelise a portion of code in C++ (a for loop) without using vectors?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/C_Programming/comments/1cuqztb/youngling_c_programmer_needs_help/",
+          "author": null,
+          "description": "Just started my programming course and I have to submit this assignment tomorrow. Keeping things short... I need to round up values to two digits after the \".\" but keeping 4 digits after the \".\" Eg: $18.6784 should be $18.6800.\n For this I am writing Taxes = sub_total * TAX Printf(\"Taxes. :$%.4f\\n\", Total);\n I am not here just for the result, if someone could explain so I can learn I will be appreciated :)\n    submitted by    /u/MrStassi  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/C_Programming/comments/1cuqztb/youngling_c_programmer_needs_help/",
+          "publishedOn": "2024-05-18T06:30:08.000Z",
+          "wordCount": null,
+          "title": "Youngling C programmer needs help",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/C_Programming/comments/1cuqd4e/help_understanding/",
+          "author": null,
+          "description": "Problem (1): The code below uses the following struct: struct Data 1{ struct Data *data1; int data2; int *data3; }; typedef struct Data Data;\n In the code below, declarations for d1, d2, and d3 are missing. (Recall that a variable declaration gives the type and tells the compiler about a variable; e.g., int n; would declare the variable n.) Each of a1 and d2 have one of the following types: Data, Data, and/or Data * First, write three lines of code declaring variables d1, d2, and d3. Then, draw a memory diagram, including clearly differentiating between the stack and the heap, for the snippet of code shown below. d1.data2 = 10; d2 = malloc (sizeof (Data)) ; (d2) .data1 = &d1; d2->data2 = d1. data2; d1. data1 = d2; d1. data3 = malloc (sizeof (int)) ; * (d.data3) = 7; d2-›data3 = d1. data3; d3 = & (d2→>data3) ; I think my answer for the first problem is Data d1; Data d2; int** d3; correct me if I’m wrong but could someone please help with the diagram? \n    submitted by    /u/RelationshipTop3696  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/C_Programming/comments/1cuqd4e/help_understanding/",
+          "publishedOn": "2024-05-18T05:48:03.000Z",
+          "wordCount": null,
+          "title": "Help understanding?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/C_Programming/comments/1cup4ro/my_connection/",
+          "author": null,
+          "description": "Hi all. Im having major issues with my connection on my client side, it just does not run the way its supposed if anyone can help that will be greatly appreciated. Im new to using fd sets & working with nonblocking cons\n ```\n static void setup_connection(void) { struct sockaddr_in addr;\n fd = socket(AF_INET, SOCK_STREAM, 0); if(fd == -1) return; addr.sin_family = AF_INET; addr.sin_port = htons(6774); addr.sin_addr.s_addr = inet_addr(\"host\"); // put your host here fcntl(fd, F_SETFL, O_NONBLOCK); connect(fd, (struct sockaddr *)&addr, sizeof(struct sockaddr_in)); return; \n }\n static void disconnect(void) { if(fd != -1) close(fd); fd = -1; connected = FALSE; sleep(5); }\n int main(int argc, char *argv[]) { while(TRUE) { sleep(1);\n  int err = 0; socklen_t err_len = sizeof(err); FD_ZERO(&read_set); FD_ZERO(&write_set); if(!connected) setup_connection(); if(!fd) continue; if(connected) // check if we are connected to determine our next action FD_SET(fd, &read_set); else FD_SET(fd, &write_set); select(fd + 1, &read_set, &write_set, NULL, &tv); if(FD_ISSET(fd, &write_set)) // write { err = 0; socklen_t err_len = sizeof(err); getsockopt(fd, SOL_SOCKET, SO_ERROR, &err, &err_len); if(err != 0) { \n ifdef DBG\n  printf(\"[main] failed to connect! \\n\"); \n endif\n  disconnect(); continue; } \n ifdef DBG\n  printf(\"[main] Connected! \\n\"); \n endif\n  connected = TRUE; } if(!connected) { disconnect(); continue; } if(FD_ISSET(fd, &read_set)) // read { int val = recv(fd, buffer, sizeof(buffer), MSG_NOSIGNAL); if(val == 0) { disconnect(); continue; } memset(buffer, 0, sizeof(buffer)); } } \n } ```\n    submitted by    /u/ryanjones42  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/C_Programming/comments/1cup4ro/my_connection/",
+          "publishedOn": "2024-05-18T04:30:11.000Z",
+          "wordCount": null,
+          "title": "My connection",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/C_Programming/comments/1cunqua/memory/",
+          "author": null,
+          "description": "Anyone have advice for saving memory? Im new to C, should i use structs, enums, correct data types? I also tend to do stuff like char string [1024] & usually just set it to 1024 by default if im not sure how much ill need, whats some better ways to be accurate \n    submitted by    /u/ryanjones42  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/C_Programming/comments/1cunqua/memory/",
+          "publishedOn": "2024-05-18T03:10:41.000Z",
+          "wordCount": null,
+          "title": "Memory",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/C_Programming/comments/1cuj8su/weird_behavior_in_fork_when_using_printf_with_n/",
           "author": null,
           "description": "so, i got an assignement where i should edit an intial code to print \"LIBRARY\" in the stdout in the correct order, using fork() and wait().\n this is the resulting code:\n #include <stdio.h>\n #include <unistd.h>\n #include <sys/wait.h> \n int main() {\n printf(\"L\");\n if(fork() == 0) {\n printf(\"I\");\n if(fork() == 0) {\n printf(\"B\");\n if(fork() == 0) {\n printf(\"R\");\n } else {\n wait(NULL);\n printf(\"A\");\n }\n } else {\n wait(NULL);\n printf(\"R\");\n }\n } else {\n wait(NULL);\n printf(\"Y\");\n if(fork() == 0) {\n printf(\"!\");\n }\n }\n return 0;\n }\n from the above code i got:\n LIBRLIBALIRLYLY!\n which is weird. why the letter B (and other letters) printed so many times instead of once.\n this behavior is changing when adding \\n after each character in printf(), like that:\n printf(\"A\\n\"); \n and then i got:\n L\n I\n B\n R\n A\n R\n Y\n !\n i really need an explanation\n thanks in advance\n    submitted by    /u/karimelkh  \n [link]   [comments]",
@@ -1452,6 +1502,46 @@
       "feedUrl": "https://www.reddit.com/r/cpp+cpp_questions/.rss",
       "siteUrl": "https://www.reddit.com/r/cpp+cpp_questions/",
       "articles": [
+        {
+          "id": "https://www.reddit.com/r/cpp/comments/1cuw1ce/whats_the_error_here_that_took_me_half_an_hour_to/",
+          "author": null,
+          "description": "// a and b are integers if (a - b > vec.size()) { foo(); } \n    submitted by    /u/angelman7    to    r/cpp  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp/comments/1cuw1ce/whats_the_error_here_that_took_me_half_an_hour_to/",
+          "publishedOn": "2024-05-18T12:17:03.000Z",
+          "wordCount": null,
+          "title": "What's the error here (That took me half an hour to see)",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp_questions/comments/1cuvw1e/does_this_code_pattern_violate_strict_aliasing/",
+          "author": null,
+          "description": "Hi. I'm working as a C++ dev, and there's a pattern that's everywhere in my company's codebase. But I'm still quite early in my career so tbh it has my doubting myself. I thought this violated strict-aliasing rules so was undefined behaviour, but with how much I'm seeing it in our code it has me doubting myself. As this is written by people with a lot more experience then me.\n If you have a char* or uint8_t* you've read off a socket or character device:\n char buffer[512]; // or std::uint8_t buffer[512] // imagine we're reading from a device or socket into the buffer here... // then later: const std::uint32_t *ptr = reinterpret_cast<const std::uint32_t*>(buffer); const uint32_t n = ntohl(*ptr); // etc... \n I don't see -fno-strict-aliasing in our compiler flags either. But I thought that while you can cast a pointer to any type to a char/uint8_t pointer, it doesn't work the other way round. The compiler is free to optimise based on that assumption, not to mention issues with alignment, caching etc. \n If I'm wrong can someone explain where how? I may have misunderstood aliasing rules. Thanks a lot!\n    submitted by    /u/DiligentBit3311    to    r/cpp_questions  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp_questions/comments/1cuvw1e/does_this_code_pattern_violate_strict_aliasing/",
+          "publishedOn": "2024-05-18T12:08:50.000Z",
+          "wordCount": null,
+          "title": "Does this code pattern violate strict aliasing rules?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp/comments/1cuua7c/how_bad_is_the_dinkumware_std_implementation/",
+          "author": null,
+          "description": "Since the beginning of the year I have had write C++ in an environment that unfortunately uses the the Dinkumware implementation of the std lib: C++Builder 11. During this time I’ve been bitten by a plethora of in your face bugs that have forced me to invest a bunch of time into understanding and then circumventing the issues. To name just a few:\n  \nstd::optional<bool> doesn’t compile\n std::optional<NonDefaultConstructible> doesn’t compile\n std::visit is broken\n std::variant::operator = will silently mess things up by setting the wrong index\n std::unordered_set::extract will return a handle that when destroyed decrements the number of elements in the collection. So one extract causes two sides decrements.\n  \nFortunately, the last version of C++ Builder seems to be moving away from Dinkumware, but until I upgrade, is anyone here aware of a broader list of Dinkumware bugs? Is Dinkumware such a poor quality implementation? Has it always been like that?\n    submitted by    /u/soldiersided    to    r/cpp  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp/comments/1cuua7c/how_bad_is_the_dinkumware_std_implementation/",
+          "publishedOn": "2024-05-18T10:27:00.000Z",
+          "wordCount": null,
+          "title": "How bad is the Dinkumware std implementation?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp/comments/1cutf3q/why_cant_i_find_the_injected_name_of_a_templated/",
+          "author": null,
+          "description": "submitted by    /u/pavel_v    to    r/cpp  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp/comments/1cutf3q/why_cant_i_find_the_injected_name_of_a_templated/",
+          "publishedOn": "2024-05-18T09:23:51.000Z",
+          "wordCount": null,
+          "title": "Why can't I find the injected name of a templated class's templated base class? - The Old New Thing",
+          "imageUrl": null
+        },
         {
           "id": "https://www.reddit.com/r/cpp/comments/1cujs0l/automatic_differentiation_and_dual_numbers_in_c/",
           "author": null,
@@ -3700,6 +3790,36 @@
       "siteUrl": "https://www.reddit.com/r/cscareerquestions/top/?t=week",
       "articles": [
         {
+          "id": "https://www.reddit.com/r/cscareerquestions/comments/1cumzmh/got_piped_over_a_well_intentioned_comment_the/",
+          "author": null,
+          "description": "The situation is kind of weird but in a nutshell, tech lead and I (senior level) are friends from college (he’s 3 years older) so we went out for a drink after work one day and he was teasing me a bit about being online more often while doing remote work, something like “dude you be slaking off too much on remote Fridays” (so I can get promoted to staff).\n Somehow, this conversation gets heard by someone in management and after some weird stuff goes on I get put on pip. I talked to the tech lead about it and he was very apologetic to me and mad at management. \n Recently, I got an offer for the same level at a F100 fintech firm that’s also 3 days in office and slightly better benefits along with 10k more base salary and a comparable bonus structure. I’m super mad at management so I’m thinking about just quitting on Monday with no notice but maybe I’ll screw over my friend a bit too much. Thoughts?\n    submitted by    /u/Left_Construction174  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cscareerquestions/comments/1cumzmh/got_piped_over_a_well_intentioned_comment_the/",
+          "publishedOn": "2024-05-18T02:29:22.000Z",
+          "wordCount": null,
+          "title": "Got pip’ed over a well intentioned comment the tech lead made outside of work, should I leave with no notice for a 10k raise?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cscareerquestions/comments/1cui30m/there_is_a_severe_shortage_of_good_it_talent_in/",
+          "author": null,
+          "description": "Hiring Manager: I need a Salesforce developer with 5 years of salesforce experience.\n HR: Bob here is a talented Java developer with 10 years of experience and is eager to learn Salesforce. He’s also a US citizen and with maybe 6 months of training in Salesforce, can do a far better job than someone with just 5 years of ”Salesforce only” experience. Do you want to interview Bob?\n Hiring Manager: No. Bob is not qualified…it’s so hard to find qualified candidates these days. We’ll have to sponsor H1-B visa for “qualified” candidates.\n HR: Ok, we’ll get the process started…it might take 3 months with the hiring and visa process…is that okay?\n Hiring Manager: That’s fine.\n 3 months go by…\n HR: we have our candidate and his visa was approved. We had to “change” the job description to suit his exact skill set to submit to the labor department for labor certification. We made sure “no one else” could possibly be remotely qualified for this position except our visa candidate.\n Hiring Manager: Great work!\n HR: Yep, we do this a lot! We know all the tricks.\n Hiring Manager: The candidate will need 3 months to “ramp up”.\n HR: Wait…we could have hired Bob three months ago and he would be half way through getting trained in Salesforce by now.\n Hiring Manager: Forget Bob.\n …months go by… Bob eventually finds work as a Java developer. He never learns Salesforce even though he wanted to….the company is sponsoring the visa holder for a green card…they will be posting his job description on the job board at the back of the building right next to the dumpster (you can’t get to the board…there are some shipping crates blocking it), per the labor certification process (citizens are encouraged to apply)…\n …15 years go by…the visa candidate now has a green card and is ready to move on to greener pastures….he wants to get into AI….he can’t…he’s not qualified…the hiring manager at the AI company will be sponsoring H1-B visa as he can’t find “qualified” candidates.\n    submitted by    /u/TimeForTaachiTime  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cscareerquestions/comments/1cui30m/there_is_a_severe_shortage_of_good_it_talent_in/",
+          "publishedOn": "2024-05-17T22:24:47.000Z",
+          "wordCount": null,
+          "title": "There is a severe shortage of good IT talent in the US...",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cscareerquestions/comments/1cu6dpr/ego_inflated_tech_lead/",
+          "author": null,
+          "description": "Basically tittle. How do I work with this dude who hangs up in middle of call if he feels like it. \n He’s filled his whole team with his friends and relatives from his country (state). They are all part of his Yes-Man team. \n If I try approaching him, he simply ignores my message. \n They speak their own language even in Daily Scrum and refinement. \n    submitted by    /u/baaka_cupboard  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cscareerquestions/comments/1cu6dpr/ego_inflated_tech_lead/",
+          "publishedOn": "2024-05-17T14:18:44.000Z",
+          "wordCount": null,
+          "title": "Ego inflated Tech Lead",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/cscareerquestions/comments/1cu61bo/is_it_ever_ok_to_throw_shade_like_this_on_your/",
           "author": null,
           "description": "https://imgur.com/33z6r5F\n Highlighted the portion I thought was particularly salty seems mean to do that to current employees and doesn't seem particularly constructive at this point and forum.\n    submitted by    /u/likwitsnake  \n [link]   [comments]",
@@ -4834,6 +4954,26 @@
       "siteUrl": "https://www.reddit.com/r/devops/top/?t=week",
       "articles": [
         {
+          "id": "https://www.reddit.com/r/devops/comments/1cumxc6/focus_exporter_a_prometheus_exporter_to_track_my/",
+          "author": null,
+          "description": "I got inspired by Microsoft Viva Insights and decided to create my own version, leveraging Prometheus. This turned out to be a great reason to learn some Go! As such, I'm happy to share my first software project. \n Please check out Focus Exporter. A tool that helps track metrics related to focused windows, user activity, and meeting durations on Windows.\n Focus Exporter surfaces data about time spent in various applications, including meetings on Microsoft Teams and Zoom. The metrics are exposed via a Prometheus http endpoint, which can be integrated into existing monitoring setups.\n Features:\n  \nTracking focused-window metrics\n Monitoring activity/inactivity\n Measuring meeting durations\n Privacy mode for sensitive window titles\n Configurable through command-line parameters\n  \ncheck it out on GitHub: Focus Exporter\n Feedback and suggestions are welcome, this is a learning project for me!\n    submitted by    /u/vinistois  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/devops/comments/1cumxc6/focus_exporter_a_prometheus_exporter_to_track_my/",
+          "publishedOn": "2024-05-18T02:25:58.000Z",
+          "wordCount": null,
+          "title": "Focus Exporter, A Prometheus Exporter to track my Focus",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/devops/comments/1cui0vn/unethical_way_of_getting_hired/",
+          "author": null,
+          "description": "Around every year I put in applications to multiple companies to see what stack is popular these days and, if the salary is good enough, switch over to them.\n I noticed these past year that unless the company is not specifically looking for the \"Devops\" in name, they will outright not contact you. I applied to multiple positions and almost got every call that was looking for \"Devops Engineers\", but would get a few answers back if the role was \"SRE\", \"Platform Engineer\", or \"Software Engineer\"; even though the requirements would be identical and my experience 100% matched! I remember I applied to a SRE position where I had every requirement they wanted and they never called me back.\n I wonder if hiring managers are breezing through the resumes and if they see the title of your current job is off they just pass you?\n I am wondering if it would be unethical if you just switch your job title to what they want and explain during the first call you get back that you are technically a \"devops engineer\" but your experience matches their requirements?\n    submitted by    /u/Turkey_Caruncle  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/devops/comments/1cui0vn/unethical_way_of_getting_hired/",
+          "publishedOn": "2024-05-17T22:22:09.000Z",
+          "wordCount": null,
+          "title": "Unethical Way of Getting Hired?",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/devops/comments/1cu7xp1/adaptivereactive_ratelimiter/",
           "author": null,
           "description": "So I have worked for many companies both from small to FAANG, and I have always seen that the rate limiting is just a fixed number of requests per IP/user/etc... Is there any open-source limiter that limits, for example, when the response time of a specific endpoint increases beyond some threshold? Or maybe we can hook it up to the metrics of the resource causing the bottleneck (ex: user-info-db-cpu) and decide when to start dropping requests?\n And one additional feature might be: automatically enqueue the requests or convert them to Kafka messages for example? I can consider writing such a service if there is no such thing in the market.\n    submitted by    /u/ahmedyarub  \n [link]   [comments]",
@@ -5521,6 +5661,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://www.reddit.com/r/ExperiencedDevs/comments/1cu1mjw/would_you_take_a_pay_cut_to_work_fewer_hours/",
+          "author": null,
+          "description": "Need to save ${target}/yr. I’d personally take a 15-17.5% pay cut to go from 5d/wk to 4d/wk. The 15-17.5% pay cut hits the ${target}/yr saving. Work pattern would be 4-on, 4-off, 4-on, 2-off (teams decide for coverage on alternating m/f with tue-thur as core days). What would be your reception, and why?\n    submitted by    /u/golden-archer  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/ExperiencedDevs/comments/1cu1mjw/would_you_take_a_pay_cut_to_work_fewer_hours/",
+          "publishedOn": "2024-05-17T10:12:03.000Z",
+          "wordCount": null,
+          "title": "Would you take a pay cut to work fewer hours?",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/ExperiencedDevs/comments/1ctkwd1/overwhelmed_by_acronyms_at_new_job/",
           "author": null,
           "description": "I'm a few months into a new job at a non-technical Fortune 100 company, and the sheer amount of acronyms to learn is kicking my butt. I'm talking thousands of variables names in a dataset all formatted as things like aa_hlo_trg_col_1y.\n The company wears as a point of pride how many acronyms they use, and people just seem to know what everything stands for because many of them have 20 years at this company or in this industry.\n I've asked for help and was given a few docs that define some of the terms (including a glossary of 600+ company acronyms that still fails to define many of the ones I encounter). How am I supposed to follow along on a Teams call where every sentence has two new acronyms to look up?\n Is this a normal experience at every big company?\n    submitted by    /u/ryan_770  \n [link]   [comments]",
@@ -5558,6 +5708,16 @@
           "publishedOn": "2024-05-16T12:24:55.000Z",
           "wordCount": null,
           "title": "Has anyone gone from top performer to underperforming/PIP due to burnout?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/ExperiencedDevs/comments/1ctbf66/how_to_scale_through_others_when_the_others_lack/",
+          "author": null,
+          "description": "The current issue I am facing is learning to \"scale through others\". I can handle the technical stuff, I can figure out solutions and paths to complex problems and code them, or if I can't, I know how to find the right people and the right knowledge to see my project through.\n The problem is that there are only so many things one can do, eventually, if the task is monumental, you become a bottle neck. This is where this whole \"scaling through others\" comes in.\n A good \"senior\" or \"lead engineer\" is a force multiplier greater than 1. A bad one is a bottle neck.\n So I was in the unfortunate situation where i had to lead a team who overall lacked the right kind of skillset for what the project demanded. We did deliver on time, but it was very stressful for me, and there's still a lot of things that need to be refined yet. \n So I guess the question is, how do help your team deliver when they lack a lot of the basics for the given domain? My team was mostly backend and infrastructure engineers, and they now need to work on something related to compilers and software analysis.\n Had it been just me, the project would have taken a month, but with a team it took 4 times longer, and there's still too much friction in certain areas. Granted long term there are 5 engineers who can work on it vs 1, which is positive, but still, it was a struggle.\n I have the hunch that building a core / skeleton and then having people explore / solve isolated problems is the right way to go, but then people find excuses or avoid diving in the codebase. \n    submitted by    /u/dangling-putter  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/ExperiencedDevs/comments/1ctbf66/how_to_scale_through_others_when_the_others_lack/",
+          "publishedOn": "2024-05-16T12:11:39.000Z",
+          "wordCount": null,
+          "title": "How to \"scale through others\" when the \"others\" lack the right experience?",
           "imageUrl": null
         },
         {
@@ -5708,6 +5868,16 @@
           "publishedOn": "2024-05-13T03:06:56.000Z",
           "wordCount": null,
           "title": "Tech lead moves: Building 70-80% of the project before handing off to the team",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/ExperiencedDevs/comments/1cqlqzv/ask_experienced_devs_weekly_thread_a_weekly/",
+          "author": null,
+          "description": "A thread for Developers and IT folks with less experience to ask more experienced souls questions about the industry.\n ​\n Please keep top level comments limited to Inexperienced Devs. Most rules do not apply, but keep it civil. Being a jerk will not be tolerated.\n ​\n Inexperienced Devs should refrain from answering other Inexperienced Devs' questions.\n    submitted by    /u/AutoModerator  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/ExperiencedDevs/comments/1cqlqzv/ask_experienced_devs_weekly_thread_a_weekly/",
+          "publishedOn": "2024-05-13T00:00:27.000Z",
+          "wordCount": null,
+          "title": "Ask Experienced Devs Weekly Thread: A weekly thread for inexperienced developers to ask experienced ones",
           "imageUrl": null
         },
         {
@@ -6217,6 +6387,16 @@
       "feedUrl": "https://www.reddit.com/r/gamedev/top/.rss?t=week",
       "siteUrl": "https://www.reddit.com/r/gamedev/top/?t=week",
       "articles": [
+        {
+          "id": "https://www.reddit.com/r/gamedev/comments/1cu9fyp/what_game_made_you_realise_this_is_what_you_want/",
+          "author": null,
+          "description": "Also what specifically about that game? And does that relate to what you do now?\n    submitted by    /u/Hellgwyn  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/gamedev/comments/1cu9fyp/what_game_made_you_realise_this_is_what_you_want/",
+          "publishedOn": "2024-05-17T16:21:37.000Z",
+          "wordCount": null,
+          "title": "What game made you realise *this* is what you want to do?",
+          "imageUrl": null
+        },
         {
           "id": "https://www.reddit.com/r/gamedev/comments/1cu0u1k/why_dont_games_offer_a_buy_one_and_play_with_your/",
           "author": null,
@@ -6905,6 +7085,16 @@
       "siteUrl": "https://www.reddit.com/r/godot/top/?t=week",
       "articles": [
         {
+          "id": "https://www.reddit.com/r/godot/comments/1cu92rt/questions_about_animating_a_boss_fight_in_topdown/",
+          "author": null,
+          "description": "submitted by    /u/iammitchconner82  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/godot/comments/1cu92rt/questions_about_animating_a_boss_fight_in_topdown/",
+          "publishedOn": "2024-05-17T16:06:48.000Z",
+          "wordCount": null,
+          "title": "Questions about animating a boss fight in Top-Down",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/godot/comments/1cu4ncz/my_buggy_flying_enemy_is_actually_working_now/",
           "author": null,
           "description": "submitted by    /u/jijigri_  \n [link]   [comments]",
@@ -6952,6 +7142,16 @@
           "publishedOn": "2024-05-15T16:52:47.000Z",
           "wordCount": null,
           "title": "V2.3 of my free collection of scripts for 3D [MIT]",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/godot/comments/1cso7zx/progress_report_web_export_in_43/",
+          "author": null,
+          "description": "Listen up 🔊\n The Web platform is getting some quality of life upgrades, snuck in right before the 4.3 feature freeze 🥶❄\n Read the Progress Report: \n https://godotengine.org/article/progress-report-web-export-in-4-3/\n Highlights:\n  \nNew single-threaded export option\n Web Audio samples prototype\n PWA COOP/COEP helper\n Boot screen displayed while loading\n  \nFeaturing Catburglar🐱💎\n  \nHelp yourself to the city's valuables in *Catburglar*, a stealth platformer inspired by *Trilby: The Art of Theft.* Play as Cynth, and use your wits and agility to steal through a series of highrise apartments, outwitting guards and security cameras as you make your way to your goal.\n  \n   submitted by    /u/GodotTeam  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/godot/comments/1cso7zx/progress_report_web_export_in_43/",
+          "publishedOn": "2024-05-15T15:54:18.000Z",
+          "wordCount": null,
+          "title": "PROGRESS REPORT: Web Export in 4.3",
           "imageUrl": null
         },
         {
@@ -7579,6 +7779,26 @@
           "publishedOn": "2024-05-17T18:21:15.000Z",
           "wordCount": null,
           "title": "What do you guys use for web ui development?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/golang/comments/1cubk6c/generic_concurrency_in_go/",
+          "author": null,
+          "description": "submitted by    /u/gobwas  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/golang/comments/1cubk6c/generic_concurrency_in_go/",
+          "publishedOn": "2024-05-17T17:47:01.000Z",
+          "wordCount": null,
+          "title": "Generic Concurrency in Go",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/golang/comments/1cuaykn/what_projects_did_you_built_or_working_on_right/",
+          "author": null,
+          "description": "I work as a platform engineer and I've recently built a service to serve reactjs apps from an S3 bucket.\n It has an API service that builds the react app and uploads the build folder to the S3 bucket.\n A reverse proxy server listening on *.faas.dev.aws where * is the deployment name. Users can deploy their react apps using the api service with a unique name and they can access them with a url like my-react-app.faas.dev.aws\n Apart from this, I've also built a k8s operator that pulls secrets from our vault and stores them as native k8s secrets.\n What projects did you built or currently working on?\n    submitted by    /u/previouslyanywhere  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/golang/comments/1cuaykn/what_projects_did_you_built_or_working_on_right/",
+          "publishedOn": "2024-05-17T17:23:06.000Z",
+          "wordCount": null,
+          "title": "What projects did you built or working on right now?",
           "imageUrl": null
         },
         {
@@ -8238,6 +8458,36 @@
       "feedUrl": "https://www.reddit.com/r/hacking/top/.rss?t=week",
       "siteUrl": "https://www.reddit.com/r/hacking/top/?t=week",
       "articles": [
+        {
+          "id": "https://www.reddit.com/r/hacking/comments/1cuvd4p/where_do_intelx_and_google_darkweb_monitoring/",
+          "author": null,
+          "description": "Disclaimer: It's not really hacking, but I couldn't find a sub fitting more for my question.\n Hello everyone, I am wondering where IntelX and Google's darkweb monitoring service are getting their lesser known / private leaks? For an example, there is a site called selfstore.hu, an sql dump from their site can be found both on IntelX and Google's darkweb monitoring service but not on any other leak search engine site, only on those two. So where do they get those? Is there some clearner or darkweb forum where people randomly post these for credits (Similary to BreachForums) or just for bragging?\n I want to point out again, these are not from BreachForums. I also tried to look it up in DHT search engines, but I got zero results.\n I appreciate the answers, have a nice day :)\n    submitted by    /u/SellLimp7399  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/hacking/comments/1cuvd4p/where_do_intelx_and_google_darkweb_monitoring/",
+          "publishedOn": "2024-05-18T11:37:32.000Z",
+          "wordCount": null,
+          "title": "Where do IntelX and Google darkweb monitoring getting their lesser-known / private leaks? (NOT from BreachForums or torrents)",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/hacking/comments/1cut6bt/hitag2_crack2_implementation_working_on_proxmark3/",
+          "author": null,
+          "description": "The second key recovery vector outlined in the Gone in 360 seconds paper by F Garcia et al, implemented by Kev Sheldrake in RFIDLer 2017, now work in Proxmark3. \n It is a time/trade memory attack, with a online part and a secondary offline part.\n We can now gather the 2048 bits of crypto key stream needed for the second part of the attack in the pm3 client. \n You all need to create the 1.2tb lookup database file in order to execute the offline part of the attack. \n You find all you need in tools\\hitag2crack\\crack2\n    submitted by    /u/iceman2001  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/hacking/comments/1cut6bt/hitag2_crack2_implementation_working_on_proxmark3/",
+          "publishedOn": "2024-05-18T09:06:15.000Z",
+          "wordCount": null,
+          "title": "Hitag2 Crack2 implementation working on Proxmark3",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/hacking/comments/1cumc29/best_approach/",
+          "author": null,
+          "description": "My wife has not been able to play a game for a few weeks due to bad development. I've reviewed the crash logs generated by game, and it appears there is one particular item, a fountain, that is placed in her game that is causing the crash. The profile.json is encrypted, so I can't just go in there and find that entry and remove it. I'm guessing it uses AES encryption since the crash log mentions Rijndael. What would the best approach be to digging for the key? I've opened up files with ghidra, but for some reason, findcrypt isn't showing up for me to use in analysis. My wife loves this game and I really want to figure this out for her. Is there a better approach to doing this?\n Update:\n Here are the dmp details. \n EXCEPTION_RECORD: (.exr -1)\n ExceptionAddress: 00007ffc989b6196 (GameAssembly!mono_class_has_parent+0x00000000005a0606)\n ExceptionCode: c0000005 (Access violation)\n ExceptionFlags: 00000000\n NumberParameters: 2\n Parameter[0]: 0000000000000000\n Parameter[1]: ffffffffffffffff\n Attempt to read from address ffffffffffffffff\n Here are the log details:\n Unloading 2 Unused Serialized files (Serialized files now loaded: 1724)\n Unloading 4307 unused Assets to reduce memory usage. Loaded Objects now: 85482.\n Total: 177.784700 ms (FindLiveObjects: 11.103100 ms CreateObjectMapping: 4.718700 ms MarkObjects: 159.846400 ms DeleteObjects: 2.116200 ms)\n Exception: Fountain01(Clone) not found in Profile.World.Keyholes (IsKeyHole: False, guid: )\n    submitted by    /u/Catdad08  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/hacking/comments/1cumc29/best_approach/",
+          "publishedOn": "2024-05-18T01:54:48.000Z",
+          "wordCount": null,
+          "title": "Best Approach?",
+          "imageUrl": null
+        },
         {
           "id": "https://www.reddit.com/r/hacking/comments/1cuii1k/tips_for_investigating_a_series_of_websites_as/",
           "author": null,
@@ -8915,6 +9165,16 @@
       "feedUrl": "https://www.reddit.com/r/programming/top/.rss?t=week",
       "siteUrl": "https://www.reddit.com/r/programming/top/?t=week",
       "articles": [
+        {
+          "id": "https://www.reddit.com/r/programming/comments/1curlmb/developers_spend_close_to_57_of_their_time/",
+          "author": null,
+          "description": "submitted by    /u/john83672  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/programming/comments/1curlmb/developers_spend_close_to_57_of_their_time/",
+          "publishedOn": "2024-05-18T07:11:00.000Z",
+          "wordCount": null,
+          "title": "Developers spend close to 57% of their time firefighting than innovating- Cisco survey",
+          "imageUrl": null
+        },
         {
           "id": "https://www.reddit.com/r/programming/comments/1cuh4pg/fireship_mindbending_new_programming_language_for/",
           "author": null,
@@ -9603,6 +9863,26 @@
       "siteUrl": "https://www.reddit.com/r/ProgrammerHumor/top/?t=week",
       "articles": [
         {
+          "id": "https://www.reddit.com/r/ProgrammerHumor/comments/1cu7f29/pleasenonotanotherbaseclasshelper/",
+          "author": null,
+          "description": "submitted by    /u/StolenStutz  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/ProgrammerHumor/comments/1cu7f29/pleasenonotanotherbaseclasshelper/",
+          "publishedOn": "2024-05-17T15:00:38.000Z",
+          "wordCount": null,
+          "title": "pleaseNoNotAnotherBaseClassHelper",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/ProgrammerHumor/comments/1cu2nxm/returntrue/",
+          "author": null,
+          "description": "submitted by    /u/TheKeppler  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/ProgrammerHumor/comments/1cu2nxm/returntrue/",
+          "publishedOn": "2024-05-17T11:19:16.000Z",
+          "wordCount": null,
+          "title": "returnTrue",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/ProgrammerHumor/comments/1cu29u2/guyswehaveanenemy/",
           "author": null,
           "description": "submitted by    /u/Individual-Link-8233  \n [link]   [comments]",
@@ -9610,6 +9890,16 @@
           "publishedOn": "2024-05-17T10:55:38.000Z",
           "wordCount": null,
           "title": "guysWeHaveAnEnemy",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/ProgrammerHumor/comments/1cu12lm/whyisntslackreactionlimitsomebase2number/",
+          "author": null,
+          "description": "submitted by    /u/dimitarnestorov  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/ProgrammerHumor/comments/1cu12lm/whyisntslackreactionlimitsomebase2number/",
+          "publishedOn": "2024-05-17T09:32:53.000Z",
+          "wordCount": null,
+          "title": "whyIsntSlackReactionLimitSomeBase2Number",
           "imageUrl": null
         },
         {
