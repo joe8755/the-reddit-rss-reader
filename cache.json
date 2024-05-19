@@ -6,6 +6,126 @@
       "siteUrl": "https://www.reddit.com/r/C_Programming/",
       "articles": [
         {
+          "id": "https://www.reddit.com/r/C_Programming/comments/1cvc981/uni_work_help_i_dont_know_where_to_go_anymore/",
+          "author": null,
+          "description": "This code was a template that was provided by my uni, and had to adapt to work with what the teacher asked.\n Ive been around this code for 2 weeks and i have no idea why it always returns a 0 value.\n This is supposed to take in a txt file that has coordinates that are used to make a graph, number of people, number of supermarkets, coordinates of the people, coordinates of the supermarkets. Code uses the coordinates to create a graph, and is supposed to find the best possible solution to bring each person to a supermarket (once 1 person goes to the supermarket, another cant enter the same one) \n The code perfectly reads the file, since at the end it identifys how many markets, people, etc are in. But for someon reason it never gives me any solution. its always 0.\n Im sorry if this is a shit…",
+          "link": "https://www.reddit.com/r/C_Programming/comments/1cvc981/uni_work_help_i_dont_know_where_to_go_anymore/",
+          "publishedOn": "2024-05-19T01:05:22.000Z",
+          "wordCount": null,
+          "title": "uni work help (i dont know where to go anymore)",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/C_Programming/comments/1cvbmmz/elf_parser/",
+          "author": null,
+          "description": "anyone know if its possible to detect arm sub type via reading elf? \n static const char* machine_to_str(elf_hdr* ehdr) { if(ehdr->e_machine == EM_MIPS) { if(ehdr->endian == ELF_LE) return strings[MIPSEL].str; else return strings[MIPS].str; } else if (ehdr->e_machine == EM_X86 || ehdr->e_machine == EM_X86_64) return strings[X86].str; else if (ehdr->e_machine == EM_ARM || ehdr->e_machine == EM_ARM64) return strings[ARM].str; else if (ehdr->e_machine == EM_PPC || ehdr->e_machine == EM_PPC64) return strings[PPC].str; else if (ehdr->e_machine == EM_SPC || ehdr->e_machine == EM_SPARC) return strings[SPC].str; else if (ehdr->e_machine == EM_SH4) return strings[SH4].str; else if (ehdr->e_machine == EM_M68K) return strings[M68K].str; else if (ehdr->e_machine == EM_M88K) return strings[M88K].str; else if (ehdr->e_machine == EM_ARC) return strings[ARC].str; else return strings[UNKNOWN].str; } \n    submitted by    /u/ryanjones42  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/C_Programming/comments/1cvbmmz/elf_parser/",
+          "publishedOn": "2024-05-19T00:33:25.000Z",
+          "wordCount": null,
+          "title": "elf parser",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/C_Programming/comments/1cvbl0g/struct/",
+          "author": null,
+          "description": "i recently asked about pointers & was told it can help memory etc. This is how i have my account struct right now \n struct accountinfo_t { char username[32]; char password[32]; char expire[32]; char MyFDip[32]; enum { client, admin, } admin; // 0 client, 1 admin enum { offline, online, } authenticated; // 0 offline, 1 connected } accounts[MAXFDS]; \n When a user logs in there FD represents the array number in the struct. IS there a better method todo this? \n    submitted by    /u/ryanjones42  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/C_Programming/comments/1cvbl0g/struct/",
+          "publishedOn": "2024-05-19T00:31:10.000Z",
+          "wordCount": null,
+          "title": "struct",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/C_Programming/comments/1cv7ite/simplest_way_to_create_a_generic_container_that/",
+          "author": null,
+          "description": "I have a simple singly linked list, where each node has a next pointer to the next node, and a data pointer to whatever the consumer wants to point to. I want the same linked list implementation to be able to hold both function pointers and data pointers.\n Since void pointers are not allowed to be converted to function pointers in the C standard (I think since processors with Harvard architectures can store instructions and data differently?), my current solution is to create two wrapper structs, one for instruction and data pointers respectively, and then have the linked list node point to the wrapper. \n Is this the simplest way to go about things? Here are some things I thought about:\n  \nSection 2.12.3 of the POSIX standard (PDF) says that function pointers should be safely convertible to void pointers and back, but I want to make my program portable to non-POSIX systems if I can help it.\n I thought about simply having a void pointer which could either point to a data pointer or a function pointer, instead of having the struct wrapper. But I don't think this works because we would need to allocate space for the function pointer to live, and malloc only returns void pointers, so we get back to the same problem.\n I could simply having two implementations of a linked list, one that holds function pointers and another that holds data pointers, but I want to share as much code as possible.\n  \n   submitted by    /u/SereneCalathea  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/C_Programming/comments/1cv7ite/simplest_way_to_create_a_generic_container_that/",
+          "publishedOn": "2024-05-18T21:16:38.000Z",
+          "wordCount": null,
+          "title": "Simplest way to create a generic container that can hold both function pointers and data pointers?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/C_Programming/comments/1cv7bit/pointers/",
+          "author": null,
+          "description": "Pointers!! Why??? I dont understand them, i understand they point to another address or whatever\n I understand you can do stuff like char *ptr; int *ptr; etc But why? Im not good with ptrs, i dont understand them well, but why do we point to another address or store another address, i just dont understand the use case for them\n    submitted by    /u/ryanjones42  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/C_Programming/comments/1cv7bit/pointers/",
+          "publishedOn": "2024-05-18T21:07:14.000Z",
+          "wordCount": null,
+          "title": "Pointers",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/C_Programming/comments/1cv4nka/winforms_and_state_of_art/",
+          "author": null,
+          "description": "Can we consider WinForms state of art , if you say yes why , i trying to write an essay and i need to find if WinForms can be a state of art but o don t find information about the at\n    submitted by    /u/Western_Log_4739  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/C_Programming/comments/1cv4nka/winforms_and_state_of_art/",
+          "publishedOn": "2024-05-18T19:06:49.000Z",
+          "wordCount": null,
+          "title": "WinForms and State of Art",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/C_Programming/comments/1cv3urg/makefile_can_not_find_files_in_subfolders/",
+          "author": null,
+          "description": "Hello,\n I am trying to comiple and build a c-project that I downloaded, by running the make file that came with the project. I did not add or modify anything.\n I tried with terminal in VSCode and Windows Powershell and MSYS2, with the same results.\n  \nC:\\qp\\qtools/gnu_arm-none-eabi/bin/arm-none-eabi-gcc -c -g -mcpu=cortex-m0plus -mthumb -Wall -ffunction-sections -fdata-sections -O -I.. -I../../../include -I../../../3rd_party/CMSIS/Include -I../../../3rd_party/nucleo-c031c6 -DSTM32C031xx main.c -o dbg/main.o\n main.c:2:10: fatal error: miros.h: No such file or directory\n 2 | #include \"miros.h\"\n  \nIf I put all the files in the root directory it builds fine. What am I doing wrong?\n Thank you\n The directory structure is:\n  \nMy_Project/\n +---3rd_party/ - third-party software (needed in the examples)\n | +---CMSIS/ - ARM CMSIS\n | +---ek-tm4c123gxl/ - low-level code to support EK-TM4C123GX board\n | +---nucleo-c031c6/ - low-level code to support STM32 NUCLEO LC031C6 board\n  \n   \n +---include/ - include directory\n | miros.h - MiROS API\n | assert.h\n +---src/ - MiROS source code\n | +---gnu/\n ```\n  \nThe relevant makefile code is:\n #----------------------------------------------------------------------------- # project name # PROJECT := project #----------------------------------------------------------------------------- # project directories # # list of all source directories used by this project VPATH = \\ .. \\ ../../../src/gnu \\ ../../../3rd_party/nucleo-c031c6 \\ ../../../3rd_party/nucleo-c031c6/gnu # list of all include directories needed by this project INCLUDES = \\ -I.. \\ -I../../../include \\ -I../../../3rd_party/CMSIS/Include \\ -I../../../3rd_party/nucleo-c031c6 #----------------------------------------------------------------------------- # files # # assembler source files ASM_SRCS := # C source files C_SRCS := \\ main.c \\ bsp.c \\ miros.c \\ system_stm32c0xx.c \\ startup_stm32c031xx.c \n    submitted by    /u/Common-Common-8577  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/C_Programming/comments/1cv3urg/makefile_can_not_find_files_in_subfolders/",
+          "publishedOn": "2024-05-18T18:31:16.000Z",
+          "wordCount": null,
+          "title": "makefile can not find files in subfolders",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/C_Programming/comments/1cv3gyv/how_to_run_the_c_exercises_from_the_book_kr_the_c/",
+          "author": null,
+          "description": "I am having a 2024 problem. The issue is that the VS Code console I use to run the code, aka the compiler, does not work as intended for the C exercises in the book. As you may be aware, things like backspace or the EOF is not something that the compiler in VS Code will let me handle, it just handles these things on its own, hence I can't actually check for EOF or a backspace. This is obviously a problem when it comes to these examples and exercises. \n The question is what are my alternatives here? I want to run this in old c compiler as the book intended without dealing with something way too old and hard to navigate, or like a keyboard-only interface. If its important, I am working in Windows.\n    submitted by    /u/Ritzkey  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/C_Programming/comments/1cv3gyv/how_to_run_the_c_exercises_from_the_book_kr_the_c/",
+          "publishedOn": "2024-05-18T18:14:07.000Z",
+          "wordCount": null,
+          "title": "How to run the C exercises from the book K&R \"The C Programming Language\" as they were intended?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/C_Programming/comments/1cv160c/why_does_clangtidy_only_sometimes_catch_memory/",
+          "author": null,
+          "description": "Why does clang-tidy catch the leak in this code:\n #include <stdlib.h>\n int main(){\n malloc(1);\n }\n but not here (even with -checks=\"*\"):\n #include <stdlib.h> int main(){ malloc(1); int a[10]; for(int i = 0; i < 10; i++) a[i] = i; } \n I believe that clion was able to catch the second one the last time I tried\n    submitted by    /u/DACOOLISTOFDOODS  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/C_Programming/comments/1cv160c/why_does_clangtidy_only_sometimes_catch_memory/",
+          "publishedOn": "2024-05-18T16:31:04.000Z",
+          "wordCount": null,
+          "title": "Why does clang-tidy only sometimes catch memory leaks?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/C_Programming/comments/1cv0owb/strncpy_not_working/",
+          "author": null,
+          "description": "char* temp_string = feeds_temp[j][k];\n printf(\"temp is: %s, length = %i\\n\", temp_string, strlen(temp_string));\n (Above code prints out the proper string, so feeds_temp[j][k], strlen is correct also)\n strncpy(channel_feeds_temp[j][k], feeds_temp[j+1][k], strlen(feeds_temp[j+1][k]));\n feeds_temp[j][k][strlen(feeds_temp[j+1][k])] = '\\0';\n (These 2 lines above work)\n printf(\"%s\\n\", feeds_temp[j+1][k]);\n strncpy(feeds_temp[j+1][k], temp_string, strlen(temp_string));\n feeds_temp[j+1][k][strlen(temp_string)] = '\\0';\n printf(\"%s\\n\\n\", feeds_temp[j+1][k]);\n (This does not, so both printfs here are the same string, i expected after the strncpy it to be the same as the temp_string)\n So the last strncpy here does not effect the feeds_temp[j+1][k], the printfs before and after are the same\n SOLVED: i made the temporary string be a char pointer to the original string and then when changeing the original string i forgot that i also change the contents of the temporary string\n    submitted by    /u/MaseM_reddit  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/C_Programming/comments/1cv0owb/strncpy_not_working/",
+          "publishedOn": "2024-05-18T16:09:06.000Z",
+          "wordCount": null,
+          "title": "strncpy not working",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/C_Programming/comments/1cuwxj2/make_tries_to_use_clang_although_gcc_is_specified/",
+          "author": null,
+          "description": "This is my makefile, pieced together from various sources:\n CC := gcc CFLAGS := -Wall -Wextra -std=c17 -g -fanalyzer LDFLAGS := -lncurses TARGET_EXEC ?= test004 BUILD_DIR ?= ./build SRC_DIRS ?= ./src SRCS := $(shell find $(SRC_DIRS) -name *.c) OBJS := $(SRCS:%=$(BUILD_DIR)/%.o) DEPS := $(OBJS:.o=.d) INC_DIRS := $(shell find $(SRC_DIRS) -type d) INC_FLAGS := $(addprefix -I,$(INC_DIRS)) CPPFLAGS ?= $(INC_FLAGS) -MMD -MP $(BUILD_DIR)/$(TARGET_EXEC): $(OBJS) $(CC) $(OBJS) -o $@ $(LDFLAGS) # c source $(BUILD_DIR)/%.c.o: %.c $(MKDIR_P) $(dir $@) $(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@ .PHONY: clean clean: $(RM) -r $(BUILD_DIR) -include $(DEPS) MKDIR_P ?= mkdir -p \n I'm on a Mac and I have both clang and gcc installed. Running make compiles as it should with gcc. But when I added the flag -fanalyzer, I suddenly get this output and error:\n mkdir -p build/./src/ gcc (normal stuff here) clang: error: unknown argument '-fanalyzer'; did you mean '-Xanalyzer'? make: *** [build/./src/test004.c.o] Error 1 \n What is clang doing there? I'm trying to run gcc, and that's what it's been doing just fine so far?\n    submitted by    /u/consistebat  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/C_Programming/comments/1cuwxj2/make_tries_to_use_clang_although_gcc_is_specified/",
+          "publishedOn": "2024-05-18T13:06:43.000Z",
+          "wordCount": null,
+          "title": "make tries to use clang although gcc is specified",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/C_Programming/comments/1cuww73/how_do_you_write_good_apis_in_c/",
+          "author": null,
+          "description": "I am quite a novice C programmer and one of the biggest difficulties in my C journey so far has been learning how to design APIs (functions, structures, typedefs..).\n I'm taking a course focused on learning C from the bottom up and we are very discouraged from using the standard library in our code, but encouraged to write our own implementations, unless it's for functions that map directly to syscalls or if it's a tremendous task to do so, like malloc.. \n What it made me realize is that it's very hard for me to come up with good designs, even for small problems, coming up with the right data structures, the right functions that don't take like 5+ parameters, \"keeping things simple\" as to say, is actually not easy. \n So, I was wondering if some of you had principles or advice that helped them write \"good\" APIs, I know it's quite a vague and subjective topic but I honestly feel like there has to be some core principles and guidelines that can help. \n At least I can speak for myself and say I reviewed some code I wrote a few months ago and thought to myself, why did I write this in such a convoluted way? And most certainly, I am still doing that right now, not even realizing it.\n    submitted by    /u/ismbks  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/C_Programming/comments/1cuww73/how_do_you_write_good_apis_in_c/",
+          "publishedOn": "2024-05-18T13:04:50.000Z",
+          "wordCount": null,
+          "title": "How do you write good APIs in C?",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/C_Programming/comments/1cut9wq/what_is_the_most_efficient_way_to_paralelise_a/",
           "author": null,
           "description": "Hello,\n I'm trying to find a way to increase the speed of a for loop, that that gets executed hundreds of times - what would be the most efficient way, if I don't want to use vectors (because from my testing, using them as the range for a FOR loop is inefficient).\n    submitted by    /u/DesperateGame  \n [link]   [comments]",
@@ -1502,6 +1622,186 @@
       "feedUrl": "https://www.reddit.com/r/cpp+cpp_questions/.rss",
       "siteUrl": "https://www.reddit.com/r/cpp+cpp_questions/",
       "articles": [
+        {
+          "id": "https://www.reddit.com/r/cpp_questions/comments/1cvcfhu/why_is_my_homework_code_leaking_memory/",
+          "author": null,
+          "description": "i am doing a recursive merge sort for a singly linked list. this is a part of the code i have:\n struct node { int value; node* next; }; ... node* mergesort(node* input, int length) { if(length <= 1) { if(length == 0) { return nullptr; } else { return new node{input->value, nullptr}; } } … } \n this is the documentation from my professor about that function:\n /* mergesort(input, length) Recursively Mergesort the `input` list (whose length is given by `length`), returning a new sorted list. Must run in O(n log n) time, where n = `length`. Must use O(n) space (returned list is created new). NOTE: The `input` list must not be modified in any way. */ \n and these are a couple of the requirements for our code:\n  \nThe returned list must be entirely new; none of its ->next pointers should point into the input list.\n Your code must not allocate any dynamic memory other than what is required for the nodes of the returned list. (The test code will destroy this list before exiting, so if run in Valgrind, it should report no memory leaks.)\n  \nin my professor's test file, the sorted list is destroyed and heap memory is freed. however running the program with valgrind tells me i am leaking 10,115,136 bytes in 632,196 blocks and I cannot figure out why. if anybody could help me out i would greatly appreciate it\n    submitted by    /u/not_alootz    to    r/cpp_questions  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp_questions/comments/1cvcfhu/why_is_my_homework_code_leaking_memory/",
+          "publishedOn": "2024-05-19T01:14:24.000Z",
+          "wordCount": null,
+          "title": "why is my homework code leaking memory",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp_questions/comments/1cvcb09/is_there_a_good_modern_open_source_c_codebase_one/",
+          "author": null,
+          "description": "I used to program in c/c++ back in the day (15 yrs ago) but haven't followed the developments since then, so I'm unfamiliar with all the newfangled features in the new c++ standards. I'm reading the book \"A Tour of C++\" (3rd ed) and this tells me, didactically, what new c++ looks like, but since the best way to learn is to read/execute & experiment with code, I wonder if anyone knows of a good codebase that uses the modern idioms? In particular, I want to see good use of concepts, templates, modern STL usage, \"memory-safe\" pointer mechanisms. The book is excellent, but it only has code snippets. \n I'm particularly interested in client/server stuff, so (for example) a socket server/client would be magnificent. This is not to say that other sorts of projects wouldn't be welcome.\n    submitted by    /u/United_states_of_poo    to    r/cpp_questions  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp_questions/comments/1cvcb09/is_there_a_good_modern_open_source_c_codebase_one/",
+          "publishedOn": "2024-05-19T01:07:54.000Z",
+          "wordCount": null,
+          "title": "Is there a good modern open source C++ codebase one can go through to learn?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp_questions/comments/1cvbbj5/cpp_career_with_no_electronics/",
+          "author": null,
+          "description": "Hello, I am a student near to finish my studies, but I'm heavily oriented toward development and I have no knowledge of electronic circuits boards and signal processing, none on microchips, let alone fpga, but I know the software side (OS, compiler, cpp, linux,python and algorithms)at a decent student level, I d like professionals advice about me wanting to do cpp and different types of Cpp careers.\n    submitted by    /u/TheTrueShoebill    to    r/cpp_questions  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp_questions/comments/1cvbbj5/cpp_career_with_no_electronics/",
+          "publishedOn": "2024-05-19T00:18:02.000Z",
+          "wordCount": null,
+          "title": "Cpp career with no electronics",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp_questions/comments/1cvb98w/custom_dynamic_crt_unresolved_external_symbol_main/",
+          "author": null,
+          "description": "i wanna make my own dynamic CRT just cus, but ive run into an issue with calling main inside mainCRTStartup, but having the user define it. how do i do this? everything i try gives me unresolved external symbols or multiply defined symbols, also i wanna use this inside of dlls too, but i get unresolved external symbols when i dont define main in it.\n    submitted by    /u/Present_Mongoose_373    to    r/cpp_questions  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp_questions/comments/1cvb98w/custom_dynamic_crt_unresolved_external_symbol_main/",
+          "publishedOn": "2024-05-19T00:14:50.000Z",
+          "wordCount": null,
+          "title": "custom dynamic CRT unresolved external symbol main?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp/comments/1cvb92d/stdunique_ptr_or_rvalue_reference_as_a_parameter/",
+          "author": null,
+          "description": "AFAIK, both of the following examples implement move semantics correctly and avoid copies, but which do you prefer and why?\n class Node { std::vector<std::unique_ptr<Node>> children; public: // Example 1: std::unique_ptr as a parameter void addChild(std::unique_ptr<Node> childNode) { children.push_back(std::move(childNode)); } // usage: // someNode->addChild(std::unique_ptr<Node>(someOtherNode)); // Example 2: rvalue reference as a paramter void addChild(Node&& childNode) { children.push_back(std::make_unique<Node>(std::move(childNode))); }} // usage: // someNode->addChild(std::move(someOtherNode)) } \n    submitted by    /u/Existing-Signal-4338    to    r/cpp  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp/comments/1cvb92d/stdunique_ptr_or_rvalue_reference_as_a_parameter/",
+          "publishedOn": "2024-05-19T00:14:36.000Z",
+          "wordCount": null,
+          "title": "std::unique_ptr or rvalue reference as a parameter?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp/comments/1cvahnr/reflection_in_c26_the_renaissance_of_c/",
+          "author": null,
+          "description": "https://youtu.be/vRda0mGYg_A?si=CSzENClTssKtK1U8\n    submitted by    /u/jfbastien    to    r/cpp  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp/comments/1cvahnr/reflection_in_c26_the_renaissance_of_c/",
+          "publishedOn": "2024-05-18T23:37:28.000Z",
+          "wordCount": null,
+          "title": "Reflection in C++26: the renaissance of C++",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp_questions/comments/1cva5ww/whats_the_best_way_to_store_tokenization_data/",
+          "author": null,
+          "description": "As a project to learn C++, I decided to create my own bytecode based on Dotnet CIL and Python Bytecode. Everything is going great so far, but I've run into a hiccup during the tokenization stage of parsing my binary bytecode file.\n The way I store all of the bytecode instructions in memory is with these structures (and a union inside byte_token, defined in the code block below)\n I have a class ByteDecoder that tokenizes everything and places the tokens inside a std::vector<byte_token>&. The issue I'm facing is when trying to make an instance of a byte_token, I get a series of errors saying that the constructor and deconstructor are deleted functions. AI told me that this is because of something happening with the constructor of the members within the union not being initialized. I have no …",
+          "link": "https://www.reddit.com/r/cpp_questions/comments/1cva5ww/whats_the_best_way_to_store_tokenization_data/",
+          "publishedOn": "2024-05-18T23:21:10.000Z",
+          "wordCount": null,
+          "title": "What's the best way to store tokenization data?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp/comments/1cv9o21/better_way_to_self_teach_myself_c/",
+          "author": null,
+          "description": "Hello, so I've been using learncpp.com along with visual code community 2022 to learn. The way I would teach myself is to make notes and pratice writing the code presented from scratch without looking at the code. I would keep doing that until I dig it deep into my memory.\n The issue i'm having is that I keep thinking and worrying myself that I will forget everything i've learned and struggling to keep the basic facts in my head such as \"What is a variable?\" \"How do functions work?\" and I feel like i'm missing important information.\n Is there any better way to do this?\n    submitted by    /u/Ko938AUp    to    r/cpp  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp/comments/1cv9o21/better_way_to_self_teach_myself_c/",
+          "publishedOn": "2024-05-18T22:56:39.000Z",
+          "wordCount": null,
+          "title": "Better way to self teach myself C++",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp/comments/1cv5jrg/good_place_to_find_collaborators/",
+          "author": null,
+          "description": "Hey! I'm looking to make a C++ game engine/framework to hopefully make a game at some point.\n I've been using C++ for about a year at this point and have mostly specialized in rendering with OpenGL. I haven't fully grasped all concepts around memory and memory management (I know what a pointer is and that is really it). I'm also considering C for that same reason.\n I'm looking for a place where I can find collaborators that would help me build a engine/framework, and help me with all the memory stuff. I already posted on a discord server about game dev, but most people seem to be unity programmers or things other than programming.\n Thanks in Advance!\n    submitted by    /u/juice20115932    to    r/cpp  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp/comments/1cv5jrg/good_place_to_find_collaborators/",
+          "publishedOn": "2024-05-18T19:46:55.000Z",
+          "wordCount": null,
+          "title": "Good Place To Find Collaborators",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp_questions/comments/1cv5iyb/compile_time_dependency_injection_with_concepts/",
+          "author": null,
+          "description": "I'd like to write a little program for learning the basics of clean architecture.\n I'd like to implement the interfaces that are used in the business logic layer by using template bindinds with concepts, in order to determine at compile time the right interfaces, avoiding to create an interface, a realization of it and then passing the pointer in the constructor. Instead I'd like to:\n  \nDefine the methods of an \"interface\" that are needed by the business case in a concept.\n Create a concrete implementation of the interface without using inheritance, and so using virtual functions (I'd like to use the methods in critical performance path, where indirection time matters)\n Allowing to unit test the business case, because without a virtual interface I cannot use mock libraries like FakeIT.\n  \nSo my question is: where can I find some good resource about concept and using them for dependency injection?\n    submitted by    /u/jepessen    to    r/cpp_questions  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp_questions/comments/1cv5iyb/compile_time_dependency_injection_with_concepts/",
+          "publishedOn": "2024-05-18T19:45:54.000Z",
+          "wordCount": null,
+          "title": "Compile time dependency injection with concepts: some resource?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp_questions/comments/1cv4zlk/expression_must_have_integral_or_unscoped_enum/",
+          "author": null,
+          "description": "I get this error with this code:\n #include <iostream> #include <cstdarg> #include <string> #include <fstream> #include <memory> #include <cstdio> #include <unistd.h> #include <string> using namespace std; string exec(const char* cmd) { shared_ptr<FILE> pipe(popen(cmd, \"r\"), pclose); if (!pipe) return \"ERROR\"; char buffer[128]; string result = \"\"; while (!feof(pipe.get())) { if (fgets(buffer, 128, pipe.get()) != NULL) result += buffer; } return result; } void aptGet(string app) { string erf = exec(\"zenity --password\"); ofstream output; output.open(\"log.txt\"); if (output.is_open()) output << erf; output.close(); string str = exec(\"echo \" + erf.c_str() + \"| sudo -S apt install \" + app); ofstream output2; output2.open(\"log.txt\"); if (output2.is_open()) output2 << str; output2.close(); } int main(int argc, char const *argv[]) { return 0; } \n W \n    submitted by    /u/EternalMX    to    r/cpp_questions  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp_questions/comments/1cv4zlk/expression_must_have_integral_or_unscoped_enum/",
+          "publishedOn": "2024-05-18T19:22:01.000Z",
+          "wordCount": null,
+          "title": "expression must have integral or unscoped enum type",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp/comments/1cv4x4f/any_way_to_split_constexpr_function/",
+          "author": null,
+          "description": "I was working on a personal project yesterday in C++23 and was running into a linker (ld) error stating that my constexpr had undefined symbols. After some digging, I realized that constexpr objects are implicitly inline and must have their definitions visible at every compiler stage.\n That being said, I had to move the function definitions from their .cpp source file into their header file, but I was wondering if there was still a way to keep the definition in a separate file (while preserving their constexpr modifier)?\n    submitted by    /u/atlas_enderium    to    r/cpp  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp/comments/1cv4x4f/any_way_to_split_constexpr_function/",
+          "publishedOn": "2024-05-18T19:18:56.000Z",
+          "wordCount": null,
+          "title": "Any way to split constexpr function declaration/prototypes from their definition in separate files?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp/comments/1cv2pv1/a_c_type_list_but_how_and_why/",
+          "author": null,
+          "description": "submitted by    /u/_a4z    to    r/cpp  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp/comments/1cv2pv1/a_c_type_list_but_how_and_why/",
+          "publishedOn": "2024-05-18T17:40:48.000Z",
+          "wordCount": null,
+          "title": "A C++ type list, but how and why",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp/comments/1cv13or/are_we_missing_a_ranges_customization_point/",
+          "author": null,
+          "description": "submitted by    /u/pavel_v    to    r/cpp  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp/comments/1cv13or/are_we_missing_a_ranges_customization_point/",
+          "publishedOn": "2024-05-18T16:28:11.000Z",
+          "wordCount": null,
+          "title": "Are we missing a Ranges customization point?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp/comments/1cv0v6n/cppcast_rust_c/",
+          "author": null,
+          "description": "submitted by    /u/robwirving    to    r/cpp  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp/comments/1cv0v6n/cppcast_rust_c/",
+          "publishedOn": "2024-05-18T16:17:20.000Z",
+          "wordCount": null,
+          "title": "CppCast: Rust <=> C++",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp_questions/comments/1cuyui3/im_losing_my_mind_trying_to_draw_to_an_hbitmap/",
+          "author": null,
+          "description": "This should work, right? I'm taking a big purple brush and then filling the DC with it. Then I'm reading the bitmap back in with GetDIBits. GetDIBits is returning 512 which indicates it's working but it filled the buffer with all black.\n What the heck am I doing wrong? i've been at this for hours now.\n int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PWSTR pCmdLine, int nCmdShow) { hdc = GetDC(0); const int Size = 512; HDC hMemoryDC = CreateCompatibleDC(hdc); HBITMAP hBitmap = CreateCompatibleBitmap(hdc, Size, Size); HBRUSH fillBrush = CreateSolidBrush(RGB(255, 0, 255)); HBITMAP oldBitmap = (HBITMAP)SelectObject(hMemoryDC, hBitmap); HBRUSH oldBrush = (HBRUSH) SelectObject(hMemoryDC, fillBrush); Rectangle(hMemoryDC, 0, 0, Size, Size); SelectObject(hMemoryDC, oldBitmap); SelectObject(hMemoryDC, oldBrush); BITMAPINFO info = {}; info.bmiHeader.biSize = sizeof(BITMAPINFOHEADER); info.bmiHeader.biWidth = Size; info.bmiHeader.biHeight = Size; info.bmiHeader.biPlanes = 1; info.bmiHeader.biBitCount = 32; info.bmiHeader.biCompression = BI_RGB; std::vector<unsigned char> pixelBuffer; pixelBuffer.resize(Size * Size * 4); auto returned = GetDIBits( hMemoryDC, hBitmap, 0, Size, &pixelBuffer[0], &info, DIB_RGB_COLORS ); assert(returned == 512); // yes, but pixelBuffer is full of zeroes } \n    submitted by    /u/irlbloodhound    to    r/cpp_questions  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp_questions/comments/1cuyui3/im_losing_my_mind_trying_to_draw_to_an_hbitmap/",
+          "publishedOn": "2024-05-18T14:43:40.000Z",
+          "wordCount": null,
+          "title": "I'm losing my mind trying to draw to an HBITMAP. Please help me",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp/comments/1cuyjl6/is_there_a_platform_agnostic_critical_section_for/",
+          "author": null,
+          "description": "My project is currently using mutexes for a singleton pattern initialization. Is it now true that if I use a static local variable, a boolean that tracks if initialization has occurred globally, that I no longer need to use a mutex? If this is not true, is there something faster than a mutex that is also platform independent? I'm looking at the critical sections but they are Win32. Is what I am doing fast enough? I'm always trying to shave off runtime and get more performance.\n    submitted by    /u/Knut_Knoblauch    to    r/cpp  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp/comments/1cuyjl6/is_there_a_platform_agnostic_critical_section_for/",
+          "publishedOn": "2024-05-18T14:28:56.000Z",
+          "wordCount": null,
+          "title": "Is there a platform agnostic critical section for use in C++?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp_questions/comments/1cuy2c9/what_you_do_when_i_have_the_idea_but_not_the/",
+          "author": null,
+          "description": "i sort of have an idea but when looked at how it could be executed , i figured i am not skilled enough yet to do it , how can i tackle this ?\n    submitted by    /u/Sea-Constant-2414    to    r/cpp_questions  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp_questions/comments/1cuy2c9/what_you_do_when_i_have_the_idea_but_not_the/",
+          "publishedOn": "2024-05-18T14:05:17.000Z",
+          "wordCount": null,
+          "title": "what you do when i have the idea but not the skill do implement it",
+          "imageUrl": null
+        },
         {
           "id": "https://www.reddit.com/r/cpp/comments/1cuw1ce/whats_the_error_here_that_took_me_half_an_hour_to/",
           "author": null,
@@ -3840,6 +4140,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://www.reddit.com/r/cscareerquestions/comments/1ctq0t0/im_losing_my_mind/",
+          "author": null,
+          "description": "I've been a web developer for the last 5-6 years(mainly frontend, but I worked with Node.js and express for a while). I work for a Big Tech company and I earn a reasonable salary. \n My problem is I'm exhausted and I feel I can't keep it anymore: We have a lot of strict deadlines and everyone works an unreasonable amount of hours.\n Last Friday, I had to work until 4AM to finish an urgent task that just appeared. This week, I worked 10-12 hours days to finish a bunch of important tasks. I'm not the only one - almost all of my team worked until midnight on tasks and codereviewsw.\n I don't know how to handle this because this is the way we worked for the last 3 years. My manager has very good intentions and he is a technical person, but I feel this is part of the problem.\n Our estimates goes like that: We need to build a popup with some tex and 2 buttons and call an API when \"confirm is clicked\".\n Me: It will take 3-4 days. Let's say 4 to be safe.\n Manager: 4 days for this ? It's simple enough, should be 2 days at most.\n Me: Yeah, but we want 100% coverage unit tests, use feature flags, the API is not ready yet and we use mock data, 2 people should review the code, we deploy on stage and prod, manual test everything (no QA). We even write e2e tests. \n In reality, even 4 days is not enough because some things are always unclear, and I have to clarify with 2-3 people and propose solutions. The codebase is very big and a lot of code has been untoched for years etc. So I end up working 12 hours/day to respect even the 4 days estimation, knowing my manager thinks is should be 2, which in fact should probably be 6-8 days because I'm not a robot.\n And I can't continue to work like that. I don't have time for myself, let alone personal development and learning new things.\n I don't know what to do. I talked with my manager a lot, and it's true we managed to complete the task in 4 days, but with me working 12+ hours and going above&beyound for this to happen. \n    submitted by    /u/InspectorDizzy3391  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cscareerquestions/comments/1ctq0t0/im_losing_my_mind/",
+          "publishedOn": "2024-05-16T22:38:53.000Z",
+          "wordCount": null,
+          "title": "I'm losing my mind.",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/cscareerquestions/comments/1ctg8ik/someone_has_stolen_my_work_and_claimed_as_their/",
           "author": null,
           "description": "Someone has taken my work at my job from within the company that I have done and can prove that it was mine that I have done and put their name on the top of it within my division and is taking credit for my work. Would I be an ass for taking this to a high level to report this at my job?\n    submitted by    /u/phillies1989  \n [link]   [comments]",
@@ -3897,6 +4207,16 @@
           "publishedOn": "2024-05-15T20:52:23.000Z",
           "wordCount": null,
           "title": "Repeal Section 174 to END LAYOFFS and Save Tech Jobs!",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cscareerquestions/comments/1cst9u6/laid_off_at_2_yoe_career_hell/",
+          "author": null,
+          "description": "This post is mostly a rant. Worked at XYZ F500 fintech company on a 300+ dev greenfield project, we acquired a smaller company that did our app but better and thus the whole project got cancelled and all positions terminated. \n I know the market is worse than normal, but it feels like there's not really a good fit for my exact level of experience. \n While at my last job I was just as productive if not more productive at pumping out code than the senior devs, I don't really feel 'ready' yet in terms of architectural design and best practices to consider myself senior. All the senior roles are asking for 5-8 YOE anyway which seem to be the majority of positions, and the junior roles seem to be mostly looking for freshers. \n Got rejected from a few senior roles because I just didn't have the years. Understandable have a nice day. Got rejected from a junior role because the hiring manager said something along the lines of they were \"seeking candidates who are at an earlier stage in their career and can grow alongside our team\". I understand that you don't want to hire someone overqualified because they might leave soon but what the fuck. \n Is there some secret word I need to type into Indeed to find the jobs which take people with 2 years of experience? Because I'm apparently too young to be considered senior and too old to be junior.\n    submitted by    /u/Hashtag0080FF  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cscareerquestions/comments/1cst9u6/laid_off_at_2_yoe_career_hell/",
+          "publishedOn": "2024-05-15T19:20:12.000Z",
+          "wordCount": null,
+          "title": "Laid off at 2 YOE - career hell?",
           "imageUrl": null
         },
         {
@@ -4517,6 +4837,36 @@
       "siteUrl": "https://www.reddit.com/r/EmuDev/",
       "articles": [
         {
+          "id": "https://www.reddit.com/r/EmuDev/comments/1cv6ece/gameboy_emulation_cpu_usage/",
+          "author": null,
+          "description": "A short time ago I wrote a gameboy (color) emulator that is working for the most part and runs stable. I just wanted to ask you what your average cpu usage is? Mine uses Vulkan and Imgui and I implemented multithreading. Hardware on one thread, the gui, basic control logic and swapchain stuff runs on the main thread, two for audio processing (one for filling a ringbuffer and the callback for SDL audio output) and another thread for uploading commandbuffers from a queue to trigger the texture upload to the GPU VRAM etc. It's running at roughly 30-35% CPU usage on a 5800x3d. Should I consider optimizing some stuff or is this relatively normal? There is some other stuff going on in the background because I added a debugger, memory observer etc.\n The memory footprint is relatively small, roughly 200MB when running pokemon crystal, 30MB in the menu (no game running)\n https://reddit.com/link/1cv6ece/video/wafm8ldiu81d1/player\n    submitted by    /u/WiTHCKiNG  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/EmuDev/comments/1cv6ece/gameboy_emulation_cpu_usage/",
+          "publishedOn": "2024-05-18T20:24:30.000Z",
+          "wordCount": null,
+          "title": "Gameboy Emulation CPU usage",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/EmuDev/comments/1cv4sfu/how_do_these_big_emulators_like_cemu_work/",
+          "author": null,
+          "description": "I am currently programming my NES emulator and so far everything is pretty straight forward. I simply emulate every single instruction on my virtual nes and so far it works pretty well. At least in terms of performance.\n But I can't see this approach working for larger machines like the Wii U. Do they translate the assembly, or are they generating some intermediate code that is executed by a virtual machine? I doubt that every single instruction is emulated like on my NES emulator. I can't imagine that this is performant. But maybe I'm wrong. It would be really interesting to know what black magic is used in those emulators.\n    submitted by    /u/Zeusenikus  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/EmuDev/comments/1cv4sfu/how_do_these_big_emulators_like_cemu_work/",
+          "publishedOn": "2024-05-18T19:13:03.000Z",
+          "wordCount": null,
+          "title": "How do these big Emulators like Cemu work?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/EmuDev/comments/1cuzbdn/gameboy_c_emulator_too_slow/",
+          "author": null,
+          "description": "The time it takes to reach vblank is seconds which is obviously too slow. I decided to output the time it takes for the main loop to iterate once and it's ~2000ns which is much larger than the 238ns needed for a single cpu & ppu cycle.\n I decided to time my code even when the main loop does no work via:\n while (app.running) { QueryPerformanceCounter(&end_time); delta_time = static_cast<double>(end_time.QuadPart - start_time.QuadPart); delta_time *= 1e9; // nanosecond precision delta_time /= frequency.QuadPart; printf(\"delta time: %f\\n\", delta_time); start_time = end_time; } \n This made no magnitude change to the time which leads me to think that I need to calculate how many cycles have occurred between each iteration (~84) and simulate them.\n Before I go about implementing the above I wanted to check that this is the correct approach?\n    submitted by    /u/Hucaru  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/EmuDev/comments/1cuzbdn/gameboy_c_emulator_too_slow/",
+          "publishedOn": "2024-05-18T15:05:38.000Z",
+          "wordCount": null,
+          "title": "(Gameboy, C++) Emulator too slow",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/EmuDev/comments/1cui6x8/creation_an_emulator/",
           "author": null,
           "description": "I am a beginner in creating an emus, what's the difference in creating an emulator with Java or C? I know that have implications with speed etc, but this really makes a difference in emulators as Chip-8 even GBC or NES? I heard that the garbage collector of Java hinders, is truth?\n sorry for asking but I want to create my first emulator\n (And sorry for my grammatical mistakes I too beginner in english haha.) \n    submitted by    /u/SomeMulberry1482  \n [link]   [comments]",
@@ -4953,6 +5303,26 @@
       "feedUrl": "https://www.reddit.com/r/devops/top/.rss?t=week",
       "siteUrl": "https://www.reddit.com/r/devops/top/?t=week",
       "articles": [
+        {
+          "id": "https://www.reddit.com/r/devops/comments/1cuvbkt/how_much_docker_knowledge_is_needed_for_a_job_in/",
+          "author": null,
+          "description": "I took a Docker course that went over these topics. After finishing it, I was able to understand essentially most of what's covered in this roadmap on a fundamental level. \n However, I'm not sure how much deeper knowledge I should have for each of those topics, especially for a job. For example, I know how to build docker images using Docker Compose and push them onto DockerHub. I understand how networking works and how to setup persistent volume storage. Would you say this is adequate knowledge for a DevOps role, or should I dive deeper into certain topics? If the latter, what more should I focus on? \n And considering Kubernetes is quite complicated to learn and grasp, I'm not sure if I should dive deeper into certain things in Docker or move on and focus on Kubernetes?\n    submitted by    /u/Militoe  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/devops/comments/1cuvbkt/how_much_docker_knowledge_is_needed_for_a_job_in/",
+          "publishedOn": "2024-05-18T11:34:47.000Z",
+          "wordCount": null,
+          "title": "How much Docker knowledge is needed for a job in DevOps?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/devops/comments/1cuupsm/is_cka_worth_it/",
+          "author": null,
+          "description": "I have been working on K8S for 5 years now and I think I’m pretty proficient at my job.\n Is CKA really worth it? \n    submitted by    /u/Loser_lmfao_suck123  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/devops/comments/1cuupsm/is_cka_worth_it/",
+          "publishedOn": "2024-05-18T10:56:40.000Z",
+          "wordCount": null,
+          "title": "Is CKA worth it?",
+          "imageUrl": null
+        },
         {
           "id": "https://www.reddit.com/r/devops/comments/1cumxc6/focus_exporter_a_prometheus_exporter_to_track_my/",
           "author": null,
@@ -5640,6 +6010,56 @@
       "feedUrl": "https://www.reddit.com/r/ExperiencedDevs/top/.rss?t=week",
       "siteUrl": "https://www.reddit.com/r/ExperiencedDevs/top/?t=week",
       "articles": [
+        {
+          "id": "https://www.reddit.com/r/ExperiencedDevs/comments/1cv66dv/the_whole_team_is_dreading_the_return_of_a/",
+          "author": null,
+          "description": "You might think dread is perhaps too strong of a word to use for such a simple thing. If I knew a stronger word, I would use it, trust me.\n To give a brief summary: \n  \nThe manager is coming back after a longer time of absence to the team they lead before\n \n3 members of the team (myself included) had to seek professional psychiatric help to deal with anxiety, stress, panic attacks and all the other shit we were put through because of the manager. One teammate had to take extended leave to deal with the mental health issues caused by the manager. \n \n2 devs left the company specifically naming the manager as a reason why are they leaving\n \nWe had \"secret\" mandatory overtime \"which every team is doing\" which turned out to be bullshit and against company policies\n \nWe were always kept in the d…",
+          "link": "https://www.reddit.com/r/ExperiencedDevs/comments/1cv66dv/the_whole_team_is_dreading_the_return_of_a/",
+          "publishedOn": "2024-05-18T20:14:29.000Z",
+          "wordCount": null,
+          "title": "The whole team is dreading the return of a manager. How to protect my team and myself?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/ExperiencedDevs/comments/1cv14d5/what_is_the_most_recent_technical_book_that_you/",
+          "author": null,
+          "description": "I suspect a very popular answer will be Designing Data Intensive Applications, which is undeniably a gem. \n Apart from it, I am now really enjoying Computer Systems: A Programmer's Perspective as it fills the gaps in foundational system knowledge. \n What are your recent discoveries?\n    submitted by    /u/dondraper36  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/ExperiencedDevs/comments/1cv14d5/what_is_the_most_recent_technical_book_that_you/",
+          "publishedOn": "2024-05-18T16:29:01.000Z",
+          "wordCount": null,
+          "title": "What is the most recent technical book that you truly learned a lot from?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/ExperiencedDevs/comments/1cuye54/experienced_devs_do_you_prefer_to_have_minimal/",
+          "author": null,
+          "description": "Personally, I like to run things with zero team building and socialization happening during the work day. I also don't like meetings that aren't directly feeding into meeting some objective or satisfying some stakeholders needs. I also like everything be fully remote. \n So no team building lunches, games, axe throwing, board game night, etc. No stand ups, no weekly team meetings, etc. Retros are async, design meetings and discussions are scheduled as required around specific topics, and I do optional 15m one on ones with people who like that environment for asking questions or giving feedback. People pair on work when they want, but they can also work alone if they want. Basically just trusting staff to work how they want and achieve whatever is most urgent or needed, and flag stuff when it isn't clear.\n The result I have found is that people on the team can do 4 or 5 hours of work on their own schedule and exceed the output of teams doing +8 hours work in office. So of course I am happy with people taking this extra time and using it for their own purposes.\n However, I know some people really feel like these kinds of team building activities are important for building team cohesion. So, experienced devs, do you prefer to have more team building type meetings and higher contract with your coworkers, such as being in office sometimes and more opportunities to just meet and chat? Or do you prefer this to only be \"as needed\" as I have tended towards?\n    submitted by    /u/SSHeartbreak  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/ExperiencedDevs/comments/1cuye54/experienced_devs_do_you_prefer_to_have_minimal/",
+          "publishedOn": "2024-05-18T14:21:28.000Z",
+          "wordCount": null,
+          "title": "Experienced devs, Do you prefer to have minimal unnecessary time at work or do you like doing team building and other social events?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/ExperiencedDevs/comments/1cuhazw/how_do_payment_gateways_adyen_stripe_etc_work/",
+          "author": null,
+          "description": "Hello everyone,\n I've been tasked with creating a payment application at my company that acts as an \"Adyen wrapper\" (and can work with other payment gateways as well). The goal is to develop an abstract API that centralizes payment requests and forwards them to the appropriate payment gateway for processing. Essentially, this is similar to what Adyen does with various payment processors.\n One of our senior developers suggested using a microservices architecture for this project. In this setup, one microservice would receive the payment requests, and there would be separate microservices for each payment method we use. These microservices would then communicate with the respective payment gateways.\n I believe that Adyen and other payment gateways might use a similar approach in their systems.\n Here are my questions:\n  \nHow do payment gateways handle communication between their internal services?\n Is the communication entirely synchronous, with microservices calling each other using HTTP?\n Do they use message queues? If so, how do they ensure the process appears synchronous to the client? For example, when I make a payment request to Adyen, they return the status in the same response.\n  \nThanks for your help!\n    submitted by    /u/RaphaS9  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/ExperiencedDevs/comments/1cuhazw/how_do_payment_gateways_adyen_stripe_etc_work/",
+          "publishedOn": "2024-05-17T21:50:13.000Z",
+          "wordCount": null,
+          "title": "How Do Payment Gateways (Adyen, Stripe, etc.) Work Internally?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/ExperiencedDevs/comments/1cudedw/should_i_be_worried/",
+          "author": null,
+          "description": "I currently work at a small startup that is quite financially stable and growing dynamically. This is my first time working at such a small company, and generally at a startup. I joined the company when they were nearing the end of the MVP phase. I've been here for about six months, and everything has gone very well so far. We have successfully met the milestones, increased revenues, and brought the product to a level where the first users can start using it. However, I have some questions and doubts about this.\n I'm afraid that I won't have any work, that there won't be anything to do. I asked the management about this, and they told me not to worry, that the main work is just beginning. Users will start using the product, and we'll start collecting feedback and experiences. From these, there will be a lot of bug fixes, hotfixes, and feature tickets, and eventually, the whole backend will need to be rewritten, etc. I got scared because we progressed so well that we almost ran out of tickets.\n They also said they want to put every financial resources into development and also hiring a new developer this Fall.\n I recently got a raise, and everyone is satisfied with me, but given the current market situation, I am quite paranoid. What would you advise? I'm overthinking it probably.\n    submitted by    /u/Shoeaddictx  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/ExperiencedDevs/comments/1cudedw/should_i_be_worried/",
+          "publishedOn": "2024-05-17T19:04:35.000Z",
+          "wordCount": null,
+          "title": "Should I be worried?",
+          "imageUrl": null
+        },
         {
           "id": "https://www.reddit.com/r/ExperiencedDevs/comments/1cu46hz/getting_lots_of_push_to_incorporate_ai_into/",
           "author": null,
@@ -6388,6 +6808,36 @@
       "siteUrl": "https://www.reddit.com/r/gamedev/top/?t=week",
       "articles": [
         {
+          "id": "https://www.reddit.com/r/gamedev/comments/1cv1q50/do_you_know_any_really_good_game_that_sold_less/",
+          "author": null,
+          "description": "I'm making a research... and I need some study cases to dissect.\n Altough \"really good\" is subjective, I need \"really good\" games that sold less than 20k copies on Steam. \n If you know any game that seems really good, and don't sold very well, please share with me.\n    submitted by    /u/petriheart  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/gamedev/comments/1cv1q50/do_you_know_any_really_good_game_that_sold_less/",
+          "publishedOn": "2024-05-18T16:56:51.000Z",
+          "wordCount": null,
+          "title": "Do you know any really good game that sold less than 20k copies?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/gamedev/comments/1cutjfo/the_timeless_beauty_of_pre_rendered_graphics/",
+          "author": null,
+          "description": "submitted by    /u/whereistooki  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/gamedev/comments/1cutjfo/the_timeless_beauty_of_pre_rendered_graphics/",
+          "publishedOn": "2024-05-18T09:32:30.000Z",
+          "wordCount": null,
+          "title": "The Timeless Beauty of Pre Rendered Graphics",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/gamedev/comments/1cubgw7/gamedevs_who_left_a_lucrative_faang_job_to_make/",
+          "author": null,
+          "description": "I'm currently at Amazon. It's... fine... but I'm not enjoying my work. I have WLB balance and I make great money. I do believe making games is a dream for me, but I worry that I'm suffering from grass-is-greener-syndrome.\n In a few years, I should have the opportunity to change jobs and even accept a lower salary (if needed) and still meet my retirement goals.\n That being said, I'd love to hear from other engineers who have made the same switch.\n  \nHow did you make the transition?\n Did you have any gamedev experience at the time you switched careers?\n Any particular skills you had to pick up before becoming a gamedev? After being a gamedev?\n Would you do it again?\n Did you get a job at an established gamedev company first, or did you go off on your own and start your own thing?\n How much of a hit to your total compensation did you take (if at all)?\n Any advice you could give me or someone in similar shoes?\n  \n   submitted by    /u/aceshades  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/gamedev/comments/1cubgw7/gamedevs_who_left_a_lucrative_faang_job_to_make/",
+          "publishedOn": "2024-05-17T17:43:07.000Z",
+          "wordCount": null,
+          "title": "Gamedevs who left a lucrative FAANG job to make games: whats your story?",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/gamedev/comments/1cu9fyp/what_game_made_you_realise_this_is_what_you_want/",
           "author": null,
           "description": "Also what specifically about that game? And does that relate to what you do now?\n    submitted by    /u/Hellgwyn  \n [link]   [comments]",
@@ -7085,6 +7535,16 @@
       "siteUrl": "https://www.reddit.com/r/godot/top/?t=week",
       "articles": [
         {
+          "id": "https://www.reddit.com/r/godot/comments/1cus7e3/procedural_animation_in_godot/",
+          "author": null,
+          "description": "submitted by    /u/zain_devv  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/godot/comments/1cus7e3/procedural_animation_in_godot/",
+          "publishedOn": "2024-05-18T07:54:39.000Z",
+          "wordCount": null,
+          "title": "PROCEDURAL ANIMATION in GODOT.",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/godot/comments/1cu92rt/questions_about_animating_a_boss_fight_in_topdown/",
           "author": null,
           "description": "submitted by    /u/iammitchconner82  \n [link]   [comments]",
@@ -7771,6 +8231,26 @@
       "feedUrl": "https://www.reddit.com/r/golang/top/.rss?t=week",
       "siteUrl": "https://www.reddit.com/r/golang/top/?t=week",
       "articles": [
+        {
+          "id": "https://www.reddit.com/r/golang/comments/1cv1s1r/what_do_you_guys_think_is_missing_in_golang_which/",
+          "author": null,
+          "description": "Curious to know GO dev's opinion on what's missing in GO and what would they like to see in the language to make it even better than it already is.\n    submitted by    /u/Any-Addition-281  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/golang/comments/1cv1s1r/what_do_you_guys_think_is_missing_in_golang_which/",
+          "publishedOn": "2024-05-18T16:59:15.000Z",
+          "wordCount": null,
+          "title": "What do you guys think is missing in Golang which will make it perfect?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/golang/comments/1cuvdjw/differences_between_c_pointers_and_go_pointers/",
+          "author": null,
+          "description": "I'm already working on this subject but I'm open to more resources and explanations.\n What are the key differences between pointers in Go and C, and why are these differences important?\n I understand that pointers in C allow for direct memory manipulation and can lead to security issues. How do pointers in Go differ in terms of usage and safety? Why are these differences significant for modern programming?\n    submitted by    /u/HazarbutCoffee  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/golang/comments/1cuvdjw/differences_between_c_pointers_and_go_pointers/",
+          "publishedOn": "2024-05-18T11:38:16.000Z",
+          "wordCount": null,
+          "title": "differences between C pointers and Go pointers",
+          "imageUrl": null
+        },
         {
           "id": "https://www.reddit.com/r/golang/comments/1cucdp7/what_do_you_guys_use_for_web_ui_development/",
           "author": null,
@@ -8499,6 +8979,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://www.reddit.com/r/hacking/comments/1cudcyt/resources_to_use_in_conjunction_with_try_hack_me/",
+          "author": null,
+          "description": "tl;dr - What do you use with THM or HtB to help you remember what they've taught you (specifically when you're early on)?\n  \nI've been doing Try Hack Me for about a month or so. I've done enough to start to get at the meat and potatoes of hacking, but still far from being able to do it on my own.However, I do have a concern. As I'm continuing my journey on this website, I'm finding that I'm forgetting some things. I'll know the general idea, but not the exact bits of information I'd need in the moment.\n I know the default answer to this is just study, but even if I strap myself to a chair and pin my eyelids open like I'm in Clockwork Orange, I still struggle to remember stuff. I learn best by doing and repetition of the doing, but I'm not sure what I can use aside from THM and Hack the Box. I'm still not at a point to be doing an CTF challenges (as far as I know), so those aren't really an option.\n What I want to know, is what do you guys use in conjunction with these? I looked at the wiki, and I plan on trying some of them out, but I worry that they're going to be too dense/technical for me. Are there any other resources to help familiarize yourself with hacking concepts/tools? Key word being \"familiarize\". I've done the lessons, but need reminders before I can fully commit it to memory.\n EDIT: I should mention that I do takes notes as I go through the lessons, and it does help, but it doesn't help me full grasp these concepts when it's just simple tidbits of information\n    submitted by    /u/MakeMoreFae  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/hacking/comments/1cudcyt/resources_to_use_in_conjunction_with_try_hack_me/",
+          "publishedOn": "2024-05-17T19:02:57.000Z",
+          "wordCount": null,
+          "title": "Resources to use in conjunction with Try Hack Me",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/hacking/comments/1cu5fqc/google_launches_geminipowered_cybersecurity_ai/",
           "author": null,
           "description": "submitted by    /u/anujtomar_17  \n [link]   [comments]",
@@ -9186,6 +9676,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://www.reddit.com/r/programming/comments/1cuam2p/what_ever_happened_to_modula2/",
+          "author": null,
+          "description": "submitted by    /u/logicalvue  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/programming/comments/1cuam2p/what_ever_happened_to_modula2/",
+          "publishedOn": "2024-05-17T17:09:09.000Z",
+          "wordCount": null,
+          "title": "What ever happened to Modula-2?",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/programming/comments/1cu3l1t/main_maintainer_of_ldapjs_has_decommissioned_the/",
           "author": null,
           "description": "submitted by    /u/Altane_GS  \n [link]   [comments]",
@@ -9863,6 +10363,46 @@
       "siteUrl": "https://www.reddit.com/r/ProgrammerHumor/top/?t=week",
       "articles": [
         {
+          "id": "https://www.reddit.com/r/ProgrammerHumor/comments/1cuw3g6/kindatruethough/",
+          "author": null,
+          "description": "submitted by    /u/Green____cat  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/ProgrammerHumor/comments/1cuw3g6/kindatruethough/",
+          "publishedOn": "2024-05-18T12:20:36.000Z",
+          "wordCount": null,
+          "title": "kindaTrueThough",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/ProgrammerHumor/comments/1cuqpj9/microsoftisevil/",
+          "author": null,
+          "description": "submitted by    /u/Scary-Departure4792  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/ProgrammerHumor/comments/1cuqpj9/microsoftisevil/",
+          "publishedOn": "2024-05-18T06:10:28.000Z",
+          "wordCount": null,
+          "title": "microsoftIsEvil",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/ProgrammerHumor/comments/1cumxge/airesearcherfirsttime/",
+          "author": null,
+          "description": "submitted by    /u/pxrage  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/ProgrammerHumor/comments/1cumxge/airesearcherfirsttime/",
+          "publishedOn": "2024-05-18T02:26:08.000Z",
+          "wordCount": null,
+          "title": "aiResearcherFirstTime",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/ProgrammerHumor/comments/1cuc6gw/pleasehelp/",
+          "author": null,
+          "description": "submitted by    /u/yuva-krishna-memes  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/ProgrammerHumor/comments/1cuc6gw/pleasehelp/",
+          "publishedOn": "2024-05-17T18:12:50.000Z",
+          "wordCount": null,
+          "title": "pleaseHelp",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/ProgrammerHumor/comments/1cu7f29/pleasenonotanotherbaseclasshelper/",
           "author": null,
           "description": "submitted by    /u/StolenStutz  \n [link]   [comments]",
@@ -9930,6 +10470,16 @@
           "publishedOn": "2024-05-16T06:47:24.000Z",
           "wordCount": null,
           "title": "whatVersionAreYouUsing",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/ProgrammerHumor/comments/1cswn33/commentyourcodetheysaid/",
+          "author": null,
+          "description": "submitted by    /u/johntwit  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/ProgrammerHumor/comments/1cswn33/commentyourcodetheysaid/",
+          "publishedOn": "2024-05-15T21:43:14.000Z",
+          "wordCount": null,
+          "title": "commentYourCodeTheySaid",
           "imageUrl": null
         },
         {
@@ -10540,6 +11090,16 @@
       "siteUrl": "https://www.reddit.com/r/rust/top/?t=week",
       "articles": [
         {
+          "id": "https://www.reddit.com/r/rust/comments/1cuury7/cratesio_has_a_dark_mode/",
+          "author": null,
+          "description": "crates.io dark mode\n crates.io\n    submitted by    /u/_ChrisSD  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/rust/comments/1cuury7/cratesio_has_a_dark_mode/",
+          "publishedOn": "2024-05-18T11:00:30.000Z",
+          "wordCount": null,
+          "title": "crates.io has a dark mode!",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/rust/comments/1cu558j/hvm2_a_parallel_runtime_written_in_rust_is_now/",
           "author": null,
           "description": "HVM2 is finally production ready, and now it runs on GPUs. Bend is a high-level language that looks like Python and compiles to it. All these projects were written in Rust, obviously so! Other than small parts in C/CUDA. Hope you like it!\n  \nHVM2 - a massively parallel runtime.\n \nBend - a massively parallel language.\n \n Note: I'm just posting the links because I think posting our site would be too ad-ish for the scope of this sub.\n Let me know if you have any questions!\n    submitted by    /u/SrPeixinho  \n [link]   [comments]",
@@ -10590,6 +11150,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://www.reddit.com/r/rust/comments/1ctgqd1/use_machine_learning_to_detect_nudity_in_imagesmy/",
+          "author": null,
+          "description": "submitted by    /u/jamesponddotco  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/rust/comments/1ctgqd1/use_machine_learning_to_detect_nudity_in_imagesmy/",
+          "publishedOn": "2024-05-16T16:16:03.000Z",
+          "wordCount": null,
+          "title": "Use machine learning to detect nudity in images—my first Rust code",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/rust/comments/1ctepo1/100_exercises_to_learn_rust_a_new_learnbydoing/",
           "author": null,
           "description": "submitted by    /u/LukeMathWalker  \n [link]   [comments]",
@@ -10607,6 +11177,16 @@
           "publishedOn": "2024-05-16T05:07:17.000Z",
           "wordCount": null,
           "title": "Some notes on Rust, mutable aliasing and formal verification",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/rust/comments/1csxv11/rustytube_020_rusty_youtube_client_now_with/",
+          "author": null,
+          "description": "submitted by    /u/WinstonsThiccBooty  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/rust/comments/1csxv11/rustytube_020_rusty_youtube_client_now_with/",
+          "publishedOn": "2024-05-15T22:36:02.000Z",
+          "wordCount": null,
+          "title": "RustyTube (0.2.0) - Rusty Youtube client, now with mobile UI and SponsorBlock.",
           "imageUrl": null
         },
         {
