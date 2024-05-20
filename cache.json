@@ -6,6 +6,46 @@
       "siteUrl": "https://www.reddit.com/r/C_Programming/",
       "articles": [
         {
+          "id": "https://www.reddit.com/r/C_Programming/comments/1cwe2uc/math_isnt_mathing/",
+          "author": null,
+          "description": "Hi I'm new to C programming and I was wondering why I'm keep getting 0 as my output in this code:\n #include <stdio.h>\n int main(){\n int B,H,Area;\n printf(\"Enter Base: \");\n scanf(\"%d\", &B);\n printf(\"Enter Height: \");\n scanf(\"%d\",&H);\n Area = 0.5*B*H;\n printf(\"Area is: %d\");\n }\n Your help would mean a lot.\n    submitted by    /u/shinjimazad  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/C_Programming/comments/1cwe2uc/math_isnt_mathing/",
+          "publishedOn": "2024-05-20T12:13:36.000Z",
+          "wordCount": null,
+          "title": "Math isn't mathing",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/C_Programming/comments/1cwcu8w/need_a_hint_for_printing_factors_in_a_beginners/",
+          "author": null,
+          "description": "I have had this idea for a while but can't seem to break through with it. You can see in the image that there's a question involving HCF. What I want to do is just print the factors. How do I achieve this? I don't need a full tutorial, just a small hint. The biggest obstacle for me right now is figuring out how to get a number that changes according to the input number. For instance, in the image, you can see:\n 2 | 20\n 2 | 10\n 5 | 5\n | 1\n How do I get five in the program? Should I use a for loop? I am a beginner, so can someone please enlighten me? If possible, just give a small hint. I want to solve this problem by myself. This is not an assignment; I am just teaching myself for now. My classes will start in August.\n    submitted by    /u/Fable_o  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/C_Programming/comments/1cwcu8w/need_a_hint_for_printing_factors_in_a_beginners/",
+          "publishedOn": "2024-05-20T11:03:13.000Z",
+          "wordCount": null,
+          "title": "Need a Hint for Printing Factors in a Beginner's HCF Program",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/C_Programming/comments/1cwcbp5/need_advise_on_gcc_instrumentation_asan_and/",
+          "author": null,
+          "description": "Hi. I'm trying to create some sort of poor man's mmap() on a platform that does not support generic mmap directly (we're talking about esp32s3). I realize that this approach will have a significant impact on performance, but nevertheless I would like to give it a try in specific places in the project. The idea is to generate code around each memory load, check the pointer value and decide if the load should happen from other address.\n Pseudocode illustrating the idea:\n char * mapped_file; read(somefile, mapped_file, file_size); char load_hook(void * ptr) { if(ptr & 0xff000000) { return mapped_file[ptr & 0x00ffffff]; } else { return *ptr; } } char s[] = \"some data\"; char * p = 0xff000002; char load_1 = *s; char load_2 = *p; // load_1 will contain first byte in s[], // load_2 will contain th…",
+          "link": "https://www.reddit.com/r/C_Programming/comments/1cwcbp5/need_advise_on_gcc_instrumentation_asan_and/",
+          "publishedOn": "2024-05-20T10:31:09.000Z",
+          "wordCount": null,
+          "title": "Need advise on GCC instrumentation, asan and memory reference hooking",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/C_Programming/comments/1cw527a/raytracing_in_one_weekend/",
+          "author": null,
+          "description": "I'm looking for something like \"ray tracing in one weekend\" but for c. Does anyone have any good suggestions?\n    submitted by    /u/One_Addendum3375  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/C_Programming/comments/1cw527a/raytracing_in_one_weekend/",
+          "publishedOn": "2024-05-20T02:32:13.000Z",
+          "wordCount": null,
+          "title": "Raytracing in one weekend",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/C_Programming/comments/1cw3jvf/newb_question_unable_to_link_thirdparty_library/",
           "author": null,
           "description": "Hello and apologies for the beginner question but I'm unable to compile some code I wrote using a third-party library I downloaded and there are no resources on StackOverflow or other forums explaining what's wrong.\n I'm using the pdfio library and I've installed it according to the instructions on its website. This is the first time I've used a third-party library. Here is my code (just trying it out):\n #include <pdfio.h> #include <pdfio-content.h> int main() { pdfio_file_t *pdf = pdfioFileOpen(\"MyFile.pdf\", NULL, NULL, NULL, NULL); pdfioFileClose(pdf); } \n And then below is the printout from the terminal:\n cc readpdf.c -o readpdf\n Undefined symbols for architecture x86_64:\n  \"_pdfioFileClose\", referenced from:\n _main in readpdf-a9fd1b.o\n  \"_pdfioFileOpen\", referenced from:\n _main in readpdf-a9fd1b.o\n ld: symbol(s) not found for architecture x86_64\n clang: error: linker command failed with exit code 1 (use -v to see invocation)\n make: *** [readpdf] Error 1\n I've tried to link the library to the source code using commands like\n make readpdf -o \\usr\\local\\include\\pdfio.h\\\n But these attempts have been fruitless. Any clue as to what I'm doing wrong?\n    submitted by    /u/Choice_Fun6099  \n [link]   [comments]",
@@ -1772,6 +1812,56 @@
       "feedUrl": "https://www.reddit.com/r/cpp+cpp_questions/.rss",
       "siteUrl": "https://www.reddit.com/r/cpp+cpp_questions/",
       "articles": [
+        {
+          "id": "https://www.reddit.com/r/cpp_questions/comments/1cwe3vv/are_all_simd_string_algorithms_incorrect/",
+          "author": null,
+          "description": "I read up on SIMD-ifying common string algorithms, e.g. strlen(), strcmp() and the like, and while it's clear how they fundamentally work, there's almost no mention of the problem with out-of-bounds data reads.\n How can _mm_loadu_si128(ptr) be correct if there are only two characters pointed to by ptr? What if the terminating zero we're looking for is right at the page border?\n It is general knowledge that some standard libraries have (1) heavily optimized implementations for some of these, and (2) their implementations are \"trusted\" by the compiler to be correct, unlike common user code - but \"safely\" reading arbitrary memory seems to be outside of the compiler's jurisdiction.\n If anybody has had more experience, I'd like to hear how you've handled this - or on what grounds you haven't.\n    submitted by    /u/Andreshk_    to    r/cpp_questions  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp_questions/comments/1cwe3vv/are_all_simd_string_algorithms_incorrect/",
+          "publishedOn": "2024-05-20T12:15:09.000Z",
+          "wordCount": null,
+          "title": "Are all SIMD string algorithms incorrect?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp_questions/comments/1cwdc99/why_does_this_code_work/",
+          "author": null,
+          "description": "I have the following code that works fine:\n ``` c++ int ia[] = { 0, 1, 1, 2, 3, 5, 8, 13, 21, 55, 89 }; list<int> c ; c.assign(std::begin(ia), std::end(ia));\n for (auto i = c.begin(); i != c.end();){ if (*i %2 != 0){ i = c.erase(i); }else{ ++i; } } \n ```\n However, when I rewrite the for loop into a while loop, it produces a compile error. Why?\n ``` c++ list<int>::iterator i = c.begin(); while (i != c.end() ){ if (*i % 2 != 0){ i = c.erase(i); // erase returns an iterator to the next element }else{ ++i; } }\n ```\n Full Code: ```\n include <vector>\n include <iostream>\n include <list>\n include <deque>\n using std::vector; using std::list; using std::deque;\n bool eval_arr(vector<int> a , vector<int> b){ return a == b; }\n bool eval_arr(vector<int> a , list<int> c){ vector<int> b(c.cbegin(), c.cend…",
+          "link": "https://www.reddit.com/r/cpp_questions/comments/1cwdc99/why_does_this_code_work/",
+          "publishedOn": "2024-05-20T11:32:51.000Z",
+          "wordCount": null,
+          "title": "Why does this code work?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp_questions/comments/1cwd80i/design_problem_interface_segregation_and_shared/",
+          "author": null,
+          "description": "Hi. I'm fairly inexpirienced in C++ and a bit overwhelmed by all tools that this language has to offer. Currently i'm trying to finish my client application that connects to microcontrollers through the Internet and forwards data from them to some local ports on the computer.\n Now I have a problem with particular class design and I have many ideas how it can be solved - generally there are a few classes that must use the same resource but can only perform some operations on it.\n So let's say I have a vector of objects (representing connection between microcontroller and local port) and other variables that keep track of number of opened connections ect. Now there are a few classes that manage/observe this connections:\n  \nMonitor that prints current information about a connection (so it can…",
+          "link": "https://www.reddit.com/r/cpp_questions/comments/1cwd80i/design_problem_interface_segregation_and_shared/",
+          "publishedOn": "2024-05-20T11:25:59.000Z",
+          "wordCount": null,
+          "title": "Design problem - Interface Segregation and shared resources",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp/comments/1cwacsu/taking_up_c_again_are_c20_specifics_etc_necessary/",
+          "author": null,
+          "description": "Hello,\n I used to have a strong capability for solving algorithmic problems using C++, but I haven't practiced for a year as I have been working more with Python on ML topics. Starting in September, I will be pursuing a CS MSc. I'm no longer interested in the Data Science path, but rather in software development, particularly algorithms (this was the most stimulating part of my bachelor's education) or trading (I had a Finance minor). I want to regain my proficiency.\n Currently, I'm reading \"C++ Crash Course: A Fast-Paced Introduction\" to refresh my knowledge while also studying introductory material about derivatives. After that, I plan to dive into Leetcode and \"Cracking the Coding Interview.\" I also have \"Algorithmic Trading\" by Ernest Chan in mind for when I get back to a good level of coding.\n However, I keep wondering: how deeply should I delve into C++, especially regarding the new versions? Do you have any tips or reading material you think I should check out to achieve my goals? I would be grateful for any help.\n    submitted by    /u/ExternalPin203    to    r/cpp  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp/comments/1cwacsu/taking_up_c_again_are_c20_specifics_etc_necessary/",
+          "publishedOn": "2024-05-20T08:12:37.000Z",
+          "wordCount": null,
+          "title": "Taking up C++ again, are C++20 specifics etc. necessary for coding comps and junior interviews?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp_questions/comments/1cw9h2s/implementing_and_reading_a_2d_array_quickly/",
+          "author": null,
+          "description": "Hello, I have a project where I am using almost every type of thermocouple probe connected to a micro controller. If you don't know how thermocouples work, essentially it's a simple device of 2 wires being welded together, and at specific temperatures they output a known voltage. \n This is commonly used for temperature measurement, as you can measure the voltage to get temperature (simplified). In order to know the temperature based off of the voltage you must have the table that corresponds the voltage and temperature. Since this table is just temperature to voltage, its 2 columns. However the tables sometimes have 1500+ rows.To add to the pain, I haven't been able to find a text file of these tables, only PDF formats. \n What would be the fastest way to implement these tables into memory and search through one column of data to find the corresponding data point. I was thinking a 2D array using binary search (since the tables are already sorted).\n    submitted by    /u/FridayNightRiot    to    r/cpp_questions  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp_questions/comments/1cw9h2s/implementing_and_reading_a_2d_array_quickly/",
+          "publishedOn": "2024-05-20T07:08:48.000Z",
+          "wordCount": null,
+          "title": "Implementing and reading a 2D array quickly?",
+          "imageUrl": null
+        },
         {
           "id": "https://www.reddit.com/r/cpp_questions/comments/1cw3min/class_practice/",
           "author": null,
@@ -4450,6 +4540,16 @@
       "siteUrl": "https://www.reddit.com/r/cscareerquestions/top/?t=week",
       "articles": [
         {
+          "id": "https://www.reddit.com/r/cscareerquestions/comments/1cvne4w/dont_hire_list/",
+          "author": null,
+          "description": "Is there something called Don't hire list ?\n There is this company who does remote hiring and in their assessment on coderbyte they have a closure saying something like \"getting flagged in this assessment will make you on a no-hire list that is shared across companies\". I didn't take the assessment not to get false flagged and get screwed for something like that\n Was wondering if this is a thing that companies share a list for employees to not hire or it's just something internal for that specific company that if you get flagged they themselves won't hire you but not other companies?\n    submitted by    /u/_LuciferMorningstar  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cscareerquestions/comments/1cvne4w/dont_hire_list/",
+          "publishedOn": "2024-05-19T12:40:54.000Z",
+          "wordCount": null,
+          "title": "Don't Hire List",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/cscareerquestions/comments/1cvm589/is_it_true_that_more_and_more_companies_will_be/",
           "author": null,
           "description": "https://timesofindia.indiatimes.com/city/bengaluru/google-shifts-core-jobs-to-india-mexico/articleshow/109897094.cms\n    submitted by    /u/Ok-Squirrel3297  \n [link]   [comments]",
@@ -6471,6 +6571,26 @@
       "siteUrl": "https://www.reddit.com/r/ExperiencedDevs/top/?t=week",
       "articles": [
         {
+          "id": "https://www.reddit.com/r/ExperiencedDevs/comments/1cw1rqk/how_you_survived_ageism/",
+          "author": null,
+          "description": "I joined the tech field straight out of college and believed that once I finally got out of a junior role I'd be \"set for life\", but y'all already know how how naive that is.\n I was talking to one of our staff engineers, brilliant lady with 20 years in the field, about her experience last month. I was disappointed not only that she confirmed what I had been hearing about ageism in the field, but just how rampant it was.\n At least one of you reading this has encountered ageism at some point in your career, but lived to tell the tale. How did you survive the wave of layoffs? How did you land that new job?\n    submitted by    /u/MikeFratelli  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/ExperiencedDevs/comments/1cw1rqk/how_you_survived_ageism/",
+          "publishedOn": "2024-05-19T23:41:09.000Z",
+          "wordCount": null,
+          "title": "How you survived ageism",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/ExperiencedDevs/comments/1cvx920/someone_wants_to_pay_for_a_landing_page_at_what/",
+          "author": null,
+          "description": "Simple question.\n I can do the fancy pages, I can also code do the landing page with custom designs from a designer. \n But I am not sure what to tell a client that asks me whether their landing page would be better suited to one of those drag-n-drop site builders.\n I tried to look at some of the samples from the site builders, it seems like they work well when the page is just static assets and the design consists mostly of box-shaped divs that either have text or images. Not sure though because I don't have any experience with their sites.\n    submitted by    /u/PoopsCodeAllTheTime  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/ExperiencedDevs/comments/1cvx920/someone_wants_to_pay_for_a_landing_page_at_what/",
+          "publishedOn": "2024-05-19T20:15:38.000Z",
+          "wordCount": null,
+          "title": "Someone wants to pay for a landing page, at what point do you tell them that squarespace/wix/wordpress is better for their needs?",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/ExperiencedDevs/comments/1cvbibc/has_anyone_worked_at_a_company_that_has_a_fixed/",
           "author": null,
           "description": "What was your experience like and do you know if it's completely non-negotiable? \n I interviewed for an out of state job recently, where they seem to have a fixed salary structure based on responsibilities. The salary listed is about $15-30k lower than what I'd normally get in my state for the same role. When I asked about it, they said they do it for equity reasons to make sure there's not a huge discrepancy of pay between coworkers (i.e. fairness). It's a startup. I don't know if there's such thing as asking for cost of living adjustments. Anyone have insights or experiences they can share? Pros/cons?\n    submitted by    /u/tiny_guppy  \n [link]   [comments]",
@@ -7308,6 +7428,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://www.reddit.com/r/gamedev/comments/1cvl7s0/how_many_of_you_actually_have_a_career_in_game/",
+          "author": null,
+          "description": "I'm a self taught programmer since I was an early teenager, and am currently in university studying software development. For my master's, I have a chance of studying game development, but I'm torn on the idea.\n I love game development and awlays have, but I fear that it's a dy path with low income and rare success. On one hand, I want to follow my dreams and working on projects that make me happy. On the other hand I don't want to struggle to make my career a reality.\n What are your experiences?\n    submitted by    /u/Arthiviate  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/gamedev/comments/1cvl7s0/how_many_of_you_actually_have_a_career_in_game/",
+          "publishedOn": "2024-05-19T10:27:27.000Z",
+          "wordCount": null,
+          "title": "How many of you actually have a career in game development / design?",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/gamedev/comments/1cv8myi/how_do_you_get_past_the_idea_that_your_game_will/",
           "author": null,
           "description": "Steam DB says that roughly 9000 indie games are released yearly. That means an indie game gets released about every hour.\n Imagine your indie game is a penny that you’re throwing into a fountain with 9000 other Pennie’s in it already. What hope do you or I have to be found? Even if you polished your game to the T. If you took your penny to a workshop and polished it like it was a 24 carrot diamond. The odds that someone finds your really shiny penny are demoralizingly slim.\n It is so hard to work on my game knowing this. The feeling is like I’m crafting a super intricate cotton candy boat that I’m ultimately going to put in a river that will immediately dissolve my years of hard work.\n Should I just abandon the idea of making a game altogether? How do you get past the idea that almost certainly your game will die on launch?\n    submitted by    /u/carpetlist  \n [link]   [comments]",
@@ -8095,6 +8225,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://www.reddit.com/r/godot/comments/1cuvjz0/an_intro_to_dedicated_servers/",
+          "author": null,
+          "description": "submitted by    /u/batteryaciddev  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/godot/comments/1cuvjz0/an_intro_to_dedicated_servers/",
+          "publishedOn": "2024-05-18T11:49:50.000Z",
+          "wordCount": null,
+          "title": "An Intro to Dedicated Servers",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/godot/comments/1cus7e3/procedural_animation_in_godot/",
           "author": null,
           "description": "submitted by    /u/zain_devv  \n [link]   [comments]",
@@ -8132,6 +8272,16 @@
           "publishedOn": "2024-05-16T15:20:25.000Z",
           "wordCount": null,
           "title": "Yes! The vRAM profiler will be back on Godot 4.3!",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/godot/comments/1ctfa54/wallpapering_system_is_a_go/",
+          "author": null,
+          "description": "submitted by    /u/RedThornInteractive  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/godot/comments/1ctfa54/wallpapering_system_is_a_go/",
+          "publishedOn": "2024-05-16T15:13:28.000Z",
+          "wordCount": null,
+          "title": "Wallpapering system is a GO!",
           "imageUrl": null
         },
         {
@@ -8262,6 +8412,16 @@
           "publishedOn": "2024-05-14T00:33:49.000Z",
           "wordCount": null,
           "title": "this community right now",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/godot/comments/1cr3bpn/cheap_refraction_shader_for_godot/",
+          "author": null,
+          "description": "submitted by    /u/SingerLuch  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/godot/comments/1cr3bpn/cheap_refraction_shader_for_godot/",
+          "publishedOn": "2024-05-13T16:18:32.000Z",
+          "wordCount": null,
+          "title": "cheap Refraction shader for godot",
           "imageUrl": null
         },
         {
@@ -8792,6 +8952,16 @@
       "siteUrl": "https://www.reddit.com/r/golang/top/?t=week",
       "articles": [
         {
+          "id": "https://www.reddit.com/r/golang/comments/1cvzvao/i_built_a_software_3d_renderer_in_go_from_scratch/",
+          "author": null,
+          "description": "submitted by    /u/bufoaureus  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/golang/comments/1cvzvao/i_built_a_software_3d_renderer_in_go_from_scratch/",
+          "publishedOn": "2024-05-19T22:12:22.000Z",
+          "wordCount": null,
+          "title": "I built a software 3D renderer in Go from scratch",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/golang/comments/1cvsiym/things_you_would_tell_yourself_to_know_better/",
           "author": null,
           "description": "I’m a Ruby Dev with the 5 years of experience, and within the last few months began to tinker around with Go as it had peaked my interest. Luckily I had a recruiter reach out to me about a Go Role, and I passed the technical rounds and landed the role. I start next month. \n I’ve spent the last few months building assorted things to drill at least a surface level understanding of various aspects of the language, to make the transition easier. \n My question to all of you is, if you could go back and tell yourself what concepts to really nail as you were about to begin your first Go Role, what would they be? Or any tips in general. \n    submitted by    /u/AdvantageBig568  \n [link]   [comments]",
@@ -8799,6 +8969,16 @@
           "publishedOn": "2024-05-19T16:42:18.000Z",
           "wordCount": null,
           "title": "Things you would tell yourself to know better when starting your first Go Role?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/golang/comments/1cvrz84/those_of_you_using_a_nosql_db_how_do_you_handle/",
+          "author": null,
+          "description": "I'm using Mongo in production and working on how to handle migrations. My database still has a schema; the schema is just shifted from SQL table definitions over into the code itself. If I change the format of a struct representing the document in a collection or add a relational field to another collection, previous records in the DB need to be updated to reflect this, or I end up with bad data.\n Right now I'm handling this with a function for each migration step. Each migration has an ID associated to it and I keep a migrations collection with the timestamp when this migration was run (if it was run). This way I don't have to rerun any previous steps. I'm trying to make each one idempotent, so even without the migration collection, they could potentially run again if needed. The \"migrations\" collection is just for performance purposes, to avoid having to run all historic migrations every time the app starts.\n I've been reading about the various SQL DB migration tools, and declarative state based migrations vs functional time-series migrations. The latter sounds roughly like what I'm doing. I'm mostly just trying to understand if what I'm doing is common or if there's some better way that I hadn't considered (and why?)\n How are you dealing with this?\n    submitted by    /u/RomanaOswin  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/golang/comments/1cvrz84/those_of_you_using_a_nosql_db_how_do_you_handle/",
+          "publishedOn": "2024-05-19T16:17:51.000Z",
+          "wordCount": null,
+          "title": "Those of you using a no-sql DB, how do you handle migrations?",
           "imageUrl": null
         },
         {
@@ -9559,6 +9739,36 @@
       "siteUrl": "https://www.reddit.com/r/hacking/top/?t=week",
       "articles": [
         {
+          "id": "https://www.reddit.com/r/hacking/comments/1cwcxp4/will_username_impressive_air4167/",
+          "author": null,
+          "description": "Hi,\n I was discussing with someone on here but I think their account got deleted. If you see this, reach out to me again or drop a comment\n Thanks\n    submitted by    /u/Turbulent-Tomato  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/hacking/comments/1cwcxp4/will_username_impressive_air4167/",
+          "publishedOn": "2024-05-20T11:09:09.000Z",
+          "wordCount": null,
+          "title": "Will, username Impressive_Air4167",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/hacking/comments/1cw7hex/saw_in_an_apartment_building/",
+          "author": null,
+          "description": "How bad is this? What kind of trouble/mischief/shenanigans could be done?\n    submitted by    /u/Obviouslynameless  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/hacking/comments/1cw7hex/saw_in_an_apartment_building/",
+          "publishedOn": "2024-05-20T04:53:03.000Z",
+          "wordCount": null,
+          "title": "Saw in an Apartment Building",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/hacking/comments/1cw3mng/wsj_post_their_trains_were_stalled_these_hackers/",
+          "author": null,
+          "description": "https://www.wsj.com/tech/cybersecurity/hackers-trains-disabled-poland-1b1f501a?st=nj2w4yrwob93g9n&reflink=desktopwebshare_permalink\n    submitted by    /u/JenniferJournal321  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/hacking/comments/1cw3mng/wsj_post_their_trains_were_stalled_these_hackers/",
+          "publishedOn": "2024-05-20T01:16:45.000Z",
+          "wordCount": null,
+          "title": "WSJ post: Their Trains Were Stalled. These Hackers Brought Them Back to Life.",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/hacking/comments/1cw0is0/does_samdump2_still_work_for_windows_11/",
           "author": null,
           "description": "Hey y’all, I’m asking this question on here since the internet is not turning up any results here.\n I have a windows SYSTEM and SAM registry file exported onto my VM that I’m trying to extract password hashes from. I’ve been testing SamDump2, but it doesn’t seem to be working as intended (I know my password. When hashing it with Windows’ NT/LM algorithms, the results aren’t matching with what SamDump2 is giving me). \n My question is - does SamDump2 still work for windows 11, and if not, what’s a tool that works for that version?\n    submitted by    /u/SealEnthusiast2  \n [link]   [comments]",
@@ -10306,6 +10516,26 @@
       "siteUrl": "https://www.reddit.com/r/programming/top/?t=week",
       "articles": [
         {
+          "id": "https://www.reddit.com/r/programming/comments/1cw2ri4/the_ages_of_programming_language_creators/",
+          "author": null,
+          "description": "submitted by    /u/breck  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/programming/comments/1cw2ri4/the_ages_of_programming_language_creators/",
+          "publishedOn": "2024-05-20T00:31:00.000Z",
+          "wordCount": null,
+          "title": "The Ages of Programming Language Creators",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/programming/comments/1cvtd5s/compilers_for_free_with_weval_a_webassembly/",
+          "author": null,
+          "description": "submitted by    /u/self  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/programming/comments/1cvtd5s/compilers_for_free_with_weval_a_webassembly/",
+          "publishedOn": "2024-05-19T17:21:36.000Z",
+          "wordCount": null,
+          "title": "Compilers for free with weval: a WebAssembly partial evaluator",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/programming/comments/1cvh5jd/whats_coming_to_gamemaker_in_2024_fullscreen_code/",
           "author": null,
           "description": "submitted by    /u/paxinfernum  \n [link]   [comments]",
@@ -10343,6 +10573,16 @@
           "publishedOn": "2024-05-17T17:09:09.000Z",
           "wordCount": null,
           "title": "What ever happened to Modula-2?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/programming/comments/1cu877p/life_and_death_of_a_graphics_programmer/",
+          "author": null,
+          "description": "submitted by    /u/mariuz  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/programming/comments/1cu877p/life_and_death_of_a_graphics_programmer/",
+          "publishedOn": "2024-05-17T15:31:15.000Z",
+          "wordCount": null,
+          "title": "Life and Death of a Graphics Programmer",
           "imageUrl": null
         },
         {
@@ -11023,6 +11263,16 @@
       "siteUrl": "https://www.reddit.com/r/ProgrammerHumor/top/?t=week",
       "articles": [
         {
+          "id": "https://www.reddit.com/r/ProgrammerHumor/comments/1cw113o/therealdebuggingking/",
+          "author": null,
+          "description": "submitted by    /u/lorens_osman  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/ProgrammerHumor/comments/1cw113o/therealdebuggingking/",
+          "publishedOn": "2024-05-19T23:05:53.000Z",
+          "wordCount": null,
+          "title": "theRealDebuggingKing",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/ProgrammerHumor/comments/1cvoxxk/everyprojectmanagerever/",
           "author": null,
           "description": "submitted by    /u/LakesideNorth  \n [link]   [comments]",
@@ -11030,6 +11280,16 @@
           "publishedOn": "2024-05-19T14:00:37.000Z",
           "wordCount": null,
           "title": "everyProjectManagerEver",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/ProgrammerHumor/comments/1cvnzle/definitelywhathappenedtoday/",
+          "author": null,
+          "description": "submitted by    /u/Cyclone6664  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/ProgrammerHumor/comments/1cvnzle/definitelywhathappenedtoday/",
+          "publishedOn": "2024-05-19T13:12:43.000Z",
+          "wordCount": null,
+          "title": "definitelyWhatHappenedToday",
           "imageUrl": null
         },
         {
@@ -11799,6 +12059,16 @@
       "feedUrl": "https://www.reddit.com/r/rust/top/.rss?t=week",
       "siteUrl": "https://www.reddit.com/r/rust/top/?t=week",
       "articles": [
+        {
+          "id": "https://www.reddit.com/r/rust/comments/1cvs63h/for_navigating_massive_trees_of_floating_point/",
+          "author": null,
+          "description": "I have an algorithm planned out that stores massive trees that contain floating point data and requires very fast lookup, I was going to implement it in C++ but the perks of rust is making me re-think my decision.\n For people that have experience with these data types with c++ and rust, how does the performance differ between the 2 languages. Compilation time does not matter to me, only runtime performance.\n    submitted by    /u/Lumpy-Permission-736  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/rust/comments/1cvs63h/for_navigating_massive_trees_of_floating_point/",
+          "publishedOn": "2024-05-19T16:26:08.000Z",
+          "wordCount": null,
+          "title": "For navigating massive trees of floating point math, how does rust compare to c++",
+          "imageUrl": null
+        },
         {
           "id": "https://www.reddit.com/r/rust/comments/1cvlob1/whats_new_in_rust_172178_rustacean_station/",
           "author": null,

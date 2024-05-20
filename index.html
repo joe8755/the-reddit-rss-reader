@@ -22,8 +22,8 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-05-20 datetime="2024-05-20T01:16:35.000Z">2024-05-20</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-05-20 datetime="2024-05-20T01:16:35.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-05-20 datetime="2024-05-20T12:15:09.000Z">2024-05-20</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-05-20 datetime="2024-05-20T12:15:09.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
@@ -38,6 +38,121 @@
                   <a class="source-heading__link" href="https://www.reddit.com/r/cpp+cpp_questions/">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/cpp_questions/comments/1cwe3vv/are_all_simd_string_algorithms_incorrect/"
+                        open
+                      >
+                        <summary class="article-expander__title">Are all SIMD string algorithms incorrect?</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/cpp_questions/comments/1cwe3vv/are_all_simd_string_algorithms_incorrect/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>I read up on SIMD-ifying common string algorithms, e.g. strlen(), strcmp() and the like, and while it&#x27;s clear how they fundamentally work, there&#x27;s almost no mention of the problem with out-of-bounds data reads.
+ How can _mm_loadu_si128(ptr) be correct if there are only two characters pointed to by ptr? What if the terminating zero we&#x27;re looking for is right at the page border?
+ It is general knowledge that some standard libraries have (1) heavily optimized implementations for some of these, and (2) their implementations are &quot;trusted&quot; by the compiler to be correct, unlike common user code - but &quot;safely&quot; reading arbitrary memory seems to be outside of the compiler&#x27;s jurisdiction.
+ If anybody has had more experience, I&#x27;d like to hear how you&#x27;ve handled this - or on what grounds you haven&#x27;t.
+    submitted by    /u/Andreshk_    to    r/cpp_questions  
+ [link]   [comments]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/cpp_questions/comments/1cwdc99/why_does_this_code_work/"
+                        open
+                      >
+                        <summary class="article-expander__title">Why does this code work?</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/cpp_questions/comments/1cwdc99/why_does_this_code_work/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>I have the following code that works fine:
+ &#x60;&#x60;&#x60; c++ int ia[] &#x3D; { 0, 1, 1, 2, 3, 5, 8, 13, 21, 55, 89 }; list c ; c.assign(std::begin(ia), std::end(ia));
+ for (auto i &#x3D; c.begin(); i !&#x3D; c.end();){ if (*i %2 !&#x3D; 0){ i &#x3D; c.erase(i); }else{ ++i; } } 
+ &#x60;&#x60;&#x60;
+ However, when I rewrite the for loop into a while loop, it produces a compile error. Why?
+ &#x60;&#x60;&#x60; c++ list::iterator i &#x3D; c.begin(); while (i !&#x3D; c.end() ){ if (*i % 2 !&#x3D; 0){ i &#x3D; c.erase(i); // erase returns an iterator to the next element }else{ ++i; } }
+ &#x60;&#x60;&#x60;
+ Full Code: &#x60;&#x60;&#x60;
+ include 
+ include 
+ include 
+ a , vector b){ return a &#x3D;&#x3D; b; }
+ bool eval_arr(vector a , list c){ vector b(c.cbegin(), c.cend…</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/cpp_questions/comments/1cwd80i/design_problem_interface_segregation_and_shared/"
+                        open
+                      >
+                        <summary class="article-expander__title">Design problem - Interface Segregation and shared resources</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/cpp_questions/comments/1cwd80i/design_problem_interface_segregation_and_shared/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Hi. I&#x27;m fairly inexpirienced in C++ and a bit overwhelmed by all tools that this language has to offer. Currently i&#x27;m trying to finish my client application that connects to microcontrollers through the Internet and forwards data from them to some local ports on the computer.
+ Now I have a problem with particular class design and I have many ideas how it can be solved - generally there are a few classes that must use the same resource but can only perform some operations on it.
+ So let&#x27;s say I have a vector of objects (representing connection between microcontroller and local port) and other variables that keep track of number of opened connections ect. Now there are a few classes that manage/observe this connections:
+  
+Monitor that prints current information about a connection (so it can…</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/cpp/comments/1cwacsu/taking_up_c_again_are_c20_specifics_etc_necessary/"
+                        open
+                      >
+                        <summary class="article-expander__title">Taking up C++ again, are C++20 specifics etc. necessary for coding comps and junior interviews?</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/cpp/comments/1cwacsu/taking_up_c_again_are_c20_specifics_etc_necessary/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Hello,
+ I used to have a strong capability for solving algorithmic problems using C++, but I haven&#x27;t practiced for a year as I have been working more with Python on ML topics. Starting in September, I will be pursuing a CS MSc. I&#x27;m no longer interested in the Data Science path, but rather in software development, particularly algorithms (this was the most stimulating part of my bachelor&#x27;s education) or trading (I had a Finance minor). I want to regain my proficiency.
+ Currently, I&#x27;m reading &quot;C++ Crash Course: A Fast-Paced Introduction&quot; to refresh my knowledge while also studying introductory material about derivatives. After that, I plan to dive into Leetcode and &quot;Cracking the Coding Interview.&quot; I also have &quot;Algorithmic Trading&quot; by Ernest Chan in mind for when I get back to a good level of coding.
+ However, I keep wondering: how deeply should I delve into C++, especially regarding the new versions? Do you have any tips or reading material you think I should check out to achieve my goals? I would be grateful for any help.
+    submitted by    /u/ExternalPin203    to    r/cpp  
+ [link]   [comments]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/cpp_questions/comments/1cw9h2s/implementing_and_reading_a_2d_array_quickly/"
+                        open
+                      >
+                        <summary class="article-expander__title">Implementing and reading a 2D array quickly?</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/cpp_questions/comments/1cw9h2s/implementing_and_reading_a_2d_array_quickly/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Hello, I have a project where I am using almost every type of thermocouple probe connected to a micro controller. If you don&#x27;t know how thermocouples work, essentially it&#x27;s a simple device of 2 wires being welded together, and at specific temperatures they output a known voltage. 
+ This is commonly used for temperature measurement, as you can measure the voltage to get temperature (simplified). In order to know the temperature based off of the voltage you must have the table that corresponds the voltage and temperature. Since this table is just temperature to voltage, its 2 columns. However the tables sometimes have 1500+ rows.To add to the pain, I haven&#x27;t been able to find a text file of these tables, only PDF formats. 
+ What would be the fastest way to implement these tables into memory and search through one column of data to find the corresponding data point. I was thinking a 2D array using binary search (since the tables are already sorted).
+    submitted by    /u/FridayNightRiot    to    r/cpp_questions  
+ [link]   [comments]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -96,6 +211,98 @@
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/C_Programming/comments/1cwe2uc/math_isnt_mathing/"
+                        open
+                      >
+                        <summary class="article-expander__title">Math isn&#x27;t mathing</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/C_Programming/comments/1cwe2uc/math_isnt_mathing/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Hi I&#x27;m new to C programming and I was wondering why I&#x27;m keep getting 0 as my output in this code:
+ #include 
+ int main(){
+ int B,H,Area;
+ printf(&quot;Enter Base: &quot;);
+ scanf(&quot;%d&quot;, &amp;B);
+ printf(&quot;Enter Height: &quot;);
+ scanf(&quot;%d&quot;,&amp;H);
+ Area &#x3D; 0.5*B*H;
+ printf(&quot;Area is: %d&quot;);
+ }
+ Your help would mean a lot.
+    submitted by    /u/shinjimazad  
+ [link]   [comments]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/C_Programming/comments/1cwcu8w/need_a_hint_for_printing_factors_in_a_beginners/"
+                        open
+                      >
+                        <summary class="article-expander__title">Need a Hint for Printing Factors in a Beginner&#x27;s HCF Program</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/C_Programming/comments/1cwcu8w/need_a_hint_for_printing_factors_in_a_beginners/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>I have had this idea for a while but can&#x27;t seem to break through with it. You can see in the image that there&#x27;s a question involving HCF. What I want to do is just print the factors. How do I achieve this? I don&#x27;t need a full tutorial, just a small hint. The biggest obstacle for me right now is figuring out how to get a number that changes according to the input number. For instance, in the image, you can see:
+ 2 | 20
+ 2 | 10
+ 5 | 5
+ | 1
+ How do I get five in the program? Should I use a for loop? I am a beginner, so can someone please enlighten me? If possible, just give a small hint. I want to solve this problem by myself. This is not an assignment; I am just teaching myself for now. My classes will start in August.
+    submitted by    /u/Fable_o  
+ [link]   [comments]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/C_Programming/comments/1cwcbp5/need_advise_on_gcc_instrumentation_asan_and/"
+                        open
+                      >
+                        <summary class="article-expander__title">Need advise on GCC instrumentation, asan and memory reference hooking</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/C_Programming/comments/1cwcbp5/need_advise_on_gcc_instrumentation_asan_and/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Hi. I&#x27;m trying to create some sort of poor man&#x27;s mmap() on a platform that does not support generic mmap directly (we&#x27;re talking about esp32s3). I realize that this approach will have a significant impact on performance, but nevertheless I would like to give it a try in specific places in the project. The idea is to generate code around each memory load, check the pointer value and decide if the load should happen from other address.
+ Pseudocode illustrating the idea:
+ char * mapped_file; read(somefile, mapped_file, file_size); char load_hook(void * ptr) { if(ptr &amp; 0xff000000) { return mapped_file[ptr &amp; 0x00ffffff]; } else { return *ptr; } } char s[] &#x3D; &quot;some data&quot;; char * p &#x3D; 0xff000002; char load_1 &#x3D; *s; char load_2 &#x3D; *p; // load_1 will contain first byte in s[], // load_2 will contain th…</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/C_Programming/comments/1cw527a/raytracing_in_one_weekend/"
+                        open
+                      >
+                        <summary class="article-expander__title">Raytracing in one weekend</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/C_Programming/comments/1cw527a/raytracing_in_one_weekend/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>I&#x27;m looking for something like &quot;ray tracing in one weekend&quot; but for c. Does anyone have any good suggestions?
+    submitted by    /u/One_Addendum3375  
+ [link]   [comments]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://www.reddit.com/r/C_Programming/comments/1cw3jvf/newb_question_unable_to_link_thirdparty_library/"
                         open
                       >
@@ -150,6 +357,111 @@
                 </section>
               </section>
             </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >top scoring links : hacking</button>
+                  <a class="source-heading__link" href="https://www.reddit.com/r/hacking/top/?t&#x3D;week">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/hacking/comments/1cwcxp4/will_username_impressive_air4167/"
+                        open
+                      >
+                        <summary class="article-expander__title">Will, username Impressive_Air4167</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/hacking/comments/1cwcxp4/will_username_impressive_air4167/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Hi,
+ I was discussing with someone on here but I think their account got deleted. If you see this, reach out to me again or drop a comment
+ Thanks
+    submitted by    /u/Turbulent-Tomato  
+ [link]   [comments]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/hacking/comments/1cw7hex/saw_in_an_apartment_building/"
+                        open
+                      >
+                        <summary class="article-expander__title">Saw in an Apartment Building</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/hacking/comments/1cw7hex/saw_in_an_apartment_building/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>How bad is this? What kind of trouble/mischief/shenanigans could be done?
+    submitted by    /u/Obviouslynameless  
+ [link]   [comments]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/hacking/comments/1cw3mng/wsj_post_their_trains_were_stalled_these_hackers/"
+                        open
+                      >
+                        <summary class="article-expander__title">WSJ post: Their Trains Were Stalled. These Hackers Brought Them Back to Life.</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/hacking/comments/1cw3mng/wsj_post_their_trains_were_stalled_these_hackers/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>https://www.wsj.com/tech/cybersecurity/hackers-trains-disabled-poland-1b1f501a?st&#x3D;nj2w4yrwob93g9n&amp;reflink&#x3D;desktopwebshare_permalink
+    submitted by    /u/JenniferJournal321  
+ [link]   [comments]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >top scoring links : programming</button>
+                  <a class="source-heading__link" href="https://www.reddit.com/r/programming/top/?t&#x3D;week">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/programming/comments/1cw2ri4/the_ages_of_programming_language_creators/"
+                        open
+                      >
+                        <summary class="article-expander__title">The Ages of Programming Language Creators</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/programming/comments/1cw2ri4/the_ages_of_programming_language_creators/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>submitted by    /u/breck  
+ [link]   [comments]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
         </ul>
       </section>
       <section class="daily-content js-toggle-accordions-scope">
@@ -159,11 +471,88 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-05-19 datetime="2024-05-19T23:32:28.000Z">2024-05-19</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-05-19 datetime="2024-05-19T23:32:28.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-05-19 datetime="2024-05-19T23:41:09.000Z">2024-05-19</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-05-19 datetime="2024-05-19T23:41:09.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >top scoring links : ExperiencedDevs</button>
+                  <a class="source-heading__link" href="https://www.reddit.com/r/ExperiencedDevs/top/?t&#x3D;week">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/ExperiencedDevs/comments/1cw1rqk/how_you_survived_ageism/"
+                        open
+                      >
+                        <summary class="article-expander__title">How you survived ageism</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/ExperiencedDevs/comments/1cw1rqk/how_you_survived_ageism/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>I joined the tech field straight out of college and believed that once I finally got out of a junior role I&#x27;d be &quot;set for life&quot;, but y&#x27;all already know how how naive that is.
+ I was talking to one of our staff engineers, brilliant lady with 20 years in the field, about her experience last month. I was disappointed not only that she confirmed what I had been hearing about ageism in the field, but just how rampant it was.
+ At least one of you reading this has encountered ageism at some point in your career, but lived to tell the tale. How did you survive the wave of layoffs? How did you land that new job?
+    submitted by    /u/MikeFratelli  
+ [link]   [comments]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/ExperiencedDevs/comments/1cvx920/someone_wants_to_pay_for_a_landing_page_at_what/"
+                        open
+                      >
+                        <summary class="article-expander__title">Someone wants to pay for a landing page, at what point do you tell them that squarespace/wix/wordpress is better for their needs?</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/ExperiencedDevs/comments/1cvx920/someone_wants_to_pay_for_a_landing_page_at_what/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Simple question.
+ I can do the fancy pages, I can also code do the landing page with custom designs from a designer. 
+ But I am not sure what to tell a client that asks me whether their landing page would be better suited to one of those drag-n-drop site builders.
+ I tried to look at some of the samples from the site builders, it seems like they work well when the page is just static assets and the design consists mostly of box-shaped divs that either have text or images. Not sure though because I don&#x27;t have any experience with their sites.
+    submitted by    /u/PoopsCodeAllTheTime  
+ [link]   [comments]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/ExperiencedDevs/comments/1cvbibc/has_anyone_worked_at_a_company_that_has_a_fixed/"
+                        open
+                      >
+                        <summary class="article-expander__title">Has anyone worked at a company that has a fixed pay structure?</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/ExperiencedDevs/comments/1cvbibc/has_anyone_worked_at_a_company_that_has_a_fixed/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>What was your experience like and do you know if it&#x27;s completely non-negotiable? 
+ I interviewed for an out of state job recently, where they seem to have a fixed salary structure based on responsibilities. The salary listed is about $15-30k lower than what I&#x27;d normally get in my state for the same role. When I asked about it, they said they do it for equity reasons to make sure there&#x27;s not a huge discrepancy of pay between coworkers (i.e. fairness). It&#x27;s a startup. I don&#x27;t know if there&#x27;s such thing as asking for cost of living adjustments. Anyone have insights or experiences they can share? Pros/cons?
+    submitted by    /u/tiny_guppy  
+ [link]   [comments]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
             <li class="card__section">
               <section class="js-toggle-accordions-scope">
                 <h3 class="source-heading">
@@ -724,6 +1113,92 @@ in my professor&#x27;s test file, the sorted list is destroyed and heap memory i
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
+                  >top scoring links : ProgrammerHumor</button>
+                  <a class="source-heading__link" href="https://www.reddit.com/r/ProgrammerHumor/top/?t&#x3D;week">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/ProgrammerHumor/comments/1cw113o/therealdebuggingking/"
+                        open
+                      >
+                        <summary class="article-expander__title">theRealDebuggingKing</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/ProgrammerHumor/comments/1cw113o/therealdebuggingking/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>submitted by    /u/lorens_osman  
+ [link]   [comments]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/ProgrammerHumor/comments/1cvoxxk/everyprojectmanagerever/"
+                        open
+                      >
+                        <summary class="article-expander__title">everyProjectManagerEver</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/ProgrammerHumor/comments/1cvoxxk/everyprojectmanagerever/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>submitted by    /u/LakesideNorth  
+ [link]   [comments]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/ProgrammerHumor/comments/1cvnzle/definitelywhathappenedtoday/"
+                        open
+                      >
+                        <summary class="article-expander__title">definitelyWhatHappenedToday</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/ProgrammerHumor/comments/1cvnzle/definitelywhathappenedtoday/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>submitted by    /u/Cyclone6664  
+ [link]   [comments]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/ProgrammerHumor/comments/1cvbgtv/thechaddestdevtorulethemall/"
+                        open
+                      >
+                        <summary class="article-expander__title">theChaddestDevToRuleThemAll</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/ProgrammerHumor/comments/1cvbgtv/thechaddestdevtorulethemall/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>submitted by    /u/IntelligentPerson_  
+ [link]   [comments]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >top scoring links : hacking</button>
                   <a class="source-heading__link" href="https://www.reddit.com/r/hacking/top/?t&#x3D;week">Open</a>
                 </h3>
@@ -785,6 +1260,106 @@ in my professor&#x27;s test file, the sorted list is destroyed and heap memory i
  Would it be using a sim for internet with a wireguard vpn?
  (I don’t quite understand how a VPN through the router provides more anonymity then a vpn application besides all devices connected being routed through)
     submitted by    /u/bilngbl0w  
+ [link]   [comments]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >top scoring links : golang</button>
+                  <a class="source-heading__link" href="https://www.reddit.com/r/golang/top/?t&#x3D;week">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/golang/comments/1cvzvao/i_built_a_software_3d_renderer_in_go_from_scratch/"
+                        open
+                      >
+                        <summary class="article-expander__title">I built a software 3D renderer in Go from scratch</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/golang/comments/1cvzvao/i_built_a_software_3d_renderer_in_go_from_scratch/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>submitted by    /u/bufoaureus  
+ [link]   [comments]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/golang/comments/1cvsiym/things_you_would_tell_yourself_to_know_better/"
+                        open
+                      >
+                        <summary class="article-expander__title">Things you would tell yourself to know better when starting your first Go Role?</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/golang/comments/1cvsiym/things_you_would_tell_yourself_to_know_better/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>I’m a Ruby Dev with the 5 years of experience, and within the last few months began to tinker around with Go as it had peaked my interest. Luckily I had a recruiter reach out to me about a Go Role, and I passed the technical rounds and landed the role. I start next month. 
+ I’ve spent the last few months building assorted things to drill at least a surface level understanding of various aspects of the language, to make the transition easier. 
+ My question to all of you is, if you could go back and tell yourself what concepts to really nail as you were about to begin your first Go Role, what would they be? Or any tips in general. 
+    submitted by    /u/AdvantageBig568  
+ [link]   [comments]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/golang/comments/1cvrz84/those_of_you_using_a_nosql_db_how_do_you_handle/"
+                        open
+                      >
+                        <summary class="article-expander__title">Those of you using a no-sql DB, how do you handle migrations?</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/golang/comments/1cvrz84/those_of_you_using_a_nosql_db_how_do_you_handle/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>I&#x27;m using Mongo in production and working on how to handle migrations. My database still has a schema; the schema is just shifted from SQL table definitions over into the code itself. If I change the format of a struct representing the document in a collection or add a relational field to another collection, previous records in the DB need to be updated to reflect this, or I end up with bad data.
+ Right now I&#x27;m handling this with a function for each migration step. Each migration has an ID associated to it and I keep a migrations collection with the timestamp when this migration was run (if it was run). This way I don&#x27;t have to rerun any previous steps. I&#x27;m trying to make each one idempotent, so even without the migration collection, they could potentially run again if needed. The &quot;migrations&quot; collection is just for performance purposes, to avoid having to run all historic migrations every time the app starts.
+ I&#x27;ve been reading about the various SQL DB migration tools, and declarative state based migrations vs functional time-series migrations. The latter sounds roughly like what I&#x27;m doing. I&#x27;m mostly just trying to understand if what I&#x27;m doing is common or if there&#x27;s some better way that I hadn&#x27;t considered (and why?)
+ How are you dealing with this?
+    submitted by    /u/RomanaOswin  
+ [link]   [comments]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/golang/comments/1cvl4yp/id_like_to_share_my_migration_library_in_go/"
+                        open
+                      >
+                        <summary class="article-expander__title">I&#x27;d like to share my migration library in Go</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/golang/comments/1cvl4yp/id_like_to_share_my_migration_library_in_go/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Hey everyone,
+ I’d like to introduce AMIGO, a library that simplifies database migrations using the Go language.
+ It&#x27;s heavily inspired by the ActiveRecord migration system; while I am not a fan of Rails, I was pleased to use the migration system. 
+ Here is an attempt to be as happy as I was with active records. It offers a powerful API to manage schema changes and supports auto-reverse migrations. 
+ It only supports Postgres for now. 
+ Please try it and give me some feedback! 😇
+ Check it out on GitHub
+    submitted by    /u/alexisvisco  
  [link]   [comments]</span>
                             </span>
                           </div>
@@ -1147,25 +1722,22 @@ in my professor&#x27;s test file, the sorted list is destroyed and heap memory i
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
-                  >top scoring links : golang</button>
-                  <a class="source-heading__link" href="https://www.reddit.com/r/golang/top/?t&#x3D;week">Open</a>
+                  >top scoring links : programming</button>
+                  <a class="source-heading__link" href="https://www.reddit.com/r/programming/top/?t&#x3D;week">Open</a>
                 </h3>
                 <section class="articles-per-source">
                     <article>
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="https://www.reddit.com/r/golang/comments/1cvsiym/things_you_would_tell_yourself_to_know_better/"
+                        data-accordion-key="https://www.reddit.com/r/programming/comments/1cvtd5s/compilers_for_free_with_weval_a_webassembly/"
                         open
                       >
-                        <summary class="article-expander__title">Things you would tell yourself to know better when starting your first Go Role?</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/golang/comments/1cvsiym/things_you_would_tell_yourself_to_know_better/">
+                        <summary class="article-expander__title">Compilers for free with weval: a WebAssembly partial evaluator</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/programming/comments/1cvtd5s/compilers_for_free_with_weval_a_webassembly/">
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
-                              <span>I’m a Ruby Dev with the 5 years of experience, and within the last few months began to tinker around with Go as it had peaked my interest. Luckily I had a recruiter reach out to me about a Go Role, and I passed the technical rounds and landed the role. I start next month. 
- I’ve spent the last few months building assorted things to drill at least a surface level understanding of various aspects of the language, to make the transition easier. 
- My question to all of you is, if you could go back and tell yourself what concepts to really nail as you were about to begin your first Go Role, what would they be? Or any tips in general. 
-    submitted by    /u/AdvantageBig568  
+                              <span>submitted by    /u/self  
  [link]   [comments]</span>
                             </span>
                           </div>
@@ -1176,21 +1748,66 @@ in my professor&#x27;s test file, the sorted list is destroyed and heap memory i
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="https://www.reddit.com/r/golang/comments/1cvl4yp/id_like_to_share_my_migration_library_in_go/"
+                        data-accordion-key="https://www.reddit.com/r/programming/comments/1cvh5jd/whats_coming_to_gamemaker_in_2024_fullscreen_code/"
                         open
                       >
-                        <summary class="article-expander__title">I&#x27;d like to share my migration library in Go</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/golang/comments/1cvl4yp/id_like_to_share_my_migration_library_in_go/">
+                        <summary class="article-expander__title">What&#x27;s Coming To GameMaker In 2024: Full-Screen Code Editor with Events in the Same Window, Prefabs, Plugins, UI System, New Runtime, and Support for Javascript as a First-Class Language. Investigating support for C#.</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/programming/comments/1cvh5jd/whats_coming_to_gamemaker_in_2024_fullscreen_code/">
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
-                              <span>Hey everyone,
- I’d like to introduce AMIGO, a library that simplifies database migrations using the Go language.
- It&#x27;s heavily inspired by the ActiveRecord migration system; while I am not a fan of Rails, I was pleased to use the migration system. 
- Here is an attempt to be as happy as I was with active records. It offers a powerful API to manage schema changes and supports auto-reverse migrations. 
- It only supports Postgres for now. 
- Please try it and give me some feedback! 😇
- Check it out on GitHub
-    submitted by    /u/alexisvisco  
+                              <span>submitted by    /u/paxinfernum  
+ [link]   [comments]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >top scoring links : rust</button>
+                  <a class="source-heading__link" href="https://www.reddit.com/r/rust/top/?t&#x3D;week">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/rust/comments/1cvs63h/for_navigating_massive_trees_of_floating_point/"
+                        open
+                      >
+                        <summary class="article-expander__title">For navigating massive trees of floating point math, how does rust compare to c++</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/rust/comments/1cvs63h/for_navigating_massive_trees_of_floating_point/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>I have an algorithm planned out that stores massive trees that contain floating point data and requires very fast lookup, I was going to implement it in C++ but the perks of rust is making me re-think my decision.
+ For people that have experience with these data types with c++ and rust, how does the performance differ between the 2 languages. Compilation time does not matter to me, only runtime performance.
+    submitted by    /u/Lumpy-Permission-736  
+ [link]   [comments]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/rust/comments/1cvlob1/whats_new_in_rust_172178_rustacean_station/"
+                        open
+                      >
+                        <summary class="article-expander__title">What&#x27;s New in Rust 1.72-1.78 (Rustacean Station marathon) [video]</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/rust/comments/1cvlob1/whats_new_in_rust_172178_rustacean_station/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>submitted by    /u/Jonhoo  
  [link]   [comments]</span>
                             </span>
                           </div>
@@ -1280,6 +1897,27 @@ in my professor&#x27;s test file, the sorted list is destroyed and heap memory i
                         </a>
                       </details>
                     </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/gamedev/comments/1cvl7s0/how_many_of_you_actually_have_a_career_in_game/"
+                        open
+                      >
+                        <summary class="article-expander__title">How many of you actually have a career in game development / design?</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/gamedev/comments/1cvl7s0/how_many_of_you_actually_have_a_career_in_game/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>I&#x27;m a self taught programmer since I was an early teenager, and am currently in university studying software development. For my master&#x27;s, I have a chance of studying game development, but I&#x27;m torn on the idea.
+ I love game development and awlays have, but I fear that it&#x27;s a dy path with low income and rare success. On one hand, I want to follow my dreams and working on projects that make me happy. On the other hand I don&#x27;t want to struggle to make my career a reality.
+ What are your experiences?
+    submitted by    /u/Arthiviate  
+ [link]   [comments]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                 </section>
               </section>
             </li>
@@ -1290,22 +1928,25 @@ in my professor&#x27;s test file, the sorted list is destroyed and heap memory i
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
-                  >top scoring links : ProgrammerHumor</button>
-                  <a class="source-heading__link" href="https://www.reddit.com/r/ProgrammerHumor/top/?t&#x3D;week">Open</a>
+                  >top scoring links : cscareerquestions</button>
+                  <a class="source-heading__link" href="https://www.reddit.com/r/cscareerquestions/top/?t&#x3D;week">Open</a>
                 </h3>
                 <section class="articles-per-source">
                     <article>
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="https://www.reddit.com/r/ProgrammerHumor/comments/1cvoxxk/everyprojectmanagerever/"
+                        data-accordion-key="https://www.reddit.com/r/cscareerquestions/comments/1cvne4w/dont_hire_list/"
                         open
                       >
-                        <summary class="article-expander__title">everyProjectManagerEver</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/ProgrammerHumor/comments/1cvoxxk/everyprojectmanagerever/">
+                        <summary class="article-expander__title">Don&#x27;t Hire List</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/cscareerquestions/comments/1cvne4w/dont_hire_list/">
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
-                              <span>submitted by    /u/LakesideNorth  
+                              <span>Is there something called Don&#x27;t hire list ?
+ There is this company who does remote hiring and in their assessment on coderbyte they have a closure saying something like &quot;getting flagged in this assessment will make you on a no-hire list that is shared across companies&quot;. I didn&#x27;t take the assessment not to get false flagged and get screwed for something like that
+ Was wondering if this is a thing that companies share a list for employees to not hire or it&#x27;s just something internal for that specific company that if you get flagged they themselves won&#x27;t hire you but not other companies?
+    submitted by    /u/_LuciferMorningstar  
  [link]   [comments]</span>
                             </span>
                           </div>
@@ -1316,14 +1957,34 @@ in my professor&#x27;s test file, the sorted list is destroyed and heap memory i
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
-                        data-accordion-key="https://www.reddit.com/r/ProgrammerHumor/comments/1cvbgtv/thechaddestdevtorulethemall/"
+                        data-accordion-key="https://www.reddit.com/r/cscareerquestions/comments/1cvm589/is_it_true_that_more_and_more_companies_will_be/"
                         open
                       >
-                        <summary class="article-expander__title">theChaddestDevToRuleThemAll</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/ProgrammerHumor/comments/1cvbgtv/thechaddestdevtorulethemall/">
+                        <summary class="article-expander__title">Is it true that more and more companies will be outsourcing their team to Europe and cheaper countries from the US to cut down on costs? Recently, Google has been moving a lot of their departments from the US to Dublin, Munich, India, Mexico and that sparkled the debate. What&#x27;s your stance on it?</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/cscareerquestions/comments/1cvm589/is_it_true_that_more_and_more_companies_will_be/">
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
-                              <span>submitted by    /u/IntelligentPerson_  
+                              <span>https://timesofindia.indiatimes.com/city/bengaluru/google-shifts-core-jobs-to-india-mexico/articleshow/109897094.cms
+    submitted by    /u/Ok-Squirrel3297  
+ [link]   [comments]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/cscareerquestions/comments/1cvjoou/launch_academy_bootcamp_has_paused_enrolment/"
+                        open
+                      >
+                        <summary class="article-expander__title">Launch Academy bootcamp has paused enrolment because the market is so tough</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/cscareerquestions/comments/1cvjoou/launch_academy_bootcamp_has_paused_enrolment/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Link: https://www.linkedin.com/pulse/launch-academy-announces-strategic-pause-immersive-pamjc
+    submitted by    /u/coding_for_lyf  
  [link]   [comments]</span>
                             </span>
                           </div>
@@ -1374,90 +2035,6 @@ in my professor&#x27;s test file, the sorted list is destroyed and heap memory i
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
-                  >top scoring links : cscareerquestions</button>
-                  <a class="source-heading__link" href="https://www.reddit.com/r/cscareerquestions/top/?t&#x3D;week">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://www.reddit.com/r/cscareerquestions/comments/1cvm589/is_it_true_that_more_and_more_companies_will_be/"
-                        open
-                      >
-                        <summary class="article-expander__title">Is it true that more and more companies will be outsourcing their team to Europe and cheaper countries from the US to cut down on costs? Recently, Google has been moving a lot of their departments from the US to Dublin, Munich, India, Mexico and that sparkled the debate. What&#x27;s your stance on it?</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/cscareerquestions/comments/1cvm589/is_it_true_that_more_and_more_companies_will_be/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>https://timesofindia.indiatimes.com/city/bengaluru/google-shifts-core-jobs-to-india-mexico/articleshow/109897094.cms
-    submitted by    /u/Ok-Squirrel3297  
- [link]   [comments]</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://www.reddit.com/r/cscareerquestions/comments/1cvjoou/launch_academy_bootcamp_has_paused_enrolment/"
-                        open
-                      >
-                        <summary class="article-expander__title">Launch Academy bootcamp has paused enrolment because the market is so tough</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/cscareerquestions/comments/1cvjoou/launch_academy_bootcamp_has_paused_enrolment/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>Link: https://www.linkedin.com/pulse/launch-academy-announces-strategic-pause-immersive-pamjc
-    submitted by    /u/coding_for_lyf  
- [link]   [comments]</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >top scoring links : rust</button>
-                  <a class="source-heading__link" href="https://www.reddit.com/r/rust/top/?t&#x3D;week">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://www.reddit.com/r/rust/comments/1cvlob1/whats_new_in_rust_172178_rustacean_station/"
-                        open
-                      >
-                        <summary class="article-expander__title">What&#x27;s New in Rust 1.72-1.78 (Rustacean Station marathon) [video]</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/rust/comments/1cvlob1/whats_new_in_rust_172178_rustacean_station/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>submitted by    /u/Jonhoo  
- [link]   [comments]</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >top scoring links : godot</button>
                   <a class="source-heading__link" href="https://www.reddit.com/r/godot/top/?t&#x3D;week">Open</a>
                 </h3>
@@ -1492,72 +2069,6 @@ in my professor&#x27;s test file, the sorted list is destroyed and heap memory i
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>submitted by    /u/nathanhoad  
- [link]   [comments]</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >top scoring links : programming</button>
-                  <a class="source-heading__link" href="https://www.reddit.com/r/programming/top/?t&#x3D;week">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://www.reddit.com/r/programming/comments/1cvh5jd/whats_coming_to_gamemaker_in_2024_fullscreen_code/"
-                        open
-                      >
-                        <summary class="article-expander__title">What&#x27;s Coming To GameMaker In 2024: Full-Screen Code Editor with Events in the Same Window, Prefabs, Plugins, UI System, New Runtime, and Support for Javascript as a First-Class Language. Investigating support for C#.</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/programming/comments/1cvh5jd/whats_coming_to_gamemaker_in_2024_fullscreen_code/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>submitted by    /u/paxinfernum  
- [link]   [comments]</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >top scoring links : ExperiencedDevs</button>
-                  <a class="source-heading__link" href="https://www.reddit.com/r/ExperiencedDevs/top/?t&#x3D;week">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://www.reddit.com/r/ExperiencedDevs/comments/1cvbibc/has_anyone_worked_at_a_company_that_has_a_fixed/"
-                        open
-                      >
-                        <summary class="article-expander__title">Has anyone worked at a company that has a fixed pay structure?</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/ExperiencedDevs/comments/1cvbibc/has_anyone_worked_at_a_company_that_has_a_fixed/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>What was your experience like and do you know if it&#x27;s completely non-negotiable? 
- I interviewed for an out of state job recently, where they seem to have a fixed salary structure based on responsibilities. The salary listed is about $15-30k lower than what I&#x27;d normally get in my state for the same role. When I asked about it, they said they do it for equity reasons to make sure there&#x27;s not a huge discrepancy of pay between coworkers (i.e. fairness). It&#x27;s a startup. I don&#x27;t know if there&#x27;s such thing as asking for cost of living adjustments. Anyone have insights or experiences they can share? Pros/cons?
-    submitted by    /u/tiny_guppy  
  [link]   [comments]</span>
                             </span>
                           </div>
@@ -2262,6 +2773,24 @@ check it out on GitHub: Focus Exporter
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>submitted by    /u/Ceisri  
+ [link]   [comments]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/godot/comments/1cuvjz0/an_intro_to_dedicated_servers/"
+                        open
+                      >
+                        <summary class="article-expander__title">An Intro to Dedicated Servers</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/godot/comments/1cuvjz0/an_intro_to_dedicated_servers/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>submitted by    /u/batteryaciddev  
  [link]   [comments]</span>
                             </span>
                           </div>
@@ -4756,6 +5285,24 @@ Thanks for your help!
                       <details
                         class="article-expander"
                         data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/programming/comments/1cu877p/life_and_death_of_a_graphics_programmer/"
+                        open
+                      >
+                        <summary class="article-expander__title">Life and Death of a Graphics Programmer</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/programming/comments/1cu877p/life_and_death_of_a_graphics_programmer/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>submitted by    /u/mariuz  
+ [link]   [comments]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
                         data-accordion-key="https://www.reddit.com/r/programming/comments/1cu3l1t/main_maintainer_of_ldapjs_has_decommissioned_the/"
                         open
                       >
@@ -7192,6 +7739,24 @@ I really liked the last one, but maybe there&#x27;s some fundamental stuff I&#x2
                           <div class="article-summary-box-inner media-object">
                             <span class="media-object__text">
                               <span>submitted by    /u/SpockBauru  
+ [link]   [comments]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/godot/comments/1ctfa54/wallpapering_system_is_a_go/"
+                        open
+                      >
+                        <summary class="article-expander__title">Wallpapering system is a GO!</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/godot/comments/1ctfa54/wallpapering_system_is_a_go/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>submitted by    /u/RedThornInteractive  
  [link]   [comments]</span>
                             </span>
                           </div>
@@ -12617,6 +13182,112 @@ Organize with Workspaces: Create and manage workspaces to efficiently organize y
                     class="source-heading__name"
                     data-action="toggle-accordions"
                     title="Click to toggle the source, Ctrl + click to toggle all."
+                  >top scoring links : godot</button>
+                  <a class="source-heading__link" href="https://www.reddit.com/r/godot/top/?t&#x3D;week">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/godot/comments/1cr3bpn/cheap_refraction_shader_for_godot/"
+                        open
+                      >
+                        <summary class="article-expander__title">cheap Refraction shader for godot</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/godot/comments/1cr3bpn/cheap_refraction_shader_for_godot/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>submitted by    /u/SingerLuch  
+ [link]   [comments]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/godot/comments/1cqyb93/tip_gdscript_has_cool_string_format_use_it/"
+                        open
+                      >
+                        <summary class="article-expander__title">TIP: GDScript has cool string format... use it 🧐</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/godot/comments/1cqyb93/tip_gdscript_has_cool_string_format_use_it/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>submitted by    /u/rayuumie  
+ [link]   [comments]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/godot/comments/1cqwnoq/most_technically_accomplished_game_using_godot/"
+                        open
+                      >
+                        <summary class="article-expander__title">Most technically accomplished game using Godot?</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/godot/comments/1cqwnoq/most_technically_accomplished_game_using_godot/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>Given the amount of attention Godot is getting within the games industry, what&#x27;s the most technically accomplished game that you can think of that uses the Godot engine?
+ I think Human Diaspora is pretty accomplished, but it&#x27;s also a few years old now (May 2022). I am pretty sure that a number of other titles have come out since that raise the bar - especially considering how much more interest Godot has gotten in recent months after Unity started having problems.
+    submitted by    /u/prankster999  
+ [link]   [comments]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/godot/comments/1cqt60p/did_brackeys_1st_tutorial_with_my_own_spin/"
+                        open
+                      >
+                        <summary class="article-expander__title">Did Brackey&#x27;s 1st tutorial with my own spin</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/godot/comments/1cqt60p/did_brackeys_1st_tutorial_with_my_own_spin/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>submitted by    /u/Anxious-Bite-2375  
+ [link]   [comments]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://www.reddit.com/r/godot/comments/1cqsosy/the_duality_of_rgodot/"
+                        open
+                      >
+                        <summary class="article-expander__title">The duality of r/Godot</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/godot/comments/1cqsosy/the_duality_of_rgodot/">
+                          <div class="article-summary-box-inner media-object">
+                            <span class="media-object__text">
+                              <span>submitted by    /u/NeverandaWakeUp  
+ [link]   [comments]</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
                   >top scoring links : gamedev</button>
                   <a class="source-heading__link" href="https://www.reddit.com/r/gamedev/top/?t&#x3D;week">Open</a>
                 </h3>
@@ -12704,94 +13375,6 @@ Direct Contact devs
  How does this differ for smaller scale games?
  Thanks.
     submitted by    /u/JackDrawsStuff  
- [link]   [comments]</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >top scoring links : godot</button>
-                  <a class="source-heading__link" href="https://www.reddit.com/r/godot/top/?t&#x3D;week">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://www.reddit.com/r/godot/comments/1cqyb93/tip_gdscript_has_cool_string_format_use_it/"
-                        open
-                      >
-                        <summary class="article-expander__title">TIP: GDScript has cool string format... use it 🧐</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/godot/comments/1cqyb93/tip_gdscript_has_cool_string_format_use_it/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>submitted by    /u/rayuumie  
- [link]   [comments]</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://www.reddit.com/r/godot/comments/1cqwnoq/most_technically_accomplished_game_using_godot/"
-                        open
-                      >
-                        <summary class="article-expander__title">Most technically accomplished game using Godot?</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/godot/comments/1cqwnoq/most_technically_accomplished_game_using_godot/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>Given the amount of attention Godot is getting within the games industry, what&#x27;s the most technically accomplished game that you can think of that uses the Godot engine?
- I think Human Diaspora is pretty accomplished, but it&#x27;s also a few years old now (May 2022). I am pretty sure that a number of other titles have come out since that raise the bar - especially considering how much more interest Godot has gotten in recent months after Unity started having problems.
-    submitted by    /u/prankster999  
- [link]   [comments]</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://www.reddit.com/r/godot/comments/1cqt60p/did_brackeys_1st_tutorial_with_my_own_spin/"
-                        open
-                      >
-                        <summary class="article-expander__title">Did Brackey&#x27;s 1st tutorial with my own spin</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/godot/comments/1cqt60p/did_brackeys_1st_tutorial_with_my_own_spin/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>submitted by    /u/Anxious-Bite-2375  
- [link]   [comments]</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://www.reddit.com/r/godot/comments/1cqsosy/the_duality_of_rgodot/"
-                        open
-                      >
-                        <summary class="article-expander__title">The duality of r/Godot</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://www.reddit.com/r/godot/comments/1cqsosy/the_duality_of_rgodot/">
-                          <div class="article-summary-box-inner media-object">
-                            <span class="media-object__text">
-                              <span>submitted by    /u/NeverandaWakeUp  
  [link]   [comments]</span>
                             </span>
                           </div>
@@ -30181,8 +30764,8 @@ https://reddit.com/link/1cafdum/video/xym92zed52wc1/player
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/joe8755/the-reddit-rss-reader/actions/runs/9152090100">
-        <time id="build-timestamp" datetime="2024-05-20T01:23:09.368Z">2024-05-20T01:23:09.368Z</time>
+      <a class="footer-link" href="https://github.com/joe8755/the-reddit-rss-reader/actions/runs/9158804155">
+        <time id="build-timestamp" datetime="2024-05-20T12:38:04.027Z">2024-05-20T12:38:04.027Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
