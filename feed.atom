@@ -2,10 +2,352 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://joe8755.github.io/the-reddit-rss-reader/index.html</id>
     <title>the reddit rss reader</title>
-    <updated>2024-05-21T01:22:30.478Z</updated>
+    <updated>2024-05-21T12:36:12.668Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://joe8755.github.io/the-reddit-rss-reader/index.html"/>
     <link rel="self" href="https://joe8755.github.io/the-reddit-rss-reader/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[Concept requirement's return condition can't include ||?]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1cx61em/concept_requirements_return_condition_cant_include/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1cx61em/concept_requirements_return_condition_cant_include/"/>
+        <updated>2024-05-21T11:54:44.000Z</updated>
+        <summary type="html"><![CDATA[https://godbolt.org/z/xM4oT4Tv4
+ Why does the compiler allow checker1 but not checker2? Am I missing something? There are lots of cases where I want my requirement to allow different return types. For example, I may want to allow some function to return std::tuple<int, T> or std::tuple<int, T&> or std::tuple<int, T, T> or ...
+    submitted by    /u/korkvid    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Help needed with handling multiple files in C++]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1cx5lt7/help_needed_with_handling_multiple_files_in_c/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1cx5lt7/help_needed_with_handling_multiple_files_in_c/"/>
+        <updated>2024-05-21T11:30:18.000Z</updated>
+        <summary type="html"><![CDATA[Although I have some experience with C from a few years ago, I'm still a beginner when it comes to programming complex applications. I'm struggling with structuring a project in C++. Writing everything in a single file becomes difficult to maintain.
+ I've tried splitting systems into different CPP files, but I often need the same function or variable in multiple files. When I use header files, I encounter multiple declaration errors, even with #pragma once. I also attempted to use the MVC pattern, but I faced similar issues. I can't seem to create a generic loop in the main file that can pass and receive data from the MVC modules without including the same header in different files, which again leads to multiple declaration errors. Any advice on how to properly structure a C++ project and manage multiple files would be greatly appreciated.
+    submitted by    /u/Zielschmer    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[JSON render problem inside of a callback.]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1cx4jl2/json_render_problem_inside_of_a_callback/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1cx4jl2/json_render_problem_inside_of_a_callback/"/>
+        <updated>2024-05-21T10:24:42.000Z</updated>
+        <summary type="html"><![CDATA[Hello, I'm into a nightmare. I'm trying too create a subscription system for JSON data persistance.
+ I'm using ArduinoJson and String is from arduino.h
+ callbacks and key storage :
+  JsonObject stringToJson(const String &jsonString); 
+ void subscribe(std::function<String()> fnc, String key);
+ callbacks calling method :
+ void SelfAwarness::persist() { this->state["serverIp"] = this->serverIp; this->state["wifi"]["ssid"] = this->ssid; this->state["wifi"]["password"] = this->password; for (size_t i = 0; i < this->subscriptionsKeys.size(); ++i) { String subj = this->subscriptionsCallbacks[i](); JsonObject jo = this->stringToJson(subj); this->state.createNestedObject(jo); JsonObject njo = this->state[this->subscriptionsKeys[i]]["test"]="cc"; String gg = this->state[this->subscriptionsKeys[i]]["…]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Initialization in C++: A Corner Case]]></title>
+        <id>https://www.reddit.com/r/cpp/comments/1cx47z5/initialization_in_c_a_corner_case/</id>
+        <link href="https://www.reddit.com/r/cpp/comments/1cx47z5/initialization_in_c_a_corner_case/"/>
+        <updated>2024-05-21T10:02:53.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/rosterva    to    r/cpp  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How come I don't need to #include <time.h> or #include <ctime> to use time()?]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1cx430s/how_come_i_dont_need_to_include_timeh_or_include/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1cx430s/how_come_i_dont_need_to_include_timeh_or_include/"/>
+        <updated>2024-05-21T09:53:32.000Z</updated>
+        <summary type="html"><![CDATA[```
+ include <iostream>
+ int main() {
+ std::cout << time(0); return 0; 
+ }
+ ``` The code works without #include <time.h> or #include <ctime>? I'm using CLion. If I hover over the time() function it says declared in <time.h>. How does the IDE know this even I didn't include it? If I delete #include <iostream>, then I get the error Use of undeclared identifier 'time'
+    submitted by    /u/StevenJac    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Printing in a RISC V emulator?]]></title>
+        <id>https://www.reddit.com/r/EmuDev/comments/1cx3xtz/printing_in_a_risc_v_emulator/</id>
+        <link href="https://www.reddit.com/r/EmuDev/comments/1cx3xtz/printing_in_a_risc_v_emulator/"/>
+        <updated>2024-05-21T09:42:57.000Z</updated>
+        <summary type="html"><![CDATA[I just started writing a RISC V emulator for the base rv32i ISA and was wondering how to implement printing? I see that the eCall instruction can be used for system calls. Is there a standard system call implementation for printing? Because my goal is to compile rust to RISC V asm and run it on my emulator.
+ While I'm able to compile small test snippets and run them by hard coding the machine code in the emulator, I don't know how to get printing working.
+ Should I pick a random number for the syscall ID and write a function that relies on that syscall to print?
+ Also, is there a way to only implement a tiny part of std? So, that I can use the print! Macro? Or is there an existing RISC V implementation of std that requires specific implementation-details that I can write my emulator around?
+    submitted by    /u/Paul_Robert_  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>Developing Emulators</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[First BSOD in VM hacking]]></title>
+        <id>https://www.reddit.com/r/hacking/comments/1cx3s73/first_bsod_in_vm_hacking/</id>
+        <link href="https://www.reddit.com/r/hacking/comments/1cx3s73/first_bsod_in_vm_hacking/"/>
+        <updated>2024-05-21T09:30:55.000Z</updated>
+        <summary type="html"><![CDATA[I was tasked to research on Sandworm Vulnerability. So I managed to exploit the vulnerability after hours of setup on group assignment. After my groupmate and I figured out how to exploit Windows 8 using this vulnerability, I did some side quest with my Windows 8 VM. I played around with the VM using Metasploit on the meterpreter session to the point that it shutdown with RPC procedure failing. Then the whole Windows 8 machine went BSOD. I'm glad I learn something new 
+    submitted by    /u/Anonymous-here-  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : hacking</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Noob question]]></title>
+        <id>https://www.reddit.com/r/C_Programming/comments/1cx3eub/noob_question/</id>
+        <link href="https://www.reddit.com/r/C_Programming/comments/1cx3eub/noob_question/"/>
+        <updated>2024-05-21T09:03:26.000Z</updated>
+        <summary type="html"><![CDATA[TL;DR: Without printing the size of the array at the end of the program, it doesn't print the last element of the array..
+ Hello I'm implementing selection sort algorithm, but having bit of wired behavior in my program. If I don't write the a printf statement for the size of the array at the end of the program, the last element in the sorted array doesn't get printed out. Can anyone point out what I'm doing wrong here:
+ int Arr[] = {43, 56, 232, 11, 8, 900, 32, 67};
+ int size = sizeof(Arr)/sizeof(Arr[0]);
+ for(int i=0; i<size-1; ++i)
+ {
+ `int temp;` `int j;` `for(j = i+1; j < size; ++j)` `{` 
+ if(Arr[i] > Arr[j])
+ {
+  `temp = Arr[i];` `Arr[i] = Arr[j];` `Arr[j] = temp;` 
+ } 
+  `}` 
+ }
+ printf("\n Conditioned array:");
+ for(int i=0; i<size; i++)
+ {
+ printf("\n%d", Arr[i]);
+ };
+ printf("\nSize: %d\n", size);
+    submitted by    /u/Adham_Elkady  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Free AI copilot]]></title>
+        <id>https://www.reddit.com/r/cpp/comments/1cx2yve/free_ai_copilot/</id>
+        <link href="https://www.reddit.com/r/cpp/comments/1cx2yve/free_ai_copilot/"/>
+        <updated>2024-05-21T08:30:09.000Z</updated>
+        <summary type="html"><![CDATA[Heyyy yall, 
+ Im looking for a free tool that could help we with my programming (Im using visual studio) like github copilot. Is there such a thing? 
+    submitted by    /u/itsLondongurl    to    r/cpp  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Media] Program to store files inside of YouTube videos for infinite cloud storage written entirely in Rust]]></title>
+        <id>https://www.reddit.com/r/rust/comments/1cx2uj8/media_program_to_store_files_inside_of_youtube/</id>
+        <link href="https://www.reddit.com/r/rust/comments/1cx2uj8/media_program_to_store_files_inside_of_youtube/"/>
+        <updated>2024-05-21T08:20:50.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/stasonmalestate  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : rust</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Proposing an amateur legal RF hacking project: Using SDR to pulse modulate in software, amplify tiny RF output into high power pulses for the microwave auditory effect, in order to evoke understandable speech in the cranium, via a horn waveguide antenna: OpenV2K]]></title>
+        <id>https://www.reddit.com/r/hacking/comments/1cx2qdx/proposing_an_amateur_legal_rf_hacking_project/</id>
+        <link href="https://www.reddit.com/r/hacking/comments/1cx2qdx/proposing_an_amateur_legal_rf_hacking_project/"/>
+        <updated>2024-05-21T08:12:05.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/rrab  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : hacking</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[returning by value but not destroying the copied object]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1cx26rk/returning_by_value_but_not_destroying_the_copied/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1cx26rk/returning_by_value_but_not_destroying_the_copied/"/>
+        <updated>2024-05-21T07:31:31.000Z</updated>
+        <summary type="html"><![CDATA[I have a class that has a pointer to an array as a field and that field gets deleted at destructor. My currrent solution to this problem is to create objects on heap and return a reference to them but theres a lot of this class instances being created in my code(with operators+,-, etc.) so i often need to store every result at a reference variable and perform following operations on them instead of inlining them. And need to delete them at the end of every function. How can i prevent this?
+ Would overloading evey operator with rvalue reference parameters help, does move sematics work on heap objects? 
+ I could also remove the destructor from class, create a child of it with destructor, and (and add a constructor that takkes base as parameter and copies it) and return the base class instance at end of every function(but their return signature will be child). Would instance created automatically by this way also be automatically deleted?
+    submitted by    /u/NiceKaleidoscope5066    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Kernel mode anti-cheat]]></title>
+        <id>https://www.reddit.com/r/C_Programming/comments/1cx25wh/kernel_mode_anticheat/</id>
+        <link href="https://www.reddit.com/r/C_Programming/comments/1cx25wh/kernel_mode_anticheat/"/>
+        <updated>2024-05-21T07:29:55.000Z</updated>
+        <summary type="html"><![CDATA[Maybe something a little unique compared to the projects usually posted here, but I have been working on an anticheat for coming up to a year now. I think when people recommend C projects you always see the classic "OS, compiler etc." recommendations and I think game hacking is a really cool niche that allows you to dive deep into cpu architecture and kernel mode programming. You'd be surprised at some of the advanced cheats that exist nowadays and modern anticheats such as vanguard truly are an engineering marvel. 
+ Due to the nature of anti-cheats there really isnt a guide out there to follow so I've pretty much designed it entirely by myself. Any feedback would be appreciated :)
+ Github: https://github.com/donnaskiez/ac
+    submitted by    /u/anakfnoob  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Should non type template parameters be upper camel case or snake case?]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1cx1se9/should_non_type_template_parameters_be_upper/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1cx1se9/should_non_type_template_parameters_be_upper/"/>
+        <updated>2024-05-21T07:03:47.000Z</updated>
+        <summary type="html"><![CDATA[If I have a template <size_t ...> struct S;, should ... be:
+  
+ArrayDim
+ ARRAY_DIM
+ array_dim
+ arrayDim
+  
+I guess non type template parameters are similar to global constants so maybe the second one makes the most sense?
+    submitted by    /u/planarsimplex    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[guys help review my resume points]]></title>
+        <id>https://www.reddit.com/r/C_Programming/comments/1cx15fe/guys_help_review_my_resume_points/</id>
+        <link href="https://www.reddit.com/r/C_Programming/comments/1cx15fe/guys_help_review_my_resume_points/"/>
+        <updated>2024-05-21T06:20:00.000Z</updated>
+        <summary type="html"><![CDATA[Member of Technical Staff, Edgeverve Systems Ltd Apr 2021 - Aug 2022 
+ ● Engineered C++ APIs to seamlessly integrate a V8 JavaScript scripting engine into Finacle's backend infrastructure, empowering users to extend Finacle's capabilities by incorporating custom functionalities through JavaScript scripts.
+ ● Developed a Debug Logging feature in C++ within the V8 scripting engine, resulting in a 40% reduction in the effort required on average to debug V8 Script Engine related issues.
+ ● Optimized the Module Logging feature for JS and Lua scripting engines, achieving significant reductions in file-related operations of up to56% for the V8 engine and 88% for the Lua engine.
+ ● Designed a Lua reset resolver in C++ to secure path access (Lua Path and C Path), preventing unauthorized changes to these paths and ensuring third-party modules are imported exclusively from approved paths.Product Engineer, Edgeverve Systems Ltd Jun 2019 - Apr 2021
+ ● Enabled seamless integration of custom encryption and decryption strategies for Native Finacle Scripts by decoupling encryption logic from Native Script Engine through function pointers and interfaces, leading to a 40% faster integration of custom encryption methods..
+ ● Remediated 500+ critical and non-critical issues identified by Coverity static analysis tool in Finacle Scripting Engine (including resource leaks, potential buffer overflow, etc) enhancing code quality and mitigating potential vulnerabilities.
+ ● Optimized Finacle Script Engine's cache performance by resolving a critical resource leak, achieving a 32% reduction in memory use of the cache at full capacity with 100 scripts.
+ 
+  
+   submitted by    /u/Level_Restaurant_835  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[So I created a simple Neural Network in C - Part 2]]></title>
+        <id>https://www.reddit.com/r/C_Programming/comments/1cx0yfv/so_i_created_a_simple_neural_network_in_c_part_2/</id>
+        <link href="https://www.reddit.com/r/C_Programming/comments/1cx0yfv/so_i_created_a_simple_neural_network_in_c_part_2/"/>
+        <updated>2024-05-21T06:06:23.000Z</updated>
+        <summary type="html"><![CDATA[I posted an earlier post about creating a simple NN: https://old.reddit.com/r/C_Programming/comments/1csjkuz/so_i_created_a_simple_neural_network_in_c/
+ Now, I've done bug fixing and the code seems to work correctly, as compared to tsoding daily. https://pastebin.com/X5BXz7iX
+ Here's the sample input and outputs for people to verify:
+ Sample outputs And gate Number of inputs: 2 rows: 8 Number of outputs: 1 Initial Cost :0.474202 Final Cost :0.000104 ti[0]: 0.000000 ti[1]: 0.000000 NN: 0.000909 ti[2]: 0.000000 ti[3]: 1.000000 NN: 0.010387 ti[4]: 1.000000 ti[5]: 0.000000 NN: 0.010470 ti[6]: 1.000000 ti[7]: 1.000000 NN: 0.985895 Or Gate Number of inputs: 2 rows: 8 Number of outputs: 1 Initial Cost :0.178242 Final Cost :0.000134 ti[0]: 0.000000 ti[1]: 0.000000 NN: 0.017959 ti[2]: 0.000000 ti[3]: 1.000000 NN: 0.990073 ti[4]: 1.000000 ti[5]: 0.000000 NN: 0.989876 ti[6]: 1.000000 ti[7]: 1.000000 NN: 0.996675 Xor Gate Number of inputs: 2 rows: 8 Number of outputs: 1 Initial Cost :0.334069 Final Cost :0.000298 ti[0]: 0.000000 ti[1]: 0.000000 NN: 0.019019 ti[2]: 0.000000 ti[3]: 1.000000 NN: 0.983565 ti[4]: 1.000000 ti[5]: 0.000000 NN: 0.983540 ti[6]: 1.000000 ti[7]: 1.000000 NN: 0.017053 Adder Initial Cost :0.722847 Final Cost :0.001003 ti[0]: 0.000000 ti[1]: 0.000000 NN: 0.000128 0.033483 ti[2]: 0.000000 ti[3]: 1.000000 NN: 0.022985 0.978335 ti[4]: 1.000000 ti[5]: 0.000000 NN: 0.023032 0.978289 ti[6]: 1.000000 ti[7]: 1.000000 NN: 0.970122 0.999995 
+    submitted by    /u/GovtOfficer420  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Including SDL in CMake build]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1cx0cba/including_sdl_in_cmake_build/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1cx0cba/including_sdl_in_cmake_build/"/>
+        <updated>2024-05-21T05:25:30.000Z</updated>
+        <summary type="html"><![CDATA[I have a cmake project built using this CMakeLists: https://pastebin.com/mXyBPBZT
+ The resulting directory hierarchy looks like this: https://imgur.com/a/diHPYBA
+ I've tried including SDL with both <SDL2/SDL.h> and a relative path to it. In the first case it said that this folder does not exist, in the second it said that it could not open the source file. How do I properly include it?
+    submitted by    /u/Outdoordoor    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Microsoft is really handing out bank info and call logs huh, no work required.]]></title>
+        <id>https://www.reddit.com/r/hacking/comments/1cwzt26/microsoft_is_really_handing_out_bank_info_and/</id>
+        <link href="https://www.reddit.com/r/hacking/comments/1cwzt26/microsoft_is_really_handing_out_bank_info_and/"/>
+        <updated>2024-05-21T04:51:14.000Z</updated>
+        <summary type="html"><![CDATA[https://www.theverge.com/2024/5/20/24159258/microsoft-recall-ai-explorer-windows-11-surface-event
+    submitted by    /u/flipkick25  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : hacking</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[What should i choose for AI / ML]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1cwz3kf/what_should_i_choose_for_ai_ml/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1cwz3kf/what_should_i_choose_for_ai_ml/"/>
+        <updated>2024-05-21T04:06:56.000Z</updated>
+        <summary type="html"><![CDATA[So far I was a Web Developer. I was working with JS. But as I'm studying in CSE field. I want to switch into AI / ML. My university teaching me C++. But as far i know Python is best for AI / ML. But if I start learnning Python i have to learn C++ Separately. 
+ What should i do in this matter?
+    submitted by    /u/ehisawesome    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Im a beginner what do you recommend for aes256 file encryption]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1cwypof/im_a_beginner_what_do_you_recommend_for_aes256/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1cwypof/im_a_beginner_what_do_you_recommend_for_aes256/"/>
+        <updated>2024-05-21T03:45:15.000Z</updated>
+        <summary type="html"><![CDATA[Ok im gonna lay this straight,i know how to do windows fileapi but i need
+ a library that encrypts and another library that compress files and decompress
+ using the fileapi of windows.
+ can you recommend me the following
+  
+its open source or free software
+ has documents, manpages, and tutorials
+ uses the windows fileapi 
+ [optionally] if the library is universal to all filesystems
+ not obscure
+ [optionally] small src code
+  
+i appreciate it if you recommended me.
+    submitted by    /u/ANON256-64-2nd    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Is there a website with multiple choice questions that cover special cases for practice?]]></title>
+        <id>https://www.reddit.com/r/cpp/comments/1cwyj36/is_there_a_website_with_multiple_choice_questions/</id>
+        <link href="https://www.reddit.com/r/cpp/comments/1cwyj36/is_there_a_website_with_multiple_choice_questions/"/>
+        <updated>2024-05-21T03:34:44.000Z</updated>
+        <summary type="html"><![CDATA[I'm currently taking a summer course on C++ and was wondering if you guys know about a website where I can find multiple choice examples. Every week I have quizzes and I only have a less than 10 minutes to answer all the questions, and they sometimes cover very specific cases that would be impossible to guess unless I had written the exact same code and run it. I would prefer if they covered these types of questions so that I can practice more. Thanks
+    submitted by    /u/Big_Tip6190    to    r/cpp  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Long time no C]]></title>
+        <id>https://www.reddit.com/r/C_Programming/comments/1cwx2je/long_time_no_c/</id>
+        <link href="https://www.reddit.com/r/C_Programming/comments/1cwx2je/long_time_no_c/"/>
+        <updated>2024-05-21T02:16:02.000Z</updated>
+        <summary type="html"><![CDATA[Hello!
+ After a long break, I've felt like writing C again. I came up with the little program below and would like some help in gauging just how rusty I have become. Any comments or tips will be appreciated.
+ ```c
+ include <stdio.h>
+ include <stdlib.h>
+ typedef struct { int val; const char* name; } Foo;
+ int main() { Foo* foos = (Foo*) malloc(3 * sizeof (Foo));
+ Foo f1 = {.val = 10, .name = "First"}; Foo f2 = {.val = 20, .name = "Second"}; Foo f3 = {.val = 30, .name = "Third"}; foos[0] = f1; foos[1] = f2; foos[2] = f3; for (size_t i = 0; i < 3; ++i) { printf("%s [%d]\n", foos[i].name, foos[i].val); } free(foos); 
+ } ```
+ P.S. I'm not sure a valgrind-related question would be considered off-topic. If not, could anyone help me understand why it reports 2 allocs and 2 frees for the code above? I would expect 1 and 1. 3 crossed my mind, even. But why 2?
+ Thank you.
+    submitted by    /u/ZuninoBR  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>C</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Need help creating a memory diagram]]></title>
         <id>https://www.reddit.com/r/C_Programming/comments/1cwvth8/need_help_creating_a_memory_diagram/</id>
@@ -58,6 +400,29 @@
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Comparing desktop development tools, Qt, Electron and macOS Native (Objective-C and Swift)]]></title>
+        <id>https://www.reddit.com/r/programming/comments/1cwtdmz/comparing_desktop_development_tools_qt_electron/</id>
+        <link href="https://www.reddit.com/r/programming/comments/1cwtdmz/comparing_desktop_development_tools_qt_electron/"/>
+        <updated>2024-05-20T23:14:26.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/bbm_engineer  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : programming</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Developer access review audit for SOC2]]></title>
+        <id>https://www.reddit.com/r/devops/comments/1cws686/developer_access_review_audit_for_soc2/</id>
+        <link href="https://www.reddit.com/r/devops/comments/1cws686/developer_access_review_audit_for_soc2/"/>
+        <updated>2024-05-20T22:19:36.000Z</updated>
+        <summary type="html"><![CDATA[My company’s security team is preparing for the SOC2 renewal and has requested that we audit which users (mostly developers) in our environment have high privileges in our Azure, GCP and AWS cloud accounts. Anything that can help here?
+    submitted by    /u/yuuheiperadoo  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : devops</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Learning pure C++ only with console apps?]]></title>
         <id>https://www.reddit.com/r/cpp_questions/comments/1cwriir/learning_pure_c_only_with_console_apps/</id>
         <link href="https://www.reddit.com/r/cpp_questions/comments/1cwriir/learning_pure_c_only_with_console_apps/"/>
@@ -67,6 +432,49 @@
  [link]   [comments]]]></summary>
         <author>
             <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Fact check: how do people view Google SWE in 2024]]></title>
+        <id>https://www.reddit.com/r/cscareerquestions/comments/1cwqzze/fact_check_how_do_people_view_google_swe_in_2024/</id>
+        <link href="https://www.reddit.com/r/cscareerquestions/comments/1cwqzze/fact_check_how_do_people_view_google_swe_in_2024/"/>
+        <updated>2024-05-20T21:29:24.000Z</updated>
+        <summary type="html"><![CDATA[In earlier years everyone and their grandmothers wanted to get into Google for SWE because of WLB, the culture, the learning opportunities and prestige. Now with the layoffs, reorgs, unclear goals, increased politics, subpar leadership, etc, it seems like this may no longer be the case- at least on blind. 
+ But blind is also known to have higher proportion of ungrateful people, so I would like to fact check this against the general community: how would people view Google SWE on the resu me now? Are there a new generation of companies (like OpenAI, Anthropic etc) outdoing Google on all fronts? What’s the future of Google?
+    submitted by    /u/confused-student1028  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : cscareerquestions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[What's your experience with the microservice architecture?]]></title>
+        <id>https://www.reddit.com/r/ExperiencedDevs/comments/1cwqwbz/whats_your_experience_with_the_microservice/</id>
+        <link href="https://www.reddit.com/r/ExperiencedDevs/comments/1cwqwbz/whats_your_experience_with_the_microservice/"/>
+        <updated>2024-05-20T21:25:01.000Z</updated>
+        <summary type="html"><![CDATA[Having read a few books on microservices and having worked with them (or rather a bad attempt) for a while, I personally still don't see any obvious cases when it's a clear winner over modular monoliths. 
+ I mean, yes, independent deployability and scalability is cool. It's also a well-known statement that microservices is an organisational pattern, not a technical one. And still it's not really clear how the disadvantages such as losing transactional guarantees and lack of network communication over the network are justified. 
+ It's not even always clear at the beginning of a project whether we need those independent scaling. 
+ What is your take on microservices? If you have a story of using them successfully and being happy with the experience, please share the circumstances that in your opinion made it successful. .
+    submitted by    /u/dondraper36  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : ExperiencedDevs</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Infrastructure engineer at end of my wits!]]></title>
+        <id>https://www.reddit.com/r/devops/comments/1cwqplh/infrastructure_engineer_at_end_of_my_wits/</id>
+        <link href="https://www.reddit.com/r/devops/comments/1cwqplh/infrastructure_engineer_at_end_of_my_wits/"/>
+        <updated>2024-05-20T21:16:58.000Z</updated>
+        <summary type="html"><![CDATA[I recently joined a midsize company - a Scala shop - as an Sr Infrastructure Engineer. My team consists of a principal engineer and rest of 4 Sr engineers. The principal engineer is originally a scala Dev with the company for over 10 years and hardly ever delegates stuff to application teams. So i have been fighting with databases and scala things for last two months. Don’t get me wrong, i am always up for learning new tech - I learned Go and wrote tf providers and k8s operators at my previous places and was a python/c++ dev for 5 years before that but i don’t get/like scala at all - and the codebase is highly opinionated. 
+ I also think that because of the principle engineer, we end up taking so much application development work that should be delegated to the application teams.
+ Anyways, i am very frustrated and don’t really see the way out except finding a new job.
+ Rant over!
+    submitted by    /u/OkBeacon  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : devops</name>
         </author>
     </entry>
     <entry>
@@ -83,6 +491,20 @@
  [link]   [comments]]]></summary>
         <author>
             <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pandemic-Era College Kids Face Job Market That Doesn’t Want Them]]></title>
+        <id>https://www.reddit.com/r/cscareerquestions/comments/1cwq16m/pandemicera_college_kids_face_job_market_that/</id>
+        <link href="https://www.reddit.com/r/cscareerquestions/comments/1cwq16m/pandemicera_college_kids_face_job_market_that/"/>
+        <updated>2024-05-20T20:48:48.000Z</updated>
+        <summary type="html"><![CDATA[https://www.bloomberg.com/news/articles/2024-05-20/first-covid-disrupted-their-college-years-now-the-class-of-2024-can-t-find-jobs?leadSource=reddit_wall
+ They didn’t walk at their 2020 high school graduations. They entered college at the height of remote learning and campus lockdowns. And now they’re finishing exams amid nationwide protests and preparing to enter a job market that’s hard for many to navigate.
+ Coming up to the podium — the class of 2024.
+ Tainted by the pandemic, this outgoing class of seniors had anything but a typical college experience. Most are ready to enter the “real world.” Yet the class is — again — needing to adjust their expectations. Even the best of students are facing an endless web of job applications, ambiguous timelines and countless rejections.
+ On the su…]]></summary>
+        <author>
+            <name>top scoring links : cscareerquestions</name>
         </author>
     </entry>
     <entry>
@@ -116,6 +538,22 @@
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Evil-Helix: A super fast modal editor with Vim keybindings]]></title>
+        <id>https://www.reddit.com/r/rust/comments/1cwoyv3/evilhelix_a_super_fast_modal_editor_with_vim/</id>
+        <link href="https://www.reddit.com/r/rust/comments/1cwoyv3/evilhelix_a_super_fast_modal_editor_with_vim/"/>
+        <updated>2024-05-20T20:04:49.000Z</updated>
+        <summary type="html"><![CDATA[Some of you may have come across Helix - a very fast editor/IDE (which is completely written in Rust, thus the relevance to this community!). Unfortunately, Helix has its own set of keybindings, modeled after Kakoune.
+ This was the one problem holding me back from using this excellent editor, so I soft-forked the project to add Vim keybindings. Now, two years later, I realize this might interest others as well, so here we go:
+ https://github.com/usagi-flow/evil-helix
+ I‘d be happy to polish the fork - which I carefully keep up-to-date with Helix‘s master branch for now. So let me know what you think!
+ And yes, I‘m also looking for a more original name.
+    submitted by    /u/RustyTanuki  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : rust</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Trying to use Qt design studio for a card game]]></title>
         <id>https://www.reddit.com/r/cpp_questions/comments/1cwocul/trying_to_use_qt_design_studio_for_a_card_game/</id>
         <link href="https://www.reddit.com/r/cpp_questions/comments/1cwocul/trying_to_use_qt_design_studio_for_a_card_game/"/>
@@ -144,6 +582,22 @@
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Just Released: "Simplified Embedded Rust" – A Guide for Embedded Rust Learners]]></title>
+        <id>https://www.reddit.com/r/rust/comments/1cwnsu2/just_released_simplified_embedded_rust_a_guide/</id>
+        <link href="https://www.reddit.com/r/rust/comments/1cwnsu2/just_released_simplified_embedded_rust_a_guide/"/>
+        <updated>2024-05-20T19:16:56.000Z</updated>
+        <summary type="html"><![CDATA[Hey everyone,
+ I'm excited to announce that the book, "Simplified Embedded Rust," was published on March 17th, 2024! 🎉 This book aims to simplify the journey into embedded Rust programming and has been crafted to address the specific needs of learners at various stages. The book is self-published and has been reviewed by several community members. Currently its available in ebook format, with paperback coming soon.
+ What the Book Covers:
+  
+Microcontroller Systems: An introduction to the fundamentals that drive embedded systems, providing essential background knowledge.
+ ESP and Rust Ecosystems: Detailed explanations of these ecosystems to help you understand the tools and environments you'll be working with.
+ Programming-Oriented Content: Each core peripheral is given its own chapter, co…]]></summary>
+        <author>
+            <name>top scoring links : rust</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Ownership with underlying resources & unique_ptr deletion order]]></title>
         <id>https://www.reddit.com/r/cpp_questions/comments/1cwmjcq/ownership_with_underlying_resources_unique_ptr/</id>
         <link href="https://www.reddit.com/r/cpp_questions/comments/1cwmjcq/ownership_with_underlying_resources_unique_ptr/"/>
@@ -155,6 +609,24 @@
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[How to navigate Indian work culture?]]></title>
+        <id>https://www.reddit.com/r/cscareerquestions/comments/1cwmhea/how_to_navigate_indian_work_culture/</id>
+        <link href="https://www.reddit.com/r/cscareerquestions/comments/1cwmhea/how_to_navigate_indian_work_culture/"/>
+        <updated>2024-05-20T18:23:16.000Z</updated>
+        <summary type="html"><![CDATA[So I am now on a team that has a lot of people from India. Both literally they are located in India, or they were born in India but located in the USA now.
+ Not everyone is from India on my team though. But I would say its around 50%.
+ It is obvious there are some differences in culture going on. Not major, but I can tell in subtle ways.
+ The company I working for is located in the US and is US headquartered. The CEO and higher ups are not Indian. Middle management is a mix of Indian and non Indian. Workers as well. But its a large enough number that this is a thing.
+ For those from Indian backgrounds or have experience working with those from that background, what is the best way to get along at work? Especially if you are not Indian? 
+ I'm not making any judgments against Indian workforce when I ask this. I would just rather ask now to avoid conflicts or cultural conflicts in the future because I was not aware of them.
+ Thanks if anyone can provide information.
+    submitted by    /u/Legitimate-mostlet  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : cscareerquestions</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Uber Migrates 1 Trillion Records from DynamoDB to LedgerStore to Save $6 Million Annually]]></title>
         <id>https://www.reddit.com/r/programming/comments/1cwm04c/uber_migrates_1_trillion_records_from_dynamodb_to/</id>
         <link href="https://www.reddit.com/r/programming/comments/1cwm04c/uber_migrates_1_trillion_records_from_dynamodb_to/"/>
@@ -163,6 +635,18 @@
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : programming</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[When a game hides its loading screen by forcing the player to walk slowly through tight places, how can it be sure about that the next chunk is loaded when the player got to the end of this slow walking section?]]></title>
+        <id>https://www.reddit.com/r/gamedev/comments/1cwlj8m/when_a_game_hides_its_loading_screen_by_forcing/</id>
+        <link href="https://www.reddit.com/r/gamedev/comments/1cwlj8m/when_a_game_hides_its_loading_screen_by_forcing/"/>
+        <updated>2024-05-20T17:44:20.000Z</updated>
+        <summary type="html"><![CDATA[Basically it just forces a constant time to load the next chunk. But how can we confidently say that this time is enough on lower-end machines? Because with a traditional loading screen, better computers will get through it faster, worse will get through it slower. 
+    submitted by    /u/ysylya  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : gamedev</name>
         </author>
     </entry>
     <entry>
@@ -404,6 +888,44 @@ Advanced SIMD C++ Algorithms in Pictures - Denis Yaroshevskiy - https://youtu.be
  Keynote: What Does It Take to Implement the C++ Standard Library? - Christopher Di Bella - https://youtu.be/XP21DsoPa…]]></summary>
         <author>
             <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Leads/EMs: How do you manage people you dont like to work with?]]></title>
+        <id>https://www.reddit.com/r/ExperiencedDevs/comments/1cwilua/leadsems_how_do_you_manage_people_you_dont_like/</id>
+        <link href="https://www.reddit.com/r/ExperiencedDevs/comments/1cwilua/leadsems_how_do_you_manage_people_you_dont_like/"/>
+        <updated>2024-05-20T15:40:47.000Z</updated>
+        <summary type="html"><![CDATA[Just wanted to know if any of you leads/managers have been put in a position to manage people you dont get along with 
+ You can always keep things professional but at some point having to manage people you dont get along and only put on a facade can get in the way of your own motivation on the team
+ I can see a potential fix would be to request to change team (you or the persons you dont get along with), but this is not always something you can actually do right?
+ And not even thinking on searching for excuses to fire them because you might burn yourself by doing so if not enough reasons to do it, or you are still thinking on moving elsewhere so why impact other peoples lives over your short term benefits, right ?
+ Asking because a friend came to me with his problems and I couldn’t answer his questions.
+    submitted by    /u/MANUAL1111  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : ExperiencedDevs</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[iShouldLearnHTML]]></title>
+        <id>https://www.reddit.com/r/ProgrammerHumor/comments/1cwil64/ishouldlearnhtml/</id>
+        <link href="https://www.reddit.com/r/ProgrammerHumor/comments/1cwil64/ishouldlearnhtml/"/>
+        <updated>2024-05-20T15:40:03.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/rcmaehl  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : ProgrammerHumor</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ossSos]]></title>
+        <id>https://www.reddit.com/r/ProgrammerHumor/comments/1cwi41u/osssos/</id>
+        <link href="https://www.reddit.com/r/ProgrammerHumor/comments/1cwi41u/osssos/"/>
+        <updated>2024-05-20T15:19:32.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/doodlebytes  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : ProgrammerHumor</name>
         </author>
     </entry>
     <entry>
@@ -2896,6 +3418,17 @@ Fortunately, the last version of C++ Builder seems to be moving away from Dinkum
  [link]   [comments]]]></summary>
         <author>
             <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[He just can't get enough!]]></title>
+        <id>https://www.reddit.com/r/godot/comments/1cuu54g/he_just_cant_get_enough/</id>
+        <link href="https://www.reddit.com/r/godot/comments/1cuu54g/he_just_cant_get_enough/"/>
+        <updated>2024-05-18T10:16:36.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/Hungry-Dingo-1411  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : godot</name>
         </author>
     </entry>
     <entry>
@@ -18905,17 +19438,6 @@ Addressing some graphical bugs in other games (I've found some minor ones in Tet
   
 https://reddit.com/link/1cafdum/video/xym92zed52wc1/player
     submitted by    /u/Sea-Work-173  
- [link]   [comments]]]></summary>
-        <author>
-            <name>Developing Emulators</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[retrowin32 now runs (some of) Minesweeper]]></title>
-        <id>https://www.reddit.com/r/EmuDev/comments/1c9mks1/retrowin32_now_runs_some_of_minesweeper/</id>
-        <link href="https://www.reddit.com/r/EmuDev/comments/1c9mks1/retrowin32_now_runs_some_of_minesweeper/"/>
-        <updated>2024-04-21T16:49:39.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/evmar  
  [link]   [comments]]]></summary>
         <author>
             <name>Developing Emulators</name>
