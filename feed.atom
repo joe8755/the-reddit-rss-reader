@@ -2,10 +2,497 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://joe8755.github.io/the-reddit-rss-reader/index.html</id>
     <title>the reddit rss reader</title>
-    <updated>2024-05-21T12:36:12.668Z</updated>
+    <updated>2024-05-22T01:23:08.772Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://joe8755.github.io/the-reddit-rss-reader/index.html"/>
     <link rel="self" href="https://joe8755.github.io/the-reddit-rss-reader/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[Is there any point to thinking about the order in which stack variables are declared?]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1cxo85p/is_there_any_point_to_thinking_about_the_order_in/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1cxo85p/is_there_any_point_to_thinking_about_the_order_in/"/>
+        <updated>2024-05-22T01:16:28.000Z</updated>
+        <summary type="html"><![CDATA[Are there issues with alignment / padding like struct members or will the compiler take care of it?
+    submitted by    /u/mercury_pointer    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[child thread catches the signal (CTRL + C)]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1cxo123/child_thread_catches_the_signal_ctrl_c/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1cxo123/child_thread_catches_the_signal_ctrl_c/"/>
+        <updated>2024-05-22T01:05:58.000Z</updated>
+        <summary type="html"><![CDATA[This is my first time to use multithread. On my main, I have signal_handler to properly shutdown my program. There are times that the signal_handler is not working meaning that the child thread catches the signal not the main thread.
+ Is there a way to block the signal on the child thread so that only the main thread catches it?
+    submitted by    /u/racaraca69    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Kendall Correlation (or counting inversions)]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1cxlm4l/kendall_correlation_or_counting_inversions/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1cxlm4l/kendall_correlation_or_counting_inversions/"/>
+        <updated>2024-05-21T23:08:19.000Z</updated>
+        <summary type="html"><![CDATA[Hi!
+ I am trying to write a decent implementation of Kendall's correlation and I came up with this https://github.com/pachadotdev/capybara/blob/main/src/05_pairwise_correlation.cpp, and I wonder how can I improve my computation. I tested against the usual cases (i.e., x = {1,2,3} and y = {3,2,1} that has Kendall Cor = -1) and for the values in the between the extremes I just get a decent approximate value.
+ Here is my code:
+ #include "00_main.h" // https://en.wikipedia.org/wiki/Kendall_rank_correlation_coefficient // concordant: // Any pair of observations (xi, yi) and (xj, yj), where i<j, // are said to be concordant if the sort order of (xi, yi) and (yi, yj) // agrees: that is, if either both xi > xj and yi > yj holds or both xi < xj // and yi < yj // cor = 1 - 2 * "number of non-concord…]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Logging: Macros vs. Functions]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1cxjl40/logging_macros_vs_functions/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1cxjl40/logging_macros_vs_functions/"/>
+        <updated>2024-05-21T21:39:14.000Z</updated>
+        <summary type="html"><![CDATA[I'm writing a simple logger for my game engine and it seems that most people use macros for this over functions for two reasons:
+  
+It gives access to helpful macros like __FILE__ and __LINE__
+ 
+They are easily able to be stripped away from the source code in distribution builds
+ 
+ However, for reason #1, C++20 now provides std::source_location which solves this issue and for reason #2 it seems like this is possible by just #ifdef'ing the body of the log function with a DEBUG parameter. It's commonly advised to avoid macros unless you really need them or maybe if they simplify the code greatly, but I don't feel like that either of those apply here as logging can be achieved without them and the code is still very elegant.
+ I ran two examples in Godbolt to test this and noticed that the ass…]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Tool to find redundant #if and #ifdefs ?]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1cxj7nj/tool_to_find_redundant_if_and_ifdefs/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1cxj7nj/tool_to_find_redundant_if_and_ifdefs/"/>
+        <updated>2024-05-21T21:23:02.000Z</updated>
+        <summary type="html"><![CDATA[I couldn't find a tool that can tell me all the redundant "#if's" on a .cpp file. I tried clang-tidy and iwys but they didn't catch what I was expecting them to. Am I using them wrong or what?
+ Example of what I mean by redundant "#if":
+ #if XYZ_VARIABLE bool SomeClass::method() { ....... #if XYZ_VARIABLE ....... #else ...... #endif } #endif 
+    submitted by    /u/divcesar    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Any projects that successfully employ Clang-based AD tools like Enzyme or Clad?]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1cxil1c/any_projects_that_successfully_employ_clangbased/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1cxil1c/any_projects_that_successfully_employ_clangbased/"/>
+        <updated>2024-05-21T20:56:34.000Z</updated>
+        <summary type="html"><![CDATA[Hello!
+ I have become interested in AD within C++ and especially in Clad and Enzyme, since these frameworks have the potential of providing very high-performance derivatives and to an already-existing code. Enzyme even seems to potentially integrate relatively well with some existing libraries that are not header-only via static linking and LTO.
+ My question is, is there any project, no matter how small, that I can look at that had any experience, successful or not, of using these frameworks? Maybe I was not thorough enough in my search, but I just can't find any...
+ Or share your own experience in the comments :)
+    submitted by    /u/GregTheMadMonk    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[features.h dependency? Does anyone know how to fix?]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1cxhzqh/featuresh_dependency_does_anyone_know_how_to_fix/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1cxhzqh/featuresh_dependency_does_anyone_know_how_to_fix/"/>
+        <updated>2024-05-21T20:31:42.000Z</updated>
+        <summary type="html"><![CDATA[I'm trying to get it where Visual Studio Code works so I can code in c++ so I can port my python projects to c++ (mostly because c++ has the goto function and python3 doesn't, and I don't want to learn python2 and thought c++ looked more enjoyable to code in than python2). I'm trying to get it set up to be able to code in/program in c++, but I keep getting an include error saying that features.h is a dependency of iostream, but I don't know what that is, or how to fix the issue. I just wanted to port my stuff over and use the goto function...
+ Extra information: I have mingw installed, as well as g++ and gcc because I wanted to make sure it'd work on all platforms, but I'm starting to feel a bit in over my head at installing things to try to get it to work...
+ Links to screenshots of relevant images (of code, includes, etc.): https://imgur.com/a/HOLtKUW
+    submitted by    /u/ChaoticBeehive    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Why is it called RAII?]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1cxhs2y/why_is_it_called_raii/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1cxhs2y/why_is_it_called_raii/"/>
+        <updated>2024-05-21T20:22:44.000Z</updated>
+        <summary type="html"><![CDATA[So I get the whole paradigm about having a completely valid, initialized object as soon as it comes into being via the "resource acquisition".
+ However, it seems to me that this is the much less important part of RAII. The more imporant part being: objects out of scope release their resources automatically. 
+ The destructor releasing the resources (e.g. a lock_guard releasing a mutex) is much harder to get right because releasing it manually would have to occur at the end of the scope. Conversely, if we weren't allowed to use a constructor, it wouldnt be as hard to manage, because the initialization would usually follow closely after the resource allocation. 
+ Consider the following example: 
+ int fun() { SomeBigObject* o = new SomeBigObject(); // assume empty constructor // 1. Initialize o->name = "someName"; o->number = 42; // ... // 2. Stuff happens, maybe early return, maybe exception delete o; // 3. Missing this is much more consequential! } 
+ Now lets assume SomeBigObject does have a more useful constructor, with the initalizations I made to be done there, but no destructor. Taken literally, you would have "acquired the resources" and "initialized them" with only a constructor - even though this is not what is generally understood by RAII, which usually entails the destructor that does the cleanup when something goes out of scope.
+ ​
+  
+Am I missing something or is there another good reason that I'm missing?
+ Why couldnt the committee think of a better name? It confused me a lot in the beginning. I think something like "Ownership & Valid intialization as a class invariant" or something.
+  
+   submitted by    /u/Gay-B0wser    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[5 years ago, I started making games. Today I made my first dollar. Wohooo!]]></title>
+        <id>https://www.reddit.com/r/godot/comments/1cxheim/5_years_ago_i_started_making_games_today_i_made/</id>
+        <link href="https://www.reddit.com/r/godot/comments/1cxheim/5_years_ago_i_started_making_games_today_i_made/"/>
+        <updated>2024-05-21T20:07:00.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/Thrawn911  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : godot</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How to learn and write secure C code from the start?]]></title>
+        <id>https://www.reddit.com/r/C_Programming/comments/1cxh50d/how_to_learn_and_write_secure_c_code_from_the/</id>
+        <link href="https://www.reddit.com/r/C_Programming/comments/1cxh50d/how_to_learn_and_write_secure_c_code_from_the/"/>
+        <updated>2024-05-21T19:56:39.000Z</updated>
+        <summary type="html"><![CDATA[Hello, I'm currently learning C and I'm on chapter 8 (Arrays) of C Programming: A modern approach by K.N.King. I have to say that this is something I should've learned during my undergrad and I'm on this journey at the moment of relearning everything and unlearning a lot of bad habits and misunderstandings. One of this is writing code you actually understand holistically and not code that just does something and it works. I remember learning unit testing for Java in one module and it sucked a lot. Since then I just ignored testing all together.
+ I want every line understood and every action and reaction accounted for, and so far on chapter 8, C gives me the ability to understand everything I do. It forces you to do you so, and I love it. My concern is as I progress through the book and lea…]]></summary>
+        <author>
+            <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[What are the most overrated/underrated technologies/ideas in software engineering in your opinion?]]></title>
+        <id>https://www.reddit.com/r/ExperiencedDevs/comments/1cxgyk3/what_are_the_most_overratedunderrated/</id>
+        <link href="https://www.reddit.com/r/ExperiencedDevs/comments/1cxgyk3/what_are_the_most_overratedunderrated/"/>
+        <updated>2024-05-21T19:49:30.000Z</updated>
+        <summary type="html"><![CDATA[Overrated: 
+ Microservices (yes, it's me who created the recent thread about MSA). The thread has some insightful stories and arguments, but I still feel like the hype around microservices did the industry a bad favor. 
+ MongoDB (closely related to the PG point below). I have several times heard my colleagues discuss MongoDB and want to use it at work. Every single time, my immediate reaction was to ask why and suggest using Postgres instead with its JSONB columns.
+ Clean/hexagonal architecture - I think that the underlying ideas (dependency inversion, single responsibility and the rest of SOLID) are great ways to reason about architecture. That said, the marketing hype about clean architecture seems to have created a cult of religious fans to the point where abstractions and layers of indirection are created just because that follows what Uncle Bob wrote in his article. Also, the popular argument of "now we can swap the database every day" is so unrealistic in my opinion. I don't really remember ever needing to unexpectedly swap a database. Maybe, I'm wrong. 
+ Underrated: 
+ Postgresql - even though it has a great reputation these days, I still think a lot of people would benefit a lot from knowing more about its features and potential. My personal favorite is using PG's FOR UPDATE SKIP LOCKED feature to implement a simple queue. Whenever I need a task queue, I immediately reach for it. 
+ Presentation/writing skills: I am not a great presenter and speaker myself, but the more I work as a software engineer, the more I realize that being concise, accurate, and engaging in your writing/speaking is a valuable asset. Not only does it make you more efficient in communication, your colleagues like you more, and your managers are likely to give you a promotion. 
+ What are yours?
+    submitted by    /u/dondraper36  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : ExperiencedDevs</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Latest News From Upcoming C++ Conferences (05/21/2024)]]></title>
+        <id>https://www.reddit.com/r/cpp/comments/1cxfsgy/latest_news_from_upcoming_c_conferences_05212024/</id>
+        <link href="https://www.reddit.com/r/cpp/comments/1cxfsgy/latest_news_from_upcoming_c_conferences_05212024/"/>
+        <updated>2024-05-21T19:01:47.000Z</updated>
+        <summary type="html"><![CDATA[Hello,
+ Just a note to say that we have had to change the format of this post slightly compared to previous posts we have done as unfortunately Reddit's spam filters have been blocking our previous posts (probably because it has too many links).
+ So this Reddit post will now be a roundup of any new news from upcoming conferences with then the full list now being available at https://programmingarchive.com/upcoming-conference-news/
+ New News
+  
+The full conference schedule for C++OnSea is now live https://cpponsea.uk/2024/schedule/
+ CppNorth are currently looking for volunteers! https://cppnorth.ca/news-volunteers-2024.html
+ CppCon are also looking for volunteers https://cppcon.org/cfv2024/
+ CppCon have again opened their "Attendance Support Ticket program" which offers free tickets (not in…]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Have you ever heard of an engineer negotiating a gradual exit?]]></title>
+        <id>https://www.reddit.com/r/ExperiencedDevs/comments/1cxeyah/have_you_ever_heard_of_an_engineer_negotiating_a/</id>
+        <link href="https://www.reddit.com/r/ExperiencedDevs/comments/1cxeyah/have_you_ever_heard_of_an_engineer_negotiating_a/"/>
+        <updated>2024-05-21T18:28:18.000Z</updated>
+        <summary type="html"><![CDATA[Context: - I'm a Staff engineer at a well known tech company with a mature engineering org. 15 years in the industry. Well compensated, great product and team. Been there 3.5 years, was promoted once, and given lots of recognition and leadership.
+  
+I am going to retire either in 2 months or 8 months to be a stay at home parent. For financial reasons, I'd prefer the 8 months. More vesting, bonus payout, and savings. But 2 months is fine too. 
+ 
+My manager is excellent. Best of my career. And also a decent guy who I'm relatively close with.
+ 
+I'm the embodiment of the bus factor. I work on a critical team, am the only one with deep experience in the product and code, and it's a pretty niche bit of technology. I haven't preferred it be this way, but we've generally been understaffed and overworked on executive priorities since we were acquired. This is just to say, I know it'll be hard on the team when I leave, and they're going to try and get me to stay.
+ 
+ My question:
+ I'm considering letting my manager know that I'll be leaving in X weeks (still not for sure when I'll give notice), but that I'd be open to staying on for up to 8 months, under the condition that I work a lot less (say 10 hours/week) with the expectation that I'd help KTLO, stabilize the team and backfill my role. 
+ But I won't stay for 8 months without a deal like that, for various family and personal reasons. 
+ I can imagine many reasons the org wouldn't go for something like this. But I'm curious if you've heard of anything like it, and if so, if you have any tips for how I'd approach it.
+ EDIT: sorry for any confusion, accidentally replied from an alt account
+    submitted by    /u/ElectricalKiwi3007  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : ExperiencedDevs</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How do you keep your modern C++ skills fresh?]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1cxedyh/how_do_you_keep_your_modern_c_skills_fresh/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1cxedyh/how_do_you_keep_your_modern_c_skills_fresh/"/>
+        <updated>2024-05-21T18:05:32.000Z</updated>
+        <summary type="html"><![CDATA[Hello,
+ I am a person who recently joined their first company a couple months ago. The role is decent, the pay is great… but the tech is outdated. We are still on C++17 at my firm and while I have learned some things during my time at this company, my company is in an industry where low latency programming is really important, and when I interviewed for other companies in the industry, they made it abundantly clear that expertise of C++20 and above is crucial for the industry.
+ I would like to get more modern C++ programming experience while I stay in this role so that I have some job mobility in case my future in this company goes awry. For those of you in jobs where the tech is behind, how do you manage to keep up? I’ve started reading some books on modern C++ programming and I’ve been trying to find open source projects to work on, but I haven’t really found many projects online that make use of a lot of the modern C++20 syntax (e.g. concepts, ranges, even older stuff like CRTP). Would appreciate any input!
+ Edit: think there are people dming me with the assumption that I’m just a beginner who just started cpp programming. Listen, I don’t claim to know everything but I’m not a dumbass either (so don’t patronize me), I am really just looking to get more experience working with implementing real systems with more modern (++20 and above) C++. I work in the trading industry, which is why I bring up C++20 specifically as that’s become standard with other competitors but is not largely available in the firm I work with yet.
+    submitted by    /u/Short_Memory_72    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[I created a tool for generating Mermaid diagrams from Terraform plans - It has a long way to go, but I think this could be a cool GitHub Action]]></title>
+        <id>https://www.reddit.com/r/devops/comments/1cxe37y/i_created_a_tool_for_generating_mermaid_diagrams/</id>
+        <link href="https://www.reddit.com/r/devops/comments/1cxe37y/i_created_a_tool_for_generating_mermaid_diagrams/"/>
+        <updated>2024-05-21T17:53:31.000Z</updated>
+        <summary type="html"><![CDATA[I created a tool for generating Mermaid diagrams in markdown that can be uploaded to a merge or pull request so that the plan is visualized. This is the first iteration so I would love some assistance in making it better since it has a long way to go! 
+ https://github.com/RoseSecurity/Terramaid 
+    submitted by    /u/RoseSec_  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : devops</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Different color formats, design patterns]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1cxdwq1/different_color_formats_design_patterns/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1cxdwq1/different_color_formats_design_patterns/"/>
+        <updated>2024-05-21T17:45:54.000Z</updated>
+        <summary type="html"><![CDATA[So I'm working on my own implementation of a color class; yet I'm having trouble with a pattern for different formats.
+ ```c++ #include <cstdint> #define NODISCARD [[nodiscard]]
+ /// \brief /// A color class that represents a color with red, green, blue and alpha components. /// The color can be represented as an unsigned integer, where r g b a are the starting bytes respectively, RRGGBBAA. /// \note The color components are unsigned. class color { protected: /// \brief Unsigned char type-definition. typedef unsigned char uchar; /// \brief A union to represent the color as an unsigned integer or as separate components. /// \note This way we can access the color as a whole or as separate components. union color_union { public: /// \brief The color as separate components. struct { uchar a, b…]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[trying to get c++20 compiler but getting c++17 instead]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1cxdu7m/trying_to_get_c20_compiler_but_getting_c17_instead/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1cxdu7m/trying_to_get_c20_compiler_but_getting_c17_instead/"/>
+        <updated>2024-05-21T17:42:58.000Z</updated>
+        <summary type="html"><![CDATA[so i'm on learn.cpp and i'm following the instructions to change the compiler. for my tasks.json, i have
+  "args": [ "-fdiagnostics-color=always", "-g", "-ggdb", "-O2", "-DNDEBUG", "-pedantic-errors", "-Wall", "-Weffc++", "-Wextra", "-Wconversion", "-Wsign-conversion", "-Werror", "-std=c++20", "${file}", 
+ for my settings.json, it's
+  "C_Cpp_Runner.cCompilerPath": "gcc", "C_Cpp_Runner.cppCompilerPath": "g++", "C_Cpp_Runner.debuggerPath": "gdb", "C_Cpp_Runner.cStandard": "", "C_Cpp_Runner.cppStandard": "", "C_Cpp.default.cppStandard": "c++20", 
+ on the terminal, it shows
+ Your compiler is using C++17 (language standard code 201703L) 
+    submitted by    /u/BigArchon    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[TIP: Don't turn your wheels! Scroll their texture.]]></title>
+        <id>https://www.reddit.com/r/godot/comments/1cxd5w1/tip_dont_turn_your_wheels_scroll_their_texture/</id>
+        <link href="https://www.reddit.com/r/godot/comments/1cxd5w1/tip_dont_turn_your_wheels_scroll_their_texture/"/>
+        <updated>2024-05-21T17:14:43.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/archiekatt  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : godot</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Weird error while developing a game engine]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1cxcu1w/weird_error_while_developing_a_game_engine/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1cxcu1w/weird_error_while_developing_a_game_engine/"/>
+        <updated>2024-05-21T17:01:06.000Z</updated>
+        <summary type="html"><![CDATA[I'm currently developing my own game engine, C-Engine, and I've hit an unexpected roadblock while implementing scenes. Suddenly, I encountered an error that has left me stumped.
+ the error seems to be something along the lines of
+ In file included from C:/Users/absol/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/vector:65, from F:/Cpp/C-Engine/engine/headers.hpp:20, from F:/Cpp/C-Engine/engine/GameObject.hpp:8, from F:/Cpp/C-Engine/engine/engine.hpp:8, from F:/Cpp/C-Engine/main.cpp:1: C:/Users/absol/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_uninitialized.h: In instantiation of 'constexpr bool std::__check_constructible() [with _ValueType = unique_ptr<engine::GameObjectBehavior>; _Tp = const unique_pt…]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[RustRover just announced first stable launch and it will be free for non-commercial use 🥳]]></title>
+        <id>https://www.reddit.com/r/rust/comments/1cxbnsb/rustrover_just_announced_first_stable_launch_and/</id>
+        <link href="https://www.reddit.com/r/rust/comments/1cxbnsb/rustrover_just_announced_first_stable_launch_and/"/>
+        <updated>2024-05-21T16:11:41.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/Southern-Diamond4008  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : rust</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[North Korea hackers target US ally]]></title>
+        <id>https://www.reddit.com/r/hacking/comments/1cxb24n/north_korea_hackers_target_us_ally/</id>
+        <link href="https://www.reddit.com/r/hacking/comments/1cxb24n/north_korea_hackers_target_us_ally/"/>
+        <updated>2024-05-21T15:46:52.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/jas26  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : hacking</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[whatIGoThroughToManuallyInstall]]></title>
+        <id>https://www.reddit.com/r/ProgrammerHumor/comments/1cxao3g/whatigothroughtomanuallyinstall/</id>
+        <link href="https://www.reddit.com/r/ProgrammerHumor/comments/1cxao3g/whatigothroughtomanuallyinstall/"/>
+        <updated>2024-05-21T15:30:11.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/TobyWasBestSpiderMan  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : ProgrammerHumor</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Weird namespaced #include bug]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1cx9u9z/weird_namespaced_include_bug/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1cx9u9z/weird_namespaced_include_bug/"/>
+        <updated>2024-05-21T14:55:12.000Z</updated>
+        <summary type="html"><![CDATA[While i was working on a Raylib project i came across this issue that took me a while to find the root of, the following is a simplified recreation:
+ customlib.h ```cpp
+ ifndef CUSTOMLIB_H
+ define CUSTOMLIB_H
+ typedef struct foo{ int data; }foo;
+ inline int doStuff(int n){ return n*2; }
+ endif
+ ```
+ main.cpp ```cpp
+ include <iostream>
+ include "customlib.h"
+ include "MyClass.hpp"
+ int main(){ int temp = doStuff(42); MyClass myclass; myclass.printFooVec(); return 0; } ```
+ MyClass.hpp ```cpp
+ pragma once
+ include <vector>
+ namespace Cuslib{
+ include "customlib.h"
+ }
+ class MyClass{ private: std::vector<Cuslib::foo> m_fooVec; public: void printFooVec(); }; ```
+ MyClass.cpp ```cpp
+ include <iostream>
+ include <vector>
+ include "MyClass.hpp"
+ namespace Cuslib{
+ include "customlib.h"
+ }
+ void MyClass::printFooVec(){ Cuslib::foo temp; temp.data = Cuslib::doStuff(420); m_fooVec.push_back(temp); for(const auto& element : m_fooVec){ std::cout << element.data << " "; } std::cout << std::endl; } ```
+ Despite the implementation file (MyClass.cpp) having free access to the customlib methods and types, the header (MyClass.hpp) is completely unable to access anything from it, returning a compilation error if you try to use the "foo" struct under any context. This is all because the "#include 'customlib.h'" back at the main.cpp file is not wrapped with the Cuslib namespace, when you add it the whole code compiles as normal. Does anyone have any idea on why that happens?
+ Edit: code formatted
+    submitted by    /u/jenkem_boofer    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Qt 6.7.1 Released]]></title>
+        <id>https://www.reddit.com/r/cpp/comments/1cx9az2/qt_671_released/</id>
+        <link href="https://www.reddit.com/r/cpp/comments/1cx9az2/qt_671_released/"/>
+        <updated>2024-05-21T14:31:25.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/Neustradamus    to    r/cpp  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[CHIP-8] Correct behaviour on non-defined cases?]]></title>
+        <id>https://www.reddit.com/r/EmuDev/comments/1cx90u2/chip8_correct_behaviour_on_nondefined_cases/</id>
+        <link href="https://www.reddit.com/r/EmuDev/comments/1cx90u2/chip8_correct_behaviour_on_nondefined_cases/"/>
+        <updated>2024-05-21T14:18:52.000Z</updated>
+        <summary type="html"><![CDATA[Hello!
+ I'm a first-time emu-developer. I started with a Chip-8 emulator, following the Tobias V. Langhoff tutorial.
+ I'm coding in C, because I already knew the language, but I didn't use it since 2010... So it's a good refresh ;)
+ Anyway, I have some questions about non defined cases... What I mean: what should the emulator behavoiur be in those cases?
+  
+A wrong opcode is found. Should the emulator just ignore it and increment (by 2) the PC?
+ The PC is greater than 4096 (CP overflow). Just ignore the higher bits and limit the counter to 12 bits?
+ The SP is greater than 16 (stack overflow). The same way, ignoring the higher bits and limit SP to 4 bits?
+  
+Thank you for your help! :D
+    submitted by    /u/menguanito  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>Developing Emulators</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Tutorial: Install a specific version of the Boost libraries using registry baselines]]></title>
+        <id>https://www.reddit.com/r/cpp/comments/1cx8dmb/tutorial_install_a_specific_version_of_the_boost/</id>
+        <link href="https://www.reddit.com/r/cpp/comments/1cx8dmb/tutorial_install_a_specific_version_of_the_boost/"/>
+        <updated>2024-05-21T13:50:01.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/joaquintides    to    r/cpp  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Amber - the programming language compiled to Bash]]></title>
+        <id>https://www.reddit.com/r/programming/comments/1cx88xv/amber_the_programming_language_compiled_to_bash/</id>
+        <link href="https://www.reddit.com/r/programming/comments/1cx88xv/amber_the_programming_language_compiled_to_bash/"/>
+        <updated>2024-05-21T13:43:48.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/PhoenixVisionary  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : programming</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Remote Code Execution via Man-in-the-Middle (and more) in NASA's AIT-Core v2.5.2]]></title>
+        <id>https://www.reddit.com/r/hacking/comments/1cx81by/remote_code_execution_via_maninthemiddle_and_more/</id>
+        <link href="https://www.reddit.com/r/hacking/comments/1cx81by/remote_code_execution_via_maninthemiddle_and_more/"/>
+        <updated>2024-05-21T13:33:53.000Z</updated>
+        <summary type="html"><![CDATA[Remote Code Execution via Man-in-the-Middle (and more) in NASA's AIT-Core v2.5.2 https://www.linkedin.com/pulse/remote-code-execution-via-man-in-the-middle-more-ujkze
+    submitted by    /u/andy-codes  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : hacking</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[I am a C noob learning from ChatGPT, ChatGPT is always error checking everything, can I skip it?]]></title>
+        <id>https://www.reddit.com/r/C_Programming/comments/1cx80qv/i_am_a_c_noob_learning_from_chatgpt_chatgpt_is/</id>
+        <link href="https://www.reddit.com/r/C_Programming/comments/1cx80qv/i_am_a_c_noob_learning_from_chatgpt_chatgpt_is/"/>
+        <updated>2024-05-21T13:33:04.000Z</updated>
+        <summary type="html"><![CDATA[ChatGPT thinks it is a good idea when i ask it. But what do real people think? Is error handling important in C? I come from Java and I never did that, I assume that the language does what it is supposed to do. Is that not the case with C? Why all these error flags all over the place?
+ Here is an example where i just want to convert a string to a double. Chat GPT goes crazy with error checking. Should I ignore it even though ChatGPT loves it?
+ #include <stdio.h> #include <stdlib.h> #include <errno.h> #include <limits.h> #include <float.h> int main() { char str[] = "123.456"; char *endptr; double num; errno = 0; // Reset errno before call num = strtod(str, &endptr); if (endptr == str) { printf("Conversion failed, no digits were found\n"); } else if (errno == ERANGE) { if (num == HUGE_VAL) { printf("Overflow occurred\n"); } else if (num == 0) { printf("Underflow occurred\n"); } } else { printf("The number is %f\n", num); } return 0; } 
+    submitted by    /u/reza_132  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Facing issue regarding test 5 of chip8-test-suite]]></title>
+        <id>https://www.reddit.com/r/EmuDev/comments/1cx7yfi/facing_issue_regarding_test_5_of_chip8testsuite/</id>
+        <link href="https://www.reddit.com/r/EmuDev/comments/1cx7yfi/facing_issue_regarding_test_5_of_chip8testsuite/"/>
+        <updated>2024-05-21T13:30:11.000Z</updated>
+        <summary type="html"><![CDATA[I'm Developing a Chip8 Emulator using C & SDL2
+ I have got optimal results for test 1, 2, 3 & 4 for the tests provided here, I seem to face issue in menu selection in test 5.
+  
+Firstly, I am able to press keys (key presses and release are being logged) but the emulator doesn't respond to my key presses. I have looked at the opcode for key press many times I can't seem to find the problem.
+ Secondly, after rendering there should be a blinking box at the left of the emulator screen like this, but I get a static box at top of my Superchip 'p'.
+  
+My Emulator Screenshot 
+ Here is my Code CHIP8.C & Here is my log file, Any Help would be really appreciated.
+    submitted by    /u/N91489  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>Developing Emulators</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Kind of at an impasse. Mid 30s senior engineer with no desire to enter into management and mulling over future career options.]]></title>
+        <id>https://www.reddit.com/r/cscareerquestions/comments/1cx6w4f/kind_of_at_an_impasse_mid_30s_senior_engineer/</id>
+        <link href="https://www.reddit.com/r/cscareerquestions/comments/1cx6w4f/kind_of_at_an_impasse_mid_30s_senior_engineer/"/>
+        <updated>2024-05-21T12:39:07.000Z</updated>
+        <summary type="html"><![CDATA[Just curious what other people in my age range and YOE (~10) are doing to grow their careers. My compensation is about ~$200k with a ~10% bonus, which seems fantastic and I would have never dreamed of even a few years ago, but the problem is you get used to it and then after a few years of working hard and not being rewarded more (my salary is pretty much at the top end and not gonna increase much according to my employer), the motivation to work hard starts to drop and you start to look for the next thing. The field I work in is computer vision so it's somewhat niche and pays decent, although not super high end unless you do FAANG or more advanced deep learning. Anyway, the problem I'm facing right now is I don't see a path forward really in terms of career growth. What I've noticed is pe…]]></summary>
+        <author>
+            <name>top scoring links : cscareerquestions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How to Implement Job Queues in Go? Do They Follow Similar Principles as Laravel's Database Jobs?]]></title>
+        <id>https://www.reddit.com/r/golang/comments/1cx6not/how_to_implement_job_queues_in_go_do_they_follow/</id>
+        <link href="https://www.reddit.com/r/golang/comments/1cx6not/how_to_implement_job_queues_in_go_do_they_follow/"/>
+        <updated>2024-05-21T12:27:08.000Z</updated>
+        <summary type="html"><![CDATA[Hi everyone,
+ I've been working with the Laravel framework and I'm quite familiar with its job queue system, specifically using database jobs and failed_jobs tables for managing asynchronous tasks.
+ Recently, I've started a project in Go and I need to implement a job queue system. I'm wondering:
+  
+What are the best practices for creating job queues in Go?
+ Are there any libraries or frameworks that follow a similar approach to Laravel's job queues, particularly using database tables for jobs and failed jobs?
+ How do error handling and retry mechanisms work in Go job queues compared to Laravel?
+  
+Any advice, examples, or resources would be greatly appreciated!
+ Thanks in advance!
+    submitted by    /u/mostafaLaravel  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : golang</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Concept requirement's return condition can't include ||?]]></title>
         <id>https://www.reddit.com/r/cpp_questions/comments/1cx61em/concept_requirements_return_condition_cant_include/</id>
@@ -20,6 +507,17 @@
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Processes don't create ownership, people do]]></title>
+        <id>https://www.reddit.com/r/programming/comments/1cx5oxs/processes_dont_create_ownership_people_do/</id>
+        <link href="https://www.reddit.com/r/programming/comments/1cx5oxs/processes_dont_create_ownership_people_do/"/>
+        <updated>2024-05-21T11:35:15.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/workflow91  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : programming</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Help needed with handling multiple files in C++]]></title>
         <id>https://www.reddit.com/r/cpp_questions/comments/1cx5lt7/help_needed_with_handling_multiple_files_in_c/</id>
         <link href="https://www.reddit.com/r/cpp_questions/comments/1cx5lt7/help_needed_with_handling_multiple_files_in_c/"/>
@@ -30,6 +528,17 @@
  [link]   [comments]]]></summary>
         <author>
             <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Didn't want to draw the sea by hand, so...]]></title>
+        <id>https://www.reddit.com/r/godot/comments/1cx4od9/didnt_want_to_draw_the_sea_by_hand_so/</id>
+        <link href="https://www.reddit.com/r/godot/comments/1cx4od9/didnt_want_to_draw_the_sea_by_hand_so/"/>
+        <updated>2024-05-21T10:33:16.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/LunaticWyrm467  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : godot</name>
         </author>
     </entry>
     <entry>
@@ -57,6 +566,17 @@
  [link]   [comments]]]></summary>
         <author>
             <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[SQL at 50: What’s next for the structured query language?]]></title>
+        <id>https://www.reddit.com/r/programming/comments/1cx464z/sql_at_50_whats_next_for_the_structured_query/</id>
+        <link href="https://www.reddit.com/r/programming/comments/1cx464z/sql_at_50_whats_next_for_the_structured_query/"/>
+        <updated>2024-05-21T10:00:02.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/Franco1875  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : programming</name>
         </author>
     </entry>
     <entry>
@@ -134,6 +654,17 @@
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[When allocating unused memory boosts performance by 2x]]></title>
+        <id>https://www.reddit.com/r/rust/comments/1cx33oa/when_allocating_unused_memory_boosts_performance/</id>
+        <link href="https://www.reddit.com/r/rust/comments/1cx33oa/when_allocating_unused_memory_boosts_performance/"/>
+        <updated>2024-05-21T08:40:11.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/Pascalius  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : rust</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Free AI copilot]]></title>
         <id>https://www.reddit.com/r/cpp/comments/1cx2yve/free_ai_copilot/</id>
         <link href="https://www.reddit.com/r/cpp/comments/1cx2yve/free_ai_copilot/"/>
@@ -155,6 +686,20 @@
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : rust</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How do you deal with migrating devs from local to online staging? Instead of them waiting for ci till cd?]]></title>
+        <id>https://www.reddit.com/r/devops/comments/1cx2s77/how_do_you_deal_with_migrating_devs_from_local_to/</id>
+        <link href="https://www.reddit.com/r/devops/comments/1cx2s77/how_do_you_deal_with_migrating_devs_from_local_to/"/>
+        <updated>2024-05-21T08:15:57.000Z</updated>
+        <summary type="html"><![CDATA[For example, the app has elk which needs a cluster of computers, which isn’t possible in local computing. So integration is limited when devs on local. 
+ So there’s a solution apparently, for devs to see much faster change than to wait for a ci to push and pull image for deployment, which can take 30 min. 
+ I was in an interview for a company and he said they inject side cars in the pods and use headers manipulations from the staging servers. So that devs will see the change much faster. Than just wait for ci. 
+    submitted by    /u/pathlesswalker  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : devops</name>
         </author>
     </entry>
     <entry>
@@ -478,6 +1023,31 @@ i appreciate it if you recommended me.
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Do y'all actually work a "9-5" or do you work more/less?]]></title>
+        <id>https://www.reddit.com/r/cscareerquestions/comments/1cwqhkb/do_yall_actually_work_a_95_or_do_you_work_moreless/</id>
+        <link href="https://www.reddit.com/r/cscareerquestions/comments/1cwqhkb/do_yall_actually_work_a_95_or_do_you_work_moreless/"/>
+        <updated>2024-05-20T21:07:48.000Z</updated>
+        <summary type="html"><![CDATA[I work full in office even though everything I do is already done via teams or email anyways, but I don't work "9-5" more "8-5" as I don't get an hour paid lunch, and since I'm fully in office I have to sit at the desk all day. I can take an occasional break to go to the bathroom or maybe a nice brisk walk but if my breaks are consistently longer then 20-30mins, or I take multiple (2 or more) a day, people get suspicious.
+ I'm wondering what y'alls work environments are like? Do you have the "hour paid lunch" amd work a "9-5" and do you work remote? If you work remote do you sit at your desk at home for the entire time you're working? If you need to do a quick 30 minute errand/whatever causes to be away from your desk for an extended period of time do you "clock-out"/work the extra 30 mins, or however long you were out, take vacation, or not do anything? 
+ Or do yall work like 4 hours a day and claim you're working 8 hours and just do whatever else whenever you can? 
+    submitted by    /u/ThrowRA-IAmABadFrend  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : cscareerquestions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[I spent 6 years developing a puzzle game in Rust and it just shipped on Steam this, AMA!]]></title>
+        <id>https://www.reddit.com/r/rust/comments/1cwqd8i/i_spent_6_years_developing_a_puzzle_game_in_rust/</id>
+        <link href="https://www.reddit.com/r/rust/comments/1cwqd8i/i_spent_6_years_developing_a_puzzle_game_in_rust/"/>
+        <updated>2024-05-20T21:02:38.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/MasonRemaley  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : rust</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Combinations, like itertools.combinations from Python]]></title>
         <id>https://www.reddit.com/r/C_Programming/comments/1cwq3ji/combinations_like_itertoolscombinations_from/</id>
         <link href="https://www.reddit.com/r/C_Programming/comments/1cwq3ji/combinations_like_itertoolscombinations_from/"/>
@@ -538,6 +1108,20 @@ i appreciate it if you recommended me.
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Slow build causing mental fatigue]]></title>
+        <id>https://www.reddit.com/r/ExperiencedDevs/comments/1cwpeq7/slow_build_causing_mental_fatigue/</id>
+        <link href="https://www.reddit.com/r/ExperiencedDevs/comments/1cwpeq7/slow_build_causing_mental_fatigue/"/>
+        <updated>2024-05-20T20:22:52.000Z</updated>
+        <summary type="html"><![CDATA[It seems slightly counter-intuitive that moving slower would increase fatigue, but that is what is happening. I recently switched teams and the build process on the team I joined is much more complex and slower, and my capacity to focus on work is tanking.
+ I think I've heard about studies have data to back up this phenomenon, but my search attempts haven't surfaced those studies. I'd appreciate if anyone here can help me out.
+ I'd love to share anytime on the subject with my new team and leadership to show the opportunity cost of the current process. Thanks!
+    submitted by    /u/wakingupfan  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : ExperiencedDevs</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Evil-Helix: A super fast modal editor with Vim keybindings]]></title>
         <id>https://www.reddit.com/r/rust/comments/1cwoyv3/evilhelix_a_super_fast_modal_editor_with_vim/</id>
         <link href="https://www.reddit.com/r/rust/comments/1cwoyv3/evilhelix_a_super_fast_modal_editor_with_vim/"/>
@@ -551,6 +1135,17 @@ i appreciate it if you recommended me.
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : rust</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[What a community-led shift to independent fan wikis means for game developers]]></title>
+        <id>https://www.reddit.com/r/gamedev/comments/1cwol8a/what_a_communityled_shift_to_independent_fan/</id>
+        <link href="https://www.reddit.com/r/gamedev/comments/1cwol8a/what_a_communityled_shift_to_independent_fan/"/>
+        <updated>2024-05-20T19:49:42.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/SlurryBender  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : gamedev</name>
         </author>
     </entry>
     <entry>
@@ -635,6 +1230,19 @@ Microcontroller Systems: An introduction to the fundamentals that drive embedded
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : programming</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[how many of you are genuinely scared about your future?]]></title>
+        <id>https://www.reddit.com/r/cscareerquestions/comments/1cwlyy5/how_many_of_you_are_genuinely_scared_about_your/</id>
+        <link href="https://www.reddit.com/r/cscareerquestions/comments/1cwlyy5/how_many_of_you_are_genuinely_scared_about_your/"/>
+        <updated>2024-05-20T18:02:06.000Z</updated>
+        <summary type="html"><![CDATA[I don't care whether it's because of the AI, economy, layoffs, shitty management, outsourcing to all our indian brothers and sisters, leetcode, constant ups killing, interviewing....or whatever else.
+ Who else has trouble sleeping at night knowing that things are only going to get worser.
+    submitted by    /u/desperate-1  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : cscareerquestions</name>
         </author>
     </entry>
     <entry>
@@ -1083,6 +1691,47 @@ input:
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[The kids' bedroom is done.]]></title>
+        <id>https://www.reddit.com/r/godot/comments/1cwfz2w/the_kids_bedroom_is_done/</id>
+        <link href="https://www.reddit.com/r/godot/comments/1cwfz2w/the_kids_bedroom_is_done/"/>
+        <updated>2024-05-20T13:46:05.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/AshenWing_Orwen  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : godot</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Self-hosted alternatives to PagerDuty]]></title>
+        <id>https://www.reddit.com/r/devops/comments/1cwfvbb/selfhosted_alternatives_to_pagerduty/</id>
+        <link href="https://www.reddit.com/r/devops/comments/1cwfvbb/selfhosted_alternatives_to_pagerduty/"/>
+        <updated>2024-05-20T13:41:29.000Z</updated>
+        <summary type="html"><![CDATA[Hi all,
+ Wondering if anybody has experience with self-hosted alert management systems like PagerDuty? The specific features I'm looking for:
+ - Centralised Alerts - SPOG for all alerts from all systems so these can be reviewed as part of a process
+ - Assignable alerts - e.g. Server 1 is down has been assigned to Engineer 1
+ - Basic escalation - nothing too fancy, if something hasn't been assigned or hasn't been resolved in X amount of time then do X action
+ - OSS would be looovely
+ Anybody know of any such system? 
+ Thanks in advance
+    submitted by    /u/benkloos  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : devops</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[A small trading port]]></title>
+        <id>https://www.reddit.com/r/godot/comments/1cwfq6b/a_small_trading_port/</id>
+        <link href="https://www.reddit.com/r/godot/comments/1cwfq6b/a_small_trading_port/"/>
+        <updated>2024-05-20T13:35:00.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/mightofmerchants  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : godot</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[RustRover 2024.1 drops support for JavaScript/TypeScript]]></title>
         <id>https://www.reddit.com/r/rust/comments/1cwfad8/rustrover_20241_drops_support_for/</id>
         <link href="https://www.reddit.com/r/rust/comments/1cwfad8/rustrover_20241_drops_support_for/"/>
@@ -1337,6 +1986,19 @@ Good luck in your projects everybody.
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[What's up with all the crappy reviews from people who "received this product for free?"]]></title>
+        <id>https://www.reddit.com/r/gamedev/comments/1cwbgsa/whats_up_with_all_the_crappy_reviews_from_people/</id>
+        <link href="https://www.reddit.com/r/gamedev/comments/1cwbgsa/whats_up_with_all_the_crappy_reviews_from_people/"/>
+        <updated>2024-05-20T09:35:03.000Z</updated>
+        <summary type="html"><![CDATA[See this example: https://i.gyazo.com/e515ad9ada4aeae9e31ae3bee54a99a0.png
+ Has anyone else noticed a ton of these types of low effort reviews on Steam from people who got free copies of the game? I'm wondering, why are developers giving copies to these people? How is this happening?
+    submitted by    /u/ahumanbyanyothername  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : gamedev</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Taking up C++ again, are C++20 specifics etc. necessary for coding comps and junior interviews?]]></title>
         <id>https://www.reddit.com/r/cpp/comments/1cwacsu/taking_up_c_again_are_c20_specifics_etc_necessary/</id>
         <link href="https://www.reddit.com/r/cpp/comments/1cwacsu/taking_up_c_again_are_c20_specifics_etc_necessary/"/>
@@ -1410,6 +2072,17 @@ Good luck in your projects everybody.
  [link]   [comments]]]></summary>
         <author>
             <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[proposal: Add simd package to standard library]]></title>
+        <id>https://www.reddit.com/r/golang/comments/1cw4t1f/proposal_add_simd_package_to_standard_library/</id>
+        <link href="https://www.reddit.com/r/golang/comments/1cw4t1f/proposal_add_simd_package_to_standard_library/"/>
+        <updated>2024-05-20T02:18:21.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/clementjean  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : golang</name>
         </author>
     </entry>
     <entry>
@@ -1854,6 +2527,22 @@ Is this too much? Do other projects do similar things? My thinking with the two 
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : godot</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[What is your thoughts on keeping your game secret?]]></title>
+        <id>https://www.reddit.com/r/gamedev/comments/1cvuhe4/what_is_your_thoughts_on_keeping_your_game_secret/</id>
+        <link href="https://www.reddit.com/r/gamedev/comments/1cvuhe4/what_is_your_thoughts_on_keeping_your_game_secret/"/>
+        <updated>2024-05-19T18:12:21.000Z</updated>
+        <summary type="html"><![CDATA[What is your thoughts on keeping your game secret? Vs. sharing it for exposure? Is there a certain stage of development where it makes sense to start releasing footage of it for marketing purposes? Is it paranoid to be afraid of one's idea getting stolen? Please share any thoughts on this subject.
+ I have been developing a game full-time for almost a year by myself. The game is an idea that I have had for a while and that I believe to be both original and eye-catching. I myself enjoy playing what I have created so far, and friends and family that have played have also had the reaction that I was hoping for.
+ As of now I have been keeping my game very close to the chest. But I am currently considering looking for investments in my game and then I would obviously have to share everything about it. I am not super scared that a potential investor would steal it, since I would try to only approach serious actors but if you have any thoughts on this please share them.
+ Edit:
+ Thank you all for your input! But all I see is a bunch of people trying to convince me to share my idea so they can steal it.. /s No, but for real, I really appreciate all your views and I hear what many of you are saying about the importance of exposure and the low likelihood that anyone will put in the effort to steal something that has not yet been proven. I will rethink my approach and will share my game sooner than I intended. But first I want to have a few more features in place and some minimal polishing as well. The thought of sharing it is a little scary but also cool since it feel more real in a way. 
+    submitted by    /u/Minelinefine  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : gamedev</name>
         </author>
     </entry>
     <entry>
@@ -2409,6 +3098,17 @@ Configured with: --prefix=/Library/Developer/CommandLineTools/usr --with-gxx-inc
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : godot</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[whenCCodeWorks]]></title>
+        <id>https://www.reddit.com/r/ProgrammerHumor/comments/1cvhold/whenccodeworks/</id>
+        <link href="https://www.reddit.com/r/ProgrammerHumor/comments/1cvhold/whenccodeworks/"/>
+        <updated>2024-05-19T06:17:07.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/proh14  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : ProgrammerHumor</name>
         </author>
     </entry>
     <entry>
@@ -3454,6 +4154,18 @@ Fortunately, the last version of C++ Builder seems to be moving away from Dinkum
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[How does a high quality looking game like Avatar: Frontiers of Pandora even get built without loosing good performance?]]></title>
+        <id>https://www.reddit.com/r/gamedev/comments/1cutakm/how_does_a_high_quality_looking_game_like_avatar/</id>
+        <link href="https://www.reddit.com/r/gamedev/comments/1cutakm/how_does_a_high_quality_looking_game_like_avatar/"/>
+        <updated>2024-05-18T09:14:51.000Z</updated>
+        <summary type="html"><![CDATA[I’m an indie dev and I struggle so hard with things like foliage, lighting, 4K texture streaming, without lowering my FPS or putting everything in 2K quality. I understand big gaming companies have a lot of money and resources, but it just baffles me that they can put together such a good looking game. For context I use UE5 for all my projects; have a 4090 RTX, super high quality monitors, and 16GB ram. As soon as I start adding foliage to a large, somewhat open world, my FPS slows down like crazy. To the point that I have to choose trees over grass sometimes as an example. I use LODs, low draw distance, but it doesn’t seem to help. I don’t know how a big company like Ubisoft can throw that much high quality foliage in their game alongside exceptional lighting without destroying the games performance? If any of you work for a company like this can you shed some light on this for me?? I am hoping to build higher quality forests in my game without tanking my FPS and maintaining 4K textures. 
+    submitted by    /u/Thad-Stathos  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : gamedev</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[What is the most efficient way to paralelise a portion of code in C++ (a for loop) without using vectors?]]></title>
         <id>https://www.reddit.com/r/C_Programming/comments/1cut9wq/what_is_the_most_efficient_way_to_paralelise_a/</id>
         <link href="https://www.reddit.com/r/C_Programming/comments/1cut9wq/what_is_the_most_efficient_way_to_paralelise_a/"/>
@@ -3836,6 +4548,21 @@ check it out on GitHub: Focus Exporter
  [link]   [comments]]]></summary>
         <author>
             <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[The reality of game dev for my past year.]]></title>
+        <id>https://www.reddit.com/r/gamedev/comments/1cuhn63/the_reality_of_game_dev_for_my_past_year/</id>
+        <link href="https://www.reddit.com/r/gamedev/comments/1cuhn63/the_reality_of_game_dev_for_my_past_year/"/>
+        <updated>2024-05-17T22:05:10.000Z</updated>
+        <summary type="html"><![CDATA[6 months: locomotion, combat, health system, stamina system, combo system, different weapon types, directional attacking and defendkng, limb removal, farming (watering, terraforming, planting, harvesting) bas building, creating prefabs, placing individual walls, work benches ect, then finally pickups with lead to
+ Next 6 months: inventory system and ui. 
+ Now I wil preface this by saying I only work on it here and there, not full time and I have gone through a few different inventory systems just to try them out, but God damn ui and inventory is so much work. If you don't at least sort of like data structures and algorithms, don't ever make an rpg with an inventory system. 
+ Just throwing that out there lol, what have your hang ups been while working on your own game?
+    submitted by    /u/ghostwilliz  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : gamedev</name>
         </author>
     </entry>
     <entry>
@@ -5505,6 +6232,19 @@ Has this sort of thing happened to anyone else?
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : cscareerquestions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Our Godot party brawler now has a demo on Steam]]></title>
+        <id>https://www.reddit.com/r/godot/comments/1ctbppf/our_godot_party_brawler_now_has_a_demo_on_steam/</id>
+        <link href="https://www.reddit.com/r/godot/comments/1ctbppf/our_godot_party_brawler_now_has_a_demo_on_steam/"/>
+        <updated>2024-05-16T12:27:38.000Z</updated>
+        <summary type="html"><![CDATA[My childhood friend and I have been working on this game for almost a full year and are finally ready to release the demo which contains a slice of the content that we have planned for the full game. Grab a buddy and try it out! 
+ Steam link: https://store.steampowered.com/app/2643290/Oblin_Party?utm_source=reddit_godot&utm_campaign=demo&utm_medium=web
+    submitted by    /u/JoelBesada  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : godot</name>
         </author>
     </entry>
     <entry>

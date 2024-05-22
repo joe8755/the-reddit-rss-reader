@@ -6,6 +6,26 @@
       "siteUrl": "https://www.reddit.com/r/C_Programming/",
       "articles": [
         {
+          "id": "https://www.reddit.com/r/C_Programming/comments/1cxh50d/how_to_learn_and_write_secure_c_code_from_the/",
+          "author": null,
+          "description": "Hello, I'm currently learning C and I'm on chapter 8 (Arrays) of C Programming: A modern approach by K.N.King. I have to say that this is something I should've learned during my undergrad and I'm on this journey at the moment of relearning everything and unlearning a lot of bad habits and misunderstandings. One of this is writing code you actually understand holistically and not code that just does something and it works. I remember learning unit testing for Java in one module and it sucked a lot. Since then I just ignored testing all together.\n I want every line understood and every action and reaction accounted for, and so far on chapter 8, C gives me the ability to understand everything I do. It forces you to do you so, and I love it. My concern is as I progress through the book and lea…",
+          "link": "https://www.reddit.com/r/C_Programming/comments/1cxh50d/how_to_learn_and_write_secure_c_code_from_the/",
+          "publishedOn": "2024-05-21T19:56:39.000Z",
+          "wordCount": null,
+          "title": "How to learn and write secure C code from the start?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/C_Programming/comments/1cx80qv/i_am_a_c_noob_learning_from_chatgpt_chatgpt_is/",
+          "author": null,
+          "description": "ChatGPT thinks it is a good idea when i ask it. But what do real people think? Is error handling important in C? I come from Java and I never did that, I assume that the language does what it is supposed to do. Is that not the case with C? Why all these error flags all over the place?\n Here is an example where i just want to convert a string to a double. Chat GPT goes crazy with error checking. Should I ignore it even though ChatGPT loves it?\n #include <stdio.h> #include <stdlib.h> #include <errno.h> #include <limits.h> #include <float.h> int main() { char str[] = \"123.456\"; char *endptr; double num; errno = 0; // Reset errno before call num = strtod(str, &endptr); if (endptr == str) { printf(\"Conversion failed, no digits were found\\n\"); } else if (errno == ERANGE) { if (num == HUGE_VAL) { printf(\"Overflow occurred\\n\"); } else if (num == 0) { printf(\"Underflow occurred\\n\"); } } else { printf(\"The number is %f\\n\", num); } return 0; } \n    submitted by    /u/reza_132  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/C_Programming/comments/1cx80qv/i_am_a_c_noob_learning_from_chatgpt_chatgpt_is/",
+          "publishedOn": "2024-05-21T13:33:04.000Z",
+          "wordCount": null,
+          "title": "I am a C noob learning from ChatGPT, ChatGPT is always error checking everything, can I skip it?",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/C_Programming/comments/1cx3eub/noob_question/",
           "author": null,
           "description": "TL;DR: Without printing the size of the array at the end of the program, it doesn't print the last element of the array..\n Hello I'm implementing selection sort algorithm, but having bit of wired behavior in my program. If I don't write the a printf statement for the size of the array at the end of the program, the last element in the sorted array doesn't get printed out. Can anyone point out what I'm doing wrong here:\n int Arr[] = {43, 56, 232, 11, 8, 900, 32, 67};\n int size = sizeof(Arr)/sizeof(Arr[0]);\n for(int i=0; i<size-1; ++i)\n {\n `int temp;` `int j;` `for(j = i+1; j < size; ++j)` `{` \n if(Arr[i] > Arr[j])\n {\n  `temp = Arr[i];` `Arr[i] = Arr[j];` `Arr[j] = temp;` \n } \n  `}` \n }\n printf(\"\\n Conditioned array:\");\n for(int i=0; i<size; i++)\n {\n printf(\"\\n%d\", Arr[i]);\n };\n printf(\"\\nSize: %d\\n\", size);\n    submitted by    /u/Adham_Elkady  \n [link]   [comments]",
@@ -1972,6 +1992,166 @@
       "feedUrl": "https://www.reddit.com/r/cpp+cpp_questions/.rss",
       "siteUrl": "https://www.reddit.com/r/cpp+cpp_questions/",
       "articles": [
+        {
+          "id": "https://www.reddit.com/r/cpp_questions/comments/1cxo85p/is_there_any_point_to_thinking_about_the_order_in/",
+          "author": null,
+          "description": "Are there issues with alignment / padding like struct members or will the compiler take care of it?\n    submitted by    /u/mercury_pointer    to    r/cpp_questions  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp_questions/comments/1cxo85p/is_there_any_point_to_thinking_about_the_order_in/",
+          "publishedOn": "2024-05-22T01:16:28.000Z",
+          "wordCount": null,
+          "title": "Is there any point to thinking about the order in which stack variables are declared?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp_questions/comments/1cxo123/child_thread_catches_the_signal_ctrl_c/",
+          "author": null,
+          "description": "This is my first time to use multithread. On my main, I have signal_handler to properly shutdown my program. There are times that the signal_handler is not working meaning that the child thread catches the signal not the main thread.\n Is there a way to block the signal on the child thread so that only the main thread catches it?\n    submitted by    /u/racaraca69    to    r/cpp_questions  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp_questions/comments/1cxo123/child_thread_catches_the_signal_ctrl_c/",
+          "publishedOn": "2024-05-22T01:05:58.000Z",
+          "wordCount": null,
+          "title": "child thread catches the signal (CTRL + C)",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp_questions/comments/1cxlm4l/kendall_correlation_or_counting_inversions/",
+          "author": null,
+          "description": "Hi!\n I am trying to write a decent implementation of Kendall's correlation and I came up with this https://github.com/pachadotdev/capybara/blob/main/src/05_pairwise_correlation.cpp, and I wonder how can I improve my computation. I tested against the usual cases (i.e., x = {1,2,3} and y = {3,2,1} that has Kendall Cor = -1) and for the values in the between the extremes I just get a decent approximate value.\n Here is my code:\n #include \"00_main.h\" // https://en.wikipedia.org/wiki/Kendall_rank_correlation_coefficient // concordant: // Any pair of observations (xi, yi) and (xj, yj), where i<j, // are said to be concordant if the sort order of (xi, yi) and (yi, yj) // agrees: that is, if either both xi > xj and yi > yj holds or both xi < xj // and yi < yj // cor = 1 - 2 * \"number of non-concord…",
+          "link": "https://www.reddit.com/r/cpp_questions/comments/1cxlm4l/kendall_correlation_or_counting_inversions/",
+          "publishedOn": "2024-05-21T23:08:19.000Z",
+          "wordCount": null,
+          "title": "Kendall Correlation (or counting inversions)",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp_questions/comments/1cxjl40/logging_macros_vs_functions/",
+          "author": null,
+          "description": "I'm writing a simple logger for my game engine and it seems that most people use macros for this over functions for two reasons:\n  \nIt gives access to helpful macros like __FILE__ and __LINE__\n \nThey are easily able to be stripped away from the source code in distribution builds\n \n However, for reason #1, C++20 now provides std::source_location which solves this issue and for reason #2 it seems like this is possible by just #ifdef'ing the body of the log function with a DEBUG parameter. It's commonly advised to avoid macros unless you really need them or maybe if they simplify the code greatly, but I don't feel like that either of those apply here as logging can be achieved without them and the code is still very elegant.\n I ran two examples in Godbolt to test this and noticed that the ass…",
+          "link": "https://www.reddit.com/r/cpp_questions/comments/1cxjl40/logging_macros_vs_functions/",
+          "publishedOn": "2024-05-21T21:39:14.000Z",
+          "wordCount": null,
+          "title": "Logging: Macros vs. Functions",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp_questions/comments/1cxj7nj/tool_to_find_redundant_if_and_ifdefs/",
+          "author": null,
+          "description": "I couldn't find a tool that can tell me all the redundant \"#if's\" on a .cpp file. I tried clang-tidy and iwys but they didn't catch what I was expecting them to. Am I using them wrong or what?\n Example of what I mean by redundant \"#if\":\n #if XYZ_VARIABLE bool SomeClass::method() { ....... #if XYZ_VARIABLE ....... #else ...... #endif } #endif \n    submitted by    /u/divcesar    to    r/cpp_questions  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp_questions/comments/1cxj7nj/tool_to_find_redundant_if_and_ifdefs/",
+          "publishedOn": "2024-05-21T21:23:02.000Z",
+          "wordCount": null,
+          "title": "Tool to find redundant #if and #ifdefs ?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp_questions/comments/1cxil1c/any_projects_that_successfully_employ_clangbased/",
+          "author": null,
+          "description": "Hello!\n I have become interested in AD within C++ and especially in Clad and Enzyme, since these frameworks have the potential of providing very high-performance derivatives and to an already-existing code. Enzyme even seems to potentially integrate relatively well with some existing libraries that are not header-only via static linking and LTO.\n My question is, is there any project, no matter how small, that I can look at that had any experience, successful or not, of using these frameworks? Maybe I was not thorough enough in my search, but I just can't find any...\n Or share your own experience in the comments :)\n    submitted by    /u/GregTheMadMonk    to    r/cpp_questions  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp_questions/comments/1cxil1c/any_projects_that_successfully_employ_clangbased/",
+          "publishedOn": "2024-05-21T20:56:34.000Z",
+          "wordCount": null,
+          "title": "Any projects that successfully employ Clang-based AD tools like Enzyme or Clad?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp_questions/comments/1cxhzqh/featuresh_dependency_does_anyone_know_how_to_fix/",
+          "author": null,
+          "description": "I'm trying to get it where Visual Studio Code works so I can code in c++ so I can port my python projects to c++ (mostly because c++ has the goto function and python3 doesn't, and I don't want to learn python2 and thought c++ looked more enjoyable to code in than python2). I'm trying to get it set up to be able to code in/program in c++, but I keep getting an include error saying that features.h is a dependency of iostream, but I don't know what that is, or how to fix the issue. I just wanted to port my stuff over and use the goto function...\n Extra information: I have mingw installed, as well as g++ and gcc because I wanted to make sure it'd work on all platforms, but I'm starting to feel a bit in over my head at installing things to try to get it to work...\n Links to screenshots of relevant images (of code, includes, etc.): https://imgur.com/a/HOLtKUW\n    submitted by    /u/ChaoticBeehive    to    r/cpp_questions  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp_questions/comments/1cxhzqh/featuresh_dependency_does_anyone_know_how_to_fix/",
+          "publishedOn": "2024-05-21T20:31:42.000Z",
+          "wordCount": null,
+          "title": "features.h dependency? Does anyone know how to fix?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp_questions/comments/1cxhs2y/why_is_it_called_raii/",
+          "author": null,
+          "description": "So I get the whole paradigm about having a completely valid, initialized object as soon as it comes into being via the \"resource acquisition\".\n However, it seems to me that this is the much less important part of RAII. The more imporant part being: objects out of scope release their resources automatically. \n The destructor releasing the resources (e.g. a lock_guard releasing a mutex) is much harder to get right because releasing it manually would have to occur at the end of the scope. Conversely, if we weren't allowed to use a constructor, it wouldnt be as hard to manage, because the initialization would usually follow closely after the resource allocation. \n Consider the following example: \n int fun() { SomeBigObject* o = new SomeBigObject(); // assume empty constructor // 1. Initialize o->name = \"someName\"; o->number = 42; // ... // 2. Stuff happens, maybe early return, maybe exception delete o; // 3. Missing this is much more consequential! } \n Now lets assume SomeBigObject does have a more useful constructor, with the initalizations I made to be done there, but no destructor. Taken literally, you would have \"acquired the resources\" and \"initialized them\" with only a constructor - even though this is not what is generally understood by RAII, which usually entails the destructor that does the cleanup when something goes out of scope.\n ​\n  \nAm I missing something or is there another good reason that I'm missing?\n Why couldnt the committee think of a better name? It confused me a lot in the beginning. I think something like \"Ownership & Valid intialization as a class invariant\" or something.\n  \n   submitted by    /u/Gay-B0wser    to    r/cpp_questions  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp_questions/comments/1cxhs2y/why_is_it_called_raii/",
+          "publishedOn": "2024-05-21T20:22:44.000Z",
+          "wordCount": null,
+          "title": "Why is it called RAII?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp/comments/1cxfsgy/latest_news_from_upcoming_c_conferences_05212024/",
+          "author": null,
+          "description": "Hello,\n Just a note to say that we have had to change the format of this post slightly compared to previous posts we have done as unfortunately Reddit's spam filters have been blocking our previous posts (probably because it has too many links).\n So this Reddit post will now be a roundup of any new news from upcoming conferences with then the full list now being available at https://programmingarchive.com/upcoming-conference-news/\n New News\n  \nThe full conference schedule for C++OnSea is now live https://cpponsea.uk/2024/schedule/\n CppNorth are currently looking for volunteers! https://cppnorth.ca/news-volunteers-2024.html\n CppCon are also looking for volunteers https://cppcon.org/cfv2024/\n CppCon have again opened their \"Attendance Support Ticket program\" which offers free tickets (not in…",
+          "link": "https://www.reddit.com/r/cpp/comments/1cxfsgy/latest_news_from_upcoming_c_conferences_05212024/",
+          "publishedOn": "2024-05-21T19:01:47.000Z",
+          "wordCount": null,
+          "title": "Latest News From Upcoming C++ Conferences (05/21/2024)",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp_questions/comments/1cxedyh/how_do_you_keep_your_modern_c_skills_fresh/",
+          "author": null,
+          "description": "Hello,\n I am a person who recently joined their first company a couple months ago. The role is decent, the pay is great… but the tech is outdated. We are still on C++17 at my firm and while I have learned some things during my time at this company, my company is in an industry where low latency programming is really important, and when I interviewed for other companies in the industry, they made it abundantly clear that expertise of C++20 and above is crucial for the industry.\n I would like to get more modern C++ programming experience while I stay in this role so that I have some job mobility in case my future in this company goes awry. For those of you in jobs where the tech is behind, how do you manage to keep up? I’ve started reading some books on modern C++ programming and I’ve been trying to find open source projects to work on, but I haven’t really found many projects online that make use of a lot of the modern C++20 syntax (e.g. concepts, ranges, even older stuff like CRTP). Would appreciate any input!\n Edit: think there are people dming me with the assumption that I’m just a beginner who just started cpp programming. Listen, I don’t claim to know everything but I’m not a dumbass either (so don’t patronize me), I am really just looking to get more experience working with implementing real systems with more modern (++20 and above) C++. I work in the trading industry, which is why I bring up C++20 specifically as that’s become standard with other competitors but is not largely available in the firm I work with yet.\n    submitted by    /u/Short_Memory_72    to    r/cpp_questions  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp_questions/comments/1cxedyh/how_do_you_keep_your_modern_c_skills_fresh/",
+          "publishedOn": "2024-05-21T18:05:32.000Z",
+          "wordCount": null,
+          "title": "How do you keep your modern C++ skills fresh?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp_questions/comments/1cxdwq1/different_color_formats_design_patterns/",
+          "author": null,
+          "description": "So I'm working on my own implementation of a color class; yet I'm having trouble with a pattern for different formats.\n ```c++ #include <cstdint> #define NODISCARD [[nodiscard]]\n /// \\brief /// A color class that represents a color with red, green, blue and alpha components. /// The color can be represented as an unsigned integer, where r g b a are the starting bytes respectively, RRGGBBAA. /// \\note The color components are unsigned. class color { protected: /// \\brief Unsigned char type-definition. typedef unsigned char uchar; /// \\brief A union to represent the color as an unsigned integer or as separate components. /// \\note This way we can access the color as a whole or as separate components. union color_union { public: /// \\brief The color as separate components. struct { uchar a, b…",
+          "link": "https://www.reddit.com/r/cpp_questions/comments/1cxdwq1/different_color_formats_design_patterns/",
+          "publishedOn": "2024-05-21T17:45:54.000Z",
+          "wordCount": null,
+          "title": "Different color formats, design patterns",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp_questions/comments/1cxdu7m/trying_to_get_c20_compiler_but_getting_c17_instead/",
+          "author": null,
+          "description": "so i'm on learn.cpp and i'm following the instructions to change the compiler. for my tasks.json, i have\n  \"args\": [ \"-fdiagnostics-color=always\", \"-g\", \"-ggdb\", \"-O2\", \"-DNDEBUG\", \"-pedantic-errors\", \"-Wall\", \"-Weffc++\", \"-Wextra\", \"-Wconversion\", \"-Wsign-conversion\", \"-Werror\", \"-std=c++20\", \"${file}\", \n for my settings.json, it's\n  \"C_Cpp_Runner.cCompilerPath\": \"gcc\", \"C_Cpp_Runner.cppCompilerPath\": \"g++\", \"C_Cpp_Runner.debuggerPath\": \"gdb\", \"C_Cpp_Runner.cStandard\": \"\", \"C_Cpp_Runner.cppStandard\": \"\", \"C_Cpp.default.cppStandard\": \"c++20\", \n on the terminal, it shows\n Your compiler is using C++17 (language standard code 201703L) \n    submitted by    /u/BigArchon    to    r/cpp_questions  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp_questions/comments/1cxdu7m/trying_to_get_c20_compiler_but_getting_c17_instead/",
+          "publishedOn": "2024-05-21T17:42:58.000Z",
+          "wordCount": null,
+          "title": "trying to get c++20 compiler but getting c++17 instead",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp_questions/comments/1cxcu1w/weird_error_while_developing_a_game_engine/",
+          "author": null,
+          "description": "I'm currently developing my own game engine, C-Engine, and I've hit an unexpected roadblock while implementing scenes. Suddenly, I encountered an error that has left me stumped.\n the error seems to be something along the lines of\n In file included from C:/Users/absol/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/vector:65, from F:/Cpp/C-Engine/engine/headers.hpp:20, from F:/Cpp/C-Engine/engine/GameObject.hpp:8, from F:/Cpp/C-Engine/engine/engine.hpp:8, from F:/Cpp/C-Engine/main.cpp:1: C:/Users/absol/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_uninitialized.h: In instantiation of 'constexpr bool std::__check_constructible() [with _ValueType = unique_ptr<engine::GameObjectBehavior>; _Tp = const unique_pt…",
+          "link": "https://www.reddit.com/r/cpp_questions/comments/1cxcu1w/weird_error_while_developing_a_game_engine/",
+          "publishedOn": "2024-05-21T17:01:06.000Z",
+          "wordCount": null,
+          "title": "Weird error while developing a game engine",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp_questions/comments/1cx9u9z/weird_namespaced_include_bug/",
+          "author": null,
+          "description": "While i was working on a Raylib project i came across this issue that took me a while to find the root of, the following is a simplified recreation:\n customlib.h ```cpp\n ifndef CUSTOMLIB_H\n define CUSTOMLIB_H\n typedef struct foo{ int data; }foo;\n inline int doStuff(int n){ return n*2; }\n endif\n ```\n main.cpp ```cpp\n include <iostream>\n include \"customlib.h\"\n include \"MyClass.hpp\"\n int main(){ int temp = doStuff(42); MyClass myclass; myclass.printFooVec(); return 0; } ```\n MyClass.hpp ```cpp\n pragma once\n include <vector>\n namespace Cuslib{\n include \"customlib.h\"\n }\n class MyClass{ private: std::vector<Cuslib::foo> m_fooVec; public: void printFooVec(); }; ```\n MyClass.cpp ```cpp\n include <iostream>\n include <vector>\n include \"MyClass.hpp\"\n namespace Cuslib{\n include \"customlib.h\"\n }\n void MyClass::printFooVec(){ Cuslib::foo temp; temp.data = Cuslib::doStuff(420); m_fooVec.push_back(temp); for(const auto& element : m_fooVec){ std::cout << element.data << \" \"; } std::cout << std::endl; } ```\n Despite the implementation file (MyClass.cpp) having free access to the customlib methods and types, the header (MyClass.hpp) is completely unable to access anything from it, returning a compilation error if you try to use the \"foo\" struct under any context. This is all because the \"#include 'customlib.h'\" back at the main.cpp file is not wrapped with the Cuslib namespace, when you add it the whole code compiles as normal. Does anyone have any idea on why that happens?\n Edit: code formatted\n    submitted by    /u/jenkem_boofer    to    r/cpp_questions  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp_questions/comments/1cx9u9z/weird_namespaced_include_bug/",
+          "publishedOn": "2024-05-21T14:55:12.000Z",
+          "wordCount": null,
+          "title": "Weird namespaced #include bug",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp/comments/1cx9az2/qt_671_released/",
+          "author": null,
+          "description": "submitted by    /u/Neustradamus    to    r/cpp  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp/comments/1cx9az2/qt_671_released/",
+          "publishedOn": "2024-05-21T14:31:25.000Z",
+          "wordCount": null,
+          "title": "Qt 6.7.1 Released",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp/comments/1cx8dmb/tutorial_install_a_specific_version_of_the_boost/",
+          "author": null,
+          "description": "submitted by    /u/joaquintides    to    r/cpp  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp/comments/1cx8dmb/tutorial_install_a_specific_version_of_the_boost/",
+          "publishedOn": "2024-05-21T13:50:01.000Z",
+          "wordCount": null,
+          "title": "Tutorial: Install a specific version of the Boost libraries using registry baselines",
+          "imageUrl": null
+        },
         {
           "id": "https://www.reddit.com/r/cpp_questions/comments/1cx61em/concept_requirements_return_condition_cant_include/",
           "author": null,
@@ -4940,6 +5120,16 @@
       "siteUrl": "https://www.reddit.com/r/cscareerquestions/top/?t=week",
       "articles": [
         {
+          "id": "https://www.reddit.com/r/cscareerquestions/comments/1cx6w4f/kind_of_at_an_impasse_mid_30s_senior_engineer/",
+          "author": null,
+          "description": "Just curious what other people in my age range and YOE (~10) are doing to grow their careers. My compensation is about ~$200k with a ~10% bonus, which seems fantastic and I would have never dreamed of even a few years ago, but the problem is you get used to it and then after a few years of working hard and not being rewarded more (my salary is pretty much at the top end and not gonna increase much according to my employer), the motivation to work hard starts to drop and you start to look for the next thing. The field I work in is computer vision so it's somewhat niche and pays decent, although not super high end unless you do FAANG or more advanced deep learning. Anyway, the problem I'm facing right now is I don't see a path forward really in terms of career growth. What I've noticed is pe…",
+          "link": "https://www.reddit.com/r/cscareerquestions/comments/1cx6w4f/kind_of_at_an_impasse_mid_30s_senior_engineer/",
+          "publishedOn": "2024-05-21T12:39:07.000Z",
+          "wordCount": null,
+          "title": "Kind of at an impasse. Mid 30s senior engineer with no desire to enter into management and mulling over future career options.",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/cscareerquestions/comments/1cwqzze/fact_check_how_do_people_view_google_swe_in_2024/",
           "author": null,
           "description": "In earlier years everyone and their grandmothers wanted to get into Google for SWE because of WLB, the culture, the learning opportunities and prestige. Now with the layoffs, reorgs, unclear goals, increased politics, subpar leadership, etc, it seems like this may no longer be the case- at least on blind. \n But blind is also known to have higher proportion of ungrateful people, so I would like to fact check this against the general community: how would people view Google SWE on the resu me now? Are there a new generation of companies (like OpenAI, Anthropic etc) outdoing Google on all fronts? What’s the future of Google?\n    submitted by    /u/confused-student1028  \n [link]   [comments]",
@@ -4947,6 +5137,16 @@
           "publishedOn": "2024-05-20T21:29:24.000Z",
           "wordCount": null,
           "title": "Fact check: how do people view Google SWE in 2024",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cscareerquestions/comments/1cwqhkb/do_yall_actually_work_a_95_or_do_you_work_moreless/",
+          "author": null,
+          "description": "I work full in office even though everything I do is already done via teams or email anyways, but I don't work \"9-5\" more \"8-5\" as I don't get an hour paid lunch, and since I'm fully in office I have to sit at the desk all day. I can take an occasional break to go to the bathroom or maybe a nice brisk walk but if my breaks are consistently longer then 20-30mins, or I take multiple (2 or more) a day, people get suspicious.\n I'm wondering what y'alls work environments are like? Do you have the \"hour paid lunch\" amd work a \"9-5\" and do you work remote? If you work remote do you sit at your desk at home for the entire time you're working? If you need to do a quick 30 minute errand/whatever causes to be away from your desk for an extended period of time do you \"clock-out\"/work the extra 30 mins, or however long you were out, take vacation, or not do anything? \n Or do yall work like 4 hours a day and claim you're working 8 hours and just do whatever else whenever you can? \n    submitted by    /u/ThrowRA-IAmABadFrend  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cscareerquestions/comments/1cwqhkb/do_yall_actually_work_a_95_or_do_you_work_moreless/",
+          "publishedOn": "2024-05-20T21:07:48.000Z",
+          "wordCount": null,
+          "title": "Do y'all actually work a \"9-5\" or do you work more/less?",
           "imageUrl": null
         },
         {
@@ -4967,6 +5167,16 @@
           "publishedOn": "2024-05-20T18:23:16.000Z",
           "wordCount": null,
           "title": "How to navigate Indian work culture?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cscareerquestions/comments/1cwlyy5/how_many_of_you_are_genuinely_scared_about_your/",
+          "author": null,
+          "description": "I don't care whether it's because of the AI, economy, layoffs, shitty management, outsourcing to all our indian brothers and sisters, leetcode, constant ups killing, interviewing....or whatever else.\n Who else has trouble sleeping at night knowing that things are only going to get worser.\n    submitted by    /u/desperate-1  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cscareerquestions/comments/1cwlyy5/how_many_of_you_are_genuinely_scared_about_your/",
+          "publishedOn": "2024-05-20T18:02:06.000Z",
+          "wordCount": null,
+          "title": "how many of you are genuinely scared about your future?",
           "imageUrl": null
         },
         {
@@ -5797,6 +6007,26 @@
       "siteUrl": "https://www.reddit.com/r/EmuDev/",
       "articles": [
         {
+          "id": "https://www.reddit.com/r/EmuDev/comments/1cx90u2/chip8_correct_behaviour_on_nondefined_cases/",
+          "author": null,
+          "description": "Hello!\n I'm a first-time emu-developer. I started with a Chip-8 emulator, following the Tobias V. Langhoff tutorial.\n I'm coding in C, because I already knew the language, but I didn't use it since 2010... So it's a good refresh ;)\n Anyway, I have some questions about non defined cases... What I mean: what should the emulator behavoiur be in those cases?\n  \nA wrong opcode is found. Should the emulator just ignore it and increment (by 2) the PC?\n The PC is greater than 4096 (CP overflow). Just ignore the higher bits and limit the counter to 12 bits?\n The SP is greater than 16 (stack overflow). The same way, ignoring the higher bits and limit SP to 4 bits?\n  \nThank you for your help! :D\n    submitted by    /u/menguanito  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/EmuDev/comments/1cx90u2/chip8_correct_behaviour_on_nondefined_cases/",
+          "publishedOn": "2024-05-21T14:18:52.000Z",
+          "wordCount": null,
+          "title": "[CHIP-8] Correct behaviour on non-defined cases?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/EmuDev/comments/1cx7yfi/facing_issue_regarding_test_5_of_chip8testsuite/",
+          "author": null,
+          "description": "I'm Developing a Chip8 Emulator using C & SDL2\n I have got optimal results for test 1, 2, 3 & 4 for the tests provided here, I seem to face issue in menu selection in test 5.\n  \nFirstly, I am able to press keys (key presses and release are being logged) but the emulator doesn't respond to my key presses. I have looked at the opcode for key press many times I can't seem to find the problem.\n Secondly, after rendering there should be a blinking box at the left of the emulator screen like this, but I get a static box at top of my Superchip 'p'.\n  \nMy Emulator Screenshot \n Here is my Code CHIP8.C & Here is my log file, Any Help would be really appreciated.\n    submitted by    /u/N91489  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/EmuDev/comments/1cx7yfi/facing_issue_regarding_test_5_of_chip8testsuite/",
+          "publishedOn": "2024-05-21T13:30:11.000Z",
+          "wordCount": null,
+          "title": "Facing issue regarding test 5 of chip8-test-suite",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/EmuDev/comments/1cx3xtz/printing_in_a_risc_v_emulator/",
           "author": null,
           "description": "I just started writing a RISC V emulator for the base rv32i ISA and was wondering how to implement printing? I see that the eCall instruction can be used for system calls. Is there a standard system call implementation for printing? Because my goal is to compile rust to RISC V asm and run it on my emulator.\n While I'm able to compile small test snippets and run them by hard coding the machine code in the emulator, I don't know how to get printing working.\n Should I pick a random number for the syscall ID and write a function that relies on that syscall to print?\n Also, is there a way to only implement a tiny part of std? So, that I can use the print! Macro? Or is there an existing RISC V implementation of std that requires specific implementation-details that I can write my emulator around?\n    submitted by    /u/Paul_Robert_  \n [link]   [comments]",
@@ -6274,6 +6504,26 @@
       "siteUrl": "https://www.reddit.com/r/devops/top/?t=week",
       "articles": [
         {
+          "id": "https://www.reddit.com/r/devops/comments/1cxe37y/i_created_a_tool_for_generating_mermaid_diagrams/",
+          "author": null,
+          "description": "I created a tool for generating Mermaid diagrams in markdown that can be uploaded to a merge or pull request so that the plan is visualized. This is the first iteration so I would love some assistance in making it better since it has a long way to go! \n https://github.com/RoseSecurity/Terramaid \n    submitted by    /u/RoseSec_  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/devops/comments/1cxe37y/i_created_a_tool_for_generating_mermaid_diagrams/",
+          "publishedOn": "2024-05-21T17:53:31.000Z",
+          "wordCount": null,
+          "title": "I created a tool for generating Mermaid diagrams from Terraform plans - It has a long way to go, but I think this could be a cool GitHub Action",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/devops/comments/1cx2s77/how_do_you_deal_with_migrating_devs_from_local_to/",
+          "author": null,
+          "description": "For example, the app has elk which needs a cluster of computers, which isn’t possible in local computing. So integration is limited when devs on local. \n So there’s a solution apparently, for devs to see much faster change than to wait for a ci to push and pull image for deployment, which can take 30 min. \n I was in an interview for a company and he said they inject side cars in the pods and use headers manipulations from the staging servers. So that devs will see the change much faster. Than just wait for ci. \n    submitted by    /u/pathlesswalker  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/devops/comments/1cx2s77/how_do_you_deal_with_migrating_devs_from_local_to/",
+          "publishedOn": "2024-05-21T08:15:57.000Z",
+          "wordCount": null,
+          "title": "How do you deal with migrating devs from local to online staging? Instead of them waiting for ci till cd?",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/devops/comments/1cws686/developer_access_review_audit_for_soc2/",
           "author": null,
           "description": "My company’s security team is preparing for the SOC2 renewal and has requested that we audit which users (mostly developers) in our environment have high privileges in our Azure, GCP and AWS cloud accounts. Anything that can help here?\n    submitted by    /u/yuuheiperadoo  \n [link]   [comments]",
@@ -6301,6 +6551,16 @@
           "publishedOn": "2024-05-20T15:16:33.000Z",
           "wordCount": null,
           "title": "When did the cloud become so stupid expensive?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/devops/comments/1cwfvbb/selfhosted_alternatives_to_pagerduty/",
+          "author": null,
+          "description": "Hi all,\n Wondering if anybody has experience with self-hosted alert management systems like PagerDuty? The specific features I'm looking for:\n - Centralised Alerts - SPOG for all alerts from all systems so these can be reviewed as part of a process\n - Assignable alerts - e.g. Server 1 is down has been assigned to Engineer 1\n - Basic escalation - nothing too fancy, if something hasn't been assigned or hasn't been resolved in X amount of time then do X action\n - OSS would be looovely\n Anybody know of any such system? \n Thanks in advance\n    submitted by    /u/benkloos  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/devops/comments/1cwfvbb/selfhosted_alternatives_to_pagerduty/",
+          "publishedOn": "2024-05-20T13:41:29.000Z",
+          "wordCount": null,
+          "title": "Self-hosted alternatives to PagerDuty",
           "imageUrl": null
         },
         {
@@ -7081,6 +7341,26 @@
       "siteUrl": "https://www.reddit.com/r/ExperiencedDevs/top/?t=week",
       "articles": [
         {
+          "id": "https://www.reddit.com/r/ExperiencedDevs/comments/1cxgyk3/what_are_the_most_overratedunderrated/",
+          "author": null,
+          "description": "Overrated: \n Microservices (yes, it's me who created the recent thread about MSA). The thread has some insightful stories and arguments, but I still feel like the hype around microservices did the industry a bad favor. \n MongoDB (closely related to the PG point below). I have several times heard my colleagues discuss MongoDB and want to use it at work. Every single time, my immediate reaction was to ask why and suggest using Postgres instead with its JSONB columns.\n Clean/hexagonal architecture - I think that the underlying ideas (dependency inversion, single responsibility and the rest of SOLID) are great ways to reason about architecture. That said, the marketing hype about clean architecture seems to have created a cult of religious fans to the point where abstractions and layers of indirection are created just because that follows what Uncle Bob wrote in his article. Also, the popular argument of \"now we can swap the database every day\" is so unrealistic in my opinion. I don't really remember ever needing to unexpectedly swap a database. Maybe, I'm wrong. \n Underrated: \n Postgresql - even though it has a great reputation these days, I still think a lot of people would benefit a lot from knowing more about its features and potential. My personal favorite is using PG's FOR UPDATE SKIP LOCKED feature to implement a simple queue. Whenever I need a task queue, I immediately reach for it. \n Presentation/writing skills: I am not a great presenter and speaker myself, but the more I work as a software engineer, the more I realize that being concise, accurate, and engaging in your writing/speaking is a valuable asset. Not only does it make you more efficient in communication, your colleagues like you more, and your managers are likely to give you a promotion. \n What are yours?\n    submitted by    /u/dondraper36  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/ExperiencedDevs/comments/1cxgyk3/what_are_the_most_overratedunderrated/",
+          "publishedOn": "2024-05-21T19:49:30.000Z",
+          "wordCount": null,
+          "title": "What are the most overrated/underrated technologies/ideas in software engineering in your opinion?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/ExperiencedDevs/comments/1cxeyah/have_you_ever_heard_of_an_engineer_negotiating_a/",
+          "author": null,
+          "description": "Context: - I'm a Staff engineer at a well known tech company with a mature engineering org. 15 years in the industry. Well compensated, great product and team. Been there 3.5 years, was promoted once, and given lots of recognition and leadership.\n  \nI am going to retire either in 2 months or 8 months to be a stay at home parent. For financial reasons, I'd prefer the 8 months. More vesting, bonus payout, and savings. But 2 months is fine too. \n \nMy manager is excellent. Best of my career. And also a decent guy who I'm relatively close with.\n \nI'm the embodiment of the bus factor. I work on a critical team, am the only one with deep experience in the product and code, and it's a pretty niche bit of technology. I haven't preferred it be this way, but we've generally been understaffed and overworked on executive priorities since we were acquired. This is just to say, I know it'll be hard on the team when I leave, and they're going to try and get me to stay.\n \n My question:\n I'm considering letting my manager know that I'll be leaving in X weeks (still not for sure when I'll give notice), but that I'd be open to staying on for up to 8 months, under the condition that I work a lot less (say 10 hours/week) with the expectation that I'd help KTLO, stabilize the team and backfill my role. \n But I won't stay for 8 months without a deal like that, for various family and personal reasons. \n I can imagine many reasons the org wouldn't go for something like this. But I'm curious if you've heard of anything like it, and if so, if you have any tips for how I'd approach it.\n EDIT: sorry for any confusion, accidentally replied from an alt account\n    submitted by    /u/ElectricalKiwi3007  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/ExperiencedDevs/comments/1cxeyah/have_you_ever_heard_of_an_engineer_negotiating_a/",
+          "publishedOn": "2024-05-21T18:28:18.000Z",
+          "wordCount": null,
+          "title": "Have you ever heard of an engineer negotiating a gradual exit?",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/ExperiencedDevs/comments/1cwqwbz/whats_your_experience_with_the_microservice/",
           "author": null,
           "description": "Having read a few books on microservices and having worked with them (or rather a bad attempt) for a while, I personally still don't see any obvious cases when it's a clear winner over modular monoliths. \n I mean, yes, independent deployability and scalability is cool. It's also a well-known statement that microservices is an organisational pattern, not a technical one. And still it's not really clear how the disadvantages such as losing transactional guarantees and lack of network communication over the network are justified. \n It's not even always clear at the beginning of a project whether we need those independent scaling. \n What is your take on microservices? If you have a story of using them successfully and being happy with the experience, please share the circumstances that in your opinion made it successful. .\n    submitted by    /u/dondraper36  \n [link]   [comments]",
@@ -7088,6 +7368,16 @@
           "publishedOn": "2024-05-20T21:25:01.000Z",
           "wordCount": null,
           "title": "What's your experience with the microservice architecture?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/ExperiencedDevs/comments/1cwpeq7/slow_build_causing_mental_fatigue/",
+          "author": null,
+          "description": "It seems slightly counter-intuitive that moving slower would increase fatigue, but that is what is happening. I recently switched teams and the build process on the team I joined is much more complex and slower, and my capacity to focus on work is tanking.\n I think I've heard about studies have data to back up this phenomenon, but my search attempts haven't surfaced those studies. I'd appreciate if anyone here can help me out.\n I'd love to share anytime on the subject with my new team and leadership to show the opportunity cost of the current process. Thanks!\n    submitted by    /u/wakingupfan  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/ExperiencedDevs/comments/1cwpeq7/slow_build_causing_mental_fatigue/",
+          "publishedOn": "2024-05-20T20:22:52.000Z",
+          "wordCount": null,
+          "title": "Slow build causing mental fatigue",
           "imageUrl": null
         },
         {
@@ -7948,6 +8238,16 @@
       "siteUrl": "https://www.reddit.com/r/gamedev/top/?t=week",
       "articles": [
         {
+          "id": "https://www.reddit.com/r/gamedev/comments/1cwol8a/what_a_communityled_shift_to_independent_fan/",
+          "author": null,
+          "description": "submitted by    /u/SlurryBender  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/gamedev/comments/1cwol8a/what_a_communityled_shift_to_independent_fan/",
+          "publishedOn": "2024-05-20T19:49:42.000Z",
+          "wordCount": null,
+          "title": "What a community-led shift to independent fan wikis means for game developers",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/gamedev/comments/1cwlj8m/when_a_game_hides_its_loading_screen_by_forcing/",
           "author": null,
           "description": "Basically it just forces a constant time to load the next chunk. But how can we confidently say that this time is enough on lower-end machines? Because with a traditional loading screen, better computers will get through it faster, worse will get through it slower. \n    submitted by    /u/ysylya  \n [link]   [comments]",
@@ -7978,6 +8278,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://www.reddit.com/r/gamedev/comments/1cwbgsa/whats_up_with_all_the_crappy_reviews_from_people/",
+          "author": null,
+          "description": "See this example: https://i.gyazo.com/e515ad9ada4aeae9e31ae3bee54a99a0.png\n Has anyone else noticed a ton of these types of low effort reviews on Steam from people who got free copies of the game? I'm wondering, why are developers giving copies to these people? How is this happening?\n    submitted by    /u/ahumanbyanyothername  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/gamedev/comments/1cwbgsa/whats_up_with_all_the_crappy_reviews_from_people/",
+          "publishedOn": "2024-05-20T09:35:03.000Z",
+          "wordCount": null,
+          "title": "What's up with all the crappy reviews from people who \"received this product for free?\"",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/gamedev/comments/1cw3wex/whats_the_smallest_change_you_made_to_your_game/",
           "author": null,
           "description": "We all know how easy it is to go down rabbit holes on fun features that you think you can make in two hours, but end up taking two weeks... just to break something else and spend another week fixing everything. \n But have you ever made a simple change, addition, or removal that made a real difference for your players? \n For example, for April Fools last year, I made our corgi character poop! It was a quick joke feature, spent 10 minutes adding it, but players at PAX loved it (especially eating it). \n Meanwhile, I just spent a month trying to get our cutscenes looking good, and I feel like it's still far from what I want, especially when I'm not sure how much people even care for story in a 3D platformer.\n I've heard 80% of the impact comes from 20% of the work. So, where do you feel the most impact for the least amount of work tends to come from?\n    submitted by    /u/scalisco  \n [link]   [comments]",
@@ -7985,6 +8295,16 @@
           "publishedOn": "2024-05-20T01:31:25.000Z",
           "wordCount": null,
           "title": "What's the smallest change you made to your game that made the biggest difference?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/gamedev/comments/1cvuhe4/what_is_your_thoughts_on_keeping_your_game_secret/",
+          "author": null,
+          "description": "What is your thoughts on keeping your game secret? Vs. sharing it for exposure? Is there a certain stage of development where it makes sense to start releasing footage of it for marketing purposes? Is it paranoid to be afraid of one's idea getting stolen? Please share any thoughts on this subject.\n I have been developing a game full-time for almost a year by myself. The game is an idea that I have had for a while and that I believe to be both original and eye-catching. I myself enjoy playing what I have created so far, and friends and family that have played have also had the reaction that I was hoping for.\n As of now I have been keeping my game very close to the chest. But I am currently considering looking for investments in my game and then I would obviously have to share everything about it. I am not super scared that a potential investor would steal it, since I would try to only approach serious actors but if you have any thoughts on this please share them.\n Edit:\n Thank you all for your input! But all I see is a bunch of people trying to convince me to share my idea so they can steal it.. /s No, but for real, I really appreciate all your views and I hear what many of you are saying about the importance of exposure and the low likelihood that anyone will put in the effort to steal something that has not yet been proven. I will rethink my approach and will share my game sooner than I intended. But first I want to have a few more features in place and some minimal polishing as well. The thought of sharing it is a little scary but also cool since it feel more real in a way. \n    submitted by    /u/Minelinefine  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/gamedev/comments/1cvuhe4/what_is_your_thoughts_on_keeping_your_game_secret/",
+          "publishedOn": "2024-05-19T18:12:21.000Z",
+          "wordCount": null,
+          "title": "What is your thoughts on keeping your game secret?",
           "imageUrl": null
         },
         {
@@ -8065,6 +8385,26 @@
           "publishedOn": "2024-05-18T09:32:30.000Z",
           "wordCount": null,
           "title": "The Timeless Beauty of Pre Rendered Graphics",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/gamedev/comments/1cutakm/how_does_a_high_quality_looking_game_like_avatar/",
+          "author": null,
+          "description": "I’m an indie dev and I struggle so hard with things like foliage, lighting, 4K texture streaming, without lowering my FPS or putting everything in 2K quality. I understand big gaming companies have a lot of money and resources, but it just baffles me that they can put together such a good looking game. For context I use UE5 for all my projects; have a 4090 RTX, super high quality monitors, and 16GB ram. As soon as I start adding foliage to a large, somewhat open world, my FPS slows down like crazy. To the point that I have to choose trees over grass sometimes as an example. I use LODs, low draw distance, but it doesn’t seem to help. I don’t know how a big company like Ubisoft can throw that much high quality foliage in their game alongside exceptional lighting without destroying the games performance? If any of you work for a company like this can you shed some light on this for me?? I am hoping to build higher quality forests in my game without tanking my FPS and maintaining 4K textures. \n    submitted by    /u/Thad-Stathos  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/gamedev/comments/1cutakm/how_does_a_high_quality_looking_game_like_avatar/",
+          "publishedOn": "2024-05-18T09:14:51.000Z",
+          "wordCount": null,
+          "title": "How does a high quality looking game like Avatar: Frontiers of Pandora even get built without loosing good performance?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/gamedev/comments/1cuhn63/the_reality_of_game_dev_for_my_past_year/",
+          "author": null,
+          "description": "6 months: locomotion, combat, health system, stamina system, combo system, different weapon types, directional attacking and defendkng, limb removal, farming (watering, terraforming, planting, harvesting) bas building, creating prefabs, placing individual walls, work benches ect, then finally pickups with lead to\n Next 6 months: inventory system and ui. \n Now I wil preface this by saying I only work on it here and there, not full time and I have gone through a few different inventory systems just to try them out, but God damn ui and inventory is so much work. If you don't at least sort of like data structures and algorithms, don't ever make an rpg with an inventory system. \n Just throwing that out there lol, what have your hang ups been while working on your own game?\n    submitted by    /u/ghostwilliz  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/gamedev/comments/1cuhn63/the_reality_of_game_dev_for_my_past_year/",
+          "publishedOn": "2024-05-17T22:05:10.000Z",
+          "wordCount": null,
+          "title": "The reality of game dev for my past year.",
           "imageUrl": null
         },
         {
@@ -8775,6 +9115,36 @@
       "siteUrl": "https://www.reddit.com/r/godot/top/?t=week",
       "articles": [
         {
+          "id": "https://www.reddit.com/r/godot/comments/1cxheim/5_years_ago_i_started_making_games_today_i_made/",
+          "author": null,
+          "description": "submitted by    /u/Thrawn911  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/godot/comments/1cxheim/5_years_ago_i_started_making_games_today_i_made/",
+          "publishedOn": "2024-05-21T20:07:00.000Z",
+          "wordCount": null,
+          "title": "5 years ago, I started making games. Today I made my first dollar. Wohooo!",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/godot/comments/1cxd5w1/tip_dont_turn_your_wheels_scroll_their_texture/",
+          "author": null,
+          "description": "submitted by    /u/archiekatt  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/godot/comments/1cxd5w1/tip_dont_turn_your_wheels_scroll_their_texture/",
+          "publishedOn": "2024-05-21T17:14:43.000Z",
+          "wordCount": null,
+          "title": "TIP: Don't turn your wheels! Scroll their texture.",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/godot/comments/1cx4od9/didnt_want_to_draw_the_sea_by_hand_so/",
+          "author": null,
+          "description": "submitted by    /u/LunaticWyrm467  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/godot/comments/1cx4od9/didnt_want_to_draw_the_sea_by_hand_so/",
+          "publishedOn": "2024-05-21T10:33:16.000Z",
+          "wordCount": null,
+          "title": "Didn't want to draw the sea by hand, so...",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/godot/comments/1cwhh87/portals_with_working_light_shadows_as_personal/",
           "author": null,
           "description": "submitted by    /u/Zer0problem  \n [link]   [comments]",
@@ -8782,6 +9152,26 @@
           "publishedOn": "2024-05-20T14:52:50.000Z",
           "wordCount": null,
           "title": "Portals with working light & shadows as personal project after a layoff",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/godot/comments/1cwfz2w/the_kids_bedroom_is_done/",
+          "author": null,
+          "description": "submitted by    /u/AshenWing_Orwen  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/godot/comments/1cwfz2w/the_kids_bedroom_is_done/",
+          "publishedOn": "2024-05-20T13:46:05.000Z",
+          "wordCount": null,
+          "title": "The kids' bedroom is done.",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/godot/comments/1cwfq6b/a_small_trading_port/",
+          "author": null,
+          "description": "submitted by    /u/mightofmerchants  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/godot/comments/1cwfq6b/a_small_trading_port/",
+          "publishedOn": "2024-05-20T13:35:00.000Z",
+          "wordCount": null,
+          "title": "A small trading port",
           "imageUrl": null
         },
         {
@@ -8912,6 +9302,16 @@
           "publishedOn": "2024-05-16T15:13:28.000Z",
           "wordCount": null,
           "title": "Wallpapering system is a GO!",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/godot/comments/1ctbppf/our_godot_party_brawler_now_has_a_demo_on_steam/",
+          "author": null,
+          "description": "My childhood friend and I have been working on this game for almost a full year and are finally ready to release the demo which contains a slice of the content that we have planned for the full game. Grab a buddy and try it out! \n Steam link: https://store.steampowered.com/app/2643290/Oblin_Party?utm_source=reddit_godot&utm_campaign=demo&utm_medium=web\n    submitted by    /u/JoelBesada  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/godot/comments/1ctbppf/our_godot_party_brawler_now_has_a_demo_on_steam/",
+          "publishedOn": "2024-05-16T12:27:38.000Z",
+          "wordCount": null,
+          "title": "Our Godot party brawler now has a demo on Steam",
           "imageUrl": null
         },
         {
@@ -9582,6 +9982,16 @@
       "siteUrl": "https://www.reddit.com/r/golang/top/?t=week",
       "articles": [
         {
+          "id": "https://www.reddit.com/r/golang/comments/1cx6not/how_to_implement_job_queues_in_go_do_they_follow/",
+          "author": null,
+          "description": "Hi everyone,\n I've been working with the Laravel framework and I'm quite familiar with its job queue system, specifically using database jobs and failed_jobs tables for managing asynchronous tasks.\n Recently, I've started a project in Go and I need to implement a job queue system. I'm wondering:\n  \nWhat are the best practices for creating job queues in Go?\n Are there any libraries or frameworks that follow a similar approach to Laravel's job queues, particularly using database tables for jobs and failed jobs?\n How do error handling and retry mechanisms work in Go job queues compared to Laravel?\n  \nAny advice, examples, or resources would be greatly appreciated!\n Thanks in advance!\n    submitted by    /u/mostafaLaravel  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/golang/comments/1cx6not/how_to_implement_job_queues_in_go_do_they_follow/",
+          "publishedOn": "2024-05-21T12:27:08.000Z",
+          "wordCount": null,
+          "title": "How to Implement Job Queues in Go? Do They Follow Similar Principles as Laravel's Database Jobs?",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/golang/comments/1cwf5av/tinymath_the_fastest_and_smallest_go_math_library/",
           "author": null,
           "description": "submitted by    /u/0rsinium  \n [link]   [comments]",
@@ -9599,6 +10009,16 @@
           "publishedOn": "2024-05-20T06:51:55.000Z",
           "wordCount": null,
           "title": "Rust or Go as a second language for the backend",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/golang/comments/1cw4t1f/proposal_add_simd_package_to_standard_library/",
+          "author": null,
+          "description": "submitted by    /u/clementjean  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/golang/comments/1cw4t1f/proposal_add_simd_package_to_standard_library/",
+          "publishedOn": "2024-05-20T02:18:21.000Z",
+          "wordCount": null,
+          "title": "proposal: Add simd package to standard library",
           "imageUrl": null
         },
         {
@@ -10388,6 +10808,26 @@
       "feedUrl": "https://www.reddit.com/r/hacking/top/.rss?t=week",
       "siteUrl": "https://www.reddit.com/r/hacking/top/?t=week",
       "articles": [
+        {
+          "id": "https://www.reddit.com/r/hacking/comments/1cxb24n/north_korea_hackers_target_us_ally/",
+          "author": null,
+          "description": "submitted by    /u/jas26  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/hacking/comments/1cxb24n/north_korea_hackers_target_us_ally/",
+          "publishedOn": "2024-05-21T15:46:52.000Z",
+          "wordCount": null,
+          "title": "North Korea hackers target US ally",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/hacking/comments/1cx81by/remote_code_execution_via_maninthemiddle_and_more/",
+          "author": null,
+          "description": "Remote Code Execution via Man-in-the-Middle (and more) in NASA's AIT-Core v2.5.2 https://www.linkedin.com/pulse/remote-code-execution-via-man-in-the-middle-more-ujkze\n    submitted by    /u/andy-codes  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/hacking/comments/1cx81by/remote_code_execution_via_maninthemiddle_and_more/",
+          "publishedOn": "2024-05-21T13:33:53.000Z",
+          "wordCount": null,
+          "title": "Remote Code Execution via Man-in-the-Middle (and more) in NASA's AIT-Core v2.5.2",
+          "imageUrl": null
+        },
         {
           "id": "https://www.reddit.com/r/hacking/comments/1cx3s73/first_bsod_in_vm_hacking/",
           "author": null,
@@ -11226,6 +11666,36 @@
       "siteUrl": "https://www.reddit.com/r/programming/top/?t=week",
       "articles": [
         {
+          "id": "https://www.reddit.com/r/programming/comments/1cx88xv/amber_the_programming_language_compiled_to_bash/",
+          "author": null,
+          "description": "submitted by    /u/PhoenixVisionary  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/programming/comments/1cx88xv/amber_the_programming_language_compiled_to_bash/",
+          "publishedOn": "2024-05-21T13:43:48.000Z",
+          "wordCount": null,
+          "title": "Amber - the programming language compiled to Bash",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/programming/comments/1cx5oxs/processes_dont_create_ownership_people_do/",
+          "author": null,
+          "description": "submitted by    /u/workflow91  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/programming/comments/1cx5oxs/processes_dont_create_ownership_people_do/",
+          "publishedOn": "2024-05-21T11:35:15.000Z",
+          "wordCount": null,
+          "title": "Processes don't create ownership, people do",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/programming/comments/1cx464z/sql_at_50_whats_next_for_the_structured_query/",
+          "author": null,
+          "description": "submitted by    /u/Franco1875  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/programming/comments/1cx464z/sql_at_50_whats_next_for_the_structured_query/",
+          "publishedOn": "2024-05-21T10:00:02.000Z",
+          "wordCount": null,
+          "title": "SQL at 50: What’s next for the structured query language?",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/programming/comments/1cwtdmz/comparing_desktop_development_tools_qt_electron/",
           "author": null,
           "description": "submitted by    /u/bbm_engineer  \n [link]   [comments]",
@@ -12013,6 +12483,16 @@
       "siteUrl": "https://www.reddit.com/r/ProgrammerHumor/top/?t=week",
       "articles": [
         {
+          "id": "https://www.reddit.com/r/ProgrammerHumor/comments/1cxao3g/whatigothroughtomanuallyinstall/",
+          "author": null,
+          "description": "submitted by    /u/TobyWasBestSpiderMan  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/ProgrammerHumor/comments/1cxao3g/whatigothroughtomanuallyinstall/",
+          "publishedOn": "2024-05-21T15:30:11.000Z",
+          "wordCount": null,
+          "title": "whatIGoThroughToManuallyInstall",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/ProgrammerHumor/comments/1cwil64/ishouldlearnhtml/",
           "author": null,
           "description": "submitted by    /u/rcmaehl  \n [link]   [comments]",
@@ -12070,6 +12550,16 @@
           "publishedOn": "2024-05-19T13:12:43.000Z",
           "wordCount": null,
           "title": "definitelyWhatHappenedToday",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/ProgrammerHumor/comments/1cvhold/whenccodeworks/",
+          "author": null,
+          "description": "submitted by    /u/proh14  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/ProgrammerHumor/comments/1cvhold/whenccodeworks/",
+          "publishedOn": "2024-05-19T06:17:07.000Z",
+          "wordCount": null,
+          "title": "whenCCodeWorks",
           "imageUrl": null
         },
         {
@@ -12840,6 +13330,26 @@
       "siteUrl": "https://www.reddit.com/r/rust/top/?t=week",
       "articles": [
         {
+          "id": "https://www.reddit.com/r/rust/comments/1cxbnsb/rustrover_just_announced_first_stable_launch_and/",
+          "author": null,
+          "description": "submitted by    /u/Southern-Diamond4008  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/rust/comments/1cxbnsb/rustrover_just_announced_first_stable_launch_and/",
+          "publishedOn": "2024-05-21T16:11:41.000Z",
+          "wordCount": null,
+          "title": "RustRover just announced first stable launch and it will be free for non-commercial use 🥳",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/rust/comments/1cx33oa/when_allocating_unused_memory_boosts_performance/",
+          "author": null,
+          "description": "submitted by    /u/Pascalius  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/rust/comments/1cx33oa/when_allocating_unused_memory_boosts_performance/",
+          "publishedOn": "2024-05-21T08:40:11.000Z",
+          "wordCount": null,
+          "title": "When allocating unused memory boosts performance by 2x",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/rust/comments/1cx2uj8/media_program_to_store_files_inside_of_youtube/",
           "author": null,
           "description": "submitted by    /u/stasonmalestate  \n [link]   [comments]",
@@ -12847,6 +13357,16 @@
           "publishedOn": "2024-05-21T08:20:50.000Z",
           "wordCount": null,
           "title": "[Media] Program to store files inside of YouTube videos for infinite cloud storage written entirely in Rust",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/rust/comments/1cwqd8i/i_spent_6_years_developing_a_puzzle_game_in_rust/",
+          "author": null,
+          "description": "submitted by    /u/MasonRemaley  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/rust/comments/1cwqd8i/i_spent_6_years_developing_a_puzzle_game_in_rust/",
+          "publishedOn": "2024-05-20T21:02:38.000Z",
+          "wordCount": null,
+          "title": "I spent 6 years developing a puzzle game in Rust and it just shipped on Steam this, AMA!",
           "imageUrl": null
         },
         {
