@@ -2,10 +2,435 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://joe8755.github.io/the-reddit-rss-reader/index.html</id>
     <title>the reddit rss reader</title>
-    <updated>2024-05-23T01:22:23.995Z</updated>
+    <updated>2024-05-23T12:35:51.025Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://joe8755.github.io/the-reddit-rss-reader/index.html"/>
     <link rel="self" href="https://joe8755.github.io/the-reddit-rss-reader/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[Reinterpret_cast'ing to first member: strict aliasing and chaining]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1cyrn28/reinterpret_casting_to_first_member_strict/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1cyrn28/reinterpret_casting_to_first_member_strict/"/>
+        <updated>2024-05-23T12:32:11.000Z</updated>
+        <summary type="html"><![CDATA[https://godbolt.org/z/bPWY7jEeT
+ Firstly, https://en.cppreference.com/w/cpp/language/data_members#Standard-layout states:
+  
+A pointer to an object of standard-layout class type can be reinterpret_cast to pointer to its first non-static non-bitfield data member (if it has non-static data members) or otherwise any of its base class subobjects (if it has any), and vice versa. In other words, padding is not allowed before the first data member of a standard-layout type. Note that strict aliasing rules still apply to the result of such cast.
+  
+Is this relevant to the above? I.e. does dereferencing int_through_a violate strict aliasing because a given standard layout type is not generally similar to its first member? https://en.cppreference.com/w/cpp/language/implicit_conversion#Similar_types ; https://en.cppreference.com/w/cpp/language/reinterpret_cast#Type_accessibility ; or is it fine because we know there is an object of type int at this address even though the pointer is obtained from a reinterpret_cast? 
+ Secondly, is it correct that skipping the line (i.e. initializing int_through_b) is UB?
+    submitted by    /u/KuntaStillSingle    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Help regarding projects]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1cyrlbl/help_regarding_projects/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1cyrlbl/help_regarding_projects/"/>
+        <updated>2024-05-23T12:29:39.000Z</updated>
+        <summary type="html"><![CDATA[Hey guys. I am C++ beginner. I have finished basics of C++ such as pointers and OOPS. I need help regarding projects as it is difficult to find project ideas for C++ compared to other languages like JS. Can you guys please suggest some projects and also libraries or frameworks used.
+    submitted by    /u/Bhendi_Bruh    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Help regarding projects]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1cyrl9k/help_regarding_projects/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1cyrl9k/help_regarding_projects/"/>
+        <updated>2024-05-23T12:29:34.000Z</updated>
+        <summary type="html"><![CDATA[Hey guys. I am C++ beginner. I have finished basics of C++ such as pointers and OOPS. I need help regarding projects as it is difficult to find project ideas for C++ compared to other languages like JS. Can you guys please suggest some projects and also libraries or frameworks used.
+    submitted by    /u/Bhendi_Bruh    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Global objects defined in headers :(]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1cyr3nj/global_objects_defined_in_headers/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1cyr3nj/global_objects_defined_in_headers/"/>
+        <updated>2024-05-23T12:03:22.000Z</updated>
+        <summary type="html"><![CDATA[Hi everyone,
+ Recently started a role in a company that has a moderate sized C++ codebase (embedded) and while browsing the code on day one I found some things that have frustrated me so badly that I've started dreaming in code (again - yes we've all done it at some point but I thought those days were long gone).
+ I'd love to hear the community's feedback on the following items that stood out to me...
+ The entire system is instantiated by including header files in to main.cpp - in those headers there's a huge number of global variables being defined. i.e: (not actual code but conveys the point).
+ system.h
+ #ifndef _system_h #define _system_h #include "board.h" #include "..." // all the various classes. ClassA global_a(); ClassB global_b(global_a); ClassC global_c(board_global_a, board_glob…]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Programming foundation using c++]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1cyqrf7/programming_foundation_using_c/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1cyqrf7/programming_foundation_using_c/"/>
+        <updated>2024-05-23T11:44:12.000Z</updated>
+        <summary type="html"><![CDATA[Now I want to enter web development track but before that I know that I must study c++ or java any old programming language with OOP and DS and algorithm and so on , so should I learn c++ from Learncpp.com (it's a great source but it's a huge) and I don't know if I must knows everything in the website that will help me or theres some topics related to c++ only? Give me some advice please upon my sights 
+    submitted by    /u/Due_Can228    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Does it make sense to use unique pointers for component that few instances of a class can have instantiated?]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1cyqcq3/does_it_make_sense_to_use_unique_pointers_for/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1cyqcq3/does_it_make_sense_to_use_unique_pointers_for/"/>
+        <updated>2024-05-23T11:19:39.000Z</updated>
+        <summary type="html"><![CDATA[Hello, I have a question...
+ This is what I have now:
+ class Entity
+ {
+ [..]
+ Light myLight; // this is used for few entities only
+ }
+ Instead of allocating it for every Entity, I thought about doing this:
+ class Entity
+ {
+ [..]
+ std::unique_ptr<Light> myLight; 
+ }
+ So when I instantiate an entity, I look if I need the light or not and only if I need I create the unique pointer. Does this make sense or there is a better way of doing it? I'm not doing straight ECS because it's my first project
+    submitted by    /u/daoitbgem    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Question about linked list: I don't understand the logic behind this code]]></title>
+        <id>https://www.reddit.com/r/C_Programming/comments/1cypc86/question_about_linked_list_i_dont_understand_the/</id>
+        <link href="https://www.reddit.com/r/C_Programming/comments/1cypc86/question_about_linked_list_i_dont_understand_the/"/>
+        <updated>2024-05-23T10:13:40.000Z</updated>
+        <summary type="html"><![CDATA[The description provided the definition of the function, the input ptList=1,3,5,7,9,11, the call ptList=function(ptList,7) and asks the output. The answer key is 7,9,11. but I wasn't able to find it. This is the definition:
+ List function(List* ptList,int n){ List *p; List *q; for(p=ptList;p!=NULL;p=p->next) if(p->info==n) {q=p->prox; p->next=NULL; return q;} return ptList; } 
+    submitted by    /u/migi-thehand  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[A FOSS heuristic for the Set Covering]]></title>
+        <id>https://www.reddit.com/r/cpp/comments/1cyp5wl/a_foss_heuristic_for_the_set_covering/</id>
+        <link href="https://www.reddit.com/r/cpp/comments/1cyp5wl/a_foss_heuristic_for_the_set_covering/"/>
+        <updated>2024-05-23T10:01:43.000Z</updated>
+        <summary type="html"><![CDATA[Hi everyone, I'm working on a C++ library implementing a heuristic algorithm for the Set Covering Problem: github.com/c4v4/cft
+ The SCP is a classic combinatorial optimization problem that asks, given a set and a collection of subsets, to find the minimum-cost group of subsets that covers everything in the original set. You can find SCPs in crew scheduling or test selection, for example.
+ Currently, commercial MILP solvers like Cplex or Gurobi are often the go-to option for SCPs. But, while they are powerful, well-designed heuristics can often achieve even better results (especially when the available time is tight).
+ Our implementation is based on the work of Caprara, Fischetti, and Toth. It was originally developed for a research project, but we've decided to clean it up and make it publicly available as a free, high-performing alternative.
+ We also hope the library serves as a helpful companion to the original paper, which can get a bit technical at times.
+ Since this is our first real open-source contribution, any constructive feedback is welcomed. We hope this library will prove helpful.
+ Thanks!
+    submitted by    /u/__c4v4    to    r/cpp  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Do winforms datagridview suck or am I missing something?]]></title>
+        <id>https://www.reddit.com/r/csharp/comments/1cyobjm/do_winforms_datagridview_suck_or_am_i_missing/</id>
+        <link href="https://www.reddit.com/r/csharp/comments/1cyobjm/do_winforms_datagridview_suck_or_am_i_missing/"/>
+        <updated>2024-05-23T09:01:09.000Z</updated>
+        <summary type="html"><![CDATA[Preface this with a) I know winforms is ancient and b) it could well be that I’m new to programming, C# and winforms, so not using it correctly.
+ I’m having a really hard time wrapping my head around doing anything with datagridviews beyond displaying some simple objects. It feels way more complicated/clunky than it should be, but maybe I’m missing something?
+ I’m pulling data from a postgres database, wanting to do reporting and have things like a totals row anchored to the bottom, merging objects (joining?). Even properly setting up combobox columns is escaping me. I’m worried that doing anything non-trivial (connected objects where an upstream change should trigger a cascade of changes across other objects and their binding sources/datagridviews?) will be a nightmare to setup.
+ Is this just a winforms thing? Is it easier in more modern ui frameworks? Do I just need to learn how to implement them properly?
+    submitted by    /u/Puzzleheaded-Half214  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Stuck with C socket connection timeouts]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1cyo44d/stuck_with_c_socket_connection_timeouts/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1cyo44d/stuck_with_c_socket_connection_timeouts/"/>
+        <updated>2024-05-23T08:46:08.000Z</updated>
+        <summary type="html"><![CDATA[To start I like to give some background. I have worked with sockets in both C# and Java for different kinds of applications ranging from game servers to web servers. So I am quite familiar with it at this point. One of them is on GitHub: AdvancedSockets. Also, while I work on both Windows and Linux I primarily use Linux desktop.
+ This month I decided I like to learn more about doing socket programming in C++ as a project I am working on could benefit from this. A quick research pointed me to some SO articles and tutorials. But all of them are using the socket API in C. Not once did I find anything about a high-level socket library in C++.
+ Okay.. no prob right? I decided to give C sockets a try. Surely it isn't that hard? After all I got experience already! And sure enough it didn't take m…]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[So what is the difference here?]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1cyo3lh/so_what_is_the_difference_here/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1cyo3lh/so_what_is_the_difference_here/"/>
+        <updated>2024-05-23T08:45:07.000Z</updated>
+        <summary type="html"><![CDATA[I have a simple class having one data member and I wrote a friend function definition inside class itself. I wrote same code but friend fn declaration inside class and definition outside the class. I used cpp insight to check how this works. In the first case friend function was made inline and the second one non inline. I tried calling friend function using ::fun(Class obj) to check whether it was accessible globally but it's not.But it's not possible to call using object as well.What actually is happening here??
+ code here
+    submitted by    /u/Loud_Staff5065    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Unpopular opinion: why do you hate GitHub actions ?]]></title>
+        <id>https://www.reddit.com/r/devops/comments/1cyo1xm/unpopular_opinion_why_do_you_hate_github_actions/</id>
+        <link href="https://www.reddit.com/r/devops/comments/1cyo1xm/unpopular_opinion_why_do_you_hate_github_actions/"/>
+        <updated>2024-05-23T08:42:01.000Z</updated>
+        <summary type="html"><![CDATA[I know it’s a popular and robust tool but is there any reason you don’t like GitHub actions could be performance issues, debugging workflows or whatever reason. 
+    submitted by    /u/kaka1309  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : devops</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[If a variable is not atomic, does a thread allowed to assume it has the latest value?]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1cymugh/if_a_variable_is_not_atomic_does_a_thread_allowed/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1cymugh/if_a_variable_is_not_atomic_does_a_thread_allowed/"/>
+        <updated>2024-05-23T07:14:41.000Z</updated>
+        <summary type="html"><![CDATA[Hi everybody.
+ I've tried searching for a term that may answer this question but couldn't find such example.
+ here's what I hope is a brief explanation:
+ I have a variable that is used (via reference) across different threads, but it's not accessed concurrently due to the flow of execution, if the variable itself is not guarded with a mutex or some atomic mechanism, is one of the threads allowed to assume it has the latest value, and "skip a read" on the next access?
+ thread1 and thread2 holds a reference to an int.
+ thread1 is requested to print the int to console (so we assume it goes to memory and read it).
+ thread2 increments the int.
+ thread1 is requested to print the int once again to console, while still holding the same reference as it did earlier.
+ My question is, can thread1 assume the value was never changed, and use the older value instead of reading from memory again? or can it hold some cache about this variable and read from it's cache and not see the update thread2 did?
+ I may be overthinking it, but I want to use an atomic_int and justify my decision rather than going blindly over the safer decision. an atomic_int, I believe guarantees it will go ahead and read the latest value, is that about right?
+ if there's a specific topic in memory access/thread safety that speaks about this kind of situation I'd be happy to learn more.
+ Thanks!
+    submitted by    /u/Echo_1Q    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Observe File System Changes with Reactive Extensions for .NET]]></title>
+        <id>https://www.reddit.com/r/csharp/comments/1cylhfm/observe_file_system_changes_with_reactive/</id>
+        <link href="https://www.reddit.com/r/csharp/comments/1cylhfm/observe_file_system_changes_with_reactive/"/>
+        <updated>2024-05-23T05:42:52.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/hm_vr  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Try out project leyden.. ….~3x improvements in startup & warmup time.]]></title>
+        <id>https://www.reddit.com/r/java/comments/1cylfjv/try_out_project_leyden_3x_improvements_in_startup/</id>
+        <link href="https://www.reddit.com/r/java/comments/1cylfjv/try_out_project_leyden_3x_improvements_in_startup/"/>
+        <updated>2024-05-23T05:39:36.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/sureshg  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : java</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Wanting to learn code, any tips to jumpstart my journey ??]]></title>
+        <id>https://www.reddit.com/r/csharp/comments/1cylbht/wanting_to_learn_code_any_tips_to_jumpstart_my/</id>
+        <link href="https://www.reddit.com/r/csharp/comments/1cylbht/wanting_to_learn_code_any_tips_to_jumpstart_my/"/>
+        <updated>2024-05-23T05:32:17.000Z</updated>
+        <summary type="html"><![CDATA[taking the initiative to finally take the time to learn C# (for unity) in my mean time, is there anything i and other beginners should know that may: 
+ jumpstart learning 
+ make my life easier 
+ help my understanding 
+ or any useful resources everyone should know 
+ thanks a bunch for anyone who helps to add to this. 
+    submitted by    /u/TheBronzeNecap  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Is it possible to overwrite GOT entries if ASLR+PIE is ON and the binary is running remotely?]]></title>
+        <id>https://www.reddit.com/r/hacking/comments/1cyl7mr/is_it_possible_to_overwrite_got_entries_if/</id>
+        <link href="https://www.reddit.com/r/hacking/comments/1cyl7mr/is_it_possible_to_overwrite_got_entries_if/"/>
+        <updated>2024-05-23T05:25:30.000Z</updated>
+        <summary type="html"><![CDATA[Pretty much the title. I am extremely confused about this.
+ I have seen people claim online in articles that it is possible to overwrite GOT entries using format string vulnerabilities even if ASLR is on and the binary has PIE capabilities.
+ However, GOT is in the data section of the binary, and afaik, the strongest ASLR setting in Linux (randomize_va_space = 2) randomizes the stack and data segments separately. So it is not possible to get the GOT entry addresses via printf format string vulnerability. But this is supposedly a well know exploit method as explained here
+ I did not understand the explanation in the article. Can someone help me out on this? If answers are different for 32 bit and 64 bit architectures please tell me their differences as well. Thanks!
+    submitted by    /u/innocentzer0  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : hacking</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Do you want help to learn programming]]></title>
+        <id>https://www.reddit.com/r/learnprogramming/comments/1cykpza/do_you_want_help_to_learn_programming/</id>
+        <link href="https://www.reddit.com/r/learnprogramming/comments/1cykpza/do_you_want_help_to_learn_programming/"/>
+        <updated>2024-05-23T04:55:22.000Z</updated>
+        <summary type="html"><![CDATA[Brief introduction about me i am 24 years old i study computer science and i am proficient at python and good at js and worked with other programming languages like c,c#,PHP,go(just a little bit) and i want to teach somoene for completely free . I would like to teach you programming basics preferably in python or js and help you with beginner projects so you apply the concept you learned (learn a little apply a lot) but in return i want you to help me upgrade my teaching skills and soft skills , like give feedbacks about the way i explain/talk... And if we become freinds that s a plus. I made this post because i kinda have social anexiety and i want to stop out of my comfort zone . P.s: i don t know the hours i can do per week but i think it can be bwetween 1-5hours and i can give you ressources if you want to study on your own , and the learning gonna be via voice calls, if there s more then one person that want that it would be very great and we can make like a group but i doubt it a lot , last thing is i really enjoy teaching pepole even if i am not the best at it :)
+    submitted by    /u/Important_Let_9489  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : learnprogramming</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Building C/OpenGL Pong With AI]]></title>
+        <id>https://www.reddit.com/r/C_Programming/comments/1cykjs1/building_copengl_pong_with_ai/</id>
+        <link href="https://www.reddit.com/r/C_Programming/comments/1cykjs1/building_copengl_pong_with_ai/"/>
+        <updated>2024-05-23T04:44:49.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/danenania  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Gameboy PPU Timing Question]]></title>
+        <id>https://www.reddit.com/r/EmuDev/comments/1cykjdr/gameboy_ppu_timing_question/</id>
+        <link href="https://www.reddit.com/r/EmuDev/comments/1cykjdr/gameboy_ppu_timing_question/"/>
+        <updated>2024-05-23T04:44:08.000Z</updated>
+        <summary type="html"><![CDATA[I am testing my Gameboy emulator against the "lcdon_timing-GS" Mooneye test ROM. I'm not sure what exactly the expected behavior is supposed to be.
+ I've seen multiple sources say that, after enabling the LCD, the very first scanline on the first frame has different timings from other scanlines, but I can't find timing documentation for this anywhere.
+ Here's what I've gathered so far:
+  
+The PPU starts in mode 0 (HBlank) after the LCD is enabled. There is no mode 2 on the first scanline.
+ After mode 0, PPU advances to mode 3, which is unusual.
+ The PPU advances from mode 3 to mode 0, and remains in this mode until the end of the scanline.
+ After scanline 0, the PPU resumes normal operation (mode 2, mode 3, mode 0, etc)
+ The PPU starts 2 t-cycles "late"?
+ The LCD is blank for the first frame after it is enabled
+  
+What is the timing for scanline 0? How long does the PPU stay in each mode?
+ Are any interrupts requested during the first frame after enabling the LCD?
+ How is the PPU started 2 cycles "late" if it starts in mode 0 and jumps straight to mode 3? How can it be late if it starts in HBlank?
+ Is there any documentation out there that describes this behavior?
+ I had a look at Higan, and it runs mode 0 for 72 clocks, then mode 3 for 172 clocks (according to Kevtris this might need to be 173.5), then back to mode 0 until 456 clocks have elapsed. Is this correct?
+    submitted by    /u/Darth-Wader  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>Developing Emulators</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Graduated last year and I've been solo-developing a roguelike instead of looking for a job]]></title>
+        <id>https://www.reddit.com/r/csMajors/comments/1cyk31u/graduated_last_year_and_ive_been_solodeveloping_a/</id>
+        <link href="https://www.reddit.com/r/csMajors/comments/1cyk31u/graduated_last_year_and_ive_been_solodeveloping_a/"/>
+        <updated>2024-05-23T04:16:30.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/Vortexile  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csMajors</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Can I find out who is impersonating my friend behind a fake page ?]]></title>
+        <id>https://www.reddit.com/r/hacking/comments/1cyjtn2/can_i_find_out_who_is_impersonating_my_friend/</id>
+        <link href="https://www.reddit.com/r/hacking/comments/1cyjtn2/can_i_find_out_who_is_impersonating_my_friend/"/>
+        <updated>2024-05-23T04:02:09.000Z</updated>
+        <summary type="html"><![CDATA[So a person made a fake page of my bestfriend & stole all the videos/pics off her page& posted them on the fake page they created trying to impersonate her! We have an idea who it is but just want proof & to be sure. Can we use the persons user name to find their ip to really be sure who it is?
+    submitted by    /u/ForeignGodessss  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : hacking</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Got my work cut out for me. Here's where I stand on unit tests for my NES emulator]]></title>
+        <id>https://www.reddit.com/r/EmuDev/comments/1cyjcqi/got_my_work_cut_out_for_me_heres_where_i_stand_on/</id>
+        <link href="https://www.reddit.com/r/EmuDev/comments/1cyjcqi/got_my_work_cut_out_for_me_heres_where_i_stand_on/"/>
+        <updated>2024-05-23T03:35:27.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/StaticMoose  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>Developing Emulators</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Best way in getting Telemetry to the backend]]></title>
+        <id>https://www.reddit.com/r/devops/comments/1cyigio/best_way_in_getting_telemetry_to_the_backend/</id>
+        <link href="https://www.reddit.com/r/devops/comments/1cyigio/best_way_in_getting_telemetry_to_the_backend/"/>
+        <updated>2024-05-23T02:46:31.000Z</updated>
+        <summary type="html"><![CDATA[My company is choosing OTel as the telemetry framework we are going to adopt. I've been reading about the Otel SDK and Grafana Alloy, and a bit about Prometheus and Loki and I'm trying to understand how these elements reasonably work without any practical experience with them and would appreciate any feedback you have.
+ Application w/ SDK --- Collector --- Data backend = This seems to be the recommended components.
+ Application w/ SDK - Can push to Collector which will transform the data to export to the data backend.
+ The recommended configuration for an Application w/ SDK is to host an agent, which is basically a Collector, on the same host as the application, to handle transmitting OTel to the Collector. 
+ Q. How bad is it really to run the Application without the agent, and just push with the SDK?
+ Q: Is the push model much worse than the pull model? At what level of scale does pull make more sense?
+ Q. Does it make sense to mix and match pull metrics, and push traces and logs? The service discovery for pull seems like just another thing to deal with.
+ Collector - Can be configured to pull metrics , can it pull logs and traces too?
+ Q. Is it as simple as putting a load balancer in front of Collectors, and just have everything blast things to Collectors?
+ I would really appreciate any answers to this. Thank you
+    submitted by    /u/Sheepherder555  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : devops</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[What would be the best starter project?]]></title>
+        <id>https://www.reddit.com/r/C_Programming/comments/1cyh2kl/what_would_be_the_best_starter_project/</id>
+        <link href="https://www.reddit.com/r/C_Programming/comments/1cyh2kl/what_would_be_the_best_starter_project/"/>
+        <updated>2024-05-23T01:33:53.000Z</updated>
+        <summary type="html"><![CDATA[I'm trying to learn c,and I want so recommendations of easy/challenging projects for starters! (I'm also new in programming as a whole)
+ :p
+    submitted by    /u/Nyglue  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[What software shouldn't you write in Rust?]]></title>
+        <id>https://www.reddit.com/r/rust/comments/1cygq95/what_software_shouldnt_you_write_in_rust/</id>
+        <link href="https://www.reddit.com/r/rust/comments/1cygq95/what_software_shouldnt_you_write_in_rust/"/>
+        <updated>2024-05-23T01:15:50.000Z</updated>
+        <summary type="html"><![CDATA[I sometimes heard that some software shouldn't be written in Rust, as supposedly there are better tools for the job. What types of software are these?
+    submitted by    /u/Thereareways  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : rust</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Should I hide my PC players' mice when it's not their turn?]]></title>
+        <id>https://www.reddit.com/r/gamedev/comments/1cygn0h/should_i_hide_my_pc_players_mice_when_its_not/</id>
+        <link href="https://www.reddit.com/r/gamedev/comments/1cygn0h/should_i_hide_my_pc_players_mice_when_its_not/"/>
+        <updated>2024-05-23T01:11:07.000Z</updated>
+        <summary type="html"><![CDATA[I am working on a game that has turn based combat and currently I hide the mouse from players when it is not their turn. The thinking is that they can't take any actions so the mouse is a distraction. Removing the mouse also helps them to understand it's not their turn and they can't do anything.
+ I've had some mixed feedback from play testers.
+ I haven't had much luck finding anything relating to mouse behavior best practices. Any suggested reading or known best practices for hiding/showing the mouse to PC players?
+    submitted by    /u/Hexadis  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : gamedev</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Why aren't there more WebKit browsers on Linux?]]></title>
+        <id>https://www.reddit.com/r/linux/comments/1cyglmc/why_arent_there_more_webkit_browsers_on_linux/</id>
+        <link href="https://www.reddit.com/r/linux/comments/1cyglmc/why_arent_there_more_webkit_browsers_on_linux/"/>
+        <updated>2024-05-23T01:09:10.000Z</updated>
+        <summary type="html"><![CDATA[So I recently learned that the default gnome web browser actually uses webkit, and I was wondering why this isn't more of a thing on linux? I know a huge portion of the linux community has their heart set on gecko, but I feel like linux users hate the chromium monopoly even more than they love gecko. I'm not a developer so maybe there's a good reason why there aren't many webkit browsers on the market. Any information on this would be appreciated.
+    submitted by    /u/redditt1984  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Only available debugger option is “C#”]]></title>
+        <id>https://www.reddit.com/r/csharp/comments/1cygj9d/only_available_debugger_option_is_c/</id>
+        <link href="https://www.reddit.com/r/csharp/comments/1cygj9d/only_available_debugger_option_is_c/"/>
+        <updated>2024-05-23T01:05:48.000Z</updated>
+        <summary type="html"><![CDATA[Guys, I am so embarrassed to have to ask this. I assume the answer is extremely obvious but I am brand new to coding.
+ I am trying to use the “.NET 5+ and .NET core” debug option but the only option VS code is giving me is “C#”.
+ Can someone please explain to me what I am missing?
+ Thank you so much 
+    submitted by    /u/hunterslugdaddy  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csharp</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Pointers in Linked List]]></title>
         <id>https://www.reddit.com/r/cpp_questions/comments/1cyfk3n/pointers_in_linked_list/</id>
@@ -68,6 +493,17 @@
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Are all these AI doom posts just coming from people who have never worked as a software engineer?]]></title>
+        <id>https://www.reddit.com/r/cscareerquestions/comments/1cye1ts/are_all_these_ai_doom_posts_just_coming_from/</id>
+        <link href="https://www.reddit.com/r/cscareerquestions/comments/1cye1ts/are_all_these_ai_doom_posts_just_coming_from/"/>
+        <updated>2024-05-22T23:03:22.000Z</updated>
+        <summary type="html"><![CDATA[I have only been in the industry for about 2 years and I dont get it. Writing code is a not even the primary duty as a swe. How is AI going to gather requirements from a story with either extremely vague, incomplete or no requirements? Is it going to set up meetings and chat with various teams to gather all of these requirements and have nuanced conversations and debates to clarify incomplete requirements or a set of requirements that clearly won't work and are not well thought out? How would it even recognize this? 
+ How will AI take into consideration end to end integration or understand a system that is classified or highly confidential (therefore not available on the internet)? And even if a company trains AI with company documentation and source code that is confidential how is it goi…]]></summary>
+        <author>
+            <name>top scoring links : cscareerquestions</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Data storage format in the database]]></title>
         <id>https://www.reddit.com/r/csharp/comments/1cydhh0/data_storage_format_in_the_database/</id>
         <link href="https://www.reddit.com/r/csharp/comments/1cydhh0/data_storage_format_in_the_database/"/>
@@ -77,6 +513,17 @@
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[What Rust Got Wrong on Formal Verification]]></title>
+        <id>https://www.reddit.com/r/programming/comments/1cyclvy/what_rust_got_wrong_on_formal_verification/</id>
+        <link href="https://www.reddit.com/r/programming/comments/1cyclvy/what_rust_got_wrong_on_formal_verification/"/>
+        <updated>2024-05-22T22:00:10.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/gavinhoward  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : programming</name>
         </author>
     </entry>
     <entry>
@@ -139,6 +586,32 @@
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Snapdragon elite X]]></title>
+        <id>https://www.reddit.com/r/archlinux/comments/1cybebx/snapdragon_elite_x/</id>
+        <link href="https://www.reddit.com/r/archlinux/comments/1cybebx/snapdragon_elite_x/"/>
+        <updated>2024-05-22T21:09:05.000Z</updated>
+        <summary type="html"><![CDATA[The snapdragon x elite chip was announced recently along with some new laptops, (lenovo, dell, surface) and I wanted to ask if there is going to be some way I can install arch linux on these new laptops? 
+ Would I be able to install arch linux arm on these laptops? In case I can, what is the difference between arch linux arm and normal arch linux? Are there some applications that cannot run on this distributions? would I notice the difference between vanilla arch? 
+ In case I can't, what about macbooks with their sillicon chips? I saw somewhere that someone installed arch on one of those but I don't remember where or if there was a reliable way of doing it. 
+ I would just like to try arch with an arm based chip and I don't now if this is possible.
+    submitted by    /u/Public-Fan-8904  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : archlinux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Behold! A 100-line fully self-contained script for the dancing tesseract!]]></title>
+        <id>https://www.reddit.com/r/godot/comments/1cyb6bl/behold_a_100line_fully_selfcontained_script_for/</id>
+        <link href="https://www.reddit.com/r/godot/comments/1cyb6bl/behold_a_100line_fully_selfcontained_script_for/"/>
+        <updated>2024-05-22T21:00:05.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/arceryz  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : godot</name>
         </author>
     </entry>
     <entry>
@@ -337,6 +810,19 @@
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[100Devs or The Odin Project?]]></title>
+        <id>https://www.reddit.com/r/learnprogramming/comments/1cy6uug/100devs_or_the_odin_project/</id>
+        <link href="https://www.reddit.com/r/learnprogramming/comments/1cy6uug/100devs_or_the_odin_project/"/>
+        <updated>2024-05-22T18:03:31.000Z</updated>
+        <summary type="html"><![CDATA[I’m thinking of learning coding and these are the two options I know about from friends that are the best free options. 
+ To those who have used these resources, which one would you recommend I begin with? For 100Devs, I was just going to follow along with his first cohort Youtube playlist. 
+    submitted by    /u/sebastiandarkee  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : learnprogramming</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Announcing the General Availability of Semantic Kernel Java]]></title>
         <id>https://www.reddit.com/r/java/comments/1cy6ujk/announcing_the_general_availability_of_semantic/</id>
         <link href="https://www.reddit.com/r/java/comments/1cy6ujk/announcing_the_general_availability_of_semantic/"/>
@@ -382,6 +868,21 @@
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : golang</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Just how "life changing" is getting a job at a prestigious, big, tech company?]]></title>
+        <id>https://www.reddit.com/r/cscareerquestions/comments/1cy4wa1/just_how_life_changing_is_getting_a_job_at_a/</id>
+        <link href="https://www.reddit.com/r/cscareerquestions/comments/1cy4wa1/just_how_life_changing_is_getting_a_job_at_a/"/>
+        <updated>2024-05-22T16:44:11.000Z</updated>
+        <summary type="html"><![CDATA[Title. Talking about FAANG of course.
+ Just how much can it change your overall career trajectory down the line?
+ How much do you lose out on in your career if you don't join one of these companies?
+ Is it all over hyped? Or is there really truth to just how beneficial these companies can be to your career?
+    submitted by    /u/cs-grad-person-man  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : cscareerquestions</name>
         </author>
     </entry>
     <entry>
@@ -693,6 +1194,17 @@ This last point is the one I would emphasize the most: currently, Linux on ARM s
  Going further in my life, I never stopped making games. Every month it was something else, but never something I could finish. A few years ago, I got very close, when I assembled a team of developers with a friend of mine and we started working on a horror game. The game was called Pavor, whi…]]></summary>
         <author>
             <name>top scoring links : gamedev</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[I swear this thing pops up in every course]]></title>
+        <id>https://www.reddit.com/r/csMajors/comments/1cxzrvx/i_swear_this_thing_pops_up_in_every_course/</id>
+        <link href="https://www.reddit.com/r/csMajors/comments/1cxzrvx/i_swear_this_thing_pops_up_in_every_course/"/>
+        <updated>2024-05-22T13:05:59.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/saikonosonzai  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csMajors</name>
         </author>
     </entry>
     <entry>
@@ -1049,6 +1561,17 @@ This is crap, You're gonna have exactly the same result every time and teaches y
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[whatWouldHappenRealy]]></title>
+        <id>https://www.reddit.com/r/ProgrammerHumor/comments/1cxu6mc/whatwouldhappenrealy/</id>
+        <link href="https://www.reddit.com/r/ProgrammerHumor/comments/1cxu6mc/whatwouldhappenrealy/"/>
+        <updated>2024-05-22T07:05:24.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/matanj  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : ProgrammerHumor</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Minesweeper Game Code Using C# OOP Console Application]]></title>
         <id>https://www.reddit.com/r/csharp/comments/1cxtqz3/minesweeper_game_code_using_c_oop_console/</id>
         <link href="https://www.reddit.com/r/csharp/comments/1cxtqz3/minesweeper_game_code_using_c_oop_console/"/>
@@ -1211,6 +1734,17 @@ This is crap, You're gonna have exactly the same result every time and teaches y
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[yesItIsReallyGood]]></title>
+        <id>https://www.reddit.com/r/ProgrammerHumor/comments/1cxr9yl/yesitisreallygood/</id>
+        <link href="https://www.reddit.com/r/ProgrammerHumor/comments/1cxr9yl/yesitisreallygood/"/>
+        <updated>2024-05-22T03:59:51.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/aprakasoipip  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : ProgrammerHumor</name>
         </author>
     </entry>
     <entry>
@@ -4710,6 +5244,20 @@ Is this too much? Do other projects do similar things? My thinking with the two 
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Best book for picking up Java as an experienced dev?]]></title>
+        <id>https://www.reddit.com/r/ExperiencedDevs/comments/1cvxk95/best_book_for_picking_up_java_as_an_experienced/</id>
+        <link href="https://www.reddit.com/r/ExperiencedDevs/comments/1cvxk95/best_book_for_picking_up_java_as_an_experienced/"/>
+        <updated>2024-05-19T20:29:20.000Z</updated>
+        <summary type="html"><![CDATA[Context: I'm a staff engineer who's been writing C# for the last 10 years.
+ I recently switched to FANG and need to transition to Java. 
+ Any book recommendations for someone who knows how to code already?
+    submitted by    /u/Unable_Rate7451  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : ExperiencedDevs</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Someone wants to pay for a landing page, at what point do you tell them that squarespace/wix/wordpress is better for their needs?]]></title>
         <id>https://www.reddit.com/r/ExperiencedDevs/comments/1cvx920/someone_wants_to_pay_for_a_landing_page_at_what/</id>
         <link href="https://www.reddit.com/r/ExperiencedDevs/comments/1cvx920/someone_wants_to_pay_for_a_landing_page_at_what/"/>
@@ -5117,6 +5665,17 @@ No Tax Breaks for Outsourcing Act (2023) - [Link]
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[TUI tool for sending arbitrary input packets and monitoring packets, made by Go !]]></title>
+        <id>https://www.reddit.com/r/golang/comments/1cvnmfl/tui_tool_for_sending_arbitrary_input_packets_and/</id>
+        <link href="https://www.reddit.com/r/golang/comments/1cvnmfl/tui_tool_for_sending_arbitrary_input_packets_and/"/>
+        <updated>2024-05-19T12:53:38.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/ddddddO811  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : golang</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Best Practice for Storing Yes/No Status in SQL: 'Yes/No', 'YES/NO', 'Y/N', or '1/0'? What Do You Recommend?]]></title>
         <id>https://www.reddit.com/r/learnprogramming/comments/1cvnh5l/best_practice_for_storing_yesno_status_in_sql/</id>
         <link href="https://www.reddit.com/r/learnprogramming/comments/1cvnh5l/best_practice_for_storing_yesno_status_in_sql/"/>
@@ -5391,6 +5950,19 @@ Configured with: --prefix=/Library/Developer/CommandLineTools/usr --with-gxx-inc
  [link]   [comments]]]></summary>
         <author>
             <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Where to find implementation of every single thing in programing?]]></title>
+        <id>https://www.reddit.com/r/learnprogramming/comments/1cvkoxa/where_to_find_implementation_of_every_single/</id>
+        <link href="https://www.reddit.com/r/learnprogramming/comments/1cvkoxa/where_to_find_implementation_of_every_single/"/>
+        <updated>2024-05-19T09:50:40.000Z</updated>
+        <summary type="html"><![CDATA[#include <iostream> using namespace std; int main() { int number; float temp, sqr_root; cout << "Enter the number whose square root you want to find: "; cin >> number; sqr_root = number / 2; temp = 0; while (sqr_root != temp) { temp = sqr_root; sqr_root = (number / temp + temp) / 2; } cout << "The square root of " << number << " is " << sqr_root << endl << endl; return 0; } 
+ like i wanted to know the implementation of sqrt() function & I found it but now i want to know about implementation of others too like say for loop, like how a loop actually works. Does it use macro or recursion or what!? And it's not just that, there are a lot of things whose implementation i want. It would be really thankful or i should say amazing if someone can share me any resource to find implementation of everything or most of.. 
+    submitted by    /u/FindingPossibilities  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : learnprogramming</name>
         </author>
     </entry>
     <entry>
@@ -23633,49 +24205,6 @@ while the rust compiler has been an amazing tool along the journey, it just fail
         <summary type="html"><![CDATA[I want to get in to emulator development. I started to learn c++. What else should I learn before trying to make emulator? I'm planing on making a chip 8 after im done with c++ but I would like to know what else I should learn before diving in.
  Thank you
     submitted by    /u/Overlord1620  
- [link]   [comments]]]></summary>
-        <author>
-            <name>Developing Emulators</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[GNOME developers make a Xbox One Emulator?]]></title>
-        <id>https://www.reddit.com/r/EmuDev/comments/1cb7qdt/gnome_developers_make_a_xbox_one_emulator/</id>
-        <link href="https://www.reddit.com/r/EmuDev/comments/1cb7qdt/gnome_developers_make_a_xbox_one_emulator/"/>
-        <updated>2024-04-23T15:39:09.000Z</updated>
-        <summary type="html"><![CDATA[In GNOME Discourse thread about Xbox One Emulator. Im love sub UI
-    submitted by    /u/antony_chacha  
- [link]   [comments]]]></summary>
-        <author>
-            <name>Developing Emulators</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Sega MD/Genesis in 100% Java underway]]></title>
-        <id>https://www.reddit.com/r/EmuDev/comments/1cb6vv9/sega_mdgenesis_in_100_java_underway/</id>
-        <link href="https://www.reddit.com/r/EmuDev/comments/1cb6vv9/sega_mdgenesis_in_100_java_underway/"/>
-        <updated>2024-04-23T15:03:31.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/elXiru  
- [link]   [comments]]]></summary>
-        <author>
-            <name>Developing Emulators</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[I made an Intel 8080 emulator!]]></title>
-        <id>https://www.reddit.com/r/EmuDev/comments/1cb6j02/i_made_an_intel_8080_emulator/</id>
-        <link href="https://www.reddit.com/r/EmuDev/comments/1cb6j02/i_made_an_intel_8080_emulator/"/>
-        <updated>2024-04-23T14:48:28.000Z</updated>
-        <summary type="html"><![CDATA[​
- https://preview.redd.it/xraudd4fq8wc1.png?width=2536&format=png&auto=webp&s=dc4bf895282278f25bc9b32a7c815f291f0273f5
- Hi again! Last time i posted here was in 2019 I think with my chip-8 emulator. Now I have a created an Intel 8080 emulator!
- It started out as a space invaders emulator but I got more interested in creating a disassembler/debugger and implementing all the instructions instead :)
- For those interested in creating an intel 8080 emulator i have modified the (common?) test cpudiag.bin rom since it assumes the start address is 255 and not 0 which makes all the jumps/calls go to the wrong addresses.
- Links to source code and test rom:
- Github repository
- cpudiagFixed.bin
- ​
-    submitted by    /u/Vonido  
  [link]   [comments]]]></summary>
         <author>
             <name>Developing Emulators</name>
