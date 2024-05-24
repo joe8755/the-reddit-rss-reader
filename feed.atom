@@ -2,10 +2,399 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://joe8755.github.io/the-reddit-rss-reader/index.html</id>
     <title>the reddit rss reader</title>
-    <updated>2024-05-24T01:22:53.080Z</updated>
+    <updated>2024-05-24T12:36:27.529Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://joe8755.github.io/the-reddit-rss-reader/index.html"/>
     <link rel="self" href="https://joe8755.github.io/the-reddit-rss-reader/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[Characters that aren’t registered]]></title>
+        <id>https://www.reddit.com/r/hacking/comments/1czj296/characters_that_arent_registered/</id>
+        <link href="https://www.reddit.com/r/hacking/comments/1czj296/characters_that_arent_registered/"/>
+        <updated>2024-05-24T12:01:20.000Z</updated>
+        <summary type="html"><![CDATA[Do there exist characters that aren’t ”registered” yet? Or is any character that exist also registered?
+ Like, is it possible to just create a new character from nowhere and use it or would that crash the ”platform”? 
+    submitted by    /u/ThatBot0101101000  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : hacking</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[String.Intern results differ in local and online compilers]]></title>
+        <id>https://www.reddit.com/r/csharp/comments/1czisl5/stringintern_results_differ_in_local_and_online/</id>
+        <link href="https://www.reddit.com/r/csharp/comments/1czisl5/stringintern_results_differ_in_local_and_online/"/>
+        <updated>2024-05-24T11:45:49.000Z</updated>
+        <summary type="html"><![CDATA[string s1 = new(new[] { 'H', 'e', 'l', 'l', 'o' }); string i1 = string.Intern(s1); bool result1 = ReferenceEquals(s1, i1); string s2 = new(new[] { 'H', 'e', 'l', 'l', 'o' }); string i2 = string.Intern(s2); bool result2 = ReferenceEquals(s2, i2); bool result3 = ReferenceEquals(i1, i2); Console.WriteLine(result1); // Should be False Console.WriteLine(result2); // Should be False Console.WriteLine(result3); // Should be True 
+ The output of this little test is
+ True, False, True on my PC and this online compiler but False, False, True in this online compiler. I asked GPT about this and it pointed to the second results being true as well. 
+ If I understood correctly, s1 creates a new string object on the heap (which is automatically registered in the intern pool) and holds the reference to that string object. i1 checks the VALUE of s1 to see if it exists in the intern pool, and since it does, i1 takes the reference from the intern pool, making s1 and i1 reference the same string object.
+ Similarly, s2 creates another string object with the same value as s1 on the heap (although I'm not sure if it is immediately added to the intern pool). i2 checks the VALUE of s2 in the intern pool, finds that this string object has already been created, and thus takes the reference from the intern pool. As a result, i1 and i2 reference the same object, so they return true.
+ I'd be glad if someone could explain how the intern works and why the results differ?
+ PS: I'm running it in .net 7 in local and 8 in online compilers.
+    submitted by    /u/PhantomGolem  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[LockBit Ransomware Demands $25 Million from London Drugs]]></title>
+        <id>https://www.reddit.com/r/hacking/comments/1czipwv/lockbit_ransomware_demands_25_million_from_london/</id>
+        <link href="https://www.reddit.com/r/hacking/comments/1czipwv/lockbit_ransomware_demands_25_million_from_london/"/>
+        <updated>2024-05-24T11:41:31.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/goki7  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : hacking</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[need some tips]]></title>
+        <id>https://www.reddit.com/r/cpp/comments/1czih15/need_some_tips/</id>
+        <link href="https://www.reddit.com/r/cpp/comments/1czih15/need_some_tips/"/>
+        <updated>2024-05-24T11:26:58.000Z</updated>
+        <summary type="html"><![CDATA[So basically i have an exam in rougly two weeks for intro to programming. I do have an understanding of some topics but for me its so hard to apply it to a specific question. I still need help with basics but where am i supposed to start i look at a question with a blank mind. Its time to put my heart and soul in these two weeks to study but im so stuck on how to do the question if im clueless of whats supposed to be in the syntax. Thank you.
+    submitted by    /u/DisastrousPop2118    to    r/cpp  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Error on iterator]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1czhyml/error_on_iterator/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1czhyml/error_on_iterator/"/>
+        <updated>2024-05-24T10:55:01.000Z</updated>
+        <summary type="html"><![CDATA[I have some problem on compilng my code. I don't understand why,therefore i can't figure out how to correct it.
+ here is code: 
+ include <bits/stdc++.h> using namespace std; int main() { int n,k,x; cin >> n >> k; vector <int> vec1(n); vector<int> :: iterator upper,lower; for(int i=0;i<n;i++){ cin >> vec1[i]; } set <int> arr1(vec1.begin(),vec1.end()); set <int> :: iterator it=arr1.begin(); x=arr1.size(); if(k>x) {cout << -1 <<" " << -1;} else { while(k--){ it++; } --it; lower=lower_bound(vec1.begin(),vec1.end(),*(it)); upper=upper_bound(vec1.begin(),vec1.end(),arr1.begin()); cout << (upper-vec1.begin())+1 <<(lower-vec1.begin())+1; } } 
+ here is error:
+ /usr/include/c++/7/bits/predefined_ops.h:90:22: note: ‘const std::_Rb_tree_const_iterator<int>’ is not derived from ‘const __gnu_cxx::__normal_iterator<_IteratorL, _Container>’ { return __val < *__it; } ~~~~~~^~~~~~~ In file included from /usr/include/c++/7/bits/stl_algobase.h:67:0, from /usr/include/c++/7/bits/char_traits.h:39, from /usr/include/c++/7/ios:40, from /usr/include/c++/7/istream:38, from /usr/include/c++/7/sstream:38, from /usr/include/c++/7/complex:45, from /usr/include/c++/7/ccomplex:39, from /usr/include/x86_64-linux-gnu/c++/7/bits/stdc++.h:52, from 1866854386/source.cpp:1: usr/include/c++/7/bits/predefined_ops.h:90:22: error: no match for ‘operator<’ (operand types are ‘const std::_Rb_tree_const_iterator<int>’ and ‘int’) { return __val < *__it; } ~~~~~~^~~~~~~ 
+    submitted by    /u/One-Pomegranate-3122    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[What is the best c# library to make windows applications?]]></title>
+        <id>https://www.reddit.com/r/csharp/comments/1czhkny/what_is_the_best_c_library_to_make_windows/</id>
+        <link href="https://www.reddit.com/r/csharp/comments/1czhkny/what_is_the_best_c_library_to_make_windows/"/>
+        <updated>2024-05-24T10:29:08.000Z</updated>
+        <summary type="html"><![CDATA[Like what is the most modern library to make windows application that doesn't need visual studio code to make just using the dotnet command line interface from the cmd having rich ui libraries for modern ui???????????????????????
+    submitted by    /u/nobel-tad  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Emulating a Raspberry Pi camera module by TCP socket]]></title>
+        <id>https://www.reddit.com/r/csharp/comments/1czh6z9/emulating_a_raspberry_pi_camera_module_by_tcp/</id>
+        <link href="https://www.reddit.com/r/csharp/comments/1czh6z9/emulating_a_raspberry_pi_camera_module_by_tcp/"/>
+        <updated>2024-05-24T10:02:21.000Z</updated>
+        <summary type="html"><![CDATA[I need help connecting Omniverse Isaac Sim camera outputs (frames) to a Raspberry Pi camera option in a desktop app - C# project. I attempted using a TCP socket where the client sends Isaac Sim outputs to a server running on the local IP (e.g., '127.0.0.1:8080'). I have verified the connection through a web browser by running Flask on "127.0.0.1:5000/video". On the web browser, it works fine by displaying when sending a video file, but after changing the source of the frame, namely editing #VideoCapture(0) to a webcam it doesn't work. 
+ However, in my C# project, when I set the IP to 127.0.0.1 and the port to 8080, there's a second port number. (is it optional or not?). I don't actually have a physical Raspberry Pi camera module; there is just an option in the C# project to select a Raspberry Pi camera. Is sending frames from Isaac Sim to this option in the C# project equivalent to sending frames from a Raspberry Pi camera module to the C# project? How can I achieve this through a TCP socket to display frames on a C# desktop application? 
+ Thank you for your assistance. 
+    submitted by    /u/Signal_Egg2961  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[language-lawyering] Is presented reasoning of C++ standard correct?]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1czgqqt/languagelawyering_is_presented_reasoning_of_c/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1czgqqt/languagelawyering_is_presented_reasoning_of_c/"/>
+        <updated>2024-05-24T09:29:20.000Z</updated>
+        <summary type="html"><![CDATA[Following compiler explorer link (or at bottom of this post) contains code with examples of requires expression from C++20 compiling in some contexts and with some compilers and not compiling in other. Reasons for the differing behavior is reasoned about in the comments with references to the standard working draft. The conclusion is that Clang interpretation of the standard is different from GCC and MSVC.
+ https://godbolt.org/z/ndTW7Gx59 (edit: update link, added the code at the bottom of the post)
+ My question is two-fold:
+  
+Are there errors in my reasoning about the C++ standard?
+ Which interpretation of the situation presented is correct one?
+  
+edit: changing std::make_signed_t to std::make_signed results in Clang failing the compilation, which means that the behavior only differs wi…]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Basic C++ in two weeks for a project - yeah i know this is dumb]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1czgm3d/basic_c_in_two_weeks_for_a_project_yeah_i_know/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1czgm3d/basic_c_in_two_weeks_for_a_project_yeah_i_know/"/>
+        <updated>2024-05-24T09:19:30.000Z</updated>
+        <summary type="html"><![CDATA[Hi,
+ I hate to ask this question, but I need help. I need to learn C++ for a project that requires me to implement a function into existing code. I know I'll need to use classes for this. While the function itself isn't too difficult, understanding where it belongs, what inputs it needs, what it should output, and how it all fits together is the challenging part.
+ I'm not an expert in programming; I'm more of a beginner. I know basic concepts like loops and data types, and I understand the idea of pointers, classes etc.. My main problem is applying these concepts correctly in different situations and internalizing them.
+ I've been using learncpp.com, which I like, but it seems too time-intensive. Maybe I'm approaching it the wrong way? I read, make notes, and then try the examples. This takes a lot of time. I am on part three "Debugging" part. 
+ I then switched to studyplan.dev, which offers shorter lessons. However, it sometimes feels too superficial and lacks practical exercises. Here, I also completed Chapter 3 about classes. 
+ I recently discovered Codecademy's free C++ course. Would you recommend it, or do you have other suggestions? Or should I stick with learncpp and force myself to learn it this way?
+ I also saw that there are some YouTube videos, and I like the concept of watching people explain things. However, I'm not sure if there are very good series on C++.
+ I would appreciate any advice you can offer.
+ Thank you!
+    submitted by    /u/chiefbroson    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Project build targets - best practices your thoughts]]></title>
+        <id>https://www.reddit.com/r/cpp/comments/1czfwii/project_build_targets_best_practices_your_thoughts/</id>
+        <link href="https://www.reddit.com/r/cpp/comments/1czfwii/project_build_targets_best_practices_your_thoughts/"/>
+        <updated>2024-05-24T08:25:42.000Z</updated>
+        <summary type="html"><![CDATA[Hi, I'm am looking for information on the way you handle your project's build targets, the best practices, what worked the best for you and your teams.
+ Specifically, other than debug and release targets, do you maintain other build configuration when releasing software ? Personally, I rarely only maintain those 2 targets: I have at least a RETAIL/FINAL build, and sometimes, a test build. More than 4 targets is a pain to deal with, so I never go there. Here's the differences between them, the features they have:
+ Debug build: should be for development only, not for testing. Debug version will include debug info, and no optimization;
+ Release build, more specifically 'development release': does contain liited debug information (generated program database files, pdbs) but also has some degree of optimizations. The rationale of this build is that the debug build often is too big, bulky and slow to be practical when testing or reproducing a bug.
+ Final/Retail : here the build has zero debug information, full optimization and for example, in visual studio, WholeProgramOptimization and link-time code generation to perform whole-program optimization. Leveraging optimizing compilers : OCs take the code that you have written and re-write parts of it in order to minimize the memory footprint, maximize execution speed, or both. Making it very hard to debug.
+ Sometime, a QA build is maintained because our QA have specific needs in regards with what they need to test the software.
+ What are you guys thoughts oon this ? If you also maintain a 'production' build in addition to the release buid, how to did you name it ? retail ? final ?
+ Thanks!
+    submitted by    /u/zolaternative    to    r/cpp  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Can someone explain what is going on with the Contracts proposal?]]></title>
+        <id>https://www.reddit.com/r/cpp/comments/1czfmb7/can_someone_explain_what_is_going_on_with_the/</id>
+        <link href="https://www.reddit.com/r/cpp/comments/1czfmb7/can_someone_explain_what_is_going_on_with_the/"/>
+        <updated>2024-05-24T08:03:40.000Z</updated>
+        <summary type="html"><![CDATA[So, I'm struggling to follow the discussion. In the May mailing there is what I can only describe as... a few very passionate view points that are all in conflict with each other. The papers all seem to refer to various bits of the contracts proposal and I feel like I'm missing some key context as to what is going on over there.
+ Can someone tl;dr whats up with Contracts?
+    submitted by    /u/RoyAwesome    to    r/cpp  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[SBOM support in Spring Boot 3.3]]></title>
+        <id>https://www.reddit.com/r/java/comments/1czfgwa/sbom_support_in_spring_boot_33/</id>
+        <link href="https://www.reddit.com/r/java/comments/1czfgwa/sbom_support_in_spring_boot_33/"/>
+        <updated>2024-05-24T07:53:03.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/olivergierke  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : java</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Aelian.FFT, a highly optimized Fast Fourier Transform implementation in .NET]]></title>
+        <id>https://www.reddit.com/r/csharp/comments/1czfejm/aelianfft_a_highly_optimized_fast_fourier/</id>
+        <link href="https://www.reddit.com/r/csharp/comments/1czfejm/aelianfft_a_highly_optimized_fast_fourier/"/>
+        <updated>2024-05-24T07:47:53.000Z</updated>
+        <summary type="html"><![CDATA[Hi all, 
+ I've been working on a pure c# FFT implementation tuned for SIMD. It seems to perform really favorably compared to other well known .NET implementations.
+ I decided to open-source it under the MIT license: Aelian.FFT on GitHub
+ It is also available as a NuGet package
+ I realize it's a rather niche project that will probably only appeal to folks doing DSP in .NET, but I hope this post will get it some traction, and any feedback is welcome.
+ Cheers!
+    submitted by    /u/Several-Platform-564  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Connections between C and C++]]></title>
+        <id>https://www.reddit.com/r/C_Programming/comments/1czf69r/connections_between_c_and_c/</id>
+        <link href="https://www.reddit.com/r/C_Programming/comments/1czf69r/connections_between_c_and_c/"/>
+        <updated>2024-05-24T07:30:46.000Z</updated>
+        <summary type="html"><![CDATA[Notice how C and C++ aren't even from the same country, yet they can do all of the same things? Regardless of their origins, because C++ was built on C, you need to write libraries in C to support the functions of C++, if you don't have the standard libraries already. Even then, some older systems with separate I/Ospace don't let you too easily write interactive (or reactive) programs for them in C; luckily you can include assembly files for them to fit your hardware.
+ One key difference in C functions from their C++ counterparts is how C++ replaces the target object of a function with a pointer named "this". That's its actual name; the indefinite demonstrative pronoun fits for being the object of which the function is a member in C++.
+ Templates aren't exclusive to C++ either; in C you can imitate them with macros, that while they may destroy type safety, can still be used for dynamic dimensionality or objects whose size is dependent on a parameter. These are, of course, object-like macros. Sadly, most folks tend to forego both object-like and function-like macros and only define simple values or even just dummies whose only purpose is to satisfy preprocessor conditions and compile code within. In fact, using object-like and function-like macros in C, I do recommend the practice of adding types as arguments for as many different types are in your functions. You can actually do that as it's only ever the preprocessor that sees them.
+ C can do encapsulation too, but requires objects to be in separate files included by a "root" file for it, whereas C++ has classes. Members in branch files are "private" if instantiated and "protected" if static. Members in the root file are "public". Trouble is that even C++ hasn't a type of class whose members are "protected" by default.
+    submitted by    /u/Moist_Internet_1046  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Disaster during Trixie update : looking for help reviving broken system.]]></title>
+        <id>https://www.reddit.com/r/debian/comments/1czf4c1/disaster_during_trixie_update_looking_for_help/</id>
+        <link href="https://www.reddit.com/r/debian/comments/1czf4c1/disaster_during_trixie_update_looking_for_help/"/>
+        <updated>2024-05-24T07:26:49.000Z</updated>
+        <summary type="html"><![CDATA[I just updated my ThinkPad Trixie installation and mid update it stopped saying libscrypto.so.3 wasn't installed. I've an encrypted home partition btw. Last time this machine was updated was about 4 months ago. I've used Debian for 20 years btw. I tried installing it from command line but couldn't ... The command line just kept reporting it's missing. I knew a restart was hopeless, and of course it was. 
+ So, I'll throw it out there: bite the bullet and reinstall from scratch or maybe cp a pretty much identical system over using sysrescue or.... ? 
+ Btw, recovery mode doesn't boot either.
+ My first #splat# with Debian in a decade. My other Trixie ThinkPad also with encrypted home is fine, but I updated weekly. 
+ Any hints and tips appreciated. 
+    submitted by    /u/rileyrgham  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : debian</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Undefined Behavior in Pointer Arithmetic with Integer Overflow in C]]></title>
+        <id>https://www.reddit.com/r/C_Programming/comments/1czemhj/undefined_behavior_in_pointer_arithmetic_with/</id>
+        <link href="https://www.reddit.com/r/C_Programming/comments/1czemhj/undefined_behavior_in_pointer_arithmetic_with/"/>
+        <updated>2024-05-24T06:51:21.000Z</updated>
+        <summary type="html"><![CDATA[I've been delving deep into the intricate behavior of pointer arithmetic in C, specifically when it intersects with the issue of integer overflow
+ #include <stdio.h>
+ #include <limits.h>
+ int main() {
+ int arr[5] = {1, 2, 3, 4, 5};
+ int *ptr = arr;
+ ptr += INT_MAX; // This line is the crux of the issue
+ printf("%d\n", *ptr);
+ return 0;
+ }
+ increment a pointer by INT_MAX, a value that far exceeds the bounds of the allocated array. According to the C standard, this results in undefined behavior. However, the exact implications of this are rather nebulous and dependent on several factors, including the underlying hardware and the compiler optimizations.
+ so my question is How do different compilers (e.g., GCC, Clang, MSVC) handle such extreme pointer arithmetic? Are there specific flags or settings that can mitigate the undefined behavior in such cases?
+ and How does the C standard address integer overflow in pointer arithmetic, and what are the recommended ways to detect and handle potential overflows?
+    submitted by    /u/putu420  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Thread 1: EXC_BAD_ACCESS (code=1, address=0x368) How to fix error]]></title>
+        <id>https://www.reddit.com/r/C_Programming/comments/1czd8l6/thread_1_exc_bad_access_code1_address0x368_how_to/</id>
+        <link href="https://www.reddit.com/r/C_Programming/comments/1czd8l6/thread_1_exc_bad_access_code1_address0x368_how_to/"/>
+        <updated>2024-05-24T05:18:27.000Z</updated>
+        <summary type="html"><![CDATA[I’ve followed a tutorial (link follows) on how to set up GLFW and GLEW on a Mac by entering everything as it was presented.
+ https://www.youtube.com/watch?v=Tz0dq2krCW8&t=1138s&ab_channel=SonarSystems
+ After trying to run the final code to see if everything works I get this error that pops up on line 25 (line 25 in tutorial).
+  
+glfwGetFrameBufferSize( window, &screenWidth, &screenHeight); 
+  
+The error says: Thread 1: EXC_BAD_ACCESS (code=1, address=0x368)
+ I don’t know what to do to fix this
+    submitted by    /u/TinyOption3543  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[What's A Command that accidentally destroys your whole system?]]></title>
+        <id>https://www.reddit.com/r/archlinux/comments/1czd0bf/whats_a_command_that_accidentally_destroys_your/</id>
+        <link href="https://www.reddit.com/r/archlinux/comments/1czd0bf/whats_a_command_that_accidentally_destroys_your/"/>
+        <updated>2024-05-24T05:03:44.000Z</updated>
+        <summary type="html"><![CDATA[there is rm -rf -no-preserve-root / and :(){ :|: & };: also mkfs.ext4 /dev/sda1 also mv ~ /dev/null but what command that you accidentally destroy your system?
+    submitted by    /u/PerendoJackHole  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : archlinux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Need help using "Bjarne Stroustrup - Programming: Principles and Practice Using C++, Third Edition"]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1czbuhu/need_help_using_bjarne_stroustrup_programming/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1czbuhu/need_help_using_bjarne_stroustrup_programming/"/>
+        <updated>2024-05-24T03:53:39.000Z</updated>
+        <summary type="html"><![CDATA[I've been trying to go through this new book, and there's a few support header files that you're supposed to use with the code in the book. Here is a link to where they can be downloaded: https://www.stroustrup.com/programming.html
+ I'm using Visual Studio 2022 with C++ set to the latest version. Whenever I use them, I get a few errors from one specific part of the PPP_support.h header file. I took a screenshot of the errors. Any help would be appreciated.
+ https://i.imgur.com/R0rWSe0.png
+ Update:
+ I fixed it by adding std:: in front of string and cerr as a commenter below pointed out, but now I'm having a different issue. I can actually get the code to compile now, and the program runs. I'm still getting 4 other errors, but at least they're not stopping me from compiling and running the program successfully. Does anyone have any idea what is causing these errors? I don't want to run into bigger issues later because of these errors:
+ Code
+ Error type 1
+ Error type 2
+    submitted by    /u/Mechkeys121    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[std::to_string(long double) is broken and rounds the input to the wrong number of decimal places]]></title>
+        <id>https://www.reddit.com/r/cpp/comments/1czb8ul/stdto_stringlong_double_is_broken_and_rounds_the/</id>
+        <link href="https://www.reddit.com/r/cpp/comments/1czb8ul/stdto_stringlong_double_is_broken_and_rounds_the/"/>
+        <updated>2024-05-24T03:18:17.000Z</updated>
+        <summary type="html"><![CDATA[ex:
+ long double d = -20704.000055577169
+ string s = std::to_string(d);
+ cout << s << endl;
+ -20704.000056 
+    submitted by    /u/Knut_Knoblauch    to    r/cpp  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Vec class definition in Accelerated C++]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1czaski/vec_class_definition_in_accelerated_c/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1czaski/vec_class_definition_in_accelerated_c/"/>
+        <updated>2024-05-24T02:52:48.000Z</updated>
+        <summary type="html"><![CDATA[Hello everyone. I am reviewing the textbook Accelerated C++ . It was my textbook of the OOP course. It does give me a lot of knowledge of writing OOP code in C++. 
+ Chapter 11 told me to write a simplified version of STL vector called Vec . It is just something like follows. 
+ /Joyounger/accelerated_cpp/chapter11/Vec.h
+ I find this .h file mixes the definition and declaration. I know it is a valid code. However, may be separated into vec.h and vec.cpp better? So I tried it with CMake as follows
+ cpp-learn
+ I put the definition of Vec in src/vec.cpp and the declaration of Vec in include/vec.h. And I write a simple code to init a Vec class in main.cpp . However, it can not be compiled with mkdir build && cd build && cmake .. && make . The error is as follows
+  /usr/bin/ld: CMakeFiles/cpp_learn.dir/main.cpp.o: in function `Vec<int>::Vec()': main.cpp:(.text._ZN3VecIiEC2Ev[_ZN3VecIiEC5Ev]+0x29): undefined reference to `Vec<int>::create()' /usr/bin/ld: CMakeFiles/cpp_learn.dir/main.cpp.o: in function `Vec<int>::~Vec()': main.cpp:(.text._ZN3VecIiED2Ev[_ZN3VecIiED5Ev]+0x18): undefined reference to `Vec<int>::uncreate()' collect2: error: ld returned 1 exit status make[2]: *** [CMakeFiles/cpp_learn.dir/build.make:98: cpp_learn] Error 1 make[1]: *** [CMakeFiles/Makefile2:100: CMakeFiles/cpp_learn.dir/all] Error 2 make: *** [Makefile:91: all] Error 2 
+ It seems that it can not find the definition I wrote in src/vec.cpp . I also tried use g++ manually as follows
+  g++ -Iinclude include/vec.h src/vec.cpp main.cpp -o tmp 
+ It returned the same error. What's the problem with my code?
+    submitted by    /u/SerenAzumaIT    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Linux distro family chart with distros based + derivatives, I published here before and add some corrections/clarifications. Last time that I publish some chart to r/linux, the majority of things that I get is hate. In case you want to edit here's the editable svg https://svgshare.com/i/16Pf]]></title>
+        <id>https://www.reddit.com/r/linux/comments/1czajn0/linux_distro_family_chart_with_distros_based/</id>
+        <link href="https://www.reddit.com/r/linux/comments/1czajn0/linux_distro_family_chart_with_distros_based/"/>
+        <updated>2024-05-24T02:39:26.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/r4ed4  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[fooyin 0.4.3 released (Qt6 foobar2000 clone)]]></title>
+        <id>https://www.reddit.com/r/archlinux/comments/1cza7sv/fooyin_043_released_qt6_foobar2000_clone/</id>
+        <link href="https://www.reddit.com/r/archlinux/comments/1cza7sv/fooyin_043_released_qt6_foobar2000_clone/"/>
+        <updated>2024-05-24T02:21:46.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/void_const  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : archlinux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Question about linking w/ shared object]]></title>
+        <id>https://www.reddit.com/r/C_Programming/comments/1cza40q/question_about_linking_w_shared_object/</id>
+        <link href="https://www.reddit.com/r/C_Programming/comments/1cza40q/question_about_linking_w_shared_object/"/>
+        <updated>2024-05-24T02:16:12.000Z</updated>
+        <summary type="html"><![CDATA[Let's say I have the following Makefile:
+ main: mylib.o libmyshared.so gcc -o main mylib.o main.c mylib.o: mylib.c gcc -c mylib.c libmyshared.so: myshared.c gcc -fPIC -shared -o libmyshared.so myshared.c 
+ In my main.c file, I use the dlopen suite of functions to dynamically load symbols from libmyshared.so. I do this to implement "hot reload" for those set of functions. It did not work at first, because myshared.c referenced functions from mylib.c, and it obviously does not have the location of those symbols when it gets hotloaded (myshared.c was not a shared object at first. It was just a standardly linked object, linked in the main step).
+ As an experiment, I modified the above to be the following:
+ main: mylib.o libmyshared.so gcc -o main mylib.o main.c # Made the code position idependent mylib.o: mylib.c gcc -fPIC -c mylib.c # ADDED mylib.o as dependency libmyshared.so: mylib.o myshared.c gcc -fPIC -shared -o mylib.o libmyshared.so myshared.c 
+ I was surprised to see that the program "worked" properly (though it may only be working "by accident"). My thought was that both main and the libmyshared.so binary would have their own in-memory copy of mylib.o and the program wouldn't work properly. That said, all of the memory is owned by the main.c code, so mylib.c and libmyshared.so does not have any state of its own.
+ My questions are: 1. In this configuration, are there two copies of mylib.o at runtime (e.g. one owned by main and the other owned by libmyshared.so)? I guess the symbols are just compiled into the binary, so there is just duplicate code. 2. Would making mylib.o into a shared object remedy that problem (i.e. make it only use one copy)?
+    submitted by    /u/haskell_account  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Learning programming: I finally "get it"]]></title>
+        <id>https://www.reddit.com/r/learnprogramming/comments/1cz97f7/learning_programming_i_finally_get_it/</id>
+        <link href="https://www.reddit.com/r/learnprogramming/comments/1cz97f7/learning_programming_i_finally_get_it/"/>
+        <updated>2024-05-24T01:27:00.000Z</updated>
+        <summary type="html"><![CDATA[Been studying programming on and off in my spare time for a few years now. I'm in my early 30s. Never really progressed past tutorial hell and courses. Couldn't begin anything for my CS50P final project because I was aiming too complex and just becoming discouraged. 
+ Wrote a Python program for my job -- nothing too crazy, formats things that I use every day according to the formatting required for a bunch of security controls, and man, when I was testing and the output was coming out perfect I finally understand why this is so addictive. I thought I was too dumb to do anything; started too late, blah blah blah. The satisfication I feel from 200 lines of WET code that I can now reformat into something polished is awesome.
+ Now I'm looking forward to submitting my final project and moving onto another language (probably via CS50x) to continue learning. I'm just stoked that I finally wrote something myself from scratch and wanted to share :) 
+    submitted by    /u/Upbeat-Salary3305  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : learnprogramming</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Why is this working? (MSVC Linker question)]]></title>
         <id>https://www.reddit.com/r/cpp_questions/comments/1cz90up/why_is_this_working_msvc_linker_question/</id>
@@ -50,6 +439,17 @@
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Why does every major Linux Distro seem to have a massive asterisk attached for new Users?]]></title>
+        <id>https://www.reddit.com/r/linux/comments/1cz7u30/why_does_every_major_linux_distro_seem_to_have_a/</id>
+        <link href="https://www.reddit.com/r/linux/comments/1cz7u30/why_does_every_major_linux_distro_seem_to_have_a/"/>
+        <updated>2024-05-24T00:15:29.000Z</updated>
+        <summary type="html"><![CDATA[It seems more and more people are considering Linux, in light of all the nonsense elsewhere. It seems a good time, too: Nvidia should finally start working decently well, features like HDR are getting real development, and proton support for games seems to work for almost everything that doesn't involve an invasive anticheat system. For average home users, Linux, collectively, seems to have reached a point where it has everything they need... but when I come to try to recommend a distro to these potential new users, instead of having one or two just solid, uncontroversial options I can hand them and be the end of it, I end up with a long list of "maybe this one, unless..." 
+ When looking for a distro to recommend for the average, not-power-user Windows user, there's a few criteria I feel i…]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Let's Write a Toy UI Library]]></title>
         <id>https://www.reddit.com/r/C_Programming/comments/1cz76zi/lets_write_a_toy_ui_library/</id>
         <link href="https://www.reddit.com/r/C_Programming/comments/1cz76zi/lets_write_a_toy_ui_library/"/>
@@ -58,6 +458,34 @@
  [link]   [comments]]]></summary>
         <author>
             <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Paper Mario? Yeah that's cute, but... what about PAPER GEAR SOLID?]]></title>
+        <id>https://www.reddit.com/r/godot/comments/1cz7136/paper_mario_yeah_thats_cute_but_what_about_paper/</id>
+        <link href="https://www.reddit.com/r/godot/comments/1cz7136/paper_mario_yeah_thats_cute_but_what_about_paper/"/>
+        <updated>2024-05-23T23:35:36.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/JackQuentinForde  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : godot</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Having doubts about releasing my finished game on steam. Am I just adding to the problem?]]></title>
+        <id>https://www.reddit.com/r/gamedev/comments/1cz6tbb/having_doubts_about_releasing_my_finished_game_on/</id>
+        <link href="https://www.reddit.com/r/gamedev/comments/1cz6tbb/having_doubts_about_releasing_my_finished_game_on/"/>
+        <updated>2024-05-23T23:25:24.000Z</updated>
+        <summary type="html"><![CDATA[I have finished my game that is on the steam store, but have been pushing back the release date for months. I can't continue with coding my new game until I deal with this mental hurdle !
+ Viewing some posts in this sub I understand people are frustrated with how much "low effort" stuff is on the steam store. My tower defense game doesn't have any new never before seen mechanics. I know not every game is going to have that. It just leaves me with a feeling of "would anyone pay for this?". Is this a normal feeling that devs have? doubting your work? feels like I am charging money for something that isn't perfect or ground breaking? 
+ I have about 130 wish lists, I am thinking of releasing at $3.99. I just don't want to release for free because it seems like steam doesn't push free games at all ( 30% of $0 is $0 ).
+ Does my game look worthy of being on steam or should I just try another game? Trailer was made by fiver.
+ STEAM PAGE
+ Thanks for reading.
+    submitted by    /u/SolarPoweredGames  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : gamedev</name>
         </author>
     </entry>
     <entry>
@@ -156,6 +584,17 @@
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Most sociable cs major]]></title>
+        <id>https://www.reddit.com/r/csMajors/comments/1cz4xak/most_sociable_cs_major/</id>
+        <link href="https://www.reddit.com/r/csMajors/comments/1cz4xak/most_sociable_cs_major/"/>
+        <updated>2024-05-23T21:57:25.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/motivatedbypressure  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csMajors</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[C# Cross platform GUI that is not XML?]]></title>
         <id>https://www.reddit.com/r/csharp/comments/1cz4utm/c_cross_platform_gui_that_is_not_xml/</id>
         <link href="https://www.reddit.com/r/csharp/comments/1cz4utm/c_cross_platform_gui_that_is_not_xml/"/>
@@ -206,6 +645,32 @@
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[When starting a new job, what are some things you do in the first month to set yourself up for success?]]></title>
+        <id>https://www.reddit.com/r/ExperiencedDevs/comments/1cz451i/when_starting_a_new_job_what_are_some_things_you/</id>
+        <link href="https://www.reddit.com/r/ExperiencedDevs/comments/1cz451i/when_starting_a_new_job_what_are_some_things_you/"/>
+        <updated>2024-05-23T21:24:11.000Z</updated>
+        <summary type="html"><![CDATA[I'm particularly curious about strategic things that experienced/senior devs do to ramp up quickly.
+    submitted by    /u/pepperPantz__  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : ExperiencedDevs</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Blind App is unusable now.]]></title>
+        <id>https://www.reddit.com/r/cscareerquestions/comments/1cz420o/blind_app_is_unusable_now/</id>
+        <link href="https://www.reddit.com/r/cscareerquestions/comments/1cz420o/blind_app_is_unusable_now/"/>
+        <updated>2024-05-23T21:20:37.000Z</updated>
+        <summary type="html"><![CDATA[It's perennially gotten worse, there are no moderators, I think it's been hijacked by non-US foreign actors trying to, again, influence opinion in an election year. While many posts aren't even job-related, virtually every other post is AI-generated rage/click bait. It's not useful for referrals, looking for jobs, asking of jobs, etc. 
+ I think they are probably on the last leg of money, they aren't profitable of course, but I imagine the team is likely a handful of people, 5-8 people tops. CS students, former and current, this reddit board has been more reliable overall.
+ v
+    submitted by    /u/ElecMechTech  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : cscareerquestions</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Switched to TPM. Job is 10x less work and get paid roughly the same as SWE]]></title>
         <id>https://www.reddit.com/r/cscareerquestions/comments/1cz3x2s/switched_to_tpm_job_is_10x_less_work_and_get_paid/</id>
         <link href="https://www.reddit.com/r/cscareerquestions/comments/1cz3x2s/switched_to_tpm_job_is_10x_less_work_and_get_paid/"/>
@@ -229,6 +694,22 @@
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : hacking</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Brutal truth: If you don't have social media power, you're doing gamedev on nightmare difficulty.]]></title>
+        <id>https://www.reddit.com/r/gamedev/comments/1cz32o8/brutal_truth_if_you_dont_have_social_media_power/</id>
+        <link href="https://www.reddit.com/r/gamedev/comments/1cz32o8/brutal_truth_if_you_dont_have_social_media_power/"/>
+        <updated>2024-05-23T20:39:02.000Z</updated>
+        <summary type="html"><![CDATA[By "social media power", I mean a large following on platforms like youtube and twitter. Or at least the attention of people with large platforms.
+ Without that, you're a nobody just screaming into the void. And like I said, you'd be doing gamedev on nightmare difficulty.
+ Social media is at the very core of indie game marketing. If you don't have social media power, your attempts to market your game are mostly futile.
+ "Social media power" can conceal shortcomings in the game. Or hype up an average game into something really special. 
+ Ultimately, it's your game that needs to speak for itself. But with "social media power", you can reach more people and give game more chances to speak, which in turn would translate to more sales.
+    submitted by    /u/cs_ptroid  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : gamedev</name>
         </author>
     </entry>
     <entry>
@@ -438,6 +919,46 @@
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Today I discovered Skopeo and it has changed my approach to a product I am working on.]]></title>
+        <id>https://www.reddit.com/r/devops/comments/1cyyxlm/today_i_discovered_skopeo_and_it_has_changed_my/</id>
+        <link href="https://www.reddit.com/r/devops/comments/1cyyxlm/today_i_discovered_skopeo_and_it_has_changed_my/"/>
+        <updated>2024-05-23T17:47:55.000Z</updated>
+        <summary type="html"><![CDATA[Disclaimer: not a Red-Hat employee nor an OCI foundation member.
+ TL;DR: Skopeo is great for Air-Gapped Container Registry syncs and image management.
+ I am currently working in the Industrial IoT sector where a lot of Cloud-Native products are seeping in. The only issue is customers of Operations Technology despise Internet Connectivity. Without Internet Connectivity, working with Cloud-Native technologies like Containers is a massive pain.
+ So as a common way to solve such a problem I was working with Ansible to setup systems with a Docker Registry and then using container tarballs to do the following:
+  
+docker pull images from registries
+ docker save to create tarballs
+ docker load to extract them on the main gateway
+ docker tag to make sure I rename it for making it compliant with the registry
+ docker push to registry
+ cleanup etc.
+  
+This works well for a single architecture system e.g. amd64. Now I have devices which also are arm64 based and the registry isn't smart enough to generate manifests to let devices determine which blobs to pull based on the underlying architecture.
+ I tried Skopeo today and in the lab I was able to sync an Image from Docker Hub to a testing registry in 10s.. No docker gymnastics involved.
+ If i need to create tarballs - Skopeo can do that. If I need to push tarballs to a registry it can do that too. Cherry on Top, no need to have docker installed on your local machine where some development is needed.
+ I will combine Ansible and Skopeo to get a large leap on the product I am working on.
+ The only thing I need to figure out is to generate a Manifest List for multi-arch container images available on Docker Hub
+ Amazing tool, would recommend for air-gapped scenarios.
+    submitted by    /u/dugindeep  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : devops</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Fyrox Game Engine 0.34 - Native code hot reloading, project exporter, UI prefabs, GLTF support, keyboard navigation, asset preview generation, and many more.]]></title>
+        <id>https://www.reddit.com/r/rust/comments/1cyyx98/fyrox_game_engine_034_native_code_hot_reloading/</id>
+        <link href="https://www.reddit.com/r/rust/comments/1cyyx98/fyrox_game_engine_034_native_code_hot_reloading/"/>
+        <updated>2024-05-23T17:47:29.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/_v1al_  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : rust</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[How do you actually game?]]></title>
         <id>https://www.reddit.com/r/debian/comments/1cyyj16/how_do_you_actually_game/</id>
         <link href="https://www.reddit.com/r/debian/comments/1cyyj16/how_do_you_actually_game/"/>
@@ -450,6 +971,18 @@
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : debian</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Content of Geogebra SVG icon looks suspicious]]></title>
+        <id>https://www.reddit.com/r/archlinux/comments/1cyyfnh/content_of_geogebra_svg_icon_looks_suspicious/</id>
+        <link href="https://www.reddit.com/r/archlinux/comments/1cyyfnh/content_of_geogebra_svg_icon_looks_suspicious/"/>
+        <updated>2024-05-23T17:26:57.000Z</updated>
+        <summary type="html"><![CDATA[https://gitlab.archlinux.org/archlinux/packaging/packages/geogebra/-/blob/main/geogebra.svg?ref_type=heads&plain=1
+    submitted by    /u/medin2023  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : archlinux</name>
         </author>
     </entry>
     <entry>
@@ -478,6 +1011,29 @@
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : ExperiencedDevs</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How to install NVIDIA drivers in Linux, when I have an integrated GPU and a Dedicated GPU]]></title>
+        <id>https://www.reddit.com/r/debian/comments/1cyxjla/how_to_install_nvidia_drivers_in_linux_when_i/</id>
+        <link href="https://www.reddit.com/r/debian/comments/1cyxjla/how_to_install_nvidia_drivers_in_linux_when_i/"/>
+        <updated>2024-05-23T16:50:28.000Z</updated>
+        <summary type="html"><![CDATA[Hello everyone,
+ I'm trying to install the drivers for my graphics card [GeForce RTX 4060 Max-Q / Mobile] on my Debian GNU/Linux 12 (Bookworm) operating system with GNOME environment, and I'm having some problems.
+ My notebook has a "13th Gen Intel® Core™ i7-13620H × 16" processor and the graphics card mentioned above. However, the operating system only recognizes the integrated graphics card "Mesa Intel® Graphics (RPL-P)" as the active one.
+ I've tried several solutions, including:
+  
+Download and install the .run driver from the NVIDIA website.
+ Use nvidia-detect to then install nvidia-driver.
+  
+But none of these options have worked.
+ From what I've read, I should use something called "Optimus" to drive the two graphics cards (the integrated one from Intel and the dedicated one from NVIDIA), but I don't quite understand what it is or how to configure it correctly.
+ Could you help me install the correct drivers and configure Optimus for my NVIDIA graphics card to work?
+ It would be greatly appreciated
+    submitted by    /u/QuirkyChampionship67  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : debian</name>
         </author>
     </entry>
     <entry>
@@ -517,6 +1073,23 @@
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Bagged a summer internship at a govt company, got denied later. Got selected into another unpaid intern program, confused to accept it or not]]></title>
+        <id>https://www.reddit.com/r/csMajors/comments/1cyx73d/bagged_a_summer_internship_at_a_govt_company_got/</id>
+        <link href="https://www.reddit.com/r/csMajors/comments/1cyx73d/bagged_a_summer_internship_at_a_govt_company_got/"/>
+        <updated>2024-05-23T16:35:50.000Z</updated>
+        <summary type="html"><![CDATA[After a long driven search for a summer internship as an international student, I got accepted into a program at a govt. firm in the US. 
+ Unfortunately due to me being away from the US, could not submit my documents in person on time (requested for alternative measures but in vain) The role was not technical though, but I chose it as I thought it would help me step into the company and later explore opportunities to go into the tech side but ALAS not anymore ;-;
+ Now I feel devastated as I lost this opportunity. Just one day later, I received an email saying I got selected into an AI startup (which seems like a business) where they ask us to pay ~$30 a month to work in their AI labs and they would assign us some work and consider it as an intern opportunity.
+ I am confused on what to do? Suggestions? 
+ Edit: Researched some and found it’s a big scam! The company is Radical AI and this thread helped: 
+ https://www.reddit.com/r/nyu/s/rv77R9IAap 
+    submitted by    /u/beastshotgun1209  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csMajors</name>
         </author>
     </entry>
     <entry>
@@ -564,6 +1137,17 @@
  [link]   [comments]]]></summary>
         <author>
             <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[iBelieve]]></title>
+        <id>https://www.reddit.com/r/ProgrammerHumor/comments/1cyvf7w/ibelieve/</id>
+        <link href="https://www.reddit.com/r/ProgrammerHumor/comments/1cyvf7w/ibelieve/"/>
+        <updated>2024-05-23T15:22:43.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/yuva-krishna-memes  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : ProgrammerHumor</name>
         </author>
     </entry>
     <entry>
@@ -634,6 +1218,18 @@ for following code:
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Is C a good language to start with? How easily can I transition to C# and C++ ?]]></title>
+        <id>https://www.reddit.com/r/learnprogramming/comments/1cytrnd/is_c_a_good_language_to_start_with_how_easily_can/</id>
+        <link href="https://www.reddit.com/r/learnprogramming/comments/1cytrnd/is_c_a_good_language_to_start_with_how_easily_can/"/>
+        <updated>2024-05-23T14:12:33.000Z</updated>
+        <summary type="html"><![CDATA[All of my friends tell me to start with python, but I plan to start with one and stick with one to the very end. I was planning to start with Harvard CS50, project odin, stack overflow, google free courses and solo learn. Which one would be the best?
+    submitted by    /u/Scimitere  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : learnprogramming</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Are US Software Developers on steroids?]]></title>
         <id>https://www.reddit.com/r/cscareerquestions/comments/1cysmzm/are_us_software_developers_on_steroids/</id>
         <link href="https://www.reddit.com/r/cscareerquestions/comments/1cysmzm/are_us_software_developers_on_steroids/"/>
@@ -646,6 +1242,20 @@ for following code:
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : cscareerquestions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Why are you a solo dev and now a small team?]]></title>
+        <id>https://www.reddit.com/r/gamedev/comments/1cyskx8/why_are_you_a_solo_dev_and_now_a_small_team/</id>
+        <link href="https://www.reddit.com/r/gamedev/comments/1cyskx8/why_are_you_a_solo_dev_and_now_a_small_team/"/>
+        <updated>2024-05-23T13:18:34.000Z</updated>
+        <summary type="html"><![CDATA[If you are a solo dev, what's the reason you don't want to add manpower to your project(s)?
+ How can you possibly manage to do everything in game development yourself without compromise a few things? Is it expected to be good at everything? 
+ To hire contractors or outsourcing e.g. voice acting, testing or marketing, then you're still a solo dev, right? Is there a limit on how much you can outsource to still be a solo dev?
+    submitted by    /u/Johan-RabzZ  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : gamedev</name>
         </author>
     </entry>
     <entry>
@@ -685,6 +1295,17 @@ for following code:
  [link]   [comments]]]></summary>
         <author>
             <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[importPortalReference]]></title>
+        <id>https://www.reddit.com/r/ProgrammerHumor/comments/1cyrtbk/importportalreference/</id>
+        <link href="https://www.reddit.com/r/ProgrammerHumor/comments/1cyrtbk/importportalreference/"/>
+        <updated>2024-05-23T12:41:16.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/Manticore-Mk2  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : ProgrammerHumor</name>
         </author>
     </entry>
     <entry>
@@ -802,6 +1423,20 @@ I also introduced contexts where the previous guy was a bit lazy, and this thing
  [link]   [comments]]]></summary>
         <author>
             <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Which is the best and maintained ui library?]]></title>
+        <id>https://www.reddit.com/r/golang/comments/1cyq5by/which_is_the_best_and_maintained_ui_library/</id>
+        <link href="https://www.reddit.com/r/golang/comments/1cyq5by/which_is_the_best_and_maintained_ui_library/"/>
+        <updated>2024-05-23T11:06:55.000Z</updated>
+        <summary type="html"><![CDATA[Hi Guys,
+ I want to develop something like lazygit but I'm Not Sure Which ui library is the easiest and Best maintained one? I read about: bubbletea, gocui, pterm, tcell... 
+ Thanks in advance! 
+    submitted by    /u/TheBadBossy  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : golang</name>
         </author>
     </entry>
     <entry>
@@ -941,6 +1576,22 @@ Modern alternatives to traditional Unix tools, mos…]]></summary>
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Why there's no Linux Mirrors in general in north africa or Egypt?]]></title>
+        <id>https://www.reddit.com/r/archlinux/comments/1cyo4ge/why_theres_no_linux_mirrors_in_general_in_north/</id>
+        <link href="https://www.reddit.com/r/archlinux/comments/1cyo4ge/why_theres_no_linux_mirrors_in_general_in_north/"/>
+        <updated>2024-05-23T08:46:50.000Z</updated>
+        <summary type="html"><![CDATA[I do not know for a sure answer But I want to see your comments maybe I'm wrong,
+ I see now in Egypt the gov is celebrating the opening for the first time data center in the new capital for sure
+ I think that's why we need to support Open Souce projects for sure in our region It will help young people like me to do great things by learning how things work
+ waiting for your answer
+ BTW I don't trust the gov but the way we take technology is good for us and people 
+    submitted by    /u/nakxion  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : archlinux</name>
         </author>
     </entry>
     <entry>
@@ -3491,6 +4142,21 @@ I'm the embodiment of the bus factor. I work on a critical team, am the only one
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : godot</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[When splitting domain, persistence, and DTOs, how far do you go with enums and why?]]></title>
+        <id>https://www.reddit.com/r/ExperiencedDevs/comments/1cx9gqz/when_splitting_domain_persistence_and_dtos_how/</id>
+        <link href="https://www.reddit.com/r/ExperiencedDevs/comments/1cx9gqz/when_splitting_domain_persistence_and_dtos_how/"/>
+        <updated>2024-05-21T14:38:41.000Z</updated>
+        <summary type="html"><![CDATA[So we decided to use a split of our domain, persistence, and API layer (there, DTOs) in our application. Java in our case.
+ It obviously has quite some overhead to it because we need to duplicate some structures that (currently) all match. We also need to create mappers.
+ However, we see many advantages in that approach, so are generally quite happy:
+  
+We will never break API when the domain model changes (which can happen quite some time), although we of course need to change the API/DTOs proactively if the domain model changes
+ Renaming some fields internally although the API wants a specific name is very easy and not a problem (there are also annotations for it but it's not only the API layer that uses the data but also background jobs, and while for some stuff https Controllers are us…]]></summary>
+        <author>
+            <name>top scoring links : ExperiencedDevs</name>
         </author>
     </entry>
     <entry>
@@ -25291,19 +25957,6 @@ while the rust compiler has been an amazing tool along the journey, it just fail
         <updated>2024-04-25T07:32:50.000Z</updated>
         <summary type="html"><![CDATA[So I recently bought an electronics set which had a joystick module, and on the request of my senior in college, I'm thinking of making an emulator which runs on a raspberry pi module with the same joystick. But I've never made an emulator in my life, so do you have any resources which a beginner like me could refer and learn from to build this emulator.
     submitted by    /u/n1ns1d  
- [link]   [comments]]]></summary>
-        <author>
-            <name>Developing Emulators</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Learning]]></title>
-        <id>https://www.reddit.com/r/EmuDev/comments/1cbymue/learning/</id>
-        <link href="https://www.reddit.com/r/EmuDev/comments/1cbymue/learning/"/>
-        <updated>2024-04-24T13:47:46.000Z</updated>
-        <summary type="html"><![CDATA[I want to get in to emulator development. I started to learn c++. What else should I learn before trying to make emulator? I'm planing on making a chip 8 after im done with c++ but I would like to know what else I should learn before diving in.
- Thank you
-    submitted by    /u/Overlord1620  
  [link]   [comments]]]></summary>
         <author>
             <name>Developing Emulators</name>
