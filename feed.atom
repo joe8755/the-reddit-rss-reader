@@ -2,10 +2,409 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://joe8755.github.io/the-reddit-rss-reader/index.html</id>
     <title>the reddit rss reader</title>
-    <updated>2024-05-25T01:21:37.162Z</updated>
+    <updated>2024-05-25T12:34:26.266Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://joe8755.github.io/the-reddit-rss-reader/index.html"/>
     <link rel="self" href="https://joe8755.github.io/the-reddit-rss-reader/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[Issue with the Makefile.]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1d0ahxk/issue_with_the_makefile/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1d0ahxk/issue_with_the_makefile/"/>
+        <updated>2024-05-25T12:02:07.000Z</updated>
+        <summary type="html"><![CDATA[I am trying to build my Raylib simple game but I don't want to tell "make" how to do it explicitly, with the help of the pattern rules but it throws an error at me. My game code isn't relevant to the problem so I won't publish it here; it's in a near blank state.
+ P.S: I use msys2 in ucrt64 mode in Windows 11 if it matters it probably does not.
+ P.P.S: If it would be helpful I can share the make output with -d
+ The error:
+ mingw32-make: *** No rule to make target 'obj/./src/main.cpp.o', needed by 'a.exe'. Stop.
+ Here is the Makefile:
+ .POSIX:
+ .PHONY: all clean
+ BUILD_DIR := ./obj
+ SRC_DIRS := ./src
+ CXX=g++
+ RESC=windres
+ #CXXFLAGS=-O3 -std=gnu++14 -Wall -Iinclude -c
+ CXXFLAGS=-g -std=gnu++14 -Wall -Iinclude -c
+ LDFLAGS=-s -static -Wl,--subsystem,windows
+ #LDFLAGS=-static -Wl,--subsystem,windows
+ LDLIBS=lib/libraylib.a -lopengl32 -lgdi32 -lwinmm
+ BINS=a.exe
+ HEADERS=include/*
+ SRCS := $(shell find $(SRC_DIRS) -name '*.cpp' -or -name '*.c' -or -name '*.s')
+ OBJS := $(SRCS:%=$(BUILD_DIR)/%.o) 
+ all: $(BINS) 
+ $(BINS): $(OBJS)
+ $(CXX) $^ $(LDFLAGS) $(LDLIBS) -o $@ 
+ %.o: %.cpp
+ $(CXX) $< $(CXXFLAGS) -o $@ 
+ #recource_data/raylib.rc.data: recource/raylib.rc
+ # $(RESC) $^ -o resource_data/raylib.rc.data --target=pe-x86-64 
+ clean:
+ rm obj/* a.exe resource_data/*
+    submitted by    /u/Patient-Plan-1591    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[how long does cpp have left? (rust)]]></title>
+        <id>https://www.reddit.com/r/cpp/comments/1d09xjq/how_long_does_cpp_have_left_rust/</id>
+        <link href="https://www.reddit.com/r/cpp/comments/1d09xjq/how_long_does_cpp_have_left_rust/"/>
+        <updated>2024-05-25T11:27:23.000Z</updated>
+        <summary type="html"><![CDATA[I am a (pre-)junior developer. My question is whether cpp will still be used in the future or whether it will soon basically become esoteric compared to rust? Otherwise, what is the point in trying to really learn ol’ cpp in 2024? I quite want to learn cpp but have been multiple times increasingly warned about the risk of focusing too much on any non-rust(-ish) language due to high risk of becoming legacy code imminently since rust integrated into Linux kernel, for one…
+ EDIT: for clarification, what I am seeking I guess is some reassurance as to whether there is any hope for cpp continuing to exist as an employable language for much longer given the features described to be available in rust such as safe memory management, crates, thriving community, innovative style and so on? 
+    submitted by    /u/anonymous_bear_6    to    r/cpp  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Strict aliasing rules]]></title>
+        <id>https://www.reddit.com/r/C_Programming/comments/1d09oef/strict_aliasing_rules/</id>
+        <link href="https://www.reddit.com/r/C_Programming/comments/1d09oef/strict_aliasing_rules/"/>
+        <updated>2024-05-25T11:10:35.000Z</updated>
+        <summary type="html"><![CDATA[Hi, I read about aliasing rules, but I'm confused about compatible types. So I wonder, is this code UB and why?
+ ```C struct IpAddr { unsigned char a, b, c, d; } struct IpAddrWithPort { unsigned char a, b, c, d; int port; } void print_addr(IpAddr& addr) { .. }
+ int main() { IpAddrWithPort addr = { 127, 0, 0, 1, 8080 }; print_addr((&IpAddr) (&addr)); } `` It seems like it isn't to me because logically memory address ofIpAddrWithPortwould always be validIpAddr` address and there isn't second reference, so it isn't aliased at all. But what is the formal way to think about it?
+    submitted by    /u/ioannuwu  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Inside RFID Security: Hitag2 Cracking Techniques with Kev Sheldrake]]></title>
+        <id>https://www.reddit.com/r/hacking/comments/1d09by0/inside_rfid_security_hitag2_cracking_techniques/</id>
+        <link href="https://www.reddit.com/r/hacking/comments/1d09by0/inside_rfid_security_hitag2_cracking_techniques/"/>
+        <updated>2024-05-25T10:47:48.000Z</updated>
+        <summary type="html"><![CDATA[👥 Exclusive chat with Kev Sheldrake on Hitag2 implementations and key recovery attacks!
+ Learn how these techniques evolved and see crack2 in action. 
+ TechTalk #RFID #Cybersecurity #proxmark #hitag2
+ https://youtu.be/2Zf0w2rrgVA
+    submitted by    /u/iceman2001  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : hacking</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[An A7 scenario! Obtaining a register variable's address]]></title>
+        <id>https://www.reddit.com/r/C_Programming/comments/1d0936k/an_a7_scenario_obtaining_a_register_variables/</id>
+        <link href="https://www.reddit.com/r/C_Programming/comments/1d0936k/an_a7_scenario_obtaining_a_register_variables/"/>
+        <updated>2024-05-25T10:30:21.000Z</updated>
+        <summary type="html"><![CDATA["A register variable that cannot be aliased is aliased automatically in response to a type-punning incident. You asked for miracles Theo, I give you the F B I register variable's address."
+ -- Findings of a Die Hard C programmer.
+  
+TL;DR: The standard should outright disallow the use of register keyword if an object (or member of a nested sub-object) can be accessed as an array; doing so should cause a hard constraint violation, instead of just undefined behavior.
+ The register storage-class specifier prohibits taking the address of a variable, and doing so causes compilation error due to a constraint violation. The standard also contains this informative footnote (not normative):
+  
+whether or not addressable storage is actually used, the address of any part of an object declared with st…]]></summary>
+        <author>
+            <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Q92 LC-Reversed Linked List 2]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1d08qr9/q92_lcreversed_linked_list_2/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1d08qr9/q92_lcreversed_linked_list_2/"/>
+        <updated>2024-05-25T10:05:25.000Z</updated>
+        <summary type="html"><![CDATA[Given the head of a singly linked list and two integers left and right where left <= right, reverse the nodes of the list from position left to position right, and return the reversed list.
+  
+ Example 1:
+ Input: head = [1,2,3,4,5], left = 2, right = 4
+ Output: [1,4,3,2,5]
+ My code:
+ /** * Definition for singly-linked list. * struct ListNode { * int val; * ListNode *next; * ListNode() : val(0), next(nullptr) {} * ListNode(int x) : val(x), next(nullptr) {} * ListNode(int x, ListNode *next) : val(x), next(next) {} * }; */ class Solution { public: ListNode* reverseBetween(ListNode* head, int left, int right) { ListNode* dummy=new ListNode; dummy->next=head; ListNode* temp=dummy; for (int i=0;i<left-1;i++){//node before the reversed part temp=temp->next; } ListNode* reverseHead=temp->next; ListNode* reverseTemp=reverseHead; for (int i=left;i<right;i++){//final node to be reversed reverseTemp=reverseTemp->next; } temp->next=reverseTemp->next; //connect the nodes before and after reverse segment reverseTemp->next=nullptr; ListNode* tail=reversedpart(&reverseHead); tail->next=temp->next; temp->next=reverseHead; return dummy->next; } ListNode* reversedpart(ListNode** head){ ListNode* temp=*head; if (temp->next==nullptr){ *head=temp; } else{ ListNode* tempnext=temp->next; reversedpart(&tempnext); tempnext->next=temp; temp->next=nullptr; } return tail; } }; 
+ Somehow, my reversedpart function changes the reversedhead value to the end of the reversed list rather than to the start of it. The tail logic should be fine though. When I put in the test case in example 1 (the one above) the value of the reversedhead pointer changed to 2 rather than 4. Any idea why? Help is much appreciated.
+    submitted by    /u/VoidifytheVoid    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[A poster I made for our school computer lab. What do you guys think?]]></title>
+        <id>https://www.reddit.com/r/linux/comments/1d08e9r/a_poster_i_made_for_our_school_computer_lab_what/</id>
+        <link href="https://www.reddit.com/r/linux/comments/1d08e9r/a_poster_i_made_for_our_school_computer_lab_what/"/>
+        <updated>2024-05-25T09:40:15.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/GreenWhitePerson  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Kernel Panic Again]]></title>
+        <id>https://www.reddit.com/r/debian/comments/1d07rm5/kernel_panic_again/</id>
+        <link href="https://www.reddit.com/r/debian/comments/1d07rm5/kernel_panic_again/"/>
+        <updated>2024-05-25T08:53:55.000Z</updated>
+        <summary type="html"><![CDATA[How do I stop it from happening again.
+    submitted by    /u/m-n_10  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : debian</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[I'm so tired of AI generated articles]]></title>
+        <id>https://www.reddit.com/r/linux/comments/1d07i4a/im_so_tired_of_ai_generated_articles/</id>
+        <link href="https://www.reddit.com/r/linux/comments/1d07i4a/im_so_tired_of_ai_generated_articles/"/>
+        <updated>2024-05-25T08:33:53.000Z</updated>
+        <summary type="html"><![CDATA[I wanted a quick refresher on Debian vs Ubuntu, and this is from one of the first results on Google.
+ This probably seems only slightly Linux related, but I wouldn't have expected it for articles about Linux. If the writers find these articles convincing, they don't understand the topic, and if they don't understand it they shouldn't be writing about it. 
+ I know real information is still available but this has really made the internet a garbage heap.
+    submitted by    /u/kaamraan  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Weird error?]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1d077xi/weird_error/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1d077xi/weird_error/"/>
+        <updated>2024-05-25T08:12:59.000Z</updated>
+        <summary type="html"><![CDATA[So i'm currently setting up my game engine using The Cherno's tutorial and when I'm creating the sandbox class that is delivered from luna::Application i get this weird error: 
+ https://preview.redd.it/oe4xy9tc5j2d1.png?width=2560&format=png&auto=webp&s=d5cc5e1b287ed1e8238e5ae864139675b1ff71d3
+ https://preview.redd.it/n66lwivo6j2d1.png?width=2560&format=png&auto=webp&s=9f6f3bd198a8b2e780dc4c333d068096067f503d
+ https://preview.redd.it/5jshllmp6j2d1.png?width=816&format=png&auto=webp&s=7bdffdcdb9253db9730a01d8cd7b0b89158cb57f
+ The only difference i could find was the preprocessor statements. in his Hazel project it said "_WINDLL" while mine said "_DEBUG;_CONSOLE" and inside the Sandbox project his says "_MBCS" and mine: "_DEBUG;_CONSOLE"
+ Also I'm using VS2022 and i think he is using VS2019 but I'm not sure.
+ Here is the GitHub repo: ViktorPopp/LunaGameEngine
+    submitted by    /u/ViktorPoppDev    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[opengl and break instruction]]></title>
+        <id>https://www.reddit.com/r/C_Programming/comments/1d06n92/opengl_and_break_instruction/</id>
+        <link href="https://www.reddit.com/r/C_Programming/comments/1d06n92/opengl_and_break_instruction/"/>
+        <updated>2024-05-25T07:30:22.000Z</updated>
+        <summary type="html"><![CDATA[hi!
+ I want to use open gl to draw a graph according to the year of manufacture of some cars. The problem is that when, in the console, the user enters the car he wants to buy, the code opens the graphic window, and after closing the graphic window appears the rest in the console! I think it's from the break instruction, but I don't know how to fix this, can someone help me? I use eclipse and the code portion is:
+ printf("enter the car you want to buy:");
+ fflush(stdout);
+ scanf("%s",marcac);
+ if (marcac[0] >= 'a' && marcac[0] <= 'z') {
+ marcac[0] = marcac[0] - ('a' - 'A');
+ }
+ for(i=0;i<nrm;i++){
+ if(strcmp(m[i].marca,marcac)==0){
+ if(m[i].an_fabricatie>=2014){
+ printf("Congratulations! You bought the %s car from the year %d for the price: %.2f",m[i].marca
+ ,m[i].an_fabricatie,m[i].pret);
+ }
+ else{
+ fscanf(parcauto_out,"%s %f",m[i].marca,&m[i].reducere);
+ printf("Congratulations! You bought the %s car from the year %d for the price: %.2f"
+ ",iar pretul final:%.2f!",m[i].marca,m[i].an_fabricatie,m[i].pret,m[i].reducere);
+ }
+ break;
+ }}
+ if(i==nrm){
+ printf("%s it is not in the car park!\n",marcac);
+ } printf("\\n\\tbye!\\n"); 
+ fclose(parcauto\_out); 
+ fclose(parcauto\_in); 
+ glutInit(&argc, argv);
+ glutInitWindowSize(320, 320);
+ glutInitWindowPosition(50, 50);
+ glutCreateWindow("Histograma OpenGL ");
+ glutDisplayFunc(display);
+ glutMainLoop();
+ return 0;
+ the program only displays: "enter the car you want to buy:" and then the graphic window opens and after closing the window, what remains to be written continues
+    submitted by    /u/Parking_Scared  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[A weird thing happened when I compiled cpp files with gcc command]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1d06ij4/a_weird_thing_happened_when_i_compiled_cpp_files/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1d06ij4/a_weird_thing_happened_when_i_compiled_cpp_files/"/>
+        <updated>2024-05-25T07:20:43.000Z</updated>
+        <summary type="html"><![CDATA[I know I should use g++ when compile cpp files, but I'm trying to figure out the difference between g++ and gcc here.
+ When I use
+ gcc c_vs_cpp.cpp -lstdc++ -o c_vs_cpp_cpp 
+ Everything went well. But when I use
+ gcc -lstdc++ -o c_vs_cpp_cpp c_vs_cpp.cpp 
+ I got
+ /usr/bin/ld: /tmp/ccZmilLC.o: in function `main': c_vs_cpp.cpp:(.text+0x32): undefined reference to `std::cout' 
+ I saw the man page of gcc and got:
+ SYNOPSIS gcc [-c|-S|-E] [-std=standard] [-g] [-pg] [-Olevel] [-Wwarn...] [-Wpedantic] [-Idir...] [-Ldir...] [-Dmacro[=defn]...] [-Umacro] [-foption...] [-mmachine-option...] [-o outfile] [@file] infile.. 
+ Shouldn't I put all my .cpp files at the end of the command line?
+ PS: I use WSL under Windows 10.
+    submitted by    /u/yukiiiiii2008    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[12 other approaches to memory safety Rust didn't use]]></title>
+        <id>https://www.reddit.com/r/rust/comments/1d06gjo/12_other_approaches_to_memory_safety_rust_didnt/</id>
+        <link href="https://www.reddit.com/r/rust/comments/1d06gjo/12_other_approaches_to_memory_safety_rust_didnt/"/>
+        <updated>2024-05-25T07:16:53.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/Shnatsel  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : rust</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Our first ios app on Cpp20 to reach out more audience]]></title>
+        <id>https://www.reddit.com/r/cpp/comments/1d062lw/our_first_ios_app_on_cpp20_to_reach_out_more/</id>
+        <link href="https://www.reddit.com/r/cpp/comments/1d062lw/our_first_ios_app_on_cpp20_to_reach_out_more/"/>
+        <updated>2024-05-25T06:50:02.000Z</updated>
+        <summary type="html"><![CDATA[TL;DR
+ To support me in reaching a wider audience, my wife developed an app featuring free quizzes and paid blogs on C++20 for iOS devices, including iPhone, iPad, and Vision Pro. You can download the app here: C++20 Quiz and Blog App.
+ The Long Story
+ Some of you may know me from my blogs on Medium and my YouTube videos about modern C++. For over two years, I’ve been creating content focused on C++20 features, driven by my passion for teaching and modern C++. However, despite my efforts, the financial return has been minimal due to high competition and the need for consistent content posting to meet monetization thresholds.
+ Living with my wife in a metropolitan city in Germany comes with substantial monthly expenses. Like many developers, we work full-time jobs, and I dedicate my free ti…]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Book for learning practical C# similar to Let's Go for Golang]]></title>
+        <id>https://www.reddit.com/r/csharp/comments/1d05dbl/book_for_learning_practical_c_similar_to_lets_go/</id>
+        <link href="https://www.reddit.com/r/csharp/comments/1d05dbl/book_for_learning_practical_c_similar_to_lets_go/"/>
+        <updated>2024-05-25T06:02:41.000Z</updated>
+        <summary type="html"><![CDATA[Anybody have any suggestions?
+    submitted by    /u/brandonto  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Microsoft recommending WPF for Win32 programming?]]></title>
+        <id>https://www.reddit.com/r/csharp/comments/1d05an0/microsoft_recommending_wpf_for_win32_programming/</id>
+        <link href="https://www.reddit.com/r/csharp/comments/1d05an0/microsoft_recommending_wpf_for_win32_programming/"/>
+        <updated>2024-05-25T05:58:04.000Z</updated>
+        <summary type="html"><![CDATA[At the Microsoft Build event a couple days ago, a presentation suggested that for Win32 development, your choices were WinUI 3 and WPF. I had always thought that for Windows desktop development (which is what I'm interested in), WPF was for C#, needed .NET, and needed a Pinvoke every time you called a native Win32 function. 
+ I'm sure it's my own fault, but I had a hard time understanding the presenters, and I am still not clear on whether something has changed to allow you to use WPF for native C++ Win32 applications. Can anyone clarify this?
+    submitted by    /u/alleyoopoop  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[What’s new in C# 13 | C# 13 new features]]></title>
+        <id>https://www.reddit.com/r/csharp/comments/1d04z3j/whats_new_in_c_13_c_13_new_features/</id>
+        <link href="https://www.reddit.com/r/csharp/comments/1d04z3j/whats_new_in_c_13_c_13_new_features/"/>
+        <updated>2024-05-25T05:36:44.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/Striking-Mechanic-18  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA["Introducing ipvar: A C++ Library that simplifies interprocess variable sharing.]]></title>
+        <id>https://www.reddit.com/r/cpp/comments/1d049gp/introducing_ipvar_a_c_library_that_simplifies/</id>
+        <link href="https://www.reddit.com/r/cpp/comments/1d049gp/introducing_ipvar_a_c_library_that_simplifies/"/>
+        <updated>2024-05-25T04:50:27.000Z</updated>
+        <summary type="html"><![CDATA[I'm sharing a small library I wrote in C++ time ago, that simplifies sharing data between multiple processes.
+ https://github.com/kboutora/ipvar
+ In this example, Program 1 counts seconds. Running Program 2 will show the value of the counter. Any additional argument in the command line will provoke the termination of program 1
+ --- Program 1
+ ```
+ #include <iostream>
+ #include <thread>
+ #include <chrono>
+ #include "ipvar.h"
+ #include "ipvar_util.h"
+ int main(int, char **)
+ {
+ decl_ipv_variable(std::atomic<int>, myAtomicInt);
+ // Declare a boolean and initialize it to false.
+ decl_ipv_variable_3(bool, stopIterating,"Boolean for stopping",false);
+ while (! stopIterating->load())
+ {
+ std::cout << "Counter = " << myAtomicInt->load() << std::endl;
+ *myAtomicInt ++;
+ std::this_thread::sleep_for(std::chrono::seconds(1));
+ }
+ std::cout << "Exit. Counter = " << myAtomicInt->load() << std::endl;
+ return 0;
+ }
+ --- Program 2
+ include <iostream>
+ include "ipvar.h"
+ include "ipvar_util.h"
+ int main(int, char **)
+ {
+ decl_ipv_variable(std::atomic<int>, myAtomicInt);
+ decl_ipv_variable(bool, stopIterating);
+ std::cout << "Counter = " << myAtomicInt->load() << std::endl;
+ if (argc > 1)
+ {
+ *stopIterating = true;
+ std::cout << "Stop flag set to true" << std::endl;
+ }
+ return 0;
+ }
+ ```
+    submitted by    /u/Appropriate-Bus-9098    to    r/cpp  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Plasma 6.1 beta is in [kde-unstable]]]></title>
+        <id>https://www.reddit.com/r/archlinux/comments/1d03aby/plasma_61_beta_is_in_kdeunstable/</id>
+        <link href="https://www.reddit.com/r/archlinux/comments/1d03aby/plasma_61_beta_is_in_kdeunstable/"/>
+        <updated>2024-05-25T03:51:01.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/doranduck  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : archlinux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Alexa echo show 5 3rd gen jailbreak? (Press all buttons on startup)]]></title>
+        <id>https://www.reddit.com/r/hacking/comments/1d01lf4/alexa_echo_show_5_3rd_gen_jailbreak_press_all/</id>
+        <link href="https://www.reddit.com/r/hacking/comments/1d01lf4/alexa_echo_show_5_3rd_gen_jailbreak_press_all/"/>
+        <updated>2024-05-25T02:12:58.000Z</updated>
+        <summary type="html"><![CDATA[I've recently been interested in possibly loading a custom firmware on my Alexa as I started caring about privacy. The issue is, this is the 3rd gen Alex echo show 5 which runs their custom OS instead of Android like their old ones. I've been searching online but haven't seen anything and most people said that there isn't a fastboot menu in this thing. After playing around with it though, I found this! Done by pressing all 3 buttons on startup. However, I couldn't find anything else from here. I'm not nearly proficient enough in programming and stuff to port android or Linux on this thing so I was hoping to at least get the information out there that there is a fastboot menu on these newer Alexa devices (I literally found nothing on the newer gen devices) 
+    submitted by    /u/Hofnik121  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : hacking</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Advice regarding the programming journey/roadmap]]></title>
+        <id>https://www.reddit.com/r/csharp/comments/1d00gvx/advice_regarding_the_programming_journeyroadmap/</id>
+        <link href="https://www.reddit.com/r/csharp/comments/1d00gvx/advice_regarding_the_programming_journeyroadmap/"/>
+        <updated>2024-05-25T01:10:37.000Z</updated>
+        <summary type="html"><![CDATA[Hey! Hope you’re all well. Coming out of college and not really wanting to pursue a career in regard to my A levels, I decided to pursue a career in programming given that I’ve always been a computer guy despite not having any previous programming experience.
+ I feel I understand the gist of how to go about learning programming and doing in such a way that irregardless of the language I use/end up using I can problem solve and program well (or relatively so). From what I have seen/heard from self taught devs on YT and other places, a lot of problems arise from not understanding the underlying principles of programming and people end up falling in the false sense of security knowing that a piece of code works and not why it works. Or trying to rush their way through and finish and quick as …]]></summary>
+        <author>
+            <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[GParted frozen and windows aren’t clearing]]></title>
+        <id>https://www.reddit.com/r/debian/comments/1d001yo/gparted_frozen_and_windows_arent_clearing/</id>
+        <link href="https://www.reddit.com/r/debian/comments/1d001yo/gparted_frozen_and_windows_arent_clearing/"/>
+        <updated>2024-05-25T00:48:36.000Z</updated>
+        <summary type="html"><![CDATA[The windows seem unresponsive and aren’t clearing right, but everything else on the desktop seems right. Was trying to shrink a windows Ntfs partition to make room for an ext4 partition and this happened. Is all my data going to be ok and I just have to wait (it’s been about 2 hours) or am I just gonna have to wipe my SSD?
+    submitted by    /u/juice20115932  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : debian</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Guidelines for computing sizes and subscripts]]></title>
         <id>https://www.reddit.com/r/C_Programming/comments/1czzs03/guidelines_for_computing_sizes_and_subscripts/</id>
@@ -96,6 +495,17 @@
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[I made logic gates in Godot :)]]></title>
+        <id>https://www.reddit.com/r/godot/comments/1czx48g/i_made_logic_gates_in_godot/</id>
+        <link href="https://www.reddit.com/r/godot/comments/1czx48g/i_made_logic_gates_in_godot/"/>
+        <updated>2024-05-24T22:25:55.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/wisielczyk  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : godot</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Visual comparison of benchmarking configurations: GCC vs. LLVM on Arm]]></title>
         <id>https://www.reddit.com/r/cpp/comments/1czwmt9/visual_comparison_of_benchmarking_configurations/</id>
         <link href="https://www.reddit.com/r/cpp/comments/1czwmt9/visual_comparison_of_benchmarking_configurations/"/>
@@ -118,6 +528,17 @@
  [link]   [comments]]]></summary>
         <author>
             <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[iroh 0.17.0 - Everything Is A Little Better]]></title>
+        <id>https://www.reddit.com/r/rust/comments/1czw77b/iroh_0170_everything_is_a_little_better/</id>
+        <link href="https://www.reddit.com/r/rust/comments/1czw77b/iroh_0170_everything_is_a_little_better/"/>
+        <updated>2024-05-24T21:44:49.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/dignifiedquire  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : rust</name>
         </author>
     </entry>
     <entry>
@@ -174,6 +595,17 @@
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[teamleadAndDeadline]]></title>
+        <id>https://www.reddit.com/r/ProgrammerHumor/comments/1czujsn/teamleadanddeadline/</id>
+        <link href="https://www.reddit.com/r/ProgrammerHumor/comments/1czujsn/teamleadanddeadline/"/>
+        <updated>2024-05-24T20:31:26.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/MrEfil  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : ProgrammerHumor</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Merging 2 linked lists query.]]></title>
         <id>https://www.reddit.com/r/cpp_questions/comments/1czuhe1/merging_2_linked_lists_query/</id>
         <link href="https://www.reddit.com/r/cpp_questions/comments/1czuhe1/merging_2_linked_lists_query/"/>
@@ -195,6 +627,19 @@
  [link]   [comments]]]></summary>
         <author>
             <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[I'm a CS graduate and never studied once throughout my undergraduate career, is this a normal circumstance (graduated from Rutgers/NJIT in 2019 if that makes a difference)]]></title>
+        <id>https://www.reddit.com/r/csMajors/comments/1czu1oj/im_a_cs_graduate_and_never_studied_once/</id>
+        <link href="https://www.reddit.com/r/csMajors/comments/1czu1oj/im_a_cs_graduate_and_never_studied_once/"/>
+        <updated>2024-05-24T20:09:16.000Z</updated>
+        <summary type="html"><![CDATA[To clarify, I did do homework, but that's pretty much all the mental exercise I got in regards to subject matter, most of the time I just absorbed the concept as the teacher was teaching it, so it wasn't really all that hard to execute it when the time came
+ So not sure if it still exists, but it was through a program at Rutgers where I took classes at NJIT, so I guess it's technically NJIT? But basically I was a lazy student and pretty much just chose Comp Sci since I thought it was one of the majors people took, when they didn't care, so I pretty much just graduated with a Comp Sci degree having never studied, and didn't learn until later that Comp Sci is actually considered one of the harder majors. GPA wasn't spectacular or anything, somewhere in the 3.0-3.5 range IIRC. I'm curious if this is the standard situation or if mine was unique
+    submitted by    /u/dreemsequence  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csMajors</name>
         </author>
     </entry>
     <entry>
@@ -234,6 +679,32 @@
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[If I stare at my code for long enough, will the bugs go away?]]></title>
+        <id>https://www.reddit.com/r/csMajors/comments/1czt808/if_i_stare_at_my_code_for_long_enough_will_the/</id>
+        <link href="https://www.reddit.com/r/csMajors/comments/1czt808/if_i_stare_at_my_code_for_long_enough_will_the/"/>
+        <updated>2024-05-24T19:34:24.000Z</updated>
+        <summary type="html"><![CDATA[Title.
+    submitted by    /u/CaptainVickle  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csMajors</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[What the hell is going on over at Capital One?]]></title>
+        <id>https://www.reddit.com/r/cscareerquestions/comments/1czsqpe/what_the_hell_is_going_on_over_at_capital_one/</id>
+        <link href="https://www.reddit.com/r/cscareerquestions/comments/1czsqpe/what_the_hell_is_going_on_over_at_capital_one/"/>
+        <updated>2024-05-24T19:13:41.000Z</updated>
+        <summary type="html"><![CDATA[I'm a software engineer at a relatively small fintech, and we've been trying to hire a Principal engineer to help us with some of our funkier apps as well as general tech vision. I've run quite a number of coding interviews over the past couple of weeks. It's a pretty simple problem, requiring basic knowledge of how to use a dictionary/hashmap, with a few different steps along the way that build on one another. We offer it in your choice of any major language, but 99% of candidates pick Python. The test is completely open book and the interviewers provide coaching as well. 
+ My issue is that over the past couple of weeks, we've interviewed THREE different developers from Capital One, all Senior+ level, and all of them have very clearly had absolutely ZERO coding exposure. In 45 minutes, none of them could fulfill a single unit test, such as throwing an error if a parameter was None, or throwing an error if a value wasn't in the dictionary. All of them were performing below what I would expect from a first year CS student, yet 2 claimed to have Masters in CS. 
+ What the hell is going on? Is Capital One some kind of complete joke organization? Surely not, right? Are these people lying about working there? If so, why did all three have Capital One as their current employer? Is there some kind of conspiracy? Anyone else experienced this?
+    submitted by    /u/Mediocre_Fly7245  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : cscareerquestions</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Tech job postings are up by 24% in Bangalore, India and 41.5% in Hyderabad, India]]></title>
         <id>https://www.reddit.com/r/cscareerquestions/comments/1czsesd/tech_job_postings_are_up_by_24_in_bangalore_india/</id>
         <link href="https://www.reddit.com/r/cscareerquestions/comments/1czsesd/tech_job_postings_are_up_by_24_in_bangalore_india/"/>
@@ -243,6 +714,17 @@
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : cscareerquestions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Lessons Learned: My Startup Nightmare with a Reddit Stranger]]></title>
+        <id>https://www.reddit.com/r/programming/comments/1czs3w5/lessons_learned_my_startup_nightmare_with_a/</id>
+        <link href="https://www.reddit.com/r/programming/comments/1czs3w5/lessons_learned_my_startup_nightmare_with_a/"/>
+        <updated>2024-05-24T18:46:45.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/troutrucker  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : programming</name>
         </author>
     </entry>
     <entry>
@@ -298,6 +780,19 @@
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Do people actually prefer wfh?]]></title>
+        <id>https://www.reddit.com/r/cscareerquestions/comments/1czqyk7/do_people_actually_prefer_wfh/</id>
+        <link href="https://www.reddit.com/r/cscareerquestions/comments/1czqyk7/do_people_actually_prefer_wfh/"/>
+        <updated>2024-05-24T17:58:01.000Z</updated>
+        <summary type="html"><![CDATA[I’m 27 and got my masters in 2019 and after about 8 months of being in office before Covid began, I’ve since primarily been working from home for over 4 years and find it so depressing. I live alone and apart from the occasional day in the office I spend almost all my time alone staring at a computer screen working on something that I ultimately feel is pointless. Sometimes I’ll go into the office even when no one else is in just to get out of the house, which is definitely better but still very lonely. I just want to do something real and physical, I feel so sad and stressed all the time and I keep getting sick. 
+ I don’t think it’s the job itself because I’ve worked for 3 different companies in the past 5 years, all with very nice people, but just hate the software developer lifestyle. I truly only came into this profession for the money and now I think I’m ready to leave. 
+    submitted by    /u/ihaveanideer  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : cscareerquestions</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Why you should batch message processing and how to do it with .NET AsyncEnumerable]]></title>
         <id>https://www.reddit.com/r/csharp/comments/1czqta2/why_you_should_batch_message_processing_and_how/</id>
         <link href="https://www.reddit.com/r/csharp/comments/1czqta2/why_you_should_batch_message_processing_and_how/"/>
@@ -306,6 +801,21 @@
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How do i "un-Nvidia" my system - switching GPUs to AMD?]]></title>
+        <id>https://www.reddit.com/r/archlinux/comments/1czqsm5/how_do_i_unnvidia_my_system_switching_gpus_to_amd/</id>
+        <link href="https://www.reddit.com/r/archlinux/comments/1czqsm5/how_do_i_unnvidia_my_system_switching_gpus_to_amd/"/>
+        <updated>2024-05-24T17:50:48.000Z</updated>
+        <summary type="html"><![CDATA[I just bought a new GPU from AMD, and since i had Nvidia til now, i can't log into Gnome, i need to purge the i think kernel modules and all that.
+ Do i also need to install something for the new GPU to work? Or is there some other process.
+ Cause right now, it goes up to GDM, but logging in just brings me back to GDM. Do i just reverse steps what i did to install the driver and that's enough, or do i need something else?
+ I can reinstall Arch if need be, it's fine, but i don't think i have to, just not sure what to do exactly.
+    submitted by    /u/Veprovina  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : archlinux</name>
         </author>
     </entry>
     <entry>
@@ -340,6 +850,22 @@
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : hacking</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CKA or CKAD?]]></title>
+        <id>https://www.reddit.com/r/devops/comments/1czpxbj/cka_or_ckad/</id>
+        <link href="https://www.reddit.com/r/devops/comments/1czpxbj/cka_or_ckad/"/>
+        <updated>2024-05-24T17:13:46.000Z</updated>
+        <summary type="html"><![CDATA[Hey people.
+ Senior SRE here with several years of experience developing and managing k8s clusters. I've been studying for the CKA cert, however after thinking about it some more, CKAD is starting to make more sense to me.
+ The continuous trend in k8s administration is through managed services like EKS and GKE. Rarely do I see job openings of bare metal or administrating a cluster through other means. While yes there are still cases where you need to debug the control plane, it's extremely rare and 99% of the time, the associated cloud provider has support. 
+ And yes, it's extremely important to know how the control plane component works. But, I find that my personal experience with K8s is more in the development and application architectural side, than it is in debugging etcd or the api server.
+ Does anyone else feel the same? Or is CKA still the recommended cert to get?
+    submitted by    /u/benaffleks  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : devops</name>
         </author>
     </entry>
     <entry>
@@ -389,6 +915,19 @@
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Got a new job and completely surprise by the gap in stacks.]]></title>
+        <id>https://www.reddit.com/r/cscareerquestions/comments/1czp1fm/got_a_new_job_and_completely_surprise_by_the_gap/</id>
+        <link href="https://www.reddit.com/r/cscareerquestions/comments/1czp1fm/got_a_new_job_and_completely_surprise_by_the_gap/"/>
+        <updated>2024-05-24T16:36:28.000Z</updated>
+        <summary type="html"><![CDATA[I have 2 years experience at a fortune 500 company in the south and just recently landed a new job in the public sector. I'm completely surprise by just how much of a gap the tech stacks are. I was always told that the private sector is efficient, leaner, and decades advance. Man I could not be more wrong. My old job did not use git (internal decades old version control that was a nightmare using between just two people), the senior developers insisted on using notepad ++ (complain whenever they saw me using vs code), and I just started learning React and Spring boot (seniors insisted in vanilla JS and in house low code backend language). My mind is blown. Whenever I ask this multi billion dollar company why, the responses I always got was that "new" tech is for over hype FAANG companies not "real" companies that make products. 
+ I had so many issues with how navigating the ancient tech stacks with no documentation that made me feel like an idiot. We would spend months building an application from scratch and custom developing everything and I got so many complaints whenever I pointed out a limitation that our products were doing that was solve decades ago with new stacks. I was told that if I ever went anywhere else they be even more behind and there no point learning these skills. My Team didn't even code. They were all engineers with decades of outdated experience that they even admitted are so behind they could not work with modern stacks and just waiting for retirement. I was the only engineer under 40 on my team and could not aks anyone for help because they didn't even understand html. Honestly I'm at a loss for words right now. 
+    submitted by    /u/maxxor6868  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : cscareerquestions</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Gh copilot in the latest VS 2022]]></title>
         <id>https://www.reddit.com/r/csharp/comments/1czounx/gh_copilot_in_the_latest_vs_2022/</id>
         <link href="https://www.reddit.com/r/csharp/comments/1czounx/gh_copilot_in_the_latest_vs_2022/"/>
@@ -434,6 +973,19 @@
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Can you give example of successful web browser games]]></title>
+        <id>https://www.reddit.com/r/gamedev/comments/1cznmpq/can_you_give_example_of_successful_web_browser/</id>
+        <link href="https://www.reddit.com/r/gamedev/comments/1cznmpq/can_you_give_example_of_successful_web_browser/"/>
+        <updated>2024-05-24T15:36:17.000Z</updated>
+        <summary type="html"><![CDATA[I'm curious to know if there are successful browser games with i guess it need some multiplayer elements in them .
+ i wonder how is this ecosystem 
+    submitted by    /u/umen  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : gamedev</name>
         </author>
     </entry>
     <entry>
@@ -542,6 +1094,34 @@
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Which apps have linux versions that not many people know about?]]></title>
+        <id>https://www.reddit.com/r/linux/comments/1czl198/which_apps_have_linux_versions_that_not_many/</id>
+        <link href="https://www.reddit.com/r/linux/comments/1czl198/which_apps_have_linux_versions_that_not_many/"/>
+        <updated>2024-05-24T13:42:22.000Z</updated>
+        <summary type="html"><![CDATA[Examples I've stumbled upon are Proton VPN, Reaper, QCAD, Maya, and R-Studio.
+    submitted by    /u/walterblackkk  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Anti-DRY pattern?]]></title>
+        <id>https://www.reddit.com/r/ExperiencedDevs/comments/1czkhp5/antidry_pattern/</id>
+        <link href="https://www.reddit.com/r/ExperiencedDevs/comments/1czkhp5/antidry_pattern/"/>
+        <updated>2024-05-24T13:16:30.000Z</updated>
+        <summary type="html"><![CDATA[I have a tech lead who seems to be unabashedly anti-DRY. I'm of the mind that if you have 2 variables or sets of data that should ALWAYS be the same, that you SHOULD (assuming some huge hurdle) that you should have a source of truth that feeds both or one passes it to the other.
+ For example, if you click a button ("foo") and need to call a method ("bar") that passes that button's value to somewhere else, you should change the code so "foo" is in a variable somewhere and passed to "bar" as opposed to hard coding "foo" inside "bar"
+ But this can obviously end up with writing more code so that the foo variable is getting passed around.
+ So this tech lead seems to be of the mindset that you should always change the least amount of code possible regardless of anything else. I mean I get this perspective, but it seems insanely short sighted.
+ Am I the crazy one here? I feel like doing so is going against everything I've been taught and what the community says. 
+    submitted by    /u/TruthOf42  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : ExperiencedDevs</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[JetBrains releases RustRover IDE for Rust development]]></title>
         <id>https://www.reddit.com/r/programming/comments/1czkbi0/jetbrains_releases_rustrover_ide_for_rust/</id>
         <link href="https://www.reddit.com/r/programming/comments/1czkbi0/jetbrains_releases_rustrover_ide_for_rust/"/>
@@ -586,6 +1166,17 @@
  We've been having performance problems even when adding a small number of new users that use the site normally, so we scaled out and scaled up our 1vCPU / 7gb memory on Prod. This resolved it temporarily…]]></summary>
         <author>
             <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[you prefer animation A or B]]></title>
+        <id>https://www.reddit.com/r/godot/comments/1czjf3b/you_prefer_animation_a_or_b/</id>
+        <link href="https://www.reddit.com/r/godot/comments/1czjf3b/you_prefer_animation_a_or_b/"/>
+        <updated>2024-05-24T12:20:43.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/illimity  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : godot</name>
         </author>
     </entry>
     <entry>
@@ -781,6 +1372,20 @@ edit: changing std::make_signed_t to std::make_signed results in Clang failing t
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : programming</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[What libraries do you folks use for user registration and authentication?]]></title>
+        <id>https://www.reddit.com/r/golang/comments/1czgp63/what_libraries_do_you_folks_use_for_user/</id>
+        <link href="https://www.reddit.com/r/golang/comments/1czgp63/what_libraries_do_you_folks_use_for_user/"/>
+        <updated>2024-05-24T09:25:57.000Z</updated>
+        <summary type="html"><![CDATA[I'm writing a golang json api server and was looking at libraries that handle user registration and authentication. Do you folks have any recommendations? I don't need any html view components as that will be taken care of by a separate front-end component.
+ I have worked on rails before and for those who can relate, I'm looking for something like devise.
+ Thanks!
+    submitted by    /u/ashishmax31  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : golang</name>
         </author>
     </entry>
     <entry>
@@ -990,6 +1595,17 @@ A+ documentation, amazing really.
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[iDidAThing]]></title>
+        <id>https://www.reddit.com/r/ProgrammerHumor/comments/1czdfgj/ididathing/</id>
+        <link href="https://www.reddit.com/r/ProgrammerHumor/comments/1czdfgj/ididathing/"/>
+        <updated>2024-05-24T05:31:01.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/-CodingPotato-  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : ProgrammerHumor</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Thread 1: EXC_BAD_ACCESS (code=1, address=0x368) How to fix error]]></title>
         <id>https://www.reddit.com/r/C_Programming/comments/1czd8l6/thread_1_exc_bad_access_code1_address0x368_how_to/</id>
         <link href="https://www.reddit.com/r/C_Programming/comments/1czd8l6/thread_1_exc_bad_access_code1_address0x368_how_to/"/>
@@ -1037,6 +1653,17 @@ The error says: Thread 1: EXC_BAD_ACCESS (code=1, address=0x368)
  [link]   [comments]]]></summary>
         <author>
             <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Deku v0.17.0 (Declarative binary reading and writing) - Now with Read and Write support!]]></title>
+        <id>https://www.reddit.com/r/rust/comments/1czbhu8/deku_v0170_declarative_binary_reading_and_writing/</id>
+        <link href="https://www.reddit.com/r/rust/comments/1czbhu8/deku_v0170_declarative_binary_reading_and_writing/"/>
+        <updated>2024-05-24T03:32:48.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/arch_rust  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : rust</name>
         </author>
     </entry>
     <entry>
@@ -1182,6 +1809,18 @@ The error says: Thread 1: EXC_BAD_ACCESS (code=1, address=0x368)
  When looking for a distro to recommend for the average, not-power-user Windows user, there's a few criteria I feel i…]]></summary>
         <author>
             <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[What do you think about the future of terraform ?]]></title>
+        <id>https://www.reddit.com/r/devops/comments/1cz7hcb/what_do_you_think_about_the_future_of_terraform/</id>
+        <link href="https://www.reddit.com/r/devops/comments/1cz7hcb/what_do_you_think_about_the_future_of_terraform/"/>
+        <updated>2024-05-23T23:57:32.000Z</updated>
+        <summary type="html"><![CDATA[After IBM take over hashicorp ,what is the future of their products?
+    submitted by    /u/Naive_Role2395  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : devops</name>
         </author>
     </entry>
     <entry>
@@ -3084,6 +3723,17 @@ What is the timing for scanline 0? How long does the PPU stay in each mode?
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[unitTests]]></title>
+        <id>https://www.reddit.com/r/ProgrammerHumor/comments/1cy9fuu/unittests/</id>
+        <link href="https://www.reddit.com/r/ProgrammerHumor/comments/1cy9fuu/unittests/"/>
+        <updated>2024-05-22T19:47:26.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/RedYetiDev  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : ProgrammerHumor</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[dontSeeWhatsWrongWithThis]]></title>
         <id>https://www.reddit.com/r/ProgrammerHumor/comments/1cy9ax4/dontseewhatswrongwiththis/</id>
         <link href="https://www.reddit.com/r/ProgrammerHumor/comments/1cy9ax4/dontseewhatswrongwiththis/"/>
@@ -3323,6 +3973,20 @@ What is the timing for scanline 0? How long does the PPU stay in each mode?
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : golang</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Blog post] Distributing Global State to Serve over 1 Billion Daily Requests]]></title>
+        <id>https://www.reddit.com/r/devops/comments/1cy51yk/blog_post_distributing_global_state_to_serve_over/</id>
+        <link href="https://www.reddit.com/r/devops/comments/1cy51yk/blog_post_distributing_global_state_to_serve_over/"/>
+        <updated>2024-05-22T16:50:43.000Z</updated>
+        <summary type="html"><![CDATA[Post is here: https://render.com/blog/distributing-global-state-to-serve-over-1-billion-daily-requests
+ It walks through the eras of Render's state distribution architecture for routing requests to different user services. Includes a move from pull- to push-based caching, along with expansion from a single cluster and region to multiple.
+ Disclosure: I work for Render
+    submitted by    /u/FreshestOfVegetables  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : devops</name>
         </author>
     </entry>
     <entry>
@@ -4007,6 +4671,18 @@ This is crap, You're gonna have exactly the same result every time and teaches y
  [link]   [comments]]]></summary>
         <author>
             <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Free open source projects]]></title>
+        <id>https://www.reddit.com/r/learnprogramming/comments/1cxuqqy/free_open_source_projects/</id>
+        <link href="https://www.reddit.com/r/learnprogramming/comments/1cxuqqy/free_open_source_projects/"/>
+        <updated>2024-05-22T07:45:59.000Z</updated>
+        <summary type="html"><![CDATA[Hey everyone! I found a great website where you can find free open-source projects in different languages and categories. You can use these projects for free and even check out live demos before downloading the code. I've been using it and think you should too. Check out OpenSourceCollection!
+    submitted by    /u/Aimmiii  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : learnprogramming</name>
         </author>
     </entry>
     <entry>
@@ -26947,22 +27623,6 @@ while the rust compiler has been an amazing tool along the journey, it just fail
         <link href="https://www.reddit.com/r/EmuDev/comments/1cdp3te/how_do_framerate_patches_work_my_framerate/"/>
         <updated>2024-04-26T16:01:04.000Z</updated>
         <summary type="html"><![CDATA[submitted by    /u/Whatcookie_  
- [link]   [comments]]]></summary>
-        <author>
-            <name>Developing Emulators</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[NES Scrolling Issue?]]></title>
-        <id>https://www.reddit.com/r/EmuDev/comments/1ccy6sy/nes_scrolling_issue/</id>
-        <link href="https://www.reddit.com/r/EmuDev/comments/1ccy6sy/nes_scrolling_issue/"/>
-        <updated>2024-04-25T18:13:22.000Z</updated>
-        <summary type="html"><![CDATA[This is my first emulation based on real hardware, and I've been leaning NES emulation from OLC's video series. I made my implementation in Rust.
- I'm having multiple issues, specifically in the PPU. Ice Climber is the most obvious with the title screen demo. But Donkey Kong has a broken main menu with a bunch of blue 0's. The demo has a bunch of magenta 0's at the bottom, and the screen shifts a ton randomly.
- Baloon Fight is the best one, with no obvious glitches.
- This is what I currently have: https://gist.github.com/TaromaruYuki/5c3821a024b6e44a733bf3f67bb6673a
- I'm thinking it's a scrolling issue, or even a nametable switching issue, but I can't find anything.
-    submitted by    /u/Ill_Confection_216  
  [link]   [comments]]]></summary>
         <author>
             <name>Developing Emulators</name>

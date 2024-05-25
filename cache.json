@@ -6,6 +6,36 @@
       "siteUrl": "https://www.reddit.com/r/C_Programming/",
       "articles": [
         {
+          "id": "https://www.reddit.com/r/C_Programming/comments/1d09oef/strict_aliasing_rules/",
+          "author": null,
+          "description": "Hi, I read about aliasing rules, but I'm confused about compatible types. So I wonder, is this code UB and why?\n ```C struct IpAddr { unsigned char a, b, c, d; } struct IpAddrWithPort { unsigned char a, b, c, d; int port; } void print_addr(IpAddr& addr) { .. }\n int main() { IpAddrWithPort addr = { 127, 0, 0, 1, 8080 }; print_addr((&IpAddr) (&addr)); } `` It seems like it isn't to me because logically memory address ofIpAddrWithPortwould always be validIpAddr` address and there isn't second reference, so it isn't aliased at all. But what is the formal way to think about it?\n    submitted by    /u/ioannuwu  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/C_Programming/comments/1d09oef/strict_aliasing_rules/",
+          "publishedOn": "2024-05-25T11:10:35.000Z",
+          "wordCount": null,
+          "title": "Strict aliasing rules",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/C_Programming/comments/1d0936k/an_a7_scenario_obtaining_a_register_variables/",
+          "author": null,
+          "description": "\"A register variable that cannot be aliased is aliased automatically in response to a type-punning incident. You asked for miracles Theo, I give you the F B I register variable's address.\"\n -- Findings of a Die Hard C programmer.\n  \nTL;DR: The standard should outright disallow the use of register keyword if an object (or member of a nested sub-object) can be accessed as an array; doing so should cause a hard constraint violation, instead of just undefined behavior.\n The register storage-class specifier prohibits taking the address of a variable, and doing so causes compilation error due to a constraint violation. The standard also contains this informative footnote (not normative):\n  \nwhether or not addressable storage is actually used, the address of any part of an object declared with st…",
+          "link": "https://www.reddit.com/r/C_Programming/comments/1d0936k/an_a7_scenario_obtaining_a_register_variables/",
+          "publishedOn": "2024-05-25T10:30:21.000Z",
+          "wordCount": null,
+          "title": "An A7 scenario! Obtaining a register variable's address",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/C_Programming/comments/1d06n92/opengl_and_break_instruction/",
+          "author": null,
+          "description": "hi!\n I want to use open gl to draw a graph according to the year of manufacture of some cars. The problem is that when, in the console, the user enters the car he wants to buy, the code opens the graphic window, and after closing the graphic window appears the rest in the console! I think it's from the break instruction, but I don't know how to fix this, can someone help me? I use eclipse and the code portion is:\n printf(\"enter the car you want to buy:\");\n fflush(stdout);\n scanf(\"%s\",marcac);\n if (marcac[0] >= 'a' && marcac[0] <= 'z') {\n marcac[0] = marcac[0] - ('a' - 'A');\n }\n for(i=0;i<nrm;i++){\n if(strcmp(m[i].marca,marcac)==0){\n if(m[i].an_fabricatie>=2014){\n printf(\"Congratulations! You bought the %s car from the year %d for the price: %.2f\",m[i].marca\n ,m[i].an_fabricatie,m[i].pret);\n }\n else{\n fscanf(parcauto_out,\"%s %f\",m[i].marca,&m[i].reducere);\n printf(\"Congratulations! You bought the %s car from the year %d for the price: %.2f\"\n \",iar pretul final:%.2f!\",m[i].marca,m[i].an_fabricatie,m[i].pret,m[i].reducere);\n }\n break;\n }}\n if(i==nrm){\n printf(\"%s it is not in the car park!\\n\",marcac);\n } printf(\"\\\\n\\\\tbye!\\\\n\"); \n fclose(parcauto\\_out); \n fclose(parcauto\\_in); \n glutInit(&argc, argv);\n glutInitWindowSize(320, 320);\n glutInitWindowPosition(50, 50);\n glutCreateWindow(\"Histograma OpenGL \");\n glutDisplayFunc(display);\n glutMainLoop();\n return 0;\n the program only displays: \"enter the car you want to buy:\" and then the graphic window opens and after closing the window, what remains to be written continues\n    submitted by    /u/Parking_Scared  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/C_Programming/comments/1d06n92/opengl_and_break_instruction/",
+          "publishedOn": "2024-05-25T07:30:22.000Z",
+          "wordCount": null,
+          "title": "opengl and break instruction",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/C_Programming/comments/1czzs03/guidelines_for_computing_sizes_and_subscripts/",
           "author": null,
           "description": "submitted by    /u/N-R-K  \n [link]   [comments]",
@@ -2332,6 +2362,76 @@
       "feedUrl": "https://www.reddit.com/r/cpp+cpp_questions/.rss",
       "siteUrl": "https://www.reddit.com/r/cpp+cpp_questions/",
       "articles": [
+        {
+          "id": "https://www.reddit.com/r/cpp_questions/comments/1d0ahxk/issue_with_the_makefile/",
+          "author": null,
+          "description": "I am trying to build my Raylib simple game but I don't want to tell \"make\" how to do it explicitly, with the help of the pattern rules but it throws an error at me. My game code isn't relevant to the problem so I won't publish it here; it's in a near blank state.\n P.S: I use msys2 in ucrt64 mode in Windows 11 if it matters it probably does not.\n P.P.S: If it would be helpful I can share the make output with -d\n The error:\n mingw32-make: *** No rule to make target 'obj/./src/main.cpp.o', needed by 'a.exe'. Stop.\n Here is the Makefile:\n .POSIX:\n .PHONY: all clean\n BUILD_DIR := ./obj\n SRC_DIRS := ./src\n CXX=g++\n RESC=windres\n #CXXFLAGS=-O3 -std=gnu++14 -Wall -Iinclude -c\n CXXFLAGS=-g -std=gnu++14 -Wall -Iinclude -c\n LDFLAGS=-s -static -Wl,--subsystem,windows\n #LDFLAGS=-static -Wl,--subsystem,windows\n LDLIBS=lib/libraylib.a -lopengl32 -lgdi32 -lwinmm\n BINS=a.exe\n HEADERS=include/*\n SRCS := $(shell find $(SRC_DIRS) -name '*.cpp' -or -name '*.c' -or -name '*.s')\n OBJS := $(SRCS:%=$(BUILD_DIR)/%.o) \n all: $(BINS) \n $(BINS): $(OBJS)\n $(CXX) $^ $(LDFLAGS) $(LDLIBS) -o $@ \n %.o: %.cpp\n $(CXX) $< $(CXXFLAGS) -o $@ \n #recource_data/raylib.rc.data: recource/raylib.rc\n # $(RESC) $^ -o resource_data/raylib.rc.data --target=pe-x86-64 \n clean:\n rm obj/* a.exe resource_data/*\n    submitted by    /u/Patient-Plan-1591    to    r/cpp_questions  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp_questions/comments/1d0ahxk/issue_with_the_makefile/",
+          "publishedOn": "2024-05-25T12:02:07.000Z",
+          "wordCount": null,
+          "title": "Issue with the Makefile.",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp/comments/1d09xjq/how_long_does_cpp_have_left_rust/",
+          "author": null,
+          "description": "I am a (pre-)junior developer. My question is whether cpp will still be used in the future or whether it will soon basically become esoteric compared to rust? Otherwise, what is the point in trying to really learn ol’ cpp in 2024? I quite want to learn cpp but have been multiple times increasingly warned about the risk of focusing too much on any non-rust(-ish) language due to high risk of becoming legacy code imminently since rust integrated into Linux kernel, for one…\n EDIT: for clarification, what I am seeking I guess is some reassurance as to whether there is any hope for cpp continuing to exist as an employable language for much longer given the features described to be available in rust such as safe memory management, crates, thriving community, innovative style and so on? \n    submitted by    /u/anonymous_bear_6    to    r/cpp  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp/comments/1d09xjq/how_long_does_cpp_have_left_rust/",
+          "publishedOn": "2024-05-25T11:27:23.000Z",
+          "wordCount": null,
+          "title": "how long does cpp have left? (rust)",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp_questions/comments/1d08qr9/q92_lcreversed_linked_list_2/",
+          "author": null,
+          "description": "Given the head of a singly linked list and two integers left and right where left <= right, reverse the nodes of the list from position left to position right, and return the reversed list.\n  \n Example 1:\n Input: head = [1,2,3,4,5], left = 2, right = 4\n Output: [1,4,3,2,5]\n My code:\n /** * Definition for singly-linked list. * struct ListNode { * int val; * ListNode *next; * ListNode() : val(0), next(nullptr) {} * ListNode(int x) : val(x), next(nullptr) {} * ListNode(int x, ListNode *next) : val(x), next(next) {} * }; */ class Solution { public: ListNode* reverseBetween(ListNode* head, int left, int right) { ListNode* dummy=new ListNode; dummy->next=head; ListNode* temp=dummy; for (int i=0;i<left-1;i++){//node before the reversed part temp=temp->next; } ListNode* reverseHead=temp->next; ListNode* reverseTemp=reverseHead; for (int i=left;i<right;i++){//final node to be reversed reverseTemp=reverseTemp->next; } temp->next=reverseTemp->next; //connect the nodes before and after reverse segment reverseTemp->next=nullptr; ListNode* tail=reversedpart(&reverseHead); tail->next=temp->next; temp->next=reverseHead; return dummy->next; } ListNode* reversedpart(ListNode** head){ ListNode* temp=*head; if (temp->next==nullptr){ *head=temp; } else{ ListNode* tempnext=temp->next; reversedpart(&tempnext); tempnext->next=temp; temp->next=nullptr; } return tail; } }; \n Somehow, my reversedpart function changes the reversedhead value to the end of the reversed list rather than to the start of it. The tail logic should be fine though. When I put in the test case in example 1 (the one above) the value of the reversedhead pointer changed to 2 rather than 4. Any idea why? Help is much appreciated.\n    submitted by    /u/VoidifytheVoid    to    r/cpp_questions  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp_questions/comments/1d08qr9/q92_lcreversed_linked_list_2/",
+          "publishedOn": "2024-05-25T10:05:25.000Z",
+          "wordCount": null,
+          "title": "Q92 LC-Reversed Linked List 2",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp_questions/comments/1d077xi/weird_error/",
+          "author": null,
+          "description": "So i'm currently setting up my game engine using The Cherno's tutorial and when I'm creating the sandbox class that is delivered from luna::Application i get this weird error: \n https://preview.redd.it/oe4xy9tc5j2d1.png?width=2560&format=png&auto=webp&s=d5cc5e1b287ed1e8238e5ae864139675b1ff71d3\n https://preview.redd.it/n66lwivo6j2d1.png?width=2560&format=png&auto=webp&s=9f6f3bd198a8b2e780dc4c333d068096067f503d\n https://preview.redd.it/5jshllmp6j2d1.png?width=816&format=png&auto=webp&s=7bdffdcdb9253db9730a01d8cd7b0b89158cb57f\n The only difference i could find was the preprocessor statements. in his Hazel project it said \"_WINDLL\" while mine said \"_DEBUG;_CONSOLE\" and inside the Sandbox project his says \"_MBCS\" and mine: \"_DEBUG;_CONSOLE\"\n Also I'm using VS2022 and i think he is using VS2019 but I'm not sure.\n Here is the GitHub repo: ViktorPopp/LunaGameEngine\n    submitted by    /u/ViktorPoppDev    to    r/cpp_questions  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp_questions/comments/1d077xi/weird_error/",
+          "publishedOn": "2024-05-25T08:12:59.000Z",
+          "wordCount": null,
+          "title": "Weird error?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp_questions/comments/1d06ij4/a_weird_thing_happened_when_i_compiled_cpp_files/",
+          "author": null,
+          "description": "I know I should use g++ when compile cpp files, but I'm trying to figure out the difference between g++ and gcc here.\n When I use\n gcc c_vs_cpp.cpp -lstdc++ -o c_vs_cpp_cpp \n Everything went well. But when I use\n gcc -lstdc++ -o c_vs_cpp_cpp c_vs_cpp.cpp \n I got\n /usr/bin/ld: /tmp/ccZmilLC.o: in function `main': c_vs_cpp.cpp:(.text+0x32): undefined reference to `std::cout' \n I saw the man page of gcc and got:\n SYNOPSIS gcc [-c|-S|-E] [-std=standard] [-g] [-pg] [-Olevel] [-Wwarn...] [-Wpedantic] [-Idir...] [-Ldir...] [-Dmacro[=defn]...] [-Umacro] [-foption...] [-mmachine-option...] [-o outfile] [@file] infile.. \n Shouldn't I put all my .cpp files at the end of the command line?\n PS: I use WSL under Windows 10.\n    submitted by    /u/yukiiiiii2008    to    r/cpp_questions  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp_questions/comments/1d06ij4/a_weird_thing_happened_when_i_compiled_cpp_files/",
+          "publishedOn": "2024-05-25T07:20:43.000Z",
+          "wordCount": null,
+          "title": "A weird thing happened when I compiled cpp files with gcc command",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp/comments/1d062lw/our_first_ios_app_on_cpp20_to_reach_out_more/",
+          "author": null,
+          "description": "TL;DR\n To support me in reaching a wider audience, my wife developed an app featuring free quizzes and paid blogs on C++20 for iOS devices, including iPhone, iPad, and Vision Pro. You can download the app here: C++20 Quiz and Blog App.\n The Long Story\n Some of you may know me from my blogs on Medium and my YouTube videos about modern C++. For over two years, I’ve been creating content focused on C++20 features, driven by my passion for teaching and modern C++. However, despite my efforts, the financial return has been minimal due to high competition and the need for consistent content posting to meet monetization thresholds.\n Living with my wife in a metropolitan city in Germany comes with substantial monthly expenses. Like many developers, we work full-time jobs, and I dedicate my free ti…",
+          "link": "https://www.reddit.com/r/cpp/comments/1d062lw/our_first_ios_app_on_cpp20_to_reach_out_more/",
+          "publishedOn": "2024-05-25T06:50:02.000Z",
+          "wordCount": null,
+          "title": "Our first ios app on Cpp20 to reach out more audience",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp/comments/1d049gp/introducing_ipvar_a_c_library_that_simplifies/",
+          "author": null,
+          "description": "I'm sharing a small library I wrote in C++ time ago, that simplifies sharing data between multiple processes.\n https://github.com/kboutora/ipvar\n In this example, Program 1 counts seconds. Running Program 2 will show the value of the counter. Any additional argument in the command line will provoke the termination of program 1\n --- Program 1\n ```\n #include <iostream>\n #include <thread>\n #include <chrono>\n #include \"ipvar.h\"\n #include \"ipvar_util.h\"\n int main(int, char **)\n {\n decl_ipv_variable(std::atomic<int>, myAtomicInt);\n // Declare a boolean and initialize it to false.\n decl_ipv_variable_3(bool, stopIterating,\"Boolean for stopping\",false);\n while (! stopIterating->load())\n {\n std::cout << \"Counter = \" << myAtomicInt->load() << std::endl;\n *myAtomicInt ++;\n std::this_thread::sleep_for(std::chrono::seconds(1));\n }\n std::cout << \"Exit. Counter = \" << myAtomicInt->load() << std::endl;\n return 0;\n }\n --- Program 2\n include <iostream>\n include \"ipvar.h\"\n include \"ipvar_util.h\"\n int main(int, char **)\n {\n decl_ipv_variable(std::atomic<int>, myAtomicInt);\n decl_ipv_variable(bool, stopIterating);\n std::cout << \"Counter = \" << myAtomicInt->load() << std::endl;\n if (argc > 1)\n {\n *stopIterating = true;\n std::cout << \"Stop flag set to true\" << std::endl;\n }\n return 0;\n }\n ```\n    submitted by    /u/Appropriate-Bus-9098    to    r/cpp  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp/comments/1d049gp/introducing_ipvar_a_c_library_that_simplifies/",
+          "publishedOn": "2024-05-25T04:50:27.000Z",
+          "wordCount": null,
+          "title": "\"Introducing ipvar: A C++ Library that simplifies interprocess variable sharing.",
+          "imageUrl": null
+        },
         {
           "id": "https://www.reddit.com/r/cpp_questions/comments/1czz1g7/pointertomemberfunction_template_parameter/",
           "author": null,
@@ -6150,6 +6250,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://www.reddit.com/r/golang/comments/1czgp63/what_libraries_do_you_folks_use_for_user/",
+          "author": null,
+          "description": "I'm writing a golang json api server and was looking at libraries that handle user registration and authentication. Do you folks have any recommendations? I don't need any html view components as that will be taken care of by a separate front-end component.\n I have worked on rails before and for those who can relate, I'm looking for something like devise.\n Thanks!\n    submitted by    /u/ashishmax31  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/golang/comments/1czgp63/what_libraries_do_you_folks_use_for_user/",
+          "publishedOn": "2024-05-24T09:25:57.000Z",
+          "wordCount": null,
+          "title": "What libraries do you folks use for user registration and authentication?",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/golang/comments/1czfa4o/interface_is_this_a_bad_practice/",
           "author": null,
           "description": "We are having an internal discussion within the company on best practices of interfaces.\n Project layout context:\n We have grpc backend that does database crud operations following MVC-REPO. This is traditionally for front-end apps, but brief overview of the pattern as follows:\n M (Model) - represents the data, a struct\n Repo (Repository) - abstraction layer between the model and controller that does the database operations for the given model.\n C (Controller) - handles the input, grpc requests in this case, interacts with the repository for the db operations and returns back the response.\n V (View) - omitted, but would take the response from the controller and send it back to the client that invoked the grpc request.\n Code context\n package controller type MyController struct { repo reposi…",
@@ -7087,6 +7197,26 @@
       "siteUrl": "https://www.reddit.com/r/rust/top/?t=week",
       "articles": [
         {
+          "id": "https://www.reddit.com/r/rust/comments/1d06gjo/12_other_approaches_to_memory_safety_rust_didnt/",
+          "author": null,
+          "description": "submitted by    /u/Shnatsel  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/rust/comments/1d06gjo/12_other_approaches_to_memory_safety_rust_didnt/",
+          "publishedOn": "2024-05-25T07:16:53.000Z",
+          "wordCount": null,
+          "title": "12 other approaches to memory safety Rust didn't use",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/rust/comments/1czw77b/iroh_0170_everything_is_a_little_better/",
+          "author": null,
+          "description": "submitted by    /u/dignifiedquire  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/rust/comments/1czw77b/iroh_0170_everything_is_a_little_better/",
+          "publishedOn": "2024-05-24T21:44:49.000Z",
+          "wordCount": null,
+          "title": "iroh 0.17.0 - Everything Is A Little Better",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/rust/comments/1czgc0e/learning_rust_and_im_loving_it/",
           "author": null,
           "description": "I've been coding c++ for about 5+ yrs now, that's how I get most of the work done, plus some python, shell, JS and what not. I started going through the rust book and then the rustlings exercises, which seem quite easy and the behavior of language constructs is very intuitive so far.\n Things I've liked so far:\n  \nA+ documentation, amazing really. \n Delivery: I have all the documentation (book + reference + RustByExample) on local storage, so just spin up a python server and its there on any browser on my local network. Having to run this server b/c I have a flatpack mozilla which keeps copying index.html to a temp directory and breaks the experience.\n Content: Again, I'm impressed by the thought put into the documentation, I'll lean more towards RustByExample compared to the Book as it get…",
@@ -7094,6 +7224,16 @@
           "publishedOn": "2024-05-24T08:59:01.000Z",
           "wordCount": null,
           "title": "Learning rust and I'm loving it.",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/rust/comments/1czbhu8/deku_v0170_declarative_binary_reading_and_writing/",
+          "author": null,
+          "description": "submitted by    /u/arch_rust  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/rust/comments/1czbhu8/deku_v0170_declarative_binary_reading_and_writing/",
+          "publishedOn": "2024-05-24T03:32:48.000Z",
+          "wordCount": null,
+          "title": "Deku v0.17.0 (Declarative binary reading and writing) - Now with Read and Write support!",
           "imageUrl": null
         },
         {
@@ -8094,6 +8234,46 @@
       "siteUrl": "https://www.reddit.com/r/csharp/top/?t=week%22",
       "articles": [
         {
+          "id": "https://www.reddit.com/r/csharp/comments/1d05dbl/book_for_learning_practical_c_similar_to_lets_go/",
+          "author": null,
+          "description": "Anybody have any suggestions?\n    submitted by    /u/brandonto  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/csharp/comments/1d05dbl/book_for_learning_practical_c_similar_to_lets_go/",
+          "publishedOn": "2024-05-25T06:02:41.000Z",
+          "wordCount": null,
+          "title": "Book for learning practical C# similar to Let's Go for Golang",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/csharp/comments/1d05an0/microsoft_recommending_wpf_for_win32_programming/",
+          "author": null,
+          "description": "At the Microsoft Build event a couple days ago, a presentation suggested that for Win32 development, your choices were WinUI 3 and WPF. I had always thought that for Windows desktop development (which is what I'm interested in), WPF was for C#, needed .NET, and needed a Pinvoke every time you called a native Win32 function. \n I'm sure it's my own fault, but I had a hard time understanding the presenters, and I am still not clear on whether something has changed to allow you to use WPF for native C++ Win32 applications. Can anyone clarify this?\n    submitted by    /u/alleyoopoop  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/csharp/comments/1d05an0/microsoft_recommending_wpf_for_win32_programming/",
+          "publishedOn": "2024-05-25T05:58:04.000Z",
+          "wordCount": null,
+          "title": "Microsoft recommending WPF for Win32 programming?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/csharp/comments/1d04z3j/whats_new_in_c_13_c_13_new_features/",
+          "author": null,
+          "description": "submitted by    /u/Striking-Mechanic-18  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/csharp/comments/1d04z3j/whats_new_in_c_13_c_13_new_features/",
+          "publishedOn": "2024-05-25T05:36:44.000Z",
+          "wordCount": null,
+          "title": "What’s new in C# 13 | C# 13 new features",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/csharp/comments/1d00gvx/advice_regarding_the_programming_journeyroadmap/",
+          "author": null,
+          "description": "Hey! Hope you’re all well. Coming out of college and not really wanting to pursue a career in regard to my A levels, I decided to pursue a career in programming given that I’ve always been a computer guy despite not having any previous programming experience.\n I feel I understand the gist of how to go about learning programming and doing in such a way that irregardless of the language I use/end up using I can problem solve and program well (or relatively so). From what I have seen/heard from self taught devs on YT and other places, a lot of problems arise from not understanding the underlying principles of programming and people end up falling in the false sense of security knowing that a piece of code works and not why it works. Or trying to rush their way through and finish and quick as …",
+          "link": "https://www.reddit.com/r/csharp/comments/1d00gvx/advice_regarding_the_programming_journeyroadmap/",
+          "publishedOn": "2024-05-25T01:10:37.000Z",
+          "wordCount": null,
+          "title": "Advice regarding the programming journey/roadmap",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/csharp/comments/1czxohc/is_it_bad_practice_to_not_await_a_task/",
           "author": null,
           "description": "Let's say I have a game, and I want to save the game state in a json file. I don't particularly care when the file finishes being written, and I can use semaphore to put saving commands in a queue so there is no multiple file access at the same type. So... I'd just not await the task (that's on another thread) and move on with the game.\n Is this a bad thing? Not the save game thing exactly, but the whole not awaiting a task.\n    submitted by    /u/MarinoAndThePearls  \n [link]   [comments]",
@@ -8728,6 +8908,16 @@
       "siteUrl": "https://www.reddit.com/r/cscareerquestions/top/?t=week",
       "articles": [
         {
+          "id": "https://www.reddit.com/r/cscareerquestions/comments/1czsqpe/what_the_hell_is_going_on_over_at_capital_one/",
+          "author": null,
+          "description": "I'm a software engineer at a relatively small fintech, and we've been trying to hire a Principal engineer to help us with some of our funkier apps as well as general tech vision. I've run quite a number of coding interviews over the past couple of weeks. It's a pretty simple problem, requiring basic knowledge of how to use a dictionary/hashmap, with a few different steps along the way that build on one another. We offer it in your choice of any major language, but 99% of candidates pick Python. The test is completely open book and the interviewers provide coaching as well. \n My issue is that over the past couple of weeks, we've interviewed THREE different developers from Capital One, all Senior+ level, and all of them have very clearly had absolutely ZERO coding exposure. In 45 minutes, none of them could fulfill a single unit test, such as throwing an error if a parameter was None, or throwing an error if a value wasn't in the dictionary. All of them were performing below what I would expect from a first year CS student, yet 2 claimed to have Masters in CS. \n What the hell is going on? Is Capital One some kind of complete joke organization? Surely not, right? Are these people lying about working there? If so, why did all three have Capital One as their current employer? Is there some kind of conspiracy? Anyone else experienced this?\n    submitted by    /u/Mediocre_Fly7245  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cscareerquestions/comments/1czsqpe/what_the_hell_is_going_on_over_at_capital_one/",
+          "publishedOn": "2024-05-24T19:13:41.000Z",
+          "wordCount": null,
+          "title": "What the hell is going on over at Capital One?",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/cscareerquestions/comments/1czsesd/tech_job_postings_are_up_by_24_in_bangalore_india/",
           "author": null,
           "description": "Link: https://cxotoday.com/press-release/rise-in-it-jobs-across-tech-hubs-despite-a-national-shift-in-job-postings/\n    submitted by    /u/coding_for_lyf  \n [link]   [comments]",
@@ -8735,6 +8925,26 @@
           "publishedOn": "2024-05-24T18:59:57.000Z",
           "wordCount": null,
           "title": "Tech job postings are up by 24% in Bangalore, India and 41.5% in Hyderabad, India",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cscareerquestions/comments/1czqyk7/do_people_actually_prefer_wfh/",
+          "author": null,
+          "description": "I’m 27 and got my masters in 2019 and after about 8 months of being in office before Covid began, I’ve since primarily been working from home for over 4 years and find it so depressing. I live alone and apart from the occasional day in the office I spend almost all my time alone staring at a computer screen working on something that I ultimately feel is pointless. Sometimes I’ll go into the office even when no one else is in just to get out of the house, which is definitely better but still very lonely. I just want to do something real and physical, I feel so sad and stressed all the time and I keep getting sick. \n I don’t think it’s the job itself because I’ve worked for 3 different companies in the past 5 years, all with very nice people, but just hate the software developer lifestyle. I truly only came into this profession for the money and now I think I’m ready to leave. \n    submitted by    /u/ihaveanideer  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cscareerquestions/comments/1czqyk7/do_people_actually_prefer_wfh/",
+          "publishedOn": "2024-05-24T17:58:01.000Z",
+          "wordCount": null,
+          "title": "Do people actually prefer wfh?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cscareerquestions/comments/1czp1fm/got_a_new_job_and_completely_surprise_by_the_gap/",
+          "author": null,
+          "description": "I have 2 years experience at a fortune 500 company in the south and just recently landed a new job in the public sector. I'm completely surprise by just how much of a gap the tech stacks are. I was always told that the private sector is efficient, leaner, and decades advance. Man I could not be more wrong. My old job did not use git (internal decades old version control that was a nightmare using between just two people), the senior developers insisted on using notepad ++ (complain whenever they saw me using vs code), and I just started learning React and Spring boot (seniors insisted in vanilla JS and in house low code backend language). My mind is blown. Whenever I ask this multi billion dollar company why, the responses I always got was that \"new\" tech is for over hype FAANG companies not \"real\" companies that make products. \n I had so many issues with how navigating the ancient tech stacks with no documentation that made me feel like an idiot. We would spend months building an application from scratch and custom developing everything and I got so many complaints whenever I pointed out a limitation that our products were doing that was solve decades ago with new stacks. I was told that if I ever went anywhere else they be even more behind and there no point learning these skills. My Team didn't even code. They were all engineers with decades of outdated experience that they even admitted are so behind they could not work with modern stacks and just waiting for retirement. I was the only engineer under 40 on my team and could not aks anyone for help because they didn't even understand html. Honestly I'm at a loss for words right now. \n    submitted by    /u/maxxor6868  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cscareerquestions/comments/1czp1fm/got_a_new_job_and_completely_surprise_by_the_gap/",
+          "publishedOn": "2024-05-24T16:36:28.000Z",
+          "wordCount": null,
+          "title": "Got a new job and completely surprise by the gap in stacks.",
           "imageUrl": null
         },
         {
@@ -9785,6 +9995,26 @@
       "siteUrl": "https://www.reddit.com/r/csMajors/top/?t=week",
       "articles": [
         {
+          "id": "https://www.reddit.com/r/csMajors/comments/1czu1oj/im_a_cs_graduate_and_never_studied_once/",
+          "author": null,
+          "description": "To clarify, I did do homework, but that's pretty much all the mental exercise I got in regards to subject matter, most of the time I just absorbed the concept as the teacher was teaching it, so it wasn't really all that hard to execute it when the time came\n So not sure if it still exists, but it was through a program at Rutgers where I took classes at NJIT, so I guess it's technically NJIT? But basically I was a lazy student and pretty much just chose Comp Sci since I thought it was one of the majors people took, when they didn't care, so I pretty much just graduated with a Comp Sci degree having never studied, and didn't learn until later that Comp Sci is actually considered one of the harder majors. GPA wasn't spectacular or anything, somewhere in the 3.0-3.5 range IIRC. I'm curious if this is the standard situation or if mine was unique\n    submitted by    /u/dreemsequence  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/csMajors/comments/1czu1oj/im_a_cs_graduate_and_never_studied_once/",
+          "publishedOn": "2024-05-24T20:09:16.000Z",
+          "wordCount": null,
+          "title": "I'm a CS graduate and never studied once throughout my undergraduate career, is this a normal circumstance (graduated from Rutgers/NJIT in 2019 if that makes a difference)",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/csMajors/comments/1czt808/if_i_stare_at_my_code_for_long_enough_will_the/",
+          "author": null,
+          "description": "Title.\n    submitted by    /u/CaptainVickle  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/csMajors/comments/1czt808/if_i_stare_at_my_code_for_long_enough_will_the/",
+          "publishedOn": "2024-05-24T19:34:24.000Z",
+          "wordCount": null,
+          "title": "If I stare at my code for long enough, will the bugs go away?",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/csMajors/comments/1cz6rqj/what_really_made_you_choose_cs/",
           "author": null,
           "description": "Actually curious. From what I’ve learned over the years, especially during peak covid of 2020- the wfh, 2 hour work weeks and high salaries made everyone want to be a SWE. I had friends constantly boast about sleeping in, playing games during work, and travelinng whilst making 200k+\n    submitted by    /u/LivingTheTruths  \n [link]   [comments]",
@@ -10680,16 +10910,6 @@
           "wordCount": null,
           "title": "How do framerate patches work: my framerate patches explained",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/EmuDev/comments/1ccy6sy/nes_scrolling_issue/",
-          "author": null,
-          "description": "This is my first emulation based on real hardware, and I've been leaning NES emulation from OLC's video series. I made my implementation in Rust.\n I'm having multiple issues, specifically in the PPU. Ice Climber is the most obvious with the title screen demo. But Donkey Kong has a broken main menu with a bunch of blue 0's. The demo has a bunch of magenta 0's at the bottom, and the screen shifts a ton randomly.\n Baloon Fight is the best one, with no obvious glitches.\n This is what I currently have: https://gist.github.com/TaromaruYuki/5c3821a024b6e44a733bf3f67bb6673a\n I'm thinking it's a scrolling issue, or even a nametable switching issue, but I can't find anything.\n    submitted by    /u/Ill_Confection_216  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/EmuDev/comments/1ccy6sy/nes_scrolling_issue/",
-          "publishedOn": "2024-04-25T18:13:22.000Z",
-          "wordCount": null,
-          "title": "NES Scrolling Issue?",
-          "imageUrl": null
         }
       ]
     },
@@ -10706,6 +10926,26 @@
           "publishedOn": "2024-05-24T19:57:22.000Z",
           "wordCount": null,
           "title": "You go back 5 years and can ask your younger self to learn one skill that's relevant today. What would it be?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/devops/comments/1czpxbj/cka_or_ckad/",
+          "author": null,
+          "description": "Hey people.\n Senior SRE here with several years of experience developing and managing k8s clusters. I've been studying for the CKA cert, however after thinking about it some more, CKAD is starting to make more sense to me.\n The continuous trend in k8s administration is through managed services like EKS and GKE. Rarely do I see job openings of bare metal or administrating a cluster through other means. While yes there are still cases where you need to debug the control plane, it's extremely rare and 99% of the time, the associated cloud provider has support. \n And yes, it's extremely important to know how the control plane component works. But, I find that my personal experience with K8s is more in the development and application architectural side, than it is in debugging etcd or the api server.\n Does anyone else feel the same? Or is CKA still the recommended cert to get?\n    submitted by    /u/benaffleks  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/devops/comments/1czpxbj/cka_or_ckad/",
+          "publishedOn": "2024-05-24T17:13:46.000Z",
+          "wordCount": null,
+          "title": "CKA or CKAD?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/devops/comments/1cz7hcb/what_do_you_think_about_the_future_of_terraform/",
+          "author": null,
+          "description": "After IBM take over hashicorp ,what is the future of their products?\n    submitted by    /u/Naive_Role2395  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/devops/comments/1cz7hcb/what_do_you_think_about_the_future_of_terraform/",
+          "publishedOn": "2024-05-23T23:57:32.000Z",
+          "wordCount": null,
+          "title": "What do you think about the future of terraform ?",
           "imageUrl": null
         },
         {
@@ -10766,6 +11006,16 @@
           "publishedOn": "2024-05-23T02:46:31.000Z",
           "wordCount": null,
           "title": "Best way in getting Telemetry to the backend",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/devops/comments/1cy51yk/blog_post_distributing_global_state_to_serve_over/",
+          "author": null,
+          "description": "Post is here: https://render.com/blog/distributing-global-state-to-serve-over-1-billion-daily-requests\n It walks through the eras of Render's state distribution architecture for routing requests to different user services. Includes a move from pull- to push-based caching, along with expansion from a single cluster and region to multiple.\n Disclosure: I work for Render\n    submitted by    /u/FreshestOfVegetables  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/devops/comments/1cy51yk/blog_post_distributing_global_state_to_serve_over/",
+          "publishedOn": "2024-05-22T16:50:43.000Z",
+          "wordCount": null,
+          "title": "[Blog post] Distributing Global State to Serve over 1 Billion Daily Requests",
           "imageUrl": null
         },
         {
@@ -11633,6 +11883,16 @@
           "publishedOn": "2024-05-24T14:44:40.000Z",
           "wordCount": null,
           "title": "What are your tactics to deal with clients or employers who want 0 errors and hard deadlines?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/ExperiencedDevs/comments/1czkhp5/antidry_pattern/",
+          "author": null,
+          "description": "I have a tech lead who seems to be unabashedly anti-DRY. I'm of the mind that if you have 2 variables or sets of data that should ALWAYS be the same, that you SHOULD (assuming some huge hurdle) that you should have a source of truth that feeds both or one passes it to the other.\n For example, if you click a button (\"foo\") and need to call a method (\"bar\") that passes that button's value to somewhere else, you should change the code so \"foo\" is in a variable somewhere and passed to \"bar\" as opposed to hard coding \"foo\" inside \"bar\"\n But this can obviously end up with writing more code so that the foo variable is getting passed around.\n So this tech lead seems to be of the mindset that you should always change the least amount of code possible regardless of anything else. I mean I get this perspective, but it seems insanely short sighted.\n Am I the crazy one here? I feel like doing so is going against everything I've been taught and what the community says. \n    submitted by    /u/TruthOf42  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/ExperiencedDevs/comments/1czkhp5/antidry_pattern/",
+          "publishedOn": "2024-05-24T13:16:30.000Z",
+          "wordCount": null,
+          "title": "Anti-DRY pattern?",
           "imageUrl": null
         },
         {
@@ -12663,6 +12923,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://www.reddit.com/r/gamedev/comments/1cznmpq/can_you_give_example_of_successful_web_browser/",
+          "author": null,
+          "description": "I'm curious to know if there are successful browser games with i guess it need some multiplayer elements in them .\n i wonder how is this ecosystem \n    submitted by    /u/umen  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/gamedev/comments/1cznmpq/can_you_give_example_of_successful_web_browser/",
+          "publishedOn": "2024-05-24T15:36:17.000Z",
+          "wordCount": null,
+          "title": "Can you give example of successful web browser games",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/gamedev/comments/1cz6tbb/having_doubts_about_releasing_my_finished_game_on/",
           "author": null,
           "description": "I have finished my game that is on the steam store, but have been pushing back the release date for months. I can't continue with coding my new game until I deal with this mental hurdle !\n Viewing some posts in this sub I understand people are frustrated with how much \"low effort\" stuff is on the steam store. My tower defense game doesn't have any new never before seen mechanics. I know not every game is going to have that. It just leaves me with a feeling of \"would anyone pay for this?\". Is this a normal feeling that devs have? doubting your work? feels like I am charging money for something that isn't perfect or ground breaking? \n I have about 130 wish lists, I am thinking of releasing at $3.99. I just don't want to release for free because it seems like steam doesn't push free games at all ( 30% of $0 is $0 ).\n Does my game look worthy of being on steam or should I just try another game? Trailer was made by fiver.\n STEAM PAGE\n Thanks for reading.\n    submitted by    /u/SolarPoweredGames  \n [link]   [comments]",
@@ -13660,6 +13930,26 @@
       "siteUrl": "https://www.reddit.com/r/godot/top/?t=week",
       "articles": [
         {
+          "id": "https://www.reddit.com/r/godot/comments/1czx48g/i_made_logic_gates_in_godot/",
+          "author": null,
+          "description": "submitted by    /u/wisielczyk  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/godot/comments/1czx48g/i_made_logic_gates_in_godot/",
+          "publishedOn": "2024-05-24T22:25:55.000Z",
+          "wordCount": null,
+          "title": "I made logic gates in Godot :)",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/godot/comments/1czjf3b/you_prefer_animation_a_or_b/",
+          "author": null,
+          "description": "submitted by    /u/illimity  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/godot/comments/1czjf3b/you_prefer_animation_a_or_b/",
+          "publishedOn": "2024-05-24T12:20:43.000Z",
+          "wordCount": null,
+          "title": "you prefer animation A or B",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/godot/comments/1cz7136/paper_mario_yeah_thats_cute_but_what_about_paper/",
           "author": null,
           "description": "submitted by    /u/JackQuentinForde  \n [link]   [comments]",
@@ -14646,6 +14936,26 @@
       "feedUrl": "https://www.reddit.com/r/hacking/top/.rss?t=week",
       "siteUrl": "https://www.reddit.com/r/hacking/top/?t=week",
       "articles": [
+        {
+          "id": "https://www.reddit.com/r/hacking/comments/1d09by0/inside_rfid_security_hitag2_cracking_techniques/",
+          "author": null,
+          "description": "👥 Exclusive chat with Kev Sheldrake on Hitag2 implementations and key recovery attacks!\n Learn how these techniques evolved and see crack2 in action. \n TechTalk #RFID #Cybersecurity #proxmark #hitag2\n https://youtu.be/2Zf0w2rrgVA\n    submitted by    /u/iceman2001  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/hacking/comments/1d09by0/inside_rfid_security_hitag2_cracking_techniques/",
+          "publishedOn": "2024-05-25T10:47:48.000Z",
+          "wordCount": null,
+          "title": "Inside RFID Security: Hitag2 Cracking Techniques with Kev Sheldrake",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/hacking/comments/1d01lf4/alexa_echo_show_5_3rd_gen_jailbreak_press_all/",
+          "author": null,
+          "description": "I've recently been interested in possibly loading a custom firmware on my Alexa as I started caring about privacy. The issue is, this is the 3rd gen Alex echo show 5 which runs their custom OS instead of Android like their old ones. I've been searching online but haven't seen anything and most people said that there isn't a fastboot menu in this thing. After playing around with it though, I found this! Done by pressing all 3 buttons on startup. However, I couldn't find anything else from here. I'm not nearly proficient enough in programming and stuff to port android or Linux on this thing so I was hoping to at least get the information out there that there is a fastboot menu on these newer Alexa devices (I literally found nothing on the newer gen devices) \n    submitted by    /u/Hofnik121  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/hacking/comments/1d01lf4/alexa_echo_show_5_3rd_gen_jailbreak_press_all/",
+          "publishedOn": "2024-05-25T02:12:58.000Z",
+          "wordCount": null,
+          "title": "Alexa echo show 5 3rd gen jailbreak? (Press all buttons on startup)",
+          "imageUrl": null
+        },
         {
           "id": "https://www.reddit.com/r/hacking/comments/1czxe8b/icq_will_stop_working_from_june_26_2024/",
           "author": null,
@@ -15683,6 +15993,16 @@
       "feedUrl": "https://www.reddit.com/r/programming/top/.rss?t=week",
       "siteUrl": "https://www.reddit.com/r/programming/top/?t=week",
       "articles": [
+        {
+          "id": "https://www.reddit.com/r/programming/comments/1czs3w5/lessons_learned_my_startup_nightmare_with_a/",
+          "author": null,
+          "description": "submitted by    /u/troutrucker  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/programming/comments/1czs3w5/lessons_learned_my_startup_nightmare_with_a/",
+          "publishedOn": "2024-05-24T18:46:45.000Z",
+          "wordCount": null,
+          "title": "Lessons Learned: My Startup Nightmare with a Reddit Stranger",
+          "imageUrl": null
+        },
         {
           "id": "https://www.reddit.com/r/programming/comments/1czkbi0/jetbrains_releases_rustrover_ide_for_rust/",
           "author": null,
@@ -16741,6 +17061,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://www.reddit.com/r/learnprogramming/comments/1cxuqqy/free_open_source_projects/",
+          "author": null,
+          "description": "Hey everyone! I found a great website where you can find free open-source projects in different languages and categories. You can use these projects for free and even check out live demos before downloading the code. I've been using it and think you should too. Check out OpenSourceCollection!\n    submitted by    /u/Aimmiii  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/learnprogramming/comments/1cxuqqy/free_open_source_projects/",
+          "publishedOn": "2024-05-22T07:45:59.000Z",
+          "wordCount": null,
+          "title": "Free open source projects",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/learnprogramming/comments/1cxse9h/how_can_you_tell_whether_you_really_understand_a/",
           "author": null,
           "description": "I've been learning python for a while , but I don't know how far am I or did I learned all the fundamental things about python. So when is the time you feel like you understood most/all of the fundamental things about a programming language ?\n TQ\n    submitted by    /u/unknown-0I0  \n [link]   [comments]",
@@ -17028,6 +17358,26 @@
       "siteUrl": "https://www.reddit.com/r/ProgrammerHumor/top/?t=week",
       "articles": [
         {
+          "id": "https://www.reddit.com/r/ProgrammerHumor/comments/1czujsn/teamleadanddeadline/",
+          "author": null,
+          "description": "submitted by    /u/MrEfil  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/ProgrammerHumor/comments/1czujsn/teamleadanddeadline/",
+          "publishedOn": "2024-05-24T20:31:26.000Z",
+          "wordCount": null,
+          "title": "teamleadAndDeadline",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/ProgrammerHumor/comments/1czdfgj/ididathing/",
+          "author": null,
+          "description": "submitted by    /u/-CodingPotato-  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/ProgrammerHumor/comments/1czdfgj/ididathing/",
+          "publishedOn": "2024-05-24T05:31:01.000Z",
+          "wordCount": null,
+          "title": "iDidAThing",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/ProgrammerHumor/comments/1cz5xfh/everyonesbossesrightnow/",
           "author": null,
           "description": "submitted by    /u/anacrolix  \n [link]   [comments]",
@@ -17065,6 +17415,16 @@
           "publishedOn": "2024-05-23T12:41:16.000Z",
           "wordCount": null,
           "title": "importPortalReference",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/ProgrammerHumor/comments/1cy9fuu/unittests/",
+          "author": null,
+          "description": "submitted by    /u/RedYetiDev  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/ProgrammerHumor/comments/1cy9fuu/unittests/",
+          "publishedOn": "2024-05-22T19:47:26.000Z",
+          "wordCount": null,
+          "title": "unitTests",
           "imageUrl": null
         },
         {
@@ -18005,6 +18365,26 @@
       "siteUrl": "https://www.reddit.com/r/linux/top/?t=week",
       "articles": [
         {
+          "id": "https://www.reddit.com/r/linux/comments/1d08e9r/a_poster_i_made_for_our_school_computer_lab_what/",
+          "author": null,
+          "description": "submitted by    /u/GreenWhitePerson  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/linux/comments/1d08e9r/a_poster_i_made_for_our_school_computer_lab_what/",
+          "publishedOn": "2024-05-25T09:40:15.000Z",
+          "wordCount": null,
+          "title": "A poster I made for our school computer lab. What do you guys think?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/linux/comments/1d07i4a/im_so_tired_of_ai_generated_articles/",
+          "author": null,
+          "description": "I wanted a quick refresher on Debian vs Ubuntu, and this is from one of the first results on Google.\n This probably seems only slightly Linux related, but I wouldn't have expected it for articles about Linux. If the writers find these articles convincing, they don't understand the topic, and if they don't understand it they shouldn't be writing about it. \n I know real information is still available but this has really made the internet a garbage heap.\n    submitted by    /u/kaamraan  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/linux/comments/1d07i4a/im_so_tired_of_ai_generated_articles/",
+          "publishedOn": "2024-05-25T08:33:53.000Z",
+          "wordCount": null,
+          "title": "I'm so tired of AI generated articles",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/linux/comments/1czrvdn/kde_plasma_61_beta_release/",
           "author": null,
           "description": "submitted by    /u/gabriel_3  \n [link]   [comments]",
@@ -18012,6 +18392,16 @@
           "publishedOn": "2024-05-24T18:36:37.000Z",
           "wordCount": null,
           "title": "KDE Plasma 6.1 Beta Release",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/linux/comments/1czl198/which_apps_have_linux_versions_that_not_many/",
+          "author": null,
+          "description": "Examples I've stumbled upon are Proton VPN, Reaper, QCAD, Maya, and R-Studio.\n    submitted by    /u/walterblackkk  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/linux/comments/1czl198/which_apps_have_linux_versions_that_not_many/",
+          "publishedOn": "2024-05-24T13:42:22.000Z",
+          "wordCount": null,
+          "title": "Which apps have linux versions that not many people know about?",
           "imageUrl": null
         },
         {
@@ -18432,6 +18822,26 @@
       "siteUrl": "https://www.reddit.com/r/archlinux/top/?t=week",
       "articles": [
         {
+          "id": "https://www.reddit.com/r/archlinux/comments/1d03aby/plasma_61_beta_is_in_kdeunstable/",
+          "author": null,
+          "description": "submitted by    /u/doranduck  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/archlinux/comments/1d03aby/plasma_61_beta_is_in_kdeunstable/",
+          "publishedOn": "2024-05-25T03:51:01.000Z",
+          "wordCount": null,
+          "title": "Plasma 6.1 beta is in [kde-unstable]",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/archlinux/comments/1czqsm5/how_do_i_unnvidia_my_system_switching_gpus_to_amd/",
+          "author": null,
+          "description": "I just bought a new GPU from AMD, and since i had Nvidia til now, i can't log into Gnome, i need to purge the i think kernel modules and all that.\n Do i also need to install something for the new GPU to work? Or is there some other process.\n Cause right now, it goes up to GDM, but logging in just brings me back to GDM. Do i just reverse steps what i did to install the driver and that's enough, or do i need something else?\n I can reinstall Arch if need be, it's fine, but i don't think i have to, just not sure what to do exactly.\n    submitted by    /u/Veprovina  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/archlinux/comments/1czqsm5/how_do_i_unnvidia_my_system_switching_gpus_to_amd/",
+          "publishedOn": "2024-05-24T17:50:48.000Z",
+          "wordCount": null,
+          "title": "How do i \"un-Nvidia\" my system - switching GPUs to AMD?",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/archlinux/comments/1cziwiz/like_a_brand_new_laptop/",
           "author": null,
           "description": "Hello - new to this subreddit, as I am new to Arch. Long time Linux user here. I started off with Mandrake way back in the day and have hopped distros very little. When Ubuntu came out, I jumped on it and ran with it for many many years. I slowly became disenchanted with the direction of development and the decisions being made, so I switched to Mint LMDE last year. Of course I heard of Arch, but had never tried it. This weekend I loaded Arch up into a KVM/Qemu VM and was blown away on how freaking fast and customizable it was with only the pittance of resources I gave the VM. Long story short, Arch is now the host.\n https://i.imgur.com/76D5C0G.png\n    submitted by    /u/Phr0stByte_01  \n [link]   [comments]",
@@ -18798,6 +19208,26 @@
       "feedUrl": "https://www.reddit.com/r/debian/top/.rss?t=week",
       "siteUrl": "https://www.reddit.com/r/debian/top/?t=week",
       "articles": [
+        {
+          "id": "https://www.reddit.com/r/debian/comments/1d07rm5/kernel_panic_again/",
+          "author": null,
+          "description": "How do I stop it from happening again.\n    submitted by    /u/m-n_10  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/debian/comments/1d07rm5/kernel_panic_again/",
+          "publishedOn": "2024-05-25T08:53:55.000Z",
+          "wordCount": null,
+          "title": "Kernel Panic Again",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/debian/comments/1d001yo/gparted_frozen_and_windows_arent_clearing/",
+          "author": null,
+          "description": "The windows seem unresponsive and aren’t clearing right, but everything else on the desktop seems right. Was trying to shrink a windows Ntfs partition to make room for an ext4 partition and this happened. Is all my data going to be ok and I just have to wait (it’s been about 2 hours) or am I just gonna have to wipe my SSD?\n    submitted by    /u/juice20115932  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/debian/comments/1d001yo/gparted_frozen_and_windows_arent_clearing/",
+          "publishedOn": "2024-05-25T00:48:36.000Z",
+          "wordCount": null,
+          "title": "GParted frozen and windows aren’t clearing",
+          "imageUrl": null
+        },
         {
           "id": "https://www.reddit.com/r/debian/comments/1czhy3h/please_move_package_survey_step_to_the_beginning/",
           "author": null,
