@@ -6,6 +6,66 @@
       "siteUrl": "https://www.reddit.com/r/C_Programming/",
       "articles": [
         {
+          "id": "https://www.reddit.com/r/C_Programming/comments/1d1deu0/how_to_cross_compile_for_ddwrt_in_linux/",
+          "author": null,
+          "description": "I know quite a bit about C, and I'm an average user of Linux, however sometimes I get stuck on things that look esoteric to me despite having some knowledge in the matter.\n For instance, I found this C code here:\n #include <stdlib.h> #include <stdio.h> #include <resolv.h> #include <netdb.h> #include <string.h> int main(int argc, char *argv[]) { struct addrinfo *result = NULL; int rc; struct addrinfo hint; if (argc < 2) { printf (\"Usage: %s hostname\\n\", argv[0]); exit(1); } printf (\"Resolving \\\"%s\\\"... \", argv[1]); memset(&hint, 0 , sizeof (hint)); hint.ai_socktype = SOCK_STREAM; rc = getaddrinfo (argv[1], NULL, &hint, &result); printf (\"result: %d\\n\", rc); } \n The code looks quite simple, the problem comes to its compilation that seems to require a special kind of compiler, like so:\n ./toolchain-mips_34kc_gcc-4.8-linaro_musl-1.1.2/bin/mips-openwrt-linux-gcc getaddr.c -DNEED_PRINTF -o getaddr_tplink \n Here is where I don't know what to do, do I install this with the typical sudo apt install? Or do I download it from some server? Can I use the common gcc command installed in Linux? And if so, with which flags? I simple don't know what to do!\n    submitted by    /u/ruiseixas  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/C_Programming/comments/1d1deu0/how_to_cross_compile_for_ddwrt_in_linux/",
+          "publishedOn": "2024-05-26T22:52:12.000Z",
+          "wordCount": null,
+          "title": "How to Cross compile for DD-WRT in Linux?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/C_Programming/comments/1d1ajd4/what_a_good_programming_course_should_have/",
+          "author": null,
+          "description": "For those who are just starting to program, what do you think a good course of programming should include? \n    submitted by    /u/Traditional-Top-1504  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/C_Programming/comments/1d1ajd4/what_a_good_programming_course_should_have/",
+          "publishedOn": "2024-05-26T20:35:22.000Z",
+          "wordCount": null,
+          "title": "What a good programming course should have?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/C_Programming/comments/1d16hvd/quiz_with_points_and_answer_printf_problem/",
+          "author": null,
+          "description": "Hi folks, I have a problem.\n I have to program a quiz in C and I have the problem that the printfs are not displayed after an input.\n I don't understand why.\n So, sometimes everything works and then after trying again it doesn't work again.\n If you understand German, don't be surprised, the questions and answers are meant to be fun and not really do anything negative. 😅\n The code is posted on pastebin\n https://pastebin.com/VzsfgkRg\n    submitted by    /u/TimeResolution7390  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/C_Programming/comments/1d16hvd/quiz_with_points_and_answer_printf_problem/",
+          "publishedOn": "2024-05-26T17:31:59.000Z",
+          "wordCount": null,
+          "title": "quiz with points and answer - printf problem",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/C_Programming/comments/1d15326/modern_day_realworld_c_implementations_where_null/",
+          "author": null,
+          "description": "Title. I know that the Standard allows for NULL to not be represented as all-bits-zero, but I haven't been able to find many examples of it that aren't historical. Zeroing the bytes of a pointer and getting NULL out of it is really convenient and I won't give it up unless there are modern real-world C implementations (conformance testing ones like TenDRA don't count) where it doesn't work. Thanks!\n    submitted by    /u/carpintero_de_c  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/C_Programming/comments/1d15326/modern_day_realworld_c_implementations_where_null/",
+          "publishedOn": "2024-05-26T16:26:16.000Z",
+          "wordCount": null,
+          "title": "Modern day real-world C implementations where NULL is not all-bits-zero?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/C_Programming/comments/1d13y7a/which_is_the_best_ide_for_c_other_than_vs_code/",
+          "author": null,
+          "description": "I've been using Code Blocks for C from the very first day, and i love it. i love its simplistic user interface. but unfortunately, Code Blocks does not have dark mode. i know there are indirect ways to get dark mode, but still. i have tried vs code but i did not like it for C. \n so iam wondering which IDE i should use. thanks. \n    submitted by    /u/CowUnhappy8668  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/C_Programming/comments/1d13y7a/which_is_the_best_ide_for_c_other_than_vs_code/",
+          "publishedOn": "2024-05-26T15:34:06.000Z",
+          "wordCount": null,
+          "title": "which is the best IDE for C other than VS code and code blocks",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/C_Programming/comments/1d1357u/using_setrlimit_for_portable_tagged_pointers_with/",
+          "author": null,
+          "description": "Very memory conscious applications may consider cramming data into (usually the highest bits of) pointers. Most 64 bit systems support 48 bit virtual addresses, leaving room for a 2 bytes of data. This obviously comes at the cost of portability.\n However, if the program is aware at compile time of its maximum memory requirement (and assumes some fragmentation overhead), it should be able to restrict its virtual address space via setrlimit(RLIMIT_AS, &rlim) , ensuring a program defined number of bits in pointers are usable.\n For example, say I know my program will never use more than 6 GiB. Then its VA space could be confined to 8 GiB (33 bit addresses). This ensures I get 31 bits for data in my pointers:\n unsigned long long MAX_ADDR = (1ull<<34) - 1; const struct rlimit { rlim_t rlim_cur; rlim_t rlim_max; } r = { MAX_ADDR, MAX_ADDR}; setrlimit(RLIMIT_AS, &r); \n One specific application (that prompted the idea) are bitmap tries, where the alphabet size imposes whether the bitmap of a node can be stored within the pointer or has to be a separate field (also taking up memory due to alignment).\n Thoughts? Is this a decent idea for making tagged pointers portable or squeezing more memory?\n    submitted by    /u/_radu_b  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/C_Programming/comments/1d1357u/using_setrlimit_for_portable_tagged_pointers_with/",
+          "publishedOn": "2024-05-26T14:55:30.000Z",
+          "wordCount": null,
+          "title": "Using setrlimit for portable tagged pointers with larger data tags",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/C_Programming/comments/1d102fj/nees_help/",
           "author": null,
           "description": "Ok so I am totally new at this please help me\n Since my college will be starting at mid of July thought of learning C Lang atleast basics.....and I didn't even started yet and have some doubts ....so the thing is I had just started to learn from yt From a channel called neso academy.....the code that she showed went like. \n include <studio.h>\n Int main()\n { \n pintf(\"hello world\")\n return 0;\n }\n [The code was prewritten on the app he used called code blocks i installed same but mine one went like\n include <studio.h>\n include <stdlib.h>\n Int main() { pintf(\"hello world!\\n\") return 0; }\n So why is there extra !\\n and include <stdlib.h>\n Please someone explain 🥲\n    submitted by    /u/Friendly-Mark4899  \n [link]   [comments]",
@@ -2452,6 +2512,106 @@
       "feedUrl": "https://www.reddit.com/r/cpp+cpp_questions/.rss",
       "siteUrl": "https://www.reddit.com/r/cpp+cpp_questions/",
       "articles": [
+        {
+          "id": "https://www.reddit.com/r/cpp_questions/comments/1d1efat/why_couldnt_they_have_type_safety_for_functions/",
+          "author": null,
+          "description": "So printf() is not safe, so Bjarne decided to use cout and cin and overloaded >> << to fix that problem. But I was wondering why he just used regular functions. \n ​\n I was looking at this comment\n  \nYou couldn't really in C++98, not at least with printf-style functions (there were some macro solutions to sort of make it work in a limited way, but it was painful to write and impossible to debug if something went wrong).\n  \nhttps://www.reddit.com/r/cpp/comments/xbn04o/comment/io0k5xd/?utm_source=share&utm_medium=web2x&context=3\n Now you can have type safe functions. So what changed since then?\n ​\n ​\n ​\n    submitted by    /u/StevenJac    to    r/cpp_questions  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp_questions/comments/1d1efat/why_couldnt_they_have_type_safety_for_functions/",
+          "publishedOn": "2024-05-26T23:43:50.000Z",
+          "wordCount": null,
+          "title": "Why couldn't they have type safety for functions for C++98?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp_questions/comments/1d1d6mr/template_taking_both_pointer_to_memberfunction/",
+          "author": null,
+          "description": "So I have this class template (which you might recognize since I already had another question related to it 2 days ago, I must admit the whole template-taking-pointer-to-member-function fell pretty far into a level of template mastery I apparently don't have yet)\n ``` template <class T, std::ostream&(T::*F)(std::ostream&)> class LogWrapper { T* obj;\n public: LogWrapper(T* obj_): obj(obj_){} std::ostream& operator()(std::ostream& os) const { return (obj->*F)(os); } \n }; ```\n It works completely fine, until I want to use it with a const member function (same problem if I change the template parameter to pointer-to-non-const-member-function and use it with a const member function). \n GCC gives me :  src/Platform.cpp:46:62: error: could not convert '((const Platform*)this)->DepthfulEntity::displayInfo' from '<unresolved overloaded function type>' to 'std::basic_ostream<char>& (DepthfulEntity::*)(std::basic_ostream<char>&)' 46 | Debug::out << LogWrapper<DepthfulEntity, DepthfulEntity::displayInfo>(this) << '\\n'; \n I could \"solve\" this by making two different classes, but their code would be exactly the same, and I'd like to avoid this kind of duplication. \n Does anyone know how I could make such a template accept both pointers to const member functions and pointers to non-const member function ? \n    submitted by    /u/TwilCynder    to    r/cpp_questions  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp_questions/comments/1d1d6mr/template_taking_both_pointer_to_memberfunction/",
+          "publishedOn": "2024-05-26T22:41:00.000Z",
+          "wordCount": null,
+          "title": "Template taking both pointer to member-function and pointer to const member-function",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp_questions/comments/1d1bh37/compilation_error_need_help/",
+          "author": null,
+          "description": "I have a class that implements the operators for equality\n bool operator == (const CNumber& rhs);\n bool operator != (const CNumber& rhs);\n Microsoft has a unit test framework with a function that tests equality\n template<typename T> static void AreEqual(const T& expected, const T& actual, const wchar_t* message = NULL, const __LineInfo* pLineInfo = NULL) { FailOnCondition(expected == actual, EQUALS_MESSAGE(expected, actual, message), pLineInfo); } \n I try using it like this\n CNumber N3, N4; // Assume these get initialized with values Assert::AreEqual(N3, N4); \n This causes a compilation error of\n error C2678: binary '==': no operator found which takes a left-hand operand of type 'const T' (or there is no acceptable conversion)\n In the function signature, both template arguments are const T&. I don't know why it doesn't compile. I'm sure it is me and I am missing a 'const' or '&' somewhere or need multiple versions of the operators. Help would be appreciated.\n    submitted by    /u/Knut_Knoblauch    to    r/cpp_questions  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp_questions/comments/1d1bh37/compilation_error_need_help/",
+          "publishedOn": "2024-05-26T21:18:45.000Z",
+          "wordCount": null,
+          "title": "Compilation error, need help",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp_questions/comments/1d1b9ks/cant_clear_the_buffer/",
+          "author": null,
+          "description": "So I'm making an interface with Windows.h with letters W and S, that returns a value when you press K. The problem that I've got is that I need to keep reading input but I can't clear the buffer with all the W and S already pressed. Is there any way to solve this? Am I using cin.clear() or cin.ignore() wrong? The 100 was just a placeholder, I just need to delete until k is pressed.\n Code:\n include<iostream> include<windows.h> using namespace std; int Interface(int min, int max, int distan); int main(){ int a; cout << \"\\\\n\\\\n\\\\n\\\\n\\\\n1\\\\n2\\\\n3\\\\n4\\\\n5\"; a=Interface(6, 10, 6); cin.clear(); cin.ignore(100, 'k'); cin >> a; return 0; } int Interface(int min, int max, int distan){ bool n=1; int height=min-1; while(n==1){ HANDLE handle; COORD coordinates; handle = GetStdHandle(STD\\_OUTPUT\\_HANDLE); coordinates.X = distan; coordinates.Y = height; SetConsoleCursorPosition(handle,coordinates); while(1){ if((GetKeyState(0x57) & 0x80) != 0){ if(height>min-1){ height--; Sleep(180); } break; } if((GetKeyState(0x53) & 0x80) != 0){ if(height<max-1){ height++; Sleep(180);} break; } if((GetKeyState(0x4B) & 0x80) != 0){ n=0; Sleep(180); system(\"cls\"); return height-min+2; break; } }} cin.clear(); cin.ignore(100,'k'); } \n    submitted by    /u/Irlandes-de-la-Costa    to    r/cpp_questions  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp_questions/comments/1d1b9ks/cant_clear_the_buffer/",
+          "publishedOn": "2024-05-26T21:08:54.000Z",
+          "wordCount": null,
+          "title": "Can't clear the buffer",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp_questions/comments/1d19exr/learning_resources_to_learn_c20_for_a_beginner/",
+          "author": null,
+          "description": "Hi guys, what are good resources to learn C++ in the new C++ 20 version. I'm very new to C++ Have made some basics programs with it but about 6 years ago. So I would like to learn from the beginning but with the new standard\n    submitted by    /u/malwaru    to    r/cpp_questions  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp_questions/comments/1d19exr/learning_resources_to_learn_c20_for_a_beginner/",
+          "publishedOn": "2024-05-26T19:44:07.000Z",
+          "wordCount": null,
+          "title": "Learning resources to learn C++20 for a beginner",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp_questions/comments/1d169qm/help_accessing_singleton_member_variables/",
+          "author": null,
+          "description": "I have derived classes that are singletons. But when I try to cout one of its members the program ends without errors. I've checked the memory and it seems to be uninitialized. I tried making the member static but ended up with some errors I couldn't understand. This is my repository:\n https://github.com/Zielschmer/Simple_Console_RPG/blob/001-Entity_Class\n Can someone tell me what is happening?\n    submitted by    /u/Zielschmer    to    r/cpp_questions  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp_questions/comments/1d169qm/help_accessing_singleton_member_variables/",
+          "publishedOn": "2024-05-26T17:21:44.000Z",
+          "wordCount": null,
+          "title": "Help accessing singleton member variables",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp_questions/comments/1d161rr/platformspecific_code_finder/",
+          "author": null,
+          "description": "Hi all, Are there tools out there that can scan through projects and identify platform-specific code? I want to see if I can port some small/mid-sized projects built for windows to Linux/macOS. If there is no such tool, I might try to make one myself (although I'm not sure how much of a challenge that would be at this point) \n    submitted by    /u/EGL1729    to    r/cpp_questions  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp_questions/comments/1d161rr/platformspecific_code_finder/",
+          "publishedOn": "2024-05-26T17:11:33.000Z",
+          "wordCount": null,
+          "title": "Platform-specific code finder?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp_questions/comments/1d14qdq/gcc_crashes_due_to_nested_templates/",
+          "author": null,
+          "description": "Question: How can I prevent GCC from crashing when I use nested templates? \n This is a program I wrote, which produces S<S<S<...S<O>...>.\n #include <iostream> template <class T> struct Type { using type = T; }; struct O : Type<O> {}; template <class T> requires (std::same_as<typename T::type, O>) struct S : Type<typename T::type> {}; template <class, class> struct Add_; template <class T, class U> struct Add_<T, S<U>> : Type<S<typename Add_<T, U>::type>> {}; template <class T> struct Add_<T, O> : Type<T> {}; template <class T, class U> using Add = Add_<T, U>::type; template <class, class> struct Mul_; template <class T, class U> struct Mul_<T, S<U>> : Type<Add<T, typename Mul_<T, U>::type>> {}; template <class T> struct Mul_<T, O> : Type<O> {}; template <class T, class U> using Mul = Mul_<…",
+          "link": "https://www.reddit.com/r/cpp_questions/comments/1d14qdq/gcc_crashes_due_to_nested_templates/",
+          "publishedOn": "2024-05-26T16:10:04.000Z",
+          "wordCount": null,
+          "title": "GCC crashes due to nested templates",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp_questions/comments/1d14azt/help_with_a_project_setup_workflow/",
+          "author": null,
+          "description": "I was wondering if anyone could help me - whilst I do eventually get a new project all set up how I want it, it's always a hassle and always seems to take me hours. Is there a workflow anyone has to create a C++ project for visual studio code or visual studio and I would like to also be able to add raylib, imgui and rlimgui and also know how to add other projects - this is getting to the point where I am considering to another language and I really don't want to do that. Right now, I have the premake visual studio project for raylib which works fine, but I also want rlimgui functionality in it too, and I added the rlimgui and imgui directories to my project directory and added them to the compiler include directories, which means they are recognised as I can use < > to enclose them without the red underlines in visual studio. however, I get linker errors and whilst I know where to link libraries, I cannot see where the libraries are for imgui/rlimgui (if they even exist).\n    submitted by    /u/Thin_Plum7539    to    r/cpp_questions  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp_questions/comments/1d14azt/help_with_a_project_setup_workflow/",
+          "publishedOn": "2024-05-26T15:50:33.000Z",
+          "wordCount": null,
+          "title": "Help with a Project setup Workflow (Raylib/ImGui/RlImGui)",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp_questions/comments/1d1243w/return_function_by_reference/",
+          "author": null,
+          "description": "Hi all!\n I wondering why I should ever return a function by reference. If the object to be return is large I can just rely on the RVO of the compiler and return it by value.\n What am I missing here?\n    submitted by    /u/Minimum_Tank_2755    to    r/cpp_questions  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp_questions/comments/1d1243w/return_function_by_reference/",
+          "publishedOn": "2024-05-26T14:05:42.000Z",
+          "wordCount": null,
+          "title": "Return function by reference",
+          "imageUrl": null
+        },
         {
           "id": "https://www.reddit.com/r/cpp_questions/comments/1d1076k/no_namespace/",
           "author": null,
@@ -6560,6 +6720,26 @@
       "siteUrl": "https://www.reddit.com/r/golang/top/?t=week",
       "articles": [
         {
+          "id": "https://www.reddit.com/r/golang/comments/1d19uon/why_can_the_go_string_type_contain_invalid_utf8/",
+          "author": null,
+          "description": "In Go, string is basically just an alias for []byte with the biggest difference that using range to iterate over a string yields rune which represents a Unicode code point (whereas iterating over []byte naturally yields the bytes).\n So that means that a string does not actually conceptually represent (valid) text at all. You can very easily store \"invalid text\" (as defined by an invalid UTF-8 sequence) in a string. For example: https://go.dev/play/p/rkzxctJBxsK\n package main import ( \"fmt\" \"unicode/utf8\" ) func main() { s := \"Pok\\xE9mon\" fmt.Printf(\"Is %s valid? %t\\n\", s, utf8.ValidString(s)) fmt.Println(\"Runes:\") for index, rune := range s { fmt.Printf(\"Rune %d: %c (%d)\\n\", index, rune, rune) } fmt.Println(\"\\nBytes:\") for index, byte := range []byte(s) { fmt.Printf(\"Byte%d: %c (%d)\\n\", in…",
+          "link": "https://www.reddit.com/r/golang/comments/1d19uon/why_can_the_go_string_type_contain_invalid_utf8/",
+          "publishedOn": "2024-05-26T20:04:10.000Z",
+          "wordCount": null,
+          "title": "Why can the Go `string` type contain invalid UTF-8 data?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/golang/comments/1d11guo/should_i_learn_go_as_a_beginner_programmer/",
+          "author": null,
+          "description": "I've tried learning lots of languages from python which i quit because i felt i was lost in libraries and frameworks and it stopped appealing to me when that happened same situation happened with javascript between the frameworks and updates (frontend web dev is a headache) i really wanted to learn rust because it caters to my goals but it was too hard for me to grasp and i found go which kinda caters to my goals but is easier than rust. should i learn and commit to go eventhough i haven't fully grasped easier languages? and if so is there a certain roadmap to follow or specific way to go about learning go that are different from js and python? and where to make friends or find mentors in go?\n edit: I’m not saying that new technology scares me (I get it it kinda sounds like that) I really gave JavaScript and python my all and built lots of projects for a span of a 5 months but I felt like I wasn’t getting closer to my goals and felt more like a chore I just wasn't enjoying it since I’m truly not interested in web dev nor data science I’ve always been interested in operating systems and backend more than anything\n    submitted by    /u/Thin_Explorer_4153  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/golang/comments/1d11guo/should_i_learn_go_as_a_beginner_programmer/",
+          "publishedOn": "2024-05-26T13:33:10.000Z",
+          "wordCount": null,
+          "title": "Should I learn Go as a beginner programmer?",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/golang/comments/1d0h9wl/abusing_gos_infrastructure/",
           "author": null,
           "description": "submitted by    /u/samuelberthe  \n [link]   [comments]",
@@ -6680,6 +6860,16 @@
           "imageUrl": null
         },
         {
+          "id": "https://www.reddit.com/r/golang/comments/1cyadlz/can_go_be_used_for_machine_learning_and_ai/",
+          "author": null,
+          "description": "Hi,\n I'm curious if Go can be effectively used for machine learning and AI projects. How does it compare to other languages like Python? Are there any recommended libraries or tools in Go for these tasks?\n Thanks!\n    submitted by    /u/L1mb0o  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/golang/comments/1cyadlz/can_go_be_used_for_machine_learning_and_ai/",
+          "publishedOn": "2024-05-22T20:25:41.000Z",
+          "wordCount": null,
+          "title": "Can Go be used for machine learning and AI?",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/golang/comments/1cy5e0k/should_i_learn_go_as_embedded_software_engineer/",
           "author": null,
           "description": "Dear folks, \n Coming from an embedded systems background, I'm looking to add tools to my skills. Can you guide me if it's worth a shot to learn Go as embedded software engineer? What are the career prespectives?\n    submitted by    /u/minamulhaq  \n [link]   [comments]",
@@ -6707,6 +6897,16 @@
           "publishedOn": "2024-05-22T03:12:32.000Z",
           "wordCount": null,
           "title": "Got Rejected in a Coding Assignment",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/golang/comments/1cxfj7x/announcing_the_stable_release_of_the_azure_cosmos/",
+          "author": null,
+          "description": "submitted by    /u/jaydestro  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/golang/comments/1cxfj7x/announcing_the_stable_release_of_the_azure_cosmos/",
+          "publishedOn": "2024-05-21T18:51:34.000Z",
+          "wordCount": null,
+          "title": "Announcing the stable release of the Azure Cosmos DB client library for Go",
           "imageUrl": null
         },
         {
@@ -7587,6 +7787,26 @@
       "siteUrl": "https://www.reddit.com/r/rust/top/?t=week",
       "articles": [
         {
+          "id": "https://www.reddit.com/r/rust/comments/1d135vs/hacking_geometry_dash_to_create_a_faux3d_level/",
+          "author": null,
+          "description": "submitted by    /u/kibwen  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/rust/comments/1d135vs/hacking_geometry_dash_to_create_a_faux3d_level/",
+          "publishedOn": "2024-05-26T14:56:27.000Z",
+          "wordCount": null,
+          "title": "Hacking Geometry Dash to create a faux-3D level out of a 2D sidescroller (using Rust to implement a DSL that compiles to level editor commands and to implement a 3D renderer that compiles to in-game geometric primitives)",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/rust/comments/1d0s5ov/what_are_the_bests_youtube_channels_and_podcasts/",
+          "author": null,
+          "description": "Please share your favorites.\n    submitted by    /u/swe_solo_engineer  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/rust/comments/1d0s5ov/what_are_the_bests_youtube_channels_and_podcasts/",
+          "publishedOn": "2024-05-26T03:03:40.000Z",
+          "wordCount": null,
+          "title": "What are the bests YouTube channels and podcasts for Rust?",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/rust/comments/1d0rvqq/lazycelllazylock_stabilized_in_nightly/",
           "author": null,
           "description": "submitted by    /u/i-hate-manatees  \n [link]   [comments]",
@@ -7604,6 +7824,16 @@
           "publishedOn": "2024-05-26T00:27:18.000Z",
           "wordCount": null,
           "title": "How We Migrated Our Static Analyzer From Java To Rust",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/rust/comments/1d0k8vm/alright_so_the_answer_is_probably_rust_clojure/",
+          "author": null,
+          "description": "The main issue with Rust is that it's not fast to iterate - when it compiles it runs, but your logic may be wrong, and then you may need to change your stuff and make it correct again. However, the performance is over the roof and it's memory safe - performance and memory-safety are two hard to combine features\n Clojure is in a completely different place: it's BLAZINGLY fast to iterate, but - and now, this is probably because I'm a total newb in Clojure - it's pretty weird to try to squeeze super performance out of it. It's performant alright, but it's no Rust/C++, and can probably never be, since it's garbage-collected and has some decently costed abstractions\n So I think where I want to be is to have good mastery of both languages: using Rust for anything that needs to have high-performance or for low level stuff, and Clojure as the day-to-day tool to jack-in and hack away\n Now, I don't have enough knowledge of language design to understand how viable it would be, but it'd be pretty neat to have Clojure doing interop with Rust - you jack-in into a Rust program, invoke and break Rust functions in the REPL, iterate adding stuff; when you're done you compile the experiments into Rust code and make it Rust-compilable. That's a dream \n    submitted by    /u/TheLordSet  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/rust/comments/1d0k8vm/alright_so_the_answer_is_probably_rust_clojure/",
+          "publishedOn": "2024-05-25T20:01:41.000Z",
+          "wordCount": null,
+          "title": "Alright so the answer is probably Rust + Clojure",
           "imageUrl": null
         },
         {
@@ -7644,6 +7874,16 @@
           "publishedOn": "2024-05-25T03:32:38.000Z",
           "wordCount": null,
           "title": "Combining Rust and Ghidra for Nier: Automata Reverse Engineering",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/rust/comments/1d00r3d/rust_for_computer_vision_linear_algebra_and/",
+          "author": null,
+          "description": "I'm beginning to use Rust for my PhD research, which I hope to take and form a company with. As I'm porting Python code that I've written in numpy, opencv, and ONNX, I have been running into some missing methods and packages. I'm using ndarray, twistedfall/opencv, and ort. With this set, I've found that I'm missing fairly low level functions, like bilinear interpolation, calculating eigenvectors and similar. I know that some of my issues can be addressed by pulling in nalgebra. I'm concerned that Rust is not mature enough for this kind of work. What are other people's experiences/recommendations in this space?\n    submitted by    /u/UnsafePantomime  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/rust/comments/1d00r3d/rust_for_computer_vision_linear_algebra_and/",
+          "publishedOn": "2024-05-25T01:25:52.000Z",
+          "wordCount": null,
+          "title": "Rust for computer vision, linear algebra, and tensors",
           "imageUrl": null
         },
         {
@@ -8684,6 +8924,46 @@
       "siteUrl": "https://www.reddit.com/r/csharp/top/?t=week%22",
       "articles": [
         {
+          "id": "https://www.reddit.com/r/csharp/comments/1d17nh1/how_to_make_wpf_event_handlers_more_functional/",
+          "author": null,
+          "description": "I'm refactoring some code that uses WPF mouse click event handlers.\n The issue is that the use of the event handler introduces misdirection, i.e. I connect the event Control.MouseMove += on_MouseMove which is not an immediate return. It's more like a \"promise we will detect a mouse move\" in the future. Instead I need something like var inputresult = Control.GatherInputs() switch { } where I can switch on the next user inputs.\n    submitted by    /u/CrimsonCape  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/csharp/comments/1d17nh1/how_to_make_wpf_event_handlers_more_functional/",
+          "publishedOn": "2024-05-26T18:24:13.000Z",
+          "wordCount": null,
+          "title": "How to make WPF event handlers more functional",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/csharp/comments/1d167jw/is_the_microsoft_learn_c_course_worth_it/",
+          "author": null,
+          "description": "I'm totally new to programming and I've just begun with the Microsoft C# course ( https://learn.microsoft.com/de-de/dotnet/csharp/ ). But I'm wondering if it's good or if there are bettter ways to learn C#? Has anyone done the course already and can share some experience? Thanks in advance\n    submitted by    /u/mixxado  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/csharp/comments/1d167jw/is_the_microsoft_learn_c_course_worth_it/",
+          "publishedOn": "2024-05-26T17:18:57.000Z",
+          "wordCount": null,
+          "title": "Is the Microsoft Learn C# course worth it?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/csharp/comments/1d12usz/c_class_generator_for_openrpc/",
+          "author": null,
+          "description": "Hello,\n I want to generate c# definition for a open-rpc api, the definition is here : openrpc.json\n I need to find a tool who can create the correct c# class from this file. \n I found tool to generate ts definition like open-rpc-typings but I got an error \"Reached heap limit Allocation failed - JavaScript heap out of memory\"\n Thanks\n    submitted by    /u/youtpout  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/csharp/comments/1d12usz/c_class_generator_for_openrpc/",
+          "publishedOn": "2024-05-26T14:41:40.000Z",
+          "wordCount": null,
+          "title": "C# class generator for openrpc",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/csharp/comments/1d11op9/started_learning_csharp_i_am_a_mern_guy_for/",
+          "author": null,
+          "description": "Please give me suggestions about how should I learn, any resources for tutorials. A site to practice would also be great. Also give me some project ideas to showcase if I am good at .Net or not. \n    submitted by    /u/Sea-Mess-9450  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/csharp/comments/1d11op9/started_learning_csharp_i_am_a_mern_guy_for/",
+          "publishedOn": "2024-05-26T13:44:31.000Z",
+          "wordCount": null,
+          "title": "Started learning CSharp. I am a MERN guy for almost a year and domeone offered me a internship which requires .NET, I want to know how can I learn it very fast in 3 month",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/csharp/comments/1d0ze56/creating_a_json_file_to_use_as_registration_file/",
           "author": null,
           "description": "I was trying to make a simulated banking system for educational purposes.\n (just a educational project, please never save passwords unsafe like in this example)\n I planned to use .json as filetype to store the users their balance etc.\n This is the formatting I want:\n {\n \"userid\": {\n \"username\": \"username123\",\n \"password\": \"password123\",\n \"balance\": \"320030\",\n }\n Because now I can say json[userid] ... and get the selected users values directly.\n but instead it will give me this:\n {\"userid:\"username123\", \"password\": \"password123\", \"balance\": \"320030\"}\n And with this I cannot search for the user directly, or at least I don't know how.\n I tried with newtonsoft already, also tried with indented formatting both didn't deliver the wanted result.\n    submitted by    /u/IshikiNoAkuma  \n [link]   [comments]",
@@ -9497,6 +9777,16 @@
       "feedUrl": "https://www.reddit.com/r/cscareerquestions/top/.rss?t=week",
       "siteUrl": "https://www.reddit.com/r/cscareerquestions/top/?t=week",
       "articles": [
+        {
+          "id": "https://www.reddit.com/r/cscareerquestions/comments/1d12o2d/our_new_intern_has_more_experience_at_my_company/",
+          "author": null,
+          "description": "I work at a big tech company. I have 2 YoE at this company. This was my first and only SWE job. Over the last few weeks the internship program at my company has started, and our team got one as well. They did a short introduction with the team, and it surprised me to find out he had more YoE than I did at our company. He had previously gotten a Bachelors degree in his home country and worked at the local branch of our company for 3 years. Then he came to the US to pursue a Masters degree, and decided to apply to the internship program with the US office. \n I guess this is what recruiters mean when they post intern job postings with 1+ YoE required.\n    submitted by    /u/cscq100  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cscareerquestions/comments/1d12o2d/our_new_intern_has_more_experience_at_my_company/",
+          "publishedOn": "2024-05-26T14:32:33.000Z",
+          "wordCount": null,
+          "title": "Our new intern has more experience at my company than I do.",
+          "imageUrl": null
+        },
         {
           "id": "https://www.reddit.com/r/cscareerquestions/comments/1d08q6i/more_bootcamp_fallout/",
           "author": null,
@@ -10605,6 +10895,16 @@
       "siteUrl": "https://www.reddit.com/r/csMajors/top/?t=week",
       "articles": [
         {
+          "id": "https://www.reddit.com/r/csMajors/comments/1d106qf/i_know_who_killed_the_kitty_cat_what_should_i_do/",
+          "author": null,
+          "description": "I have an internship and it's great. We develop software systems for automated vehicles. I am learning so much about CS and programming. They have me fixing bugs: there's a bug tracking system and I have access to the proprietary bug list, then I try to fix the code. It's super interesting. Obviously we don't make this public or use some open source tracker because there's a lot at stake even if it's just a simple thing like going over the speed limit once in a while. One time the system was turning on the windshield wipers in clear weather and turning them off in rain. We thought that was hilarious. \n So, we have this restricted area where there's a test track. We have to test the vehicles in a controlled environment very very thoroughly. A little while ago the test engineers became very stressed and agitated. We tried to find out why because they were mostly really smart nerds who left us alone. I was processing the bug list and I found a system video from a video where the test car ran over a kitty cat. I asked around and that was why the test engineers were so upset. It obviously wasn't their fault: after I studied the logs I figured out how a particular function misidentified the cat and failed to avoid it. The function had several logic errors in the way shapes and movement were processed. Now I have to decide what to do about it. I can fix it quietly, like I usually do. I could tell my boss or make an entry in the bug tracker that the function was programmed wrong. That could get back to the AI Vision Manager and she could be really mad. Someone could be fired over it. I don't want to make people mad at me. The bug is fixed. I think I should forget about it so I can have a good relationship with my coworkers and no one gets fired. I want to get an offer after I graduate.\n    submitted by    /u/liquidInkRocks  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/csMajors/comments/1d106qf/i_know_who_killed_the_kitty_cat_what_should_i_do/",
+          "publishedOn": "2024-05-26T12:22:53.000Z",
+          "wordCount": null,
+          "title": "I know who killed the kitty cat - what should I do?",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/csMajors/comments/1d0ngeb/read_this_if_you_hate_coding/",
           "author": null,
           "description": "I used to DESPISE coding because I joined CS for the money. (keeping it real)\n Literally would sit down and try to learn languages like Java, Python, HTML/CSS.\n Couldn’t do it because it was so boring.\n What I did to fix this was literally hop on structured learning platforms like Sololearn (free) and Codecademy ($150/year).\n Then of course it still wouldn’t work. \n Same thing would happen, I would just continue to procrastinate and feel bored.\n To combat this, I simply screen recorded myself coding and explaining what I was doing.\n Then I uploaded those videos onto YouTube.\n Knowing that I was being recorded made me focus more and building an audience on YouTube doing this (you would be surprised) kept me motivated to keep coding.\n This is also something you could eventually monetize, but even if your YT doesn’t grow, you’ll learn how to code and program.\n I hope this helped a few of you. I wish someone introduced this to me a long time ago.\n Good luck everyone!\n    submitted by    /u/Interesting_Two2977  \n [link]   [comments]",
@@ -10662,6 +10962,16 @@
           "publishedOn": "2024-05-24T18:16:17.000Z",
           "wordCount": null,
           "title": "Just got a internship in high school.",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/csMajors/comments/1czbma0/2_weeks_into_my_internship_and_im_drowning/",
+          "author": null,
+          "description": "So many technologies all at once, the part of the project I was hired for and am more prepared for is scrapped, my main contact is in meetings all day, my 1 on 1 is just kind of around but mostly doing his own work all day.\n Anyway, I managed to get some stuff installed and I almost have access to everything. Missed 6 objectives today though. Idk, place is chill and everyone seems happy with me though. But I’ve done nothing productive despite trying so hard to figure out what to do from everyone.\n Anyway, I’m grateful for the experience, but this is kinda stressful with how I have no idea what’s going on\n Thought I’d share idk\n    submitted by    /u/DowvoteMeThenBitch  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/csMajors/comments/1czbma0/2_weeks_into_my_internship_and_im_drowning/",
+          "publishedOn": "2024-05-24T03:40:12.000Z",
+          "wordCount": null,
+          "title": "2 weeks into my internship and I’m drowning",
           "imageUrl": null
         },
         {
@@ -11568,6 +11878,36 @@
       "feedUrl": "https://www.reddit.com/r/devops/top/.rss?t=week",
       "siteUrl": "https://www.reddit.com/r/devops/top/?t=week",
       "articles": [
+        {
+          "id": "https://www.reddit.com/r/devops/comments/1d15dct/monitoringapm_tool_that_can_be_self_hosted_and_is/",
+          "author": null,
+          "description": "We are migrating to OTel and reviewing our current observability vendors for potential replacements and/or consolidation. We have a combined 7 figure bill and have substantial metrics/logs (but no traces yet) volume. While we migrate and set up POCs with vendors, I wanted us to also have something hosted on our infra we can use internally (probably internally only on my team while we navigate the OTel implementation).\n There seem to be so many observability tools now, which is a good thing. I'd like to find one that is OSS, easy to set up and maintain, and supports OTel. Features are a simple UI that we can use to easily query and that can clearly show the data. Also, we don't use k8s, mostly EC2 VMs and ECS containers. Any recommendations? Thanks!\n    submitted by    /u/monty9213  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/devops/comments/1d15dct/monitoringapm_tool_that_can_be_self_hosted_and_is/",
+          "publishedOn": "2024-05-26T16:40:10.000Z",
+          "wordCount": null,
+          "title": "Monitoring/APM tool that can be self hosted and is relatively hassle free",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/devops/comments/1d107lj/request_advice_for_a_windows_guy_coming_to_linux/",
+          "author": null,
+          "description": "BACKGROUND\n I've been a (Windows) software developer a long time (decades) and now work, by choice, in DevOps\n My responsibility has been a set of important corporate legacy apps running on Windows (.Net/IIS/SQLServer)\n Everything is on AWS and deployed via Jenkins/Terraform/Ansible/PowerShell scripts, all under source control\n I'm dealing with Linux systems more and more as components of the old system are rewritten/replaced\n CURRENT ISSUE\n I'm finding writing Linux BASH equivalents of Windows PowerShell scripts frustrating\n BASH feels like Windows Command line (BAT) in comparison to PowerShell. Ancient, arcane, not a proper \"language\"\n Having learned Groovy through its use in Jenkins it seems like a great option. Modern, proper \"language\". How can BASH compete with the power of {closure}.delegate?\n But it looks like Groovy has had its day and other than Jenkins isn't widely used. r/Groovy is nearly dead\n (I also have the prospect of our DevOps stack being moved to GitLab in future)\n What would you suggest is a way forward that maximizes my learning effort? (And my learning becomes my teaching for juniors in the department)\n A) Learn BASH. It IS a proper language once you understand it. Its never going away, the skill will always be in demand\n B) Use Groovy. Rumours of its demise are greatly exaggerated.\n C) Get PowerShell on the Linux nodes It's cross-platform for this exact reason. It's 'widely' used (in both Windows and Linux world) The Linux DevOps might roll their eyes but f&*k those insular assholes\n D) Learn \"XYZ Language\" (eg PYTHON?) - that's the thing that fills this gap you're describing and will remain so for a decent amount of time. How did you not know this?\n E) Something else... tell me, eg \"Stop thinking like a developer... DevOps coding is different to Application coding\" (we're gonna have an argument about this are we? ;)\n Because this is Windows v Linux I'm expecting trolls, but I really appreciate any serious replies\n    submitted by    /u/psyFungii  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/devops/comments/1d107lj/request_advice_for_a_windows_guy_coming_to_linux/",
+          "publishedOn": "2024-05-26T12:24:18.000Z",
+          "wordCount": null,
+          "title": "REQUEST: Advice for a Windows guy coming to Linux - alternatives to PowerShell/Groovy?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/devops/comments/1d0qwk1/google_cloud_statement_on_the_unisuper_deletion/",
+          "author": null,
+          "description": "submitted by    /u/rnmkrmn  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/devops/comments/1d0qwk1/google_cloud_statement_on_the_unisuper_deletion/",
+          "publishedOn": "2024-05-26T01:48:38.000Z",
+          "wordCount": null,
+          "title": "Google Cloud statement on the UniSuper deletion",
+          "imageUrl": null
+        },
         {
           "id": "https://www.reddit.com/r/devops/comments/1d0honl/i_scraped_all_devops_interview_questions_for_meta/",
           "author": null,
@@ -12586,6 +12926,16 @@
       "siteUrl": "https://www.reddit.com/r/ExperiencedDevs/top/?t=week",
       "articles": [
         {
+          "id": "https://www.reddit.com/r/ExperiencedDevs/comments/1d15vwp/how_to_tell_boss_that_the_mvp_of_a_product_cannot/",
+          "author": null,
+          "description": "I am the only developer at a company thats in the tech space kind of but not in software industry. They wanted to have an in house developer that could work: - on consulting on client projects for which the software development will be done by a partner - Product R&D - Internal stuff\n I only took this job a month ago because I moved to a different city and was looking for 3-4 months and couldn't find another one because of some other reasons rather than there being no jobs. \n I did tell them that we have to manage our expectations regarding the timeline of the project since there are a lot of components that are going to take time and I'm the only developer on this. \n Then a few days ago this guy says that he wants me to give a timeline for this which is understandable i guess. I am also starting to work on another project with a partner and I have to do both at the same time. \n What would be a good way of saying that it will take 1.5 to 2 months, I am the only developer on this doing the work of multiple people and even if you find another guy that will create this product MVP in less time, he's definitely not going to do this for the same salary. \n Not sure about the last part. I have 3 YOE working at a startup and another company with amazing folks who understood rushing features and projects doesn't end up well. \n    submitted by    /u/bilalshafim  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/ExperiencedDevs/comments/1d15vwp/how_to_tell_boss_that_the_mvp_of_a_product_cannot/",
+          "publishedOn": "2024-05-26T17:04:08.000Z",
+          "wordCount": null,
+          "title": "How to tell boss that the MVP of a product cannot be developed immediately and will take 1.5 months atleast?",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/ExperiencedDevs/comments/1d0uyrz/peer_dev_is_making_pr_review_a_nightmare/",
           "author": null,
           "description": "Has anyone dealt with a developer who is out to get you on PR reviews? She will create discussions for every tiny thing with often little benefit. For the sake of an example variable naming causing lengthy discussions. Every approach i take she will argue for almost the exact opposite and its tiring. I realise that this brings benefit, and rubber stamping them without thought is also bad but has anyone been in a similar situation before or can offer some guidance? \n She does this to other devs often not backing down on minor disagreements where either way would work and im sensing its causing the team morale to suffer. \n Im 15yoe working in a startup environment. \n    submitted by    /u/wallyflops  \n [link]   [comments]",
@@ -12643,6 +12993,16 @@
           "publishedOn": "2024-05-25T02:47:58.000Z",
           "wordCount": null,
           "title": "8yoe Senior in FrontEnd but big gaps in my backend skillset. How would you catch up?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/ExperiencedDevs/comments/1czmxid/how_do_i_teach_my_coworkers_infra_skills/",
+          "author": null,
+          "description": "I work on a team that builds distributed systems, mostly message driven micro-services with some React UIs. \n My coworkers are experienced (10+ years) but mostly in Java and Web. \n I’m the only developer who has knowledge on infrastructure components (Kubernetes, Linux Config, SSL certs, Ansible, etc)\n I have mentioned to my manager that we should have a backup. However when those tasks get assigned to my coworkers they struggle and it eventually come to me.\n Part of the problem is that my coworkers lack basic knowledge (ex: Linux) so given them a task to develop an automation playbook will likely not go well.\n Any advice? I have already created extensive documentation that walks the through existing processes. I had 0 docs when I joined and just read the source & config files.\n    submitted by    /u/Rain-And-Coffee  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/ExperiencedDevs/comments/1czmxid/how_do_i_teach_my_coworkers_infra_skills/",
+          "publishedOn": "2024-05-24T15:05:51.000Z",
+          "wordCount": null,
+          "title": "How do I teach my coworkers infra skills?",
           "imageUrl": null
         },
         {
@@ -13683,6 +14043,26 @@
       "siteUrl": "https://www.reddit.com/r/gamedev/top/?t=week",
       "articles": [
         {
+          "id": "https://www.reddit.com/r/gamedev/comments/1d17eaz/my_game_sold_1608_units_so_far_got_128_reviews_99/",
+          "author": null,
+          "description": "submitted by    /u/simonschreibt  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/gamedev/comments/1d17eaz/my_game_sold_1608_units_so_far_got_128_reviews_99/",
+          "publishedOn": "2024-05-26T18:13:09.000Z",
+          "wordCount": null,
+          "title": "My game sold 1608 units so far, got 128 reviews (99% positive) and took ~650h to make. I wrote a little post-mortem with more statistics and learnings about wishlist, community building, marketing, how I identified a key theft and more.",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/gamedev/comments/1d119oa/why_marketing_and_building_a_fanbase_is_not_as/",
+          "author": null,
+          "description": "I've seen countless posts about this topic here, that somehow your game failed because you did not build a fanbase, that you did not make devlogs, or that you didn't market your game. There was one a few days ago, again about someone working years on a game and somehow they can't figure out the most obvious. That it never was the marketing or the fanbase. But that the game just wasn't something people wanted to play.\n https://www.reddit.com/r/gamedev/comments/1cz32o8/brutal_truth_if_you_dont_have_social_media_power/\n People need to stop thinking of marketing and fanbases as reasons why people want to play your game. It's a multiplier, a catalyst to the existing product. It can only do so much to your game. The amount of time before a great game is discovered by the masses can be greatly re…",
+          "link": "https://www.reddit.com/r/gamedev/comments/1d119oa/why_marketing_and_building_a_fanbase_is_not_as/",
+          "publishedOn": "2024-05-26T13:22:41.000Z",
+          "wordCount": null,
+          "title": "Why marketing and building a fanbase is not as important (example in the post)",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/gamedev/comments/1d0uk5m/how_did_toby_fox_manage_to_raise_50k/",
           "author": null,
           "description": "Undertale was developed by crowdfunding 50k usd which he used for everything. My question is how did he manage to raise such an amount without anything to show for it at the beginning?\n    submitted by    /u/middlenameishardwork  \n [link]   [comments]",
@@ -13690,6 +14070,26 @@
           "publishedOn": "2024-05-26T05:37:52.000Z",
           "wordCount": null,
           "title": "How did toby fox manage to raise 50k?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/gamedev/comments/1d0ns7o/how_were_late_90searly_2000s_pc_graphics_created/",
+          "author": null,
+          "description": "I mean art styles like in the below album. I love graphics like this and I always wondered, were these graphics hand drawn, or were they the result of photos imported at low resolution?\n Was this art style popular by choice, or was it influenced by the technical limitations of the engines at the time?\n Was there a specific popular engine or rendering software responsible for this style similar to how Unity is used today?\n Can this art style be replicated with modern tools? If so, what software?\n Are there any contemporary games that use a similar art style?\n Here's an album with some screenshots: https://imgur.com/a/late-90s-early-2000s-pc-graphics-pISFrYA\n    submitted by    /u/CrusadingBurger  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/gamedev/comments/1d0ns7o/how_were_late_90searly_2000s_pc_graphics_created/",
+          "publishedOn": "2024-05-25T22:55:29.000Z",
+          "wordCount": null,
+          "title": "How were late 90s/early 2000s PC graphics created?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/gamedev/comments/1czyvzj/what_was_your_go_to_when_you_relised_that_your/",
+          "author": null,
+          "description": "I think a lot of us at somepoint started questioning their art style choices and if a specific art style was was hard to learn or hard to produce for your abilities as an individual dev \n Im kinda in that position right now because i started learning pixel art and relised that it is time consuming to make something that stands out , and i just don't really believe i have an artistic talent \n So what did you guys do when you were in the same spot ? What art style did you end up choosing , should i start learning 3D models instead ? And what engine i should use for these models Or maybe i should head to something like 2.5 since i dont see a lot of games adapting that style recently so maybe it could be a good choice \n    submitted by    /u/Leo_de_Segreto  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/gamedev/comments/1czyvzj/what_was_your_go_to_when_you_relised_that_your/",
+          "publishedOn": "2024-05-24T23:49:12.000Z",
+          "wordCount": null,
+          "title": "What was your go to when you relised that your art isn't good enough for your vision",
           "imageUrl": null
         },
         {
@@ -14720,6 +15120,26 @@
       "siteUrl": "https://www.reddit.com/r/godot/top/?t=week",
       "articles": [
         {
+          "id": "https://www.reddit.com/r/godot/comments/1d10hc7/i_have_to_say_line_2d_is_underrated_3_textures/",
+          "author": null,
+          "description": "submitted by    /u/ar_aslani  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/godot/comments/1d10hc7/i_have_to_say_line_2d_is_underrated_3_textures/",
+          "publishedOn": "2024-05-26T12:39:43.000Z",
+          "wordCount": null,
+          "title": "I have to say Line 2D is underrated! 3 textures and a Line 2D can work magic.",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/godot/comments/1d0z8if/this_changes_everything_you_can_instance_meshes/",
+          "author": null,
+          "description": "submitted by    /u/Ceisri  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/godot/comments/1d0z8if/this_changes_everything_you_can_instance_meshes/",
+          "publishedOn": "2024-05-26T11:23:09.000Z",
+          "wordCount": null,
+          "title": "This changes everything, you can instance meshes directly onto skeletons",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/godot/comments/1d0pu8w/just_made_my_first_2_from_my_game/",
           "author": null,
           "description": "submitted by    /u/Ok_Archer2226  \n [link]   [comments]",
@@ -14727,6 +15147,16 @@
           "publishedOn": "2024-05-26T00:46:13.000Z",
           "wordCount": null,
           "title": "Just made my first 2$ from my game",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/godot/comments/1d0iu3o/figuring_out_waterfall_shaders/",
+          "author": null,
+          "description": "submitted by    /u/yauoiyi  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/godot/comments/1d0iu3o/figuring_out_waterfall_shaders/",
+          "publishedOn": "2024-05-25T18:54:47.000Z",
+          "wordCount": null,
+          "title": "Figuring out waterfall shaders!",
           "imageUrl": null
         },
         {
@@ -15776,6 +16206,36 @@
       "feedUrl": "https://www.reddit.com/r/hacking/top/.rss?t=week",
       "siteUrl": "https://www.reddit.com/r/hacking/top/?t=week",
       "articles": [
+        {
+          "id": "https://www.reddit.com/r/hacking/comments/1d1elwh/angryoxide_build/",
+          "author": null,
+          "description": "submitted by    /u/Thin-Bobcat-4738  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/hacking/comments/1d1elwh/angryoxide_build/",
+          "publishedOn": "2024-05-26T23:53:42.000Z",
+          "wordCount": null,
+          "title": "AngryOxide Build",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/hacking/comments/1d19vhx/bettercap_cant_track_192168xx8080/",
+          "author": null,
+          "description": "Hi everybody, I have a web application running on 192.168.x.x:8080. I am trying to intercept the communication between me and the app. So i am using Kali as a virtual machine and i have bettercap inside. However i cannot see the request when i send it to the app. I can see everything else but the app.\n I hope someone can help.\n    submitted by    /u/Scutomix  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/hacking/comments/1d19vhx/bettercap_cant_track_192168xx8080/",
+          "publishedOn": "2024-05-26T20:05:07.000Z",
+          "wordCount": null,
+          "title": "Bettercap Can't Track 192.168.x.x:8080",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/hacking/comments/1d13kdr/savrx_suffers_data_breach_affecting_over_28/",
+          "author": null,
+          "description": "submitted by    /u/gordon22  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/hacking/comments/1d13kdr/savrx_suffers_data_breach_affecting_over_28/",
+          "publishedOn": "2024-05-26T15:15:48.000Z",
+          "wordCount": null,
+          "title": "Sav-Rx Suffers Data Breach Affecting Over 2.8 Million People",
+          "imageUrl": null
+        },
         {
           "id": "https://www.reddit.com/r/hacking/comments/1d0x8ot/hacking_phones_is_too_easy_time_to_make_it_harder/",
           "author": null,
@@ -16864,6 +17324,26 @@
       "siteUrl": "https://www.reddit.com/r/programming/top/?t=week",
       "articles": [
         {
+          "id": "https://www.reddit.com/r/programming/comments/1d14rb7/cloudflare_took_down_our_website_after_trying_to/",
+          "author": null,
+          "description": "submitted by    /u/RayNone  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/programming/comments/1d14rb7/cloudflare_took_down_our_website_after_trying_to/",
+          "publishedOn": "2024-05-26T16:11:11.000Z",
+          "wordCount": null,
+          "title": "Cloudflare took down our website after trying to force us to pay 120k$ within 24h",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/programming/comments/1d0yi1j/mit_news_2020_to_the_brain_reading_computer_code/",
+          "author": null,
+          "description": "submitted by    /u/GrueneBuche  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/programming/comments/1d0yi1j/mit_news_2020_to_the_brain_reading_computer_code/",
+          "publishedOn": "2024-05-26T10:30:56.000Z",
+          "wordCount": null,
+          "title": "MIT News 2020: To the brain, reading computer code is not the same as reading language",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/programming/comments/1d0e2jv/how_python_compares_floats_and_ints_why_it_can/",
           "author": null,
           "description": "submitted by    /u/FoxInTheRedBox  \n [link]   [comments]",
@@ -17871,6 +18351,36 @@
       "siteUrl": "https://www.reddit.com/r/learnprogramming/top/?t=week",
       "articles": [
         {
+          "id": "https://www.reddit.com/r/learnprogramming/comments/1d198zz/why_is_everyone_so_obsessed_with_web_dev/",
+          "author": null,
+          "description": "I will be blant. I hate web development. It almost feels like a bunch of docs and scripts running on a server. It is super tedious (Backend stuff is a bit more tolerable, but still not my cup of tea).\n In general I am a desktop app and mathematical programming kind of guy. I like ML stuff. I like image processing, signals, etc.\n I also know assembly, even tho I generaly don't do low level stuff. I am currently trying to learn audio programming and 3D. The resources on these things are *very* limited, and kinda difficult to find something that breaks down things in ways I can understand. (I do not necessarily ask for resources btw. It is just my observation)\n I said all of this to explain my overall \"style\" of programming\n Every tutorial, discussion, even memes related to programming, is very webdev oriented. Hell, whenever I say that I am a programmer to other programmers, sometimes I get asked about the web apps I've built. It is ridiculous!\n My overall question is: Should I move forward with my niches, or give web development a bit more attention?\n    submitted by    /u/andrew21w  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/learnprogramming/comments/1d198zz/why_is_everyone_so_obsessed_with_web_dev/",
+          "publishedOn": "2024-05-26T19:36:30.000Z",
+          "wordCount": null,
+          "title": "Why is everyone so obsessed with web dev?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/learnprogramming/comments/1d0yeld/everybodys_just_crying_regardless_of_the_tech/",
+          "author": null,
+          "description": "I don't know if this should be here or not. But I'm learning to code and I'm trying to pick a specialization and and In trying to gather some feedback but be it any field, everybody's just crying everywhere on how the market's bad and there's so much saturation whether you're learning Web Dev or breathing Oxygen.\n I know that saturation exists in everything and in every-field almost but internally it's stopping me from learning anything. It's disturbing me mentally.\n I just want to code interfaces. That's it. That's what I love and that's something probably I can do for life. And with Interfaces I mean every interface, Web, Mobile, TV, Watch etc. etc. \n I know it will take time and and will happen gradually and I don't mind that. But people saying things like Frontend Developer is obsolete, or Android Development has no jobs has idk why but made me worried mentally.\n I have only want one of two, either a remote job (My country has a lesser pay, plus I hate the work culture here) or a career in freelancing (same reasons)\n I just want some honest optimism (only give me hopes of there's any) and some ways how can I achieve what I want.\n Thanks & Peace.\n    submitted by    /u/OkPomegranate616  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/learnprogramming/comments/1d0yeld/everybodys_just_crying_regardless_of_the_tech/",
+          "publishedOn": "2024-05-26T10:23:44.000Z",
+          "wordCount": null,
+          "title": "Everybody's just crying regardless of the tech field and I feel weird",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/learnprogramming/comments/1d0u5fa/what_resources_would_you_use_if_you_were_learning/",
+          "author": null,
+          "description": "Hello! I'm trying to figure out some resources i can use to learn to code. I just started college for a cs degree, but I'd like to start learning on my own as well. Any websites/youtubers/books you guys would recommend? also I am trying to focus in AI and game development, any advice would be greatly appreciated!\n    submitted by    /u/smoulking  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/learnprogramming/comments/1d0u5fa/what_resources_would_you_use_if_you_were_learning/",
+          "publishedOn": "2024-05-26T05:09:44.000Z",
+          "wordCount": null,
+          "title": "What resources would you use if you were learning to code today?",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/learnprogramming/comments/1d0lnlb/i_dont_enjoy_coding_as_a_software_engineering/",
           "author": null,
           "description": "Hi, I am a Software Engineering Undergraduate going into my final year at University in the UK.\n I cannot get myself to code any projects outside of uni assignments at all. It is a mix of not having an idea of what project to take on, and then motivation to actually do that project.\n I just gave up on an alphabet game designed for toddlers where you have to click the correct next letter in the alphabet to finish the game (at ‘Z’) because I got extremely bored as I knew I could do it, and knew I wouldn’t really get satisfaction from it being finished.\n I know that to go into the industry I need a portfolio of projects I have done to show my future employers, so I’ve come here for advice - what should I do about this issue?\n I am open to suggestions on a) project ideas, b) motivation ideas, and c) anything people can give about their own experiences with this.\n    submitted by    /u/YT-DobbaWon  \n [link]   [comments]",
@@ -18288,6 +18798,36 @@
       "siteUrl": "https://www.reddit.com/r/ProgrammerHumor/top/?t=week",
       "articles": [
         {
+          "id": "https://www.reddit.com/r/ProgrammerHumor/comments/1d0zlif/cisntthathard/",
+          "author": null,
+          "description": "submitted by    /u/Green____cat  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/ProgrammerHumor/comments/1d0zlif/cisntthathard/",
+          "publishedOn": "2024-05-26T11:46:55.000Z",
+          "wordCount": null,
+          "title": "cIsntThatHard",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/ProgrammerHumor/comments/1d0tc4b/hmmsomethingsus/",
+          "author": null,
+          "description": "submitted by    /u/nonsenseis  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/ProgrammerHumor/comments/1d0tc4b/hmmsomethingsus/",
+          "publishedOn": "2024-05-26T04:16:48.000Z",
+          "wordCount": null,
+          "title": "hmmSomethingSus",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/ProgrammerHumor/comments/1d0ta1s/goldrushhasbegun/",
+          "author": null,
+          "description": "submitted by    /u/Starynight_11  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/ProgrammerHumor/comments/1d0ta1s/goldrushhasbegun/",
+          "publishedOn": "2024-05-26T04:13:00.000Z",
+          "wordCount": null,
+          "title": "goldRushHasBegun",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/ProgrammerHumor/comments/1d0jdap/kubernetestwitteraccountisdeactivatedbecausetheych/",
           "author": null,
           "description": "submitted by    /u/Dilutant  \n [link]   [comments]",
@@ -18355,6 +18895,16 @@
           "publishedOn": "2024-05-23T19:32:07.000Z",
           "wordCount": null,
           "title": "heWasFlabbergasted",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/ProgrammerHumor/comments/1cyyf53/thedreamcomestrue/",
+          "author": null,
+          "description": "submitted by    /u/Last-Intention-2863  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/ProgrammerHumor/comments/1cyyf53/thedreamcomestrue/",
+          "publishedOn": "2024-05-23T17:26:23.000Z",
+          "wordCount": null,
+          "title": "theDreamComesTrue",
           "imageUrl": null
         },
         {
@@ -19345,6 +19895,16 @@
       "siteUrl": "https://www.reddit.com/r/linux/top/?t=week",
       "articles": [
         {
+          "id": "https://www.reddit.com/r/linux/comments/1d111zf/switching_to_linux_is_hard_but_learning_is_worth/",
+          "author": null,
+          "description": "With the introduction of the Recall feature for Windows, there is renewed interest in the Linux desktop. With that renewed interest, comes renewed hate toward the Linux desktop by people who feel personally confronted by the privacy + freedom oriented philosophy most Linux users subscribe to.\n \"Privacy doesn't matter to me\" is the common response.\n That is fine. What should matter to users is reliance. Plenty of potential Linux users forgoe the switch because their favorite big tech software doesn't run on Linux.\n \"I have built spreadsheets that don't open in LibreOffice/OpenOffice\"\n \"I need Adobe to edit pictures/create music/read my DRM protected books\"\n These are statements that should give you pause. Is it acceptable that you are reliant on a piece of software to the extent that it ties you to an operating system and set of apps that could be taken away from you at any second? Let us focus on the first statement; how much will you pay for Excel (either in cash or your privacy) so that you can continue editing your favorite spreadsheet? Is there a point at which you would force yourself to learn how to program or translate these spreadsheets into LibreOffice?\n You may not care about Privacy or Freedom, but Microsoft and Apple will at some point set a price that will have you wishing you were Independent.\n No one who switches to Linux should expect the transition to be easy. There will be quirks on your system that you will have to iron out and there are just fundamental differences between Windows and Linux that you will have to get used to. In other words you will need to learn. If you think that is a waste of time, that's fine. In my eyes, and in many others', learning a new skill is never a waste if time.\n I hope this provides a useful perspective.\n    submitted by    /u/wallbucks  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/linux/comments/1d111zf/switching_to_linux_is_hard_but_learning_is_worth/",
+          "publishedOn": "2024-05-26T13:11:25.000Z",
+          "wordCount": null,
+          "title": "Switching to Linux is hard, but learning is worth it",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/linux/comments/1d0tveg/another_take_on_a_proprietary_foss_software/",
           "author": null,
           "description": "submitted by    /u/Malsententia  \n [link]   [comments]",
@@ -19392,6 +19952,16 @@
           "publishedOn": "2024-05-25T08:33:53.000Z",
           "wordCount": null,
           "title": "I'm so tired of AI generated articles",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/linux/comments/1d05mhs/this_week_in_kde_triple_buffering_and_other/",
+          "author": null,
+          "description": "submitted by    /u/gabriel_3  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/linux/comments/1d05mhs/this_week_in_kde_triple_buffering_and_other/",
+          "publishedOn": "2024-05-25T06:19:38.000Z",
+          "wordCount": null,
+          "title": "This week in KDE: Triple buffering and other sources of amazingness",
           "imageUrl": null
         },
         {
@@ -19832,6 +20402,36 @@
       "siteUrl": "https://www.reddit.com/r/archlinux/top/?t=week",
       "articles": [
         {
+          "id": "https://www.reddit.com/r/archlinux/comments/1d1980i/what_ide_to_use_instead_of_visual_studio/",
+          "author": null,
+          "description": "I do a lot of work with .NET and have always favored using VS over any other IDE. Obviously I cannot get this on Arch, but was curious as to better/as good free alternatives?\n UPDATE:\n After reading all your comments, I have decided to go with NeoVim as my IDE of choice. Thanks for the warm welcome into the Linux community reddit!!\n    submitted by    /u/OFNEILL  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/archlinux/comments/1d1980i/what_ide_to_use_instead_of_visual_studio/",
+          "publishedOn": "2024-05-26T19:35:11.000Z",
+          "wordCount": null,
+          "title": "What IDE to use instead of Visual Studio?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/archlinux/comments/1d0zsbu/learning_about_arch_and_linux_in_general_makes/",
+          "author": null,
+          "description": "The work to fix or do somethings in Linux are so hard by itself that having people doing tools and programs to make our life easier while not being payed or encouraged in any way outside their own will it's truly admirable, I barely started my journey and don't know 5% of what a true user do but I can't thank the community enough for doing their best for everyone.\n Thank you for all your hard work!\n    submitted by    /u/Xw4lk3r  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/archlinux/comments/1d0zsbu/learning_about_arch_and_linux_in_general_makes/",
+          "publishedOn": "2024-05-26T11:59:14.000Z",
+          "wordCount": null,
+          "title": "Learning about arch and Linux in general makes you appreciate devs so much more",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/archlinux/comments/1d0y1mm/rant_i_am_tired_of_bluetooth_issues_on_arch/",
+          "author": null,
+          "description": "Why can't it just work like a normal device? I avoid it like the plague. The one time I want to use it in a blue moon, surprise, it doesn't work as expected.\n I have a Sony 1000XM4. It connected fine over Bluetooth, but the audio device doesn't show up as an option. Thanks PipeWire..\n I am getting too old and tired of this. I can't spend hours every time I want something simple to work to troubleshoot and find a solution. Maybe it is true that arch is for someone who has too much free time. I sure did at some point. \n I expect to get downvoted and blamed for user error, and sure, maybe it is. But at what point does it become an OS/distro issue? for arch probably never. \n    submitted by    /u/cold_one  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/archlinux/comments/1d0y1mm/rant_i_am_tired_of_bluetooth_issues_on_arch/",
+          "publishedOn": "2024-05-26T09:57:39.000Z",
+          "wordCount": null,
+          "title": "[rant] I am tired of Bluetooth issues on Arch",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/archlinux/comments/1d0cy4x/getting_a_lot_of_crackling_on_my_audio_interface/",
           "author": null,
           "description": "Here's the installed packages and versions:\n local/gst-plugin-pipewire 1:1.0.7-1 local/helvum 0.5.1-1 local/kpipewire 6.0.4-1 (plasma) local/libpipewire 1:1.0.7-1 local/libwireplumber 0.5.2-2 local/pipewire 1:1.0.7-1 local/pipewire-alsa 1:1.0.7-1 local/pipewire-audio 1:1.0.7-1 local/pipewire-jack 1:1.0.7-1 local/pipewire-pulse 1:1.0.7-1 local/pipewire-session-manager 1:1.0.7-1 local/qemu-audio-pipewire 9.0.0-1 local/wireplumber 0.5.2-2 \n I haven't tried low latency applications yet, but audio on youtube, and in games crackles. It didn't do that until this update...\n Anyone else have this issue? Any tips on dealing with it?\n    submitted by    /u/Veprovina  \n [link]   [comments]",
@@ -20249,6 +20849,36 @@
       "siteUrl": "https://www.reddit.com/r/debian/top/?t=week",
       "articles": [
         {
+          "id": "https://www.reddit.com/r/debian/comments/1d1e1iq/the_kids_like_debian_too/",
+          "author": null,
+          "description": "submitted by    /u/leafwitch  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/debian/comments/1d1e1iq/the_kids_like_debian_too/",
+          "publishedOn": "2024-05-26T23:24:17.000Z",
+          "wordCount": null,
+          "title": "The kids like Debian too!",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/debian/comments/1d1c2na/can_you_run_gta_v_on_debian/",
+          "author": null,
+          "description": "Hi,\n a few years ago I had GTA V running on my Debian installation but then I got a new PC and on that I failed to make it run.\n I am now making another attempt and again I am not getting very far...\n I have installed lutris and with lutris I have installed the Epic Games Store. Now I need to log into the Epic Game Store but I cannot do it: When I enter my email I get a captcha and after that ann error \"please turn on javascript and reload\" - I never even get to the point where I could enter my password, so before I waste a lot of time now my questions:\n 1) can you nowadays run GTAV on Debian testing\n and\n 2) if you can how do you install it?\n ​\n    submitted by    /u/ghiste  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/debian/comments/1d1c2na/can_you_run_gta_v_on_debian/",
+          "publishedOn": "2024-05-26T21:47:32.000Z",
+          "wordCount": null,
+          "title": "can you run GTA V on Debian?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/debian/comments/1d0wi0j/how_do_i_prioritize_backports_over_default_for/",
+          "author": null,
+          "description": "Hi, I'm trying to set the default priority for bookworm-backports to 900 for all packages and I can't get it to work.\n In the file /etc/apt/preferences.d/99debian-backports:\n Package: * Pin: release a=bookworm-backports Pin-Priority: 900 \n Modified from https://wiki.debian.org/AptConfiguration section: \"Always prefer packages from a repository\"\n $ apt policy linux-image-amd64 linux-image-amd64: Installed: 6.1.76-1 Candidate: 6.1.90-1 Version table: 6.7.12-1~bpo12+1 100 100 http://deb.debian.org/debian bookworm-backports/main amd64 Packages 6.1.90-1 500 500 http://deb.debian.org/debian-security bookworm-security/main amd64 Packages *** 6.1.76-1 500 500 http://deb.debian.org/debian bookworm/main amd64 Packages 100 /var/lib/dpkg/status 6.1.67-1 500 500 http://deb.debian.org/debian bookworm-updates/main amd64 Packages \n (I haven't updated to the -security version, but you see the issue)\n    submitted by    /u/kikechan  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/debian/comments/1d0wi0j/how_do_i_prioritize_backports_over_default_for/",
+          "publishedOn": "2024-05-26T07:58:07.000Z",
+          "wordCount": null,
+          "title": "How do I prioritize backports over default for all packages?",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/debian/comments/1d0o9x3/debian_12_evolution_hotmailoutlook_not_working/",
           "author": null,
           "description": "I had trouble signing into a Hotmail account with Evolution from the repo. Hotmail now requires Oauth2. And that option wasn't available in Evolution in the repo.\n So I got a Flatpak instead. https://flathub.org/apps/org.gnome.Evolution\n After you've set up your account, make sure it is on Oauth2. Right-click your account-name/Mail-address->Properties. Receiving e-mail, on the left. Botton right, Authentication. It should say Oauth2 (outlook) and NOT Password.\n This might work for Google mail too. Came across some threads on Oauth troubles on that subject too. Couldn't really find anything that would fix it for Hotmail.\n So if you suffer from having to create new passwords every couple days, can't login via Evolution etc, now you know why.\n    submitted by    /u/BigHeadTonyT  \n [link]   [comments]",
@@ -20306,6 +20936,16 @@
           "publishedOn": "2024-05-25T00:48:36.000Z",
           "wordCount": null,
           "title": "GParted frozen and windows aren’t clearing",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/debian/comments/1cztxkt/installed_debian_12_no_drivers_for_my_realtek/",
+          "author": null,
+          "description": "I decided to make the switch from MX Linux to Debian 12 only to realize that there are no drivers available for my network card\n I proceeded with the following method which did not yield any results as the wifi did get enabled but no networks are visible \n https://easylinuxtipsproject.blogspot.com/p/realtek.html?m=1#ID9\n Then continued with https://github.com/HRex39/rtl8852be.git which gave me some errors upon using make so I decided to skip it in favor of maybe working with the kernel\n So from what I see the Linux kernel 6.2 has my drivers supported but debian 12 is on 6.1\n So I have a question:\n If it's viable to update my kernel either using the original version or liqourix/xanmod/zen and if that would fix my driver issues (I know debian is against going with the newest kernels but what am I to do) if so what kernel should I use?\n And a request:\n How could I undo what I did with the first driver method\n If it's of any help MX Linux worked out of the box with my network card with AHS(which apparently uses liqourix) and Kali Linux bare metal also worked(which from what I know uses a proprietary kernel)\n I'm going on a work shift so I won't be able to answer messages but I'll respond as soon as possible and I'm grateful for any answers, thank you in advance.\n    submitted by    /u/FlintXD  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/debian/comments/1cztxkt/installed_debian_12_no_drivers_for_my_realtek/",
+          "publishedOn": "2024-05-24T20:04:25.000Z",
+          "wordCount": null,
+          "title": "Installed Debian 12, no drivers for my realtek rtl8852be",
           "imageUrl": null
         },
         {
