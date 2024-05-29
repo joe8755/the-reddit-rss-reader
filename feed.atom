@@ -2,10 +2,903 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://joe8755.github.io/the-reddit-rss-reader/index.html</id>
     <title>the reddit rss reader</title>
-    <updated>2024-05-28T12:36:39.389Z</updated>
+    <updated>2024-05-29T01:33:03.713Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://joe8755.github.io/the-reddit-rss-reader/index.html"/>
     <link rel="self" href="https://joe8755.github.io/the-reddit-rss-reader/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[Traffic interception on a mobile app]]></title>
+        <id>https://www.reddit.com/r/hacking/comments/1d2zkym/traffic_interception_on_a_mobile_app/</id>
+        <link href="https://www.reddit.com/r/hacking/comments/1d2zkym/traffic_interception_on_a_mobile_app/"/>
+        <updated>2024-05-29T00:47:42.000Z</updated>
+        <summary type="html"><![CDATA[Hello. How do you guys intercept traffic on a mobile app? I tried MiTM Proxy but I keep getting that the app doesn't trust the certificate. I also tried Wireshark and TCPDump, but they're very confusing and they don't have what I'm looking for..I guess! Any help on how I can achieve that? I'm aiming to analyze traffic much similar to how I do so on any browser's Network tab. Thanks.
+    submitted by    /u/_iamhamza_  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : hacking</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Making an apple pie from scratch on Windows - getting to C from the entrypoint without any imports]]></title>
+        <id>https://www.reddit.com/r/C_Programming/comments/1d2zisl/making_an_apple_pie_from_scratch_on_windows/</id>
+        <link href="https://www.reddit.com/r/C_Programming/comments/1d2zisl/making_an_apple_pie_from_scratch_on_windows/"/>
+        <updated>2024-05-29T00:44:50.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/helloiamsomeone  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[2D array with a negative starting point]]></title>
+        <id>https://www.reddit.com/r/csharp/comments/1d2zheo/2d_array_with_a_negative_starting_point/</id>
+        <link href="https://www.reddit.com/r/csharp/comments/1d2zheo/2d_array_with_a_negative_starting_point/"/>
+        <updated>2024-05-29T00:42:54.000Z</updated>
+        <summary type="html"><![CDATA[I’m attempting to print a 2d array with starting point x, starting point y, width and height. Currently, I’m using For (int i = arraystartx ; i < arraystartx + width ; i++) { for (int j = arraystarty; j < arraystarty + height; j++) { FilledArray[i, j] = New area(i, j); }(system error) } However, when I attempt to put in a negative number for either of the arraystart values, I’m getting “System. IndexOutOfRangeException” at the indicated place in the code and in unsure how I can go about fixing that. The area code just takes a row and a column, if it’s empty it’ll print “E”, if there’s something there it prints another letter (saved to a filled space list). Another issue I’m running into is “index outside the bounds of the array” when there’s a something outside the array when I print the list of filled spaces in front of. Any help would be greatly appreciated.
+    submitted by    /u/Mlafe  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Memory Arenas talk]]></title>
+        <id>https://www.reddit.com/r/cpp/comments/1d2ysd9/memory_arenas_talk/</id>
+        <link href="https://www.reddit.com/r/cpp/comments/1d2ysd9/memory_arenas_talk/"/>
+        <updated>2024-05-29T00:09:30.000Z</updated>
+        <summary type="html"><![CDATA[Hi everyone, I found this in the C group on Reddit, and thought you may enjoy this talk as much as I did. What's particularly nice is the extensive Q&A at the end.
+ https://www.rfleury.com/p/enter-the-arena-talk
+    submitted by    /u/multi-paradigm    to    r/cpp  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Issues with compiling qcustomplot]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1d2yeds/issues_with_compiling_qcustomplot/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1d2yeds/issues_with_compiling_qcustomplot/"/>
+        <updated>2024-05-28T23:51:22.000Z</updated>
+        <summary type="html"><![CDATA[Hi,
+ I came across some problems while writing a project using qcustomplot library. More specifically, the issues are related to compiling code.
+ I started off writing code that used only Qt5, for which I had following CMake file:
+ cmake_minimum_required(VERSION 3.10) project(FunctionPlotter) set(CMAKE_CXX_STANDARD 20) find_package(Qt5Widgets REQUIRED) find_package(Qt5Core REQUIRED) find_package(Qt5Gui REQUIRED) find_package(Qt5PrintSupport REQUIRED) add_executable(FunctionPlotter main.cpp CHFinding_app_window.cpp) target_link_libraries(FunctionPlotter Qt5::Widgets Qt5::Core Qt5::Gui Qt5::PrintSupport) 
+ Up to that point everything worked fine. However, when I added qcustomplot.h and qcustomplot.cpp files into the same working directory and modified CMake file like that:
+ cmake_minimum_required(VERSION 3.10) project(FunctionPlotter) set(CMAKE_CXX_STANDARD 20) set(CMAKE_AUTOMOC ON) # added set(CMAKE_AUTOUIC ON) # added set(CMAKE_AUTORCC ON) # added find_package(Qt5Widgets REQUIRED) find_package(Qt5Core REQUIRED) find_package(Qt5Gui REQUIRED) find_package(Qt5PrintSupport REQUIRED) add_executable(FunctionPlotter main.cpp CHFinding_app_window.cpp) add_library(QCustomPlot qcustomplot.cpp qcustomplot.h) # added target_link_libraries(FunctionPlotter QCustomPlot Qt5::Widgets Qt5::Core Qt5::Gui Qt5::PrintSupport) # QCustomPlot added target_include_directories(FunctionPlotter PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}) # added 
+ I started getting an error saying: QtCore/qglobal.h - no such file or directory (relating to this line of code: #include <QtCore/qglobal.h>). This is even weirded considering that adding that line to main.cpp caused no issues at all.
+ Does anyone know what could this issue stem from? ChatGPT was not rellay helpful, I found nothing on Stack and the official website does not have this issue discussed. 
+    submitted by    /u/darealkrkchnia    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Should I start my programming journey in C?]]></title>
+        <id>https://www.reddit.com/r/C_Programming/comments/1d2yd3m/should_i_start_my_programming_journey_in_c/</id>
+        <link href="https://www.reddit.com/r/C_Programming/comments/1d2yd3m/should_i_start_my_programming_journey_in_c/"/>
+        <updated>2024-05-28T23:49:41.000Z</updated>
+        <summary type="html"><![CDATA[I’ve taken a course in C programming 2 times and I failed both times. I don’t want to give up on programming though. What context am I missing to succeed in this field? What do I need to tackle first? How do I improve at programming? Please provide feedback.
+    submitted by    /u/N-4551-R  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[My exact path from no code to software developer intern in 10 months]]></title>
+        <id>https://www.reddit.com/r/learnprogramming/comments/1d2xvi2/my_exact_path_from_no_code_to_software_developer/</id>
+        <link href="https://www.reddit.com/r/learnprogramming/comments/1d2xvi2/my_exact_path_from_no_code_to_software_developer/"/>
+        <updated>2024-05-28T23:26:48.000Z</updated>
+        <summary type="html"><![CDATA[figured I would post this because it would have been a nice resource for me to come across in the position i was in when i started. last summer i was a newgrad with an unrelated degree working as a labourer in a graveyard, this summer i am a software developer intern and here is my exact path:
+  
+take all of cs50
+ take most of cs50p
+ take NeetCodes intro to DSA course until binary trees (pirated it)
+ start applying to internships: put cs50s final project and cs50s finance project on your resume
+ do one personal project all on your own for resume (i made a basic fullstack website quiz minigame)
+ do leetcode aiming to solve 5 questions weekly (I followed neetcodes roadmap up until binary trees)
+ apply to 3-5 internships daily
+ as you get interviews, study what you think the company can ask you (ex if the posting mentions REST api and OO programming memorize what rest apis do and the pillars of oop)
+ go to recruiting events if youre a student (even a non cs student)
+  
+this path got me hired in one of the worst job markets as a self taught developer. all the info is out there for free if you want it
+    submitted by    /u/Pioneer64  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : learnprogramming</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Protocol Buffer Error (gtfs)]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1d2xt80/protocol_buffer_error_gtfs/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1d2xt80/protocol_buffer_error_gtfs/"/>
+        <updated>2024-05-28T23:23:58.000Z</updated>
+        <summary type="html"><![CDATA[Option verification unknown error displays when running protoc --cpp_out=. gtfs-realtime.proto 
+ or 
+ protoc -I=. --cpp_out=. gtfs-realtime.proto gives the same error 
+    submitted by    /u/Chemical-Rock6946    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Why string management is so confusing in C?]]></title>
+        <id>https://www.reddit.com/r/C_Programming/comments/1d2xgrz/why_string_management_is_so_confusing_in_c/</id>
+        <link href="https://www.reddit.com/r/C_Programming/comments/1d2xgrz/why_string_management_is_so_confusing_in_c/"/>
+        <updated>2024-05-28T23:08:42.000Z</updated>
+        <summary type="html"><![CDATA[im just trying to :
+  
+read from a file
+ store each charachter in a array (char)
+ checks if its equal to a word,if its not,clean the array
+  
+just this,but when i clean it,it just bugs and it dont want to store any charachter now.
+ am sorry if i am doing something wrong,im still learning ; )
+ heres the code:
+ #include <stdio.h> #include "include/file_funcs.c" #include <string.h> int main(){ FILE *fptr; fptr = fopen("test.txt", "r"); int file_contents; char cur[50]; int i = 0; while(file_contents != 'e') { file_contents = fgetc(fptr); cur[i] = file_contents; if (file_contents == 'end'){ break; } printf("%s\n",cur); if ( (strcmp(cur,"put(") ) == 0){ printf("put("); } else { strcpy(cur,""); } ++i; } fclose(fptr); return 0; } 
+    submitted by    /u/Nyglue  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Winform Error]]></title>
+        <id>https://www.reddit.com/r/csharp/comments/1d2wzi3/winform_error/</id>
+        <link href="https://www.reddit.com/r/csharp/comments/1d2wzi3/winform_error/"/>
+        <updated>2024-05-28T22:47:57.000Z</updated>
+        <summary type="html"><![CDATA[This morning when I was designing in Form1.cs and suddenly this error appeared. "SUDDENLY! "
+ Because I don't edit the code, just the design and then i got this.
+ https://preview.redd.it/82meyc1nx83d1.png?width=1845&format=png&auto=webp&s=7a8c06131983d2abf3ac604fdadbb97951164b08
+    submitted by    /u/Kim-Thien-Lang  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How boneheaded would it be if I quit my job for the summer?]]></title>
+        <id>https://www.reddit.com/r/ExperiencedDevs/comments/1d2uipt/how_boneheaded_would_it_be_if_i_quit_my_job_for/</id>
+        <link href="https://www.reddit.com/r/ExperiencedDevs/comments/1d2uipt/how_boneheaded_would_it_be_if_i_quit_my_job_for/"/>
+        <updated>2024-05-28T21:03:27.000Z</updated>
+        <summary type="html"><![CDATA[35M here with 10+YOE in frontend. No kids. Wife is a stay at home dog mom.
+ We have 50k liquid, 150k in HYSA, 300k in 401k, 300k in personal brokerage.
+ I don't so much worry about going broke, it's obviously not ideal to plunder your savings and not have work sponsored health insurance (yay, 'merica), but I'm beyond ready for a break from the rat race. 
+ The weather is starting to get nice, but seemingly only when I'm working, not during weekends or holidays. My manager can not help themselves but to ping me nonstop throughout the day. All I want to do is my actual work, and I can never get it done. I'm sick of doing interviews for folks that we never hire even though half are qualified enough. A week of PTO is never enough to recharge. I know a new job won't fix the burnout I'm feeling.
+ Yeah, I know this goes against the traditional knee-jerk advice. Never quit your job without another lined up. Just change teams or change jobs. Never quit. Always be employed. Why? As a millennial, I don't think I'll ever truly retire, so I can't help but wonder if taking mini "retirements" throughout my career is the best way to get the most out of life. 
+ I plan to not just put my feet up, but to work on side projects that I've made great progress on, but will probably never hit the market in time, since my W2 sucks the life and time out of me.
+ I have to imagine some of you do this, or have done this. How did it work out? Yeah, the market isn't ideal, but is there ever a good time to do this (besides 2021)?
+    submitted by    /u/bestmankiller  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : ExperiencedDevs</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Returning a vector<thread> from a recursive function]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1d2ucu5/returning_a_vectorthread_from_a_recursive_function/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1d2ucu5/returning_a_vectorthread_from_a_recursive_function/"/>
+        <updated>2024-05-28T20:57:03.000Z</updated>
+        <summary type="html"><![CDATA[Hello everyone. I'm in the process of learning c++. I am fairly proficient at Rust, so I am trying to rewrite one of my personal scripts in c++ as a learning experience.
+ The exact thing I am trying to do is recurse through a directory. For any files encountered that match a condition, I want to spawn a thread to do some work. (I am aware of how this can blow up, but for my small, limited application, the method works quite well.)
+ I've implemented the c++ the same way I implemented the function in Rust, however I am getting a compiler error. Below is my code and the error. Thanks for your insight!
+ vector<thread> recurse_and_spawn_thread(string dirname) { vector<thread > thread_vector; for (const auto & entry : std::filesystem::directory_iterator(dirname)) { auto fullpath = std::filesystem::absolute(entry.path()); if(entry.is_directory()) { auto more_threads = recurse_and_spawn_thread(fullpath); thread_vector.insert(thread_vector.end(), more_threads.begin(), more_threads.end()); } else if(entry.is_regular_file() && <SOME ADDITIONAL CONDITION>) { std::thread thread_object {do_work_function}; thread_vector.push_back(std::move(thread_object)); } } return thread_vector; } 
+ And the error (which, admittedly, I don't understand without google's help):
+ /usr/include/c++/11/bits/stl_algobase.h:385:25: error: use of deleted function ‘std::thread& std::thread::operator=(const std::thread&)’ 385 | *__result = *__first; | ~~~~~~~~~~^~~~~~~~~~ 
+ Apparently this stems from trying to copy a thread object, but that is why I call std::move(thread_object) in the function.
+    submitted by    /u/planetoftheshrimps    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Print the names of the months using a locale - c++17]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1d2tgm6/print_the_names_of_the_months_using_a_locale_c17/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1d2tgm6/print_the_names_of_the_months_using_a_locale_c17/"/>
+        <updated>2024-05-28T20:21:12.000Z</updated>
+        <summary type="html"><![CDATA[Is there a standard way to print the names of the months given a particular locale, eg February for en_US but fevrier for fr_FR? I know I can do this in chrono in c++20 but I need to be able to do it in c++17. And yes I could import Howard Hinnant’s date library but I would prefer to use either std or at a pinch Linux specific function calls in order to minimise integration overhead. 
+    submitted by    /u/bert8128    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Trying to get a clean and printable log of a virtualised linux system]]></title>
+        <id>https://www.reddit.com/r/debian/comments/1d2t7sr/trying_to_get_a_clean_and_printable_log_of_a/</id>
+        <link href="https://www.reddit.com/r/debian/comments/1d2t7sr/trying_to_get_a_clean_and_printable_log_of_a/"/>
+        <updated>2024-05-28T20:12:01.000Z</updated>
+        <summary type="html"><![CDATA[Here a preview of qemu without additional parameters, i could manually select the text from serial0 and paste it on my host without formatting issues, no ANSI garbage, clean output, but i need to automate the log creation and the system need to be run inside a terminal.
+ boot_loader_serial0
+ htop_in_serial0
+ here my /boot/grub/grub.cfg.
+ GRUB_TIMEOUT_STYLE=list GRUB_CMDLINE_LINUX_DEFAULT="console=tty0 console=ttyS0,9600n8" GRUB_CMDLINE_LINUX="quiet" GRUB_TERMINAL="serial console" GRUB_TERMINAL_COLOR="dumb" 
+ Here the qemu script for running linux in the terminal and log it':
+ DRIVE="$HOME/Documents/DONE/debian_stable_debootstrap_bios/deb_stable_bios.img" sudo qemu-system-x86_64 \ -m 2G \ -smp 2 \ -drive file="$DRIVE",format=raw,if=virtio \ -net user,host=10.0.2.10,hostfwd=tcp:127.0.0.1:100…]]></summary>
+        <author>
+            <name>top scoring links : debian</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[I built a simply command-line tool.]]></title>
+        <id>https://www.reddit.com/r/csharp/comments/1d2s2ew/i_built_a_simply_commandline_tool/</id>
+        <link href="https://www.reddit.com/r/csharp/comments/1d2s2ew/i_built_a_simply_commandline_tool/"/>
+        <updated>2024-05-28T19:28:40.000Z</updated>
+        <summary type="html"><![CDATA[I call this tool AOs.
+ Originally the project was written in Python but then later I changed to C#. I also started working this as a hobby project back in 2020.
+ I kept some imaginary costumers in my mind and at first tried to create a more of a dummy-like CMD clone which couldn't do really anything but then it slowly turned into something that could actually do something.
+ The goal of AOs is simple. To better customize command-line along with some basic features like syntax highlighliting and autocomplete suggestions.
+ Currently it only supports windows.
+ I would be really happy if anyone can rip apart the code and give me some feedback on the project and the code. I'm open for all criticism.
+ NOTE: I once posted about it from my another account and it did got a lot of well deserved criticism, specially on its README so I've spent some time (not longer than I would like to admit) to rewrite the README.
+    submitted by    /u/SrijSriv211  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[What are some mistakes/misconceptions that you encounter even in experienced developers?]]></title>
+        <id>https://www.reddit.com/r/ExperiencedDevs/comments/1d2rtpq/what_are_some_mistakesmisconceptions_that_you/</id>
+        <link href="https://www.reddit.com/r/ExperiencedDevs/comments/1d2rtpq/what_are_some_mistakesmisconceptions_that_you/"/>
+        <updated>2024-05-28T19:18:45.000Z</updated>
+        <summary type="html"><![CDATA[Let me clarify a bit. There are some obvious blunders that at some point all developers learn as mantras like "global variables are bad", "eval is evil" (jokingly), etc. Lame examples, I know, but the idea is that there are some obvious fallacies like N+1 queries that any experienced developer learns to deal with. 
+ However, there are some trickier ones that even more or less experienced devs either don't pay enough attention to or just are not aware of. One somewhat unexpected example is that some even pretty experienced (at least nominally) devs don't really understand how indexes work in Postgres/mysql. Some don't even really understand JOINs apart from the inner one. 
+ My personal source of shame is how I used deployed a service that repeatedly executes fat queries in BQ, but didn't really introduce any retries, backoffs and alerting. Needless to say, the queries turned out to be costly. 
+ What are your observations?
+    submitted by    /u/dondraper36  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : ExperiencedDevs</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[OTP Encoder to bypass Windows Defender]]></title>
+        <id>https://www.reddit.com/r/hacking/comments/1d2raj0/otp_encoder_to_bypass_windows_defender/</id>
+        <link href="https://www.reddit.com/r/hacking/comments/1d2raj0/otp_encoder_to_bypass_windows_defender/"/>
+        <updated>2024-05-28T18:57:24.000Z</updated>
+        <summary type="html"><![CDATA[Hey guys I recently started with my journey to become a pentester. However all encoders I found out there all are getting flagged by the Windows Defender as I assume their signature is already well known. I therefore wrote my own encoder which is using OTP to encrypt the payload and then dynamically executes the payload from the stack using a malicious C program. I even managed to run a meterpreter session on a windows machine without the defender flagging the program with this. Feel free to check it out and provide some feedback :)
+ https://github.com/tomLamprecht/OTPPayloadInjector
+ Disclaimer: I'm well aware that by publicly uploading this encoder it might get flagged by the windows defender soon as well but who cares, it's all about the fun! 
+    submitted by    /u/Lampard557  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : hacking</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Learning C#]]></title>
+        <id>https://www.reddit.com/r/csharp/comments/1d2r9d8/learning_c/</id>
+        <link href="https://www.reddit.com/r/csharp/comments/1d2r9d8/learning_c/"/>
+        <updated>2024-05-28T18:56:07.000Z</updated>
+        <summary type="html"><![CDATA[What good website/course would be best if I wanted to start learning C# as a beginner? 
+ Are there some I should avoid and are there tips I should keep in mind while learning?
+    submitted by    /u/SpaceTheGrape  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[libc++ deployment on macOS]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1d2qwwb/libc_deployment_on_macos/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1d2qwwb/libc_deployment_on_macos/"/>
+        <updated>2024-05-28T18:42:11.000Z</updated>
+        <summary type="html"><![CDATA[Xcode is paired with specific clang and libc++ versions on macOS (see "Toolchain versions" in https://en.wikipedia.org/wiki/Xcode), and deploying an application that uses a newer clang and libc++ than the one supported by Xcode is very hard or impossible - we can install a more recent llvm using homebrew or macports, but then deploying the universal libc++ binary for that is hard to do and might creating mismatches with the system libc++ in /usr/lib/libc++.1.dylib.
+ However, you can develop an app on a more recent Xcode/libc++ and deploy to older OS's. Wouldn't this also break the application, since the app would use the libc++ deployed by the OS, located at /usr/lib/libc++.1.dylib? What am I missing here?
+    submitted by    /u/felipefarinon    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Is this readable enough?]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1d2qtov/is_this_readable_enough/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1d2qtov/is_this_readable_enough/"/>
+        <updated>2024-05-28T18:38:35.000Z</updated>
+        <summary type="html"><![CDATA[The other day I posted here asking about proper use of lambdas and put this for my example code. The main takeaway was that everyone said it was not clear/readable enough. u/squeasy_2202 was kind enough to provide me their more readable and optimized refactoring here on which I based this my latest version.
+ Is my latest version readable enough?
+ edit: I just realized that my concept of x,y coordinates has been reversed from the norm in every version I have done of this as of yet, oops :)
+    submitted by    /u/setdelmar    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Fixing dllimport error]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1d2qr75/fixing_dllimport_error/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1d2qr75/fixing_dllimport_error/"/>
+        <updated>2024-05-28T18:35:47.000Z</updated>
+        <summary type="html"><![CDATA[(Fixed by using wstrings instead of u16strings)
+ I have a function that reads from a file. Initially it used std::stringstream for this, and everything worked fine, but then I switched to std::u16string, and changed the stream type to basic_stringstream<char16\_t> accordingly. After that I started getting this error:
+ Error C2491 'std::numpunct<_Elem>::id': definition of dllimport static data member not allowed
+ What is causing this and how can I fix it?
+ The whole function looks like this:
+ std::basic_stringstream<char16_t> fcontents; std::ifstream file(path); fcontents << file.rdbuf(); contents = fcontents.str(); 
+    submitted by    /u/Outdoordoor    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Use of views results in 4x the number of assembly instructions?]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1d2qecv/use_of_views_results_in_4x_the_number_of_assembly/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1d2qecv/use_of_views_results_in_4x_the_number_of_assembly/"/>
+        <updated>2024-05-28T18:21:33.000Z</updated>
+        <summary type="html"><![CDATA[I have two functions that more-or-less do the same thing and are called in exactly the same way: https://godbolt.org/z/o9Mhc9x4b. The function x() uses views to build out the result while the function y() uses containers to build out (essentially) the same result. You can switch between them by commenting/uncommenting lines 61 and 62.
+ My hope was that the compiler would boil down x() and y() to the same instructions once the optimization-level gets turned up, but that doesn't seem to be the case. x() generates a lot more instructions than y() regardless of which optimization level you use: O2, O3, Os, and Ofast.
+ Why doesn't the compiler compile these down to the same (or similar) instructions? Will I always be paying a penalty when I use chained views like this?
+    submitted by    /u/korkvid    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[What's New in C# 13: Enhanced Params, Performance Boosts, and New Extension Types]]></title>
+        <id>https://www.reddit.com/r/csharp/comments/1d2q077/whats_new_in_c_13_enhanced_params_performance/</id>
+        <link href="https://www.reddit.com/r/csharp/comments/1d2q077/whats_new_in_c_13_enhanced_params_performance/"/>
+        <updated>2024-05-28T18:05:38.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/almirvuk  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Long running ASP.NET 6 endpoint hosted in IIS does not respond with Postman or HttpClient, but it does with curl.]]></title>
+        <id>https://www.reddit.com/r/csharp/comments/1d2prbr/long_running_aspnet_6_endpoint_hosted_in_iis_does/</id>
+        <link href="https://www.reddit.com/r/csharp/comments/1d2prbr/long_running_aspnet_6_endpoint_hosted_in_iis_does/"/>
+        <updated>2024-05-28T17:55:54.000Z</updated>
+        <summary type="html"><![CDATA[What it says on the title. Basically I'm running a pretty intensive process in a POST request. Takes about 10 minutes to complete. Looking at the database, I can see that a run of it finished, but then Postman (and .NET Framework 4.7 HttpClient) are still stuck waiting on a response. Not when I kick it off with curl though: I get the response with the summary of the run there.
+ I tried running it in Postman with the exact same headers curl is using but no luck. Anything I can tweak in IIS to make this work? It's so strange that it works with curl.
+    submitted by    /u/AntiDyatlov  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Workflow v0.11.4 Released, Easier to Express Selection Semantics by Asynchronous Tasks in Concurrency.]]></title>
+        <id>https://www.reddit.com/r/cpp/comments/1d2p5ox/workflow_v0114_released_easier_to_express/</id>
+        <link href="https://www.reddit.com/r/cpp/comments/1d2p5ox/workflow_v0114_released_easier_to_express/"/>
+        <updated>2024-05-28T17:31:22.000Z</updated>
+        <summary type="html"><![CDATA[It has been 2 years past since last post. So here let me add some background information here : Workflow is a C++ Parallel Computing and Asynchronous Networking Engine, which we have spent nearly 4 years developing and maintaining.
+ Using C++ to better express concurrency semantics is the dream of every C++ developer. Workflow uses asynchronous tasks with simple interfaces and efficient internal resource management to combine the calculations and networks.
+ Recently, it also supports selection semantics for concurrency, which can achieve correct branch processing and perfect resource recycling in concurrent scenarios. Hope you are interested.
+ Reference: https://github.com/sogou/workflow/releases/tag/v0.11.4
+ New Features
+  
+Add WFSelectorTask.
+ Support setting DNS message's records. Enable users to make a fully functional DNS server by using WFDnsServer.
+ Enable setting specific SSL_CTX for each network task.
+ WFMySQLConnection and WFKafkaClient enable setting a specific SSL_CTX.
+ JSON parser adds 'json_value_copy()'.
+  
+Improvements
+  
+More compatible with some rediculous HTTP server.
+ Simplify Communicator's codes.
+  
+Bug Fixes
+  
+Fix bug when creating a client task with IPv6 address string.
+ Fix kafka client bug when a broker is IPv6.
+ Fix DNS parser potensial recursive bug.
+  
+You may also refer to issues:FAQs for more interesting usages
+    submitted by    /u/liyingxin1412    to    r/cpp  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Multi-threading: how best to coordinate ending independent threads]]></title>
+        <id>https://www.reddit.com/r/C_Programming/comments/1d2ozs8/multithreading_how_best_to_coordinate_ending/</id>
+        <link href="https://www.reddit.com/r/C_Programming/comments/1d2ozs8/multithreading_how_best_to_coordinate_ending/"/>
+        <updated>2024-05-28T17:24:43.000Z</updated>
+        <summary type="html"><![CDATA[I tried to go a bit further with last week's project. Now, instead of all threads having to finish all of their work, I want to stop the others when one of them finds a solution and returns.
+ So previously I didn't need any synchronisation, I could simply join all threads in any order in main because I would have to wait for all of them to finish anyway. But now I want to signal/message/abort/kill all the other threads when one of them returns. Because the threads are completely independent, I don't think I need any condition variables, mutexes or message queues. What I did is: have one global atomic bool running = true and set it to false in one thread when a solution is found. The other threads check for this condition in their inner loop (so, often) and return when it's false.
+ This works, but is it the best solution? Polling the global bool so often seems wasteful, but is signalling/messaging a better option? And I'm not quite sure where to start. Install a signal handler on every thread?
+ Single file source code at https://github.com/ednl/c/blob/master/tetrafind.c
+    submitted by    /u/ednl  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[New Eclipse Temurin OpenJDK Build Released]]></title>
+        <id>https://www.reddit.com/r/java/comments/1d2ottu/new_eclipse_temurin_openjdk_build_released/</id>
+        <link href="https://www.reddit.com/r/java/comments/1d2ottu/new_eclipse_temurin_openjdk_build_released/"/>
+        <updated>2024-05-28T17:17:56.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/Active-Fuel-49  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : java</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Help! I cannot use Boost python - cannot open source file "pyconfig.h" (dependency of "boost/python.hpp")]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1d2oppp/help_i_cannot_use_boost_python_cannot_open_source/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1d2oppp/help_i_cannot_use_boost_python_cannot_open_source/"/>
+        <updated>2024-05-28T17:13:11.000Z</updated>
+        <summary type="html"><![CDATA[I installed boost using macports and all the libraries included are working fine except for boost-python. When I type "python3.10-config --includes --libs" into my terminal window this is the output:
+ -I/Users/bradyburns/.pyenv/versions/3.10-dev/include/python3.10 -I/Users/bradyburns/.pyenv/versions/3.10-dev/include/python3.10 -lintl -ldl -L/Users/bradyburns/.pyenv/versions/3.10-dev/lib -Wl,-rpath,/Users/bradyburns/.pyenv/versions/3.10-dev/lib -L/opt/homebrew/lib -Wl,-rpath,/opt/homebrew/lib -framework CoreFoundation 
+ for more information that may be helpful, "port contents boost" outputs:
+ Port boost contains: /opt/local/include/boost /opt/local/lib/libboost_atomic-mt.dylib /opt/local/lib/libboost_chrono-mt.dylib /opt/local/lib/libboost_container-mt.dylib /opt/local/lib/libboost_context-…]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Preparing for written exam.]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1d2o8g5/preparing_for_written_exam/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1d2o8g5/preparing_for_written_exam/"/>
+        <updated>2024-05-28T16:52:58.000Z</updated>
+        <summary type="html"><![CDATA[I am writing a c++ exam in a few days, written. I would like help on how to remember the stl containers and how to use them with smart pointers to objects of custom classes. I don't know which of the containers will be examined, I've mastered maps, vectors, and sets. Is there any advice for how to learn and remember the other containers? Or any other advice for c++ written exams? 
+    submitted by    /u/Different_Primary253    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Where to start :)]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1d2nzy2/where_to_start/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1d2nzy2/where_to_start/"/>
+        <updated>2024-05-28T16:42:54.000Z</updated>
+        <summary type="html"><![CDATA[Hi All,
+ I'm sure you're probably thinking, "Oh, great, another beginner." Or not, tis fine too. I shall spare you the boring details! I am just starting to embark on the journey of learning c++, it is going to be for a project for someone who has, for lack of better words, given up on a dream. I will not, and do not expect to be paid for this, I simply... want to give it my best shot, if it benefits me in any other way, cool. If not, at least I got to help someone realize it's never too late to try and make your dreams come true. SO...
+ TLDR:
+ Where is the best place to start? I have tried grasshopper, enjoyed it but got only about 45 exercises in until someone basically said it wasn't going to help. Suggestions? Advice? TYSM in advance :)
+    submitted by    /u/Charming-Mix5057    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Hash Collisions: How Large is a 160 Bit Number?]]></title>
+        <id>https://www.reddit.com/r/programming/comments/1d2nxvb/hash_collisions_how_large_is_a_160_bit_number/</id>
+        <link href="https://www.reddit.com/r/programming/comments/1d2nxvb/hash_collisions_how_large_is_a_160_bit_number/"/>
+        <updated>2024-05-28T16:40:28.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/zachm  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : programming</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Ah.. Right... Accessibility is Easy ;)]]></title>
+        <id>https://www.reddit.com/r/godot/comments/1d2nn4n/ah_right_accessibility_is_easy/</id>
+        <link href="https://www.reddit.com/r/godot/comments/1d2nn4n/ah_right_accessibility_is_easy/"/>
+        <updated>2024-05-28T16:27:51.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/ar_aslani  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : godot</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[25 years of COBOL]]></title>
+        <id>https://www.reddit.com/r/learnprogramming/comments/1d2nc0l/25_years_of_cobol/</id>
+        <link href="https://www.reddit.com/r/learnprogramming/comments/1d2nc0l/25_years_of_cobol/"/>
+        <updated>2024-05-28T16:15:07.000Z</updated>
+        <summary type="html"><![CDATA[Not a programmer but studying. I had a player today who discussed with me her 25 year career in the medical field writing COBOL programs that manage health databases and prepare reports for doctors.
+ I regaled all I have learned, name dropped the Commodore 64 I had seen on The Coding Train and she lit up. She told stories of code taking hours to compile, and how big her leap to Atari ST was.
+ She was jovial and laughed that she was teaching history lessons and that I actually read about her workflows in books. What a cool connection.
+    submitted by    /u/Table-Games-Dealer  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : learnprogramming</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Reading Images]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1d2n8z6/reading_images/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1d2n8z6/reading_images/"/>
+        <updated>2024-05-28T16:11:38.000Z</updated>
+        <summary type="html"><![CDATA[I'm new to cpp and I'm trying to make a small project that will take an image path as input, read that image and return to me the base colors of it.
+ I'm wondering what should I use to read the image for small project like this?
+ I looked into OpenCV and it seems very large for my small project so I wasn't sure if I should stick with it or not.
+ Edit: The files I'm trying to read is the basic image types like jpeg jpg png or webp
+    submitted by    /u/LuayKelani    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How can I make 2 commands repeat]]></title>
+        <id>https://www.reddit.com/r/C_Programming/comments/1d2n8v4/how_can_i_make_2_commands_repeat/</id>
+        <link href="https://www.reddit.com/r/C_Programming/comments/1d2n8v4/how_can_i_make_2_commands_repeat/"/>
+        <updated>2024-05-28T16:11:29.000Z</updated>
+        <summary type="html"><![CDATA[I want to make a code in wich the output's background flashes with 2 colors For the colors, I know the command, but for the repeating i tried
+ for(i=1;i<=25:i++) {system("color f0"); system("color f5")}
+ but it just did the commands 1 by 1 very slowly once. I want it to go to both of them, flashing really fast.
+ For everyone wondering why I shouldn't do something like
+ system("color f0"); system("color f5"); system("color f0"); system("color f5"); system("color f0"); system("color f5"); system("color f0"); system("color f5"); system("color f0"); system("color f5")
+ that, I don't want my code filled up with a spam and my teacher is gonna see this so I don't want him to go crazy about it. Please help! Thanks!
+    submitted by    /u/Pet_m1  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[I am on the verge of quitting with no job lined up. Why am I being pathetic?]]></title>
+        <id>https://www.reddit.com/r/cscareerquestions/comments/1d2n6vl/i_am_on_the_verge_of_quitting_with_no_job_lined/</id>
+        <link href="https://www.reddit.com/r/cscareerquestions/comments/1d2n6vl/i_am_on_the_verge_of_quitting_with_no_job_lined/"/>
+        <updated>2024-05-28T16:09:15.000Z</updated>
+        <summary type="html"><![CDATA[I see these posts are common, but here I am.
+ I work at big tech and make more money than I have ever imagined. However, like many big tech engineers I am overworked and miserable.
+  
+Every daily standup its something new added onto my plate.
+ Every oncall (one week every month) new things break that require hours of investigation to even start fixing.
+ All our tech is propriety, none of the skills I am learning transfer anywhere.
+  
+Worst part is, I am the exception in my team. My team is full of f%*$*#*g coding prodigies. I just grinded leetcode and got lucky. They work long hours, but they always accomplish extra tasks every sprint. They lead meetings and propose new features.
+ On paper my job is amazing. I get to work from home. Crazy benefits and stock compensation. I am just miserabl…]]></summary>
+        <author>
+            <name>top scoring links : cscareerquestions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Trying to understand address-of operator returning a pointer as rvalue]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1d2n692/trying_to_understand_addressof_operator_returning/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1d2n692/trying_to_understand_addressof_operator_returning/"/>
+        <updated>2024-05-28T16:08:33.000Z</updated>
+        <summary type="html"><![CDATA[I am trying to comprehend the C++ Primer 5th Edition page 135 where it says:
+  
+address-of operator requires an lvalue operand and returns a pointer to its operand as an rvalue.
+  
+Now, I know that the address-of operator returns the address of a variable, reading up the [docs](https://learn.microsoft.com/en-us/cpp/cpp/address-of-operator-amp?view=msvc-170) says that what is being returned is actually a pointer to the variable. So for example:
+ int ivar = 10; int* p = &ivar; 
+ Can I understand this as:
+  
+address-of operator gets the address of ivar and creates a temporary pointer to the variable
+ temporary pointer is assigned to p which copies over the values of the temporary pointer, which is the memory address?
+ we are using the values of the temporary pointer (the memory address it points to) rather than the object's identity (its location in memory) - referring to the temp pointer; so that is why the returned temp pointer is an rvalue?
+  
+   submitted by    /u/SeanTYH    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[C# WPF is using Exe from bin/Debug folder okay?]]></title>
+        <id>https://www.reddit.com/r/csharp/comments/1d2mlg0/c_wpf_is_using_exe_from_bindebug_folder_okay/</id>
+        <link href="https://www.reddit.com/r/csharp/comments/1d2mlg0/c_wpf_is_using_exe_from_bindebug_folder_okay/"/>
+        <updated>2024-05-28T15:44:19.000Z</updated>
+        <summary type="html"><![CDATA[Hi it's my first time creating and deploying an app and I'm wondering if it's Ok to just copy the Debug folder that contains all the DLL files and EXE file when installing application on the customer's PC. I'm wondering why I need to separately deploy the app when there's already exe file in the debug folder
+    submitted by    /u/Plastic-Ad5931  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[db query in the catch block ?]]></title>
+        <id>https://www.reddit.com/r/csharp/comments/1d2m4du/db_query_in_the_catch_block/</id>
+        <link href="https://www.reddit.com/r/csharp/comments/1d2m4du/db_query_in_the_catch_block/"/>
+        <updated>2024-05-28T15:23:54.000Z</updated>
+        <summary type="html"><![CDATA[Hi,
+ I would like to ask what do you think about this solution below?
+ try
+ { some code with "write" db operations }
+ catch(CustomException ex)
+ { call a db operation "delete" to clean the db up }
+ I think it is a good simple solution but I was thinking about to make db operation in the catch not the best one.
+ The other thing what is in my mind is to use a bool wasCustomException and set it in the catch block and making cleanup after the try-catch block.
+ The bool wasCustomException solution is necessary if I would like to make the cleanup after the finally block if an exception occurred.
+ Do you have any better solution ?
+    submitted by    /u/zsome  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[I read Steam's marketing docs so you don't have to]]></title>
+        <id>https://www.reddit.com/r/gamedev/comments/1d2m09c/i_read_steams_marketing_docs_so_you_dont_have_to/</id>
+        <link href="https://www.reddit.com/r/gamedev/comments/1d2m09c/i_read_steams_marketing_docs_so_you_dont_have_to/"/>
+        <updated>2024-05-28T15:19:07.000Z</updated>
+        <summary type="html"><![CDATA[Hhere is recap of Steam's article on marketing, so you'll understand how it works to sell your game there.
+ Tl;dr
+  
+- Steam recommendations are based on time and money which determines interest, Steam doesn't forecast successes.
+ 
+Curated visibility is shown to everyone and is the best marketing tool, and yes you can ask Steam to get featured there once you've reached a certain popularity.
+ 
+- There are ways to improve your discoverability like managing your tags well, localization and regional pricing.
+ 
+Discovery queue is the strongest lever you can activate prelaunch.
+ 
+Wishlists numbers don't matter as much as you think.
+ 
+ I'll go through the Steam's store possibilities first and then have a quick run down of Steam's advice on marketing (spoiler: nothing new here)
+ If you want to dee…]]></summary>
+        <author>
+            <name>top scoring links : gamedev</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[cant seem to statically link stdlib...]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1d2lv2o/cant_seem_to_statically_link_stdlib/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1d2lv2o/cant_seem_to_statically_link_stdlib/"/>
+        <updated>2024-05-28T15:13:00.000Z</updated>
+        <summary type="html"><![CDATA[I am runing 
+ g++-14 -c -g2 -static -Wall -static -static-libstdc++ algos.cpp -o algos.o
+ and I then get all kinds of linker error aginst stdlib when doing 
+ gcc -g2 test_turing.c user_gene.o algos.o -o test_turing
+ no idea why it insists on doing this I cant get it to just not link stdlib
+    submitted by    /u/rejectedlesbian    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Newer Programmer]]></title>
+        <id>https://www.reddit.com/r/csharp/comments/1d2lrtv/newer_programmer/</id>
+        <link href="https://www.reddit.com/r/csharp/comments/1d2lrtv/newer_programmer/"/>
+        <updated>2024-05-28T15:09:14.000Z</updated>
+        <summary type="html"><![CDATA[So, I’m newish to programming, even newer to C#. I have an idea for a project that is definitely out of my scope at the moment, but I’m kind of wondering exactly how hard it would be to do it. I want to build a terminal emulator. Something similar to HyperTerm or Windows Terminal, but with more built in customization features. Custom commands, custom UI, etc. 
+ So am I treading into ocean deep waters here? Or am I making it out to be harder than it is in my head? 
+ I know I have a lot to learn, but man it just seems like navigating a PC from the CLI can’t be the most difficult thing ever. 
+    submitted by    /u/zakkmylde2000  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Can someone review my first ASP.NET MVC project?]]></title>
+        <id>https://www.reddit.com/r/csharp/comments/1d2llzg/can_someone_review_my_first_aspnet_mvc_project/</id>
+        <link href="https://www.reddit.com/r/csharp/comments/1d2llzg/can_someone_review_my_first_aspnet_mvc_project/"/>
+        <updated>2024-05-28T15:02:24.000Z</updated>
+        <summary type="html"><![CDATA[I wrote my first ASP.NET MVC project and now I am searching for a place where someone wants to check my project and tell me what can I improve.
+ https://github.com/radoslawsmoronski/portfolio
+ This is a dynamic portfolio with admin panel to change values, image and email functionality. More information in readme file in repository.
+ Thank you for your review!
+    submitted by    /u/RadoslawSmoronski  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[C++ how to — make non-English text work in Windows.]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1d2kuu2/c_how_to_make_nonenglish_text_work_in_windows/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1d2kuu2/c_how_to_make_nonenglish_text_work_in_windows/"/>
+        <updated>2024-05-28T14:30:09.000Z</updated>
+        <summary type="html"><![CDATA[If special characters ø, ¿, á or similars don’t display correctly then you’re probably using Windows.
+ Many ask about this, so I wrote up a 5 point how-to:
+  
+How to display non-English characters in the console.
+ How to format fixed width fields (regardless of Windows/*nix/whatever platform).
+ How to input non-English characters from the console.
+ How to get the main arguments UTF-8 encoded.
+ How to make std::filesystem::path (do the) work.
+  
+There are explanations and C++ code examples, but intentionally almost no cookbook recipes.
+    submitted by    /u/alfps    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[What most programming courses missed]]></title>
+        <id>https://www.reddit.com/r/C_Programming/comments/1d2kq5d/what_most_programming_courses_missed/</id>
+        <link href="https://www.reddit.com/r/C_Programming/comments/1d2kq5d/what_most_programming_courses_missed/"/>
+        <updated>2024-05-28T14:24:20.000Z</updated>
+        <summary type="html"><![CDATA[For the beginners out there, where are most of online programming courses failing at? 
+    submitted by    /u/Traditional-Top-1504  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Am I holding back team velocity?]]></title>
+        <id>https://www.reddit.com/r/ExperiencedDevs/comments/1d2khv1/am_i_holding_back_team_velocity/</id>
+        <link href="https://www.reddit.com/r/ExperiencedDevs/comments/1d2khv1/am_i_holding_back_team_velocity/"/>
+        <updated>2024-05-28T14:14:21.000Z</updated>
+        <summary type="html"><![CDATA[Some context: we are working in a cross functional team. Another guy and I are focussing on backend development. I have about 5 YOE, the other developer 10+ years. Since I've started getting more comfortable in our code base i feel like I am holding back our Merge Request process by addressing various problems in my colleague's MRs. Sometimes the discussions go on for days or weeks before we come to a consensus. My personal feeling is that my colleague is sometimes very shortsighted in what he is developing and is focussing on solving symptoms instead of root causes. I prioritize code quality and try to enforce certain standard throughout our code base in order to make maintenance work easier. Should I trust my colleague's work more? I have no proof but I am quite certain that we would have had some production incidents already if I would have let every MR through without discussing them extensively. Should I let go of my ego?
+    submitted by    /u/DmMeUrRoesti  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : ExperiencedDevs</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[My parents are forcing me to get degree (bachelors) in CS at university FOR THE MONEY and I don't really enjoy/like computer science.]]></title>
+        <id>https://www.reddit.com/r/csMajors/comments/1d2kdr0/my_parents_are_forcing_me_to_get_degree_bachelors/</id>
+        <link href="https://www.reddit.com/r/csMajors/comments/1d2kdr0/my_parents_are_forcing_me_to_get_degree_bachelors/"/>
+        <updated>2024-05-28T14:09:24.000Z</updated>
+        <summary type="html"><![CDATA[To expand on this a bit more, I'm from a third world country and for people here anything that has to do with "big money" is the best and the only thing that one should follow/chase in their life. Some of my friends are very much into CS (according to them, this is the "easiest" science subject out there) and the parents of these friends discussed to my parents that studying CS in university (abroad) is the best way to earn a million dollars, every kid in the US or Europe is earning 6 figures and buying lamborghinis blah blah blah you get the point. My parents are shoving "YOU MUST STUDY CS IN UNIVERSITY OR ELSE YOU'LL BE UNEMPLOYED WORKING MIN WAGE" down my throat because I don't really enjoy or like CS and I don't want a degree on it.
+ Why do I not like CS? Well, there's not too deep of …]]></summary>
+        <author>
+            <name>top scoring links : csMajors</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Accepting presentation proposals for C++ Boston Meetup]]></title>
+        <id>https://www.reddit.com/r/cpp/comments/1d2kcia/accepting_presentation_proposals_for_c_boston/</id>
+        <link href="https://www.reddit.com/r/cpp/comments/1d2kcia/accepting_presentation_proposals_for_c_boston/"/>
+        <updated>2024-05-28T14:07:51.000Z</updated>
+        <summary type="html"><![CDATA[Presentation proposals are open for C++ Boston Group!
+ We are accepting presentation proposals for future meetups! Do you have something awesome to share? Best practices that you feel others may benefit from? Please submit your proposal below and we will take it into consideration for upcoming meetups!
+ https://forms.gle/uSXitfPWBzV525NR9
+    submitted by    /u/cpp_ug_boston    to    r/cpp  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[People who program on C++, what is it like?]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1d2k5ox/people_who_program_on_c_what_is_it_like/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1d2k5ox/people_who_program_on_c_what_is_it_like/"/>
+        <updated>2024-05-28T13:59:55.000Z</updated>
+        <summary type="html"><![CDATA[I program on Python. I have been thinking about learning C++ just because I am very curious to learn it. What is it like to program on it? Why do you like it? What kind of programs do you usually build with it?
+ Interested to hear personal opinions, and not textbook definition.
+    submitted by    /u/AthanmichPC    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Looking for commercial solutions of faraday cage blocking only a certain bands]]></title>
+        <id>https://www.reddit.com/r/hacking/comments/1d2jukn/looking_for_commercial_solutions_of_faraday_cage/</id>
+        <link href="https://www.reddit.com/r/hacking/comments/1d2jukn/looking_for_commercial_solutions_of_faraday_cage/"/>
+        <updated>2024-05-28T13:45:24.000Z</updated>
+        <summary type="html"><![CDATA[Hello everyone,
+ I'm looking for a solution to test one product against jamming attacks. I've been asked to test the jamming consequences on the product with BLE, GPS, and LTE. The first solution is to get an FCC experimental license and conduct real jamming. The second option is to use a Faraday cage, but I'm looking for one that can block specific bands individually.
+ Thanks in advance.
+    submitted by    /u/Xander_H1  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : hacking</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[using object oriented programming on C is beautiful]]></title>
+        <id>https://www.reddit.com/r/C_Programming/comments/1d2jj16/using_object_oriented_programming_on_c_is/</id>
+        <link href="https://www.reddit.com/r/C_Programming/comments/1d2jj16/using_object_oriented_programming_on_c_is/"/>
+        <updated>2024-05-28T13:30:14.000Z</updated>
+        <summary type="html"><![CDATA[the first time i read somewhere that i could use oop in c, i jumped from my desk and started reading and i found that it was far more intuitive and logic than any other "oop native" language i don't knowe it felt natural respect to other langauge. did you have the same experience? 
+    submitted by    /u/cinghialotto03  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[What questions would you ask a recent grad for an interview]]></title>
+        <id>https://www.reddit.com/r/C_Programming/comments/1d2jifo/what_questions_would_you_ask_a_recent_grad_for_an/</id>
+        <link href="https://www.reddit.com/r/C_Programming/comments/1d2jifo/what_questions_would_you_ask_a_recent_grad_for_an/"/>
+        <updated>2024-05-28T13:29:27.000Z</updated>
+        <summary type="html"><![CDATA[I have an interview coming up for a company that mostly uses C. I have been told to expect questions about C, testing the code, compilers, linux internals. The company provides consulting on system software performance so I'm also expecting some questions about that
+    submitted by    /u/Beautiful_Tip178  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Learn to Use .NET SDK CLI tools to develop C# on Windows,Linux and Mac OSX]]></title>
+        <id>https://www.reddit.com/r/csharp/comments/1d2j5bb/learn_to_use_net_sdk_cli_tools_to_develop_c_on/</id>
+        <link href="https://www.reddit.com/r/csharp/comments/1d2j5bb/learn_to_use_net_sdk_cli_tools_to_develop_c_on/"/>
+        <updated>2024-05-28T13:12:33.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/xanthium-enterprises  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Kernel hex dump; suspicious difference]]></title>
+        <id>https://www.reddit.com/r/hacking/comments/1d2j5ab/kernel_hex_dump_suspicious_difference/</id>
+        <link href="https://www.reddit.com/r/hacking/comments/1d2j5ab/kernel_hex_dump_suspicious_difference/"/>
+        <updated>2024-05-28T13:12:32.000Z</updated>
+        <summary type="html"><![CDATA[I was figgling around kelner, assembler and hexdump
+ I downloaded kernel image from https://ubuntu.pkgs.org/22.04/ubuntu-updates-main-amd64/linux-image-unsigned-6.5.0-35-generic_6.5.0-35.35~22.04.1_amd64.deb.html
+ and I compared it to my kernel image located at /boot/vmlinuz-6.5.0-35-generic
+ * I dumped both files to hexdump output
+ * I created diff using `diff`
+ This is the result https://pastebin.com/YfJeDt7E
+ Where are these diff results come from?
+ I'm not very well familiar with assembler but this looks suspicious.
+    submitted by    /u/milicjant2  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : hacking</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[P2996] Static perfect hashing (enum_to_string/string_to_enum)]]></title>
+        <id>https://www.reddit.com/r/cpp/comments/1d2j4pv/p2996_static_perfect_hashing_enum_to_stringstring/</id>
+        <link href="https://www.reddit.com/r/cpp/comments/1d2j4pv/p2996_static_perfect_hashing_enum_to_stringstring/"/>
+        <updated>2024-05-28T13:11:47.000Z</updated>
+        <summary type="html"><![CDATA[Just some fun with applying static perfect hashing - https://en.wikipedia.org/wiki/Perfect_hash_function and reflection with run-time performance in mind.
+  
+Static reflection - https://wg21.link/P2996
+ Static perfect hashing library - https://github.com/boost-ext/mph
+  
+Example
+ enum class fib { F0 = 0, F1 = 1, F2 = 1, F3 = 2, F4 = 3, F5 = 5, F6 = 8, F7 = 13, F8 = 21, F9 = 34, F10 = 55, F11 = 89, F12 = 144, F13 = 233, F14 = 377, F15 = 610, F16 = 987, }; 
+  
+enum_to_string
+  
+template<class E> requires std::is_enum_v<E> inline constexpr auto enumerators = []<auto... Ns>(std::index_sequence<Ns...>) { return std::array{ std::pair{ [:std::meta::enumerators_of(^E)[Ns]:], std::meta::name_of(std::meta::enumerators_of(^E)[Ns]).data() // null terminated }... }; }(std::make_index_sequence<std::size…]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Rapid Development with Runtime Compiled C++ Talk]]></title>
+        <id>https://www.reddit.com/r/cpp/comments/1d2iye9/rapid_development_with_runtime_compiled_c_talk/</id>
+        <link href="https://www.reddit.com/r/cpp/comments/1d2iye9/rapid_development_with_runtime_compiled_c_talk/"/>
+        <updated>2024-05-28T13:03:24.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/dougbinks    to    r/cpp  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Alternatives to Makefiles written in Go]]></title>
+        <id>https://www.reddit.com/r/golang/comments/1d2iou9/alternatives_to_makefiles_written_in_go/</id>
+        <link href="https://www.reddit.com/r/golang/comments/1d2iou9/alternatives_to_makefiles_written_in_go/"/>
+        <updated>2024-05-28T12:50:23.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/eminetto  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : golang</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[I just realized that I don't know much.]]></title>
+        <id>https://www.reddit.com/r/learnprogramming/comments/1d2iepw/i_just_realized_that_i_dont_know_much/</id>
+        <link href="https://www.reddit.com/r/learnprogramming/comments/1d2iepw/i_just_realized_that_i_dont_know_much/"/>
+        <updated>2024-05-28T12:35:53.000Z</updated>
+        <summary type="html"><![CDATA[I started my programming journey 5 years ago in frontend development. I was so happy when I got my first job. As the only female developer in the company, I was scared that I wouldn't fit in, but it was completely the opposite! Three years later, the company is shutting down, and I will soon be out of a job.
+ After I started applying for jobs a few months ago, I realized how much I don't know. I can build something, and most of the time I'll find a solution and complete the task, or the app. I felt like I understood most of the things I was working with.
+ A few months ago, an interviewer asked me about state management in Angular, and I looked at him like he came from another planet.
+ Of course, that didn't go well, and I didn't get a job offer. I decided to ask the team lead at my current job about this question, and he told me that we never really used state management in the apps we were building.
+ Not to mention that the latest version we were working with was 12.
+ This is all my mistake. Complaining about the amount of work I had to do, or the overtime work would be a bad excuse. Instead of focusing only on the tasks, I should have kept learning in my free time. Now that version 18 is out, I am missing a lot, and I feel so embarrassed. I am scared of applying for jobs now and am even reconsidering working in a coffee shop until I catch up on all the missing concepts we never covered at my soon-to-be ex-company. I should have found a mentor a lot earlier.
+ Enough of this.
+ To everyone entering the world of programming and learning: don't give up if you're passionate about it. Continuous learning is essential in this field, and I learned it the harder way.
+    submitted by    /u/DullMoment_1  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : learnprogramming</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Introducing LibVLCSharp for MAUI]]></title>
+        <id>https://www.reddit.com/r/csharp/comments/1d2i78z/introducing_libvlcsharp_for_maui/</id>
+        <link href="https://www.reddit.com/r/csharp/comments/1d2i78z/introducing_libvlcsharp_for_maui/"/>
+        <updated>2024-05-28T12:25:01.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/mtz94  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csharp</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Will modules become a cargo/crates for cpp?]]></title>
         <id>https://www.reddit.com/r/cpp/comments/1d2i2j7/will_modules_become_a_cargocrates_for_cpp/</id>
@@ -18,6 +911,17 @@
  [link]   [comments]]]></summary>
         <author>
             <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[These New Flutter/Dart Features Make My Life Easier]]></title>
+        <id>https://www.reddit.com/r/programming/comments/1d2i1iw/these_new_flutterdart_features_make_my_life_easier/</id>
+        <link href="https://www.reddit.com/r/programming/comments/1d2i1iw/these_new_flutterdart_features_make_my_life_easier/"/>
+        <updated>2024-05-28T12:16:31.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/ImpressiveContest283  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : programming</name>
         </author>
     </entry>
     <entry>
@@ -44,6 +948,18 @@
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[My life as a software engineer]]></title>
+        <id>https://www.reddit.com/r/learnprogramming/comments/1d2h8y2/my_life_as_a_software_engineer/</id>
+        <link href="https://www.reddit.com/r/learnprogramming/comments/1d2h8y2/my_life_as_a_software_engineer/"/>
+        <updated>2024-05-28T11:32:13.000Z</updated>
+        <summary type="html"><![CDATA[I was trying to be a swe and studied for 1,5 yrs on my own. Mainly js and frontend development but i was unable to get an internship and ran out of money. Now i live in a eastern european homeless shelter because i have no job.
+    submitted by    /u/TheBigPoppa102  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : learnprogramming</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Logical reasoning question]]></title>
         <id>https://www.reddit.com/r/C_Programming/comments/1d2h8i4/logical_reasoning_question/</id>
         <link href="https://www.reddit.com/r/C_Programming/comments/1d2h8i4/logical_reasoning_question/"/>
@@ -63,6 +979,30 @@
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Blazingly Fast Shadow Stacks for Go]]></title>
+        <id>https://www.reddit.com/r/golang/comments/1d2h33i/blazingly_fast_shadow_stacks_for_go/</id>
+        <link href="https://www.reddit.com/r/golang/comments/1d2h33i/blazingly_fast_shadow_stacks_for_go/"/>
+        <updated>2024-05-28T11:22:37.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/felixge  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : golang</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Why does my setxkbmap reset when I install something using pacman?]]></title>
+        <id>https://www.reddit.com/r/archlinux/comments/1d2gwk0/why_does_my_setxkbmap_reset_when_i_install/</id>
+        <link href="https://www.reddit.com/r/archlinux/comments/1d2gwk0/why_does_my_setxkbmap_reset_when_i_install/"/>
+        <updated>2024-05-28T11:11:44.000Z</updated>
+        <summary type="html"><![CDATA[I've noticed that when I install certain programs (forgot which ones) using pacman my keybindings that I have set using setxkbmap resets. This results in me having to execute my setxkbmap command manually so that things are back to normal.
+ Why does this happen and is there a solution to this?
+    submitted by    /u/pipewire  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : archlinux</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Searching for a Message Queueing service/library with peek]]></title>
         <id>https://www.reddit.com/r/csharp/comments/1d2gp1r/searching_for_a_message_queueing_servicelibrary/</id>
         <link href="https://www.reddit.com/r/csharp/comments/1d2gp1r/searching_for_a_message_queueing_servicelibrary/"/>
@@ -77,6 +1017,17 @@
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[areYouSureAboutThat]]></title>
+        <id>https://www.reddit.com/r/ProgrammerHumor/comments/1d2gbi3/areyousureaboutthat/</id>
+        <link href="https://www.reddit.com/r/ProgrammerHumor/comments/1d2gbi3/areyousureaboutthat/"/>
+        <updated>2024-05-28T10:34:55.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/CraftBox  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : ProgrammerHumor</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Need some guidance regarding CFD(Computational Fluid Dynamics) coding in C++]]></title>
         <id>https://www.reddit.com/r/cpp_questions/comments/1d2g8o3/need_some_guidance_regarding_cfdcomputational/</id>
         <link href="https://www.reddit.com/r/cpp_questions/comments/1d2g8o3/need_some_guidance_regarding_cfdcomputational/"/>
@@ -88,6 +1039,52 @@
  [link]   [comments]]]></summary>
         <author>
             <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[pointerToVoid]]></title>
+        <id>https://www.reddit.com/r/ProgrammerHumor/comments/1d2g78y/pointertovoid/</id>
+        <link href="https://www.reddit.com/r/ProgrammerHumor/comments/1d2g78y/pointertovoid/"/>
+        <updated>2024-05-28T10:26:48.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/danielsoft1  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : ProgrammerHumor</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Which CS branches do you think will be most employable in 1-2 years?]]></title>
+        <id>https://www.reddit.com/r/csMajors/comments/1d2fx8s/which_cs_branches_do_you_think_will_be_most/</id>
+        <link href="https://www.reddit.com/r/csMajors/comments/1d2fx8s/which_cs_branches_do_you_think_will_be_most/"/>
+        <updated>2024-05-28T10:08:22.000Z</updated>
+        <summary type="html"><![CDATA[Software development? Cybersecurity? Data Science? AI/ML? DevOps? IT? Web Developer? Something else?
+ I need advice on where to focus my learning efforts to find a job in the near future. Would appreciate your inputs!
+    submitted by    /u/ConfusionTop2563  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csMajors</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Procedural generation performance gains 💪🤙]]></title>
+        <id>https://www.reddit.com/r/godot/comments/1d2frer/procedural_generation_performance_gains/</id>
+        <link href="https://www.reddit.com/r/godot/comments/1d2frer/procedural_generation_performance_gains/"/>
+        <updated>2024-05-28T09:57:55.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/TeamLDM  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : godot</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Announcing Wasmi v0.32: New WebAssembly Execution Engine: Faster Than Ever]]></title>
+        <id>https://www.reddit.com/r/rust/comments/1d2fpsx/announcing_wasmi_v032_new_webassembly_execution/</id>
+        <link href="https://www.reddit.com/r/rust/comments/1d2fpsx/announcing_wasmi_v032_new_webassembly_execution/"/>
+        <updated>2024-05-28T09:54:44.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/Robbepop  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : rust</name>
         </author>
     </entry>
     <entry>
@@ -133,6 +1130,17 @@
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Using a dev diary seems to be worthwhile]]></title>
+        <id>https://www.reddit.com/r/programming/comments/1d2f8tw/using_a_dev_diary_seems_to_be_worthwhile/</id>
+        <link href="https://www.reddit.com/r/programming/comments/1d2f8tw/using_a_dev_diary_seems_to_be_worthwhile/"/>
+        <updated>2024-05-28T09:20:24.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/still_sitter_g  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : programming</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Malware research]]></title>
         <id>https://www.reddit.com/r/C_Programming/comments/1d2f6pr/malware_research/</id>
         <link href="https://www.reddit.com/r/C_Programming/comments/1d2f6pr/malware_research/"/>
@@ -145,6 +1153,23 @@
  [link]   [comments]]]></summary>
         <author>
             <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[how do i enable fingerprint in debian]]></title>
+        <id>https://www.reddit.com/r/debian/comments/1d2f20c/how_do_i_enable_fingerprint_in_debian/</id>
+        <link href="https://www.reddit.com/r/debian/comments/1d2f20c/how_do_i_enable_fingerprint_in_debian/"/>
+        <updated>2024-05-28T09:06:52.000Z</updated>
+        <summary type="html"><![CDATA[https://preview.redd.it/9ixrlxmzu43d1.png?width=1366&format=png&auto=webp&s=6e3934aa923b5550d71e4056ce896817b5673344
+ this is my lssub 
+ lordseventh@debian:~$
+ fprintd-enroll lordseventh
+ Impossible to enroll: GDBus.Error:net.reactivated.Fprint.Error.NoSuchDevice: No devices available
+ when i try to enroll i get this eror 
+    submitted by    /u/JSdeveloper0567  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : debian</name>
         </author>
     </entry>
     <entry>
@@ -205,6 +1230,18 @@
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Should i learn C# or C++]]></title>
+        <id>https://www.reddit.com/r/learnprogramming/comments/1d2el4r/should_i_learn_c_or_c/</id>
+        <link href="https://www.reddit.com/r/learnprogramming/comments/1d2el4r/should_i_learn_c_or_c/"/>
+        <updated>2024-05-28T08:32:00.000Z</updated>
+        <summary type="html"><![CDATA[I've been learning python and following along with CS50, im not at a high enough level yet but i wanted to learn a new programming language after python and narrowed down my options to C++ or C#, since i know python for things like automation and basic programs i'm mainly focosing on game development, and whichever language i learn will also effect what game engine i learn (unity vs unreal engine).
+    submitted by    /u/Ornery_Appeal_3311  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : learnprogramming</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[What should I use to make GUI for a chess game.]]></title>
         <id>https://www.reddit.com/r/csharp/comments/1d2ehw9/what_should_i_use_to_make_gui_for_a_chess_game/</id>
         <link href="https://www.reddit.com/r/csharp/comments/1d2ehw9/what_should_i_use_to_make_gui_for_a_chess_game/"/>
@@ -214,6 +1251,19 @@
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[What temporary jobs have you laid off folks picked up?]]></title>
+        <id>https://www.reddit.com/r/cscareerquestions/comments/1d2ebdc/what_temporary_jobs_have_you_laid_off_folks/</id>
+        <link href="https://www.reddit.com/r/cscareerquestions/comments/1d2ebdc/what_temporary_jobs_have_you_laid_off_folks/"/>
+        <updated>2024-05-28T08:10:59.000Z</updated>
+        <summary type="html"><![CDATA[Recently got laid off, have a degree and 6YOE as an AWS cloud engineer and havent been able to find a job for 3 months now and got bills to pay. I have hope the job market will recover but could take years. Does anyone have suggestions for a 1-2 year career outside of tech? my Knees are fucked after multiple surgeries and im not able to do anything super physical.
+ Partner thankfully has infinite job security, basically just need to make full time minimum wage to keep my house. Ang suggestions?
+    submitted by    /u/lostmymainagain123  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : cscareerquestions</name>
         </author>
     </entry>
     <entry>
@@ -233,6 +1283,19 @@
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[What key-value datastore do you use in production?]]></title>
+        <id>https://www.reddit.com/r/golang/comments/1d2e01k/what_keyvalue_datastore_do_you_use_in_production/</id>
+        <link href="https://www.reddit.com/r/golang/comments/1d2e01k/what_keyvalue_datastore_do_you_use_in_production/"/>
+        <updated>2024-05-28T07:48:12.000Z</updated>
+        <summary type="html"><![CDATA[I did some looking around and the popular choices are Redis, Keydb, Dragonflydb and Valkey. 
+ Which do you use and why? 
+    submitted by    /u/Severe-Mix-4326  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : golang</name>
         </author>
     </entry>
     <entry>
@@ -273,6 +1336,17 @@
  [link]   [comments]]]></summary>
         <author>
             <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Hurl, the Exceptional language]]></title>
+        <id>https://www.reddit.com/r/programming/comments/1d2csuo/hurl_the_exceptional_language/</id>
+        <link href="https://www.reddit.com/r/programming/comments/1d2csuo/hurl_the_exceptional_language/"/>
+        <updated>2024-05-28T06:22:59.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/ketralnis  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : programming</name>
         </author>
     </entry>
     <entry>
@@ -430,6 +1504,18 @@
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[I got my foot in the door.]]></title>
+        <id>https://www.reddit.com/r/csMajors/comments/1d2822a/i_got_my_foot_in_the_door/</id>
+        <link href="https://www.reddit.com/r/csMajors/comments/1d2822a/i_got_my_foot_in_the_door/"/>
+        <updated>2024-05-28T01:42:27.000Z</updated>
+        <summary type="html"><![CDATA[I got my first IT job after community college. It’s 20 hr as an apprentice, my job title is Programmer Analyst.
+    submitted by    /u/jlbords  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csMajors</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[I converted an old crypto miner into an OVERPOWERED Hashcat password cracking rig.]]></title>
         <id>https://www.reddit.com/r/hacking/comments/1d27kg2/i_converted_an_old_crypto_miner_into_an/</id>
         <link href="https://www.reddit.com/r/hacking/comments/1d27kg2/i_converted_an_old_crypto_miner_into_an/"/>
@@ -438,6 +1524,32 @@
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : hacking</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[What method do games like Genshin Impact and Wuthering Waves use for making hair?]]></title>
+        <id>https://www.reddit.com/r/gamedev/comments/1d27fn0/what_method_do_games_like_genshin_impact_and/</id>
+        <link href="https://www.reddit.com/r/gamedev/comments/1d27fn0/what_method_do_games_like_genshin_impact_and/"/>
+        <updated>2024-05-28T01:09:27.000Z</updated>
+        <summary type="html"><![CDATA[Hiya all, I'm looking to practice my character modelling during my break from uni. I wanted to get some more ideas for how the hair is done for these games. When making hair for stylised characters, I have sculpted the hair in Zbrush and the retopped, however looking at the hair in these games I'm unsure if they have a high poly for the hair or just jump straight to building the low poly. And as a side question, is floating geo common for stylised hair? I've avoided in the past out of inexperience, but looking back on it now I imagine its probably the best way to make sylised hair? And another one on the topic of hair, are hair cards a method purely for creating semi/realistic looking hair similar to xgen?
+ sorry if i worded it poorely, a bit tired atm
+ TLDR looking for suggestions/ideas for how the hair is modelled for characters in these games 
+    submitted by    /u/JustARandomWeeb__  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : gamedev</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Where do I start with C++]]></title>
+        <id>https://www.reddit.com/r/learnprogramming/comments/1d27f23/where_do_i_start_with_c/</id>
+        <link href="https://www.reddit.com/r/learnprogramming/comments/1d27f23/where_do_i_start_with_c/"/>
+        <updated>2024-05-28T01:08:37.000Z</updated>
+        <summary type="html"><![CDATA[I have no idea how to code and really want to start learning C++, I just don't know what to do. Any advice? Thanks.
+    submitted by    /u/HJ_Br  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : learnprogramming</name>
         </author>
     </entry>
     <entry>
@@ -494,6 +1606,29 @@
  [link]   [comments]]]></summary>
         <author>
             <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[can i make my boot time even faster?]]></title>
+        <id>https://www.reddit.com/r/archlinux/comments/1d251v9/can_i_make_my_boot_time_even_faster/</id>
+        <link href="https://www.reddit.com/r/archlinux/comments/1d251v9/can_i_make_my_boot_time_even_faster/"/>
+        <updated>2024-05-27T23:10:05.000Z</updated>
+        <summary type="html"><![CDATA[systemd-analyze
+ Startup finished in 4.927s (firmware) + 2.195s (loader) + 502ms (kernel) + 4.367s (initrd) + 2.781s (userspace) = 14.773s 
+ besides setting grub timeout to 0 what else can i do?
+ asus laptop, core i5-11400H, rtx2050
+ systemd-analyze critical-chain
+ graphical.target u/2.013s └─multi-user.target u/2.013s └─getty.target u/2.013s └─getty@tty1.service u/2.013s └─plymouth-quit-wait.service u/1.980s +23ms └─systemd-user-sessions.service u/1.976s +2ms └─network.target u/1.967s └─NetworkManager.service u/1.684s +283ms └─basic.target u/1.683s └─dbus-broker.service u/1.662s +20ms └─dbus.socket u/1.657s └─sysinit.target u/1.655s └─systemd-binfmt.service u/904ms +751ms └─proc-sys-fs-binfmt_misc.mount u/1.652s +2ms └─proc-sys-fs-binfmt_misc.automount u/606ms 
+ mkinitcpio.conf
+ MODULES=(i915 nvidia nvidia_modeset nvidia_uvm nvidia_drm) BINARIES=() FILES=() HOOKS=(base systemd plymouth autodetect microcode keyboard sd-vconsole modconf block filesystems fsck) COMPRESSION="lz4" 
+ already using an ssd
+ uname -a
+ Linux dybbuk 6.9.2-zen1-1-zen #1 ZEN SMP PREEMPT_DYNAMIC Sun, 26 May 2024 01:30:09 +0000 x86_64 GNU/Linux 
+ i know ~15 secs is kinda good, i just wanna know if i can push it even further.
+    submitted by    /u/Odd_Ad5698  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : archlinux</name>
         </author>
     </entry>
     <entry>
@@ -674,6 +1809,20 @@
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Are all CI/CD Tools similar?]]></title>
+        <id>https://www.reddit.com/r/devops/comments/1d20ach/are_all_cicd_tools_similar/</id>
+        <link href="https://www.reddit.com/r/devops/comments/1d20ach/are_all_cicd_tools_similar/"/>
+        <updated>2024-05-27T19:45:45.000Z</updated>
+        <summary type="html"><![CDATA[So I started an intern position in a devops/IT role and am using Jenkins for the first time. Looking online, it looks like Jenkins gets a bad rep and it's alternatives are usually preferred.
+ So my question: are Jenkins and all the other tools similar in understanding concepts and usage? If I learn how to use Jenkins, would it be easy to use other tools?
+ I am mainly curious because I am hoping to learn as much as I can from this internship, and I hope that learning Jenkins means I understand how to use other tools to some degree.
+    submitted by    /u/Eggaru  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : devops</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[How to know when to try switching jobs?]]></title>
         <id>https://www.reddit.com/r/ExperiencedDevs/comments/1d20804/how_to_know_when_to_try_switching_jobs/</id>
         <link href="https://www.reddit.com/r/ExperiencedDevs/comments/1d20804/how_to_know_when_to_try_switching_jobs/"/>
@@ -688,6 +1837,17 @@
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : ExperiencedDevs</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Linux Patches Posted For Enabling A 22 x 35 mm RISC-V / ARM Board]]></title>
+        <id>https://www.reddit.com/r/linux/comments/1d2008h/linux_patches_posted_for_enabling_a_22_x_35_mm/</id>
+        <link href="https://www.reddit.com/r/linux/comments/1d2008h/linux_patches_posted_for_enabling_a_22_x_35_mm/"/>
+        <updated>2024-05-27T19:35:33.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/unixbhaskar  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
         </author>
     </entry>
     <entry>
@@ -1260,6 +2420,27 @@ Will this method work?
  [link]   [comments]]]></summary>
         <author>
             <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[What to do with AWS consulting partner in devops team]]></title>
+        <id>https://www.reddit.com/r/devops/comments/1d1pjfe/what_to_do_with_aws_consulting_partner_in_devops/</id>
+        <link href="https://www.reddit.com/r/devops/comments/1d1pjfe/what_to_do_with_aws_consulting_partner_in_devops/"/>
+        <updated>2024-05-27T11:39:47.000Z</updated>
+        <summary type="html"><![CDATA[Long story short, i’m about 4 to 5 FTE short in our team in order to deliver the projects the business wants. 
+ I’m an acting lead and I’ve been asked how I might use two or three contractors from a AWS consulting agency to help us deliver on our BAU and devops uplift work. 
+ My pain points are different levels of maturity across our cloud stack. 
+ I have several EKS environments running just a single API application and what I feel is a very fragile terragrunt / helm stack (setup like 5-6 years ago) our api product hasn’t really evolved just waiting for onprem project to kick off next year but feel this infrastructure as code isn’t ready for it. 
+ EKS upgrades are serious toil on my small team. By the time we get through the quarterly upgrade cycle we’re planning it again 8-12 weeks later. Unlikely to get buy in on switching to ECS due to onprem move planned next year. 
+ I’ve got another 8 or so AWS accounts mostly serverless, ec2 pets in a mixture of cloudformation and SAM. I’d ideally like this moved to cdk to empower developer self service. Because my team need to help deploy new resources via cloudformation an a lot of clickops has snuck in. 
+ My existing team are familiar with terraform and our terragrunt stack but would struggle with creating new modules or using a public one to implement something. 
+ They know a bit of bash but not python or node so cdk will be a massive leaning curve imho (but I picked up enough typescript in 3 months to support cdk within my former team to support developers and using a bit of ChatGPT and cdk got some automation lambdas working!) as they more so come from onprem world and dabble on cloud/devops. 
+ Assuming I have the opportunity to hire 2-3 devops engineers from an AWS consulting partner and they worked within my team how would I best use them? 
+ I don’t have any infa patterns to hand over and I’m capacity constrained due to being a contributor to other projects as well as acting lead. 
+    submitted by    /u/hashkent  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : devops</name>
         </author>
     </entry>
     <entry>
@@ -2125,6 +3306,17 @@ https://www.reddit.com/r/cpp/comments/xbn04o/comment/io0k5xd/?utm_source=share&u
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : golang</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[momentOfTruth]]></title>
+        <id>https://www.reddit.com/r/ProgrammerHumor/comments/1d1apsx/momentoftruth/</id>
+        <link href="https://www.reddit.com/r/ProgrammerHumor/comments/1d1apsx/momentoftruth/"/>
+        <updated>2024-05-26T20:43:38.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/wish_dollar  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : ProgrammerHumor</name>
         </author>
     </entry>
     <entry>
@@ -3019,6 +4211,16 @@ Now let's say we have the following code snippet:
  [link]   [comments]]]></summary>
         <author>
             <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Is the tech job market really that bad?]]></title>
+        <id>https://www.reddit.com/r/cscareerquestions/comments/1d0v7rj/is_the_tech_job_market_really_that_bad/</id>
+        <link href="https://www.reddit.com/r/cscareerquestions/comments/1d0v7rj/is_the_tech_job_market_really_that_bad/"/>
+        <updated>2024-05-26T06:24:05.000Z</updated>
+        <summary type="html"><![CDATA[I just graduated with a degree in CS from a mediocre state college in Florida. When I was applying for internships last year, I sent out around 30 applications, got 5 interviews and 3 offers - all were F500 companies. I accepted a fullstack swe internship from a major fintech company. I didn't bother with sending applications to FAANG companies as they were going through their mass layoffs, plus I overheard the type of people that work there, although are very bright, have a superiority complexes with the schools they came from versus others and they go out of their way to make it known, in addition to mass outsourcings of jobs to India - it really turned me off from even wanting to try. Also, at this time, I had no idea how bad the job market was in Tech until I started interning and talk…]]></summary>
+        <author>
+            <name>top scoring links : cscareerquestions</name>
         </author>
     </entry>
     <entry>
@@ -4657,6 +5859,18 @@ whether or not addressable storage is actually used, the address of any part of 
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Manager (me) needing more technical work]]></title>
+        <id>https://www.reddit.com/r/ExperiencedDevs/comments/1d03swg/manager_me_needing_more_technical_work/</id>
+        <link href="https://www.reddit.com/r/ExperiencedDevs/comments/1d03swg/manager_me_needing_more_technical_work/"/>
+        <updated>2024-05-25T04:21:33.000Z</updated>
+        <summary type="html"><![CDATA[I'm a 50-year-old first-level manager at a FAANG type company. I was recently successfully managing a team of 13 split into 3 teams with strong TLs in a domain area where I was previously an IC
+ A year ago my division did a big reorg and I was moved to manage a smaller team of totally different people on another product where I didn't have strong domain knowledge (although the underlying tech stack is similar to what I used to code at).
+ I started in this new role prioritizing things that my previous role needed me to focus on - tweaking individuals' scope and roles to align the team goals with their career, coaching the senior engineers in their work as TLs and representatives in cross-team work, some hiring firing and retention, and expecting project management and architecture issues th…]]></summary>
+        <author>
+            <name>top scoring links : ExperiencedDevs</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Plasma 6.1 beta is in [kde-unstable]]]></title>
         <id>https://www.reddit.com/r/archlinux/comments/1d03aby/plasma_61_beta_is_in_kdeunstable/</id>
         <link href="https://www.reddit.com/r/archlinux/comments/1d03aby/plasma_61_beta_is_in_kdeunstable/"/>
@@ -5147,6 +6361,18 @@ This project offers a deep dive into game mechanics and engine architecture, tra
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : csMajors</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Offloading PR reviews to the team]]></title>
+        <id>https://www.reddit.com/r/ExperiencedDevs/comments/1czt68h/offloading_pr_reviews_to_the_team/</id>
+        <link href="https://www.reddit.com/r/ExperiencedDevs/comments/1czt68h/offloading_pr_reviews_to_the_team/"/>
+        <updated>2024-05-24T19:32:14.000Z</updated>
+        <summary type="html"><![CDATA[I manage a small team with some young but very talented developers and some more experienced but average developers. I’m burned out myself and have enough on my plate as it is. I’m trying to do something about my situation, but my question is, has anyone tried offloading their PR responsibility completely to the team for some parts of the project? As of now, I am almost completely responsible for reviewing code and making decisions and do not have anyone who is ready/experienced to take my role. I see this as my mistake, and given my situation and based on your experience, would a transition such as this work? In this setup, each team member would be obliged to participate in the code reviewing process.
+    submitted by    /u/NoMicroenvironmental  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : ExperiencedDevs</name>
         </author>
     </entry>
     <entry>
@@ -7277,6 +8503,22 @@ for following code:
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Free tier of GitLab CI/CD]]></title>
+        <id>https://www.reddit.com/r/devops/comments/1cysw32/free_tier_of_gitlab_cicd/</id>
+        <link href="https://www.reddit.com/r/devops/comments/1cysw32/free_tier_of_gitlab_cicd/"/>
+        <updated>2024-05-23T13:33:29.000Z</updated>
+        <summary type="html"><![CDATA[We are beginning to work in GitLab to create our pipeline and are working in the free tier of it. 
+ Just got hit with the “namespace had 5% or less shared runner pipeline minutes. Once it runs out, no new jobs or pipelines will run.”
+ We are startup right now, and don’t have much of a budget. 
+ I didn’t know how many minutes we needed, I thought that the free tier would be adequate enough. 
+ Any advice ?
+    submitted by    /u/Constant-Incident603  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : devops</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Are US Software Developers on steroids?]]></title>
         <id>https://www.reddit.com/r/cscareerquestions/comments/1cysmzm/are_us_software_developers_on_steroids/</id>
         <link href="https://www.reddit.com/r/cscareerquestions/comments/1cysmzm/are_us_software_developers_on_steroids/"/>
@@ -8588,6 +9830,17 @@ What is the timing for scanline 0? How long does the PPU stay in each mode?
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Amber: Programming Language that compiles to Bash]]></title>
+        <id>https://www.reddit.com/r/linux/comments/1cy6nmi/amber_programming_language_that_compiles_to_bash/</id>
+        <link href="https://www.reddit.com/r/linux/comments/1cy6nmi/amber_programming_language_that_compiles_to_bash/"/>
+        <updated>2024-05-22T17:55:30.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/jcubic  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Should I learn Go as embedded software engineer?]]></title>
         <id>https://www.reddit.com/r/golang/comments/1cy5e0k/should_i_learn_go_as_embedded_software_engineer/</id>
         <link href="https://www.reddit.com/r/golang/comments/1cy5e0k/should_i_learn_go_as_embedded_software_engineer/"/>
@@ -8845,6 +10098,21 @@ This last point is the one I would emphasize the most: currently, Linux on ARM s
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : godot</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Powerlevel10k Zsh prompt is no longer maintained?]]></title>
+        <id>https://www.reddit.com/r/linux/comments/1cy1x9d/powerlevel10k_zsh_prompt_is_no_longer_maintained/</id>
+        <link href="https://www.reddit.com/r/linux/comments/1cy1x9d/powerlevel10k_zsh_prompt_is_no_longer_maintained/"/>
+        <updated>2024-05-22T14:42:22.000Z</updated>
+        <summary type="html"><![CDATA[Seems to be fresh news, the owner of the powerlevel10k repo just edited 20h ago the readme to add these lines:
+ https://preview.redd.it/6xqvhq16pz1d1.png?width=735&format=png&auto=webp&s=c39518c01e1f35971353af5cc802004feaad0587
+ Kinda sad to see this when I was about to switch on it to try something else than the good ol' Starship :/
+ Or maybe it's a sign Powerlevel11k is coming anywhere soon?
+    submitted by    /u/Nokushi  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
         </author>
     </entry>
     <entry>
@@ -32349,25 +33617,6 @@ while the rust compiler has been an amazing tool along the journey, it just fail
         <summary type="html"><![CDATA[I would like to have and idea of how much harder an emulator for the original GameBoy is compared with the Space Invaders arcade. Is the GameBoy too hard as project after chip8? Or is Sapce Invaders the way to go? What are the main issues I might encounter? 
  Thanks in advance. 
     submitted by    /u/chiefartificer  
- [link]   [comments]]]></summary>
-        <author>
-            <name>Developing Emulators</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[C64 Emulator - Stuck in ramtz loop]]></title>
-        <id>https://www.reddit.com/r/EmuDev/comments/1cfyxpg/c64_emulator_stuck_in_ramtz_loop/</id>
-        <link href="https://www.reddit.com/r/EmuDev/comments/1cfyxpg/c64_emulator_stuck_in_ramtz_loop/"/>
-        <updated>2024-04-29T13:19:39.000Z</updated>
-        <summary type="html"><![CDATA[I am writing a C64 emulator as my first real emulator project after CHIP 8. As of now I have implemented the CPU, bank switching and rendering the screen memory. 
- I loaded up the character, basic and kernal roms and it expectedly didn't work right away. I fixed a couple of bugs but it still doesn't work and I feel stuck.
- The code seems to execute normally but at some point it enters this section of code and it is stuck in this loop infinitely: 
- ramtz1 inc tmp0+1 ;move index thru memory ramtz2 lda (tmp0),y ;get present data tax ;save in .x lda #$55 ;do a $55,$aa test sta (tmp0),y cmp (tmp0),y bne size rol a sta (tmp0),y cmp (tmp0),y bne size txa ;restore old data sta (tmp0),y iny bne ramtz2 beq ramtz1 
- It seems to me that the bne size instructions are the only way out of the loop, but I dont get how they would ever trigger. It stores the accumulator value into memory and then just compares the accumulator against the the memory location the accumulator was just stored in. How are they ever not equal?
- I must be missing something.
- Dump of my emulator's debugging output starting at ramtz1 https://pastebin.com/raw/PZ7Avcyr
- Edit: posted pastebin raw link, or else new reddit wouldn't stop displaying a huge image of the pastebin avatar.
-    submitted by    /u/No-Conclusion-7146  
  [link]   [comments]]]></summary>
         <author>
             <name>Developing Emulators</name>
