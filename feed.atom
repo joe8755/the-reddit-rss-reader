@@ -2,10 +2,812 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://joe8755.github.io/the-reddit-rss-reader/index.html</id>
     <title>the reddit rss reader</title>
-    <updated>2024-06-12T12:38:01.601Z</updated>
+    <updated>2024-06-13T01:25:26.161Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://joe8755.github.io/the-reddit-rss-reader/index.html"/>
     <link rel="self" href="https://joe8755.github.io/the-reddit-rss-reader/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[Confused about class inheritance regarding Enumerables]]></title>
+        <id>https://www.reddit.com/r/csharp/comments/1demmb7/confused_about_class_inheritance_regarding/</id>
+        <link href="https://www.reddit.com/r/csharp/comments/1demmb7/confused_about_class_inheritance_regarding/"/>
+        <updated>2024-06-13T00:58:50.000Z</updated>
+        <summary type="html"><![CDATA[So there is this `DbSet<TEntity>` class.
+ https://learn.microsoft.com/en-us/dotnet/api/microsoft.entityframeworkcore.dbset-1?view=efcore-8.0 
+ It implements the `IEnumerable` interface and it has access to methods like `Take()` etc. 
+ However when I look at the documentation regarding `IEnumerable` it doesn't have a `Take()` method. It says it has one method, `GetEnumerator()`. 
+ https://learn.microsoft.com/en-us/dotnet/api/system.collections.ienumerable?view=net-8.0
+ It turns out that the `Enumerable` class has all these described methods instead. Enumerable implements `IEnumerable`
+ https://learn.microsoft.com/en-us/dotnet/api/system.linq.enumerable?view=net-8.0
+ What I don't understand is how does `DbSet<TEntity>` has access to all the methods of `Enumerable` when it is implementing the class of `IEnumerable` which doesn't have the methods of `Enumerable`?
+    submitted by    /u/Cluttie  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Useful #define statements]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1demgvp/useful_define_statements/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1demgvp/useful_define_statements/"/>
+        <updated>2024-06-13T00:51:06.000Z</updated>
+        <summary type="html"><![CDATA[What r some common define constants/macros to paste into codes to make life easier
+ examples:
+ #define ll long long
+ #define min, max, abs etc.
+ #define pi 3.14159
+ #define fr(i, j, k) for(int i=j; i<k; i++)
+    submitted by    /u/rxns_    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Chain - a Goofy, Functional, Tree-backed List]]></title>
+        <id>https://www.reddit.com/r/java/comments/1deldzs/chain_a_goofy_functional_treebacked_list/</id>
+        <link href="https://www.reddit.com/r/java/comments/1deldzs/chain_a_goofy_functional_treebacked_list/"/>
+        <updated>2024-06-12T23:56:26.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/DelayLucky  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : java</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[my function that returns file contents is causing undefined behaving.]]></title>
+        <id>https://www.reddit.com/r/C_Programming/comments/1del0d5/my_function_that_returns_file_contents_is_causing/</id>
+        <link href="https://www.reddit.com/r/C_Programming/comments/1del0d5/my_function_that_returns_file_contents_is_causing/"/>
+        <updated>2024-06-12T23:38:27.000Z</updated>
+        <summary type="html"><![CDATA[okay, so i found some answers on stackoverflow, i copied the function without really knowing how it works (please forgive me for that) and it worked at first, and now it causes undefined behaviour such as displaying the file contents as cryptic emojis and text, here is the function i used from him, also a link to his answer on stackoverflow: https://stackoverflow.com/a/70291168/2536654 and the function i used from him:
+ char *openfile(FILE *fp) { size_t offset = 0; size_t bufsiz = 1024; char *buffer = malloc(bufsiz); if (buffer == NULL) return NULL; while (fgets(buffer + offset, bufsiz - offset, fp) != NULL) { /* Assumes data does not contain null bytes */ /* Generic problem using fgets() */ size_t newlen = strlen(buffer + offset); offset += newlen; if (bufsiz - offset < 256) { size_t new_size = bufsiz * 2; char *new_data = realloc(buffer, new_size); if (new_data == NULL) { free(buffer); return NULL; } bufsiz = new_size; buffer = new_data; } } if (bufsiz - offset > 256) buffer = realloc(buffer, offset + 1); return buffer; fclose(fp); } 
+ how i used it:
+ FILE *myfile = fopen("../any/file", "r"); printf("%s", openfile(myfile)); 
+    submitted by    /u/Great_Click_9140  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[GPU Parallelization for Non-Deterministic Model]]></title>
+        <id>https://www.reddit.com/r/cpp/comments/1dejul0/gpu_parallelization_for_nondeterministic_model/</id>
+        <link href="https://www.reddit.com/r/cpp/comments/1dejul0/gpu_parallelization_for_nondeterministic_model/"/>
+        <updated>2024-06-12T22:45:40.000Z</updated>
+        <summary type="html"><![CDATA[Hi, I'm looking forward to implement a membrane computing model which is a non-deterministic model supporting maximal parallelism (in a sense that every possible 'rule' which can be applied, will be applied). I am new to GPU parallelization which is what I have in mind (also overall new to C++ parallelization techniques/libraries) and would like to hear some opinions on what options I am given to accomplish this task in C++.
+ Thanks
+    submitted by    /u/sonehxd    to    r/cpp  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Need help with the structure of my openGL SDL program (Cant deal with this dependency injection anymore... is this normal?]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1deiros/need_help_with_the_structure_of_my_opengl_sdl/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1deiros/need_help_with_the_structure_of_my_opengl_sdl/"/>
+        <updated>2024-06-12T21:58:16.000Z</updated>
+        <summary type="html"><![CDATA[I am getting really mad here. So I like to follow a datadriven approach where basically all variables are inside the dataManager class. It holds all variables (loading them from files or hardcoded). Anyway, you see the main structure: A lot of the classes below serve as classes that instantiate further classes. For example UI Manager instantiates around 30 more classe (for all the submenues, cutscenes etc..). Yes they inheret from base classes and I have an UIHandler as well, but still... in general there is so much dependency injection. I would just love to make everything global. All the classes below are also classes where there will only be 1 instance ever. Where I need more instances I usually have structs inside the DataManager. For example I have mapData struct. Inside the WorldMang…]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[As of 2024, which GUI library would you choose]]></title>
+        <id>https://www.reddit.com/r/golang/comments/1dei7f2/as_of_2024_which_gui_library_would_you_choose/</id>
+        <link href="https://www.reddit.com/r/golang/comments/1dei7f2/as_of_2024_which_gui_library_would_you_choose/"/>
+        <updated>2024-06-12T21:33:23.000Z</updated>
+        <summary type="html"><![CDATA[I'm going to write a GUI program that runs several services in the background, and has an interface for the user to configure them. My needs are simple: simple widgets and capable of minimizing to the status bar of the operating system. It will work on Macos, Windows and Linux.
+ I want it to be future proof because I want to provide updates to my users for years to come (if everything goes ok), so I guess I should discard abandoned libraries, or libraries with little to no maintenance.
+ Of course I have checked out https://github.com/go-graphics/go-gui-projects and I have visited the github page of each project to see their activity. Right now the best candidate is Fyne, but I'd like to read your opinion on this. What lib would you choose?
+    submitted by    /u/JavierSobrino  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : golang</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Anybody have to deal with a Palo Alto Firewall at work?]]></title>
+        <id>https://www.reddit.com/r/ExperiencedDevs/comments/1dehrkc/anybody_have_to_deal_with_a_palo_alto_firewall_at/</id>
+        <link href="https://www.reddit.com/r/ExperiencedDevs/comments/1dehrkc/anybody_have_to_deal_with_a_palo_alto_firewall_at/"/>
+        <updated>2024-06-12T21:14:37.000Z</updated>
+        <summary type="html"><![CDATA[The stupid thing is basically a man in the middle attack intercepting all certificates and resigning them. This allows IT to inspect all traffic (note to self don't log into your bank on a work machine) which I guess they feel is necessary.
+ But this also means that for development purposes the certs are broken all the time and you have to go install custom certs. Every dev at the company wastes half a day at least a couple times a year messing with this garbage.
+ We've argued that it is a productivity drain and is miserable to no end. I guess this post is mostly a rant but has anybody had luck convincing IT leadership that launching a man in the middle attack on all internal network traffic is a bad idea?
+    submitted by    /u/Post-mo  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : ExperiencedDevs</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Several instructions inside for-loop initialization section]]></title>
+        <id>https://www.reddit.com/r/cpp/comments/1dehhhs/several_instructions_inside_forloop/</id>
+        <link href="https://www.reddit.com/r/cpp/comments/1dehhhs/several_instructions_inside_forloop/"/>
+        <updated>2024-06-12T21:02:40.000Z</updated>
+        <summary type="html"><![CDATA[I've always wondered is there any possibility to use several instructions inside for-loop initialization section? It's would useful in cases when needed to initialize several variables of different types like this: for (int c = 0, float a = 0.1; ...; ...)
+ I found one example how it could be bypassed: struct { int a=0; char b='a'; } s;, but is there any overhead?
+    submitted by    /u/serkosal    to    r/cpp  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Confused about how '&' operator really works]]></title>
+        <id>https://www.reddit.com/r/C_Programming/comments/1dehgmy/confused_about_how_operator_really_works/</id>
+        <link href="https://www.reddit.com/r/C_Programming/comments/1dehgmy/confused_about_how_operator_really_works/"/>
+        <updated>2024-06-12T21:01:40.000Z</updated>
+        <summary type="html"><![CDATA[In my head it's easy to comprehend it as just "address of (something)", but, for example, if I have int array[2]; and pretend it begins at 0x10 and I increment it like &array + 1, it'll give me 0x22 which is the end of the entire array, but if I do array + 1 it'll give me 0x14 which would be the next element of the array. So is this just the compiler interpreting pointer arithmetic in this way or does '&' actually mean something else?
+    submitted by    /u/Maximum_Cellist_5312  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Graduated last year and I’ve been solo-developing a roguelike instead of looking for a job, my applications were constantly getting rejected and entry level position requirements were actually insane. So I decided to work for a company that actually cares about me, my self.]]></title>
+        <id>https://www.reddit.com/r/csharp/comments/1deh53h/graduated_last_year_and_ive_been_solodeveloping_a/</id>
+        <link href="https://www.reddit.com/r/csharp/comments/1deh53h/graduated_last_year_and_ive_been_solodeveloping_a/"/>
+        <updated>2024-06-12T20:48:14.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/DriftingInDevSpace  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Return by value vs. Return by reference]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1degszr/return_by_value_vs_return_by_reference/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1degszr/return_by_value_vs_return_by_reference/"/>
+        <updated>2024-06-12T20:34:02.000Z</updated>
+        <summary type="html"><![CDATA[Pseudo code of my question (I'm on mobile I'm sorry) 
+ int add_one(const int val) { return val+1; }
+ Versus
+ void add_one(int &val) { val++; }
+ I see the second one a lot around the code I work with and was wondering what advantage it has. In my opinion the first one is a lot more understandable. For example, if there's a function with like 6 arguments example_function(x, y, z, a, b, c) its impossible to know what variables are being modified without looking up the function definition. Versus if the function was val = example_function(x, y, z, a, b, c) then I know the output of that function is now in val. I'm not sure if this has a name or is debated but I need to know! 
+ Thanks!
+    submitted by    /u/nathan_nte    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[I don't understand what std::size_t is.]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1deghpz/i_dont_understand_what_stdsize_t_is/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1deghpz/i_dont_understand_what_stdsize_t_is/"/>
+        <updated>2024-06-12T20:20:49.000Z</updated>
+        <summary type="html"><![CDATA[I just don't get it. I read this whole lesson https://www.learncpp.com/cpp-tutorial/fixed-width-integers-and-size-t/ and there is even a comment there explaining it but I just don't understand what is does or what is is supposed to do. There are some examples but they just don't make sense to me at all. 
+    submitted by    /u/Felizem_velair_    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pacman should auto clean the cache]]></title>
+        <id>https://www.reddit.com/r/archlinux/comments/1degfsd/pacman_should_auto_clean_the_cache/</id>
+        <link href="https://www.reddit.com/r/archlinux/comments/1degfsd/pacman_should_auto_clean_the_cache/"/>
+        <updated>2024-06-12T20:18:38.000Z</updated>
+        <summary type="html"><![CDATA[After reading today for the 20th time about someone who borked their root partition trying to grow it because it was full, I thought really pacman should be cleaning its cache. No properly engineered cache grows without bounds. There should be an upper size limit and a retention policy configured in pacman.conf. Then every time pacman adds something to the cache, it should check the size and policy, and discard as needed. The defaults should be reasonable, and you should be able to disable the whole thing if you want to manage it manually.
+    submitted by    /u/Hamilton950B  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : archlinux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[The Swift compiler is slow due to how types are inferred]]></title>
+        <id>https://www.reddit.com/r/programming/comments/1deg1ce/the_swift_compiler_is_slow_due_to_how_types_are/</id>
+        <link href="https://www.reddit.com/r/programming/comments/1deg1ce/the_swift_compiler_is_slow_due_to_how_types_are/"/>
+        <updated>2024-06-12T20:02:09.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/ketralnis  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : programming</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Announcing the Safety-Critical Rust Consortium]]></title>
+        <id>https://www.reddit.com/r/rust/comments/1defu3q/announcing_the_safetycritical_rust_consortium/</id>
+        <link href="https://www.reddit.com/r/rust/comments/1defu3q/announcing_the_safetycritical_rust_consortium/"/>
+        <updated>2024-06-12T19:53:55.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/pjmlp  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : rust</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Recommendations for memory pools that work with virtual base classes (tree use case)]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1defskq/recommendations_for_memory_pools_that_work_with/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1defskq/recommendations_for_memory_pools_that_work_with/"/>
+        <updated>2024-06-12T19:52:07.000Z</updated>
+        <summary type="html"><![CDATA[Hi all.
+ I am implementing a tree like data structure with a node base class and multiple derived classes. I am looking for a memory pool to allocate the various derived nodes with, but also properly destructs all the allocated nodes (as in via their destructors). For context, at some point in the program I want to destroy all the trees I have created hence why I think a memory pool would be a good way to deallocate all memory at once.
+ Previously I naively used boost::pool<> and allocated the derived classes with it via new (pool.malloc()) ChildNode1 before realising the pool had no concept of the data it was storing so naturally their destructors were not called and data with additional allocations like vectors/strings were not being cleaned up.
+ Next I looked at using boost::object_pool<Base> however that does not compile as the Base class is virtual.
+ Looking for suggestions on how this might be achieved (with or without libraries). I'm aware that I could use a std::map<std::unique_ptr<Base>> and just grab the raw point to the node, but I would like the nodes to be allocated within blocks.
+ Thanks.
+    submitted by    /u/flcosmic    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How can I solve this problem in asp.net core web api ?]]></title>
+        <id>https://www.reddit.com/r/csharp/comments/1defovu/how_can_i_solve_this_problem_in_aspnet_core_web/</id>
+        <link href="https://www.reddit.com/r/csharp/comments/1defovu/how_can_i_solve_this_problem_in_aspnet_core_web/"/>
+        <updated>2024-06-12T19:47:49.000Z</updated>
+        <summary type="html"><![CDATA[Hi there ,I have a computer application that I developed using Electron.js and I developed the backend of this application using ASP.NET Core Web API. How can I automatically start the ASP.NET Core API project? For example, when clicking on the Electron application icon on the desktop, the ASP.NET Core Web API project starts running without the need to manually start it on localhost. I do not want to host the ASP.NET Core Web API on server I want it to run on localhost because the client requires this. Please help me on how I can achieve this 
+    submitted by    /u/Western-Childhood359  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Audio Library suggestion for multitrack playback]]></title>
+        <id>https://www.reddit.com/r/cpp/comments/1defi80/audio_library_suggestion_for_multitrack_playback/</id>
+        <link href="https://www.reddit.com/r/cpp/comments/1defi80/audio_library_suggestion_for_multitrack_playback/"/>
+        <updated>2024-06-12T19:40:02.000Z</updated>
+        <summary type="html"><![CDATA[I'm working on C++14 with D3D9 and Win32 / x86 (yep, ancient) game.
+ I need to implement a feature where the music instruments will fade out / in based on the player current performance. Lets say, if player is with a bad rank through the dungeon, only percussion will be played.
+ Whenever he/she keeps combos without being hit, the ranking would be progressively incraese up to a maximum, where all instruments would be playing.
+ So, i'm already stripping instruments from current musics into individual sound files with an AI app named Moises - it's extremely cheap.
+ Now I need a way to implement the playback of all these individual instruments at perfect timming, and having control of their volume, panning and changing music on the fly.
+ The game uses Direct Sound to play music, but I can't deal with Microsoft Win32 nor DSound code. I need suggestions for audio libraries. The easiest / simpler, the best.
+    submitted by    /u/SpearMontain    to    r/cpp  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Recommendations for memory pools that work with virtual base classes (tree use case)]]></title>
+        <id>https://www.reddit.com/r/cpp/comments/1def4r4/recommendations_for_memory_pools_that_work_with/</id>
+        <link href="https://www.reddit.com/r/cpp/comments/1def4r4/recommendations_for_memory_pools_that_work_with/"/>
+        <updated>2024-06-12T19:24:16.000Z</updated>
+        <summary type="html"><![CDATA[Hi all.
+ I am implementing a tree like data structure with a node base class and multiple derived classes. I am looking for a memory pool to allocate the various derived nodes with, but also properly destructs all the allocated nodes (as in via their destructors). For context, at some point in the program I want to destroy all the trees I have created hence why I think a memory pool would be a good way to deallocate all memory at once.
+ Previously I naively used boost::pool<> and allocated the derived classes with it via new (pool.malloc()) ChildNode1 before realising the pool had no concept of the data it was storing so naturally their destructors were not called and data with additional allocations like vectors/strings were not being cleaned up.
+ Next I looked at using boost::object_pool<Base> however that does not compile as the Base class is virtual.
+ Looking for suggestions on how this might be achieved (with or without libraries). I'm aware that I could use a std::map<std::unique_ptr<Base>> and just grab the raw point to the node, but I would like the nodes to be allocated within blocks. 
+ Thanks. 
+    submitted by    /u/flcosmic    to    r/cpp  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Interview questions for experienced.Net developer]]></title>
+        <id>https://www.reddit.com/r/csharp/comments/1deessm/interview_questions_for_experiencednet_developer/</id>
+        <link href="https://www.reddit.com/r/csharp/comments/1deessm/interview_questions_for_experiencednet_developer/"/>
+        <updated>2024-06-12T19:10:24.000Z</updated>
+        <summary type="html"><![CDATA[I hope everyone is doing well , I know it’s an open ended question, What is your preferred reference when preparing for interviews as seniors 10+ years in dot net? 
+ Free_Palestine
+    submitted by    /u/Khalid_______  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[I updated my package to automate my Job (Now Supports Grpc)]]></title>
+        <id>https://www.reddit.com/r/csharp/comments/1deeikw/i_updated_my_package_to_automate_my_job_now/</id>
+        <link href="https://www.reddit.com/r/csharp/comments/1deeikw/i_updated_my_package_to_automate_my_job_now/"/>
+        <updated>2024-06-12T18:59:11.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/spartan_here  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[RabbitMQ vs Kaleidoscope: How the new .NET 8.0 broker achieves 12x message throughput (1100% speedup)]]></title>
+        <id>https://www.reddit.com/r/csharp/comments/1dee8c9/rabbitmq_vs_kaleidoscope_how_the_new_net_80/</id>
+        <link href="https://www.reddit.com/r/csharp/comments/1dee8c9/rabbitmq_vs_kaleidoscope_how_the_new_net_80/"/>
+        <updated>2024-06-12T18:47:27.000Z</updated>
+        <summary type="html"><![CDATA[In this post, we'll delve into a comparison between RabbitMQ, a well-established message broker, and Kaleidoscope, a new high-performance broker from the Phoesion Glow framework. We'll take a close look at their benchmark results to see how they perform in real-world scenarios.
+  
+ Overview of RabbitMQ and Kaleidoscope
+ RabbitMQ is one of the most popular message brokers available. It implements the Advanced Message Queuing Protocol (AMQP) and is renowned for its reliability, robustness, and extensive feature set, making it a staple in many production environments.
+ Kaleidoscope, is a new AMQP-like message broker, written entirely in .NET 8.0. It is engineered to deliver high performance as it was designed to be the backbone of Phoesion Glow, a cloud backend service development and cluster…]]></summary>
+        <author>
+            <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[libriscv: RISC-V Binary Translation, part 2]]></title>
+        <id>https://www.reddit.com/r/EmuDev/comments/1dee4hr/libriscv_riscv_binary_translation_part_2/</id>
+        <link href="https://www.reddit.com/r/EmuDev/comments/1dee4hr/libriscv_riscv_binary_translation_part_2/"/>
+        <updated>2024-06-12T18:43:03.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/fwsGonzo  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>Developing Emulators</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Cannot find included file even though include path is set in Makefile]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1dedw1r/cannot_find_included_file_even_though_include/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1dedw1r/cannot_find_included_file_even_though_include/"/>
+        <updated>2024-06-12T18:33:44.000Z</updated>
+        <summary type="html"><![CDATA[Hello everybody,
+ I am working on a project where I created a test_convolver.cpp file, which includes convolver.h. The file convolver.h has the line #include "arm_math.h", and the file convolver.h is contained in libDaisy/Drivers/CMSIS/DSP/Include. This is included in my INCDIRS, which I then add to my CXX and C flags:
+ CXXFLAGS += $(INCDIRS) CFLAGS += $(INCDIRS) 
+ However, when I run my Makefile with target test_convolver.cpp, I get the error: 
+ fatal error: 'arm_math.h' file not found.
+ Interestingly enough, I do not get this error again when I include arm_math.h in test_convolver.cpp, only the original error from convolver.h. Does anybody know why this is? Why are the include directories fine for test_convolver.cpp, but not for convolver.h? Here is a possibly helpful part of my Makefile:
+ TEST_SRC := app/engine/test_convolver.cpp TEST_TARGET := $(BUILD_DIR)/test_convolver.out TEST_OBJ := $(BUILD_DIR)/$(notdir $(TEST_SRC:.cpp=.o)) $(TEST_OBJ): $(TEST_SRC) | $(BUILD_DIR) mkdir -p $(@D) $(CXX) $(CPPFLAGS) $(CPP_STANDARD) -c $< -o $@ -MD -MP -MF $(BUILD_DIR)/$(notdir $(<:.cpp=.dep)) $(TEST_TARGET): $(TEST_OBJ) mkdir -p $(@D) $(CXX) -o $@ $^ $(LDFLAGS) $(LIBS) .PHONY: test test: $(TEST_TARGET) @echo "Test built: $(TEST_TARGET)" 
+    submitted by    /u/Zizanyman    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How to make an txt file creator?]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1dedje2/how_to_make_an_txt_file_creator/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1dedje2/how_to_make_an_txt_file_creator/"/>
+        <updated>2024-06-12T18:19:29.000Z</updated>
+        <summary type="html"><![CDATA[Hi! Im very new and i would like to know how to create the thing that i mentioned in the title, thanks!
+    submitted by    /u/Squeakymosquito105    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Best practices for keeping main function clean doing a lot of mallocs and avoiding clutter.]]></title>
+        <id>https://www.reddit.com/r/C_Programming/comments/1dech35/best_practices_for_keeping_main_function_clean/</id>
+        <link href="https://www.reddit.com/r/C_Programming/comments/1dech35/best_practices_for_keeping_main_function_clean/"/>
+        <updated>2024-06-12T17:35:23.000Z</updated>
+        <summary type="html"><![CDATA[EDIT: Solved... Thanks everyone I got some validation that what I was thinking is not so strange, and I think I know how to write that wrapper now :) Appreciated. 
+ I'm making a program that splits a file into n pieces and then merges them in which hopefuly the resulting file will be the exact same as original file.
+ So far I can
+  
+Read the input file
+ Split into n pieces
+ Write pieces out as files.
+  
+For this I'm using a few mallocs. For which I have to do error checking , something like if `ptr== NULL`, return
+ void allocCheck(void *ptr){ if(ptr == NULL){ fprintf(stderr, "Error allocating memory\n"); _exit(-1); } } int main(int argc, char *argv[argc + 1]){ char *buf; int itemsRead; int *pieceSize; char **paths; int nSplit = 20; // Number of splits, hardcoded for now. //Dinamic allocation. buf = malloc(sizeof(char) * MAX_FILE_SIZE); allocCheck(buf); pieceSize = malloc(sizeof(int) * nSplit); allocCheck(pieceSize); paths = malloc(sizeof(char *) * nSplit); allocCheck(paths); for(size_t i = 0; i < nSplit; i++){ paths[i] = malloc(sizeof(char) * MAX_PATH_SIZE); allocCheck(paths[i]); } //program function. itemsRead = readFile(PATH, buf); split(nSplit, itemsRead, pieceSize, paths); for(size_t i = 0; i < nSplit; i++){ writeFile(buf, paths[i], pieceSize[i]); } //freeing allocations free(buf); free(pieceSize); for(size_t i = 0; i < nSplit; i++){ free(paths[i]); } free(paths); return EXIT_SUCCESS; } 
+ I made this function for error checking on allocations, to avoid extra clutter as I want my main function to be as clean as possible.
+  
+Is this even a good practice?
+ Is it posible to do the mallocs on its own .c file? I wanted to do something like mem.c and mem.h and just move all that into its own file. Including the Null check.
+  
+perhaps something like a wrapper `myalloc( void *pointer, size_t size)` But I don't think is right using *void... and I do need to specify the type of pointer I'll be allocating.
+ How would you do it?
+    submitted by    /u/Rynok_  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Why does Optional require a non-null value?]]></title>
+        <id>https://www.reddit.com/r/java/comments/1dec9z0/why_does_optional_require_a_nonnull_value/</id>
+        <link href="https://www.reddit.com/r/java/comments/1dec9z0/why_does_optional_require_a_nonnull_value/"/>
+        <updated>2024-06-12T17:27:07.000Z</updated>
+        <summary type="html"><![CDATA[Since the whole purpose of Optional is to represent values that might not exist, why does the constructor of Optional require a non-null value? Is it becuase they wanted to coalesce all empty Optionals down to a single instance? Even if that's true, why not make Optional.of() behave the way Optional.ofNullable() and do away with the ofNullable() method?
+    submitted by    /u/Ruin-Capable  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : java</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Using Vs code for the first time]]></title>
+        <id>https://www.reddit.com/r/C_Programming/comments/1dec28e/using_vs_code_for_the_first_time/</id>
+        <link href="https://www.reddit.com/r/C_Programming/comments/1dec28e/using_vs_code_for_the_first_time/"/>
+        <updated>2024-06-12T17:18:14.000Z</updated>
+        <summary type="html"><![CDATA[How to proceed further 
+    submitted by    /u/Punith1117  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[why does my function only return one line from a file?]]></title>
+        <id>https://www.reddit.com/r/C_Programming/comments/1debdo7/why_does_my_function_only_return_one_line_from_a/</id>
+        <link href="https://www.reddit.com/r/C_Programming/comments/1debdo7/why_does_my_function_only_return_one_line_from_a/"/>
+        <updated>2024-06-12T16:49:50.000Z</updated>
+        <summary type="html"><![CDATA[hello, i have this function which is a char, it wotks for opening the file, but it only reads one line for some reason, heres my code if anyone wants a look:
+ edit: i forgot something, using printf and printing "fgets(buffer,255,pF" will display the file contents correctly, seems like a return problem.
+ char *openfile(const char path[]) { //make sure you use ../ before typing path because it will not work FILE *pF = fopen(path, "r"); char *buffer; buffer = malloc(sizeof(char)*100); if(pF == NULL) { printf("Unable to open file!\n"); } else { while(fgets(buffer, 255, pF) != NULL) { return buffer; } } fclose(pF); free(buffer); } 
+    submitted by    /u/Great_Click_9140  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[When is it time to label the company as "toast"?]]></title>
+        <id>https://www.reddit.com/r/ExperiencedDevs/comments/1deb4tm/when_is_it_time_to_label_the_company_as_toast/</id>
+        <link href="https://www.reddit.com/r/ExperiencedDevs/comments/1deb4tm/when_is_it_time_to_label_the_company_as_toast/"/>
+        <updated>2024-06-12T16:39:33.000Z</updated>
+        <summary type="html"><![CDATA[Engineering manager here with two years at my current company.
+ Company is 6 years in the portfolio of a PE firm that wanted us gone 3 years ago (although there was some leeway with covid). The initial strategy was growth capital and it started off OK but there has been a lot of squandering of resources at the director level for the past few years. 
+ About six months ago, I inherited an organization that had liberally spun up premium cloud resources all over the place and then never managed or utilized them. I reduced or eliminated most of these as they were costing the company hundreds of thousands of dollars each year. I could not believe how wasteful it was. None of these resources were being used yet we were paying a massive monthly bill on them lol. Just no oversight at all.
+ On top o…]]></summary>
+        <author>
+            <name>top scoring links : ExperiencedDevs</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ERROR: Unable to start debugging. Unexpected GDB output from command "-exec-run". During startup program exited with code 0xc0000139]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1deb12r/error_unable_to_start_debugging_unexpected_gdb/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1deb12r/error_unable_to_start_debugging_unexpected_gdb/"/>
+        <updated>2024-06-12T16:35:01.000Z</updated>
+        <summary type="html"><![CDATA[So, I am new to c++, use vscode and Windows 11 and installed MinGw and have currently the problem that when running simple programs like hello world nothing gets printed. Instead a .exe file is created with the same name as my program. The Terminal just prints:
+ Executing task: C/C++: g++.exe build active file
+ Starting build... cmd /c chcp 65001>nul && C:\msys64\ucrt64\bin\g++.exe -fdiagnostics-color=always -g C:\Users\noahm\Desktop\Vs_Code\programming\cpp\godisgood.cpp -o C:\Users\noahm\Desktop\Vs_Code\programming\cpp\godisgood.exe
+ Build finished successfully.
+ Terminal will be reused by tasks, press any key to close it.
+ and in the debug console the error: 
+ ERROR: Unable to start debugging. Unexpected GDB output from command "-exec-run". During startup program exited with code 0xc0000…]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How do I get the paranthases to work when parsing a mathematical expression?]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1deaxua/how_do_i_get_the_paranthases_to_work_when_parsing/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1deaxua/how_do_i_get_the_paranthases_to_work_when_parsing/"/>
+        <updated>2024-06-12T16:31:05.000Z</updated>
+        <summary type="html"><![CDATA[I am trying to learn how to parse mathematical expressions to make a ClI based advanced calculator later on (something similar to mathway). The program runs, but I wan't to be able to enter the expression with or without spaces. Right now I'm using getline to get the expression from the user and then stringstream ss(expression) to parse the expression so I can get the operands and operators. I sotre operators as a char in stack a, and operands as a double in stack b. Then a switch function to do the math.
+  double applyOp(double a, double b, char op) { switch (op) { case '+': return a + b; case '-': return a - b; case '*': return a * b; case '/': return a / b; case '^': return pow(a, b); default: return 0; }  Currently I have to enter the expression as: 4 * ( 3 + 21 ); instead of: 4*(3+ 21). Another thing is this makes working with negative numbers slightly more difficult. I cannot enter: 3 * - 2 (no matter how I space it). Instead I have to enter any negative number as ( 0 - 2 ), which as you can imagine is very tedious. I want to be able to distinguish the numbers based on if there is an operator between them. Any suggestions are welcome.
+ Also side note, for formatting code I only know of the ``` method, but I've heard it doesn't work for all versions of reddit. What methods work for all versions?
+    submitted by    /u/the64jack    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Have your job interviews required coding challenges to be done in C#?]]></title>
+        <id>https://www.reddit.com/r/csharp/comments/1deatp1/have_your_job_interviews_required_coding/</id>
+        <link href="https://www.reddit.com/r/csharp/comments/1deatp1/have_your_job_interviews_required_coding/"/>
+        <updated>2024-06-12T16:26:23.000Z</updated>
+        <summary type="html"><![CDATA[Despite being a decent C# developer, I've always done my coding challenge prep (leetcode) in Python. I am wondering how often an interviewer has required you to use C# for coding challenges, and if I need to change my prep to use C# in coding challenge interviews.
+    submitted by    /u/PurpleHazelnuts  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Creating custom OHLC Charts]]></title>
+        <id>https://www.reddit.com/r/csharp/comments/1deat69/creating_custom_ohlc_charts/</id>
+        <link href="https://www.reddit.com/r/csharp/comments/1deat69/creating_custom_ohlc_charts/"/>
+        <updated>2024-06-12T16:25:49.000Z</updated>
+        <summary type="html"><![CDATA[I want to create my own custom charts which I can customize according to my needs. This would be for use for a back testing system I made and the idea is to dynamically look at each trade. 
+ Preferably I need to create my own controls and not use libraries. I am primarily familiar with winforms but don’t mind learning a new UI, but this has to be c#.
+ Any suggestion where I can start to look would be helpful.
+    submitted by    /u/heinesterhuyse  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Don't Refactor Like Uncle Bob]]></title>
+        <id>https://www.reddit.com/r/programming/comments/1deapq7/dont_refactor_like_uncle_bob/</id>
+        <link href="https://www.reddit.com/r/programming/comments/1deapq7/dont_refactor_like_uncle_bob/"/>
+        <updated>2024-06-12T16:21:47.000Z</updated>
+        <summary type="html"><![CDATA[Hi everyone. I'd like to hear your opinions on this article I wrote on the issues I have with Robert Martin's "Clean Code". If you disagree, I'd love to hear it too.
+    submitted by    /u/The_Axolot  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : programming</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How do I integrate box2d into my c++ project?]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1deannv/how_do_i_integrate_box2d_into_my_c_project/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1deannv/how_do_i_integrate_box2d_into_my_c_project/"/>
+        <updated>2024-06-12T16:19:28.000Z</updated>
+        <summary type="html"><![CDATA[All the tutorials that were on this topic are very old, and the github repo has changed since then, so I can't follow along with them. So, how do I integrate box2d into my c++ project?
+    submitted by    /u/yaboiaseed    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Installed Debian for the first time!]]></title>
+        <id>https://www.reddit.com/r/debian/comments/1deabib/installed_debian_for_the_first_time/</id>
+        <link href="https://www.reddit.com/r/debian/comments/1deabib/installed_debian_for_the_first_time/"/>
+        <updated>2024-06-12T16:05:20.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/toosejuice786  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : debian</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[What is this pattern called, and is it ever beneficial to use?]]></title>
+        <id>https://www.reddit.com/r/csharp/comments/1de9z17/what_is_this_pattern_called_and_is_it_ever/</id>
+        <link href="https://www.reddit.com/r/csharp/comments/1de9z17/what_is_this_pattern_called_and_is_it_ever/"/>
+        <updated>2024-06-12T15:51:00.000Z</updated>
+        <summary type="html"><![CDATA[We are having a discussion regarding some code that looks like this:
+ ``` public sealed class ApplicationServiceA { private readonly IEnumerable<IEntity> _entities; private readonly IConsumer _consumer;
+ public ApplicationServiceA(IEnumerable<IEntity> entities, IConsumer consumer) { _entities = entities; _consumer = consumer; } public void SendEntitiesToConsumer() { foreach(var entity in _entities) { _consumer.Send(entity) } } 
+ }
+ public sealed class ApplicationServiceB { private readonly IEnumerable<IEntity> _entities;
+ public ApplicationServiceB(IEnumerable<IEntity> entities) { _entities = entities; } public void SendEntitiesToConsumer(IConsumer consumer) { foreach(var entity in _entities) { consumer.Send(entity) } } 
+ } ```
+ Currently, it is implemented similar to ApplicationServiceB where the consumer is NOT injected via DI, but is passed in the SendEntitiesToConsumer() method as an argument.
+ The question is if this methodology has a commonly accepted pattern name, and if it is considered acceptable/good to do it like this, or if we should convert the code to be similar to ApplicationServiceA where the consumer is injected via DI.
+ My rational for keeping the current implementation is that it breaks the dependency (for better or worse?) I think I have seen this before under various guises such as "tell don't ask" or "pure functions", but I can't find any consise examples or discussions.
+    submitted by    /u/DarkMatterDeveloper  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[I'm looking for tutorial videos of SDL2 in C]]></title>
+        <id>https://www.reddit.com/r/C_Programming/comments/1de9qox/im_looking_for_tutorial_videos_of_sdl2_in_c/</id>
+        <link href="https://www.reddit.com/r/C_Programming/comments/1de9qox/im_looking_for_tutorial_videos_of_sdl2_in_c/"/>
+        <updated>2024-06-12T15:41:16.000Z</updated>
+        <summary type="html"><![CDATA[Hey! so i have to make a grahic game project(not in console) in C and out teacher recommend us to use SDL2, i see some of the documentation that she pass to us but it dosen't really explain so well, i tried to search some tutorials on youtube too but it's all with C++.
+ TL;DR: Does anyone know any tutorials for SDL2 in C?
+    submitted by    /u/Vast-Number-5071  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Custom TextBox]]></title>
+        <id>https://www.reddit.com/r/csharp/comments/1de92hc/custom_textbox/</id>
+        <link href="https://www.reddit.com/r/csharp/comments/1de92hc/custom_textbox/"/>
+        <updated>2024-06-12T15:12:34.000Z</updated>
+        <summary type="html"><![CDATA[Hi, I would like a textbox with vertical alignment, I decided to use OnPaint override, and I managed it in part...
+ When I write the text does not update in real time, rather a much smaller text appears and this is what is really changed... once the focus is removed from the textbox this small text disappears and the other updates... any idea?
+ https://preview.redd.it/6f43qj62q56d1.png?width=181&format=png&auto=webp&s=6a5e9858addd97894ee1205d75ff456cf740999a
+    submitted by    /u/I_MURT_D_KITEMURT  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Feedback for my Markov Chain Text Generator Project]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1de8wc8/feedback_for_my_markov_chain_text_generator/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1de8wc8/feedback_for_my_markov_chain_text_generator/"/>
+        <updated>2024-06-12T15:05:23.000Z</updated>
+        <summary type="html"><![CDATA[Greetings!
+ I have built a small project to practice and improve my C++ skills. The project is called markov_text and it can construct a higher-order Markov chain based on a large text file (a corpus, for example) and then generate random text based on the chain. The constructed chain is saved as four files which the text-generator part of the program uses for fast lookups into the chain's values and other fields.
+ I would very much appreciate your feedback regarding the code, usage of C++ standards/STL, and project structure.
+ Here is the GitHub repository: https://github.com/AzeezDa/markov_text
+ Thank you all in advance!
+    submitted by    /u/NoicestNoice    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Why is reading bytes here so slow compared to copying the file?]]></title>
+        <id>https://www.reddit.com/r/csharp/comments/1de8tjp/why_is_reading_bytes_here_so_slow_compared_to/</id>
+        <link href="https://www.reddit.com/r/csharp/comments/1de8tjp/why_is_reading_bytes_here_so_slow_compared_to/"/>
+        <updated>2024-06-12T15:02:21.000Z</updated>
+        <summary type="html"><![CDATA[I'm trying to read a whole file's bytes into memory; for now, I'm doing nothing with it. Reading the file with FileInfo.OpenRead combined with a StreamReader is going very slowly; about 30 seconds as opposed to only 4 seconds to copy/paste the file from one hard drive to another in Explorer. Why would it be so slow to read it into memory? The example code:
+ namespace ConsoleApp1 { internal class Program { static void Main(string[] args) { string multiGigFile = @"path\to\my\4gb\file"; FileInfo fi = new(multiGigFile); using (StreamReader sr = new(fi.OpenRead())) { int bufferSize = 104857600; // 100MB read buffer int bytesRead; char[] buffer = new char[bufferSize]; // Takes ~30 secs to finish the while loop, ~4s to copy from one hard drive to another while ((bytesRead = sr.Read(buffer, 0, bufferSize)) > 0) { Console.WriteLine($"File read; read next {bytesRead} bytes..."); } Console.WriteLine($"File read; finished."); } } } } 
+    submitted by    /u/jez999  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Starting to see how programming is kind of a superpower!]]></title>
+        <id>https://www.reddit.com/r/learnprogramming/comments/1de8kec/starting_to_see_how_programming_is_kind_of_a/</id>
+        <link href="https://www.reddit.com/r/learnprogramming/comments/1de8kec/starting_to_see_how_programming_is_kind_of_a/"/>
+        <updated>2024-06-12T14:51:54.000Z</updated>
+        <summary type="html"><![CDATA[Hey all, so I'm in the pretty early stages of teaching myself web development for a personal creative project, and frankly it's been kind of slow putting the pieces together! I'm old and I got time so my progress is pretty slow. All I want to do eventually is post bloggy type things involving photos, doodles, and some music-y things I'm making. I'm learning completely solo so I don't have classmates to rant to!
+ I've ruled out that I need python for now, but I've settled on Internetting is Hard and W3Schools for html/css education. On my own account I tried to download Jekyll because it sounded like it'd be helpful, and it may be, but it got me more familiar with 1) the Terminal, 2) VSCode, 3) Ruby, and 4) Homebrew and all of those things were terrifying to me before. Jekyll is enabling me to kind of see results of learning/tinkering a little faster than what I was doing before.
+ Installing Jekyll through Terminal via Homebrew was such a cool learning experience.
+ So why am I saying this is kind of a superpower? I'm also learning markdown elsewhere because certain programs like Notenik, Spaces, or Logseq use them, and it's a pretty nifty thing. Those types of programs are just helping me write better notes.
+ And it hit me that ALL OF THIS IS JUST TEXT (duh that's what HTML is dude!) and it's just kind of amazing to me that you can build a whole valuable website and automate all sorts of things just by writing stuff out and placing it in the right spots. And the fact that it's just text files means it's super shareable, savable, and open. It's wild.
+ Here and in other subreddits folks have been so helpful so I just wanted to write this out, if only for an affirmation. By the end of the summer I'll have a tiny simple stupid website that matches my vision and in April it literally seemed impossible.
+ edit:
+ this is awesome
+    submitted by    /u/Interesting-Head-841  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : learnprogramming</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Why all those access modifyers?]]></title>
+        <id>https://www.reddit.com/r/csharp/comments/1de8goa/why_all_those_access_modifyers/</id>
+        <link href="https://www.reddit.com/r/csharp/comments/1de8goa/why_all_those_access_modifyers/"/>
+        <updated>2024-06-12T14:47:24.000Z</updated>
+        <summary type="html"><![CDATA[I don‘t really understand why sometimes it is better to make a variable, method, etc. private and to not just set all of them to public. Can there exist variables outside a class with the same name which need to be private in order to verify that these are two different variables? I can‘t check it at the moment, so that‘s why I am asking.
+    submitted by    /u/zz9873  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How do you respond to unintelligible questions?]]></title>
+        <id>https://www.reddit.com/r/ExperiencedDevs/comments/1de89xg/how_do_you_respond_to_unintelligible_questions/</id>
+        <link href="https://www.reddit.com/r/ExperiencedDevs/comments/1de89xg/how_do_you_respond_to_unintelligible_questions/"/>
+        <updated>2024-06-12T14:39:21.000Z</updated>
+        <summary type="html"><![CDATA[Like where you can't even guess what they're asking. Or maybe you have some idea, but you don't feel like wasting time trying to help them figure out what their question is.
+ It's starting to feel a bit abrasive to keep saying "I don't know what you mean" or "I need a little more information to help you"
+    submitted by    /u/daishi55  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : ExperiencedDevs</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[What are some more stable career paths for software devs that don’t require this level of constant learning?]]></title>
+        <id>https://www.reddit.com/r/cscareerquestions/comments/1de87aq/what_are_some_more_stable_career_paths_for/</id>
+        <link href="https://www.reddit.com/r/cscareerquestions/comments/1de87aq/what_are_some_more_stable_career_paths_for/"/>
+        <updated>2024-06-12T14:36:13.000Z</updated>
+        <summary type="html"><![CDATA[I know all tech is constant learning, but there are certain paths that are more stable and don’t require coding to become an obsession. I am coming up on 2.5 yrs of experience as a mostly backend software dev. I am finishing my degree now and tbh I am not too excited about picking up all these new frameworks to stay competitive. Coding and tech is cool but I’m not in love with it. Are there certs or paths that I could take that would be a little more stable with the tech and that would maintain my salary of approximately $150k?
+ Update: I do have some data analytic and sys admin experience which are more stable but the pay is significantly lower than where I am now.
+ Update 2: I am well aware, as many have pointed out, that every job requires you to constantly learn. Not every job however requires you to reinvent your core skills every 5-10 yrs (JavaScript to Angular to React for example) nor does every job have intense panel technical interviews that one must practice for consistently. Data analyst positions (what u was before software developers) have to learn things but their core skills of sql and tableau are not going anywhere. The interviews are straight forward technical but not panel technical exams.
+    submitted by    /u/wdibaG  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : cscareerquestions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[I simply cannot stand being a manager and everything I do is pointless - is it like this everywhere?]]></title>
+        <id>https://www.reddit.com/r/cscareerquestions/comments/1de869p/i_simply_cannot_stand_being_a_manager_and/</id>
+        <link href="https://www.reddit.com/r/cscareerquestions/comments/1de869p/i_simply_cannot_stand_being_a_manager_and/"/>
+        <updated>2024-06-12T14:34:55.000Z</updated>
+        <summary type="html"><![CDATA[At least 60% of what I do on a day-to-day basis is what I would consider fake work. Meetings that accomplish nothing. Meetings to update me on org changes that have nothing to do with me. Copying data from dashboards into spreadsheets, building decks for meetings that will eventually be rescheduled (aka never happen), spending weeks campaigning for a change with a VP who will unexpectedly leave the company, endless trainings that don't apply to my job. 
+ I am positive that 100% of the projects I am currently involved with will amount to nothing, and exist solely because a director is trying to get promoted. 
+ My fellow managers are so fake and there is so much toxic positivity. I can't tell if these people are cutthroat corporate ladder climbers or if they are truly drunk on the company cool aide. It seems completely obvious to me that everything we do adds no value, but everyone else either fails to recognize this or turns a blind eye out of self-preservation. 
+ I would go back to being an engineer, but I'm getting a bit older now and also I fear I've lost all my real, actual skills over the past few years. Not sure what to do. Is this what management is really like? Does this sound typical or am I at a particularly dysfunctional organization? Does anyone have experience with this? 
+ Thanks.
+    submitted by    /u/SabertoothNishobrah  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : cscareerquestions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Docker & web api not able to connect to gcloud]]></title>
+        <id>https://www.reddit.com/r/csharp/comments/1de81ki/docker_web_api_not_able_to_connect_to_gcloud/</id>
+        <link href="https://www.reddit.com/r/csharp/comments/1de81ki/docker_web_api_not_able_to_connect_to_gcloud/"/>
+        <updated>2024-06-12T14:29:19.000Z</updated>
+        <summary type="html"><![CDATA[I have a c# web api project that is attempting to access application default credentials (Google cloud) for authentication within a docker container. This process takes place on startup of the application. I am copying the application_default_credentials.json file to a folder in the container and setting an environment variable with this path but when the GoogleCredential.GetApplicationDefault() (Google.Apis.Auth.OAuth2.GoogleCredential.GetApplicationDefault()) method is called an exception is generated stating that the credential file cannot be deserialized.
+ The file is valid as far as I can tell with all the necessary properties.
+ There is also a reference to a JsonCredentialParameters constructor issue (not my code) - which is embedded in the Google.Cloud.Iam.Credentials.V1 library and…]]></summary>
+        <author>
+            <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[College kid still struggling with his cybersecurity assignment, trying to learn despite teachers best efforts]]></title>
+        <id>https://www.reddit.com/r/hacking/comments/1de6ztb/college_kid_still_struggling_with_his/</id>
+        <link href="https://www.reddit.com/r/hacking/comments/1de6ztb/college_kid_still_struggling_with_his/"/>
+        <updated>2024-06-12T13:43:53.000Z</updated>
+        <summary type="html"><![CDATA[So I made another post a couple days ago about an assignment I have for my ethical hacking class and I made some leeway in that assignment but after a while I've exhausted all the tools I have at my disposal, at least the ones that I know how to use and have moved on to another part of my assignment which is steganography. I have an image that supposedly has a hidden message. I've tried using exiftool, strings, DiiT, /stylesuxx.github.io/steganography/, http://futureboy.us/stegano/, steghide, stegcracker (i currently have a python script running as I'm trying to brute force the passphrase since we weren't given one), and I just dont know where to go from here. I don't think I'm able to attach the actual image file here (or I'm just too sleep deprived to see it which is the most likely case). You guys were a massive help with the password cracking and I'm appreciate some more advice on this part of my assignment. Also incase your wondering I've asked my teacher for help multi times and her answer is always "Google it because thats all I'm going to do" just to give you some sort of idea as to what I'm working with, calling her a teacher is frankly far too generous.
+    submitted by    /u/Starthelegend  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : hacking</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[c# ASP Core automatically registering services to IoC]]></title>
+        <id>https://www.reddit.com/r/csharp/comments/1de6jfo/c_asp_core_automatically_registering_services_to/</id>
+        <link href="https://www.reddit.com/r/csharp/comments/1de6jfo/c_asp_core_automatically_registering_services_to/"/>
+        <updated>2024-06-12T13:22:46.000Z</updated>
+        <summary type="html"><![CDATA[Hi. This is structure of my code.
+ IBaseRepository is base of all repository interfaces, and implementation repositories are only implementing appropriate interface, for example:
+ // ISkillRepository implementing IBaseRepository, SkillRepository is implementing ISkillRepository: IBaseRepository -> ISkillRepository -> SkillRepository // ICompanyRepository implementing IBaseRepository, CompanyRepository is implementing ICompanyRepository: IBaseRepository -> ICompanyRepository -> CompanyRepository 
+ now im one by one registering all of this interfaces like this:
+ services.AddScoped<SkillRepository, SkillRepository>(); services.AddScoped<ICompanyRepository, CompanyRepository>(); 
+ but i want to make this process in automatic way. I tried many things to automate, but i cant. My code right now is (but not working):
+ var repositoryTypes = Assembly .GetAssembly(typeof(PersistenceAssemblyPointer)) .GetTypes() .Where(type => !type.IsAbstract && !type.IsInterface && type.GetInterfaces().Any(x => x.IsGenericType && x.GetGenericTypeDefinition() == typeof(IBaseRepository<>))); var nonBaseRepos = repositoryTypes.Where(t => t != typeof(BaseRepository<,>)); foreach (var repositoryType in nonBaseRepos) { var interfeysler = repositoryType.GetInterfaces() .Where(interfeys => interfeys.IsGenericType && interfeys.GetGenericTypeDefinition() == typeof(IBaseRepository<>)) .ToList(); //if (interfeysler.Count != 1) //{ // throw new InvalidOperationException($"Repository '{repositoryType.Name}' must implement only one interface that implements IRepositoryBase<T>."); //} services.AddScoped(interfeysler[0], repositoryType); } 
+ can someone please help me to automate service registering?
+    submitted by    /u/antikfilosov  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[how do you have time for everything without going insane?]]></title>
+        <id>https://www.reddit.com/r/csMajors/comments/1de6ifq/how_do_you_have_time_for_everything_without_going/</id>
+        <link href="https://www.reddit.com/r/csMajors/comments/1de6ifq/how_do_you_have_time_for_everything_without_going/"/>
+        <updated>2024-06-12T13:21:26.000Z</updated>
+        <summary type="html"><![CDATA[i work an internship from 7:30-4, go straight to the gym after work, and cook my own meals. by then it's around 6:30-7 factoring in commute, and by then I'm so exhausted that I just wanna play video games and relax, not grind LC or do personal projects. My goal is to of course grind LC and finish 2 extra projects to put me in the best possible spot for next summer. How do you guys do it? I'm struggling to be functional by the end of the day let alone grind.
+    submitted by    /u/Just-Ad7496  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csMajors</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[I made a multiplayer shooter in C++ WITHOUT a game engine - the netcode is based on 100% floating-point determinism, including Box2D physics. I'm using STREFLOP for math. This is an example of something hard to do in a commercial engine. My atlas packer was also reused in Assassin's Creed: Valhalla.]]></title>
+        <id>https://www.reddit.com/r/gamedev/comments/1de6dmi/i_made_a_multiplayer_shooter_in_c_without_a_game/</id>
+        <link href="https://www.reddit.com/r/gamedev/comments/1de6dmi/i_made_a_multiplayer_shooter_in_c_without_a_game/"/>
+        <updated>2024-06-12T13:15:09.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/pbcdev  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : gamedev</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[LLVM Clang 19 Lands Support For C23's #embed]]></title>
+        <id>https://www.reddit.com/r/C_Programming/comments/1de66gn/llvm_clang_19_lands_support_for_c23s_embed/</id>
+        <link href="https://www.reddit.com/r/C_Programming/comments/1de66gn/llvm_clang_19_lands_support_for_c23s_embed/"/>
+        <updated>2024-06-12T13:05:30.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/qualia-assurance  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Terminate RtlSetProcessIsCritical]]></title>
+        <id>https://www.reddit.com/r/csharp/comments/1de629w/terminate_rtlsetprocessiscritical/</id>
+        <link href="https://www.reddit.com/r/csharp/comments/1de629w/terminate_rtlsetprocessiscritical/"/>
+        <updated>2024-06-12T13:00:04.000Z</updated>
+        <summary type="html"><![CDATA[Hi, today i found really interesting repository, 
+ Chainski/Terminator: Terminator is a compact utility coded in C#, designed to end processes that have RtlSetProcessIsCritical enabled. (github.com)
+ How it Works ?
+ Terminator defines a method called UnProtectAndTerminate that aims to terminate a specified process after removing its protection. It utilizes platform invoke to call functions from system DLLs. First, it imports functions from ntdll.dll and kernel32.dll. These functions are NtSetInformationProcess to alter process information and TerminateProcess to forcibly terminate a process. Within the UnProtectAndTerminate method, it enters debug mode using Process.EnterDebugMode(). Then it attempts to open the target process using OpenProcess, passing necessary parameters including the process ID. Afterward, it calls NtSetInformationProcess with appropriate arguments to remove the process protection. If successful, it terminates the process using TerminateProcess with an exit code of 0. 
+ Why was this tool made ?
+ I developed this tool specifically designed to terminate processes containing the RtlSetProcessIsCritical feature, after encountering several malware samples utilizing this technique during my analysis.
+    submitted by    /u/Temporary_Hope_7198  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Create a typescript Library starting from a C# library]]></title>
+        <id>https://www.reddit.com/r/csharp/comments/1de5xjg/create_a_typescript_library_starting_from_a_c/</id>
+        <link href="https://www.reddit.com/r/csharp/comments/1de5xjg/create_a_typescript_library_starting_from_a_c/"/>
+        <updated>2024-06-12T12:53:21.000Z</updated>
+        <summary type="html"><![CDATA[Hi Everyone,
+ Thanks in advance for your help. Any suggestions are appreciated!
+ I have a library in C# that is full of static methods, and I expose it as an API. None of the methods or classes use any specific C# features, so I'm considering converting it to a TypeScript library. The reason is that everything is very simple, and I want to avoid making API calls for simple calculations.
+ However, this library will still be used by other C# projects, so I need to maintain it in C# as well.
+ My questions are:
+  
+Is it possible to automatically convert all these static methods, classes, and DTOs into TypeScript?
+ If not, is there a tool that can help with this conversion?
+  
+I'm currently following a Bridge.NET fork (https://github.com/curiosity-ai/h5) but i don't get how it work and have other tools that i want to explore.
+ Thanks again for your input!
+    submitted by    /u/erikwski00  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[I think I accidentally summoned a shader demon]]></title>
+        <id>https://www.reddit.com/r/godot/comments/1de5maw/i_think_i_accidentally_summoned_a_shader_demon/</id>
+        <link href="https://www.reddit.com/r/godot/comments/1de5maw/i_think_i_accidentally_summoned_a_shader_demon/"/>
+        <updated>2024-06-12T12:37:43.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/spruce_sprucerton  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : godot</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[How do you use a header file for extensibility in C?]]></title>
         <id>https://www.reddit.com/r/C_Programming/comments/1de5kyp/how_do_you_use_a_header_file_for_extensibility_in/</id>
@@ -20,6 +822,43 @@ My question is what does this look like in practice? What is a simple example sh
  [link]   [comments]]]></summary>
         <author>
             <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[C# Asynchronys code suggestions requested for setting up a Que system and finding the best free platform for hosting an ASP.NET API.]]></title>
+        <id>https://www.reddit.com/r/csharp/comments/1de5fa0/c_asynchronys_code_suggestions_requested_for/</id>
+        <link href="https://www.reddit.com/r/csharp/comments/1de5fa0/c_asynchronys_code_suggestions_requested_for/"/>
+        <updated>2024-06-12T12:27:42.000Z</updated>
+        <summary type="html"><![CDATA[After keep getting rejected everytime because of lack experience or they had soo many candidates with more experience than me. I have decided to remake an original project on my internship that was completly written in Python Flask. Never heard anything off it again, tried to contact the persons to find out what they have done with it. No response or anything, so I should do a go ahead. So I am converting the application to a C# application. Still need to find a platform and such to host it own for free. 
+ For the original application I used Reddis and such to set up a que with threads. But this had the problem that my apllication at the time had multiple docker containers and therefore it was not possible to migrate the application to Azure. This had the problem, i we could not push the application to Azure. So I need some C# suggestions for a managing ques.
+ Speaking of platforms I am looking for host platform where I can host my API,NET Api with the necessary security for free. Or at least with a low cost as possible.
+    submitted by    /u/megavipersnake91  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[OpenSUSE Leap 15.6 released]]></title>
+        <id>https://www.reddit.com/r/linux/comments/1de52us/opensuse_leap_156_released/</id>
+        <link href="https://www.reddit.com/r/linux/comments/1de52us/opensuse_leap_156_released/"/>
+        <updated>2024-06-12T12:09:16.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/LALife15  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Things that are not mentioned in the install guide, but you need to know/do?]]></title>
+        <id>https://www.reddit.com/r/archlinux/comments/1de4zpk/things_that_are_not_mentioned_in_the_install/</id>
+        <link href="https://www.reddit.com/r/archlinux/comments/1de4zpk/things_that_are_not_mentioned_in_the_install/"/>
+        <updated>2024-06-12T12:04:39.000Z</updated>
+        <summary type="html"><![CDATA[Arch noobie here. I used Arch before, after installing it with the script, but I want to get into the i-rlly-use-arch-btw club and decided to go for the manual install. Anything I should pay attention to that is not mentioned in the guide?
+    submitted by    /u/red_hash  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : archlinux</name>
         </author>
     </entry>
     <entry>
@@ -59,6 +898,21 @@ My question is what does this look like in practice? What is a simple example sh
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[My First Go Project - A URL Shortener Built with Gin!]]></title>
+        <id>https://www.reddit.com/r/golang/comments/1de4eta/my_first_go_project_a_url_shortener_built_with_gin/</id>
+        <link href="https://www.reddit.com/r/golang/comments/1de4eta/my_first_go_project_a_url_shortener_built_with_gin/"/>
+        <updated>2024-06-12T11:31:41.000Z</updated>
+        <summary type="html"><![CDATA[Hello everyone,
+ I am stoked to share my first Go project with you all - a URL Shortener built with Gin! As a #golang newbie, I am really keen to get your feedback and ideas.
+ Check it out: https://github.com/BrainAxe/url-shortener
+ Thank you for taking the time to have a look at this post! Take care :)
+    submitted by    /u/tanzim51  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : golang</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Need help with recursive function]]></title>
         <id>https://www.reddit.com/r/C_Programming/comments/1de40e0/need_help_with_recursive_function/</id>
         <link href="https://www.reddit.com/r/C_Programming/comments/1de40e0/need_help_with_recursive_function/"/>
@@ -67,6 +921,21 @@ My question is what does this look like in practice? What is a simple example sh
  I'm working on some exercises for my upcoming exams and had chatGPT write me a program since I couldn't write it myself efficiently. The problem is, I can't understand how it works and I spent the whole day trying. The exercise asked to write a program in C that finds flawless' squares. That is, numbers whose digits (all digits MUST be used), when summed and squared, give the number itself. For example, 81 is flawless square since (8+1)^2 = 81 and 1296 since (1+29+6)^2 = (36)^2 = 1296. The tricky part is that it's digits can combine but not freely (for example 196 + 2 is not an acceptable combination of "1296" digits). I tried writing a program myself which ended up being a mess because many variables were needed and also it was very slow since the exercise's input is the ran…]]></summary>
         <author>
             <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[You're not perfoming well during this Steam Next Fest? Here's why.]]></title>
+        <id>https://www.reddit.com/r/gamedev/comments/1de3o2l/youre_not_perfoming_well_during_this_steam_next/</id>
+        <link href="https://www.reddit.com/r/gamedev/comments/1de3o2l/youre_not_perfoming_well_during_this_steam_next/"/>
+        <updated>2024-06-12T10:47:36.000Z</updated>
+        <summary type="html"><![CDATA[Steam's new "Appeal" system and how it is abused
+ This june, there are close to 2000 games in Next Fest. Last year, there were around 1000. It's not just because there are more games released each year, it's also because of a new Steam appeal system. Before this system, you needed to register in February to be able to participate in June. Now, you can pretty much decide to participate whenever you want and you'll most likely be accepted.
+ But there is more to that, and it's far more concerning. Some popular games gets to participate twice while Steam says it's ONE Next Fest (ever).
+ I'll take the example of Aloft, a game currently taking of the top slots of Next Fest.
+ Well, guess what? Aloft was already participating in June 2022 edition! Here is proof:
+ https://youtu.be/LeJyt79sBQU?si=ZZ…]]></summary>
+        <author>
+            <name>top scoring links : gamedev</name>
         </author>
     </entry>
     <entry>
@@ -82,6 +951,19 @@ My question is what does this look like in practice? What is a simple example sh
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Justifying "not working" while at work]]></title>
+        <id>https://www.reddit.com/r/ExperiencedDevs/comments/1de33n2/justifying_not_working_while_at_work/</id>
+        <link href="https://www.reddit.com/r/ExperiencedDevs/comments/1de33n2/justifying_not_working_while_at_work/"/>
+        <updated>2024-06-12T10:11:23.000Z</updated>
+        <summary type="html"><![CDATA[So, nobody is writing code 100% of the time, consistently staring at the IDE trying to work out the task at hand.
+ So many problems are solved while stretching your legs, going to the bathroom, getting coffee, just getting away from the screen in general.
+ I have different "routines" while problem-solving. Some of them are more subconscious types of activities, basically stimming (ADHD), just doing stuff I'm not even mentally engaged with because I'm deep inside a thinking process. E.g. opening a new browser tab, opening an autosuggested newspaper link, and closing the tab on rendering without reading.
+ Other times I'm actually reading the news or doing something else on the web to get some type of break to "refresh" before returning to my task. I'm playing daily games like Wordle and Trav…]]></summary>
+        <author>
+            <name>top scoring links : ExperiencedDevs</name>
         </author>
     </entry>
     <entry>
@@ -101,6 +983,18 @@ My question is what does this look like in practice? What is a simple example sh
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How often do you fall back to quick and dirty code?]]></title>
+        <id>https://www.reddit.com/r/ExperiencedDevs/comments/1de2a45/how_often_do_you_fall_back_to_quick_and_dirty_code/</id>
+        <link href="https://www.reddit.com/r/ExperiencedDevs/comments/1de2a45/how_often_do_you_fall_back_to_quick_and_dirty_code/"/>
+        <updated>2024-06-12T09:13:47.000Z</updated>
+        <summary type="html"><![CDATA[I am working for a software development agency where it's always a rush to reach deadlines and because of that I have the feeling that sometimes I deliver bad code and rely on quick and dirty solutions. How often do such things happen with others? What do you do in such cases? What can someone who is experienced but doesn't have anyone higher who could review their code do to improve his work? I think that quick and dirty solutions are somehow acceptable for someone early in their career, but if I keep repeating that when I'm 15 years in my career I'm afraid that I will have a hard time with next jobs.
+    submitted by    /u/salamazmlekom  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : ExperiencedDevs</name>
         </author>
     </entry>
     <entry>
@@ -136,6 +1030,28 @@ My question is what does this look like in practice? What is a simple example sh
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : devops</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[What makes a good REST API?]]></title>
+        <id>https://www.reddit.com/r/programming/comments/1de1sm6/what_makes_a_good_rest_api/</id>
+        <link href="https://www.reddit.com/r/programming/comments/1de1sm6/what_makes_a_good_rest_api/"/>
+        <updated>2024-06-12T08:38:04.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/itssimon86  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : programming</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Announcing systemd v256]]></title>
+        <id>https://www.reddit.com/r/linux/comments/1de1otz/announcing_systemd_v256/</id>
+        <link href="https://www.reddit.com/r/linux/comments/1de1otz/announcing_systemd_v256/"/>
+        <updated>2024-06-12T08:30:16.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/ouyawei  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
         </author>
     </entry>
     <entry>
@@ -227,6 +1143,18 @@ Always resolve transient services from an active scope!? What does scope have to
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[It's 2024 and no cs degree]]></title>
+        <id>https://www.reddit.com/r/learnprogramming/comments/1de11gx/its_2024_and_no_cs_degree/</id>
+        <link href="https://www.reddit.com/r/learnprogramming/comments/1de11gx/its_2024_and_no_cs_degree/"/>
+        <updated>2024-06-12T07:42:50.000Z</updated>
+        <summary type="html"><![CDATA[Hello everyone. I am 25 years old . I am learning front end languages by myself but i dont have cs degree. Can i land a job Or should i give up? Also in my country (Turkey) it s usually necessary and i dont know do i have chance a remote job in USA. My englis level is b1-b2. 
+    submitted by    /u/lonewinner7  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : learnprogramming</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Cant Call API in Business Central]]></title>
         <id>https://www.reddit.com/r/csharp/comments/1de0kub/cant_call_api_in_business_central/</id>
         <link href="https://www.reddit.com/r/csharp/comments/1de0kub/cant_call_api_in_business_central/"/>
@@ -264,6 +1192,37 @@ Always resolve transient services from an active scope!? What does scope have to
  [link]   [comments]]]></summary>
         <author>
             <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How much would it cost to hire a voice actor to yell a few words/sentences?]]></title>
+        <id>https://www.reddit.com/r/gamedev/comments/1de084i/how_much_would_it_cost_to_hire_a_voice_actor_to/</id>
+        <link href="https://www.reddit.com/r/gamedev/comments/1de084i/how_much_would_it_cost_to_hire_a_voice_actor_to/"/>
+        <updated>2024-06-12T06:46:14.000Z</updated>
+        <summary type="html"><![CDATA[Hi everyone, I'm a game developer working on a project that requires some voice acting for in-game characters (soldiers). Specifically, I need a professional voice actor to yell a few words and short sentences like:
+ CONTACT! HOSTILES! SQUAD, WE GOT CONTACT! THERE HE IS, OPEN FIRE!
+ Does anyone have experience with hiring voice actors for similar tasks or know the typical rates for this kind of work? I'd love to get an idea of the cost involved. Also, any recommendations on where to find suitable voice actors would be greatly appreciated.
+ Thanks in advance!
+    submitted by    /u/Imthefatguy13  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : gamedev</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Create a real-world project from scratch course?]]></title>
+        <id>https://www.reddit.com/r/golang/comments/1ddztz3/create_a_realworld_project_from_scratch_course/</id>
+        <link href="https://www.reddit.com/r/golang/comments/1ddztz3/create_a_realworld_project_from_scratch_course/"/>
+        <updated>2024-06-12T06:19:48.000Z</updated>
+        <summary type="html"><![CDATA[I love this community, and thought to consult with you guys.
+ I've been working on an app, which ended up pretty neat. I learned a lot through the process. I thought about writing a practical book/course of the things I learned, and build the app with the readers together.
+ I've been developing in Go for about 5 years now; and in the software industry for 10+. Question is, do you think people look for such content? I see many posts here asking for good recommendations to learn Go. 
+ What I have in mind is not to teach Go, but rather take people who write Go code to the next level. Build a real project (not dummy, or clone of something else), which end up with an web-app you can use (I don't mind sharing the code, since I don't make any money of it - it's totally free). On the way I walk through the software design decisions, requirements, few principles, shipping to production, etc. Starting from blank, to a real project - one that you can be proud of at job interviews.
+ Do you think is it something people might be interested in? Obviously it won't be free, because that's a ton of work, but since I'm a firm believer of free education (as much as possible) this won't be expensive. Or am I better not waste my time?
+    submitted by    /u/kovadom  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : golang</name>
         </author>
     </entry>
     <entry>
@@ -389,6 +1348,21 @@ I've somewhat accepted this. What I want to know is if this is common in the ind
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Fake it till you make it, do you think I can do it?]]></title>
+        <id>https://www.reddit.com/r/learnprogramming/comments/1ddxhem/fake_it_till_you_make_it_do_you_think_i_can_do_it/</id>
+        <link href="https://www.reddit.com/r/learnprogramming/comments/1ddxhem/fake_it_till_you_make_it_do_you_think_i_can_do_it/"/>
+        <updated>2024-06-12T03:53:18.000Z</updated>
+        <summary type="html"><![CDATA[Okay before you judge me, hear me out! I started learning swift since Feb and it's been on and off but the last 2 months l've been getting better at staying consistent, so a person I know wants an app for their private gym and I have been honest with them about my lack of experience but not completely to the point that I've never made a app before. I gave them a turn around time for about 5-6 months to make.
+ I was thinking that I would use one month to just focus on all that l lack in my knowledge and use the rest to start developing the app and use Google as my best friend. My thought behind it was "there is no way better to keep me committed and motivated than working on someone else's app and get paid for it, especially with the pressure"
+ Do you think this would be possible to do as a novice or have I bitten more than I can chew?
+ Thanks guys
+    submitted by    /u/Degeneratecoder0101  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : learnprogramming</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[How to search C# in X?]]></title>
         <id>https://www.reddit.com/r/csharp/comments/1ddx6rc/how_to_search_c_in_x/</id>
         <link href="https://www.reddit.com/r/csharp/comments/1ddx6rc/how_to_search_c_in_x/"/>
@@ -439,6 +1413,19 @@ I've somewhat accepted this. What I want to know is if this is common in the ind
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[How much should a new grad be making?]]></title>
+        <id>https://www.reddit.com/r/csMajors/comments/1dduenz/how_much_should_a_new_grad_be_making/</id>
+        <link href="https://www.reddit.com/r/csMajors/comments/1dduenz/how_much_should_a_new_grad_be_making/"/>
+        <updated>2024-06-12T01:07:47.000Z</updated>
+        <summary type="html"><![CDATA[New grads from Texas, what y’all making?
+ Hiring managers, assuming you had to train a new grad how much would you paying them?
+    submitted by    /u/Swimming-Actuary-481  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csMajors</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[What gives you guys motivation to code?]]></title>
         <id>https://www.reddit.com/r/learnprogramming/comments/1ddub4h/what_gives_you_guys_motivation_to_code/</id>
         <link href="https://www.reddit.com/r/learnprogramming/comments/1ddub4h/what_gives_you_guys_motivation_to_code/"/>
@@ -464,6 +1451,17 @@ I've somewhat accepted this. What I want to know is if this is common in the ind
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : ExperiencedDevs</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Slack Combines ASTs with LLMs to Automatically Convert 80% of 15,000 Unit Tests]]></title>
+        <id>https://www.reddit.com/r/programming/comments/1ddtvnf/slack_combines_asts_with_llms_to_automatically/</id>
+        <link href="https://www.reddit.com/r/programming/comments/1ddtvnf/slack_combines_asts_with_llms_to_automatically/"/>
+        <updated>2024-06-12T00:40:40.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/estiller  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : programming</name>
         </author>
     </entry>
     <entry>
@@ -565,6 +1563,18 @@ I've somewhat accepted this. What I want to know is if this is common in the ind
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Is CS cooked.]]></title>
+        <id>https://www.reddit.com/r/csMajors/comments/1ddqzrh/is_cs_cooked/</id>
+        <link href="https://www.reddit.com/r/csMajors/comments/1ddqzrh/is_cs_cooked/"/>
+        <updated>2024-06-11T22:24:36.000Z</updated>
+        <summary type="html"><![CDATA[Should I pursure CS, junior at high school If yes then advice, if no then why? 
+    submitted by    /u/Equivalent-Grab-7625  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csMajors</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Navigation in AvaloniaUI]]></title>
         <id>https://www.reddit.com/r/csharp/comments/1ddqne2/navigation_in_avaloniaui/</id>
         <link href="https://www.reddit.com/r/csharp/comments/1ddqne2/navigation_in_avaloniaui/"/>
@@ -621,6 +1631,34 @@ I've somewhat accepted this. What I want to know is if this is common in the ind
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[65k new grad]]></title>
+        <id>https://www.reddit.com/r/cscareerquestions/comments/1ddq5hv/65k_new_grad/</id>
+        <link href="https://www.reddit.com/r/cscareerquestions/comments/1ddq5hv/65k_new_grad/"/>
+        <updated>2024-06-11T21:48:44.000Z</updated>
+        <summary type="html"><![CDATA[65k new grad
+ Just graduated this past May and took a job paying 65k, yet I still feel like I could’ve done better (maybe a syndrome of being on this sub) 
+ I’m seeking advice on how to play my cards right. It is about a 45 minute commute each way, and I’m currently living with my parents.
+ I have no general expenses (food/rent) as company provides lunch and parents provide dinner a lot of the time. 
+ Should I focus on getting experience at this company and plan to job hop? I’m not sure if 65k as a new grad is too high. Also any advice on what to do with this excess money would be appreciated. 
+ Thanks! 
+    submitted by    /u/MenjiBusiness  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : cscareerquestions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[May 2024 Rust Jobs Report]]></title>
+        <id>https://www.reddit.com/r/rust/comments/1ddpxsk/may_2024_rust_jobs_report/</id>
+        <link href="https://www.reddit.com/r/rust/comments/1ddpxsk/may_2024_rust_jobs_report/"/>
+        <updated>2024-06-11T21:39:21.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/anonymous_pro_  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : rust</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Language features]]></title>
         <id>https://www.reddit.com/r/cpp/comments/1ddppk4/language_features/</id>
         <link href="https://www.reddit.com/r/cpp/comments/1ddppk4/language_features/"/>
@@ -632,6 +1670,29 @@ I've somewhat accepted this. What I want to know is if this is common in the ind
  [link]   [comments]]]></summary>
         <author>
             <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Update This Morning Broke My Arch Install]]></title>
+        <id>https://www.reddit.com/r/archlinux/comments/1ddpkn0/update_this_morning_broke_my_arch_install/</id>
+        <link href="https://www.reddit.com/r/archlinux/comments/1ddpkn0/update_this_morning_broke_my_arch_install/"/>
+        <updated>2024-06-11T21:23:47.000Z</updated>
+        <summary type="html"><![CDATA[Edit: Issue resolved. Solution in comments.
+  
+Hello,
+ I've been daily driving Arch on my gaming desktop for the past month. It's been a pretty smooth experience so far, especially after the 555 drivers for nVidia were released. Wayland has been usable and very enjoyable.
+ KDE Plasma 6
+ SDDM
+ nVidia Proprietary Drivers (555 beta drivers)
+ I jumped on my desktop before leaving for work this morning and noticed in the system tray there were updates available. Opened up Discovery and installed the available updates. I quickly skimmed through the list and saw a few Mesa packages, and a bunch of KDE apps updating from 6.2 to 6.3.
+ Installed the updates, everything completed. I rebooted my PC and it appeared to be booting up just fine. When the screen switched to what I would assume would have been the login screen it just went black instead. After a few seconds the UEFI logo for my motherboard was displayed on the screen again and nothing happens after this.
+ I used CTRL+ALT+F3 to access the shell, rechecked pacman for updates, but didn't find any. System is fully updated. I tried another reboot, same result.
+ I honestly didn't have a lot of time to poke around and troubleshoot as I had to run to work. I'll be heading home soon. Does anyone have any recommendations as to where to look to troubleshoot this or fix this?
+ Thank you!
+    submitted by    /u/techdaddy1980  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : archlinux</name>
         </author>
     </entry>
     <entry>
@@ -701,6 +1762,17 @@ I've somewhat accepted this. What I want to know is if this is common in the ind
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[timeToUseMyFeetToDoPromptEngineering]]></title>
+        <id>https://www.reddit.com/r/ProgrammerHumor/comments/1ddo0xm/timetousemyfeettodopromptengineering/</id>
+        <link href="https://www.reddit.com/r/ProgrammerHumor/comments/1ddo0xm/timetousemyfeettodopromptengineering/"/>
+        <updated>2024-06-11T20:19:11.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/Kaze_Senshi  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : ProgrammerHumor</name>
         </author>
     </entry>
     <entry>
@@ -787,6 +1859,17 @@ So long as a type is the first in a struct, a pointer to that struct can be cast
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[plannedVsUnplannedDevelopment]]></title>
+        <id>https://www.reddit.com/r/ProgrammerHumor/comments/1ddmad1/plannedvsunplanneddevelopment/</id>
+        <link href="https://www.reddit.com/r/ProgrammerHumor/comments/1ddmad1/plannedvsunplanneddevelopment/"/>
+        <updated>2024-06-11T19:08:18.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/TobyWasBestSpiderMan  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : ProgrammerHumor</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Team has ballooned in recent years, what could this mean?]]></title>
         <id>https://www.reddit.com/r/cscareerquestions/comments/1ddm5w5/team_has_ballooned_in_recent_years_what_could/</id>
         <link href="https://www.reddit.com/r/cscareerquestions/comments/1ddm5w5/team_has_ballooned_in_recent_years_what_could/"/>
@@ -842,6 +1925,17 @@ Does anyone in big tech in general or Amazon in particular have experience with 
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Speech Bubbles In My Multiplayer Goose Game 💬]]></title>
+        <id>https://www.reddit.com/r/godot/comments/1ddllcu/speech_bubbles_in_my_multiplayer_goose_game/</id>
+        <link href="https://www.reddit.com/r/godot/comments/1ddllcu/speech_bubbles_in_my_multiplayer_goose_game/"/>
+        <updated>2024-06-11T18:40:32.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/MadNukin  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : godot</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Using local Arch Wiki]]></title>
         <id>https://www.reddit.com/r/archlinux/comments/1ddld9r/using_local_arch_wiki/</id>
         <link href="https://www.reddit.com/r/archlinux/comments/1ddld9r/using_local_arch_wiki/"/>
@@ -855,6 +1949,28 @@ Does anyone in big tech in general or Amazon in particular have experience with 
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : archlinux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Trying to reverse shell myself so I can remote into my computer on vacation. Victim times out.]]></title>
+        <id>https://www.reddit.com/r/hacking/comments/1ddl7bc/trying_to_reverse_shell_myself_so_i_can_remote/</id>
+        <link href="https://www.reddit.com/r/hacking/comments/1ddl7bc/trying_to_reverse_shell_myself_so_i_can_remote/"/>
+        <updated>2024-06-11T18:24:36.000Z</updated>
+        <summary type="html"><![CDATA[EDIT: I wanted to do it this way since this is how I accessed my computer a year ago, in the middle of my vacation, when I didn't have the luxury of setting anything up ahead of time. I ended up doing a NAT SSH system, as suggested by /u/n0shmon's comment
+ I used this tutorial www.xmodulo.com/access-linux-server-behind-nat-reverse-ssh-tunnel.html
+ I've enabled the firewall on the attacker's machine, here's the relevant netstat info:
+  ~~Active Internet connections (only servers)~~ ~~Proto Recv-Q Send-Q Local Address Foreign Address State PID/Program name~~ ~~tcp 0 0 0.0.0.0:4444 0.0.0.0:* LISTEN 1157/nc~~  and lsof confirms the VPS is listening on port 4444
+ Here are the commands I'm using
+ Victim:  ~~ncat -vv 12.345.67.890 4444~~ ~~│Ncat: Version 7.93 ( https://nmap.org/ncat )~~ ~~NCAT DEBUG: Using system default trusted CA certificates and those in /etc/ssl/certs/ca-certificates.crt.~~ ~~libnsock nsock_iod_new2(): nsock_iod_new (IOD #1)~~ ~~libnsock nsock_connect_tcp(): TCP connection requested to 12.345.67.890:4444 (IOD #1) EID 8~~ ~~libnsock nsock_trace_handler_callback(): Callback: CONNECT TIMEOUT for EID 8 [12.345.67.890:4444]~~ ~~Ncat: TIMEOUT.~~ 
+ Attacker:  ~~└ ncat -vv -nlp 4444~~ ~~Ncat: Version 7.80 ( https://nmap.org/ncat )~~ ~~Ncat: Listening on :::4444~~ ~~Ncat: Listening on 0.0.0.0:4444~~  ufw output: ``` └ ufw status Status: active
+ To Action From
+  
+22 ALLOW Anywhere 80 ALLOW Anywhere 443 ALLOW Anywhere 4444 ALLOW Anywhere 22 (v6) ALLOW Anywhere (v6) 80 (v6) ALLOW Anywhere (v6) 443 (v6) ALLOW Anywhere (v6) 4444 (v6) ALLOW Anywhere (v6) ```
+ What are my options?
+    submitted by    /u/grobblefip746  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : hacking</name>
         </author>
     </entry>
     <entry>
@@ -945,6 +2061,22 @@ Does anyone in big tech in general or Amazon in particular have experience with 
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Let go due to Organization Restructuring]]></title>
+        <id>https://www.reddit.com/r/devops/comments/1ddkof2/let_go_due_to_organization_restructuring/</id>
+        <link href="https://www.reddit.com/r/devops/comments/1ddkof2/let_go_due_to_organization_restructuring/"/>
+        <updated>2024-06-11T18:03:49.000Z</updated>
+        <summary type="html"><![CDATA[Hey all, unfortunately my position at work has been impacted by organizational restructuring and I was just let go. 
+ This may be a shot in the dark, but whilst this is disappointing and surprising, I am currently actively looking for roles relating to DevOps / Site Reliability / Cloud / Infrastructure.
+ In my previous role I was a DevOps Engineer and had a robust tech stack including Azure, Kubernetes, Python, SQL Databases, Debian, etc. 
+ If anyone has any open opportunities they know of, or any advice really, that would be greatly appreciated. Thanks in advance.
+ Resume is here: https://imgur.com/a/4CGAzUz
+    submitted by    /u/blueplutomonk  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : devops</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[stoicgb, another Game Boy emulator]]></title>
         <id>https://www.reddit.com/r/EmuDev/comments/1ddkcj7/stoicgb_another_game_boy_emulator/</id>
         <link href="https://www.reddit.com/r/EmuDev/comments/1ddkcj7/stoicgb_another_game_boy_emulator/"/>
@@ -974,6 +2106,21 @@ Does anyone in big tech in general or Amazon in particular have experience with 
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : hacking</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[I feel like I’ve regressed since starting as a software dev]]></title>
+        <id>https://www.reddit.com/r/cscareerquestions/comments/1ddjq22/i_feel_like_ive_regressed_since_starting_as_a/</id>
+        <link href="https://www.reddit.com/r/cscareerquestions/comments/1ddjq22/i_feel_like_ive_regressed_since_starting_as_a/"/>
+        <updated>2024-06-11T17:24:24.000Z</updated>
+        <summary type="html"><![CDATA[I was fortunate enough to get an offer senior year of college at one of the big banks and now I (almost) hate the job. I graduated April 2020 so it wasn’t hard to get a job then as it is now. My team is about 90% silos at or over retirement age so if they decide to leave this application is going to hell. I feel like your job should be where you learn and if you wanna go the extra mile (which I do) I do small local projects every now and then… My role is frontend UI related stuff and I’m basically given whatever instead of what I know. I always took it because I saw it as exposure and learning but now it’s not longer about learning the skill but keeping the application afloat ( I hope the makes sense). It’s all very niche to the team. This also does not happen to the other devs on my team, during the scrum their tasks are always consistent.
+ Have you ever been given so many random tasks back to back that don’t correlate with each other so often that you can’t grasp the/any skill? 
+ I feel this happening and I want to leave the company but as we all know jobs are hard to come by rn 
+ (Yes I’ve talked to my manager and his now new manager about keeping consistent work but my request is overlooked) 
+    submitted by    /u/n_ads  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : cscareerquestions</name>
         </author>
     </entry>
     <entry>
@@ -3980,6 +5127,20 @@ If you're new to this library, you may find the storybook helpful. It explains t
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Looking for a freelance code reviewer]]></title>
+        <id>https://www.reddit.com/r/golang/comments/1dc6k77/looking_for_a_freelance_code_reviewer/</id>
+        <link href="https://www.reddit.com/r/golang/comments/1dc6k77/looking_for_a_freelance_code_reviewer/"/>
+        <updated>2024-06-09T22:47:30.000Z</updated>
+        <summary type="html"><![CDATA[Hi
+ I'm working on my first Go project and I could use someone to look over my code and review it, and suggest where I could do things in a more go idiomatic way.
+ Obviously happy to pay for your time - anyone offer this?
+    submitted by    /u/neonised  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : golang</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[All about linux itself retro debian that still works]]></title>
         <id>https://www.reddit.com/r/debian/comments/1dc6d3p/all_about_linux_itself_retro_debian_that_still/</id>
         <link href="https://www.reddit.com/r/debian/comments/1dc6d3p/all_about_linux_itself_retro_debian_that_still/"/>
@@ -4095,6 +5256,19 @@ But it's in the freetype library that I am using, how would I do that?
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : rust</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[The state of permissive vs copyleft licensing models]]></title>
+        <id>https://www.reddit.com/r/linux/comments/1dc4wxc/the_state_of_permissive_vs_copyleft_licensing/</id>
+        <link href="https://www.reddit.com/r/linux/comments/1dc4wxc/the_state_of_permissive_vs_copyleft_licensing/"/>
+        <updated>2024-06-09T21:34:01.000Z</updated>
+        <summary type="html"><![CDATA[Correct me if I'm wrong but about two decades ago (mid 2000s), most popular software in the FOSS world was GPL licensed including Linux, WordPress and Drupal.
+ And then started a massive crusade of sorts against copyleft as folks started calling out GPL as "viral" and "infecting" of their downstream works. They started to prefer permissive licenses more as it suited some people's definition of software freedom. The GPL folks, on the other hand, made it an all or none issue, they wanted to license ALL software under GPL and the other side thought that idea was anti diversity.
+ This is very much akin to the editor wars of the Boomer era (Vim vs Emacs) or the IDE wars of the millennial era (Visual Basic vs Borland Delphi, even Netbeans vs Eclipse).
+ That's where we stand today and a huge majo…]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
         </author>
     </entry>
     <entry>
@@ -8181,6 +9355,18 @@ the code creates a function pointer and sends it to another function where it is
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[[HELP] Radeon RX 6600 + lightdm/openbox(?) crashes 10 seconds after boot (Debian 12.5)]]></title>
+        <id>https://www.reddit.com/r/debian/comments/1da09v7/help_radeon_rx_6600_lightdmopenbox_crashes_10/</id>
+        <link href="https://www.reddit.com/r/debian/comments/1da09v7/help_radeon_rx_6600_lightdmopenbox_crashes_10/"/>
+        <updated>2024-06-07T02:44:16.000Z</updated>
+        <summary type="html"><![CDATA[I installed an SSD into my Windows machine to dual boot into Debian and upgrade my previous Debian workstation. My system has a Ryzen 7 7700 (non-X) CPU, ASRock RX 6600 (non-XT) GPU, and ASRock A620 mini-ITX motherboard. I used the Debian 12.5 netinst with default kernel 6.1.0-21-amd64, and selected LXDE as my desktop environment.
+ About 10 seconds after the login screen came up the screen froze; and about 30-40 seconds later the computer rebooted itself into a black screen (no video output from the GPU nor integrated graphics from the CPU). This occured consistently regardless of whether or not I was able to log in. I'm sure this was related to the GPU because when I plugged the HDMI into the motherboard to use the CPU's integrated graphics, the computer didn't crash.
+ I tried reinstallin…]]></summary>
+        <author>
+            <name>top scoring links : debian</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Inconsistent implementation, system_clock is inconsistent in different compilers!]]></title>
         <id>https://www.reddit.com/r/cpp/comments/1da09ri/inconsistent_implementation_system_clock_is/</id>
         <link href="https://www.reddit.com/r/cpp/comments/1da09ri/inconsistent_implementation_system_clock_is/"/>
@@ -9197,6 +10383,41 @@ Tech, consulting, and finance jobs are harder to secure because of hiring cuts a
  [link]   [comments]]]></summary>
         <author>
             <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Error adding repsitories]]></title>
+        <id>https://www.reddit.com/r/debian/comments/1d9l2p4/error_adding_repsitories/</id>
+        <link href="https://www.reddit.com/r/debian/comments/1d9l2p4/error_adding_repsitories/"/>
+        <updated>2024-06-06T15:33:37.000Z</updated>
+        <summary type="html"><![CDATA[Hi, I'm having the following error adding nvtop repository and happens many others. Can someone help?
+ TNX.
+  
+simon@Debiaan-PC:~$ sudo add-apt-repository ppa:flexiondotorg/nvtop
+ [sudo] password di simon: 
+ Traceback (most recent call last):
+ File "/usr/bin/add-apt-repository", line 362, in <module>
+ sys.exit(0 if addaptrepo.main() else 1)
+ ^^^^^^^^^^^^^^^^^
+ File "/usr/bin/add-apt-repository", line 345, in main
+ shortcut = handler(source, **shortcut_params)
+ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ File "/usr/lib/python3/dist-packages/softwareproperties/shortcuts.py", line 40, in shortcut_handler
+ return handler(shortcut, **kwargs)
+ ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ File "/usr/lib/python3/dist-packages/softwareproperties/ppa.py", line 86, in __init__
+ if self.lpppa.publish_debug_symbols:
+ ^^^^^^^^^^
+ File "/usr/lib/python3/dist-packages/softwareproperties/ppa.py", line 126, in lpppa
+ self._lpppa = self.lpteam.getPPAByName(name=self.ppaname)
+ ^^^^^^^^^^^
+ File "/usr/lib/python3/dist-packages/softwareproperties/ppa.py", line 113, in lpteam
+ self._lpteam = self.lp.people(self.teamname)
+ ^^^^^^^^^^^^^^ 
+    submitted by    /u/EquivalentRent2906  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : debian</name>
         </author>
     </entry>
     <entry>
@@ -47400,361 +48621,6 @@ EDIT: I care to specify that I don't have 100% proof that this isn't just the bi
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : ProgrammerHumor</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[I wrote a slot machine game that you play over VNC (RFB protocol)]]></title>
-        <id>https://www.reddit.com/r/C_Programming/comments/1crrtij/i_wrote_a_slot_machine_game_that_you_play_over/</id>
-        <link href="https://www.reddit.com/r/C_Programming/comments/1crrtij/i_wrote_a_slot_machine_game_that_you_play_over/"/>
-        <updated>2024-05-14T13:13:01.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/greg_kennedy  
- [link]   [comments]]]></summary>
-        <author>
-            <name>C</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[The State of GraphQL in Go (2024)]]></title>
-        <id>https://www.reddit.com/r/golang/comments/1crrgfj/the_state_of_graphql_in_go_2024/</id>
-        <link href="https://www.reddit.com/r/golang/comments/1crrgfj/the_state_of_graphql_in_go_2024/"/>
-        <updated>2024-05-14T12:55:47.000Z</updated>
-        <summary type="html"><![CDATA[Hello guys, I'm a TypeScript developer and have been fascinated by the performance of Go with GraphQL. However, I noticed that the go-graphql library is not maintained. After some research, I tried using gqlgen, but I didn't like it—it felt cumbersome for creating an MVP. Are people still using GraphQL with Go? If so, how are you using it?
-    submitted by    /u/Immediate_Let1734  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : golang</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[AssetPlacer turns 1!]]></title>
-        <id>https://www.reddit.com/r/godot/comments/1crren8/assetplacer_turns_1/</id>
-        <link href="https://www.reddit.com/r/godot/comments/1crren8/assetplacer_turns_1/"/>
-        <updated>2024-05-14T12:53:18.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/_cookieBadger  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : godot</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Very very confused how to run c++ on Linux using VS Code]]></title>
-        <id>https://www.reddit.com/r/cpp_questions/comments/1crr8xo/very_very_confused_how_to_run_c_on_linux_using_vs/</id>
-        <link href="https://www.reddit.com/r/cpp_questions/comments/1crr8xo/very_very_confused_how_to_run_c_on_linux_using_vs/"/>
-        <updated>2024-05-14T12:45:15.000Z</updated>
-        <summary type="html"><![CDATA[I have a basic C++ program I'm compiling just to test to make sure my VS Code works. On Windows, I got it to work just fine following Microsoft's YouTube tutorial. On Kali Linux, however, I cannot get this damn error resolved... CTRL+SHIFT+B to build, it works perfectly:
-  
-* Executing task: C/C++: g++ build active file 
- Starting build...
- /usr/bin/g++ -fdiagnostics-color=always -g '/home/kali/Documents/cpp files/deletehelloworld.cpp' -o '/home/kali/Documents/cpp files/deletehelloworld'
- Build finished successfully.
-  
-So I get a build finished successfully, ok cool, it worked. Now let's run it and output hello world. I use '(gdb) Launch' and it tells me that I'm missing a launch task? This is extremely confusing as I've never had this issue even once on Windows.... 
- Here's my launch.json, have no idea what this is or why I need it
- { "version": "0.2.0", "configurations": [ { "name": "C++ Launch", "type": "cppdbg", "request": "launch", "program": "a.out", "args": [], "stopAtEntry": false, "cwd": "${workspaceFolder}", "environment": [], "externalConsole": false, "MIMode": "gdb", "setupCommands": [ { "description": "Enable pretty-printing for gdb", "text": "-enable-pretty-printing", "ignoreFailures": true } ], "preLaunchTask": "C/C++: g++ build active file" } ] } 
-    to    r/cpp_questions  
- [link]   [comments]]]></summary>
-        <author>
-            <name>posts from cpp, cpp_questions</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[How to arrange printed symbols in a custom amount of blank space]]></title>
-        <id>https://www.reddit.com/r/C_Programming/comments/1crqdct/how_to_arrange_printed_symbols_in_a_custom_amount/</id>
-        <link href="https://www.reddit.com/r/C_Programming/comments/1crqdct/how_to_arrange_printed_symbols_in_a_custom_amount/"/>
-        <updated>2024-05-14T12:00:01.000Z</updated>
-        <summary type="html"><![CDATA[Not sure if i expressed my desire appropriately, but i want my matrices values to print out in the same number of placeholding blank spaces, if this makes any sense...
- '''
- include<stdio.h>
- define MAX 100
- int main() { int a[MAX][MAX],b,i,j,m,n;
- printf("Vrsta m: "); scanf("%d",&m); printf("Kolona n: "); scanf("%d",&n); printf("Unesi elemente matrice: /n"); for(i=0;i<m;i++){ for(j=0;j<n;j++){ printf("element[%d][%d]: ",i,j); scanf("%d",&a[i][j]); } } for(i=0;i<m;i++){ for(j=0;j<n;j++){ printf("%d ",a[i][j]); } printf("\n"); } return 0; 
- }
- '''
- This is my code, and the output looks like this....
- '''
- Vrsta m: 2 Kolona n: 2 Unesi elemente matrice: /nelement[0][0]: 12345 element[0][1]: 12345 element[1][0]: 123456 element[1][1]: 123456 12345 12345 123456 123456
- [Program finished]
- '''
- I want my numbers i am printing out, to have custom number of space that they go into...For example i want both the 12345 and 123456 numbers to have 10 blank spaces they can go into, if that makes any sense.
-    submitted by    /u/Kajle_kajla  
- [link]   [comments]]]></summary>
-        <author>
-            <name>C</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Yup that's definitely intended]]></title>
-        <id>https://www.reddit.com/r/godot/comments/1crq66x/yup_thats_definitely_intended/</id>
-        <link href="https://www.reddit.com/r/godot/comments/1crq66x/yup_thats_definitely_intended/"/>
-        <updated>2024-05-14T11:48:52.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/jijigri_  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : godot</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[How to constrain a function to only accept containers that implement SequenceContainer?]]></title>
-        <id>https://www.reddit.com/r/cpp_questions/comments/1croxwq/how_to_constrain_a_function_to_only_accept/</id>
-        <link href="https://www.reddit.com/r/cpp_questions/comments/1croxwq/how_to_constrain_a_function_to_only_accept/"/>
-        <updated>2024-05-14T10:35:00.000Z</updated>
-        <summary type="html"><![CDATA[I want to write a function that takes in a container of std::string, but I want to constrain the function to only accept SequenceContainers. Therefore, it should accept vector, list, forward_list, array, deque, but not queue, stack, setetc. Also I don't want to limit my function to standard containers. How can I write a custom concept for this?
- template <typename Container> concept StringSequenceContainer = requires { requires std::is_same_v<typename Container::value_type, std::string>; requires ???; }; void foo(const StringSequenceContainer auto& input); 
-    submitted by    /u/jun_null    to    r/cpp_questions  
- [link]   [comments]]]></summary>
-        <author>
-            <name>posts from cpp, cpp_questions</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[noComplaints]]></title>
-        <id>https://www.reddit.com/r/ProgrammerHumor/comments/1crooop/nocomplaints/</id>
-        <link href="https://www.reddit.com/r/ProgrammerHumor/comments/1crooop/nocomplaints/"/>
-        <updated>2024-05-14T10:17:59.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/TypeScriptWizard  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : ProgrammerHumor</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Update Resume with Home Lab Experience]]></title>
-        <id>https://www.reddit.com/r/devops/comments/1crnk49/update_resume_with_home_lab_experience/</id>
-        <link href="https://www.reddit.com/r/devops/comments/1crnk49/update_resume_with_home_lab_experience/"/>
-        <updated>2024-05-14T08:59:54.000Z</updated>
-        <summary type="html"><![CDATA[I wonder that if I could list my homelab experience in my resume. Apart from my working experience, I selfhost my lab with k3s with many services in it, setup nas, pi-hole,... I thought that was a hard and fun process, and when I have problem in my work, some experiences save me much time. So, anyone here list you homelab exp in your CV/resume? Please give me you thoughts, I'm really appreciated that.
-    submitted by    /u/hades20122  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : devops</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[I'm almost math illiterate, how do I educate myself?]]></title>
-        <id>https://www.reddit.com/r/gamedev/comments/1crnaly/im_almost_math_illiterate_how_do_i_educate_myself/</id>
-        <link href="https://www.reddit.com/r/gamedev/comments/1crnaly/im_almost_math_illiterate_how_do_i_educate_myself/"/>
-        <updated>2024-05-14T08:40:37.000Z</updated>
-        <summary type="html"><![CDATA[So, I did all the basics of math in school and I took an upgraded course before I could study comp. science at university.
- I was bad at it, and Math doesn't actually interest me. The sciences never did, so it's weird I've landed myself in Computer science, and truth be told, I'm not a particularly skilled programmer either. My field of interest lie in the aesthetics, the creative, and the collaboration of thinking of, and implementing games. I did just well enough in projects that I didn't feel discouraged from the entire field, and now I still want to be a contributor in game dev. That said, I feel like math or just my inattention to detail is a problem.
- During the higher education I encountered a few instances where I would tell someone "Err, so I don't actually know how to write this" and they'd say "It's just phytagoras. I can't tell you what to do." and I had to figure something out on my own to make a cube move on the screen or something, and I ended up kinda not figuring it out, and I think eventually whoever said something about pythagoras did something on his own.
- And it's not like I don't know the pythagoras sentence, it's just that in practice I suck at math and barely know how to apply it. I remember some shit we drew on a blackboard but it doesn't come naturally to me to think mathematically.
- But now I'm facing specific needs like, I wanna figure out how to make an eye shader, cuz I have a 3D model where I'm dissatisfied with how glassy the eyes look. But people give me math stuff to figure it out. I'll be running in circles with some design I'm trying to code until some smart guy shows me some x = y2 + i > 0 ???? math that apparently solves it in one sentence.
- So I'm a bit agitated by my lack of appliccable knowledge. Do you find that Math is important to your average game work? And if I were to learn about how to develop my own shaders, is there some kind of book that could help me?
-    submitted by    /u/linkenski  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : gamedev</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Amazon Research Awards for automated C/C++ to Rust conversion]]></title>
-        <id>https://www.reddit.com/r/rust/comments/1crn4vf/amazon_research_awards_for_automated_cc_to_rust/</id>
-        <link href="https://www.reddit.com/r/rust/comments/1crn4vf/amazon_research_awards_for_automated_cc_to_rust/"/>
-        <updated>2024-05-14T08:28:24.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/dochtman  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : rust</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Machine learning in C?]]></title>
-        <id>https://www.reddit.com/r/C_Programming/comments/1crmmtq/machine_learning_in_c/</id>
-        <link href="https://www.reddit.com/r/C_Programming/comments/1crmmtq/machine_learning_in_c/"/>
-        <updated>2024-05-14T07:51:20.000Z</updated>
-        <summary type="html"><![CDATA[Hi I'm a C newbie and I come from an ML background. I've been learning c for some time and I recently had a project idea that might make me slightly better at using C if I implemented some ml algos. So I was thinking of making a decision tree clustering algorithm, where I'll substitute the criterion for measuring the variance with the f score and then use that for clustering algorithm. Just some idea had when I was studying decison trees and I wanna see if it works. 
- Is it even feasible? What approaches would you try? How can I do matrix multiplications and additions? Will I have to use the c for loops for that sort of thing, or is there a library for optimising the additions?
-    submitted by    /u/high_dead_man  
- [link]   [comments]]]></summary>
-        <author>
-            <name>C</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Postfix vs prefix incrementarion]]></title>
-        <id>https://www.reddit.com/r/cpp_questions/comments/1crm6sf/postfix_vs_prefix_incrementarion/</id>
-        <link href="https://www.reddit.com/r/cpp_questions/comments/1crm6sf/postfix_vs_prefix_incrementarion/"/>
-        <updated>2024-05-14T07:17:59.000Z</updated>
-        <summary type="html"><![CDATA[I understand the difference between (++i and i++), but which is preferred. When learning cs50x and after that in C, I've always done postfix incrementaiton. Rcecetnly starting learning cpp from learncpp.com, and they strongly recommened us to use prefix incrementation which looks a bit weird. Should i make the change or just keep using postfix incrementation since Im more accustomed to it
-    submitted by    /u/Ok_Opportunity_3197    to    r/cpp_questions  
- [link]   [comments]]]></summary>
-        <author>
-            <name>posts from cpp, cpp_questions</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Mixing rayon and tokio for fun and (hair) loss]]></title>
-        <id>https://www.reddit.com/r/rust/comments/1crlqzv/mixing_rayon_and_tokio_for_fun_and_hair_loss/</id>
-        <link href="https://www.reddit.com/r/rust/comments/1crlqzv/mixing_rayon_and_tokio_for_fun_and_hair_loss/"/>
-        <updated>2024-05-14T06:46:52.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/zerakun  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : rust</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Picking a game name is always the hardest thing]]></title>
-        <id>https://www.reddit.com/r/gamedev/comments/1crl8q1/picking_a_game_name_is_always_the_hardest_thing/</id>
-        <link href="https://www.reddit.com/r/gamedev/comments/1crl8q1/picking_a_game_name_is_always_the_hardest_thing/"/>
-        <updated>2024-05-14T06:11:44.000Z</updated>
-        <summary type="html"><![CDATA[I always have a bit of writers block when it comes to this. I should probably just slap on a working title and go.
- I am reading advice that says "Keep the game name short and not to use words a 7th grader cannot spell", but the problem is essentially this:
- 1) Every freaking combination of common words are taken and potentially trademarked items (much like you can't get the web domain name you want)
- 2) Common words don't fare well as a search term.
- 3) Lots of successful games historically have featured a non-word or made up name.
- The title really makes or breaks the game in terms of mood or seriousness. Naming it something ambiguous like Nox Arcanum or Ultima sorta has the benefit that they don't really "say" anything about the game, and do not constrain the developer in terms of story or design.
- And of course I don't want to get sued if something is "too close" to something else. I have this paranoia that corporate behemoths are always going to try to squash indies that aren't inside their financial tent. :D
- What do you guys do? Does anyone else find this decision absolutely paralyzing? I can think of a million parody names and say them in a Beavis & Butthead voice, but coming up with a single serious and marketable name is exhausting.
- Should I just put a number on the end like a username? 😆 Fantasy Adventure 3000?
- I almost think Teenage Mutant Ninja Turtles was borne of this same frustration. "Let's just string a bunch of crap together that probably hasn't ever occurred in sequence until now" 😆
-    submitted by    /u/apparunem  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : gamedev</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[basedOnThatOtherGuysBlog]]></title>
-        <id>https://www.reddit.com/r/ProgrammerHumor/comments/1crkrgg/basedonthatotherguysblog/</id>
-        <link href="https://www.reddit.com/r/ProgrammerHumor/comments/1crkrgg/basedonthatotherguysblog/"/>
-        <updated>2024-05-14T05:40:01.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/Pastlll  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : ProgrammerHumor</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Benchmarking two log management engines: Loki and Quickwit]]></title>
-        <id>https://www.reddit.com/r/devops/comments/1crkj6y/benchmarking_two_log_management_engines_loki_and/</id>
-        <link href="https://www.reddit.com/r/devops/comments/1crkj6y/benchmarking_two_log_management_engines_loki_and/"/>
-        <updated>2024-05-14T05:25:14.000Z</updated>
-        <summary type="html"><![CDATA[Hi there,
- I wrote a blog post comparing Loki and Quickwit on a simple log management use case. I'm working on Quickwit engine so I'm obviously biased but:
-  
-I tried, as best as I can, to balance my view on focusing on the tradeoffs between the two engines: basically Loki is faster at ingestion and Quickwit is faster at query time.
- I met many DevOps who were not understanding the architecture/datastructures/tradeoffs of Loki and Quickwit, I think it's worth sharing the results at it will help users to make the right choice given their use case.
-  
-And I would love to get feedback on this, the benchmark code is available on github.
- Blog post: https://quickwit.io/blog/benchmarking-quickwit-loki
- Benchmark repo: https://github.com/quickwit-oss/benchmarks/blob/main/loki_quickwit_benchmark.md
-    submitted by    /u/massus  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : devops</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[On-the-fly lexical analysis in an embedded context]]></title>
-        <id>https://www.reddit.com/r/C_Programming/comments/1crk5dw/onthefly_lexical_analysis_in_an_embedded_context/</id>
-        <link href="https://www.reddit.com/r/C_Programming/comments/1crk5dw/onthefly_lexical_analysis_in_an_embedded_context/"/>
-        <updated>2024-05-14T05:01:10.000Z</updated>
-        <summary type="html"><![CDATA[I'm working in embedded C. The device receives ascii text one character at a time over a serial port and I would like to recognize when certain regex patterns appear in the stream. The character rate is highly variable and there are other tasks to perform, so I can't simply block on the serial port and collect data as a string.
- What I want is something like PEARL with various rules and actions, but with a one-char-at-a-time input. And it has to play nice with other round-robin tasks.
- The goal would be to do something like stringRecognizer() in the code below. The pattern rules would be regex that are pre-compiled by the lex-generator for (e.g.) recognizing the strings "CAT", "DOG" and "PIG" and returning an appropriate enum value that would trigger an action.
- The function is stateful, so it knows if it has seen (e.g.) C and then A, so a subsequent T would return ACTION_CAT but an R (or anything else) would return ACTION_NOT_DONE and move on. A D would also return ACTION_NOT_DONE but move the state into the DOG rule (so CADOG would eventually trigger the DOG rule). There might be a rule to reset the state machine when a new-line or carriage-return is seen.
- I've looked at lex, flex and re2c but none provides a stateful pattern recognizer. In all cases the state machine pulls data from either a string or an input stream, but is otherwise fully blocking. When the lex() function returns (to main()) all state is lost and restarts when a new string is supplied.
- while(1) { doTask1(); // blink led doTask2(); // read a sensor if (serialInputHasData()) { char c = getch(); action_t action = stringRecognizer(c); switch(action) { case ACTION_CAT: doCatFunction(); break; case ACTION_DOG: doDogFunction(); break; case ACTION_PIG: doPigFunction(); break; case ACTION_NOT_DONE: break; default: break; } } } 
-    submitted by    /u/somewhereAtC  
- [link]   [comments]]]></summary>
-        <author>
-            <name>C</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Are standard libraries dynamically linked?]]></title>
-        <id>https://www.reddit.com/r/C_Programming/comments/1criwbi/are_standard_libraries_dynamically_linked/</id>
-        <link href="https://www.reddit.com/r/C_Programming/comments/1criwbi/are_standard_libraries_dynamically_linked/"/>
-        <updated>2024-05-14T03:47:47.000Z</updated>
-        <summary type="html"><![CDATA[When I look at the Assembly generated by the compiler from some simple code using standard library functions, I can't find the code for the standard library functions that I used even though there are branches to those functions in the Assembly. Would this mean that standard library functions are dynamically linked or am I missing something?
-    submitted by    /u/SomeKindOfSorbet  
- [link]   [comments]]]></summary>
-        <author>
-            <name>C</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Scanf question]]></title>
-        <id>https://www.reddit.com/r/C_Programming/comments/1crirn4/scanf_question/</id>
-        <link href="https://www.reddit.com/r/C_Programming/comments/1crirn4/scanf_question/"/>
-        <updated>2024-05-14T03:40:24.000Z</updated>
-        <summary type="html"><![CDATA[YES I UNDERSTAND SCANF IS BAD AND I SHOULD USE FGETS INSTEAD! I'm simply trying to get a better understanding of how scanf works. 
- Why doesn't the scanf call below work? It only prints the first name of an input. For instance, if the user inputs John Doe it only prints out Hello John! It seems as if the [^\n] is doing absolutely nothing. 
- #include <stdio.h> int main(void) { char name[20]; printf("What's your name? "); scanf("%19s[^\n]", name); printf("Hello %s!\n", name); return 0 ; } 
- ​
-    submitted by    /u/OldSkater7619  
- [link]   [comments]]]></summary>
-        <author>
-            <name>C</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Announcement: https://github.com/orgs/SingleStepTests for individual-instruction tests in volume]]></title>
-        <id>https://www.reddit.com/r/EmuDev/comments/1cri7w9/announcement_httpsgithubcomorgssinglesteptests/</id>
-        <link href="https://www.reddit.com/r/EmuDev/comments/1cri7w9/announcement_httpsgithubcomorgssinglesteptests/"/>
-        <updated>2024-05-14T03:10:09.000Z</updated>
-        <summary type="html"><![CDATA[Some might be aware of the old TomHarte/ProcessorTests repository, which was initially:
-  
-10,000 tests per opcode, for every 8-bit member of the 6502 family;
- each providing the before and after processor state for that opcode only, along with relevant memory values;
- with captured bus activity;
- expressed in JSON.
-  
-Over time that repository had become ungainly, covering additional processors and types of test gathered with varying degrees of rigour by a mix of authors.
- That resource has therefore given way to https://github.com/orgs/SingleStepTests/, an organisation rather than a single destination, allowing each repository to be:
-  
-much more focussed, on either a single processor or a small number of extremely-similar ones; and
- autonomously authored and maintained.
-  
-The old ProcessorTests repository also lingers there for now, but will be marked as archived in the near future.
- So: check it out if you're working on a new processor emulation. Compared to traditional test programs all collections should be both more comprehensive and more communicative in the case of a digression.
- Also please don't hesitate to contribute if you have the means to do so.
-    submitted by    /u/thommyh  
- [link]   [comments]]]></summary>
-        <author>
-            <name>Developing Emulators</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[What’s the best company you’ve worked for?]]></title>
-        <id>https://www.reddit.com/r/cscareerquestions/comments/1crhxni/whats_the_best_company_youve_worked_for/</id>
-        <link href="https://www.reddit.com/r/cscareerquestions/comments/1crhxni/whats_the_best_company_youve_worked_for/"/>
-        <updated>2024-05-14T02:55:24.000Z</updated>
-        <summary type="html"><![CDATA[Following on the worst company thread from a fellow Redditor (very helpful), I think we’d all like to know some good companies to work for. And what made them a good place to work?
-    submitted by    /u/pensivepuffin  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : cscareerquestions</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Asynchronous C without multi-threading]]></title>
-        <id>https://www.reddit.com/r/C_Programming/comments/1crhbok/asynchronous_c_without_multithreading/</id>
-        <link href="https://www.reddit.com/r/C_Programming/comments/1crhbok/asynchronous_c_without_multithreading/"/>
-        <updated>2024-05-14T02:23:49.000Z</updated>
-        <summary type="html"><![CDATA[Does anyone have resources on how to go about learning asynchronous programming without multithreading? My previous experience with async programming has been with Go (which uses green threads managed by the runtime) and with Rust (which uses async-await and internally generates state machines that can cooperatively achieve asynchronous execution).
- Obviously, C is pretty bare bones, so I would be implementing the asynchronous mechanism from scratch. However, most resources online only show multithreading as a way to achieve async execution.
- EDIT: I understand that this might actually be impractical, which is why so much engineering effort is contributed to making languages such as Go. I'm mostly just interested in this for educational purposes.
-    submitted by    /u/nimaipatel  
- [link]   [comments]]]></summary>
-        <author>
-            <name>C</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Automatically allocating/freeing memory in C]]></title>
-        <id>https://www.reddit.com/r/C_Programming/comments/1crgbt8/automatically_allocatingfreeing_memory_in_c/</id>
-        <link href="https://www.reddit.com/r/C_Programming/comments/1crgbt8/automatically_allocatingfreeing_memory_in_c/"/>
-        <updated>2024-05-14T01:33:22.000Z</updated>
-        <summary type="html"><![CDATA[So right now I'm writing an arena allocator in C and I figured out how to silently initialize and free everything without the user having to do a single thing:
-  #include "arena.h" int main() { void* p; for(int i = 0; i < 500; i++) { p = arena_alloc(100); // similar to malloc } for(int i = 0; i < 50; i++) { p = block_alloc(100, sizeof(int)); // similar to calloc } return 0; } 
- The arena which owns all the memory is getting initialized and freed automatically with no memory leaks (in fact it's completely hidden from the user). So how is that possible?
- You can do this for almost any type of program but I'll use my arena allocator as an example.
- Global instance
- Anytime I'm writing a standalone C program, I always do something like this in the header - put all of the global variables into …]]></summary>
-        <author>
-            <name>C</name>
         </author>
     </entry>
 </feed>
