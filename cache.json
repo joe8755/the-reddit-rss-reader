@@ -6,6 +6,66 @@
       "siteUrl": "https://www.reddit.com/r/C_Programming/",
       "articles": [
         {
+          "id": "https://www.reddit.com/r/C_Programming/comments/1dewwi8/best_practice_returning_struct_that_has_owned/",
+          "author": null,
+          "description": "Hi all,\n I've recently picked up C again after not using it for while, and I'm trying to do things the \"C\" way :). I've been reading some codebases, but haven't been able to decide what is the best way to do the following: I have a function that parses command line arguments:\n struct args { ... bunch of arguments struct some_other_struct* ptrmember; } struct args args_parse(int argc, const char **argv); \n This initial version returns struct args by value. I'm not entirely sure if it is the way to go, since it is a somewhat large struct (5 members), more importantly, the ptrmember member inside needs to be free'd, and it feels like returning a struct by value implies that there is no cleanup needed. I'm also not sure if I should make the caller responsible for free'ing free(args.ptrmember) or have a args_free function which does it.\n Some alternatives that may be better:\n int args_parse(int argc, const char **argv, struct args* out); \n  \nAdded benefit of having return value.\n Allows caller to decide whether to allocate args on heap or put it on stack.\n Still it is not entirely clear as to whether the caller is responsible for free'ing ptrmember I feel like (since it is allocated by args_parse, but the caller initialized the containing struct).\n  \nOr may be the C way is to not use a struct at all and just have a bunch of out parameters like so:\n int args_parse(int argc, const char **argv, enum action* out_action, struct some_other_struct* out_ptrmember); \n  \nThis one makes it very clear that the caller is responsible for freeing out_ptrmember IMO, but I'm not sure if it is best practice to use out variables so liberally here.\n  \n   submitted by    /u/aangebrandpannenkoek  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/C_Programming/comments/1dewwi8/best_practice_returning_struct_that_has_owned/",
+          "publishedOn": "2024-06-13T11:39:06.000Z",
+          "wordCount": null,
+          "title": "Best practice returning struct that has owned data inside",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/C_Programming/comments/1deuxjf/is_arri_is_equivalent_to_arr_i/",
+          "author": null,
+          "description": "As a beginner C programmer, I'm confused a lot by this example.\n  \nWhy printArray and printArrayPointer has same inner code, but first function accepts int arr[], and the second one - int *arr? When you pass an array to a function, you are actually passing a pointer to the first element of the array. So int arr[] equivalent to int *arr? Why?\n \nWhy arr[i] works in printArrayPointer methods? This first argument must be a pointer to a first element in the array, not an array itself. So why on earth arr[i] works?\n \n ```c\n int main(void) { int arr[] = {1, 2, 3, 4, 5}; int size = sizeof(arr) / sizeof(arr[0]);\n printArray(arr, size); printArrayPointer(arr, size); printArrayPointerArithmetic(arr, size);\n return 0; }\n void printArray(int arr[], int size) { for (int i = 0; i < size; i++) { printf(\"%d \", arr[i]); } printf(\"\\n\"); }\n void printArrayPointer(int *arr, int size) { for (int i = 0; i < size; i++) { printf(\"%d \", arr[i]); } printf(\"\\n\"); }\n void printArrayPointerArithmetic(int *arr, int size) { for (int *ptr = arr; ptr < arr + size; ptr++) { printf(\"%d \", *ptr); } printf(\"\\n\"); } ```\n    submitted by    /u/abstrscat  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/C_Programming/comments/1deuxjf/is_arri_is_equivalent_to_arr_i/",
+          "publishedOn": "2024-06-13T09:33:26.000Z",
+          "wordCount": null,
+          "title": "Is arr[i] is equivalent to *(arr + i)?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/C_Programming/comments/1desikc/beginner_is_pretpokeemerald_bad_c_code/",
+          "author": null,
+          "description": "Hi there!\n TL;TR;\n Is the code from pret/pokeemerald following good or bad practice?\n Full story: So this might be very specific because this is about the Pokémon decompilation project by Pret. The reason why I ask here instead of a sub about Romhacking is basically that I just care about the C code inside that project and I want \"professional\" opinions. I can imagine that a lot of people from romhacking subs or communities are self taught but only in the context of the decomps. They might not learned C but rather how to achieve things within the decomps. Don't get me wrong there are some insane developers in the community but it feels more safe to get an opinion about practices and design of the code from a neutral and professional point of view.\n 10 Years ago I made a romhack with a frie…",
+          "link": "https://www.reddit.com/r/C_Programming/comments/1desikc/beginner_is_pretpokeemerald_bad_c_code/",
+          "publishedOn": "2024-06-13T06:41:43.000Z",
+          "wordCount": null,
+          "title": "[beginner] is pret/Pokeemerald bad C code?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/C_Programming/comments/1deqfm7/same_code_using_popen_is_giving_exit_code_in/",
+          "author": null,
+          "description": "Code\n SANDBOX.c\n #include <unistd.h> #include <stdlib.h> #include <stdio.h> #include <fcntl.h> #include <stdbool.h> #include <sys/wait.h> #define BUFFER_SIZE 4096 #define OUTPUT_BUFFER 1024 typedef unsigned char uchar; void write_stdin_to_file(int *size) { uchar buffer[BUFFER_SIZE]; int read_bytes = 0; *size = 0; int fd = open(\"./binary\", O_RDWR | O_CREAT, 0777); FILE *fp = fdopen(fd, \"wb\"); if (fp == NULL) { fprintf(stdout, \"Failed to open the file for writing\\n\"); exit(-1); } while (true) { read_bytes = read(0, buffer, BUFFER_SIZE); if (read_bytes < 0) { fprintf(stdout, \"Failed to read binary data, exiting\"); fclose(fp); exit(-1); } if (read_bytes == 0) { // EOF break; } // write data to the file *size += read_bytes; fwrite(buffer, sizeof(uchar), read_bytes, fp); } // wrote the file, clo…",
+          "link": "https://www.reddit.com/r/C_Programming/comments/1deqfm7/same_code_using_popen_is_giving_exit_code_in/",
+          "publishedOn": "2024-06-13T04:25:30.000Z",
+          "wordCount": null,
+          "title": "same code using popen() is giving exit_code in normal execution and termination signal while running on docker.",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/C_Programming/comments/1dephac/popen_does_not_return_124_on_timeout/",
+          "author": null,
+          "description": "int main(){ // ./binary is a binary of a infinite loop code FILE *ptr = popen(\"timeout 2s ./binary\",\"r\"); int exit_code = pclose(ptr); printf(\"%d\", exit_code); // returns 15 (SiGTERM) return 0; } \n    submitted by    /u/Ready-Ad6747  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/C_Programming/comments/1dephac/popen_does_not_return_124_on_timeout/",
+          "publishedOn": "2024-06-13T03:31:21.000Z",
+          "wordCount": null,
+          "title": "popen() does not return 124 on timeout ;",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/C_Programming/comments/1dep91j/why_do_malloc_and_calloc_take_different_arguments/",
+          "author": null,
+          "description": "Calloc takes 2 arguments while malloc takes 1, which creates a small annoyance when switching from one to the other. Is there a technical reason why these functions take different arguments, or is it for historical reasons? \n    submitted by    /u/LearningStudent221  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/C_Programming/comments/1dep91j/why_do_malloc_and_calloc_take_different_arguments/",
+          "publishedOn": "2024-06-13T03:19:05.000Z",
+          "wordCount": null,
+          "title": "Why do malloc and calloc take different arguments?",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/C_Programming/comments/1del0d5/my_function_that_returns_file_contents_is_causing/",
           "author": null,
           "description": "okay, so i found some answers on stackoverflow, i copied the function without really knowing how it works (please forgive me for that) and it worked at first, and now it causes undefined behaviour such as displaying the file contents as cryptic emojis and text, here is the function i used from him, also a link to his answer on stackoverflow: https://stackoverflow.com/a/70291168/2536654 and the function i used from him:\n char *openfile(FILE *fp) { size_t offset = 0; size_t bufsiz = 1024; char *buffer = malloc(bufsiz); if (buffer == NULL) return NULL; while (fgets(buffer + offset, bufsiz - offset, fp) != NULL) { /* Assumes data does not contain null bytes */ /* Generic problem using fgets() */ size_t newlen = strlen(buffer + offset); offset += newlen; if (bufsiz - offset < 256) { size_t new_size = bufsiz * 2; char *new_data = realloc(buffer, new_size); if (new_data == NULL) { free(buffer); return NULL; } bufsiz = new_size; buffer = new_data; } } if (bufsiz - offset > 256) buffer = realloc(buffer, offset + 1); return buffer; fclose(fp); } \n how i used it:\n FILE *myfile = fopen(\"../any/file\", \"r\"); printf(\"%s\", openfile(myfile)); \n    submitted by    /u/Great_Click_9140  \n [link]   [comments]",
@@ -3424,46 +3484,6 @@
           "wordCount": null,
           "title": "C Essentials - Course (OpenEDG/Edube/C++ Institute)",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/C_Programming/comments/1cs7tiu/fast_chess_move_generator_in_under_1000_lines_of/",
-          "author": null,
-          "description": "I'd like to share this project I have been working on, it is a chess move generator that can traverse 375M+ nodes per second on a single thread from the starting position. I've tried to make it as fast and simple as possible.\n https://github.com/alexjasson/templechess\n    submitted by    /u/alexjasson  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/C_Programming/comments/1cs7tiu/fast_chess_move_generator_in_under_1000_lines_of/",
-          "publishedOn": "2024-05-15T00:31:43.000Z",
-          "wordCount": null,
-          "title": "Fast chess move generator in under 1000 lines of C code",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/C_Programming/comments/1cs2k2u/learning_programming_for_noncs_people/",
-          "author": null,
-          "description": "How long do you think it takes to learn programming well enough for everyday use? With everday use I mean for people who has no CS background but they need to learn how to code due to their jobs, e.g., someone in Finance who has to develop or run a machine learning model for predicting some trends in stock or bonus markets or someone working in Research and need to perform programming due their research is quantitative and they have to perform some coding. \n    submitted by    /u/Traditional-Top-1504  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/C_Programming/comments/1cs2k2u/learning_programming_for_noncs_people/",
-          "publishedOn": "2024-05-14T20:39:27.000Z",
-          "wordCount": null,
-          "title": "Learning programming for non-CS people",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/C_Programming/comments/1crw59h/do_shared_objects_have_the_ability_to_contain/",
-          "author": null,
-          "description": "by \"code line info\". i mean the ones that show the current line of source code being executed. I disabled optimizations with -O0\n    submitted by    /u/paintedirondoor  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/C_Programming/comments/1crw59h/do_shared_objects_have_the_ability_to_contain/",
-          "publishedOn": "2024-05-14T16:19:04.000Z",
-          "wordCount": null,
-          "title": "do shared objects have the ability to contain code line info? and if compiled with clang. does it still retain debug info?",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/C_Programming/comments/1crt4ko/which_code_is_correct_for_the_problem_implement_a/",
-          "author": null,
-          "description": "// First code\n #include <stdio.h>\n #include <string.h>\n #include <stdlib.h>\n char* cat(char* a, char* b) {\n int a1 = strlen(a);\n int b1 = strlen(b);\n int ab = a1 + b1 + 1;\n char* str = calloc(ab, sizeof(*str));\n for(int i = 0; i < a1; i++) {\n str[i] = a[i];\n }\n for(int j = 0; j < b1; j++) {\n str[j+a1] = b[j]; \n }\n str[ab - 1] = '\\0';\n return str;\n }\n int main() {\n char a[] = \"hello\";\n char b[] = \"world\";\n char *s = cat(a,b);\n printf(\"s: %s\\n\", s);\n free(s);\n return 0;\n }\n // Second Code\n #include <stdio.h>\n void strcon(char *str1, const char *str2) {\n while (*str1 != '\\0') {\n str1++;\n }\n while (*str2 != '\\0') {\n *str1 = *str2;\n str2++;\n str1++;\n }\n *str1 = '\\0';\n }\n int main() {\n char str1[] = \"hello\";\n char str2[] = \"world\";\n printf(\"original string: %s\\n\\n\", str1);\n strcon(str1, str2);\n printf(\"concatenated string: %s\", str1);\n return 0;\n }\n    submitted by    /u/RoyalChallengers  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/C_Programming/comments/1crt4ko/which_code_is_correct_for_the_problem_implement_a/",
-          "publishedOn": "2024-05-14T14:10:40.000Z",
-          "wordCount": null,
-          "title": "Which code is correct for the problem: Implement a function in C to concatenate two strings using pointers.",
-          "imageUrl": null
         }
       ]
     },
@@ -3472,6 +3492,136 @@
       "feedUrl": "https://www.reddit.com/r/cpp+cpp_questions/.rss",
       "siteUrl": "https://www.reddit.com/r/cpp+cpp_questions/",
       "articles": [
+        {
+          "id": "https://www.reddit.com/r/cpp_questions/comments/1dexwqc/participation_in_code_reviews_when_youre/",
+          "author": null,
+          "description": "Whenever someone on my team (of about 6 people) submits a code review, all team members are included as reviewers, along with subject matter experts from other teams when appropriate. I make it a point to participate in every code review, regardless of my familiarity with the code in question. When I'm not familiar with the code, I focus on identifying basic issues such as dereferencing null pointers, code smells, and any naming or comments that seem unclear or inappropriate. My team is highly competent, so I seldom find myself contributing significantly in these instances. I've noticed that many people, upon encountering unfamiliar code, choose not to review it at all. This has led me to question whether those who opt out are actually taking the correct approach and whether my efforts have merely been adding unnecessary noise to the review process for years. How do you all manage such situations? What do you believe is the correct approach?\n    submitted by    /u/Agreeable-Ad-0111    to    r/cpp_questions  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp_questions/comments/1dexwqc/participation_in_code_reviews_when_youre/",
+          "publishedOn": "2024-06-13T12:34:55.000Z",
+          "wordCount": null,
+          "title": "Participation in code reviews when you're unfamiliar with the code",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp_questions/comments/1dexirt/how_can_i_simulate_dice_in_c_i/",
+          "author": null,
+          "description": "how can I simulate dice in c++?\n I'm fairly new to the language and I'm just using it to see if my answer to a probability problem is right. Since I couldn't find the problem online and I can't reach the professor who showed it to me I thought I would exploit the law of large numbers and simulate a large number of cases to see if the statistics were at all close to the value I had calculated. The problem was: out of 6 dice throws what is the probability of obtaining only two numbers that don't repeat? (meaning the other four are either all the same or two same couples) This is the code I wrote to simulate the situation but I found that after a big enough number of cases the \"random\" dice throws start to repeat. ls there a better way to simulate such a situation?\n here is the code:\n #includ…",
+          "link": "https://www.reddit.com/r/cpp_questions/comments/1dexirt/how_can_i_simulate_dice_in_c_i/",
+          "publishedOn": "2024-06-13T12:14:20.000Z",
+          "wordCount": null,
+          "title": "how can I simulate dice in c++? I",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp_questions/comments/1dexaw2/how_do_i_make_a_glfw_window_not_stretch_with/",
+          "author": null,
+          "description": "I am trying to make a glfw window and it works. But it stretches everything based on the screen width and height. I want it to stay consistent no matter the screen width or height. Please help me.\n    submitted by    /u/yaboiaseed    to    r/cpp_questions  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp_questions/comments/1dexaw2/how_do_i_make_a_glfw_window_not_stretch_with/",
+          "publishedOn": "2024-06-13T12:02:13.000Z",
+          "wordCount": null,
+          "title": "How do I make a GLFW window not stretch with width and height?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp/comments/1dex5a8/how_to_convert_char_array_string_to_unicode/",
+          "author": null,
+          "description": "submitted by    /u/yimmasabi    to    r/cpp  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp/comments/1dex5a8/how_to_convert_char_array_string_to_unicode/",
+          "publishedOn": "2024-06-13T11:53:19.000Z",
+          "wordCount": null,
+          "title": "How To Convert Char Array String To Unicode String Correctly In C++?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp/comments/1dewq6b/limit_the_number_of_library_dependencies/",
+          "author": null,
+          "description": "submitted by    /u/Xadartt    to    r/cpp  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp/comments/1dewq6b/limit_the_number_of_library_dependencies/",
+          "publishedOn": "2024-06-13T11:28:43.000Z",
+          "wordCount": null,
+          "title": "Limit the number of library dependencies",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp_questions/comments/1dewhdy/cant_import_portaudio_in_my_custom_projects/",
+          "author": null,
+          "description": "Hi guys.\n I am trying to make a conferencing application via Janus servers. I am using the libdatachannel library for communicating via websockets. Here, I need port audio to record and play audio that I want to send and receive. However, I am unable to build and import the portaudio library through the cmake file of the project. I suspect it has to do with my cmake file. Could someone help me out? The application I am building is task-client-1 and task-client-2.\n Link to my project: sabeehalam/webRTC-Task (github.com)\n    submitted by    /u/cephxx    to    r/cpp_questions  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp_questions/comments/1dewhdy/cant_import_portaudio_in_my_custom_projects/",
+          "publishedOn": "2024-06-13T11:13:54.000Z",
+          "wordCount": null,
+          "title": "Can't import portaudio in my custom projects.",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp/comments/1devq8q/why_is_c_and_c_so_hard_to_work_with_when_it_comes/",
+          "author": null,
+          "description": "Hi there!\n I was learning on how to make a ray tracer by The Cherno. I have intermediate programming skills, and I thought I could handle it. But immediately I hit my first roadblock with C++. I don't know how to even run the project in the first place(apart from a single file Hello World with a header.h). What makes it even more complicated, he is using a solution file with Visual Studio to compile all of this stuff. But I'm on Linux, and use VSCode. So that was a bust. I tried to run it normally by running gcc to the WalnutApp.cpp but that is giving me include header directory errors(not found). So it's very disheartening for me, that for C++ to work, I have to learn CMake. Which is way too complicated for me to even begin to understand. What do I do? Where do I even begin?\n Here is the template I use for the project incase you wanted to know: https://github.com/StudioCherno/WalnutAppTemplate\n    submitted by    /u/IAmAllergicToKarens    to    r/cpp  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp/comments/1devq8q/why_is_c_and_c_so_hard_to_work_with_when_it_comes/",
+          "publishedOn": "2024-06-13T10:27:00.000Z",
+          "wordCount": null,
+          "title": "Why is C, and C++ so hard to work with when it comes to dependencies, and header files in Linux",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp_questions/comments/1detfv4/programming_cpp_software_with_sfml_library/",
+          "author": null,
+          "description": "I've been developing my entire life between Microsoft Windows and Linux.\n I'm looking to buy a new Mac Book Air M3 and I was trying to understand how hard is to setup + develop on Apple M silicon.\n Currently I'm learning SFML library and it works just fine with Visual Studio (not Code) on Windows.\n I would like to know if someone has had some experience with CPP and specifically with SFML on XCode (or any other IDE supported on Apple Silicon)\n I've read about Homebrew, llvm and clang for Apple Silicon. Is the right solution?\n    submitted by    /u/nicocaldo    to    r/cpp_questions  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp_questions/comments/1detfv4/programming_cpp_software_with_sfml_library/",
+          "publishedOn": "2024-06-13T07:45:40.000Z",
+          "wordCount": null,
+          "title": "Programming CPP software with SFML library",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp/comments/1detcgq/an_idea_for_full_thread_support_for_iso_c/",
+          "author": null,
+          "description": "I'm proposing an enhancement to ISO C++'s threading capabilities, envisioning a more comprehensive module (std::multi_thread as a concept) that encapsulates advanced features such as asynchronous processing, thread pooling, and refined multithreading controls, inspired by the elegance of JavaScript's async patterns. My motivation stems from the current limitations of std::thread in terms of customization and the complexities encountered when applying std::async and std::future to classes and containers.\n I aim to streamline concurrent programming by introducing more intuitive and flexible APIs, reducing boilerplate code, and enhancing performance through intelligent resource management akin to thread pools. This new module would not replace but complement existing standards, offering developers a more powerful toolset for managing concurrency in modern, complex applications.\n I'm eager to gauge the C++ community's thoughts on this proposal. Have you encountered similar challenges with the current threading model? Do you envision benefits in having a more integrated, high-level threading solution within the language standard? If this idea sparks your interest or you have suggestions to refine it, please share your thoughts in the comments! Thanks!\n    submitted by    /u/NvKopres    to    r/cpp  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp/comments/1detcgq/an_idea_for_full_thread_support_for_iso_c/",
+          "publishedOn": "2024-06-13T07:39:04.000Z",
+          "wordCount": null,
+          "title": "An Idea for Full Thread Support for ISO C++",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp_questions/comments/1det8yz/what_would_you_call_a_type_of_class_which/",
+          "author": null,
+          "description": "I don't know why I wrote 'elsewhere' in my title, please ignore that.\n    submitted by    /u/mercury_pointer    to    r/cpp_questions  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp_questions/comments/1det8yz/what_would_you_call_a_type_of_class_which/",
+          "publishedOn": "2024-06-13T07:31:44.000Z",
+          "wordCount": null,
+          "title": "What would you call a type of class which replicates data from a definitive source elsewhere in a format optimized for a certain algorithm?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp_questions/comments/1det360/i_just_learned_about_auto/",
+          "author": null,
+          "description": "So, I am a student and a beginner in cpp and I just learned about \"auto\" keyword. Upon searching, I came to a conclusion on my own it being similar to \"var\" in JS. So, is it recommended to use \"auto\" as frequently as it is done in JS?\n    submitted by    /u/hide_professionally    to    r/cpp_questions  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp_questions/comments/1det360/i_just_learned_about_auto/",
+          "publishedOn": "2024-06-13T07:20:35.000Z",
+          "wordCount": null,
+          "title": "I just learned about \"AUTO\"",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp_questions/comments/1denfas/need_help/",
+          "author": null,
+          "description": "I’m completely new to coding especially, of course the c++ I downloaded the visual studio and am trying to follow along the video for the learncpp.com from the beginning. However I don’t know how to get it to be the same thing and run commands as shown in the video. \n    submitted by    /u/Exoboa1    to    r/cpp_questions  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp_questions/comments/1denfas/need_help/",
+          "publishedOn": "2024-06-13T01:41:48.000Z",
+          "wordCount": null,
+          "title": "Need help!",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp_questions/comments/1den544/getting_lowhigh_bits_regardless_of_endianness/",
+          "author": null,
+          "description": "Hello, I'm sure this is a really simple question, but how can I make sure I get the low and high bits regardless of endianness?\n Specifically, I'm trying to avoid having code on my machine split a u16 like 0xABCD into 0xAB and 0xCD, passing it over serial, and having the device on the other end reconstruct it as 0xCDAB.\n If I put the values in a u8 array, I know they get sent and parsed in the same order on both ends.\n So the challenge is splitting the u16 into two u8's in a hardware agnostic way. Would bit shifts be enough for that?\n    submitted by    /u/thebootycutie    to    r/cpp_questions  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp_questions/comments/1den544/getting_lowhigh_bits_regardless_of_endianness/",
+          "publishedOn": "2024-06-13T01:26:40.000Z",
+          "wordCount": null,
+          "title": "Getting low/high bits regardless of endianness",
+          "imageUrl": null
+        },
         {
           "id": "https://www.reddit.com/r/cpp_questions/comments/1demgvp/useful_define_statements/",
           "author": null,
@@ -9571,206 +9721,6 @@
           "wordCount": null,
           "title": "Sharing a CMake + Conan + Qt CMakeLists.txt file? Anything dastardly?",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/cpp_questions/comments/1cs73h5/compiling_error_with_gcc_free_and_malloc_not/",
-          "author": null,
-          "description": "I'm having this error\n /usr/local/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/c++/12.3.1/cstdlib:147:11: error: 'free' has not been declared in '::'\n 147 | using ::free;\n | ^~~~\n /usr/local/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/c++/12.3.1/cstdlib:151:11: error: 'malloc' has not been declared in '::'\n 151 | using ::malloc;\n | ^~~~~~\n I've found this explanation, but I compile with cmake.\n If I comment out these lines inside cstdlib it compiles without error, but I shouldn't be modifying a standard library header... Can anyone explain?\n    submitted by    /u/Responsible-Nature20    to    r/cpp_questions  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/cpp_questions/comments/1cs73h5/compiling_error_with_gcc_free_and_malloc_not/",
-          "publishedOn": "2024-05-14T23:57:31.000Z",
-          "wordCount": null,
-          "title": "Compiling error with gcc \"free\" and \"malloc\" not declared but the error is in the cstdlib file, not in my code...",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/cpp_questions/comments/1cs6t4t/what_is_nb_commment_us_101_on_the_cd_in_p0767r1/",
-          "author": null,
-          "description": "The first two lines.\n Whaaat? Please tell me what is NB, US and CD means here? What entities are they?\n https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0767r1.html\n    submitted by    /u/truth_and_fate    to    r/cpp_questions  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/cpp_questions/comments/1cs6t4t/what_is_nb_commment_us_101_on_the_cd_in_p0767r1/",
-          "publishedOn": "2024-05-14T23:44:03.000Z",
-          "wordCount": null,
-          "title": "What is \"NB commment US 101 on the CD \" in P0767R1: Deprecate POD?",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/cpp_questions/comments/1cs5yf0/partial_template_specialization/",
-          "author": null,
-          "description": "https://godbolt.org/z/dzePjs8W9\n This is my problem. I have a templated struct S which has the compare function. But when I do specialization which inherits from another class the compare function is no longer available in my specialization. Why is that? \n    submitted by    /u/ontariow23    to    r/cpp_questions  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/cpp_questions/comments/1cs5yf0/partial_template_specialization/",
-          "publishedOn": "2024-05-14T23:04:57.000Z",
-          "wordCount": null,
-          "title": "Partial template specialization",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/cpp/comments/1cs5v48/would_c26s_introduction_of_reflection_push/",
-          "author": null,
-          "description": "As you know, one of the main gripes with C++ development is related to compilation time. Compiler vendors constantly strive to make improvements in this area, in spite of new STL features being constantly added. C++26 is going to be quite special in this regard though afaik, having the reflections proposal accepted. Reflections being probably the biggest metaprogramming extensions ever added to the language, even bigger than concepts and require clauses.\n I'm saying this because I was watching this particular talk by Alexander Fokin describing it: https://youtu.be/FqzrQf6Xr8g?si=oe6L0askoOzQjSlC&t=3592 . What immediately caught my attention was the example of how you could implement std::tuple (almost fully) in what? 20 lines of code? For reference, MSVC's implementation is a header with more than 1000 lines of code ( https://github.com/microsoft/STL/blob/main/stl/inc/tuple ), containing dozens of helper class template instantiated for each instance of std::tuple used in real code. A fair assumption would be that the std::meta version would be far faster to compile, reflections being a very straight-forward way of expressing your intent to the compiler. In real life scenarios this could results in an immense amount of time saved at compilation time. And better yet, the opportunity of rewritting std::tuple would be a big bonus too since none of the standard implementations are optimal ( https://www.reddit.com/r/cpp/comments/ilujab/it_turns_out_stdtuple_is_not_a_zerocost/ ).\n Again, I'm not talking just about std::tuple here, I'm assuming there are dozens of STL components that could use being rewritten using reflections, if for nothing else, at least for the sake of compilation time. I'm wondering if this new feature couldn't be the push vendors have needed to take into consideration a real ABI break with one of their future releases, considering the compilation time improvements now available on the table. \n    submitted by    /u/cristi1990an    to    r/cpp  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/cpp/comments/1cs5v48/would_c26s_introduction_of_reflection_push/",
-          "publishedOn": "2024-05-14T23:00:58.000Z",
-          "wordCount": null,
-          "title": "Would C++26's introduction of reflection push vendors towards an ABI break?",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/cpp_questions/comments/1cs45zv/the_cherno_cpp_playlist_vs_learncppcom/",
-          "author": null,
-          "description": "Which is best to learn c++?\n    submitted by    /u/manly_trip    to    r/cpp_questions  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/cpp_questions/comments/1cs45zv/the_cherno_cpp_playlist_vs_learncppcom/",
-          "publishedOn": "2024-05-14T21:47:13.000Z",
-          "wordCount": null,
-          "title": "The cherno cpp playlist vs learncpp.com?",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/cpp/comments/1cs3n4f/if_the_standard_library_died_due_to_abi_concerns/",
-          "author": null,
-          "description": "So, if 2020 marked the day the standard library died (allegedly), then what do I use instead?\n In other words and in a more serious tone: is there a \"best\" general-purpose C++ primitives library that could theoretically become \"the new stdlib\", if we could magically disregard all existing code?\n Or in yet other words: is there a library, or a set of libraries, that I should seriously consider using instead of stdlib and STL (on performance, ergonomics and usability grounds) in new projects where backward compatibility and simplicity of deployment is not a concern?\n    submitted by    /u/intelfx    to    r/cpp  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/cpp/comments/1cs3n4f/if_the_standard_library_died_due_to_abi_concerns/",
-          "publishedOn": "2024-05-14T21:24:48.000Z",
-          "wordCount": null,
-          "title": "If the standard library died (due to ABI concerns), is there a \"stdlib killer\"?",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/cpp_questions/comments/1cs3mm6/how_do_i_swap_out_an_object_atomically_n_reader_1/",
-          "author": null,
-          "description": "Questions in the comments. Whats the best way to handle this scenerio? struct Item { std::string name; size_t id; }; static std::atomic<Item*> current_item = item_ptr_set_on_init; void writer_got_update(Item item) { // Runs on 1 writer_thread // Got copy of the update // Update current_item atomically Item* expected_item = current_item.load(); Item* desired_item = new Item(item); current_item.compare_and_exchange(expected_item, desired_item); // Need to delete expected_item // How do I know expected_item can be deleted? // Reader thread might still have gotten pointer to it } void reader_keep_reading() { // N threads read the item Item* item = current_item.load(); std::cout << \"Name: \" << current_item->name << \"id: \" << current_item->id << std::endl; } \n    submitted by    /u/kagbeni    to    r/cpp_questions  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/cpp_questions/comments/1cs3mm6/how_do_i_swap_out_an_object_atomically_n_reader_1/",
-          "publishedOn": "2024-05-14T21:24:14.000Z",
-          "wordCount": null,
-          "title": "How do I swap out an object atomically? N Reader, 1 Writer",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/cpp_questions/comments/1cs1q4u/suggestions_on_implementing_threadpool_concept/",
-          "author": null,
-          "description": "I want to write a header file with parent threadpool class and methods such as—\n Pool creation, Pool initialisation, Submit function to pool, Once all function done then shutdown the pool.\n Thanks in advance for any suggestions and help.\n PS: i have read about mutexes and conditional locks, but havent worked with them before \n    submitted by    /u/Big_Bumblebee_7146    to    r/cpp_questions  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/cpp_questions/comments/1cs1q4u/suggestions_on_implementing_threadpool_concept/",
-          "publishedOn": "2024-05-14T20:06:07.000Z",
-          "wordCount": null,
-          "title": "Suggestions on implementing threadpool concept with pthread",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/cpp_questions/comments/1cs14xe/writing_a_backend_for_web_application_in_c/",
-          "author": null,
-          "description": "I want to expose an existing c++ library into a web application that is written in JS. From what I understand I have 2 options: - Either I can compile my c++ library into webassembly - Or I can write JS Bindings for the library. \n Which of the approaches offers better performace and least overhead. I'm a complete noob in web developpement so the above approaches may not be correct. Please explain like ELI5. \n    submitted by    /u/Pale_Emphasis_4119    to    r/cpp_questions  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/cpp_questions/comments/1cs14xe/writing_a_backend_for_web_application_in_c/",
-          "publishedOn": "2024-05-14T19:42:01.000Z",
-          "wordCount": null,
-          "title": "Writing a backend for Web application in C++",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/cpp_questions/comments/1cs0f35/if_i_dont_specify_any_copymove/",
-          "author": null,
-          "description": "Trying to look this up and Im struggling to get a specific answer. My understanding is that if you don't specify any of the Rule of 5, then all of them are made by default, but I'm not 100% certain of this.\n    submitted by    /u/Raknarg    to    r/cpp_questions  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/cpp_questions/comments/1cs0f35/if_i_dont_specify_any_copymove/",
-          "publishedOn": "2024-05-14T19:12:07.000Z",
-          "wordCount": null,
-          "title": "If I don't specify any copy/move constructors/assignments, are they made by default?",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/cpp/comments/1cs00mr/going_from_embedded_linux_to_low_latency/",
-          "author": null,
-          "description": "Hi all,\n My first job out of college has primarily involved writing code that runs in a real time Linux environment. The code I've written wasn't the kind that focused on being ultra optimized. Instead, the focus was moreso on readability and reliability. We usually are not allowed to use most modern C++ features. Our coding standard is often described as \"C with classes.\"\n I have an interview coming up for a low latency position that also involves distributed systems. What would this kind of C++ development entail compared to what I'm currently doing?\n In other words:\n  \nWhat are some high level concepts I might want to familiarize myself with before the interview?\n \nMore broadly speaking -- if, against all odds, I manage to land the position, what new skills might I be learning? What might I need to study up on in my own time? What would my day to day development look like? How might this differ from the development of an embedded software engineer?\n \n Thanks!\n    submitted by    /u/boreddolphin98    to    r/cpp  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/cpp/comments/1cs00mr/going_from_embedded_linux_to_low_latency/",
-          "publishedOn": "2024-05-14T18:55:48.000Z",
-          "wordCount": null,
-          "title": "Going from embedded Linux to low latency distributed systems",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/cpp_questions/comments/1crzipy/double_pack_expansion/",
-          "author": null,
-          "description": "For the code look at https://godbolt.org/z/rdPnfqnY3.\n When compiling with MSVC, I get the following error:\n  \nerror C3528: 'Is': the number of elements in this pack expansion does not match the number of elements in 'Tuples'\n  \nIn essence, I expand two packs in a single statement:\n else if constexpr ((std::is_void_v<invoke_at_result_t<Is, F, Tuples...>> || ...)) \n I am not too well versed with the spec to know if it is problematic or not. To me it seems obvious what it should expand to, for example if Is = 0, 1 and Tuples = Tuple1, Tuple2, Tuple3, then it should expand to:\n std::is_void_v<invoke_at_result_t<0, F, Tuple1, Tuple2, Tuple3>> || std::is_void_v<invoke_at_result_t<1, F, Tuple1, Tuple2, Tuple3>> \n It is stranger that the code compiles with Clang or GCC. What's even more stranger is when I refactor it\n template <class F, std::size_t... Is, class... Tuples> constexpr bool tuple_void_output = (std::is_void_v<invoke_at_result_t<Is, F, Tuples...>> || ...); \n and then use it as\n else if constexpr (tuple_void_output<F, Is..., Tuples...>) \n then it also works in MSVC (you can change the define from 0 to 1 to activate this refactoring in the godbolt link). My IDE (CLion) is giving red squiggles though with messages:\n  \nFor the definition of tuple_void_output \"Template parameter pack must be the last template parameter\"\n When instantiating the template variable: \"Template argument for non-type template parameter must be an expression\"\n  \nSo my questions:\n  \nIs there something wrong with my code?\n Which compiler is correct?\n  \n   submitted by    /u/SimonMarynissen    to    r/cpp_questions  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/cpp_questions/comments/1crzipy/double_pack_expansion/",
-          "publishedOn": "2024-05-14T18:35:40.000Z",
-          "wordCount": null,
-          "title": "Double pack expansion",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/cpp_questions/comments/1crzhhh/good_idea_to_learn_sdl_to_become_software_engineer/",
-          "author": null,
-          "description": "Hey everyone! Currently i am learnig SDL to make some gaming projects but i am not sure as my aim is to become a software engineer. Currently i am in 3rd year(soon will be in 4th) and don't have any projects. So should i continue to learn SDL and make a gaming project or should i switch to something else releated to more SE\n    submitted by    /u/Life-Loss-7268    to    r/cpp_questions  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/cpp_questions/comments/1crzhhh/good_idea_to_learn_sdl_to_become_software_engineer/",
-          "publishedOn": "2024-05-14T18:34:17.000Z",
-          "wordCount": null,
-          "title": "Good idea to learn SDL to become Software engineer?",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/cpp_questions/comments/1crzbae/came_out_of_an_interview_feeling_very_down/",
-          "author": null,
-          "description": "I used GeeksForGeeks as a source to learn CPP. Coming out of an interview, I think what I learned is probably not very accurate. Reading further about people’s opinions on GeeksForGeeks, I think I may just be right.\n I now own C++ Primer by Stanley Lippman. People who used this book / a book to learn: any tips? \n I plan to answer all the questions which come up. I’m worried that only doing this, I will most likely just forget everything I read. It is a very fat book.\n    submitted by    /u/silverloot2    to    r/cpp_questions  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/cpp_questions/comments/1crzbae/came_out_of_an_interview_feeling_very_down/",
-          "publishedOn": "2024-05-14T18:27:12.000Z",
-          "wordCount": null,
-          "title": "Came out of an interview feeling very down…",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/cpp/comments/1crz3x4/c_devcontainer/",
-          "author": null,
-          "description": "Just created a simple up to date .devcontainer to try out modules with c++23. All gcc, clang and msvc build fine and seem to work, only major problem is still intellisense. Check it out and try if for yourself, feel free to leave a star:\n https://github.com/vitaliy-ostapchuk93/cpp-dev-sandbox \n    submitted by    /u/vitaliy_os    to    r/cpp  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/cpp/comments/1crz3x4/c_devcontainer/",
-          "publishedOn": "2024-05-14T18:19:03.000Z",
-          "wordCount": null,
-          "title": "C++ DevContainer",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/cpp_questions/comments/1cryg1p/watercolors_in_c/",
-          "author": null,
-          "description": "Hi everyone,\n Do you know some good C++ library that can be used to simulate the behaviour of a watercolor brush on a paper?\n I was thinking to OpenGL, but I would like to check for something more specific. \n Many thanks in advance \n    submitted by    /u/pietrolc    to    r/cpp_questions  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/cpp_questions/comments/1cryg1p/watercolors_in_c/",
-          "publishedOn": "2024-05-14T17:52:29.000Z",
-          "wordCount": null,
-          "title": "Watercolors in C++",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/cpp_questions/comments/1crxvkm/a_little_discouraged_after_trying_a_simple_task/",
-          "author": null,
-          "description": "Hey, not really a giving up moment but a rather sobering one, I have been learning C# for about 2 years now on and off (whenever time permits) and recently transitioned to C++. I started working with unreal and started messing around and found it rather simple.\n I then asked a programmer friend of mine for some tasks I could do to improve my knowledge, and suggested I try create a single Linked List, after multiple days, nothing, I could not figure it out to save my life. What bothers me is after looking up solutions online it looked like something extremely simple, and i realized just how much unreal does in the backend, now I just feel disheartened with a simple Linked List brought me to my knees. Anyways, not thinking of giving up, just more for those struggling to keep pushing and maybe some words of encouragement if this is the right place to ask/turn to. Thanks\n    submitted by    /u/CosmicSlothKing    to    r/cpp_questions  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/cpp_questions/comments/1crxvkm/a_little_discouraged_after_trying_a_simple_task/",
-          "publishedOn": "2024-05-14T17:29:43.000Z",
-          "wordCount": null,
-          "title": "A little discouraged after trying a simple task",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/cpp_questions/comments/1crvxqz/is_it_possible_to_create_custom_constuctors_for/",
-          "author": null,
-          "description": "I thought it'd be nice to provide some type of modern wrapper around SDL, and I've been struggling to create a proper wrapper as you'd need to define a custom constructor for it. This is fraught with errors \n auto make_unique_window(const std::string &title, int x, int y, int w, int h) { auto window = SDL_CreateWindow(title.c_str(), x, y, w, h, SDL_WINDOW_FULLSCREEN); auto custom_deleter_for_sdl_window = [window]() { SDL_DestroyWindow(window); }; std::unique_ptr<SDL_Window, decltype(custom_deleter_for_sdl_window)> some_window; return some_window; } \n I also thought it would make sense to inherit from SDL_Window to add a constructor.\n  class window : public SDL_Window {}; \n but SDL_Window's definition isn't exposed to the user, and thus, it is an incomplete type. Thoughts on what I could do?\n Maybe something like\n namespace sdl { class window { private: SDL_Window* m_window; public: window(const std::string &title, int x, int y, int w, int h) : m_ window { SDL_CreateWindow(title.c_str(), x, y, w, h, SDL_WINDOW_FULLSCREEN) } {} ~window() { SDL_DestrowWindow(m_window); } }; } // namespace sdl \n Usage would look like\n auto my_window = sdl::window { \"Title\", 480, 640, 256, 256 }; \n    submitted by    /u/NextYam3704    to    r/cpp_questions  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/cpp_questions/comments/1crvxqz/is_it_possible_to_create_custom_constuctors_for/",
-          "publishedOn": "2024-05-14T16:10:03.000Z",
-          "wordCount": null,
-          "title": "Is it possible to create custom constuctors for std::unique_ptr? Advice welcome.",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/cpp_questions/comments/1crvjsm/im_coming_back_to_cpp_whats_the_best_book_in_your/",
-          "author": null,
-          "description": "Hi all,\n I’ve been coding in C/C++ for over a decade, but I wouldn’t ever say I’m great enough to say submit commits to the Linux Kernel. \n For the past 3 years I’ve deployed complex workloads into AWS Fargate/lambda for a large IoT company. \n I want to take a step back and grab a really great C++ book. What would you recommend?\n Any other great resources, in a similar vein as the Crust of Rust on YouTube by Jon Gjengset.\n Thanks!\n    submitted by    /u/ExternCrateAlloc    to    r/cpp_questions  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/cpp_questions/comments/1crvjsm/im_coming_back_to_cpp_whats_the_best_book_in_your/",
-          "publishedOn": "2024-05-14T15:53:55.000Z",
-          "wordCount": null,
-          "title": "I’m coming back to Cpp, what’s the best book in your opinion?",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/cpp/comments/1crsfns/declarative_gui_slint_v16_released_with_design/",
-          "author": null,
-          "description": "submitted by    /u/madnirua    to    r/cpp  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/cpp/comments/1crsfns/declarative_gui_slint_v16_released_with_design/",
-          "publishedOn": "2024-05-14T13:41:08.000Z",
-          "wordCount": null,
-          "title": "Declarative GUI Slint v1.6 released with Design Mode (WYSIWYG) Improvements",
-          "imageUrl": null
         }
       ]
     },
@@ -11058,16 +11008,6 @@
           "wordCount": null,
           "title": "How to mock AWS services in golang?",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/golang/comments/1cs1nw8/why_go_for_cli_dev_over_python/",
-          "author": null,
-          "description": "AWS CLI and Elastic Beanstalk CLI use python. Is there a reason other than speed of development and pool of available talent that drives someone to use python over something like Go for CLI dev? I use both (mostly python) so I am just genuinely curious.\n    submitted by    /u/Previous_Dark_5644  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/golang/comments/1cs1nw8/why_go_for_cli_dev_over_python/",
-          "publishedOn": "2024-05-14T20:03:40.000Z",
-          "wordCount": null,
-          "title": "Why Go for CLI dev over Python?",
-          "imageUrl": null
         }
       ]
     },
@@ -11084,6 +11024,26 @@
           "publishedOn": "2024-06-12T19:53:55.000Z",
           "wordCount": null,
           "title": "Announcing the Safety-Critical Rust Consortium",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/rust/comments/1decyxb/i_love_rust_but/",
+          "author": null,
+          "description": "Hello Rustaceans\n I have been learning Rust and coming from Java I have to say it has been very refreshing.\n I just love the heavy use of sum types (enums) throughout the language, especially `Option` and `Result` that are far better than `null`s and exceptions. I like matching, I like macro that can sometimes feel like magic and others compile time control, I like that everything is immutable by default. The borrow checker forces me to understand the memory well which gives me a lot more confidence when mutating something (in Java, you don't own the object, and you don't know if some other part of the program holds a reference to it, so you're not very sure what part of the program would be affected by the mutation)\n However it seems to me that all the things that I love are the high level part of the language and the inspiration it took from functional programming.\n Sure I appreciate the language is very fast and that the same language can be used on bare metal, but it is not very useful to me, it never was a grievance to Java for me after all. The borrow checker can sometimes be annoying and although a high level language, it sometimes forces me to have low level considerations.\n The low level part although useful and interesting, is not very relevant to me, and I wonder what I could trade against this part of the language. In other words what could a high level only Rust look like? Could you make any suggestions of languages that can fit this description? I am thinking something with no nulls or exceptions, statically typed, with some emphasis on function purity, with algebraic data types and reasonably fast (something competitive to Java)\n I am thinking something like gleam, haskell or elm maybe but I would like to hear your thoughts and if you would take the trade-off.\n Thank you for reading me\n    submitted by    /u/Locarito  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/rust/comments/1decyxb/i_love_rust_but/",
+          "publishedOn": "2024-06-12T17:55:57.000Z",
+          "wordCount": null,
+          "title": "I love Rust... but",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/rust/comments/1debh8c/learning_rust_this_code_in_c_runs_in_a_semi/",
+          "author": null,
+          "description": "//color.rs pub fn write_color(out: &mut io::BufWriter<io::Stdout>, pixel_color: &Color) { let range_factor: f64 = 255.999; let rbyte = (range_factor * pixel_color.x()) as i32; let gbyte = (range_factor * pixel_color.y()) as i32; let bbyte = (range_factor * pixel_color.z()) as i32; writeln!(out, \"{} {} {}\", rbyte, gbyte, bbyte).unwrap(); } fn write_image() { let aspect_ratio = 16.0 / 9.0; let image_width = 400; let image_height = (image_width as f64 / aspect_ratio) as i32; let focal_length = 1.0; let viewport_height = 2.0; let viewport_width = viewport_height * aspect_ratio; let camera_center = Vec3::with_values(0.0, 0.0, 0.0); let viewport_u = Vec3::with_values(viewport_width, 0.0, 0.0); let viewport_v = Vec3::with_values(0.0, -viewport_height, 0.0); let pixel_delta_u = viewport_u / image_…",
+          "link": "https://www.reddit.com/r/rust/comments/1debh8c/learning_rust_this_code_in_c_runs_in_a_semi/",
+          "publishedOn": "2024-06-12T16:53:58.000Z",
+          "wordCount": null,
+          "title": "Learning Rust, this code in C++ runs in a semi instant way, where in Rust it's way slower. What could be the bottle neck?",
           "imageUrl": null
         },
         {
@@ -12325,46 +12285,6 @@
           "wordCount": null,
           "title": "MD-TUI. A markdown renderer for the terminal",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/rust/comments/1cs0tnj/linear_types_and_higher_raii/",
-          "author": null,
-          "description": "Article: https://verdagon.dev/blog/higher-raii-uses-linear-types\n Although not directly related to Rust, the concepts approached here showcase some amazing patterns that I would love to see be possible in Rust.\n There has also been some discussion of \"Must-Move Types\", which can't be dropped.\n To me, the patterns of \"Cache Tokens\", and \"Owned Indexes\" are absurdly awesome!\n Tbh, just the idea of having destructors that can take parameters and return values is insane.\n But, like any awesome feature, it has its drawbacks... What do you guys think?\n    submitted by    /u/SirKastic23  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/rust/comments/1cs0tnj/linear_types_and_higher_raii/",
-          "publishedOn": "2024-05-14T19:28:56.000Z",
-          "wordCount": null,
-          "title": "Linear Types and \"Higher RAII\"",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/rust/comments/1crtgdy/share_your_favorite_aha_moments_with_the_language/",
-          "author": null,
-          "description": "Hey everyone, I've been diving deep into the world of Rust, and I'm constantly amazed by how elegant and powerful this language is. I've even started a LinkedIn page linkedin page where I share daily Rust tips and tricks that I discover along the way.\n But here's the thing: I know I've only scratched the surface. The Rust community is full of brilliant minds, and I'm convinced that there are countless \"Aha!\" moments and hidden gems out there that I haven't even encountered yet.\n So, I'm reaching out to all you fellow Rustaceans – what are some of the most mind-blowing, game-changing, or just plain cool Rust tips, tricks, or patterns that you've come across?\n Maybe it's a clever way to use generics, a surprising application of lifetimes, or a subtle optimization that made your code run like lightning. Whatever it is, I'm eager to learn from your experiences and expand my Rust knowledge.\n Let's share our collective wisdom and help each other become better Rust developers!\n    submitted by    /u/Level_Sprinkles_8861  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/rust/comments/1crtgdy/share_your_favorite_aha_moments_with_the_language/",
-          "publishedOn": "2024-05-14T14:25:05.000Z",
-          "wordCount": null,
-          "title": "Share your favorite \"Aha!\" moments with the language.",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/rust/comments/1crsn8f/blazingly_fast_linked_lists/",
-          "author": null,
-          "description": "submitted by    /u/Stranger6667  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/rust/comments/1crsn8f/blazingly_fast_linked_lists/",
-          "publishedOn": "2024-05-14T13:50:35.000Z",
-          "wordCount": null,
-          "title": "Blazingly Fast Linked Lists",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/rust/comments/1crsf35/declarative_gui_slint_v16_released_with_design/",
-          "author": null,
-          "description": "submitted by    /u/madnirua  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/rust/comments/1crsf35/declarative_gui_slint_v16_released_with_design/",
-          "publishedOn": "2024-05-14T13:40:24.000Z",
-          "wordCount": null,
-          "title": "Declarative GUI Slint v1.6 released with Design Mode (WYSIWYG) Improvements",
-          "imageUrl": null
         }
       ]
     },
@@ -12373,6 +12293,76 @@
       "feedUrl": "https://www.reddit.com/r/csharp/top/.rss?t=week%22",
       "siteUrl": "https://www.reddit.com/r/csharp/top/?t=week%22",
       "articles": [
+        {
+          "id": "https://www.reddit.com/r/csharp/comments/1detpzz/quick_learn/",
+          "author": null,
+          "description": "What would be the best mooc/bootcamp to learn c#? I know it’s been asked before but I thought I’d ask again for some more up to date responses maybe.\n I’ve read a fair bit about it already and was told the basic knowledge doesn’t take that long but then you have to keep learning and learning from there.\n I have some basic knowledge of HTML, CSS and Python so just above the level of a noob.\n    submitted by    /u/Exciting_Bonus_9590  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/csharp/comments/1detpzz/quick_learn/",
+          "publishedOn": "2024-06-13T08:05:23.000Z",
+          "wordCount": null,
+          "title": "Quick learn",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/csharp/comments/1detkle/reflection_and_dictionaries_can_someone_show_me/",
+          "author": null,
+          "description": "I have a Class with a Dictionary that contains Strings and and Int, and I'm trying to use GetValue, SetValue to get and set them from string names. So from the start, I know the type (Dictionary) but I only have two strings to work with. (I know somebody is probably going to ask why are you doing this with reflection, but I'm trying to learn how to access dictionary using only reflection). This is as far as I've got.\n public class bookstore\n {\n Dictionary <string, int> tolstoy = new Dictionary <string,int>\n {\"war and peace\", 0}\n {\"resurrection\", 1}\n }\n Dictionary <string,int> dostoy = new Dictionary<string, int>\n {\n \"crime and punishment\",1}\n }\n }\n So now let's say I'm only given the name of the dictionary as a string name like this: bookset=\"tolstoy\" and a string bookname =\"war and peace\", how to get at the dictionary (bookset) and then set the value for bookname to 1 using only reflection? The dictionaries are in another class of their own, \"bookstore\"\n public class BookOrders\n {\n string bookname=\"war and peace\";\n string bookset =\"tolstoy\";\n Type booktype = typeof(BookOrders);\n int book_amount = (int) booktype.GetProperty(bookname).GetValue(???);\n //What do I put in GetValue() to get the int, the amount of books for that book--- ?\n How do I set the dictionary property using reflection?\n booktype.GetProperty(bookname).SetValue(???, 1);\n //What do I put in SetValue() to set the book amount (int) in the dictionary bookset (\"tolstoy\").\n }\n Thanks.\n    submitted by    /u/Active-Gene-4467  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/csharp/comments/1detkle/reflection_and_dictionaries_can_someone_show_me/",
+          "publishedOn": "2024-06-13T07:55:14.000Z",
+          "wordCount": null,
+          "title": "reflection and dictionaries, can someone show me how please, thanks",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/csharp/comments/1det88g/prism_viewmodellocator_doesnt_seem_to_work/",
+          "author": null,
+          "description": "Hi everbody,\n I am currently working through the Doucmentation of Prism.Avalonia.\n Somehow I generellay can not get for the life of me the VIewModelLocator.AutoWireViewModel to work. It always throws me the error: \"Cannot parse a compiled binding without an explicit X:DataType directive to give a starting data type for bindings.\"\n Any advice on how to solve that?\n What are some common pitfalls ?\n    submitted by    /u/germanCoder13  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/csharp/comments/1det88g/prism_viewmodellocator_doesnt_seem_to_work/",
+          "publishedOn": "2024-06-13T07:30:17.000Z",
+          "wordCount": null,
+          "title": "Prism ViewModelLocator doesn't seem to work",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/csharp/comments/1des80s/have_you_ever_had_to_create_small_gui_apps_for/",
+          "author": null,
+          "description": "For instance back when I worked for Vodafone VOIS as a customer service rep, I encountered this GUI app that reset the user's BitLocker PIN to his input. The default BitLocker PIN enforced by MBAM was (insert 9 numbers here), and you had to change it as the first thing after logging in post-autopilot-run. \n I thought that was pretty cool so I made the app myself using WMI. \n What about you guys, have you ever had to create small GUI apps like this?\n    submitted by    /u/Ok_Exchange_9646  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/csharp/comments/1des80s/have_you_ever_had_to_create_small_gui_apps_for/",
+          "publishedOn": "2024-06-13T06:21:42.000Z",
+          "wordCount": null,
+          "title": "Have you ever had to create small GUI apps for your company? If so, what?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/csharp/comments/1derjdx/c_variable_scope/",
+          "author": null,
+          "description": "variable which i create in if statement using is operator exist in others if statment\n https://preview.redd.it/k1clojdsz96d1.png?width=692&format=png&auto=webp&s=68d7dfb809a9ea8984a3efeb656d6501f2a7bb6c\n but if i try use them i get other error\n https://preview.redd.it/0h4q935zz96d1.png?width=558&format=png&auto=webp&s=64de67a44346fe4f1ef2c1981f79e1357cc31049\n Why does it work this way?\n    submitted by    /u/wixyms  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/csharp/comments/1derjdx/c_variable_scope/",
+          "publishedOn": "2024-06-13T05:36:06.000Z",
+          "wordCount": null,
+          "title": "C# variable scope",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/csharp/comments/1depikx/is_this_post_method_secure/",
+          "author": null,
+          "description": "I am messing around with cookie auth and am not sure if I am over thinking this. I can make a bunch of requests to my login endpoint using powershell after one attempt in the browser using the network tools. Here is my code. .NET 8, MVC.\n Form:\n @using (Html.BeginForm(\"Login\", \"Account\", FormMethod.Post)) { <div class=\"mb-3\"> <label for=\"firstName\" class=\"form-label fw-bold\">First Name</label> <input type=\"text\" class=\"form-control\" id=\"firstName\" name=\"FirstName\" value=\"@Model?.FirstName\" required> @Html.ValidationMessageFor(model => model.FirstName) </div> <div class=\"mb-3\"> <label for=\"lastName\" class=\"form-label fw-bold\">Last Name</label> <input type=\"text\" class=\"form-control\" id=\"lastName\" name=\"LastName\" value=\"@Model?.LastName\" required> @Html.ValidationMessageFor(model => model.LastName) </div> <div class=\"mb-3\"> <label for=\"email\" class=\"form-label fw-bold\">Email address</label> <input type=\"email\" class=\"form-control\" id=\"email\" name=\"Email\" value=\"@Model?.Email\" required> @Html.ValidationMessageFor(model => model.Email) </div> <div class=\"d-grid gap-2\"> <button type=\"submit\" class=\"btn btn-primary btn-lg p-3\">Do stuff</button> </div> } \n Controller:\n [HttpPost] [ValidateAntiForgeryToken] public async Task<ActionResult> LoginAsync(LoginRequest loginRequest) { // ... } \n This works as expected. Login is hit, blah blah blah. But when I started messing with my brower dev tools, I was able to see everything I entered, copy the request and resend it as many times as I wanted via Powershell. And because I could see what I entered, I could change the values and include the anti forgery token and now I have the power to write a script to basically brute force login details. I must have done something terribly wrong, right? Is it possible to protect against this? Am I over thinking this?\n My request payload\n How I got the powershell\n And running the powershell triggers my breakpoint, and I've circled the body with my data that I can easily change.\n    submitted by    /u/THRILH0  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/csharp/comments/1depikx/is_this_post_method_secure/",
+          "publishedOn": "2024-06-13T03:33:16.000Z",
+          "wordCount": null,
+          "title": "Is this post method secure?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/csharp/comments/1deodj0/where_to_start/",
+          "author": null,
+          "description": "Hey, I know a couple ground things about csharp from brackeys tutorials. But I want to know csharp really well and advanced to be able to program my own games in Unity. Any recommendations? \n    submitted by    /u/MoistTurboSoggy  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/csharp/comments/1deodj0/where_to_start/",
+          "publishedOn": "2024-06-13T02:31:41.000Z",
+          "wordCount": null,
+          "title": "Where to start?",
+          "imageUrl": null
+        },
         {
           "id": "https://www.reddit.com/r/csharp/comments/1demmb7/confused_about_class_inheritance_regarding/",
           "author": null,
@@ -16608,6 +16598,16 @@
       "siteUrl": "https://www.reddit.com/r/cscareerquestions/top/?t=week",
       "articles": [
         {
+          "id": "https://www.reddit.com/r/cscareerquestions/comments/1deg85x/how_unreasonable_is_looking_for_an_80k100k_job/",
+          "author": null,
+          "description": "Hello, I am currently searching for a new job and thinking about leaving my current one. My salary progression so far in my career is:\n job 1: internship - unpaid - 4 months\n job 2: part time - $14/hr - 6 months\n job 3: full time - $55k/year - 1 year (current job)\n All of these jobs are software engineering roles, none of them are larger tech companies/FAANG\n I really want to make a substantial increase in my salary, and am willing to wait a longer amount of time to apply and keep trying to meet this salary since I am comfortable in my current job. My salary goal for my next job is something between $80k-$100k. When I brought this up with my mom, she said that this was probably unreasonable and that I should keep my expectations low, especially considering my pay in the past. I live in Texas, and have graduated from a top 50 cs university. How unreasonable is it to achieve this salary in this market? Am I setting my expectations too high?\n    submitted by    /u/AgileTiger3987  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cscareerquestions/comments/1deg85x/how_unreasonable_is_looking_for_an_80k100k_job/",
+          "publishedOn": "2024-06-12T20:09:54.000Z",
+          "wordCount": null,
+          "title": "How unreasonable is looking for an $80k-$100k job for my next job?",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/cscareerquestions/comments/1de87aq/what_are_some_more_stable_career_paths_for/",
           "author": null,
           "description": "I know all tech is constant learning, but there are certain paths that are more stable and don’t require coding to become an obsession. I am coming up on 2.5 yrs of experience as a mostly backend software dev. I am finishing my degree now and tbh I am not too excited about picking up all these new frameworks to stay competitive. Coding and tech is cool but I’m not in love with it. Are there certs or paths that I could take that would be a little more stable with the tech and that would maintain my salary of approximately $150k?\n Update: I do have some data analytic and sys admin experience which are more stable but the pay is significantly lower than where I am now.\n Update 2: I am well aware, as many have pointed out, that every job requires you to constantly learn. Not every job however requires you to reinvent your core skills every 5-10 yrs (JavaScript to Angular to React for example) nor does every job have intense panel technical interviews that one must practice for consistently. Data analyst positions (what u was before software developers) have to learn things but their core skills of sql and tableau are not going anywhere. The interviews are straight forward technical but not panel technical exams.\n    submitted by    /u/wdibaG  \n [link]   [comments]",
@@ -17926,56 +17926,6 @@
           "wordCount": null,
           "title": "Accepted my first job offer for 75k",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/cscareerquestions/comments/1cs6qhf/reading_teamblind_motivates_me/",
-          "author": null,
-          "description": "Blind is a garbage cesspit but reading it motivates me. It. shows that you don't actually need to be smart to crack LC or get into Big Tech. I have seen mind numbingly stupid takes from people who work at Google,Meta, Snap, Uber, Pinterest, Two Sigma etc. If brain dead morons can crack LC and get into FAANG so can you.\n So if you are struggling with LC just stick with it. I guarantee you it's not an intelligence thing. Several Meta employees have confirmed they basically just memorized the top tagged Meta LC list. These people are not high iq geniuses. If you need to memorize or do the same top tagged problems over and over then do so. Some companies , cough...Meta, expect you regurgitate answers anyways so don't feel guilty or shame with having to memorize answers for the most common LC hards asked in interviews.\n    submitted by    /u/Apprehensive-Income  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/cscareerquestions/comments/1cs6qhf/reading_teamblind_motivates_me/",
-          "publishedOn": "2024-05-14T23:40:37.000Z",
-          "wordCount": null,
-          "title": "Reading teamblind motivates me",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/cscareerquestions/comments/1cs1a22/horrible_experience_with_big_g/",
-          "author": null,
-          "description": "Recently got contacted by a Big G recruiter. They now send over a Hiring Assessment consisting of 100 Agree/Disagree questions. I pass that, so I assumed I would go to the tech screen next. A week passes and the recruiter finally sends me an email telling me I need to \"continue developing my skills\" and no feedback. Their auto-email also mentions that I have a 6-9month reapply waiting period. I'm fine getting denied, but don't tell me to improve my skills when you reached out to me and I haven't even done the interview yet...\n It is insane that some recruiters hold the entry door for some of the highest paying jobs in our field. Guess I now have a re-apply waiting period due to a bad recruiter. \n P.S> Seems like Big G is even outsourcing recruitment to outside the US. Avoid these recruiters if you don't want to get screwed for no reason.\n    submitted by    /u/lookmadeyoulook  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/cscareerquestions/comments/1cs1a22/horrible_experience_with_big_g/",
-          "publishedOn": "2024-05-14T19:48:02.000Z",
-          "wordCount": null,
-          "title": "Horrible experience with Big G",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/cscareerquestions/comments/1cryi1n/is_it_legal_to_not_pay_hourly_workers_because_of/",
-          "author": null,
-          "description": "I'm a junior working my first dev job that's fully remote. We had a server outage at work and so we were unable to log in and get work done. Servers have been down for 72 hours now. \n Management has just told us that because we're hourly, we won't be getting paid during this outage. I'm still here at my desk waiting for the servers to come up. I still have to attend meetings on teams when they happen. This can't be legal can it? I'm in the US.\n    submitted by    /u/Hycina  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/cscareerquestions/comments/1cryi1n/is_it_legal_to_not_pay_hourly_workers_because_of/",
-          "publishedOn": "2024-05-14T17:54:46.000Z",
-          "wordCount": null,
-          "title": "Is it legal to not pay hourly workers because of server outage?",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/cscareerquestions/comments/1crv5kg/just_got_blindsided_by_a_layoff_how_is_everyone/",
-          "author": null,
-          "description": "Found out this morning when HR joined a meeting that I thought was just going to be a catch up with my manager and I... I’m remote so I didn’t get to say goodbye to anyone, just got immediately locked out of everything which really hurt, ngl. \n I feel like this couldn’t have happened at a worse time. The job market is absolutely terrible right now and my severance package will only last me a month and a half so I’m honestly terrified. If anyone is dealing with the same right now any advice is welcome. \n    submitted by    /u/Square_Chocolate8998  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/cscareerquestions/comments/1crv5kg/just_got_blindsided_by_a_layoff_how_is_everyone/",
-          "publishedOn": "2024-05-14T15:37:19.000Z",
-          "wordCount": null,
-          "title": "Just got blindsided by a layoff. How is everyone who got laid off recently doing?",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/cscareerquestions/comments/1crudzt/clevel_execs_wants_engineers_to_broadcast_our/",
-          "author": null,
-          "description": "Recently the CEO and CFO of our mid size startup (300+) company have been bugging the engineers (15 SWEs), with new changes they want to implement. It is a flat hierarchy for the engineers with one Engineering VP. Recently, they told one of my work friends that other departments have people be held accountable for mistakes and publicly talk about “lessons learned” and things to make us grow. They said they have no insight on what the tech team does (we are the only full remote team) and want us to be like the other depts and talk about our failures, what we did wrong, what bugs we caused, and how we fix them. This seems so strange. We will sometimes have these talks internally with our own teammates but to publicly put us on blast in front of the whole company, or at least the top dogs? They don’t even mention our successes, why they hell do they want our failures? But anyway, I have a meeting with these execs tomorrow to “pick my brain” and because I was made aware of this beforehand, I’d love some advice on a good rebuttal that won’t get me fired or have a target on my back.\n Edited to add: The CTO either resigned or was fired, we don’t actually know since it was very ominous and quick. I see now that our CTO did a great job shielding the team from the execs because they are now suddenly joining our meetings and getting more involved.\n    submitted by    /u/leghairdontcare59  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/cscareerquestions/comments/1crudzt/clevel_execs_wants_engineers_to_broadcast_our/",
-          "publishedOn": "2024-05-14T15:05:11.000Z",
-          "wordCount": null,
-          "title": "C-level execs wants engineers to broadcast our “failures” to learn from them. What is a good argument against it?",
-          "imageUrl": null
         }
       ]
     },
@@ -17984,6 +17934,26 @@
       "feedUrl": "https://www.reddit.com/r/csMajors/top/.rss?t=week",
       "siteUrl": "https://www.reddit.com/r/csMajors/top/?t=week",
       "articles": [
+        {
+          "id": "https://www.reddit.com/r/csMajors/comments/1demigh/everyone_and_their_mom_is_in_cs/",
+          "author": null,
+          "description": "Then what Mickey Mouse universities are they going to that don't weed them out in systems programming or DSA? You need to atleast be decent academically to pass through. I refuse to believe someone with no inclination towards STEM watched a TikTok, took CS, and was able to debug assembly code or pass a written closed book midterm on recursion. \n    submitted by    /u/KSRJB02  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/csMajors/comments/1demigh/everyone_and_their_mom_is_in_cs/",
+          "publishedOn": "2024-06-13T00:53:21.000Z",
+          "wordCount": null,
+          "title": "“Everyone and their mom is in CS”",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/csMajors/comments/1deg8f7/accepted_job_offer/",
+          "author": null,
+          "description": "So I attended a small university with my graduating class of CS majors being 9 people in total this last May.\n I have applied via LinkedIn and Indeed to several positions. All types of positions for entry level and for internships. I graduated with a 3.7 GPA and really saw no hope in getting a call back as I dont have any major projects. As during school I work as a research assistant for Human in the loop ML and as a CS tutor. I did grind some leetcode. \n https://preview.redd.it/dxarpk7v476d1.png?width=630&format=png&auto=webp&s=79d175af290fbe04c49e4e0a8dbf181e3dccbda5\n I have gotten okay at most problems that are not hard I can solve if it doesnt have a gimmick or trick. \n I accepted the job offer at a local grocery store that has a small IT department. The pay is around 50K with full benefits of medical after 1 month of work. The job title is Systems Programmer. Honestly I am really relieved as 99% of the applications would just ghost me. I really didnt see myself getting any job related to coding. \n The did 4 interviews in total. And the technical consisted of making a simple grocery store model with classes for customers, transactions, items and stores. I expected leetcode but it was much easier than I expected. There is still hope for getting a job. \n    submitted by    /u/Marcelinob20  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/csMajors/comments/1deg8f7/accepted_job_offer/",
+          "publishedOn": "2024-06-12T20:10:11.000Z",
+          "wordCount": null,
+          "title": "Accepted Job Offer",
+          "imageUrl": null
+        },
         {
           "id": "https://www.reddit.com/r/csMajors/comments/1de6ifq/how_do_you_have_time_for_everything_without_going/",
           "author": null,
@@ -19709,6 +19679,46 @@
       "siteUrl": "https://www.reddit.com/r/devops/top/?t=week",
       "articles": [
         {
+          "id": "https://www.reddit.com/r/devops/comments/1der57m/tooling_for_generating_helm_charts_and_argo_app/",
+          "author": null,
+          "description": "I have been struggling to wrap my head around our application sets and helm charts for a year now. My boss wrote them from scratch and what we do every time we have a new microservices or app is copy the last one and modify it. So far so good… However we have a very complex and flexible hierarchy of values, templates, and stuff that I don’t even know if they’re normal terms — trigger files and seed files, which a python script takes as inputs to generate the app set.\n We have a multi-tenant architecture in regions all over the world in both AWS and Azure, and of course many environments, including the standard dev/qa/prod as well as cloud vs on-prem, so this is part of the reason for the open-ended nature of the way he designed things. It feels like a very loose (undocumented) framework that requires complete knowledge in. It’s pure gitops which I love, but often I find myself staring at a yaml and wondering what something does, how it fits in, and if it’s overridden somewhere else. I spend a lot of time recursive grepping, looking at Argo overrides (I hate the tag bubble format), and in general wasting time. \n In a way this reminds me of Puppet hiera, but obviously more complex. The fix for that was Foreman with the UI that had taxonomy and inheritance. Is there anything like that for helm values? Is there any automation tool or popular framework that creates standardized app sets? (And helm charts?) Again the parallel would be something like creating an rpm from scratch vs having a polished script or tool like fpm to standardize the process. I’d love to have a Wizard-like tool guide me through the process. “Does your app need to talk to kube-API? No? Then you don’t need a dedicated service account. Let’s delete that from the chart so it doesn’t blow up when you don’t set values for it.” Etc. \n I’m a smart guy but this really feels like the Wild West out here. \n    submitted by    /u/shulemaker  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/devops/comments/1der57m/tooling_for_generating_helm_charts_and_argo_app/",
+          "publishedOn": "2024-06-13T05:09:47.000Z",
+          "wordCount": null,
+          "title": "Tooling for generating helm charts and Argo app sets?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/devops/comments/1de7b5l/msc_cybersecurity_as_devops/",
+          "author": null,
+          "description": "Hello everyone,\n I’m currently working as a devops engineer.\n I’m thinking to start a master in cybersecurity to advance my skill and knowledge since I like it. Also I want to implement it to my current role and be more devsecops.\n What is your opinion on that and how this will affect my career?\n Thank you!\n    submitted by    /u/Traditional_Mousse97  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/devops/comments/1de7b5l/msc_cybersecurity_as_devops/",
+          "publishedOn": "2024-06-12T13:57:54.000Z",
+          "wordCount": null,
+          "title": "MSc cybersecurity as devops",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/devops/comments/1de6z2e/is_it_worthwhile_to_run_nginx_inside_docker/",
+          "author": null,
+          "description": "What's your experience taking into account these 4 factors:\n  \nImmutable configuration of Nginx\n \nConfiguration hot-reload, zero downtime\n \nDependency isolation of Nginx itself\n \nSpinning up new Nginx instances\n \n Happy to read your comments!\n    submitted by    /u/ewaldbenes  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/devops/comments/1de6z2e/is_it_worthwhile_to_run_nginx_inside_docker/",
+          "publishedOn": "2024-06-12T13:42:54.000Z",
+          "wordCount": null,
+          "title": "Is it worthwhile to run Nginx inside Docker versus on bare metal?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/devops/comments/1de43le/which_ci_tool/",
+          "author": null,
+          "description": "Company is planning on getting CI but us developers lack prior experience with CI tools. We deal with higly confidential data and have a complex server architecture where some test environments can be accessed only through ssh from certain servers.\n Recuirements: On premises. Podman compability. Can send commands to a server through another server.\n Bonus: Mercurial support (we are considering migration to git) Easy to learn, use and maintain. RobotFramework and/or PyTest support. Not too expensive.\n We have been considering Jenkins or TeamCity and confirmed that both pass the requirements. While Jenkins is old & clunky and atm its mercurial plugin isn't actively maintained, it is free, unlike TeamCity which would ramp up in cost quickly since we'd need agents for all of our test servers.\n A quick look through this sub gave me the impression that you love GitLab CI. Would it be able to ssh podman containers that run RFW tests and then show the results in UI?\n Which CI tool would be the best option for our company?\n    submitted by    /u/wwww1222  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/devops/comments/1de43le/which_ci_tool/",
+          "publishedOn": "2024-06-12T11:13:22.000Z",
+          "wordCount": null,
+          "title": "Which CI tool?",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/devops/comments/1de1ulo/awesome_devops_telegram_list/",
           "author": null,
           "description": "I created this list of DevOps/SRE-related resources (both channels and groups) for English-speaking engineers using Telegram. It’s not that massive at the moment but aims to be good enough as a starting point for those interested. Any feedback and contributions are much appreciated: https://github.com/palark/awesome-devops-telegram \n    submitted by    /u/dshurupov  \n [link]   [comments]",
@@ -20957,26 +20967,6 @@
           "wordCount": null,
           "title": "Developer permissions",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/devops/comments/1cs7fbe/oracle_goes_to_opentofu/",
-          "author": null,
-          "description": "Besides the fact that it's oracle and they are hell, this is a big shift.\n https://www.thestack.technology/oracle-dumps-terraform-for-opentofu/\n    submitted by    /u/Obvious-Jacket-3770  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/devops/comments/1cs7fbe/oracle_goes_to_opentofu/",
-          "publishedOn": "2024-05-15T00:12:39.000Z",
-          "wordCount": null,
-          "title": "Oracle goes to OpenTofu",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/devops/comments/1cruw5h/another_guide_to_istio_authorization_policies_and/",
-          "author": null,
-          "description": "When speaking to folks who have deployed Istio in production, I'm always surprised that only a few utilize anything more than mTLS. Sometimes they're not even aware that if they don't change the namespace defaults, they end up with the default service account attached to every pod, which means a single certificate is used for workload authentication—kind of defeating the purpose!\n Anyway, this is my attempt at demystifying Authorization Policies, Request Authentication, and OIDC/JWT user authentication workflows. Additionally, what if you could automatically generate Authorization Policies by letting a Network Mapper analyze your actual application traffic and pull metrics from Envoy directly? This is a very cool open-source project. Check out the details in the guide:\n https://otterize.com/blog/Istio-authz-and-ingress-authn\n    submitted by    /u/scarlet_Zealot06  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/devops/comments/1cruw5h/another_guide_to_istio_authorization_policies_and/",
-          "publishedOn": "2024-05-14T15:26:19.000Z",
-          "wordCount": null,
-          "title": "Another guide to Istio Authorization Policies and Request Authentication, but combined with IAM automation",
-          "imageUrl": null
         }
       ]
     },
@@ -20985,6 +20975,26 @@
       "feedUrl": "https://www.reddit.com/r/ExperiencedDevs/top/.rss?t=week",
       "siteUrl": "https://www.reddit.com/r/ExperiencedDevs/top/?t=week",
       "articles": [
+        {
+          "id": "https://www.reddit.com/r/ExperiencedDevs/comments/1derlz1/any_thoughts_on_why_the_tech_market_is_so_bad/",
+          "author": null,
+          "description": "I haven’t seen it this bad since 2001, this is worse than the pandemic. I’ve worked with front and back end JavaScript for a long time. The past few years, the quality of the codebases I’ve inherited has been abysmal. I worked on a software product from a well known company, with tens of thousands of users, that provided a user experience that could only be described as grueling. I’ve interviewed dozens of developers over the past few years and many did not display basic, fundamental knowledge.\n This is to say, I never expected to have trouble finding work for the foreseeable future. IME, there’s no shortage of work that needs to be done. I have been looking for two months and have not had a single interview. A friend, who is a very strong dev, told me that 3 devs he currently works with have been looking for other jobs for 6-9 months and they’ve found nothing, and he says they’re good. He believes that employers know this, and are using it to squeeze more work out of people. Every employed developer I’ve talked to is overworked and stressed out. \n What is going on? This is not normal. I have a couple of theories, but when I hear myself explaining them, I sound like a crackpot.\n  \nEmployers are frustrated at developers refusing to return to the office and are applying pressure\n With a polarizing presidential election this year, companies are reluctant to make long term plans and commit to budgets when the business environment could be drastically different, come January, depending on the winner\n Employers are creating artificial job scarcity in order to influence the outcome of the election \n  \nThis is not a political post, please don’t flame me. I’m just perplexed by this job market when overall unemployment is at an all time low and the economy is supposedly strong. I did not have trouble finding work in 2008, when the economy was in the toilet.\n    submitted by    /u/Chemical-Plankton420  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/ExperiencedDevs/comments/1derlz1/any_thoughts_on_why_the_tech_market_is_so_bad/",
+          "publishedOn": "2024-06-13T05:41:01.000Z",
+          "wordCount": null,
+          "title": "Any thoughts on why the tech market is so bad right now?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/ExperiencedDevs/comments/1demf3k/engineer_manager_turned_dev_feeling_major/",
+          "author": null,
+          "description": "I made the switch from engineer manager to IC as a senior software engineer 2 months ago. Initially I was very excited for the new role. However, after being here 2 months I've been constantly under stress due to feeling like I'm not meeting the bar as a senior engineer. \n What is not helping either, is that at the same time I joined, there was an internal hire who joined at the same time as a mid-level engineer. The problem here is that they have already been contributing to the code base and very familiar with a lot of the inner workings of the company.\n For me, I'm still ramping up to internal services of the company, company culture, and ramping up to the tech stack. I am trying to learn as much as possible but am burning out because I'm constantly trying to learn and do at the same time in order to catch up but I feel like it's not working out for me. \n Has anyone been in a similar situation as me? How can I know that I am meeting the bar as a senior engineer, especially when there is a mid-level engineer who join at the same time who is doing more work than I am? \n    submitted by    /u/Herrowgayboi  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/ExperiencedDevs/comments/1demf3k/engineer_manager_turned_dev_feeling_major/",
+          "publishedOn": "2024-06-13T00:48:44.000Z",
+          "wordCount": null,
+          "title": "Engineer manager turned dev, feeling major imposter syndrome. How can I feel better about this?",
+          "imageUrl": null
+        },
         {
           "id": "https://www.reddit.com/r/ExperiencedDevs/comments/1dehrkc/anybody_have_to_deal_with_a_palo_alto_firewall_at/",
           "author": null,
@@ -22384,56 +22394,6 @@
           "wordCount": null,
           "title": "Burnout",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/ExperiencedDevs/comments/1cs4xt7/i_opened_a_pr_fixing_a_bug_coworker_requested/",
-          "author": null,
-          "description": "Pretty much all in the title, I'm a senior dev working on a small team with one other senior dev (just the two of us) and I opened a PR to fix a small bug. My coworker reviewed the PR, blocking it by requesting changes and shortly after opened their own PR fixing the same bug, requesting my review.\n Both PRs fix the bug and are technically correct, just do so in different ways. \n I feel like this is bad etiquette and am wondering the best way to handle this situation. Its the first time I find myself in this specific situation with this dev, although I will note that they are somewhat opinionated and can sometimes be difficult to work with, but thats normal. Just looking for opinions on if I'm being too sensitive and how I should tackle this situation, if at all.\n    submitted by    /u/mermaliens  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/ExperiencedDevs/comments/1cs4xt7/i_opened_a_pr_fixing_a_bug_coworker_requested/",
-          "publishedOn": "2024-05-14T22:20:13.000Z",
-          "wordCount": null,
-          "title": "I opened a PR fixing a bug, coworker requested changes and then opened his own PR fixing the same bug. Is this bad etiquette or am I too sensitive?",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/ExperiencedDevs/comments/1crv4qm/has_anyone_migrated_from_nosql_to_sql/",
-          "author": null,
-          "description": "I have a legacy app that’s written in node 12 using mongodb and elasticsearch. Data is denormalized through a large multistage pipeline. It’s incredibly slow, good UI response is around 5 second.\n Considering 99% of our data could be normalized. I pitched a migration to springboot and Postgres to management, and it looks like my team is will be allocated the time and budget.\n Has anyone mapped a large mongo database to SQL? Is there anything I should be weary of?\n My plan is to duplicate RMQ messages at the beginning of the pipeline, then run the legacy pipeline and the new pipeline in parallel. That way we can ensure data integrity and eventually backfill the old data.\n Edit: This kind of blew up. I typed this up on my phone so I was missing a lot details.\n  \nYes, me and the team understa…",
-          "link": "https://www.reddit.com/r/ExperiencedDevs/comments/1crv4qm/has_anyone_migrated_from_nosql_to_sql/",
-          "publishedOn": "2024-05-14T15:36:18.000Z",
-          "wordCount": null,
-          "title": "Has anyone migrated from NoSQL to SQL",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/ExperiencedDevs/comments/1cruxz6/update_to_i_thought_i_was_doing_my_job_as_a_team/",
-          "author": null,
-          "description": "Original Post https://www.reddit.com/r/ExperiencedDevs/comments/13m6f7l/i_thought_i_was_doing_my_job_as_a_team_lead/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button\n  \nThis is catharsis for me more than anything, just writing what's happened in the past year. I don't expect anybody to read/care, this is for me: \n Starting from a few days after the OG post was created:\n  \nEffective immediately, I was demoted from Team Lead while another took over the role (I was pretty okay with this actually, until boss made a big deal about it in an email to everyone. It was embarrassing.)\n Boss kept going hot and cold during our 1v1s; my attitude was not cheerful enough, or not serious enough, despite me checking in with new Team Lead multiple times a month (who sa…",
-          "link": "https://www.reddit.com/r/ExperiencedDevs/comments/1cruxz6/update_to_i_thought_i_was_doing_my_job_as_a_team/",
-          "publishedOn": "2024-05-14T15:28:30.000Z",
-          "wordCount": null,
-          "title": "Update to I thought I was doing my job as a Team Lead (1 year later)",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/ExperiencedDevs/comments/1cru7uy/boss_hired_his_bad_friend_who_i_have_to_manage/",
-          "author": null,
-          "description": "I joined a new company a few months back as a Principal Data Engineer/Technical Lead. I lead a very small team of two other engineers. One of them is great, good attitude and when he makes mistakes always willing to improve. Good code reviews etc. The other one is horrible. I come to find out that my manager and him are friends and my manager hired him.\n I am at a loss for what to do to handle the situation. He was hired by my boss as a “Lead Data Engineer” but has absolutely no leadership skills. I myself am Indian, but have extreme difficulty understanding him, he also lacks comprehension. My boss has split his work into two teams, me and the other manager have 1:1s and he is also having having difficulty managing him on his side.\n I have given him specific examples of where his work did…",
-          "link": "https://www.reddit.com/r/ExperiencedDevs/comments/1cru7uy/boss_hired_his_bad_friend_who_i_have_to_manage/",
-          "publishedOn": "2024-05-14T14:58:20.000Z",
-          "wordCount": null,
-          "title": "Boss hired his bad friend who I have to manage.",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/ExperiencedDevs/comments/1crstrm/i_dont_know_how_to_read_software_books/",
-          "author": null,
-          "description": "I’ve been in the industry for almost eight years, and I’ve never read a book on software. No clue if that’s common or not, but I’d like to try again. To those of you who do, are you reading them front to back like a novel, as a reference text, or something else?\n Would also love recommendations if you have them!\n    submitted by    /u/pixie_tugboat  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/ExperiencedDevs/comments/1crstrm/i_dont_know_how_to_read_software_books/",
-          "publishedOn": "2024-05-14T13:58:27.000Z",
-          "wordCount": null,
-          "title": "I don’t know how to read software books",
-          "imageUrl": null
         }
       ]
     },
@@ -22442,6 +22402,26 @@
       "feedUrl": "https://www.reddit.com/r/gamedev/top/.rss?t=week",
       "siteUrl": "https://www.reddit.com/r/gamedev/top/?t=week",
       "articles": [
+        {
+          "id": "https://www.reddit.com/r/gamedev/comments/1demza4/thinking_about_making_an_adult_version_of/",
+          "author": null,
+          "description": "I have made a few games before that were SFW and am using an alt account to ask if people would play this or not. I want to make a game that is like PowerWash Simulator but instead of objects you'd be washing...people and spirits, NSFW.\n My idea is you work at a bathhouse and a diverse variety of people/spirits that are caked in things like monster guts, mud, slime, all the filth that comes with an adventure, are your general cliental that you have to wash. As you progress in the game you'd unlock better things like higher grade nozzles, soaps, \"bath bomb\" style stuff and more for the harder to clean guests, and you'd unlock better baths and rooms too.\n You'd get a score based on how well of job you did and the time you did it in. As you progress through the story unlocking rooms and baths, you'd also unlock the characters that you washed and there would be a \"casual\" mode where you could redo specific levels.\n As NSFW game, would people play this? Does it sound at all fun/interesting? I don't know much at all about the NSFW game market. \n    submitted by    /u/RealBrickRick  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/gamedev/comments/1demza4/thinking_about_making_an_adult_version_of/",
+          "publishedOn": "2024-06-13T01:17:50.000Z",
+          "wordCount": null,
+          "title": "Thinking about making an adult version of PowerWash Simulator",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/gamedev/comments/1de8242/game_devs_how_many_times_did_you_fail_before/",
+          "author": null,
+          "description": "I am now in 12 th standard. Due to sorroundings,\n I have to get admitted into an engineering institute to get my bsc degree.My plan was to be a game developer from start then gradually make my own company. So, it would be helpful if you guys help me out about do's and dont's, optionals and motivation\n    submitted by    /u/Ok_Distribution_7719  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/gamedev/comments/1de8242/game_devs_how_many_times_did_you_fail_before/",
+          "publishedOn": "2024-06-12T14:29:59.000Z",
+          "wordCount": null,
+          "title": "Game devs. How many times did you fail before making a reasonable profit?",
+          "imageUrl": null
+        },
         {
           "id": "https://www.reddit.com/r/gamedev/comments/1de6dmi/i_made_a_multiplayer_shooter_in_c_without_a_game/",
           "author": null,
@@ -23651,56 +23631,6 @@
           "wordCount": null,
           "title": "Hi I write howtomarketagame.com AMA about Steam Next Fest (or marketing in general)",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/gamedev/comments/1cs6694/steam_just_posted_their_q_a_summaries_with_great/",
-          "author": null,
-          "description": "submitted by    /u/ThoseWhoRule  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/gamedev/comments/1cs6694/steam_just_posted_their_q_a_summaries_with_great/",
-          "publishedOn": "2024-05-14T23:15:00.000Z",
-          "wordCount": null,
-          "title": "Steam just posted their Q & A summaries, with great videos on topics like Store visibility, developing an audience, Next & Themed Fests, and more!",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/gamedev/comments/1cs5lx7/whats_a_telltale_sign_you_have_a_good_game_loop/",
-          "author": null,
-          "description": "Hey guys, As we are nearing the end of the production of our game, I’ve been playtesting the heck out of it.\n I’ve caught myself playing quite a few hours and I genuinely enjoy my game. But it makes me wonder if I am not being delusional in my enjoyment. So what makes you go: I have a good game loop?\n Play testers seemed to have greatly enjoyed the game but I worry the sample size is too small. \n Best \n    submitted by    /u/ilikemyname21  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/gamedev/comments/1cs5lx7/whats_a_telltale_sign_you_have_a_good_game_loop/",
-          "publishedOn": "2024-05-14T22:49:28.000Z",
-          "wordCount": null,
-          "title": "What’s a telltale sign you have a good game loop?",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/gamedev/comments/1cs313e/microsoft_only_wanted_their_ip_not_the_studios/",
-          "author": null,
-          "description": "Arkane Studios dev goes off on video game executives following 4 studio closures by Xbox:\n “video games are an entertainment/cultural industry, and your business as a corporation is to take care of your artists/entertainers and help them create value for you.”\n https://www.dexerto.com/gaming/microsoft-closes-the-developers-behind-hi-fi-rush-redfall-in-shocking-cuts-2697570/\n    submitted by    /u/-_-mrfuzzy  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/gamedev/comments/1cs313e/microsoft_only_wanted_their_ip_not_the_studios/",
-          "publishedOn": "2024-05-14T20:59:14.000Z",
-          "wordCount": null,
-          "title": "Microsoft only wanted their IP not the studios",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/gamedev/comments/1cs01yv/what_is_your_biggest_gamedev_obstacle_what_is/",
-          "author": null,
-          "description": "Is it time, self doubt, learning curve. What holds you back and why do you let it? How have you overcome these obstacles? \n    submitted by    /u/Laphtor  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/gamedev/comments/1cs01yv/what_is_your_biggest_gamedev_obstacle_what_is/",
-          "publishedOn": "2024-05-14T18:57:24.000Z",
-          "wordCount": null,
-          "title": "What is your biggest gamedev obstacle. What is holding you back?",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/gamedev/comments/1crtzld/the_story_of_how_i_suspect_a_big_chinese/",
-          "author": null,
-          "description": "I've been in contact with this publisher for several months, they really liked the game but never went on with an offer, saying they needed at least another build update to compare and make an evaluation.\n Months passed and we got back in contact as we had a build update, but once again they didn't go with an offer as they thought we weren't gathering enough wishlists for them to feel confident, they gave us some slides with their in-depth evaluation which we actually appreciated, then basically closed contact as it's clear they're not interested...\n ...Until a new game demo just came out on steam, with a strikingly similar concept, execution, and even short/long descriptions.\n This is supposed to be the debut project of a \"three-person team\" (just how we presented ourselves to the publisher), \"coincidentially\" Chinese, but it's impossible to track who's behind.\n What is even weirder is the marketing quality and precision of this game and its usage of Steam algorithm and events, which is too much of a coincidence to assume that they were just doing everything right on the first try as a studio.\n Cherry on the cake is that we received this publisher's report the same day they put their demo out and started engaging with their discord.\n I don't think the concept of \"stealing ideas\" even exist, my game itself is a re-elaboration of other devs ideas, but the fact that we directly came in contact with this publisher and everything is laid out to look like a coincidence, still makes me feel viciously stolen of something.\n Thanks for reading up to this point.\n Curious to hear any thoughts you have about this.\n  \nEDIT: I care to specify that I don't have 100% proof that this isn't just the biggest coincidence I've witnessed in my life, it's just an educated guess. The publisher I got in contact with itself said that they're under the \"big hand of Chinese gaming\", so they don't even need to publish it under their own name.\n    submitted by    /u/ilPolka  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/gamedev/comments/1crtzld/the_story_of_how_i_suspect_a_big_chinese/",
-          "publishedOn": "2024-05-14T14:48:36.000Z",
-          "wordCount": null,
-          "title": "The story of how I suspect a Big Chinese Publisher \"stole\" my game idea.",
-          "imageUrl": null
         }
       ]
     },
@@ -23710,6 +23640,26 @@
       "siteUrl": "https://www.reddit.com/r/godot/top/?t=week",
       "articles": [
         {
+          "id": "https://www.reddit.com/r/godot/comments/1deks0l/i_figured_out_how_to_do_a_warp_tilemap_shader/",
+          "author": null,
+          "description": "submitted by    /u/starblinky  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/godot/comments/1deks0l/i_figured_out_how_to_do_a_warp_tilemap_shader/",
+          "publishedOn": "2024-06-12T23:27:51.000Z",
+          "wordCount": null,
+          "title": "I figured out how to do a warp TileMap shader WITHOUT a subviewport",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/godot/comments/1decf54/which_camera_do_you_prefer/",
+          "author": null,
+          "description": "submitted by    /u/Beneficial_Layer_458  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/godot/comments/1decf54/which_camera_do_you_prefer/",
+          "publishedOn": "2024-06-12T17:33:10.000Z",
+          "wordCount": null,
+          "title": "Which camera do you prefer?",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/godot/comments/1de5maw/i_think_i_accidentally_summoned_a_shader_demon/",
           "author": null,
           "description": "submitted by    /u/spruce_sprucerton  \n [link]   [comments]",
@@ -23717,6 +23667,16 @@
           "publishedOn": "2024-06-12T12:37:43.000Z",
           "wordCount": null,
           "title": "I think I accidentally summoned a shader demon",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/godot/comments/1de1ocs/lighting_is_key_to_a_good_looking_game/",
+          "author": null,
+          "description": "submitted by    /u/New-Ear-2134  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/godot/comments/1de1ocs/lighting_is_key_to_a_good_looking_game/",
+          "publishedOn": "2024-06-12T08:29:18.000Z",
+          "wordCount": null,
+          "title": "LIGHTING IS KEY TO A GOOD LOOKING GAME",
           "imageUrl": null
         },
         {
@@ -24908,46 +24868,6 @@
           "wordCount": null,
           "title": "First time making my own textures, how did I do?",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/godot/comments/1crzs01/cozy_flower_shop_game_your_feedback_wanted/",
-          "author": null,
-          "description": "submitted by    /u/AlphaRayDigital  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/godot/comments/1crzs01/cozy_flower_shop_game_your_feedback_wanted/",
-          "publishedOn": "2024-05-14T18:46:00.000Z",
-          "wordCount": null,
-          "title": "Cozy Flower Shop Game: Your Feedback Wanted!",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/godot/comments/1crwpcs/i_finally_got_steams_ok_to_release_my_first_game/",
-          "author": null,
-          "description": "submitted by    /u/carllacan  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/godot/comments/1crwpcs/i_finally_got_steams_ok_to_release_my_first_game/",
-          "publishedOn": "2024-05-14T16:42:04.000Z",
-          "wordCount": null,
-          "title": "I finally got Steam's OK to release my first game!",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/godot/comments/1crvdkd/execution_that_deal_area_damagewhat_do_you_think/",
-          "author": null,
-          "description": "submitted by    /u/weeknightx  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/godot/comments/1crvdkd/execution_that_deal_area_damagewhat_do_you_think/",
-          "publishedOn": "2024-05-14T15:46:40.000Z",
-          "wordCount": null,
-          "title": "Execution that deal area damage,what do you think?",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/godot/comments/1crti75/tip_stringname_is_your_friend/",
-          "author": null,
-          "description": "submitted by    /u/rayuumie  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/godot/comments/1crti75/tip_stringname_is_your_friend/",
-          "publishedOn": "2024-05-14T14:27:18.000Z",
-          "wordCount": null,
-          "title": "Tip: StringName is your friend 🫂",
-          "imageUrl": null
         }
       ]
     },
@@ -24956,6 +24876,46 @@
       "feedUrl": "https://www.reddit.com/r/hacking/top/.rss?t=week",
       "siteUrl": "https://www.reddit.com/r/hacking/top/?t=week",
       "articles": [
+        {
+          "id": "https://www.reddit.com/r/hacking/comments/1dewfg9/100_million_request_ddos_but_why_me/",
+          "author": null,
+          "description": "Several of my domains were hit over the weekend by over 100 million requests. What's baffling me is what they were after and why my sites. 99% of requests were for the root of the website or our contact forms. All requests were GET and with no e-commerce functionality on the site, I have no idea what they would get if they got in other than those who have contacted us.\n Seriously, I run a small marketing agency so it's not like we have anything valuable online so hacking in doesn't seem to be the goal. I'd say it was simply a DDOS by why the contact pages then?\n Requests came from IPs all over the world, most of which were either through a proxy company or were blacklisted domains belonging to spammers.\n User agent wasn't anything special and likely spoofed:\n \"Mozilla/5.0 (Macintosh; Intel Mac OS X 11_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36 Vivaldi/3.7\"\n Theories?\n    submitted by    /u/Scrumpto34  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/hacking/comments/1dewfg9/100_million_request_ddos_but_why_me/",
+          "publishedOn": "2024-06-13T11:10:40.000Z",
+          "wordCount": null,
+          "title": "100 million request DDOS -- but why me?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/hacking/comments/1deulfz/lowlevel_opensource_security_online_party_today/",
+          "author": null,
+          "description": "submitted by    /u/Mike-Banon1  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/hacking/comments/1deulfz/lowlevel_opensource_security_online_party_today/",
+          "publishedOn": "2024-06-13T09:09:09.000Z",
+          "wordCount": null,
+          "title": "Low-level opensource security online Party! - Today at 4 PM UTC",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/hacking/comments/1det1gb/whats_the_point_of_those_sign_in_to_wifi_pages/",
+          "author": null,
+          "description": "Western Europe has them for every public wifi while in Eastern Europe you just connect to the wifi. I have a vague idea they protect against man-in-the-middle attacks but it's just something I read a long time ago. \n    submitted by    /u/revive_iain_banks  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/hacking/comments/1det1gb/whats_the_point_of_those_sign_in_to_wifi_pages/",
+          "publishedOn": "2024-06-13T07:17:20.000Z",
+          "wordCount": null,
+          "title": "What's the point of those \"sign in to wifi\" pages where you put your email address in?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/hacking/comments/1deosb0/exploitdbsearchsploit_with_updated_scripts_for/",
+          "author": null,
+          "description": "Wondering if there was an update to the exploit-db database with scripts written to python3. Feels very tedious to rewrite/reformat python2 programs every time I find something I want to use...\n    submitted by    /u/video_dhara  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/hacking/comments/1deosb0/exploitdbsearchsploit_with_updated_scripts_for/",
+          "publishedOn": "2024-06-13T02:53:52.000Z",
+          "wordCount": null,
+          "title": "exploit-db/searchsploit with updated scripts for python3?",
+          "imageUrl": null
+        },
         {
           "id": "https://www.reddit.com/r/hacking/comments/1de6ztb/college_kid_still_struggling_with_his/",
           "author": null,
@@ -27612,36 +27572,6 @@
           "wordCount": null,
           "title": "Making a Postgres query 1000 times faster",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/programming/comments/1cs1rpc/oracle_extends_support_for_java_11_java_on_solaris/",
-          "author": null,
-          "description": "submitted by    /u/Franco1875  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/programming/comments/1cs1rpc/oracle_extends_support_for_java_11_java_on_solaris/",
-          "publishedOn": "2024-05-14T20:07:52.000Z",
-          "wordCount": null,
-          "title": "Oracle extends support for Java 11, Java on Solaris",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/programming/comments/1crvx1i/blazingly_fast_linked_lists/",
-          "author": null,
-          "description": "submitted by    /u/ketralnis  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/programming/comments/1crvx1i/blazingly_fast_linked_lists/",
-          "publishedOn": "2024-05-14T16:09:15.000Z",
-          "wordCount": null,
-          "title": "Blazingly fast linked lists",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/programming/comments/1crucoc/how_we_saved_10s_of_thousands_of_dollars/",
-          "author": null,
-          "description": "submitted by    /u/jpmmcb  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/programming/comments/1crucoc/how_we_saved_10s_of_thousands_of_dollars/",
-          "publishedOn": "2024-05-14T15:03:37.000Z",
-          "wordCount": null,
-          "title": "How We Saved 10s of Thousands of Dollars Deploying Low Cost Open Source AI Technologies At Scale with Kubernetes",
-          "imageUrl": null
         }
       ]
     },
@@ -27738,6 +27668,16 @@
           "publishedOn": "2024-06-10T10:12:02.000Z",
           "wordCount": null,
           "title": "'Real programmers use C and C++' should end",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/learnprogramming/comments/1dcg8au/what_are_the_best_books_to_learn_c/",
+          "author": null,
+          "description": "I'm looking for recommendations for the best books to learn C—best for me, not necessarily the best for everyone. Here's a bit about my situation: I'm a complete beginner. So far, I've only written a couple of loops and a basic calculator in C by watching some tutorials. But I can't really follow tutorials; I get distracted, and my productivity plummets. A two-hour study topic takes me all day if I'm watching videos. I'm much more comfortable learning from books.\n So, I'm looking for a book on C that starts from the very basics, like setting up the programming environment in Ubuntu, and goes all the way to advanced concepts like OOP, pointers, data structures, algorithms, and so on. My plan is to start with C and then move on to C++, Java, Kotlin, and Python. Almost everyone suggests starting with C, so that's what I've decided to do.\n I need a book that begins at the ground level but eventually covers advanced topics. It should also include problem sets and their solutions to help me grasp programming fundamentals. Bonus points if the book explains why a particular solution is the best among all other possible solutions.\n Any suggestions? \n    submitted by    /u/Inevitable_Treat_376  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/learnprogramming/comments/1dcg8au/what_are_the_best_books_to_learn_c/",
+          "publishedOn": "2024-06-10T07:58:50.000Z",
+          "wordCount": null,
+          "title": "what are the best books to learn C?",
           "imageUrl": null
         },
         {
@@ -28897,6 +28837,26 @@
       "feedUrl": "https://www.reddit.com/r/ProgrammerHumor/top/.rss?t=week",
       "siteUrl": "https://www.reddit.com/r/ProgrammerHumor/top/?t=week",
       "articles": [
+        {
+          "id": "https://www.reddit.com/r/ProgrammerHumor/comments/1de4kcx/micromanagersbelike/",
+          "author": null,
+          "description": "submitted by    /u/IHateYallmfs  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/ProgrammerHumor/comments/1de4kcx/micromanagersbelike/",
+          "publishedOn": "2024-06-12T11:40:52.000Z",
+          "wordCount": null,
+          "title": "microManagersBeLike",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/ProgrammerHumor/comments/1de3wq3/basedonatruestory/",
+          "author": null,
+          "description": "submitted by    /u/LeIdrimi  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/ProgrammerHumor/comments/1de3wq3/basedonatruestory/",
+          "publishedOn": "2024-06-12T11:02:03.000Z",
+          "wordCount": null,
+          "title": "basedOnATrueStory",
+          "imageUrl": null
+        },
         {
           "id": "https://www.reddit.com/r/ProgrammerHumor/comments/1ddtll1/itworks/",
           "author": null,
@@ -30156,26 +30116,6 @@
           "wordCount": null,
           "title": "youAreDoingItWrong",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/ProgrammerHumor/comments/1cs1qrp/sayupdateagainidareyou/",
-          "author": null,
-          "description": "submitted by    /u/jkasari  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/ProgrammerHumor/comments/1cs1qrp/sayupdateagainidareyou/",
-          "publishedOn": "2024-05-14T20:06:49.000Z",
-          "wordCount": null,
-          "title": "sayUpdateAgainIDareYou",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/ProgrammerHumor/comments/1crscax/programminglanguagetierlist/",
-          "author": null,
-          "description": "submitted by    /u/a_useless_communist  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/ProgrammerHumor/comments/1crscax/programminglanguagetierlist/",
-          "publishedOn": "2024-05-14T13:36:59.000Z",
-          "wordCount": null,
-          "title": "programmingLanguageTierList",
-          "imageUrl": null
         }
       ]
     },
@@ -30184,6 +30124,26 @@
       "feedUrl": "https://www.reddit.com/r/linux/top/.rss?t=week",
       "siteUrl": "https://www.reddit.com/r/linux/top/?t=week",
       "articles": [
+        {
+          "id": "https://www.reddit.com/r/linux/comments/1dencsu/linux_reached_2_on_the_steam_hardware_software/",
+          "author": null,
+          "description": "submitted by    /u/wasge  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/linux/comments/1dencsu/linux_reached_2_on_the_steam_hardware_software/",
+          "publishedOn": "2024-06-13T01:38:06.000Z",
+          "wordCount": null,
+          "title": "Linux reached 2% on the Steam Hardware & Software Survey!",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/linux/comments/1dej3i3/valve_releases_proton_902/",
+          "author": null,
+          "description": "submitted by    /u/gabriel_3  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/linux/comments/1dej3i3/valve_releases_proton_902/",
+          "publishedOn": "2024-06-12T22:12:28.000Z",
+          "wordCount": null,
+          "title": "Valve Releases Proton 9.0-2",
+          "imageUrl": null
+        },
         {
           "id": "https://www.reddit.com/r/linux/comments/1de52us/opensuse_leap_156_released/",
           "author": null,
@@ -31461,6 +31421,16 @@
       "feedUrl": "https://www.reddit.com/r/archlinux/top/.rss?t=week",
       "siteUrl": "https://www.reddit.com/r/archlinux/top/?t=week",
       "articles": [
+        {
+          "id": "https://www.reddit.com/r/archlinux/comments/1denlei/i_love_arch/",
+          "author": null,
+          "description": "Been using it for 3 months as my daily driver. Read everything I could on the wiki and what not. \n But man the community has a ton of toxic people. Don’t get discouraged by reading this Reddit communty’s comments. Just dive in. There is a ton available information from people that want you to have a good experience. \n Give it a try in a vm or throw it on your main computer and figure it out. But please don’t let everyone’s shitty attitude about helping hold you back. It’s not that hard, it is super powerful, and the devs working behind it want you to use it too. \n The more users the more people get involved into making something better. And the gate keeping assholes forget about that when shitting on someone looking for guidance. \n I love arch. \n    submitted by    /u/Business-Soup-4406  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/archlinux/comments/1denlei/i_love_arch/",
+          "publishedOn": "2024-06-13T01:50:39.000Z",
+          "wordCount": null,
+          "title": "I love arch",
+          "imageUrl": null
+        },
         {
           "id": "https://www.reddit.com/r/archlinux/comments/1degfsd/pacman_should_auto_clean_the_cache/",
           "author": null,
@@ -32799,6 +32769,36 @@
       "siteUrl": "https://www.reddit.com/r/debian/top/?t=week",
       "articles": [
         {
+          "id": "https://www.reddit.com/r/debian/comments/1delonq/debian_as_first_real_os_but_have_rtx4070ti_as_gpu/",
+          "author": null,
+          "description": "Hi everyone, so I am switching to Linux, and have been using Debian as my WSL of choice for a long time, appreciating its stability (for docker images and reproducability), but I have now encountered a big issue I did not realie I would -- my graphics card!\n Does anyone know how to make this work?\n I tried to blacklist nouveau (/etc/modprobe.d/blacklist-nouveau.conf), and install drivers using the \"sid release\" (?) to use the latest, and installed nvidia-driver nvidia-settings, and now both monitors light up (hooray) but then immediately tell me \"ohh no, something has gone wrong...\" (full crash and need manual restart). What do I do?\n    submitted by    /u/AndreasNH  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/debian/comments/1delonq/debian_as_first_real_os_but_have_rtx4070ti_as_gpu/",
+          "publishedOn": "2024-06-13T00:10:40.000Z",
+          "wordCount": null,
+          "title": "Debian as first real OS, but have RTX4070ti as GPU..",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/debian/comments/1deddt9/how_to_install_amd_gpu_drivers_on_debian/",
+          "author": null,
+          "description": "Hello, I just installed debian and want to get the drivers, but it looks like its only for ubuntu, red hat and SLED.\n    submitted by    /u/Typischerr  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/debian/comments/1deddt9/how_to_install_amd_gpu_drivers_on_debian/",
+          "publishedOn": "2024-06-12T18:12:51.000Z",
+          "wordCount": null,
+          "title": "How to install AMD gpu drivers on debian?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/debian/comments/1deb8lr/cant_create_a_storage_location_for_steam/",
+          "author": null,
+          "description": "I can't change game installation location.\n The screenshot shows what I get after hitting \"select\" in the pop-up window.\n https://preview.redd.it/e1i3p4w1666d1.png?width=851&format=png&auto=webp&s=8f0fd610401e857b20dc5c3769ce174ed57c1e2d\n    submitted by    /u/Laleesh  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/debian/comments/1deb8lr/cant_create_a_storage_location_for_steam/",
+          "publishedOn": "2024-06-12T16:43:58.000Z",
+          "wordCount": null,
+          "title": "Can't create a storage location for Steam.",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/debian/comments/1deabib/installed_debian_for_the_first_time/",
           "author": null,
           "description": "submitted by    /u/toosejuice786  \n [link]   [comments]",
@@ -32846,6 +32846,16 @@
           "publishedOn": "2024-06-11T21:53:19.000Z",
           "wordCount": null,
           "title": "Debian + Btrfs + Disk Encryption",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/debian/comments/1dd81v8/how_to_stop_session_remember/",
+          "author": null,
+          "description": "Hi guys, I haven't found the correct setting. When restarting my Debian system all previous opened programs and windows are opened. How do I prevent this. Using Debian 12 with KDE Plasma \n Thanks\n    submitted by    /u/tschaefermedia  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/debian/comments/1dd81v8/how_to_stop_session_remember/",
+          "publishedOn": "2024-06-11T07:08:14.000Z",
+          "wordCount": null,
+          "title": "How to stop session remember",
           "imageUrl": null
         },
         {
