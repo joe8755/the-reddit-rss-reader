@@ -2,10 +2,502 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://joe8755.github.io/the-reddit-rss-reader/index.html</id>
     <title>the reddit rss reader</title>
-    <updated>2024-06-16T12:36:08.178Z</updated>
+    <updated>2024-06-17T01:35:11.705Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://joe8755.github.io/the-reddit-rss-reader/index.html"/>
     <link rel="self" href="https://joe8755.github.io/the-reddit-rss-reader/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[Why doesn't anyone make a pocketstation emulator for java (j2me)?]]></title>
+        <id>https://www.reddit.com/r/EmuDev/comments/1dhm7ys/why_doesnt_anyone_make_a_pocketstation_emulator/</id>
+        <link href="https://www.reddit.com/r/EmuDev/comments/1dhm7ys/why_doesnt_anyone_make_a_pocketstation_emulator/"/>
+        <updated>2024-06-17T01:09:39.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/LVSRETRO  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>Developing Emulators</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Curses movement]]></title>
+        <id>https://www.reddit.com/r/C_Programming/comments/1dhlq2z/curses_movement/</id>
+        <link href="https://www.reddit.com/r/C_Programming/comments/1dhlq2z/curses_movement/"/>
+        <updated>2024-06-17T00:42:33.000Z</updated>
+        <summary type="html"><![CDATA[Hey, I am working on a terminal File Explorer similar to ranger but in C. I'm not using curses since I want to learn more deeply how TUIs work. Currently, I am building a curses-like library for the project, all based on escape sequences. I heard that curses has better or at least more efficient ways than the basic escape sequence like ESC[2A, for example, but I cannot find any information. Is that true? And if it is, can someone explain how they do it?
+    submitted by    /u/vaquitson  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Different library version dependency on the same project with CMake]]></title>
+        <id>https://www.reddit.com/r/cpp/comments/1dhklsc/different_library_version_dependency_on_the_same/</id>
+        <link href="https://www.reddit.com/r/cpp/comments/1dhklsc/different_library_version_dependency_on_the_same/"/>
+        <updated>2024-06-16T23:43:28.000Z</updated>
+        <summary type="html"><![CDATA[I ran into a dead end attempting to figure out how to use installed libraries and manage library dependencies taking the version into consideration.
+ Consider the following:
+ - I've made a LibA project and turned it into a library installed in a custom folder in my workspace(.install folder)
+ - LibA has two versions: 1.0.0. and 2.0.0
+ - LibB is another library also installed in this custom folder in the workspace but it depends on the LibA 1.0.0
+ - Finally, an App depends on the LibA 2.0.0 and the LibB 0.1.0
+ The main issue is that the App is linking the LibA 2.0.0 while LibB also depends on the LibA, but the LibB is not using the LibA 1.0.0.
+ Has anyone ever encountered something similar? Any thoughts or recommendations on how to resolve this matter would be greatly appreciated.
+ I'm not sure whether or not the find_package is the better option here.
+ NOTE: I'll let below a small piece of the CMakeLists.txt file to help 
+ App/CMakeLists.txt:
+ LibA dependency
+ set(LIB_A__VERSION 2.0.0)
+ list(APPEND CMAKE_PREFIX_PATH "$ENV{MY_WORKSPACE}/.install/LibA/${LIB_A__VERSION}") find_package(LibA ${LIB_A__VERSION} EXACT REQUIRED) target_link_libraries(${EXECUTABLE_NAME} PRIVATE LibA)
+ # LibB dependency
+ set(LIB_B__VERSION 0.1.0) list(APPEND CMAKE_PREFIX_PATH "$ENV{MY_WORKSPACE}/.install/LibB/${LIB_B__VERSION}")
+ find_package(LibB ${LIB_B__VERSION} EXACT REQUIRED) target_link_libraries(${EXECUTABLE_NAME} PRIVATE LibB)
+ LibB/CMakeLists.txt:
+ LibA dependency
+ set(LIB_A__VERSION 1.0.0)
+ list(APPEND CMAKE_PREFIX_PATH "$ENV{MY_WORKSPACE}/.install/LibA/${LIB_A__VERSION}") find_package(LibA ${LIB_A__VERSION} EXACT REQUIRED) target_link_libraries(${EXECUTABLE_NAME} PRIVATE LibA) 
+    submitted by    /u/vac-11    to    r/cpp  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Reimagining the exception hierarchy]]></title>
+        <id>https://www.reddit.com/r/cpp/comments/1dhk726/reimagining_the_exception_hierarchy/</id>
+        <link href="https://www.reddit.com/r/cpp/comments/1dhk726/reimagining_the_exception_hierarchy/"/>
+        <updated>2024-06-16T23:22:21.000Z</updated>
+        <summary type="html"><![CDATA[One of the remaining things I've been trying to figure out was when should I make a new exception type, and when I do, which one should I inherit from?
+ My troubles are the following:
+  
+If I want to add information to an existing exception type, say std::out_of_range, inheriting feels wrong due to if something catches the base type up stream when that's unintended, it may cause problems.
+ If I decide to not inherit from std::out_of_range for my custom out_of_range error, now I have 2 types sharing the exact same semantics as each other and the opposite issue of the previous, what if it's intended the base class gets caught, so that also feels wrong to me.
+ The base classes std::logic_error and such, I read them as categories of errors, but what if I don't agree for my use case that they a…]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Can I change the default file save behavior in Debian 12 Stable / KDE Plasma 5?]]></title>
+        <id>https://www.reddit.com/r/debian/comments/1dhjq4v/can_i_change_the_default_file_save_behavior_in/</id>
+        <link href="https://www.reddit.com/r/debian/comments/1dhjq4v/can_i_change_the_default_file_save_behavior_in/"/>
+        <updated>2024-06-16T22:59:27.000Z</updated>
+        <summary type="html"><![CDATA[I'll apologize in advance for the newbie question, but it gets me every time. Whenever I go to save/download a file, if I do any navigation to a different directory and/or create a directory, the text for the file name is highlighted, however if I start typing, it brings up the search to search for what I type. I may well be overlooking something, but I couldn't seem to find it. But it drives me bonkers! Is there a way to change this? Thank you in advance.
+    submitted by    /u/SpotStealer  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : debian</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[OpenAI Releases Official .NET Library]]></title>
+        <id>https://www.reddit.com/r/csharp/comments/1dhirkp/openai_releases_official_net_library/</id>
+        <link href="https://www.reddit.com/r/csharp/comments/1dhirkp/openai_releases_official_net_library/"/>
+        <updated>2024-06-16T22:12:49.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/almirvuk  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How precise is Java's Math class?]]></title>
+        <id>https://www.reddit.com/r/java/comments/1dhir0u/how_precise_is_javas_math_class/</id>
+        <link href="https://www.reddit.com/r/java/comments/1dhir0u/how_precise_is_javas_math_class/"/>
+        <updated>2024-06-16T22:12:02.000Z</updated>
+        <summary type="html"><![CDATA[Was going to try to recreate the Black Scholes formula as a little side project in Java using BigDecimal but since BigDecimal doesn't come with much support for complex math such as logarithms, it just seems utterly impossible without reinventing the wheel and calling it BigWheel. Is double safe to use for money if I'm using Math class methods?
+    submitted by    /u/Add1ctedToGames  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : java</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Convert existing struct that has a dumb pointer into a smart pointer]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1dhimpl/convert_existing_struct_that_has_a_dumb_pointer/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1dhimpl/convert_existing_struct_that_has_a_dumb_pointer/"/>
+        <updated>2024-06-16T22:06:19.000Z</updated>
+        <summary type="html"><![CDATA[I inherited a C library that I have no control over. In that library, there is one struct, and one function that I really care about. To simplify my problem, assume I have a struct:
+ struct oldStruct {
+ // other stuff
+ unsigned char* bigarray;
+ };
+ Later on, I need to pass an array of oldStructs to the function I care about like so:
+ coolFunction(const oldStruct* structarrayptr, // other stuff);
+ So my question is basically, how can I C++ify things for safety. I already have a vector<oldStruct> and then pass to coolFunction(vector<oldStruct>.data(), ...) and that all works. But I'd really like to somehow wrap the unsigned char* bigarray in a unique_ptr, and I can't figure out how.
+ I even tried making
+ struct newStruct{
+ // same other stuff
+ std::unique_ptr<unsigned char> bigarray;
+ };
+ which is already dumb for just duplicating code. I was able to construct my vector<newStruct> and use it elsewhere and everything worked great, but the issue was when I tried to pass to coolFunction that it failed. There was no casting I could figure out that would cast newStruct to oldStruct. The issue I guess is that C++ isn't smart enough to use unique_ptr.get() to get the dumb pointer.
+ What is the "right" way to deal with this situation? Thank you!
+    submitted by    /u/Fabulous_Let_436    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Need thoughts on my collision system]]></title>
+        <id>https://www.reddit.com/r/cpp/comments/1dhilrd/need_thoughts_on_my_collision_system/</id>
+        <link href="https://www.reddit.com/r/cpp/comments/1dhilrd/need_thoughts_on_my_collision_system/"/>
+        <updated>2024-06-16T22:05:06.000Z</updated>
+        <summary type="html"><![CDATA[I'm making a game in C++ using Raylib. Currently i have a HitboxComponent class. Anything that is collidable will have an hitbox object. Currently i have a CollisionSystem class that holds a map of a CollidableType (for example, BOX, ENEMY, etc...) and a pointer to the HitboxComponent. I iterate over the map checking for collisions. I thought this would work, but now I have a problem. What if I wanna make a bullet for example? Since i only have the hitbox I can't access the actual object.
+ I thought of making an entity or collidable class and add a onCollide virtual function and pass them instead of the HitboxComponents. Is that a good idea?
+    submitted by    /u/Advanced-Loan-7549    to    r/cpp  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[is return type of deleted functions important?]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1dhhqwp/is_return_type_of_deleted_functions_important/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1dhhqwp/is_return_type_of_deleted_functions_important/"/>
+        <updated>2024-06-16T21:25:01.000Z</updated>
+        <summary type="html"><![CDATA[I see code that deletes a certain overload but leaves the return type (especially in deleted assignment operators) and I see it in the standard library code. is it important? I usually just declare the return type as void.
+    submitted by    /u/_Noreturn    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Unable to add endpoint filter to check health endpoint by type]]></title>
+        <id>https://www.reddit.com/r/csharp/comments/1dhfr87/unable_to_add_endpoint_filter_to_check_health/</id>
+        <link href="https://www.reddit.com/r/csharp/comments/1dhfr87/unable_to_add_endpoint_filter_to_check_health/"/>
+        <updated>2024-06-16T19:54:04.000Z</updated>
+        <summary type="html"><![CDATA[I'm unable to add endpoint filter to the check health endpoint by type like this:
+ app.MapHealthChecks( "/api/health", new HealthCheckOptions { ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse } ) .AddEndpointFilter<ApiKeyEndpointFilter>(); 
+ because MapHealthChecks() returns IEndpointConventionBuilder instead of the RouteHandlerBuilder. So I have to do it like this:
+ app.MapHealthChecks( "/api/health", new HealthCheckOptions { ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse } ) .AddEndpointFilter(new ApiKeyEndpointFilter(builder.Configuration)); 
+ Which is fine in my example, but what if I wanted to resolve other dependencies like db context for example? That's when it becomes hard. I just don't understand why there's no such overload like .AddEndpointFilter<T>() on IEndpointConventionBuilder.
+ What's the best way to go about it?
+    submitted by    /u/MatthewRose67  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[I recently switched to Debian Linux because I don't wanna be Microsoft's slave anymore FL Studio works well so far via Bottles. The last time I used Linux was in 2017 with Mint and Ubuntu.]]></title>
+        <id>https://www.reddit.com/r/debian/comments/1dhetx3/i_recently_switched_to_debian_linux_because_i/</id>
+        <link href="https://www.reddit.com/r/debian/comments/1dhetx3/i_recently_switched_to_debian_linux_because_i/"/>
+        <updated>2024-06-16T19:11:07.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/conceptbuild  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : debian</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[StockholmCpp 0x2F: Intro, infos and a Coding Quiz]]></title>
+        <id>https://www.reddit.com/r/cpp/comments/1dhdmtm/stockholmcpp_0x2f_intro_infos_and_a_coding_quiz/</id>
+        <link href="https://www.reddit.com/r/cpp/comments/1dhdmtm/stockholmcpp_0x2f_intro_infos_and_a_coding_quiz/"/>
+        <updated>2024-06-16T18:16:03.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/_a4z    to    r/cpp  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[how to compile cglm for opengl?]]></title>
+        <id>https://www.reddit.com/r/C_Programming/comments/1dhdden/how_to_compile_cglm_for_opengl/</id>
+        <link href="https://www.reddit.com/r/C_Programming/comments/1dhdden/how_to_compile_cglm_for_opengl/"/>
+        <updated>2024-06-16T18:04:02.000Z</updated>
+        <summary type="html"><![CDATA[hello, i watched some tutorials on the internet on opengl and loved it, i completed my 6 tutorial of texturing stuff, now the the documentation is about 3D rendering and stuff, and when i watched a youtube video, the guy uses glm for c++, but glm doesnt support C so i found an alternative which is cglm, the doc says how to compike the libray, but i did everything yet it doesnt work, i even made a folder named build, ran cmake . and cmake just says no cmakelists, now i ran it in the directory that has cmakelists, the error was: language set before setting c compiler, now i fixed this by setting mingw path in cmake lists, but when i ever run cmake . in current directory or build directory, it says: no such file or directory.
+    submitted by    /u/Great_Click_9140  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[EF: Error message no reason???]]></title>
+        <id>https://www.reddit.com/r/csharp/comments/1dhd0e5/ef_error_message_no_reason/</id>
+        <link href="https://www.reddit.com/r/csharp/comments/1dhd0e5/ef_error_message_no_reason/"/>
+        <updated>2024-06-16T17:47:24.000Z</updated>
+        <summary type="html"><![CDATA[An error occurred using the connection to database 'app' on server '127.0.0.1'.
+    submitted by    /u/Old-Narwhal-6546  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[I made ASCII wallpaper for XFCE users (1080p)]]></title>
+        <id>https://www.reddit.com/r/debian/comments/1dhcqhx/i_made_ascii_wallpaper_for_xfce_users_1080p/</id>
+        <link href="https://www.reddit.com/r/debian/comments/1dhcqhx/i_made_ascii_wallpaper_for_xfce_users_1080p/"/>
+        <updated>2024-06-16T17:34:39.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/SharpeThe1st  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : debian</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[I installed Linux and I am very positively surprised!]]></title>
+        <id>https://www.reddit.com/r/linux/comments/1dhcgdi/i_installed_linux_and_i_am_very_positively/</id>
+        <link href="https://www.reddit.com/r/linux/comments/1dhcgdi/i_installed_linux_and_i_am_very_positively/"/>
+        <updated>2024-06-16T17:21:38.000Z</updated>
+        <summary type="html"><![CDATA[I installed Linux (specifically Arch + GNOME) about a week ago and I am very positively surprised!
+ I always thought that Linux was for people who know what they are doing (🤓) and have a specific reason for doing it. Out of curiosity, I separated a small partition so that I could test whether I could even install it and use it for a few days, and a day later I decided to format my entire second drive (~500gb) on which I only had a few games and so far I have no reason to go back to Windows! Really, every application I wanted to go/install worked, there are so many guides and videos on YouTube explaining how to do various things.
+ I can understand that some people may not like the fact that sometimes you have to type something into the console, but for me it's not a big deal to learn a dozen commands. I really see that this is a great community and the openness of the system is wonderful!
+ I even told a friend to take a look at Linux, but he's not too interested, even after I showed him that it's a really cool system. However, I understand him, no one likes change if they feel comfortable.
+ I really think that there is almost no effort (even Arch, which I installed , people said it might be quite difficult for a first Linux, but I really don't feel it)!
+ I wanted to write my story and say Hello to the great community, I'm glad I found myself here! Greets!
+    submitted by    /u/wisielczyk  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[2 problems. A build problem and a console.clear problem.]]></title>
+        <id>https://www.reddit.com/r/csharp/comments/1dhcg0a/2_problems_a_build_problem_and_a_consoleclear/</id>
+        <link href="https://www.reddit.com/r/csharp/comments/1dhcg0a/2_problems_a_build_problem_and_a_consoleclear/"/>
+        <updated>2024-06-16T17:21:09.000Z</updated>
+        <summary type="html"><![CDATA[First time cross posting my own post so I am hoping all of the photos stayed in tact. I posted it to the wrong subreddit not realizing the build problem is not a vscode problem. I am sorry it is so long but I tried to include as much as possible. Please let me know if I need to clarify anything.
+ Also I am brand new to csharp so please be gentle and I would appreciate explaining more than you think you need to. 
+ Thank you!
+    submitted by    /u/Ok_Difference1922  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Help with programmable clock]]></title>
+        <id>https://www.reddit.com/r/C_Programming/comments/1dhc92b/help_with_programmable_clock/</id>
+        <link href="https://www.reddit.com/r/C_Programming/comments/1dhc92b/help_with_programmable_clock/"/>
+        <updated>2024-06-16T17:12:10.000Z</updated>
+        <summary type="html"><![CDATA[Hello, I've coded for a programmable clock on a 4 digit 7 segment display that is connected to a PIC16F887. It is supposed to work as a clock and has 4 buttons that do the following: Enter programming mode, move digits, increase digit number, decrease digit number.
+ It seems to simulate alright in Proteus, working like a clock, however it stops simulating at 1:52. Any idea if this might be because of the simulating platform? Or is the error within my code.
+    submitted by    /u/beepbeepRiichie  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[I made ASCII wallpaper for XFCE users (1080p)]]></title>
+        <id>https://www.reddit.com/r/linux/comments/1dhc0eb/i_made_ascii_wallpaper_for_xfce_users_1080p/</id>
+        <link href="https://www.reddit.com/r/linux/comments/1dhc0eb/i_made_ascii_wallpaper_for_xfce_users_1080p/"/>
+        <updated>2024-06-16T17:01:06.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/SharpeThe1st  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[What are the coolest things you programmed?]]></title>
+        <id>https://www.reddit.com/r/learnprogramming/comments/1dhbw7t/what_are_the_coolest_things_you_programmed/</id>
+        <link href="https://www.reddit.com/r/learnprogramming/comments/1dhbw7t/what_are_the_coolest_things_you_programmed/"/>
+        <updated>2024-06-16T16:55:38.000Z</updated>
+        <summary type="html"><![CDATA[Basically the title, have you used coding to help you invest? Did you use it to automate your daily life and how? Etc..
+    submitted by    /u/Swimming_Tangelo8423  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : learnprogramming</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA["Best PS3 Emulator for PC".]]></title>
+        <id>https://www.reddit.com/r/EmuDev/comments/1dhbhj4/best_ps3_emulator_for_pc/</id>
+        <link href="https://www.reddit.com/r/EmuDev/comments/1dhbhj4/best_ps3_emulator_for_pc/"/>
+        <updated>2024-06-16T16:36:20.000Z</updated>
+        <summary type="html"><![CDATA[I am looking to play PlayStation 3 games on my PC and need advice on the best PS3 emulator to use. Could you recommend a reliable PS3 emulator that offers good performance and compatibility with most PS3 games? Additionally, I would appreciate a step-by-step guide on how to download, install, and configure the emulator to ensure optimal gameplay. Any tips on system requirements and where to find legitimate game files would also be helpful. Thank you!
+    submitted by    /u/Educational_Sun_8904  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>Developing Emulators</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[EF sometimes complain properties don't exist?]]></title>
+        <id>https://www.reddit.com/r/csharp/comments/1dhave1/ef_sometimes_complain_properties_dont_exist/</id>
+        <link href="https://www.reddit.com/r/csharp/comments/1dhave1/ef_sometimes_complain_properties_dont_exist/"/>
+        <updated>2024-06-16T16:07:29.000Z</updated>
+        <summary type="html"><![CDATA[Example:
+ player.Data.IsOnline = false; dbContext.Entry(player).Property(x => x.Data).IsModified = true; await dbContext.SaveChangesAsync(); 
+ Produced:
+ The property 'Player.Data' could not be found. Ensure that the property exists and has been included in the model.The property 'Player.Data' could not be found. Ensure that the property exists and has been included in the model. 
+ Also yes it is loaded.
+    submitted by    /u/Old-Narwhal-6546  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Tell me about your game!]]></title>
+        <id>https://www.reddit.com/r/gamedev/comments/1dhanor/tell_me_about_your_game/</id>
+        <link href="https://www.reddit.com/r/gamedev/comments/1dhanor/tell_me_about_your_game/"/>
+        <updated>2024-06-16T15:57:58.000Z</updated>
+        <summary type="html"><![CDATA[I want to hear about the games everyone is making and the struggles you’ve had to overcome. What it’s about, when/ if you plan to publish, your favorite part of the game, Etc.
+ Not only to give a shout out and a pat on the back to everyone but to show those who want to learn that it’s possible, even with the struggles that come with it. 
+ My game is a farming game that incorporates the magical side of the forest, potions, cryptids, spells you name it! I just started my game last week and it took me two days to figure out how to move 😅 that’s when I found out godot has a whole Manuel on making games haha. 
+ Your turn! 
+    submitted by    /u/watuphomie7  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : gamedev</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Reading UTF-8 characters from file works on Linux but not on Windows]]></title>
+        <id>https://www.reddit.com/r/C_Programming/comments/1dhalu7/reading_utf8_characters_from_file_works_on_linux/</id>
+        <link href="https://www.reddit.com/r/C_Programming/comments/1dhalu7/reading_utf8_characters_from_file_works_on_linux/"/>
+        <updated>2024-06-16T15:55:33.000Z</updated>
+        <summary type="html"><![CDATA[main.c:
+ #include <stdio.h> #include <wchar.h> #include <locale.h> int main() { setlocale(LC_ALL, ""); FILE *file = fopen("file.txt", "r"); wint_t wc; while ((wc = fgetwc(file)) != WEOF) { putwchar(wc); } fclose(file); return 0; } 
+ file.txt:
+ ä ö ü 
+ Output in wsl (Linux), compiled with gcc:
+ ä ö ü 
+ Output in cmd (Windows), compiled with gcc:
+ Ã¤ Ã¶ Ã¼ 
+ The following code works on both Windows and Linux:
+ #include <stdio.h> #include <wchar.h> #include <locale.h> int main() { setlocale(LC_ALL, ""); wint_t c = L'ö'; putwchar(c); } 
+ Both main.c and file.txt are encoded in UTF-8.
+    submitted by    /u/King_of_Kings_980  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Go Template Support in VSCode via Transpiling - supports autocomplete, hovering, and go to definition]]></title>
+        <id>https://www.reddit.com/r/golang/comments/1dh9stp/go_template_support_in_vscode_via_transpiling/</id>
+        <link href="https://www.reddit.com/r/golang/comments/1dh9stp/go_template_support_in_vscode_via_transpiling/"/>
+        <updated>2024-06-16T15:18:06.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/mortensonsam  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : golang</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[The chaos of React in medium to large web apps: has anyone experienced it differently?]]></title>
+        <id>https://www.reddit.com/r/ExperiencedDevs/comments/1dh9rly/the_chaos_of_react_in_medium_to_large_web_apps/</id>
+        <link href="https://www.reddit.com/r/ExperiencedDevs/comments/1dh9rly/the_chaos_of_react_in_medium_to_large_web_apps/"/>
+        <updated>2024-06-16T15:16:34.000Z</updated>
+        <summary type="html"><![CDATA[I have been working with React codebases exclusively since 2016, and the quality of the code I've inherited has always been atrocious when dealing with medium to large apps. If you're just making a todo list, sure, it's all fun and games, but I'm yet to see a real commercial or enterprise-grade React app that doesn't become a disorganized mess. There has not been a single exception. I kid you not, I worked on a few AngularJS projects back in the day that were easier to manage as they grew compared to most React ones, as many things that other frameworks handle for you under the hood or make straightforward to handle manually will require boilerplate in React, and because React model is "open" and not standardized, most developers won't do it as the React team intended compared with what th…]]></summary>
+        <author>
+            <name>top scoring links : ExperiencedDevs</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Is your ISP Secure? Why do “large” cyber-attack groups target general companies over an ISP?]]></title>
+        <id>https://www.reddit.com/r/hacking/comments/1dh9rhg/is_your_isp_secure_why_do_large_cyberattack/</id>
+        <link href="https://www.reddit.com/r/hacking/comments/1dh9rhg/is_your_isp_secure_why_do_large_cyberattack/"/>
+        <updated>2024-06-16T15:16:25.000Z</updated>
+        <summary type="html"><![CDATA[THIS IS NOT A GOOD IDEA. It’s just a random thought, but why attack somebody like Sony for client info when you could attempt to breach an ISP? Wouldn’t they hold more information that could be sensitive? I’m sure it would open a whole different can of worms in terms of internet security though. I’d imagine an ISP has different security conventions as opposed to any other randomly picked company.
+ I just feel like if a malicious party really wanted to do damage, they wouldn’t focus on companies like Sony or whatever. I mean you gotta know once you’ve gone that far there’s no going back, and if you get caught it’s likely life in prison. So go for broke?
+ Has this been done before? Why do you think cyber criminals focus on other businesses instead of ISP’s? Just curious is all. Always kinda wondered how secure an ISP was anyways, considering companies like Apple use services like Private Relay now. Is there a need for better security on the ISP’s end? Like, we have numerous methods to protect ourselves on our end, but what if we got attacked from that side as opposed to a leak of passwords, etc. from a random site?
+    submitted by    /u/CarsonKaiser  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : hacking</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Honest answers, should I quit looking and accept a CS job won't happen for me?]]></title>
+        <id>https://www.reddit.com/r/cscareerquestions/comments/1dh9ofe/honest_answers_should_i_quit_looking_and_accept_a/</id>
+        <link href="https://www.reddit.com/r/cscareerquestions/comments/1dh9ofe/honest_answers_should_i_quit_looking_and_accept_a/"/>
+        <updated>2024-06-16T15:12:16.000Z</updated>
+        <summary type="html"><![CDATA[I'm a new grad with a CS degree. I am US citizen living in California. 
+ I have 3 years of experience working web dev part time during school and 2 summer internships. Plus my 6 months of post grad experience. I had that job about 6 months before the layoff. I've been out of work for 8 months. 
+ I've gotten tons of rejections and a few interviews here since, with one almost leading to an offer. I have 2 more coming up, one due to networking. 
+ I've read it takes on average 6-12 months for new grads to land a job. Still doesn't feel great. I know the market is bad. Still doesn't help my mental health. Maybe my resume sucks even though I've had it reviewed and improved a couple times. Have a look if you want https://www.reddit.com/r/resumes/s/32Nq1Di8i9 . 
+ Should I quit and wait? Accept I'll be one of those people who doesn't get a job in my field? Or am I being a dramatic doomer? Is this normal for recent grads? 
+    submitted by    /u/Red-Droid-Blue-Droid  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : cscareerquestions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Print every few seconds in while loop]]></title>
+        <id>https://www.reddit.com/r/C_Programming/comments/1dh8cqr/print_every_few_seconds_in_while_loop/</id>
+        <link href="https://www.reddit.com/r/C_Programming/comments/1dh8cqr/print_every_few_seconds_in_while_loop/"/>
+        <updated>2024-06-16T14:07:50.000Z</updated>
+        <summary type="html"><![CDATA[Hello community, I have a loop in my test.c who will do several things, e.g.
+ int main() { ...do things... int calculate=0; while(x <=10000) { ...operation on calculate...; x++; //print calculate every 'x' seconds }; return 0; } 
+ What I need to do is find a way to output the "calculate" variable every "x" seconds, e.g. every 5 seconds, obviously without using sleep as I need my loop continues. Could someone advise with the approach I could use? Thank you.
+    submitted by    /u/LucasRey  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[What are the best ways to build a portfolio as a new programmer?]]></title>
+        <id>https://www.reddit.com/r/learnprogramming/comments/1dh8bkx/what_are_the_best_ways_to_build_a_portfolio_as_a/</id>
+        <link href="https://www.reddit.com/r/learnprogramming/comments/1dh8bkx/what_are_the_best_ways_to_build_a_portfolio_as_a/"/>
+        <updated>2024-06-16T14:06:10.000Z</updated>
+        <summary type="html"><![CDATA[I see many people sharing their portfolios which made me think of me not having one. So now I feel that I should build one. When did you build yours? I need some suggestions please.
+    submitted by    /u/WaseemHH  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : learnprogramming</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[The Story of Reformatting 100k Files at Google in 2011]]></title>
+        <id>https://www.reddit.com/r/programming/comments/1dh87j1/the_story_of_reformatting_100k_files_at_google_in/</id>
+        <link href="https://www.reddit.com/r/programming/comments/1dh87j1/the_story_of_reformatting_100k_files_at_google_in/"/>
+        <updated>2024-06-16T14:00:41.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/laurentlb  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : programming</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Gave Debian Testing live a go on my t430s, decided to make it as skeumorphic as possible, reminds me of the late 2000s to early 2010s]]></title>
+        <id>https://www.reddit.com/r/debian/comments/1dh856j/gave_debian_testing_live_a_go_on_my_t430s_decided/</id>
+        <link href="https://www.reddit.com/r/debian/comments/1dh856j/gave_debian_testing_live_a_go_on_my_t430s_decided/"/>
+        <updated>2024-06-16T13:57:30.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/Apple988x  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : debian</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[loveWhenSomeoneWithABusinessDegreeTellsMeHowToDoMyJob]]></title>
+        <id>https://www.reddit.com/r/ProgrammerHumor/comments/1dh6ij9/lovewhensomeonewithabusinessdegreetellsmehowtodomy/</id>
+        <link href="https://www.reddit.com/r/ProgrammerHumor/comments/1dh6ij9/lovewhensomeonewithabusinessdegreetellsmehowtodomy/"/>
+        <updated>2024-06-16T12:27:56.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/No_Wealth_9733  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : ProgrammerHumor</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[?’s for CS Majors from someone with no degree]]></title>
+        <id>https://www.reddit.com/r/learnprogramming/comments/1dh616l/s_for_cs_majors_from_someone_with_no_degree/</id>
+        <link href="https://www.reddit.com/r/learnprogramming/comments/1dh616l/s_for_cs_majors_from_someone_with_no_degree/"/>
+        <updated>2024-06-16T11:58:47.000Z</updated>
+        <summary type="html"><![CDATA[I just want to know everyone’s thoughts on these ?’s I had. - What is something that you believe programmers without a degree lack? - Is it something they would’ve learned in college/ a college course?
+  
+Where would YOU start to become a full stack programmer? (Besides college obviously)
+ 
+Do you think people without degrees in the field are still software engineers? -I say this because I see a lot of hate amongst people who did self-learning/ bootcamp over college. 
+ 
+ Thank you. 
+ . Also looking for a mentor, if anyone has experience or time on their hands. (10-15 min a day & we can either text or voice chat!)
+ . Any other beginners that want to connect/ collaborate please reach out. 
+    submitted by    /u/Far-Round-3374  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : learnprogramming</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[CQClock - Quine Clock in C inspired by Tsoding (624 Bytes)]]></title>
         <id>https://www.reddit.com/r/C_Programming/comments/1dh5yw9/cqclock_quine_clock_in_c_inspired_by_tsoding_624/</id>
@@ -18,6 +510,18 @@
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Go client for kafka ?]]></title>
+        <id>https://www.reddit.com/r/golang/comments/1dh4q4s/go_client_for_kafka/</id>
+        <link href="https://www.reddit.com/r/golang/comments/1dh4q4s/go_client_for_kafka/"/>
+        <updated>2024-06-16T10:30:45.000Z</updated>
+        <summary type="html"><![CDATA[Is there any upto date and reliable go client to work with kafka (Kraft Mode) ?. Must support features like transaction and Negative Acknowledgement . Best i can find is https://github.com/twmb/franz-go but still can't figure out how to Nack a msg .
+    submitted by    /u/gravitonapps  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : golang</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Books about unsafe C#?]]></title>
         <id>https://www.reddit.com/r/csharp/comments/1dh4au8/books_about_unsafe_c/</id>
         <link href="https://www.reddit.com/r/csharp/comments/1dh4au8/books_about_unsafe_c/"/>
@@ -27,6 +531,20 @@
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[I just released the Design Doc, that got my game funded!]]></title>
+        <id>https://www.reddit.com/r/gamedev/comments/1dh3wxg/i_just_released_the_design_doc_that_got_my_game/</id>
+        <link href="https://www.reddit.com/r/gamedev/comments/1dh3wxg/i_just_released_the_design_doc_that_got_my_game/"/>
+        <updated>2024-06-16T09:29:47.000Z</updated>
+        <summary type="html"><![CDATA[One year ago I got financial support by the German Funding organization "FFF Bayern". Now that the Demo is out, i decided to make the High Concept Doc accessible, as I think it was one of the main reasons the game was funded in the end:
+ https://drive.google.com/file/d/19CfWB-zkQ2m4NLSxMNkRlWR0ebIQhPd6/view?usp=drive_link
+ I will soon need to write down an updated version of the Design Doc, when I want to apply for another round of financial support. So tell me, what you think, so that I can improve my Doc!
+    submitted by    /u/StudioMoondowner  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : gamedev</name>
         </author>
     </entry>
     <entry>
@@ -84,6 +602,20 @@
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Why does Javascript work with html]]></title>
+        <id>https://www.reddit.com/r/learnprogramming/comments/1dh2sii/why_does_javascript_work_with_html/</id>
+        <link href="https://www.reddit.com/r/learnprogramming/comments/1dh2sii/why_does_javascript_work_with_html/"/>
+        <updated>2024-06-16T08:04:03.000Z</updated>
+        <summary type="html"><![CDATA[In my school, we started coding in C, and i like it, it's small things, like functions, strings, ifs
+ then i got on my own a little bit of html and cssin the future i will study javascript, but like, i'm in awe
+ why does it work with html? I Kinda understand when a code mess with things in your computer, because it is directly running on your computer, but, how can javascript work with html? for me it's just a coding language that does math, use conditons, and other things, what does javascript have that other languages can not do? 
+    submitted by    /u/Azeredo_00  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : learnprogramming</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Unlocking HTTP/3: A Hands-On Guide to Implementation in .NET and C#]]></title>
         <id>https://www.reddit.com/r/csharp/comments/1dh28c7/unlocking_http3_a_handson_guide_to_implementation/</id>
         <link href="https://www.reddit.com/r/csharp/comments/1dh28c7/unlocking_http3_a_handson_guide_to_implementation/"/>
@@ -111,6 +643,58 @@ Plus, I've included a lightweight, open-source HTTP/3 conformance testing tool i
         <link href="https://www.reddit.com/r/linux/comments/1dh21sc/my_first_net_application_for_linux_experience_in/"/>
         <updated>2024-06-16T07:08:40.000Z</updated>
         <summary type="html"><![CDATA[submitted by    /u/InkOnTube  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[OFFICIAL] Salary Sharing thread for NEW GRADS :: June, 2024]]></title>
+        <id>https://www.reddit.com/r/cscareerquestions/comments/1dh1yio/official_salary_sharing_thread_for_new_grads_june/</id>
+        <link href="https://www.reddit.com/r/cscareerquestions/comments/1dh1yio/official_salary_sharing_thread_for_new_grads_june/"/>
+        <updated>2024-06-16T07:02:08.000Z</updated>
+        <summary type="html"><![CDATA[MODNOTE: Some people like these threads, some people hate them. If you hate them, that's fine, but please don't get in the way of the people who find them useful. Thanks!
+ This thread is for sharing recent new grad offers you've gotten or current salaries for new grads (< 2 years' experience). Friday will be the thread for people with more experience.
+ Please only post an offer if you're including hard numbers, but feel free to use a throwaway account if you're concerned about anonymity. You can also genericize some of your answers (e.g. "Adtech company" or "Finance startup"), or add fields if you feel something is particularly relevant.
+  
+Education:
+ Prior Experience: 
+ $Internship
+ $Coop
+ 
+ Company/Industry:
+ Title:
+ Tenure length:
+ Location: 
+ Salary: 
+ Relocation/Signing Bonus:
+ Stock…]]></summary>
+        <author>
+            <name>top scoring links : cscareerquestions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[whats your favourite guide to harden a new linux server?]]></title>
+        <id>https://www.reddit.com/r/linux/comments/1dh1nus/whats_your_favourite_guide_to_harden_a_new_linux/</id>
+        <link href="https://www.reddit.com/r/linux/comments/1dh1nus/whats_your_favourite_guide_to_harden_a_new_linux/"/>
+        <updated>2024-06-16T06:41:43.000Z</updated>
+        <summary type="html"><![CDATA[I only use linux servers for my own projects and I'm not going to pretend I'm proficient, I mainly follow guides or google/chatgpt commands
+ There is a particular youtube video I follow along each time, which instructs how to not use admin by default,, use ssh keys, enable updates automatically as well enabling ufw. 
+ I was wondering is there a follow along guide that you guys use here, any other tips would be appreciated
+ I understand it's impossible to make a server bulletproof but the goal here is to not be an easy target.
+ Edit: Just wanted to elaborate on something since me mentioning chatgpt has struck a nerve. Im not asking chatgpt for guidance but rather for linux commands, just like I sometimes use it for coding snippets for my projects. I'm pretty sure everyone is guilty of this
+    submitted by    /u/Round_Astronomer_89  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Impulse Tracker (1995) source code, previously made open source on BitBucket in 2014 but now gone, is now hosted on GitHub by its creator Jeffrey Lim]]></title>
+        <id>https://www.reddit.com/r/linux/comments/1dh1dsh/impulse_tracker_1995_source_code_previously_made/</id>
+        <link href="https://www.reddit.com/r/linux/comments/1dh1dsh/impulse_tracker_1995_source_code_previously_made/"/>
+        <updated>2024-06-16T06:21:57.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/JockstrapCummies  
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : linux</name>
@@ -173,6 +757,31 @@ Plus, I've included a lightweight, open-source HTTP/3 conformance testing tool i
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[which thumbnail for my game should I pick?]]></title>
+        <id>https://www.reddit.com/r/godot/comments/1dgzd2p/which_thumbnail_for_my_game_should_i_pick/</id>
+        <link href="https://www.reddit.com/r/godot/comments/1dgzd2p/which_thumbnail_for_my_game_should_i_pick/"/>
+        <updated>2024-06-16T04:07:53.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/New-Ear-2134  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : godot</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[You're starting a new project/crate, what are your necessities?]]></title>
+        <id>https://www.reddit.com/r/rust/comments/1dgza34/youre_starting_a_new_projectcrate_what_are_your/</id>
+        <link href="https://www.reddit.com/r/rust/comments/1dgza34/youre_starting_a_new_projectcrate_what_are_your/"/>
+        <updated>2024-06-16T04:02:47.000Z</updated>
+        <summary type="html"><![CDATA[What are the crates/configs you always add, pretty much no matter what
+ Off the top of my head I almost always add itertools, fxhash, smallvec, arrayvec, bitset and anyhow/thiserror
+ tracing/log is one I should integrate earlier more often
+    submitted by    /u/geckothegeek42  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : rust</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Hi guys I just finished a tutorial in c .. what's the next step and building a compiler is necessary..? If so how and why...]]></title>
         <id>https://www.reddit.com/r/C_Programming/comments/1dgz8ta/hi_guys_i_just_finished_a_tutorial_in_c_whats_the/</id>
         <link href="https://www.reddit.com/r/C_Programming/comments/1dgz8ta/hi_guys_i_just_finished_a_tutorial_in_c_whats_the/"/>
@@ -206,6 +815,24 @@ Plus, I've included a lightweight, open-source HTTP/3 conformance testing tool i
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : hacking</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[I use Linux for a very particular set of reasons.]]></title>
+        <id>https://www.reddit.com/r/linux/comments/1dgyucl/i_use_linux_for_a_very_particular_set_of_reasons/</id>
+        <link href="https://www.reddit.com/r/linux/comments/1dgyucl/i_use_linux_for_a_very_particular_set_of_reasons/"/>
+        <updated>2024-06-16T03:36:31.000Z</updated>
+        <summary type="html"><![CDATA[G'day,
+ I just wanna share this somewhere, and Mastodon/Bluesky have a character limit.
+ My choice to use Linux is simple, based on three things:
+  
+On startup and idle, Windows runs my fans. Fedora spins them for five seconds while installing several large packages at once. So that's hardware longevity.
+ 
+I don't own my filetypes on Windows: it is a ’Microsoft Edge XML Document‘ or a ’Mozilla Firefox PDF Document‘: not an eXtensible Markup or a Portable Document. That software does NOT own these open filetypes and should *not* claim to do so. The Cross Desktop Group has handled MIME and configuration better than the mess of the Windows Registry ever could.
+ 
+Hardware compatibility: it's a stereotype that Windows ’just works‘. But we see countless examples of garbage systems that ’get fuck…]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
         </author>
     </entry>
     <entry>
@@ -244,6 +871,20 @@ Plus, I've included a lightweight, open-source HTTP/3 conformance testing tool i
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : debian</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Just accepted first software internship!]]></title>
+        <id>https://www.reddit.com/r/csMajors/comments/1dgxsei/just_accepted_first_software_internship/</id>
+        <link href="https://www.reddit.com/r/csMajors/comments/1dgxsei/just_accepted_first_software_internship/"/>
+        <updated>2024-06-16T02:33:23.000Z</updated>
+        <summary type="html"><![CDATA[Yeah… for THIS summer. The company is local to my hometown, but distributes world-wide. This is just a reminder that it’s never too late, and to just keep applying. 
+ Oddly enough I hadn’t even applied to the position until an HR rep called me and asked me to apply (they saved my résumé from a previous application). 
+ After that I had a personality type interview and was offered the job a week later. Just goes to show how if you continue to apply yourself, good things tend to happen!
+    submitted by    /u/parkscarter  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csMajors</name>
         </author>
     </entry>
     <entry>
@@ -477,6 +1118,17 @@ Plus, I've included a lightweight, open-source HTTP/3 conformance testing tool i
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Abstractions are the best, abstractions are the worst]]></title>
+        <id>https://www.reddit.com/r/programming/comments/1dgs4q4/abstractions_are_the_best_abstractions_are_the/</id>
+        <link href="https://www.reddit.com/r/programming/comments/1dgs4q4/abstractions_are_the_best_abstractions_are_the/"/>
+        <updated>2024-06-15T21:30:16.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/mbuffett1  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : programming</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[US Is Unprepared for Attacks on Critical Infrastructure: RAND Simulation]]></title>
         <id>https://www.reddit.com/r/hacking/comments/1dgrd77/us_is_unprepared_for_attacks_on_critical/</id>
         <link href="https://www.reddit.com/r/hacking/comments/1dgrd77/us_is_unprepared_for_attacks_on_critical/"/>
@@ -700,6 +1352,30 @@ Plus, I've included a lightweight, open-source HTTP/3 conformance testing tool i
  [link]   [comments]]]></summary>
         <author>
             <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[🚨 DESVELADO PRE-LAUNCH TRAILER is out! 🦇]]></title>
+        <id>https://www.reddit.com/r/godot/comments/1dgnx9y/desvelado_prelaunch_trailer_is_out/</id>
+        <link href="https://www.reddit.com/r/godot/comments/1dgnx9y/desvelado_prelaunch_trailer_is_out/"/>
+        <updated>2024-06-15T18:10:54.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/ValenGraphics  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : godot</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Any recommended metrics and tracing libs?]]></title>
+        <id>https://www.reddit.com/r/golang/comments/1dgn1km/any_recommended_metrics_and_tracing_libs/</id>
+        <link href="https://www.reddit.com/r/golang/comments/1dgn1km/any_recommended_metrics_and_tracing_libs/"/>
+        <updated>2024-06-15T17:29:52.000Z</updated>
+        <summary type="html"><![CDATA[i'm going to put together a microservice. For logging i guess i'll just go with slog, but what are the popular choices for metrics and tracing libs these day? Grafana compatibility preferred.
+ thnx in advance.
+    submitted by    /u/nixhack  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : golang</name>
         </author>
     </entry>
     <entry>
@@ -1206,6 +1882,17 @@ This is because the NVME disk wasn't put into D3 at suspend, and that happened b
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[iNeedToKeepMyJob]]></title>
+        <id>https://www.reddit.com/r/ProgrammerHumor/comments/1dgdqqw/ineedtokeepmyjob/</id>
+        <link href="https://www.reddit.com/r/ProgrammerHumor/comments/1dgdqqw/ineedtokeepmyjob/"/>
+        <updated>2024-06-15T08:56:45.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/PiccoloPickle  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : ProgrammerHumor</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[The 2024 Ebitengine Game Jam has started!]]></title>
         <id>https://www.reddit.com/r/golang/comments/1dgddks/the_2024_ebitengine_game_jam_has_started/</id>
         <link href="https://www.reddit.com/r/golang/comments/1dgddks/the_2024_ebitengine_game_jam_has_started/"/>
@@ -1291,6 +1978,35 @@ This is because the NVME disk wasn't put into D3 at suspend, and that happened b
  [link]   [comments]]]></summary>
         <author>
             <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Microsoft Chose Profit Over Security and Left U.S. Government Vulnerable to Russian Hack, Whistleblower Says]]></title>
+        <id>https://www.reddit.com/r/devops/comments/1dg9olh/microsoft_chose_profit_over_security_and_left_us/</id>
+        <link href="https://www.reddit.com/r/devops/comments/1dg9olh/microsoft_chose_profit_over_security_and_left_us/"/>
+        <updated>2024-06-15T04:19:09.000Z</updated>
+        <summary type="html"><![CDATA[https://www.propublica.org/article/microsoft-solarwinds-golden-saml-data-breach-russian-hackers
+    submitted by    /u/rr-geil-j  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : devops</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Inexperienced devs committing to project]]></title>
+        <id>https://www.reddit.com/r/ExperiencedDevs/comments/1dg8zvi/inexperienced_devs_committing_to_project/</id>
+        <link href="https://www.reddit.com/r/ExperiencedDevs/comments/1dg8zvi/inexperienced_devs_committing_to_project/"/>
+        <updated>2024-06-15T03:39:18.000Z</updated>
+        <summary type="html"><![CDATA[Three years ago, I joined my company as an iOS developer on a new project. At the start, we had a team of 8 people, including engineers, QA, a PM, and a manager. We are part of a medium-sized engineering department with 400 people.
+ Everything was perfect when we started as a small team of 8 building the app. We produced high-quality code with very few bugs. Last year, my team doubled in size to 15 people. Now, we are more prone to bugs and errors, partly due to the hiring of some inexperienced developers.
+ Earlier this year, we launched the app and it was a great success. The engineering department now thinks it’s a good idea to integrate React and backend engineers into our team for a "learning" experience. However, these inexperienced developers are committing atrocious code. It only slows us down and increases the number of bugs. Just today, I was browsing our app and landed on a page I worked on a month ago. The page has become unusable because a React developer "worked" on it, introducing numerous anti-patterns.
+ I'm not even sure what we are working on anymore. I keep finding pages and features that we weren't made aware of.
+ You might argue that our PR process should improve, but it’s impossible to review every PR when 7 other teams are committing their code to the mobile codebase. I now spend most of my time either reviewing PRs or helping someone learn Swift.
+ How much of a red flag is this? Will non-iOS developers completely burn the project to the ground?
+    submitted by    /u/Fragrant-Brilliant52  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : ExperiencedDevs</name>
         </author>
     </entry>
     <entry>
@@ -4549,6 +5265,17 @@ Why arr[i] works in printArrayPointer methods? This first argument must be a poi
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[successWasNeverAnOption]]></title>
+        <id>https://www.reddit.com/r/ProgrammerHumor/comments/1det2sx/successwasneveranoption/</id>
+        <link href="https://www.reddit.com/r/ProgrammerHumor/comments/1det2sx/successwasneveranoption/"/>
+        <updated>2024-06-13T07:19:56.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/Manticore-Mk2  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : ProgrammerHumor</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[What's the point of those "sign in to wifi" pages where you put your email address in?]]></title>
         <id>https://www.reddit.com/r/hacking/comments/1det1gb/whats_the_point_of_those_sign_in_to_wifi_pages/</id>
         <link href="https://www.reddit.com/r/hacking/comments/1det1gb/whats_the_point_of_those_sign_in_to_wifi_pages/"/>
@@ -4753,6 +5480,18 @@ This is not a political post, please don’t flame me. I’m just perplexed by t
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : hacking</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Going back to arch]]></title>
+        <id>https://www.reddit.com/r/archlinux/comments/1deofu3/going_back_to_arch/</id>
+        <link href="https://www.reddit.com/r/archlinux/comments/1deofu3/going_back_to_arch/"/>
+        <updated>2024-06-13T02:35:00.000Z</updated>
+        <summary type="html"><![CDATA[Hi everyone I have almost 6 years without using arch or Linux My question is how much the methods to install or run arch have change in the last couple of years or are they still the same as before i'm trying to revive an old laptop and i was thinking about using arch again. The laptop is going to be used just to edit text and read pdf's but that poor machine is having a hard time with Windows I want to keep the instalation as simple as possible without any extra features or a fancy interface 
+    submitted by    /u/marlol94  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : archlinux</name>
         </author>
     </entry>
     <entry>
@@ -5291,6 +6030,22 @@ This is not a political post, please don’t flame me. I’m just perplexed by t
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[I dodged a bullet, here's how I nearly got scammed by someone pretending to be a company]]></title>
+        <id>https://www.reddit.com/r/cscareerquestions/comments/1deerfg/i_dodged_a_bullet_heres_how_i_nearly_got_scammed/</id>
+        <link href="https://www.reddit.com/r/cscareerquestions/comments/1deerfg/i_dodged_a_bullet_heres_how_i_nearly_got_scammed/"/>
+        <updated>2024-06-12T19:08:51.000Z</updated>
+        <summary type="html"><![CDATA[Yep. It's one of those "If it's too good to be true, it is" moments.
+ It all started when I applied to jobs on job boards, much like anyone does. Then I got an email asking to confirm my interest in a position. I said yes, then got an ODT file (like a word doc) with interview question and answers. Nothing too crazy, just regular interview questions (nothing asking for something too personal). I sent the email and got an email for a soft offer of $60/hr as a junior. I'm excited! It even comes with a stipend for a home office.
+ After seeing inconsistencies between email signatures and a feeling of this being off, I call their HQ phone number. Yep, it's a scam. No one I've talked to works there.
+ I had heard of a scam online where a company would send you a list of things to buy for your home office and send a check for the stipend. Then either the check would never come and you're stuck having bought so much equipment, or the check bounces. Also the fact that they require you to buy through their vendor also adds that they're stealing legitimate dollars.
+ I'm not posting this to fearmonger, as I know much like everyone else here who's worked hard for the chance to get a job in software engineering & development they're doing everything to get a chance. Don't let yourself get taken advantage of.
+    submitted by    /u/Rainmaker0102  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : cscareerquestions</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[I updated my package to automate my Job (Now Supports Grpc)]]></title>
         <id>https://www.reddit.com/r/csharp/comments/1deeikw/i_updated_my_package_to_automate_my_job_now/</id>
         <link href="https://www.reddit.com/r/csharp/comments/1deeikw/i_updated_my_package_to_automate_my_job_now/"/>
@@ -5505,6 +6260,27 @@ perhaps something like a wrapper `myalloc( void *pointer, size_t size)` But I do
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : debian</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[the coding directory project]]></title>
+        <id>https://www.reddit.com/r/csMajors/comments/1deb708/the_coding_directory_project/</id>
+        <link href="https://www.reddit.com/r/csMajors/comments/1deb708/the_coding_directory_project/"/>
+        <updated>2024-06-12T16:42:06.000Z</updated>
+        <summary type="html"><![CDATA[Alright so I have noticed we mostly get similar questions around this sub.
+ How do I start coding? How to make a good resume? How to get internships/jobs? Etc
+ So I’m making something, just for you. No matter your skill level, I think you’ll find it helpful.
+ I’m making a guide on everything that worked for me in my CS journey, which is still ongoing but I’ve gained decent amount of success and thought I would share.
+ You really thought I was trying to sell you a course right? NOPE!!! I hate that. Information should be free. So this guide will be 100% free.
+ I’m still in the process of making it, but there’s a picture to show you how it will look.
+ I need your help to make this a solid guide.
+ I want y’all’s thoughts on what else I might add to it before launch, questions you have (to add to the FAQ or in general), and any concerns you may have. 
+ I’m really excited for this because instead of just telling people what to do, now we can all simply just say what to do AND link them how to do it.
+ Thanks everyone!
+    submitted by    /u/Interesting_Two2977  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csMajors</name>
         </author>
     </entry>
     <entry>
@@ -6643,6 +7419,18 @@ I've somewhat accepted this. What I want to know is if this is common in the ind
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Someone said there is difference between adapting and adjusting]]></title>
+        <id>https://www.reddit.com/r/csMajors/comments/1ddwfn2/someone_said_there_is_difference_between_adapting/</id>
+        <link href="https://www.reddit.com/r/csMajors/comments/1ddwfn2/someone_said_there_is_difference_between_adapting/"/>
+        <updated>2024-06-12T02:54:19.000Z</updated>
+        <summary type="html"><![CDATA[Why not , I mean why not!!! 
+    submitted by    /u/it_is_an_username  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csMajors</name>
         </author>
     </entry>
     <entry>
@@ -8633,6 +9421,17 @@ Git handles 2D projects pretty well and it’s very easy to set up. Takes 4 comm
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[theNewLeaderElectionAlgorithmProcessInDistributedSystems]]></title>
+        <id>https://www.reddit.com/r/ProgrammerHumor/comments/1dd5uc3/thenewleaderelectionalgorithmprocessindistributeds/</id>
+        <link href="https://www.reddit.com/r/ProgrammerHumor/comments/1dd5uc3/thenewleaderelectionalgorithmprocessindistributeds/"/>
+        <updated>2024-06-11T04:42:03.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/benmeiri84  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : ProgrammerHumor</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[NYTimes Source Code Leaked After GitHub Breach]]></title>
         <id>https://www.reddit.com/r/hacking/comments/1dd4qmd/nytimes_source_code_leaked_after_github_breach/</id>
         <link href="https://www.reddit.com/r/hacking/comments/1dd4qmd/nytimes_source_code_leaked_after_github_breach/"/>
@@ -9483,6 +10282,17 @@ Hope you find this interesting!
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : programming</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Ulysse - A Simple Linux CLI tool for blocking your distracting apps and websites.]]></title>
+        <id>https://www.reddit.com/r/archlinux/comments/1dcpnck/ulysse_a_simple_linux_cli_tool_for_blocking_your/</id>
+        <link href="https://www.reddit.com/r/archlinux/comments/1dcpnck/ulysse_a_simple_linux_cli_tool_for_blocking_your/"/>
+        <updated>2024-06-10T16:24:54.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/ston3o  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : archlinux</name>
         </author>
     </entry>
     <entry>
@@ -48652,600 +49462,6 @@ Out of pocket costs: $800
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : golang</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[make tries to use clang although gcc is specified]]></title>
-        <id>https://www.reddit.com/r/C_Programming/comments/1cuwxj2/make_tries_to_use_clang_although_gcc_is_specified/</id>
-        <link href="https://www.reddit.com/r/C_Programming/comments/1cuwxj2/make_tries_to_use_clang_although_gcc_is_specified/"/>
-        <updated>2024-05-18T13:06:43.000Z</updated>
-        <summary type="html"><![CDATA[This is my makefile, pieced together from various sources:
- CC := gcc CFLAGS := -Wall -Wextra -std=c17 -g -fanalyzer LDFLAGS := -lncurses TARGET_EXEC ?= test004 BUILD_DIR ?= ./build SRC_DIRS ?= ./src SRCS := $(shell find $(SRC_DIRS) -name *.c) OBJS := $(SRCS:%=$(BUILD_DIR)/%.o) DEPS := $(OBJS:.o=.d) INC_DIRS := $(shell find $(SRC_DIRS) -type d) INC_FLAGS := $(addprefix -I,$(INC_DIRS)) CPPFLAGS ?= $(INC_FLAGS) -MMD -MP $(BUILD_DIR)/$(TARGET_EXEC): $(OBJS) $(CC) $(OBJS) -o $@ $(LDFLAGS) # c source $(BUILD_DIR)/%.c.o: %.c $(MKDIR_P) $(dir $@) $(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@ .PHONY: clean clean: $(RM) -r $(BUILD_DIR) -include $(DEPS) MKDIR_P ?= mkdir -p 
- I'm on a Mac and I have both clang and gcc installed. Running make compiles as it should with gcc. But when I added the flag -fanalyzer, I suddenly get this output and error:
- mkdir -p build/./src/ gcc (normal stuff here) clang: error: unknown argument '-fanalyzer'; did you mean '-Xanalyzer'? make: *** [build/./src/test004.c.o] Error 1 
- What is clang doing there? I'm trying to run gcc, and that's what it's been doing just fine so far?
-    submitted by    /u/consistebat  
- [link]   [comments]]]></summary>
-        <author>
-            <name>C</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[How do you write good APIs in C?]]></title>
-        <id>https://www.reddit.com/r/C_Programming/comments/1cuww73/how_do_you_write_good_apis_in_c/</id>
-        <link href="https://www.reddit.com/r/C_Programming/comments/1cuww73/how_do_you_write_good_apis_in_c/"/>
-        <updated>2024-05-18T13:04:50.000Z</updated>
-        <summary type="html"><![CDATA[I am quite a novice C programmer and one of the biggest difficulties in my C journey so far has been learning how to design APIs (functions, structures, typedefs..).
- I'm taking a course focused on learning C from the bottom up and we are very discouraged from using the standard library in our code, but encouraged to write our own implementations, unless it's for functions that map directly to syscalls or if it's a tremendous task to do so, like malloc.. 
- What it made me realize is that it's very hard for me to come up with good designs, even for small problems, coming up with the right data structures, the right functions that don't take like 5+ parameters, "keeping things simple" as to say, is actually not easy. 
- So, I was wondering if some of you had principles or advice that helped them write "good" APIs, I know it's quite a vague and subjective topic but I honestly feel like there has to be some core principles and guidelines that can help. 
- At least I can speak for myself and say I reviewed some code I wrote a few months ago and thought to myself, why did I write this in such a convoluted way? And most certainly, I am still doing that right now, not even realizing it.
-    submitted by    /u/ismbks  
- [link]   [comments]]]></summary>
-        <author>
-            <name>C</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[flawz - A Terminal UI for browsing security vulnerabilities (CVEs)]]></title>
-        <id>https://www.reddit.com/r/linux/comments/1cuwp7w/flawz_a_terminal_ui_for_browsing_security/</id>
-        <link href="https://www.reddit.com/r/linux/comments/1cuwp7w/flawz_a_terminal_ui_for_browsing_security/"/>
-        <updated>2024-05-18T12:54:28.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/orhunp  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[What are some non-tech-hub rural cities that'll accept people with a BS in CS?]]></title>
-        <id>https://www.reddit.com/r/cscareerquestions/comments/1cuwh5h/what_are_some_nontechhub_rural_cities_thatll/</id>
-        <link href="https://www.reddit.com/r/cscareerquestions/comments/1cuwh5h/what_are_some_nontechhub_rural_cities_thatll/"/>
-        <updated>2024-05-18T12:41:56.000Z</updated>
-        <summary type="html"><![CDATA[I'm looking for cities that have a lack of applicants applying to. All I have is 1 year of experience for a start up that went under. I'm willing to relocate anywhere in the USA and be paid peanuts to get more experience.
-    submitted by    /u/agelakute  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : cscareerquestions</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[kindaTrueThough]]></title>
-        <id>https://www.reddit.com/r/ProgrammerHumor/comments/1cuw3g6/kindatruethough/</id>
-        <link href="https://www.reddit.com/r/ProgrammerHumor/comments/1cuw3g6/kindatruethough/"/>
-        <updated>2024-05-18T12:20:36.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/Green____cat  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : ProgrammerHumor</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[What's the error here (That took me half an hour to see)]]></title>
-        <id>https://www.reddit.com/r/cpp/comments/1cuw1ce/whats_the_error_here_that_took_me_half_an_hour_to/</id>
-        <link href="https://www.reddit.com/r/cpp/comments/1cuw1ce/whats_the_error_here_that_took_me_half_an_hour_to/"/>
-        <updated>2024-05-18T12:17:03.000Z</updated>
-        <summary type="html"><![CDATA[// a and b are integers if (a - b > vec.size()) { foo(); } 
-    submitted by    /u/angelman7    to    r/cpp  
- [link]   [comments]]]></summary>
-        <author>
-            <name>posts from cpp, cpp_questions</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[If someone knows my email and its password am I screwed?]]></title>
-        <id>https://www.reddit.com/r/hacking/comments/1cuvzeh/if_someone_knows_my_email_and_its_password_am_i/</id>
-        <link href="https://www.reddit.com/r/hacking/comments/1cuvzeh/if_someone_knows_my_email_and_its_password_am_i/"/>
-        <updated>2024-05-18T12:14:01.000Z</updated>
-        <summary type="html"><![CDATA[I have 2fa and already changed the passwords but if someone knew them what could they possibly do with that info? Can they easily get passed 2fa? 
-    submitted by    /u/Redroin  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : hacking</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Unsafe code in rust]]></title>
-        <id>https://www.reddit.com/r/rust/comments/1cuvyyg/unsafe_code_in_rust/</id>
-        <link href="https://www.reddit.com/r/rust/comments/1cuvyyg/unsafe_code_in_rust/"/>
-        <updated>2024-05-18T12:13:19.000Z</updated>
-        <summary type="html"><![CDATA[As a side project, I had the idea of writing an alternative implementation of core and std (I just want to learn how they work inside and get a feel of it).
- However I have seen that unsafe rust is frowned upon (maybe my impression so please correct me if I am wrong) and rewriting these libraries is quite literally impossible without unsafe.
- So am I allowed to use them here under the reason that these libraries can't be written without unsafe?
-    submitted by    /u/Pleasant-Form-1093  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : rust</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Does this code pattern violate strict aliasing rules?]]></title>
-        <id>https://www.reddit.com/r/cpp_questions/comments/1cuvw1e/does_this_code_pattern_violate_strict_aliasing/</id>
-        <link href="https://www.reddit.com/r/cpp_questions/comments/1cuvw1e/does_this_code_pattern_violate_strict_aliasing/"/>
-        <updated>2024-05-18T12:08:50.000Z</updated>
-        <summary type="html"><![CDATA[Hi. I'm working as a C++ dev, and there's a pattern that's everywhere in my company's codebase. But I'm still quite early in my career so tbh it has my doubting myself. I thought this violated strict-aliasing rules so was undefined behaviour, but with how much I'm seeing it in our code it has me doubting myself. As this is written by people with a lot more experience then me.
- If you have a char* or uint8_t* you've read off a socket or character device:
- char buffer[512]; // or std::uint8_t buffer[512] // imagine we're reading from a device or socket into the buffer here... // then later: const std::uint32_t *ptr = reinterpret_cast<const std::uint32_t*>(buffer); const uint32_t n = ntohl(*ptr); // etc... 
- I don't see -fno-strict-aliasing in our compiler flags either. But I thought that while you can cast a pointer to any type to a char/uint8_t pointer, it doesn't work the other way round. The compiler is free to optimise based on that assumption, not to mention issues with alignment, caching etc. 
- If I'm wrong can someone explain where how? I may have misunderstood aliasing rules. Thanks a lot!
-    submitted by    /u/DiligentBit3311    to    r/cpp_questions  
- [link]   [comments]]]></summary>
-        <author>
-            <name>posts from cpp, cpp_questions</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[An Intro to Dedicated Servers]]></title>
-        <id>https://www.reddit.com/r/godot/comments/1cuvjz0/an_intro_to_dedicated_servers/</id>
-        <link href="https://www.reddit.com/r/godot/comments/1cuvjz0/an_intro_to_dedicated_servers/"/>
-        <updated>2024-05-18T11:49:50.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/batteryaciddev  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : godot</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[This week in KDE: all about those apps]]></title>
-        <id>https://www.reddit.com/r/linux/comments/1cuvh9l/this_week_in_kde_all_about_those_apps/</id>
-        <link href="https://www.reddit.com/r/linux/comments/1cuvh9l/this_week_in_kde_all_about_those_apps/"/>
-        <updated>2024-05-18T11:44:49.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/that_leaflet  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[differences between C pointers and Go pointers]]></title>
-        <id>https://www.reddit.com/r/golang/comments/1cuvdjw/differences_between_c_pointers_and_go_pointers/</id>
-        <link href="https://www.reddit.com/r/golang/comments/1cuvdjw/differences_between_c_pointers_and_go_pointers/"/>
-        <updated>2024-05-18T11:38:16.000Z</updated>
-        <summary type="html"><![CDATA[I'm already working on this subject but I'm open to more resources and explanations.
- What are the key differences between pointers in Go and C, and why are these differences important?
- I understand that pointers in C allow for direct memory manipulation and can lead to security issues. How do pointers in Go differ in terms of usage and safety? Why are these differences significant for modern programming?
-    submitted by    /u/HazarbutCoffee  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : golang</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Where do IntelX and Google darkweb monitoring getting their lesser-known / private leaks? (NOT from BreachForums or torrents)]]></title>
-        <id>https://www.reddit.com/r/hacking/comments/1cuvd4p/where_do_intelx_and_google_darkweb_monitoring/</id>
-        <link href="https://www.reddit.com/r/hacking/comments/1cuvd4p/where_do_intelx_and_google_darkweb_monitoring/"/>
-        <updated>2024-05-18T11:37:32.000Z</updated>
-        <summary type="html"><![CDATA[Disclaimer: It's not really hacking, but I couldn't find a sub fitting more for my question.
- Hello everyone, I am wondering where IntelX and Google's darkweb monitoring service are getting their lesser known / private leaks? For an example, there is a site called selfstore.hu, an sql dump from their site can be found both on IntelX and Google's darkweb monitoring service but not on any other leak search engine site, only on those two. So where do they get those? Is there some clearner or darkweb forum where people randomly post these for credits (Similary to BreachForums) or just for bragging?
- I want to point out again, these are not from BreachForums. I also tried to look it up in DHT search engines, but I got zero results.
- I appreciate the answers, have a nice day :)
-    submitted by    /u/SellLimp7399  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : hacking</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[How much Docker knowledge is needed for a job in DevOps?]]></title>
-        <id>https://www.reddit.com/r/devops/comments/1cuvbkt/how_much_docker_knowledge_is_needed_for_a_job_in/</id>
-        <link href="https://www.reddit.com/r/devops/comments/1cuvbkt/how_much_docker_knowledge_is_needed_for_a_job_in/"/>
-        <updated>2024-05-18T11:34:47.000Z</updated>
-        <summary type="html"><![CDATA[I took a Docker course that went over these topics. After finishing it, I was able to understand essentially most of what's covered in this roadmap on a fundamental level. 
- However, I'm not sure how much deeper knowledge I should have for each of those topics, especially for a job. For example, I know how to build docker images using Docker Compose and push them onto DockerHub. I understand how networking works and how to setup persistent volume storage. Would you say this is adequate knowledge for a DevOps role, or should I dive deeper into certain topics? If the latter, what more should I focus on? 
- And considering Kubernetes is quite complicated to learn and grasp, I'm not sure if I should dive deeper into certain things in Docker or move on and focus on Kubernetes?
-    submitted by    /u/Militoe  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : devops</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Arch + Wayland + Nvidia + KDE + Linux 6.9.1]]></title>
-        <id>https://www.reddit.com/r/archlinux/comments/1cuvacy/arch_wayland_nvidia_kde_linux_691/</id>
-        <link href="https://www.reddit.com/r/archlinux/comments/1cuvacy/arch_wayland_nvidia_kde_linux_691/"/>
-        <updated>2024-05-18T11:32:29.000Z</updated>
-        <summary type="html"><![CDATA[Hi guys, I have an arch setup with KDE, wayland and a nvidia GPU. I just updated all the system with "pacman -Syu" and got the new 6.9.1 linux version, but now I have wayland completely broken. I tried to follow again the arch wiki (in particular the "DRM kernel mode setting") and this time it didn't work. Following the guide (https://wiki.archlinux.org/title/NVIDIA#DRM\_kernel\_mode\_setting, chapter 1.3) the command "cat /sys/module/nvidia_drm/parameters/modeset" give me "Y" which is right.
- For now I'm switching (again) to X11 but this is bad for me because KDE works better on wayland.
- Can someone help me understand what to do? Thanks a lot.
- P.S.
- Nvidia Driver Version: 550.78
- P.P.S.
- NOW IT WORKS. Really thanks for all your help. The solution was to set the /etc/modprobe.d/ file with „options nvidia-drm modeset=1“ and adding below a new line with: „options nvidia-drm fbdev=1“
- Really thanks
-    submitted by    /u/Tiny-Abbreviations45  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : archlinux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[crates.io has a dark mode!]]></title>
-        <id>https://www.reddit.com/r/rust/comments/1cuury7/cratesio_has_a_dark_mode/</id>
-        <link href="https://www.reddit.com/r/rust/comments/1cuury7/cratesio_has_a_dark_mode/"/>
-        <updated>2024-05-18T11:00:30.000Z</updated>
-        <summary type="html"><![CDATA[crates.io dark mode
- crates.io
-    submitted by    /u/_ChrisSD  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : rust</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Is CKA worth it?]]></title>
-        <id>https://www.reddit.com/r/devops/comments/1cuupsm/is_cka_worth_it/</id>
-        <link href="https://www.reddit.com/r/devops/comments/1cuupsm/is_cka_worth_it/"/>
-        <updated>2024-05-18T10:56:40.000Z</updated>
-        <summary type="html"><![CDATA[I have been working on K8S for 5 years now and I think I’m pretty proficient at my job.
- Is CKA really worth it? 
-    submitted by    /u/Loser_lmfao_suck123  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : devops</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[How bad is the Dinkumware std implementation?]]></title>
-        <id>https://www.reddit.com/r/cpp/comments/1cuua7c/how_bad_is_the_dinkumware_std_implementation/</id>
-        <link href="https://www.reddit.com/r/cpp/comments/1cuua7c/how_bad_is_the_dinkumware_std_implementation/"/>
-        <updated>2024-05-18T10:27:00.000Z</updated>
-        <summary type="html"><![CDATA[Since the beginning of the year I have had write C++ in an environment that unfortunately uses the the Dinkumware implementation of the std lib: C++Builder 11. During this time I’ve been bitten by a plethora of in your face bugs that have forced me to invest a bunch of time into understanding and then circumventing the issues. To name just a few:
-  
-std::optional<bool> doesn’t compile
- std::optional<NonDefaultConstructible> doesn’t compile
- std::visit is broken
- std::variant::operator = will silently mess things up by setting the wrong index
- std::unordered_set::extract will return a handle that when destroyed decrements the number of elements in the collection. So one extract causes two sides decrements.
-  
-Fortunately, the last version of C++ Builder seems to be moving away from Dinkumware, but until I upgrade, is anyone here aware of a broader list of Dinkumware bugs? Is Dinkumware such a poor quality implementation? Has it always been like that?
-    submitted by    /u/soldiersided    to    r/cpp  
- [link]   [comments]]]></summary>
-        <author>
-            <name>posts from cpp, cpp_questions</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[He just can't get enough!]]></title>
-        <id>https://www.reddit.com/r/godot/comments/1cuu54g/he_just_cant_get_enough/</id>
-        <link href="https://www.reddit.com/r/godot/comments/1cuu54g/he_just_cant_get_enough/"/>
-        <updated>2024-05-18T10:16:36.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/Hungry-Dingo-1411  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : godot</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[The Timeless Beauty of Pre Rendered Graphics]]></title>
-        <id>https://www.reddit.com/r/gamedev/comments/1cutjfo/the_timeless_beauty_of_pre_rendered_graphics/</id>
-        <link href="https://www.reddit.com/r/gamedev/comments/1cutjfo/the_timeless_beauty_of_pre_rendered_graphics/"/>
-        <updated>2024-05-18T09:32:30.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/whereistooki  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : gamedev</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Why can't I find the injected name of a templated class's templated base class? - The Old New Thing]]></title>
-        <id>https://www.reddit.com/r/cpp/comments/1cutf3q/why_cant_i_find_the_injected_name_of_a_templated/</id>
-        <link href="https://www.reddit.com/r/cpp/comments/1cutf3q/why_cant_i_find_the_injected_name_of_a_templated/"/>
-        <updated>2024-05-18T09:23:51.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/pavel_v    to    r/cpp  
- [link]   [comments]]]></summary>
-        <author>
-            <name>posts from cpp, cpp_questions</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[How does a high quality looking game like Avatar: Frontiers of Pandora even get built without loosing good performance?]]></title>
-        <id>https://www.reddit.com/r/gamedev/comments/1cutakm/how_does_a_high_quality_looking_game_like_avatar/</id>
-        <link href="https://www.reddit.com/r/gamedev/comments/1cutakm/how_does_a_high_quality_looking_game_like_avatar/"/>
-        <updated>2024-05-18T09:14:51.000Z</updated>
-        <summary type="html"><![CDATA[I’m an indie dev and I struggle so hard with things like foliage, lighting, 4K texture streaming, without lowering my FPS or putting everything in 2K quality. I understand big gaming companies have a lot of money and resources, but it just baffles me that they can put together such a good looking game. For context I use UE5 for all my projects; have a 4090 RTX, super high quality monitors, and 16GB ram. As soon as I start adding foliage to a large, somewhat open world, my FPS slows down like crazy. To the point that I have to choose trees over grass sometimes as an example. I use LODs, low draw distance, but it doesn’t seem to help. I don’t know how a big company like Ubisoft can throw that much high quality foliage in their game alongside exceptional lighting without destroying the games performance? If any of you work for a company like this can you shed some light on this for me?? I am hoping to build higher quality forests in my game without tanking my FPS and maintaining 4K textures. 
-    submitted by    /u/Thad-Stathos  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : gamedev</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[What is the most efficient way to paralelise a portion of code in C++ (a for loop) without using vectors?]]></title>
-        <id>https://www.reddit.com/r/C_Programming/comments/1cut9wq/what_is_the_most_efficient_way_to_paralelise_a/</id>
-        <link href="https://www.reddit.com/r/C_Programming/comments/1cut9wq/what_is_the_most_efficient_way_to_paralelise_a/"/>
-        <updated>2024-05-18T09:13:28.000Z</updated>
-        <summary type="html"><![CDATA[Hello,
- I'm trying to find a way to increase the speed of a for loop, that that gets executed hundreds of times - what would be the most efficient way, if I don't want to use vectors (because from my testing, using them as the range for a FOR loop is inefficient).
-    submitted by    /u/DesperateGame  
- [link]   [comments]]]></summary>
-        <author>
-            <name>C</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Did I make a mistake by thinking that the Polars Python port has more features than the one in Rust?]]></title>
-        <id>https://www.reddit.com/r/rust/comments/1cut8m1/did_i_make_a_mistake_by_thinking_that_the_polars/</id>
-        <link href="https://www.reddit.com/r/rust/comments/1cut8m1/did_i_make_a_mistake_by_thinking_that_the_polars/"/>
-        <updated>2024-05-18T09:10:57.000Z</updated>
-        <summary type="html"><![CDATA[Just started learning about Polars, I hope I am wrong, but it seems like many features are missing in Rust while available in Python, even through Polars is written in Rust. Just pick some of them: 1. selectors, I don't know what it is exactly, but when I read through the user guide, it is said that this is not available in Rust 2. Some handy functions, like describe or approx_n_unique are also missing.
-    submitted by    /u/AromaticAssistant952  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : rust</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Hitag2 Crack2 implementation working on Proxmark3]]></title>
-        <id>https://www.reddit.com/r/hacking/comments/1cut6bt/hitag2_crack2_implementation_working_on_proxmark3/</id>
-        <link href="https://www.reddit.com/r/hacking/comments/1cut6bt/hitag2_crack2_implementation_working_on_proxmark3/"/>
-        <updated>2024-05-18T09:06:15.000Z</updated>
-        <summary type="html"><![CDATA[The second key recovery vector outlined in the Gone in 360 seconds paper by F Garcia et al, implemented by Kev Sheldrake in RFIDLer 2017, now work in Proxmark3. 
- It is a time/trade memory attack, with a online part and a secondary offline part.
- We can now gather the 2048 bits of crypto key stream needed for the second part of the attack in the pm3 client. 
- You all need to create the 1.2tb lookup database file in order to execute the offline part of the attack. 
- You find all you need in tools\hitag2crack\crack2
-    submitted by    /u/iceman2001  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : hacking</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Cannot update thunderbird]]></title>
-        <id>https://www.reddit.com/r/archlinux/comments/1cusddg/cannot_update_thunderbird/</id>
-        <link href="https://www.reddit.com/r/archlinux/comments/1cusddg/cannot_update_thunderbird/"/>
-        <updated>2024-05-18T08:06:20.000Z</updated>
-        <summary type="html"><![CDATA[Running sudo pacman -Syu gives the following error:
- warning: cannot resolve "libicui18n.so=75-64", a dependency of "thunderbird" warning: cannot resolve "libicuuc.so=75-64", a dependency of "thunderbird" :: The following package cannot be upgraded due to unresolvable dependencies: thunderbird 
- Steps I have tried so far
-  
-Change mirrors 
- 
-Uninstall Thunderbird 
- 
-Try to re-install thunderbird (gives the same error)
- 
- How do I fix this issue?
- Thank you for your time
-    submitted by    /u/Daguq  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : archlinux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[PROCEDURAL ANIMATION in GODOT.]]></title>
-        <id>https://www.reddit.com/r/godot/comments/1cus7e3/procedural_animation_in_godot/</id>
-        <link href="https://www.reddit.com/r/godot/comments/1cus7e3/procedural_animation_in_godot/"/>
-        <updated>2024-05-18T07:54:39.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/zain_devv  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : godot</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Developers spend close to 57% of their time firefighting than innovating- Cisco survey]]></title>
-        <id>https://www.reddit.com/r/programming/comments/1curlmb/developers_spend_close_to_57_of_their_time/</id>
-        <link href="https://www.reddit.com/r/programming/comments/1curlmb/developers_spend_close_to_57_of_their_time/"/>
-        <updated>2024-05-18T07:11:00.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/john83672  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : programming</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Youngling C programmer needs help]]></title>
-        <id>https://www.reddit.com/r/C_Programming/comments/1cuqztb/youngling_c_programmer_needs_help/</id>
-        <link href="https://www.reddit.com/r/C_Programming/comments/1cuqztb/youngling_c_programmer_needs_help/"/>
-        <updated>2024-05-18T06:30:08.000Z</updated>
-        <summary type="html"><![CDATA[Just started my programming course and I have to submit this assignment tomorrow. Keeping things short... I need to round up values to two digits after the "." but keeping 4 digits after the "." Eg: $18.6784 should be $18.6800.
- For this I am writing Taxes = sub_total * TAX Printf("Taxes. :$%.4f\n", Total);
- I am not here just for the result, if someone could explain so I can learn I will be appreciated :)
-    submitted by    /u/MrStassi  
- [link]   [comments]]]></summary>
-        <author>
-            <name>C</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[microsoftIsEvil]]></title>
-        <id>https://www.reddit.com/r/ProgrammerHumor/comments/1cuqpj9/microsoftisevil/</id>
-        <link href="https://www.reddit.com/r/ProgrammerHumor/comments/1cuqpj9/microsoftisevil/"/>
-        <updated>2024-05-18T06:10:28.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/Scary-Departure4792  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : ProgrammerHumor</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Help understanding?]]></title>
-        <id>https://www.reddit.com/r/C_Programming/comments/1cuqd4e/help_understanding/</id>
-        <link href="https://www.reddit.com/r/C_Programming/comments/1cuqd4e/help_understanding/"/>
-        <updated>2024-05-18T05:48:03.000Z</updated>
-        <summary type="html"><![CDATA[Problem (1): The code below uses the following struct: struct Data 1{ struct Data *data1; int data2; int *data3; }; typedef struct Data Data;
- In the code below, declarations for d1, d2, and d3 are missing. (Recall that a variable declaration gives the type and tells the compiler about a variable; e.g., int n; would declare the variable n.) Each of a1 and d2 have one of the following types: Data, Data, and/or Data * First, write three lines of code declaring variables d1, d2, and d3. Then, draw a memory diagram, including clearly differentiating between the stack and the heap, for the snippet of code shown below. d1.data2 = 10; d2 = malloc (sizeof (Data)) ; (d2) .data1 = &d1; d2->data2 = d1. data2; d1. data1 = d2; d1. data3 = malloc (sizeof (int)) ; * (d.data3) = 7; d2-›data3 = d1. data3; d3 = & (d2→>data3) ; I think my answer for the first problem is Data d1; Data d2; int** d3; correct me if I’m wrong but could someone please help with the diagram? 
-    submitted by    /u/RelationshipTop3696  
- [link]   [comments]]]></summary>
-        <author>
-            <name>C</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[My connection]]></title>
-        <id>https://www.reddit.com/r/C_Programming/comments/1cup4ro/my_connection/</id>
-        <link href="https://www.reddit.com/r/C_Programming/comments/1cup4ro/my_connection/"/>
-        <updated>2024-05-18T04:30:11.000Z</updated>
-        <summary type="html"><![CDATA[Hi all. Im having major issues with my connection on my client side, it just does not run the way its supposed if anyone can help that will be greatly appreciated. Im new to using fd sets & working with nonblocking cons
- ```
- static void setup_connection(void) { struct sockaddr_in addr;
- fd = socket(AF_INET, SOCK_STREAM, 0); if(fd == -1) return; addr.sin_family = AF_INET; addr.sin_port = htons(6774); addr.sin_addr.s_addr = inet_addr("host"); // put your host here fcntl(fd, F_SETFL, O_NONBLOCK); connect(fd, (struct sockaddr *)&addr, sizeof(struct sockaddr_in)); return; 
- }
- static void disconnect(void) { if(fd != -1) close(fd); fd = -1; connected = FALSE; sleep(5); }
- int main(int argc, char *argv[]) { while(TRUE) { sleep(1);
-  int err = 0; socklen_t err_len = sizeof(err); FD_ZERO(&read_set); FD_ZERO(&write_set); if(!connected) setup_connection(); if(!fd) continue; if(connected) // check if we are connected to determine our next action FD_SET(fd, &read_set); else FD_SET(fd, &write_set); select(fd + 1, &read_set, &write_set, NULL, &tv); if(FD_ISSET(fd, &write_set)) // write { err = 0; socklen_t err_len = sizeof(err); getsockopt(fd, SOL_SOCKET, SO_ERROR, &err, &err_len); if(err != 0) { 
- ifdef DBG
-  printf("[main] failed to connect! \n"); 
- endif
-  disconnect(); continue; } 
- ifdef DBG
-  printf("[main] Connected! \n"); 
- endif
-  connected = TRUE; } if(!connected) { disconnect(); continue; } if(FD_ISSET(fd, &read_set)) // read { int val = recv(fd, buffer, sizeof(buffer), MSG_NOSIGNAL); if(val == 0) { disconnect(); continue; } memset(buffer, 0, sizeof(buffer)); } } 
- } ```
-    submitted by    /u/ryanjones42  
- [link]   [comments]]]></summary>
-        <author>
-            <name>C</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[butWhy]]></title>
-        <id>https://www.reddit.com/r/ProgrammerHumor/comments/1cuovvk/butwhy/</id>
-        <link href="https://www.reddit.com/r/ProgrammerHumor/comments/1cuovvk/butwhy/"/>
-        <updated>2024-05-18T04:14:59.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/utkarsh_aryan  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : ProgrammerHumor</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Memory]]></title>
-        <id>https://www.reddit.com/r/C_Programming/comments/1cunqua/memory/</id>
-        <link href="https://www.reddit.com/r/C_Programming/comments/1cunqua/memory/"/>
-        <updated>2024-05-18T03:10:41.000Z</updated>
-        <summary type="html"><![CDATA[Anyone have advice for saving memory? Im new to C, should i use structs, enums, correct data types? I also tend to do stuff like char string [1024] & usually just set it to 1024 by default if im not sure how much ill need, whats some better ways to be accurate 
-    submitted by    /u/ryanjones42  
- [link]   [comments]]]></summary>
-        <author>
-            <name>C</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Fixed Norway Flag]]></title>
-        <id>https://www.reddit.com/r/csMajors/comments/1cunivw/fixed_norway_flag/</id>
-        <link href="https://www.reddit.com/r/csMajors/comments/1cunivw/fixed_norway_flag/"/>
-        <updated>2024-05-18T02:58:38.000Z</updated>
-        <summary type="html"><![CDATA[stolen
-    submitted by    /u/massless_photon  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : csMajors</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Got pip’ed over a well intentioned comment the tech lead made outside of work, should I leave with no notice for a 10k raise?]]></title>
-        <id>https://www.reddit.com/r/cscareerquestions/comments/1cumzmh/got_piped_over_a_well_intentioned_comment_the/</id>
-        <link href="https://www.reddit.com/r/cscareerquestions/comments/1cumzmh/got_piped_over_a_well_intentioned_comment_the/"/>
-        <updated>2024-05-18T02:29:22.000Z</updated>
-        <summary type="html"><![CDATA[The situation is kind of weird but in a nutshell, tech lead and I (senior level) are friends from college (he’s 3 years older) so we went out for a drink after work one day and he was teasing me a bit about being online more often while doing remote work, something like “dude you be slaking off too much on remote Fridays” (so I can get promoted to staff).
- Somehow, this conversation gets heard by someone in management and after some weird stuff goes on I get put on pip. I talked to the tech lead about it and he was very apologetic to me and mad at management. 
- Recently, I got an offer for the same level at a F100 fintech firm that’s also 3 days in office and slightly better benefits along with 10k more base salary and a comparable bonus structure. I’m super mad at management so I’m thinking about just quitting on Monday with no notice but maybe I’ll screw over my friend a bit too much. Thoughts?
-    submitted by    /u/Left_Construction174  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : cscareerquestions</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[aiResearcherFirstTime]]></title>
-        <id>https://www.reddit.com/r/ProgrammerHumor/comments/1cumxge/airesearcherfirsttime/</id>
-        <link href="https://www.reddit.com/r/ProgrammerHumor/comments/1cumxge/airesearcherfirsttime/"/>
-        <updated>2024-05-18T02:26:08.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/pxrage  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : ProgrammerHumor</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Focus Exporter, A Prometheus Exporter to track my Focus]]></title>
-        <id>https://www.reddit.com/r/devops/comments/1cumxc6/focus_exporter_a_prometheus_exporter_to_track_my/</id>
-        <link href="https://www.reddit.com/r/devops/comments/1cumxc6/focus_exporter_a_prometheus_exporter_to_track_my/"/>
-        <updated>2024-05-18T02:25:58.000Z</updated>
-        <summary type="html"><![CDATA[I got inspired by Microsoft Viva Insights and decided to create my own version, leveraging Prometheus. This turned out to be a great reason to learn some Go! As such, I'm happy to share my first software project. 
- Please check out Focus Exporter. A tool that helps track metrics related to focused windows, user activity, and meeting durations on Windows.
- Focus Exporter surfaces data about time spent in various applications, including meetings on Microsoft Teams and Zoom. The metrics are exposed via a Prometheus http endpoint, which can be integrated into existing monitoring setups.
- Features:
-  
-Tracking focused-window metrics
- Monitoring activity/inactivity
- Measuring meeting durations
- Privacy mode for sensitive window titles
- Configurable through command-line parameters
-  
-check it out on GitHub: Focus Exporter
- Feedback and suggestions are welcome, this is a learning project for me!
-    submitted by    /u/vinistois  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : devops</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Winamp Opening Source]]></title>
-        <id>https://www.reddit.com/r/linux/comments/1cumm7c/winamp_opening_source/</id>
-        <link href="https://www.reddit.com/r/linux/comments/1cumm7c/winamp_opening_source/"/>
-        <updated>2024-05-18T02:09:25.000Z</updated>
-        <summary type="html"><![CDATA[Winamp will be opening source code this year 2024, projected for September. Does this mean it will be more able to be ported to linux? I am not a programmer so i dont know what this entails but i loved Winamp and would definitely use it on linux.
-    submitted by    /u/hellonhac  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Best Approach?]]></title>
-        <id>https://www.reddit.com/r/hacking/comments/1cumc29/best_approach/</id>
-        <link href="https://www.reddit.com/r/hacking/comments/1cumc29/best_approach/"/>
-        <updated>2024-05-18T01:54:48.000Z</updated>
-        <summary type="html"><![CDATA[My wife has not been able to play a game for a few weeks due to bad development. I've reviewed the crash logs generated by game, and it appears there is one particular item, a fountain, that is placed in her game that is causing the crash. The profile.json is encrypted, so I can't just go in there and find that entry and remove it. I'm guessing it uses AES encryption since the crash log mentions Rijndael. What would the best approach be to digging for the key? I've opened up files with ghidra, but for some reason, findcrypt isn't showing up for me to use in analysis. My wife loves this game and I really want to figure this out for her. Is there a better approach to doing this?
- Update:
- Here are the dmp details. 
- EXCEPTION_RECORD: (.exr -1)
- ExceptionAddress: 00007ffc989b6196 (GameAssembly!mono_class_has_parent+0x00000000005a0606)
- ExceptionCode: c0000005 (Access violation)
- ExceptionFlags: 00000000
- NumberParameters: 2
- Parameter[0]: 0000000000000000
- Parameter[1]: ffffffffffffffff
- Attempt to read from address ffffffffffffffff
- Here are the log details:
- Unloading 2 Unused Serialized files (Serialized files now loaded: 1724)
- Unloading 4307 unused Assets to reduce memory usage. Loaded Objects now: 85482.
- Total: 177.784700 ms (FindLiveObjects: 11.103100 ms CreateObjectMapping: 4.718700 ms MarkObjects: 159.846400 ms DeleteObjects: 2.116200 ms)
- Exception: Fountain01(Clone) not found in Profile.World.Keyholes (IsKeyHole: False, guid: )
-    submitted by    /u/Catdad08  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : hacking</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Know Java and Python but I can’t create any projects]]></title>
-        <id>https://www.reddit.com/r/learnprogramming/comments/1culmux/know_java_and_python_but_i_cant_create_any/</id>
-        <link href="https://www.reddit.com/r/learnprogramming/comments/1culmux/know_java_and_python_but_i_cant_create_any/"/>
-        <updated>2024-05-18T01:17:59.000Z</updated>
-        <summary type="html"><![CDATA[Hi, I’m a college sophomore and I learned the basics of Python my first semester and I learned DSA in Java my second semester. I want to start building projects over summer but I don’t know where to start and fear that I can’t code my idea.
- Should I watch project tutorials on YouTube and copy them to learn to code my own projects? 
-    submitted by    /u/Old_Analyst2682  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : learnprogramming</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[The New Thunderbird Website Has Hatched]]></title>
-        <id>https://www.reddit.com/r/linux/comments/1culgv3/the_new_thunderbird_website_has_hatched/</id>
-        <link href="https://www.reddit.com/r/linux/comments/1culgv3/the_new_thunderbird_website_has_hatched/"/>
-        <updated>2024-05-18T01:09:17.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/B3_Kind_R3wind_  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
         </author>
     </entry>
 </feed>
