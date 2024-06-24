@@ -2,10 +2,312 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://joe8755.github.io/the-reddit-rss-reader/index.html</id>
     <title>the reddit rss reader</title>
-    <updated>2024-06-24T01:33:39.310Z</updated>
+    <updated>2024-06-24T12:38:45.744Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://joe8755.github.io/the-reddit-rss-reader/index.html"/>
     <link rel="self" href="https://joe8755.github.io/the-reddit-rss-reader/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[Help with function prototypes and definitions]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1dnbnsw/help_with_function_prototypes_and_definitions/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1dnbnsw/help_with_function_prototypes_and_definitions/"/>
+        <updated>2024-06-24T11:55:03.000Z</updated>
+        <summary type="html"><![CDATA[Hello everyone!
+ I'm pretty new to C++, and so far the thing that's making my experience absolutely miserable is prototypes and functions.
+ -need to make sure the arguments are identical
+ -need to remember to add the class name to the function definition
+ -change one of them? Need to remember to go and change the other
+ Dealing with things like static functions makes it even worse.
+ In Java, I would get excited whenever I came up with an idea for a new utility class since it meant there was about to be a simpler and more satisfying way to do some tedious task. In C++, I just find myself dreading having to deal with this headache and asking if the class is really necessary.
+ My point with all of this: is there some kind of shortcut, addon, etc that automatically generates the prototypes for you and syncs existing prototypes to existing definitions so you can change both at once? I'm using Visual Studio (though I'm not particularly attached to it; that's just what was suggested by my classes).
+ Thanks
+    submitted by    /u/DiamondWalker1    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Trying to grab portion of desktop with SharpDX rather than the whole desktop]]></title>
+        <id>https://www.reddit.com/r/csharp/comments/1dnb0g5/trying_to_grab_portion_of_desktop_with_sharpdx/</id>
+        <link href="https://www.reddit.com/r/csharp/comments/1dnb0g5/trying_to_grab_portion_of_desktop_with_sharpdx/"/>
+        <updated>2024-06-24T11:16:55.000Z</updated>
+        <summary type="html"><![CDATA[I know SharpDX has been abandoned but it still seems to work well enough to use over Graphics.CopyFromScreen from a speed perspective.
+ My issue at the moment is optimising for speed and was hoping that grabbing just the middle section instead of the whole desktop will shave off some time.
+  DataBox mapSource = device.ImmediateContext.MapSubresource(resourceTexture, 0, MapMode.Read, MapFlags.None); System.Drawing.Bitmap outputImage = new System.Drawing.Bitmap(desktopWidth, desktopHeight, PixelFormat.Format32bppRgb); System.Drawing.Rectangle rect = new System.Drawing.Rectangle(0, 0, desktopWidth, desktopHeight); BitmapData mapDest = outputImage.LockBits(rect, ImageLockMode.WriteOnly, outputImage.PixelFormat); IntPtr sourcePtr = mapSource.DataPointer; IntPtr destPtr = mapDest.Scan0; for (int y = 0; y < desktopHeight; y++) { if (y > 620 && y < 820) Utilities.CopyMemory(destPtr, sourcePtr, desktopWidth * 4); sourcePtr = IntPtr.Add(sourcePtr, mapSource.RowPitch); destPtr = IntPtr.Add(destPtr, mapDest.Stride); } outputImage.UnlockBits(mapDest); device.ImmediateContext.UnmapSubresource(resourceTexture, 0); 
+ Is there a way to actually just grab the section of the desktop I'm interested in?
+ As a simple hack I've resorted to grabbing the whole screen but only doing <CopyMemory> between certain rows and whilst this still results in a bitmap with the desktop dimensions, it does shave off some time. If its only possible to grab the full desktop then how would I go about also only copying certain columns like I am doing with the rows?
+    submitted by    /u/squitstoomuch  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[GUI and windowing]]></title>
+        <id>https://www.reddit.com/r/cpp/comments/1dnain7/gui_and_windowing/</id>
+        <link href="https://www.reddit.com/r/cpp/comments/1dnain7/gui_and_windowing/"/>
+        <updated>2024-06-24T10:46:18.000Z</updated>
+        <summary type="html"><![CDATA[I would like to hear from you guys of your experience with different GUI and windowing libs you use and what you liked and didn't like. Looking into making desktop applications. What crazy stories do you have doing this.
+    submitted by    /u/Patrick-W-McMahon    to    r/cpp  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[C++ Include Helper for VS Code]]></title>
+        <id>https://www.reddit.com/r/cpp/comments/1dn9qvo/c_include_helper_for_vs_code/</id>
+        <link href="https://www.reddit.com/r/cpp/comments/1dn9qvo/c_include_helper_for_vs_code/"/>
+        <updated>2024-06-24T09:54:06.000Z</updated>
+        <summary type="html"><![CDATA[Introducing C++ Include Helper for VS Code
+ Hey C++ enthusiasts,
+ I've noticed that despite the vast array of extensions available for Visual Studio Code, there hasn't been a tool specifically designed to automatically handle #include directives for C++ header files. To fill this gap, I developed the C++ Include Helper extension.
+ This extension scans your project for class definitions and provides autocompletion for class names as you type. When you select a class from the suggestions, it automatically inserts the necessary #include directive at the top of your file. No more manual typing or hunting down the right headers!
+ Key Features: - Automatic Workspace Analysis: Scans your workspace for class names and keeps them updated. - Smart Autocompletion: Provides class name suggestions and adds the corresponding #include to the top of your file. - Manual Trigger Option: You can manually refresh the class mappings at any time.
+ I would love for you all to try it out and share your feedback!
+ Check out the extension: - GitHub Repository - VS Code Marketplace
+ Feel free to contribute, suggest improvements, or report issues. Let's make coding in C++ on VS Code even better together!
+ Happy coding!
+    submitted by    /u/Complex-Ad-9151    to    r/cpp  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Looking for Secure local db solution]]></title>
+        <id>https://www.reddit.com/r/csharp/comments/1dn98i3/looking_for_secure_local_db_solution/</id>
+        <link href="https://www.reddit.com/r/csharp/comments/1dn98i3/looking_for_secure_local_db_solution/"/>
+        <updated>2024-06-24T09:16:54.000Z</updated>
+        <summary type="html"><![CDATA[I am building an app that will require end-to-end encryption, including at rest. I want the DB engine to run in-process. My target platform is .NET 8, so I can utilize just about anything. What I also need is secure sync between two devices without any kind of third party. I know I could use SQLite or LiteDB and manage the encryption, but that seems like an obvious weak spot, so I'm wondering what options are available with tested and proven encryption created by security experts.
+    submitted by    /u/RealSharpNinja  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Efficiently allocating lots of std::shared_ptr]]></title>
+        <id>https://www.reddit.com/r/cpp/comments/1dn7lr0/efficiently_allocating_lots_of_stdshared_ptr/</id>
+        <link href="https://www.reddit.com/r/cpp/comments/1dn7lr0/efficiently_allocating_lots_of_stdshared_ptr/"/>
+        <updated>2024-06-24T07:18:06.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/tinloaf    to    r/cpp  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[WPF based exciting Pong Game]]></title>
+        <id>https://www.reddit.com/r/csharp/comments/1dn7gti/wpf_based_exciting_pong_game/</id>
+        <link href="https://www.reddit.com/r/csharp/comments/1dn7gti/wpf_based_exciting_pong_game/"/>
+        <updated>2024-06-24T07:08:30.000Z</updated>
+        <summary type="html"><![CDATA[This is a multi player Pong game written in C#/ WPF using Visual Studio - https://www.codeproject.com//Articles/5382198/Pongs-A-Simple-Pong-Like-Game
+    submitted by    /u/cherry-pie123  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Threading in CPP]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1dn7dwo/threading_in_cpp/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1dn7dwo/threading_in_cpp/"/>
+        <updated>2024-06-24T07:02:41.000Z</updated>
+        <summary type="html"><![CDATA[Best resources to learn concepts related to threading and implementation of the same in cpp
+    submitted by    /u/Unhappy-Cod2649    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA["But you all do!"]]></title>
+        <id>https://www.reddit.com/r/C_Programming/comments/1dn6x6s/but_you_all_do/</id>
+        <link href="https://www.reddit.com/r/C_Programming/comments/1dn6x6s/but_you_all_do/"/>
+        <updated>2024-06-24T06:30:16.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/cHaR_shinigami  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Handling my junior developer's conduct]]></title>
+        <id>https://www.reddit.com/r/ExperiencedDevs/comments/1dn68gm/handling_my_junior_developers_conduct/</id>
+        <link href="https://www.reddit.com/r/ExperiencedDevs/comments/1dn68gm/handling_my_junior_developers_conduct/"/>
+        <updated>2024-06-24T05:44:08.000Z</updated>
+        <summary type="html"><![CDATA[Hi everyone, I have 5+ YoE and I am currently a software engineer at a large software firm.
+ For some context, I was moved to a new team in December to work on some AI initiatives. I was moved alongside a junior developer on my team. We were engineers 1 and 2 on this new AI initiatives team. The tech stack was very familiar for me; working on a Kotlin code base using Spring Boot, and AWS.
+ However, it was not the same for my junior. My junior is a self-taught software engineer with 1 YoE as a front-end engineer at another company. She was only at our company for a month before she was moved over. She had to learn a lot of back-end technologies and infrastructure in this 6-7 time span.
+ I personally had to train her a lot during this time. I gave a lot of guidance on how to code in Spring B…]]></summary>
+        <author>
+            <name>top scoring links : ExperiencedDevs</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[cant find a fix for this anywhere]]></title>
+        <id>https://www.reddit.com/r/csharp/comments/1dn60j4/cant_find_a_fix_for_this_anywhere/</id>
+        <link href="https://www.reddit.com/r/csharp/comments/1dn60j4/cant_find_a_fix_for_this_anywhere/"/>
+        <updated>2024-06-24T05:29:27.000Z</updated>
+        <summary type="html"><![CDATA[so im very very new to coding and im following some brackeys tutorials and i get to one where i need to change something that doesnt exist and its driving me nuts
+ im using vscode
+ thats what happens when i dotnet new console
+ this is from a brackeys video and i need it like this
+    submitted by    /u/Winter_Willow2671  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Can I call multiple docker compose commands from the same Process?]]></title>
+        <id>https://www.reddit.com/r/csharp/comments/1dn51nm/can_i_call_multiple_docker_compose_commands_from/</id>
+        <link href="https://www.reddit.com/r/csharp/comments/1dn51nm/can_i_call_multiple_docker_compose_commands_from/"/>
+        <updated>2024-06-24T04:28:23.000Z</updated>
+        <summary type="html"><![CDATA[I am trying to call two docker commands from an application and I would like to pass the commands from the Process' StandardInput so I don't have to start two processes. So far I've tried this:
+ public static async Task ExecuteProcess() { var workDir = "/someDir"; using (Process p = new Process()) { ProcessStartInfo info = new() { FileName = "bash", WorkingDirectory = workDir, RedirectStandardInput = true, RedirectStandardError = true, RedirectStandardOutput = true, UseShellExecute = false }; p.StartInfo = info; p.Start(); await p.StandardInput.WriteLineAsync("docker compose pull"); string? output; while (!p.StandardError.EndOfStream) { output = await p.StandardError.ReadLineAsync(); Console.WriteLine(output); } await p.StandardInput.WriteLineAsync("compose up -d"); while (!p.StandardError.EndOfStream) { output = await p.StandardError.ReadLineAsync(); Console.WriteLine(output); } } } 
+ But when I execute this, the program gets stuck waiting indefinitely after the docker compose pull is executed.
+ The reason I'm calling bash instead of docker in Process is because since I'm passing the arguments to the process from StandardInput, if I call docker directly, Process will start a docker process with no arguments until it reads them from StandardInput, so it outputs the message about how to properly call the docker command. So by calling bash I start a bash shell and then I provide the docker commands through StandardInput. But what I think is happening is that once the first command executes, bash does not detect that the first command completed/returned successfully.
+ I know I can set the Arguments property in Process, and execute the first command, and then change Arguments to the second command and call p.Start(); again, but that would spawn two processes and I'm trying to avoid that.
+ Is there any way to do this without having to call Process twice?
+    submitted by    /u/saponsky  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[I made another console only game. A comedic text adventure about being a detective. Bullet Noir.]]></title>
+        <id>https://www.reddit.com/r/csharp/comments/1dn447o/i_made_another_console_only_game_a_comedic_text/</id>
+        <link href="https://www.reddit.com/r/csharp/comments/1dn447o/i_made_another_console_only_game_a_comedic_text/"/>
+        <updated>2024-06-24T03:35:19.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/Talkren_  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Zero Friction Interfaces for C]]></title>
+        <id>https://www.reddit.com/r/C_Programming/comments/1dn3fyv/zero_friction_interfaces_for_c/</id>
+        <link href="https://www.reddit.com/r/C_Programming/comments/1dn3fyv/zero_friction_interfaces_for_c/"/>
+        <updated>2024-06-24T02:59:11.000Z</updated>
+        <summary type="html"><![CDATA[I spent the day having some fun, and I'm very pleased with how it turned out! Inspired by Go interfaces, though I have never programmed in Golang so not sure how they compare.
+ Zero Friction Interfaces - Github
+ Here's a quick demo using a Readable interface:
+ int myInt = 42; Readable r1 = to_readable(myInt); printr(r1); // Outputs: Int: 42 
+ See the github page for more info.
+    submitted by    /u/astrophaze  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Breaking stuff isn't even remotely scary at this point]]></title>
+        <id>https://www.reddit.com/r/archlinux/comments/1dn399m/breaking_stuff_isnt_even_remotely_scary_at_this/</id>
+        <link href="https://www.reddit.com/r/archlinux/comments/1dn399m/breaking_stuff_isnt_even_remotely_scary_at_this/"/>
+        <updated>2024-06-24T02:48:50.000Z</updated>
+        <summary type="html"><![CDATA[I'm using arch for half a year now and it's good. Today I 
+  
+reinstalled arch,
+ installed hyprland, 
+ decided to install a x11 wm for "gaming environment" 
+ tried openbox and couldn't make it work well with games
+ 
+ pacman -Rncs'ed openbox which deleted everything related to xorg gpu drivers including hyprland (it was the second dumbest thing I did after rm -rf /)
+ fixed everything
+ installed xfce
+  
+Maybe I'm just too dumb to break things like this but it seems like a good fluff story that I can't really share with my friends cause they use windows.
+ All in all, breaking thing is fun (⁠ﾉ⁠◕⁠ヮ⁠◕⁠)⁠ﾉ⁠*⁠.⁠✧
+    submitted by    /u/Leerv474  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : archlinux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Learning C#, need help!]]></title>
+        <id>https://www.reddit.com/r/csharp/comments/1dn31ik/learning_c_need_help/</id>
+        <link href="https://www.reddit.com/r/csharp/comments/1dn31ik/learning_c_need_help/"/>
+        <updated>2024-06-24T02:37:21.000Z</updated>
+        <summary type="html"><![CDATA[So far i've only made a few console applications, was getting ready to move onto winforms applications but i have a couple questions.
+  
+What the heck is LINQ? it came up a couple times along with "IEnumerable" when i was learning about lists. looking this up led me to a huge rabbit hole that i can't quite make sense of (mostly due to me not understanding a lot of the terminology used as they were in the explanations. I was able to get a grasp on what enumerables are but LINQ still eludes me.
+ Could i get more clarification on interfaces? I haven't used much OOP since starting (because my first couple programs are understandably small and oop seems like it would unnecessarily complicate things) but they seem kind of like abstract classes to me (funny enough i haven't really made an application where i would need to use abstract classes either, but after looking them up they seem pretty straightforward) and im not sure when i would use which.
+  
+please excuse my ignorance haha, still getting the hang of it all
+    submitted by    /u/Perfect_Drummer_7779  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Have anyone tried this before?]]></title>
+        <id>https://www.reddit.com/r/hacking/comments/1dn2ebf/have_anyone_tried_this_before/</id>
+        <link href="https://www.reddit.com/r/hacking/comments/1dn2ebf/have_anyone_tried_this_before/"/>
+        <updated>2024-06-24T02:04:04.000Z</updated>
+        <summary type="html"><![CDATA[Want to give it a try, my WiFi is slow. But it says it may take up to 30 days to start working. 🤣
+    submitted by    /u/Aromatic_Ad_408  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : hacking</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[🚀 Invitation to Test and Review: AutoCAD Points Import Plugin 🚀]]></title>
+        <id>https://www.reddit.com/r/csharp/comments/1dn1z3s/invitation_to_test_and_review_autocad_points/</id>
+        <link href="https://www.reddit.com/r/csharp/comments/1dn1z3s/invitation_to_test_and_review_autocad_points/"/>
+        <updated>2024-06-24T01:42:15.000Z</updated>
+        <summary type="html"><![CDATA[Hey everyone!
+ I'm excited to announce the release of my AutoCAD Points Import Plugin! 🎉 This plugin simplifies the process of importing point data from text files into AutoCAD drawings, streamlining your workflow and enhancing productivity.
+ Key Features:
+  
+Effortless Import: Directly import points from structured text files.
+ Flexible Configuration: Customize coordinate settings for seamless integration.
+ Error Handling: Robust error management ensures smooth operation.
+  
+I'm looking for testers and reviewers to give it a try and provide feedback. Your insights are invaluable in shaping the future of this plugin!
+ How to Get Started:
+  
+📥 Download the plugin from the GitHub repository.
+ 🛠️ Install and integrate it into your AutoCAD environment.
+ 🚀 Explore its features and functionalities.
+ 📝 Share your feedback, suggestions for improvements, or any bugs you encounter.
+  
+Your feedback will help me enhance the plugin further and prioritize new features. Let's make this tool even more powerful together!
+ Repository Link: Text-To-AutoCAD
+ Feel free to reach out with any questions or suggestions. Looking forward to hearing from you!
+ Cheers, TAHA MK
+    submitted by    /u/taha-mokaddem  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Multiple Files / Header Error]]></title>
+        <id>https://www.reddit.com/r/cpp_questions/comments/1dn1v6x/multiple_files_header_error/</id>
+        <link href="https://www.reddit.com/r/cpp_questions/comments/1dn1v6x/multiple_files_header_error/"/>
+        <updated>2024-06-24T01:36:16.000Z</updated>
+        <summary type="html"><![CDATA[Hey yall, I am new to coding and I am trying to run a simple code in c++ saying hello, with main.cpp greet.cpp and greet.hpp. I keep getting a " undefined reference to `greet(std::__cxx11::basic_string<char, std::char\_traits<char>, std::allocator<char> >)' collect2.exe: error: ld returned 1 exit status ". Yesterday when I wrote this code it was working perfectly fine and now it's giving me this constant error. I ran it in VS code and C lion and it gave me the same error and when I ran it in Replit it did not, so I'm not sure what to do or really what this means. I'll provide the code below.
+ main.cpp:
+ #include <iostream> #include "greet.hpp" int main () { messaging::greet("John"); return 0; } 
+ greet.cpp:
+ #include <iostream> namespace messaging{ void greet(std::string name) { std::cout << "Hey " << name; } 
+ }
+ greet.hpp:
+  #ifndef GREET_HPP #define GREET_HPP #include <string> namespace messaging{ void greet(std::string name); } #endif 
+ Any help/insight for this problem would be appreciated!
+    submitted by    /u/bummysaikikusuo    to    r/cpp_questions  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Pure HTML Real Time Chat Online With No Javascript | C++ Web Server]]></title>
         <id>https://www.reddit.com/r/cpp/comments/1dn1j0y/pure_html_real_time_chat_online_with_no/</id>
@@ -37,6 +339,42 @@
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Its 2050, you still see Job Posts filled with „Jenkins” as requirement]]></title>
+        <id>https://www.reddit.com/r/devops/comments/1dn06s7/its_2050_you_still_see_job_posts_filled_with/</id>
+        <link href="https://www.reddit.com/r/devops/comments/1dn06s7/its_2050_you_still_see_job_posts_filled_with/"/>
+        <updated>2024-06-24T00:09:22.000Z</updated>
+        <summary type="html"><![CDATA[/rant on
+ Holy moly mother of sweet Jeruzalem
+ Why this crap cant die ? Its not maintained for over 10 years, most plugins are CVE10s, ppl moved on, cloud native is already 5-10 years old.
+ If that deprecation goes as fast as now my grandchildren will be still (dear god pls no) still required to maintain that sh*t.
+ What the fk fk stops you ppl from migrating off of that pile of smoking hot crap?
+ And who tf starts a company in 2020 using Jenkins for CICD? Havent you learnt anything in like past 20 years?
+ /rant off
+ Every time you post a job offer and list you use Jenkins a kitten dies of cancer. I like kittens, please stop killing them.
+ Ps. For the ppl who say Jenkins is free, look at your hosting costs, maintenance costs and innovation blocking costs. That last one hits the most. New Java pops up? Shit your jenkins does not support it :(
+    submitted by    /u/pojzon_poe  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : devops</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[qq, like jq but for more than json and an interactive query mode]]></title>
+        <id>https://www.reddit.com/r/golang/comments/1dn05ph/qq_like_jq_but_for_more_than_json_and_an/</id>
+        <link href="https://www.reddit.com/r/golang/comments/1dn05ph/qq_like_jq_but_for_more_than_json_and_an/"/>
+        <updated>2024-06-24T00:07:52.000Z</updated>
+        <summary type="html"><![CDATA[Hi all, sorry for the shameless plug, but I put together a tool made with go y'all might find neat. The general gist is:
+ qq is a interoperable configuration format transcoder with jq querying ability powered by gojq. qq is multi modal, and can be used as a replacement for jq or be interacted with via a repl with autocomplete and realtime rendering preview for building queries.
+ It supports transcoding between json, xml, yaml, hcl (tf), toml, csv and ini (perhaps more to come, HTML and proto at least among many bug fixes) with leveraging jq as a filter in-between. There are quite a few encodings bundled in so be warned there is undoubtedly some uncovered edge-cases this early in its release.
+ The package as an importable component does have some generic use for marshalling and unmarshalling between formats with a standardized interface.
+ https://github.com/JFryy/qq/
+    submitted by    /u/SoggyVisualMuffin  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : golang</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[RTL8188 monitor mode half-working]]></title>
         <id>https://www.reddit.com/r/hacking/comments/1dn02rb/rtl8188_monitor_mode_halfworking/</id>
         <link href="https://www.reddit.com/r/hacking/comments/1dn02rb/rtl8188_monitor_mode_halfworking/"/>
@@ -46,6 +384,31 @@
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : hacking</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[What Four Years of Progress Looks Like: RPG Maker vs Godot]]></title>
+        <id>https://www.reddit.com/r/godot/comments/1dmzvae/what_four_years_of_progress_looks_like_rpg_maker/</id>
+        <link href="https://www.reddit.com/r/godot/comments/1dmzvae/what_four_years_of_progress_looks_like_rpg_maker/"/>
+        <updated>2024-06-23T23:53:37.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/anisaous  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : godot</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Would people play a game that’s not in English?]]></title>
+        <id>https://www.reddit.com/r/gamedev/comments/1dmzhc8/would_people_play_a_game_thats_not_in_english/</id>
+        <link href="https://www.reddit.com/r/gamedev/comments/1dmzhc8/would_people_play_a_game_thats_not_in_english/"/>
+        <updated>2024-06-23T23:34:29.000Z</updated>
+        <summary type="html"><![CDATA[I’m developing a game that, from the beginning, has been thought to be in danish with the UI being in English and with subtitles. It stems from danish movies often being in danish with English subtitles and me having access to a lot more danish voiceovers than English. 
+ Would this purely be a negative trait of the game and should I just make it purely in English, or could you see yourself finding the concept interesting? 
+ Bonus info: - There’s a lot of dialogue in the game - Third person open world - Yes, localization is a thing, but I would like to stick with one of the languages to begin with
+    submitted by    /u/PLATOU  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : gamedev</name>
         </author>
     </entry>
     <entry>
@@ -64,6 +427,18 @@
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : hacking</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Is having to configure a few things in Debian separates it from Ubuntu?]]></title>
+        <id>https://www.reddit.com/r/debian/comments/1dmza2q/is_having_to_configure_a_few_things_in_debian/</id>
+        <link href="https://www.reddit.com/r/debian/comments/1dmza2q/is_having_to_configure_a_few_things_in_debian/"/>
+        <updated>2024-06-23T23:24:54.000Z</updated>
+        <summary type="html"><![CDATA[I installed Debian Testing KDE last week with the live image that has the calamares installer on my t430s and so far despite being still new to linux using Kubuntu, and PopOS, I find that compared to both Debian is like somewhat barebone having to install flatpaks, having to manually add repositiories the sources list file, though it helps me learn more about linux, and with these done I dont see it as any different from Ubuntu except its not corporate owned. I wonder if this is the the main thing that makes Debian seperate from Ubuntu and all its flavours or distros based off it?
+    submitted by    /u/Apple988x  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : debian</name>
         </author>
     </entry>
     <entry>
@@ -101,6 +476,17 @@ Memory safety maybe isn't that great anymore. As a Go dev who use to be a Java d
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Jenkins was invented b/c an engineer “got tired of incurring the wrath of his team every time his code broke the build.”]]></title>
+        <id>https://www.reddit.com/r/programming/comments/1dmytu1/jenkins_was_invented_bc_an_engineer_got_tired_of/</id>
+        <link href="https://www.reddit.com/r/programming/comments/1dmytu1/jenkins_was_invented_bc_an_engineer_got_tired_of/"/>
+        <updated>2024-06-23T23:02:54.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/kendumez  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : programming</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[How many ML roles are bullshit?]]></title>
         <id>https://www.reddit.com/r/cscareerquestions/comments/1dmx04i/how_many_ml_roles_are_bullshit/</id>
         <link href="https://www.reddit.com/r/cscareerquestions/comments/1dmx04i/how_many_ml_roles_are_bullshit/"/>
@@ -127,6 +513,18 @@ Memory safety maybe isn't that great anymore. As a Go dev who use to be a Java d
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : csharp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Those of you that have made a game and published it, what disappointments did you have as a result?]]></title>
+        <id>https://www.reddit.com/r/gamedev/comments/1dmwmrz/those_of_you_that_have_made_a_game_and_published/</id>
+        <link href="https://www.reddit.com/r/gamedev/comments/1dmwmrz/those_of_you_that_have_made_a_game_and_published/"/>
+        <updated>2024-06-23T21:22:07.000Z</updated>
+        <summary type="html"><![CDATA[?
+    submitted by    /u/12fhgffgghhggg  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : gamedev</name>
         </author>
     </entry>
     <entry>
@@ -271,6 +669,18 @@ Memory safety maybe isn't that great anymore. As a Go dev who use to be a Java d
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[4.0 student, great projects, previous work history, yet rejected from every internship.]]></title>
+        <id>https://www.reddit.com/r/csMajors/comments/1dmuknl/40_student_great_projects_previous_work_history/</id>
+        <link href="https://www.reddit.com/r/csMajors/comments/1dmuknl/40_student_great_projects_previous_work_history/"/>
+        <updated>2024-06-23T19:50:17.000Z</updated>
+        <summary type="html"><![CDATA[I just got rejected from an UNPAID in-person only web developer internship at a non-tech company in the worst part of my city. I was willing to work for no money, commute to a horrible location surrounded by the worst decay imaginable, and burn through my savings for a couple months just for any sort of tech experience, and I still didn't land the internship. I feel like I'm going to lose my mind. I worked minimum wage retail jobs after graduation with a B.A in History and struggled to find my footing in life. Studying computer science was my hope of a fulfilling career, my chance to reinvent myself and get out of the pit of mediocrity I was in, and now it's been smashed to pieces. What the hell is going on? Do I need to start offering to PAY money for an internship? Absolutely insane.
+    submitted by    /u/hutallybronest  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : csMajors</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Disconnecting one client ends up disconnecting the rest]]></title>
         <id>https://www.reddit.com/r/csharp/comments/1dmtl4l/disconnecting_one_client_ends_up_disconnecting/</id>
         <link href="https://www.reddit.com/r/csharp/comments/1dmtl4l/disconnecting_one_client_ends_up_disconnecting/"/>
@@ -380,6 +790,17 @@ I honestly don't know what the recruiters saw in me, my GitHub has only one Rust
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Why your brain is 3 milion more times efficient than GPT-4 - dead simple introduction to Embeddings, HNSW, ANNS, Vector Databases and their comparison based on experience from production project]]></title>
+        <id>https://www.reddit.com/r/programming/comments/1dmt5ix/why_your_brain_is_3_milion_more_times_efficient/</id>
+        <link href="https://www.reddit.com/r/programming/comments/1dmt5ix/why_your_brain_is_3_milion_more_times_efficient/"/>
+        <updated>2024-06-23T18:47:16.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/FoxInTheRedBox  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : programming</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[C++ beginner having a couple(a lot) of Problems]]></title>
         <id>https://www.reddit.com/r/cpp_questions/comments/1dmt52w/c_beginner_having_a_couplea_lot_of_problems/</id>
         <link href="https://www.reddit.com/r/cpp_questions/comments/1dmt52w/c_beginner_having_a_couplea_lot_of_problems/"/>
@@ -395,6 +816,17 @@ I honestly don't know what the recruiters saw in me, my GitHub has only one Rust
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Longtime Linux Wireless Developer Passes Away ..RIP Larry Finger]]></title>
+        <id>https://www.reddit.com/r/linux/comments/1dmt33r/longtime_linux_wireless_developer_passes_away_rip/</id>
+        <link href="https://www.reddit.com/r/linux/comments/1dmt33r/longtime_linux_wireless_developer_passes_away_rip/"/>
+        <updated>2024-06-23T18:44:16.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/unixbhaskar  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[I'm trying to get generalized subsets of a tuple, but I'm stuck on std::tie]]></title>
         <id>https://www.reddit.com/r/cpp_questions/comments/1dmt2y2/im_trying_to_get_generalized_subsets_of_a_tuple/</id>
         <link href="https://www.reddit.com/r/cpp_questions/comments/1dmt2y2/im_trying_to_get_generalized_subsets_of_a_tuple/"/>
@@ -405,6 +837,28 @@ I honestly don't know what the recruiters saw in me, my GitHub has only one Rust
  Tuple_subset< Giant_tuple_t > get_giant_tuple(); std::string a_string; int just_int = get_giant_tuple(); std::tuple< long, double > small_tuple = get_gi…]]></summary>
         <author>
             <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[myFavOptimizationMethod]]></title>
+        <id>https://www.reddit.com/r/ProgrammerHumor/comments/1dmswdd/myfavoptimizationmethod/</id>
+        <link href="https://www.reddit.com/r/ProgrammerHumor/comments/1dmswdd/myfavoptimizationmethod/"/>
+        <updated>2024-06-23T18:35:55.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/ienjoymusiclol  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : ProgrammerHumor</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Trying to install amd pro drivers, but i need python3.10. I have 3.12?]]></title>
+        <id>https://www.reddit.com/r/debian/comments/1dmsqq9/trying_to_install_amd_pro_drivers_but_i_need/</id>
+        <link href="https://www.reddit.com/r/debian/comments/1dmsqq9/trying_to_install_amd_pro_drivers_but_i_need/"/>
+        <updated>2024-06-23T18:28:37.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/Browncoatinabox  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : debian</name>
         </author>
     </entry>
     <entry>
@@ -499,6 +953,17 @@ I honestly don't know what the recruiters saw in me, my GitHub has only one Rust
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[What is this?]]></title>
+        <id>https://www.reddit.com/r/linux/comments/1dmpkje/what_is_this/</id>
+        <link href="https://www.reddit.com/r/linux/comments/1dmpkje/what_is_this/"/>
+        <updated>2024-06-23T16:07:59.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/Slow_Display9784  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Do not underestimate taking non dev jobs]]></title>
         <id>https://www.reddit.com/r/cscareerquestions/comments/1dmpath/do_not_underestimate_taking_non_dev_jobs/</id>
         <link href="https://www.reddit.com/r/cscareerquestions/comments/1dmpath/do_not_underestimate_taking_non_dev_jobs/"/>
@@ -557,6 +1022,17 @@ I honestly don't know what the recruiters saw in me, my GitHub has only one Rust
  [link]   [comments]]]></summary>
         <author>
             <name>C</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[guessWhatitis]]></title>
+        <id>https://www.reddit.com/r/ProgrammerHumor/comments/1dmo6ss/guesswhatitis/</id>
+        <link href="https://www.reddit.com/r/ProgrammerHumor/comments/1dmo6ss/guesswhatitis/"/>
+        <updated>2024-06-23T15:05:57.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/yuva-krishna-memes  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : ProgrammerHumor</name>
         </author>
     </entry>
     <entry>
@@ -774,6 +1250,17 @@ We've a bunch of repositories (~25) and a bunch of journeys (~12). A journey can
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Yeah, modeling is hard]]></title>
+        <id>https://www.reddit.com/r/godot/comments/1dmknvs/yeah_modeling_is_hard/</id>
+        <link href="https://www.reddit.com/r/godot/comments/1dmknvs/yeah_modeling_is_hard/"/>
+        <updated>2024-06-23T12:05:45.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/polarmind  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : godot</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Larry Finger, long time Linux kernel wireless developer, passed away on June 21st 2024]]></title>
         <id>https://www.reddit.com/r/linux/comments/1dmkkkl/larry_finger_long_time_linux_kernel_wireless/</id>
         <link href="https://www.reddit.com/r/linux/comments/1dmkkkl/larry_finger_long_time_linux_kernel_wireless/"/>
@@ -782,6 +1269,17 @@ We've a bunch of repositories (~25) and a bunch of journeys (~12). A journey can
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : linux</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Which do you prefer?]]></title>
+        <id>https://www.reddit.com/r/godot/comments/1dmkjbo/which_do_you_prefer/</id>
+        <link href="https://www.reddit.com/r/godot/comments/1dmkjbo/which_do_you_prefer/"/>
+        <updated>2024-06-23T11:58:27.000Z</updated>
+        <summary type="html"><![CDATA[submitted by    /u/firestixyz  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : godot</name>
         </author>
     </entry>
     <entry>
@@ -892,6 +1390,20 @@ That is a little condescending because it should be the logic/product to be comp
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : java</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[do you stick to software engineering practices?]]></title>
+        <id>https://www.reddit.com/r/learnprogramming/comments/1dmjbh3/do_you_stick_to_software_engineering_practices/</id>
+        <link href="https://www.reddit.com/r/learnprogramming/comments/1dmjbh3/do_you_stick_to_software_engineering_practices/"/>
+        <updated>2024-06-23T10:36:40.000Z</updated>
+        <summary type="html"><![CDATA[Hello,
+ When you develop a project for yourself to learn - do you first think about the requirements, then create class diagrams then implement the system adhering software engineering practices and do testing and finally do validation tests?
+ Why/why dont you do it?
+    submitted by    /u/DramaticEducator6276  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : learnprogramming</name>
         </author>
     </entry>
     <entry>
@@ -1515,6 +2027,23 @@ Thank you in advance for any response.
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[HAC 0.2 is out! your terminal API client (like postman)]]></title>
+        <id>https://www.reddit.com/r/rust/comments/1dm5phl/hac_02_is_out_your_terminal_api_client_like/</id>
+        <link href="https://www.reddit.com/r/rust/comments/1dm5phl/hac_02_is_out_your_terminal_api_client_like/"/>
+        <updated>2024-06-22T21:12:21.000Z</updated>
+        <summary type="html"><![CDATA[Hey fellow rustaceans, about 20 days ago I've posted about my postman-like api client for your terminal. And today I'm here to announce that version 0.2 is out, with a lot of new features, but the main one is that now headers are fully supported.
+ you can check out the repo here: https://github.com/wllfaria/hac
+ and here you can see a screenshot of how it is looking like at this point:
+ preview of features on hac release v0.2.1
+ My current focus is implementing environments, which is a highly requested feature, but expect many new things to come.
+ if you like this I would really appreciate your star; Also I wanted to thank all of you that already starred and got it to 88 stars, that is actually crazy! Thank you guys
+    submitted by    /u/imWiru  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : rust</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[How to start in debian?]]></title>
         <id>https://www.reddit.com/r/debian/comments/1dm55xw/how_to_start_in_debian/</id>
         <link href="https://www.reddit.com/r/debian/comments/1dm55xw/how_to_start_in_debian/"/>
@@ -1678,6 +2207,19 @@ store that variable name in an array for a later date
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[The easiest IT fields to stand out in?]]></title>
+        <id>https://www.reddit.com/r/learnprogramming/comments/1dm3n1w/the_easiest_it_fields_to_stand_out_in/</id>
+        <link href="https://www.reddit.com/r/learnprogramming/comments/1dm3n1w/the_easiest_it_fields_to_stand_out_in/"/>
+        <updated>2024-06-22T19:37:30.000Z</updated>
+        <summary type="html"><![CDATA[For the record, I am not trying to find an easy way. I am trying to find fields which a lot of people avoid.
+ I am still studying Computer Science, and have experience in web and mobile development. Due to the fact that I always hear people are mostly getting into those 2 fields, making it very hard to stand out. Are there fields which a lot of people tend to avoid looking into, but are very important in the industry? Thank you for your answers!
+    submitted by    /u/KassidyFromAge  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : learnprogramming</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[I've seen, and wishlisted or ignored, every* game on Steam, ama]]></title>
         <id>https://www.reddit.com/r/gamedev/comments/1dm3gxh/ive_seen_and_wishlisted_or_ignored_every_game_on/</id>
         <link href="https://www.reddit.com/r/gamedev/comments/1dm3gxh/ive_seen_and_wishlisted_or_ignored_every_game_on/"/>
@@ -1775,6 +2317,22 @@ store that variable name in an array for a later date
  [link]   [comments]]]></summary>
         <author>
             <name>posts from cpp, cpp_questions</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Problem with GC and long living goroutines]]></title>
+        <id>https://www.reddit.com/r/golang/comments/1dm2gmy/problem_with_gc_and_long_living_goroutines/</id>
+        <link href="https://www.reddit.com/r/golang/comments/1dm2gmy/problem_with_gc_and_long_living_goroutines/"/>
+        <updated>2024-06-22T18:42:51.000Z</updated>
+        <summary type="html"><![CDATA[Update: I made a mistake when logging the used memory...
+ I was logging m.TotalAlloc which displays the cumulative number of bytes allocated. It does not decrease when objects are freed.
+ When I look to m.Alloc it is stable at approx. 2/3 MB.
+  
+Hi, I created a small program to monitor availability of my websites. Therefore every minute I do an http call to check if I get a response. If not I send out a notification.
+ To limit the number of simultaneous outgoing requests I created some worker goroutines listening to a channel and then, every minute, I write the URLs to that channel:
+ func (s *Service) Run(numberOfWorkers int) { urlChan := make(chan URL) // Start workers for i := 0; i < numberOfWorkers; i++ { go s.runChecks(urlChan) } // Start the main loop for { urls, err := s.repository.G…]]></summary>
+        <author>
+            <name>top scoring links : golang</name>
         </author>
     </entry>
     <entry>
@@ -2003,6 +2561,20 @@ Initially, I wanted to undertake a project focused on CRUD operations. My first 
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : ExperiencedDevs</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Anyone else finds coding on paper extremely stressful?]]></title>
+        <id>https://www.reddit.com/r/learnprogramming/comments/1dlyufr/anyone_else_finds_coding_on_paper_extremely/</id>
+        <link href="https://www.reddit.com/r/learnprogramming/comments/1dlyufr/anyone_else_finds_coding_on_paper_extremely/"/>
+        <updated>2024-06-22T15:58:05.000Z</updated>
+        <summary type="html"><![CDATA[I absolutely HATE coding on paper and find that extremely stressful. How to become better at this, take it with more calm approach. You also encounter this in two kinds of environments: exams and job interviews, both are very stressful and depressing.
+ Currently I'm preparing for an exam in my masters degree and the exam will be writing code, obviously, on paper. I can solve all mock exam questions just fine, but when I test the code, there are some little bugs here and there, incorrect boundaries, some index errors. In real world it would take me about 2 minutes to iron out these bugs, but in the exam I'm expected to get everything perfect from the scratch and if I don't, I lose grading.
+ How to prepare better for such experience? I feel like I'm stressing out because of some stupid outdated practice straight from early 90s, but there's no way to avoid it.
+    submitted by    /u/AlmX7  
+ [link]   [comments]]]></summary>
+        <author>
+            <name>top scoring links : learnprogramming</name>
         </author>
     </entry>
     <entry>
@@ -49414,819 +49986,6 @@ Now let's say we have the following code snippet:
  [link]   [comments]]]></summary>
         <author>
             <name>top scoring links : godot</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[How We Migrated Our Static Analyzer From Java To Rust]]></title>
-        <id>https://www.reddit.com/r/rust/comments/1d0pig0/how_we_migrated_our_static_analyzer_from_java_to/</id>
-        <link href="https://www.reddit.com/r/rust/comments/1d0pig0/how_we_migrated_our_static_analyzer_from_java_to/"/>
-        <updated>2024-05-26T00:27:18.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/sabitm  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : rust</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Free ways to deploy a Spring API + SQL DB?]]></title>
-        <id>https://www.reddit.com/r/java/comments/1d0ph02/free_ways_to_deploy_a_spring_api_sql_db/</id>
-        <link href="https://www.reddit.com/r/java/comments/1d0ph02/free_ways_to_deploy_a_spring_api_sql_db/"/>
-        <updated>2024-05-26T00:24:55.000Z</updated>
-        <summary type="html"><![CDATA[Looking for alternatives to Heroku's discontinued free tier for students. Any suggestions?
-    submitted by    /u/Crafty-Activity4681  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : java</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Making a text editor in C: Cursor dilemma]]></title>
-        <id>https://www.reddit.com/r/C_Programming/comments/1d0p57b/making_a_text_editor_in_c_cursor_dilemma/</id>
-        <link href="https://www.reddit.com/r/C_Programming/comments/1d0p57b/making_a_text_editor_in_c_cursor_dilemma/"/>
-        <updated>2024-05-26T00:06:52.000Z</updated>
-        <summary type="html"><![CDATA[Hi. I've been coding a terminal text editor in C purely for the learning experience of low level programming. However, I've run into a problem that I can't really wrap my head around. If I try moving the cursor to the end of a line with tabs, the cursor will stop too early. Therefore, I thought maybe I should replace the tab characters for each line of the file, but then I remembered Vim. Vim can change the 'shiftwidth' of the tab character (i.e 8 spaces get turned into 2 spaces according to the shiftwidth variable) without directly affecting the line itself! So I'm wondering how I can implement this in my own program and allow the cursor to adjust to the tab size?
- For reference, here's the source code for my program if anyone's interested: https://github.com/MoolsDogTwo/Centi
- Buffer & cursor functions are in their respective c & h files. This program is by no means functional yet, but it's better something than nothing.
-    submitted by    /u/MoolsDogTwo_reddit  
- [link]   [comments]]]></summary>
-        <author>
-            <name>C</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Should I focus on learning c++ to get my first job?]]></title>
-        <id>https://www.reddit.com/r/cpp_questions/comments/1d0p57c/should_i_focus_on_learning_c_to_get_my_first_job/</id>
-        <link href="https://www.reddit.com/r/cpp_questions/comments/1d0p57c/should_i_focus_on_learning_c_to_get_my_first_job/"/>
-        <updated>2024-05-26T00:06:52.000Z</updated>
-        <summary type="html"><![CDATA[I'm currently enrolled in a technical course on System Development, and last year we covered the basics of C++ and C. For the rest of the course, we'll be diving into other programming languages such as Java, Kotlin, C#, HTML, CSS, JavaScript, PHP, and some SQL.
- I have a strong interest in continuing to learn C++, particularly for creating games and simulations. However, I'm unsure if I should prioritize C++ right now or focus on more in-demand programming languages to increase my chances of landing my first job. I have about 1.6 years left until the course ends.
- Is it difficult to find a junior position or internship in C++?
-    submitted by    /u/Arthurbaccan    to    r/cpp_questions  
- [link]   [comments]]]></summary>
-        <author>
-            <name>posts from cpp, cpp_questions</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Bluetoothctl: No default controller available]]></title>
-        <id>https://www.reddit.com/r/archlinux/comments/1d0okm8/bluetoothctl_no_default_controller_available/</id>
-        <link href="https://www.reddit.com/r/archlinux/comments/1d0okm8/bluetoothctl_no_default_controller_available/"/>
-        <updated>2024-05-25T23:36:14.000Z</updated>
-        <summary type="html"><![CDATA[Bluetooth suddenly stopped working a week ago, I thought it could be an update thing and that it'll fix by itself the next archlinux update, but it didn't, I tried researching more about it and found different fixes, but nothing is working, at this point I think I'm just shit at fixing things.
- I have a dual boot with windows for work and bluetooth works there.
- Note: my mobo has a wifi+bluetooth card
- bluetoothctl show No default controller available systemctl status bluetooth ● bluetooth.service - Bluetooth service Loaded: loaded (/usr/lib/systemd/system/bluetooth.service; enabled; preset: disabled) Active: active (running) since Sat 2024-05-25 18:20:34 -05; 13min ago Docs: man:bluetoothd(8) Main PID: 571 (bluetoothd) Status: "Running" Tasks: 1 (limit: 16501) Memory: 2.0M (peak: 2.4M) CP…]]></summary>
-        <author>
-            <name>top scoring links : archlinux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Debian 12, Evolution, Hotmail/Outlook not working until...]]></title>
-        <id>https://www.reddit.com/r/debian/comments/1d0o9x3/debian_12_evolution_hotmailoutlook_not_working/</id>
-        <link href="https://www.reddit.com/r/debian/comments/1d0o9x3/debian_12_evolution_hotmailoutlook_not_working/"/>
-        <updated>2024-05-25T23:20:36.000Z</updated>
-        <summary type="html"><![CDATA[I had trouble signing into a Hotmail account with Evolution from the repo. Hotmail now requires Oauth2. And that option wasn't available in Evolution in the repo.
- So I got a Flatpak instead. https://flathub.org/apps/org.gnome.Evolution
- After you've set up your account, make sure it is on Oauth2. Right-click your account-name/Mail-address->Properties. Receiving e-mail, on the left. Botton right, Authentication. It should say Oauth2 (outlook) and NOT Password.
- This might work for Google mail too. Came across some threads on Oauth troubles on that subject too. Couldn't really find anything that would fix it for Hotmail.
- So if you suffer from having to create new passwords every couple days, can't login via Evolution etc, now you know why.
-    submitted by    /u/BigHeadTonyT  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : debian</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[How were late 90s/early 2000s PC graphics created?]]></title>
-        <id>https://www.reddit.com/r/gamedev/comments/1d0ns7o/how_were_late_90searly_2000s_pc_graphics_created/</id>
-        <link href="https://www.reddit.com/r/gamedev/comments/1d0ns7o/how_were_late_90searly_2000s_pc_graphics_created/"/>
-        <updated>2024-05-25T22:55:29.000Z</updated>
-        <summary type="html"><![CDATA[I mean art styles like in the below album. I love graphics like this and I always wondered, were these graphics hand drawn, or were they the result of photos imported at low resolution?
- Was this art style popular by choice, or was it influenced by the technical limitations of the engines at the time?
- Was there a specific popular engine or rendering software responsible for this style similar to how Unity is used today?
- Can this art style be replicated with modern tools? If so, what software?
- Are there any contemporary games that use a similar art style?
- Here's an album with some screenshots: https://imgur.com/a/late-90s-early-2000s-pc-graphics-pISFrYA
-    submitted by    /u/CrusadingBurger  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : gamedev</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Opinions on code: dc(1) clone.]]></title>
-        <id>https://www.reddit.com/r/C_Programming/comments/1d0npur/opinions_on_code_dc1_clone/</id>
-        <link href="https://www.reddit.com/r/C_Programming/comments/1d0npur/opinions_on_code_dc1_clone/"/>
-        <updated>2024-05-25T22:52:09.000Z</updated>
-        <summary type="html"><![CDATA[Hi! I wrote a dc clone, but my code kinda sucks. I'm starting to refactor it, and I'd like to hear some tips from experienced C programmers on how to write better code.
- https://github.com/distobs/dc/tree/rewrite // this is the refactor branch, I started it yesterday and there's still a lot to go. the master branch is worse.
- Thank you for your time!
-    submitted by    /u/benjamin_desmond  
- [link]   [comments]]]></summary>
-        <author>
-            <name>C</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Read this if you hate coding]]></title>
-        <id>https://www.reddit.com/r/csMajors/comments/1d0ngeb/read_this_if_you_hate_coding/</id>
-        <link href="https://www.reddit.com/r/csMajors/comments/1d0ngeb/read_this_if_you_hate_coding/"/>
-        <updated>2024-05-25T22:38:47.000Z</updated>
-        <summary type="html"><![CDATA[I used to DESPISE coding because I joined CS for the money. (keeping it real)
- Literally would sit down and try to learn languages like Java, Python, HTML/CSS.
- Couldn’t do it because it was so boring.
- What I did to fix this was literally hop on structured learning platforms like Sololearn (free) and Codecademy ($150/year).
- Then of course it still wouldn’t work. 
- Same thing would happen, I would just continue to procrastinate and feel bored.
- To combat this, I simply screen recorded myself coding and explaining what I was doing.
- Then I uploaded those videos onto YouTube.
- Knowing that I was being recorded made me focus more and building an audience on YouTube doing this (you would be surprised) kept me motivated to keep coding.
- This is also something you could eventually monetize, but even if your YT doesn’t grow, you’ll learn how to code and program.
- I hope this helped a few of you. I wish someone introduced this to me a long time ago.
- Good luck everyone!
-    submitted by    /u/Interesting_Two2977  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : csMajors</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Applying patches to AMD-DRM to fix a bug]]></title>
-        <id>https://www.reddit.com/r/archlinux/comments/1d0mrw1/applying_patches_to_amddrm_to_fix_a_bug/</id>
-        <link href="https://www.reddit.com/r/archlinux/comments/1d0mrw1/applying_patches_to_amddrm_to_fix_a_bug/"/>
-        <updated>2024-05-25T22:04:33.000Z</updated>
-        <summary type="html"><![CDATA[Hi
- I'm running into a very known AMD issue that breaks VRR on Wayland. It drives me nuts!
- There's fix available but it appears to me I need to apply some patches into my Linux Zen kernel. Is there a better way of applying this fix? Do I need to recompile the whole kernel? What's the right way of doing this?
- Patches are available at the end of the issue report and are already in amd-staging-drm-next, but I'm not sure what that is... Is it the latest stable kernel with bleeding-edge AMD DRM patches or is it a totally new & future unstable kernel version?
- (i'm not a total linux noob and know how to code, just never did this)
-    submitted by    /u/oiledhairyfurryballs  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : archlinux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[My software engineering 1 final project]]></title>
-        <id>https://www.reddit.com/r/cpp_questions/comments/1d0miq2/my_software_engineering_1_final_project/</id>
-        <link href="https://www.reddit.com/r/cpp_questions/comments/1d0miq2/my_software_engineering_1_final_project/"/>
-        <updated>2024-05-25T21:52:27.000Z</updated>
-        <summary type="html"><![CDATA[Hello! I am looking for any suggestions involving the code for my final project for software engineering 1. The goal of this project was to create a boolean expression solver. Any comments, suggestions, critiques are welcome. I did everything except for the abstract syntax tree class (ast.cpp and ast.h) therefore I am not interested in any critiques involving the code in those files, but everything else is fair game (including the readme and the cmakelists.txt). This was my first time using cmake.
- I do have one question, though. We received a 98/100 on the project, with two points being deducted. The TA stated that using a makefile instead of cmake would be better, and that it would "greatly simplify and improve the build process". Do you guys agree with this statement or have any thoughts on it? Thank you very much for any responses.
- Link to the repo: https://github.com/YAKU-Student/EECS-348---Group-Project
-    submitted by    /u/Past_Recognition7118    to    r/cpp_questions  
- [link]   [comments]]]></summary>
-        <author>
-            <name>posts from cpp, cpp_questions</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[I don’t enjoy coding as a Software Engineering Undergraduate]]></title>
-        <id>https://www.reddit.com/r/learnprogramming/comments/1d0lnlb/i_dont_enjoy_coding_as_a_software_engineering/</id>
-        <link href="https://www.reddit.com/r/learnprogramming/comments/1d0lnlb/i_dont_enjoy_coding_as_a_software_engineering/"/>
-        <updated>2024-05-25T21:10:14.000Z</updated>
-        <summary type="html"><![CDATA[Hi, I am a Software Engineering Undergraduate going into my final year at University in the UK.
- I cannot get myself to code any projects outside of uni assignments at all. It is a mix of not having an idea of what project to take on, and then motivation to actually do that project.
- I just gave up on an alphabet game designed for toddlers where you have to click the correct next letter in the alphabet to finish the game (at ‘Z’) because I got extremely bored as I knew I could do it, and knew I wouldn’t really get satisfaction from it being finished.
- I know that to go into the industry I need a portfolio of projects I have done to show my future employers, so I’ve come here for advice - what should I do about this issue?
- I am open to suggestions on a) project ideas, b) motivation ideas, and c) anything people can give about their own experiences with this.
-    submitted by    /u/YT-DobbaWon  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : learnprogramming</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[How do I learn c# on Mac?]]></title>
-        <id>https://www.reddit.com/r/csharp/comments/1d0l3e7/how_do_i_learn_c_on_mac/</id>
-        <link href="https://www.reddit.com/r/csharp/comments/1d0l3e7/how_do_i_learn_c_on_mac/"/>
-        <updated>2024-05-25T20:43:11.000Z</updated>
-        <summary type="html"><![CDATA[They have removed visual studio support for Mac.
- Is there anyway I can learn c#?
-    submitted by    /u/harrismcr  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : csharp</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Looking to get into web development but confused about Blazor vs ASP.NET]]></title>
-        <id>https://www.reddit.com/r/csharp/comments/1d0l29z/looking_to_get_into_web_development_but_confused/</id>
-        <link href="https://www.reddit.com/r/csharp/comments/1d0l29z/looking_to_get_into_web_development_but_confused/"/>
-        <updated>2024-05-25T20:41:41.000Z</updated>
-        <summary type="html"><![CDATA[So I'm slowly looking into getting into web development using C#. I'm a C# beginner but trying to learn how to apply my current knowledge into web development (any advice or pointers would be appreciated :) ). The one issue that I'm struggling with is understanding the difference between Blazor and ASP.NET and when should I choose one over the other. It seems like ASP.NET is the older and battle tested framework while Blazor is the new(er) kid on the block. Blazor seems (I might be wrong) easier to learn and has more eye candy/UX type stuff in it.
- I'm cautious about picking it up because it seems like the big thing that I got out of reading this sub is that Microsoft has a habit of releasing a new technology/framework and then abandoning it if it doesn't get enough traction. Is that something that I should be concerned about with using a newer technology like Blazor? Or has Blazor received enough traction that the chances of that happening are low? Or does it not even matter because the skill sets and code are transferable between the two?
-    submitted by    /u/Heli0sX  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : csharp</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[DIY debian based router/firewall with ipv6]]></title>
-        <id>https://www.reddit.com/r/debian/comments/1d0kt7c/diy_debian_based_routerfirewall_with_ipv6/</id>
-        <link href="https://www.reddit.com/r/debian/comments/1d0kt7c/diy_debian_based_routerfirewall_with_ipv6/"/>
-        <updated>2024-05-25T20:29:33.000Z</updated>
-        <summary type="html"><![CDATA[I'm trying to build myself a router/firewall based on Debian, with the usual: nftables, dhcp, dns, ...
- The IPv4 part isn't a problem, done it a few times before.
- However, it's the first time I want to implement ipv6 too, since I recently started to use some dedicated servers in the cloud which only have an IPv6 address, so need to be able to access them.
- I've been reading up and googling, but can't seem to find a comprehensive overview of what I would need to do to achieve what I want.
- I know Kea DHCP has a DHCPv6. I know radvd is often used to work with router announcements etc.
- I'm in the position where I can use prefix delegation with my ISP.
- ​
- So basically, what would I need to do to implement the following:
-  
-I have VLAN's on the lan-side, I want to make sure that some have IPv6 addresses, others don't.
- I want to be able to work with fixed IPv6 addresses, so that I can configure nftables rules like "this whole vlan has no internet access, however IPv6 address A.B.C.D.E.F in this vlan does have internet access". Basically, I need to be able to pin hosts to the same addresses every time and use those in nftables rules.
- I would prefer something which isn't depending on my ISP who might change their prefix delegation at some point in time. I'm aware that IPv6 has a range for internal addresses, fc00::/7 address block. If I would need this, how would I implement this? Is this in combination with IPv6 NAT, which doesn't seem recommended?
- If the outcome is that I do need IPv6 NAT'ing: what would be needed to implement this?
-  
-​
- Looking forward to your feedback, I hope there are people on here who have done this before and provide some guidance!
- ​
- ​
-    submitted by    /u/jefkebazaar24  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : debian</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Alright so the answer is probably Rust + Clojure]]></title>
-        <id>https://www.reddit.com/r/rust/comments/1d0k8vm/alright_so_the_answer_is_probably_rust_clojure/</id>
-        <link href="https://www.reddit.com/r/rust/comments/1d0k8vm/alright_so_the_answer_is_probably_rust_clojure/"/>
-        <updated>2024-05-25T20:01:41.000Z</updated>
-        <summary type="html"><![CDATA[The main issue with Rust is that it's not fast to iterate - when it compiles it runs, but your logic may be wrong, and then you may need to change your stuff and make it correct again. However, the performance is over the roof and it's memory safe - performance and memory-safety are two hard to combine features
- Clojure is in a completely different place: it's BLAZINGLY fast to iterate, but - and now, this is probably because I'm a total newb in Clojure - it's pretty weird to try to squeeze super performance out of it. It's performant alright, but it's no Rust/C++, and can probably never be, since it's garbage-collected and has some decently costed abstractions
- So I think where I want to be is to have good mastery of both languages: using Rust for anything that needs to have high-performance or for low level stuff, and Clojure as the day-to-day tool to jack-in and hack away
- Now, I don't have enough knowledge of language design to understand how viable it would be, but it'd be pretty neat to have Clojure doing interop with Rust - you jack-in into a Rust program, invoke and break Rust functions in the REPL, iterate adding stuff; when you're done you compile the experiments into Rust code and make it Rust-compilable. That's a dream 
-    submitted by    /u/TheLordSet  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : rust</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[(UPDATE) Alexa echo show 5 gen 3 jailbreak?]]></title>
-        <id>https://www.reddit.com/r/hacking/comments/1d0jysx/update_alexa_echo_show_5_gen_3_jailbreak/</id>
-        <link href="https://www.reddit.com/r/hacking/comments/1d0jysx/update_alexa_echo_show_5_gen_3_jailbreak/"/>
-        <updated>2024-05-25T19:48:35.000Z</updated>
-        <summary type="html"><![CDATA[After a long fight with removing the screen, I managed to take it apart and take pictures of the boards and some of the big chips: first, the Mainboard (with and without RF shields). Then the secondary board which is also where the power socket plugs into and lastly my absolutely destroyed tweezers from removing the RF shields. I don't know what I expected but I overestimated myself. I can not identify any pads or places to solder anything to. If you have any suggestions, let me know and I'll try them!
-    submitted by    /u/Hofnik121  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : hacking</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Taming Floating-Point Sums]]></title>
-        <id>https://www.reddit.com/r/programming/comments/1d0jryw/taming_floatingpoint_sums/</id>
-        <link href="https://www.reddit.com/r/programming/comments/1d0jryw/taming_floatingpoint_sums/"/>
-        <updated>2024-05-25T19:39:30.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/nightcracker  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : programming</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[What are some things about C++ you wish you had learned earlier but for some reason took way too long to figure out? I'll start:]]></title>
-        <id>https://www.reddit.com/r/cpp/comments/1d0josy/what_are_some_things_about_c_you_wish_you_had/</id>
-        <link href="https://www.reddit.com/r/cpp/comments/1d0josy/what_are_some_things_about_c_you_wish_you_had/"/>
-        <updated>2024-05-25T19:35:14.000Z</updated>
-        <summary type="html"><![CDATA[For me, it was how to overload operator=, operator== and copy constructor.
- Before I learned how to properly overload those, I would often write methods such as Foo::SetEqual(const Foo& other) , Foo::Equals(const Foo& other) and Foo::CopyFrom(const Foo& other), and then call those instead of using operators.
-    submitted by    /u/FACastello    to    r/cpp  
- [link]   [comments]]]></summary>
-        <author>
-            <name>posts from cpp, cpp_questions</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Odd design choice for basic_string constructors: is there an explanation?]]></title>
-        <id>https://www.reddit.com/r/cpp/comments/1d0jlqj/odd_design_choice_for_basic_string_constructors/</id>
-        <link href="https://www.reddit.com/r/cpp/comments/1d0jlqj/odd_design_choice_for_basic_string_constructors/"/>
-        <updated>2024-05-25T19:31:09.000Z</updated>
-        <summary type="html"><![CDATA[C++ Quiz question 287 highlighted a very confusing design choice in the C++ standard. 
- constexpr basic_string( const basic_string& other, size_type pos, const Allocator& alloc = Allocator() ); constexpr basic_string( const CharT* s, size_type count, const Allocator& alloc = Allocator() ); 
- The first constructs a string with the substring [pos, end).
- The second constructs a string with the substring [begin, count).
- Why do these two constructors for basic_string have such different meaning for nearly identical format?
-    submitted by    /u/rsjaffe    to    r/cpp  
- [link]   [comments]]]></summary>
-        <author>
-            <name>posts from cpp, cpp_questions</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[doubts abt cpp]]></title>
-        <id>https://www.reddit.com/r/cpp_questions/comments/1d0jkb8/doubts_abt_cpp/</id>
-        <link href="https://www.reddit.com/r/cpp_questions/comments/1d0jkb8/doubts_abt_cpp/"/>
-        <updated>2024-05-25T19:29:19.000Z</updated>
-        <summary type="html"><![CDATA[Many C++ programmers refer to Rust as a ''religion''or ''cult,'' but from what I've seen, whether on YouTube, Reddit, or Google, there's a strong consensus that Rust excels in various aspects, such as memory safety, concurrency, and promoting more careful consideration of memory usage and pointers. The only advantage I currently see for C++ is its libraries and frameworks. As a C++ programmer, could you tell me why you stick with C++ instead of switching to Rust, given that Rust outshines it in many areas? (If it's because of job prospects, you don't need to comment.) i just wanna know your opinion.
-    submitted by    /u/endmarkzy    to    r/cpp_questions  
- [link]   [comments]]]></summary>
-        <author>
-            <name>posts from cpp, cpp_questions</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[hundreds of thousands of shorts views converting poorly to sales]]></title>
-        <id>https://www.reddit.com/r/gamedev/comments/1d0jk3g/hundreds_of_thousands_of_shorts_views_converting/</id>
-        <link href="https://www.reddit.com/r/gamedev/comments/1d0jk3g/hundreds_of_thousands_of_shorts_views_converting/"/>
-        <updated>2024-05-25T19:29:01.000Z</updated>
-        <summary type="html"><![CDATA[Hello everyone,
- The youtube algorithm has finally gazed upon me and I have two shorts gaining ~4k views an hour (yay!!!)
- The problem is that although I knew my game was already pretty niche and experimental (and youtube is mostly kids) I feel like maybe I should be getting a few more sales compared to what I read on other post mortems and howtomarketagame
- One thing that did help was pinning a comment on the shorts explicitly stating the game name and where to find it (although I already did that in the short itself lol)
- Anyways why I'm posting is for if anything jumps out at anyone for improvements to my steam page or any other arcane marketing advice - thank you very much!
- numbers:
- Shorts got picked up by algorithm on 5/21 (start of ~4k views per hour)
- 5/20 - 1 sale - 31 WL
- 5/21 - 4 sales - 48 WL
- 5/22 - 5 sales - 65 WL
- 5/23 - 10 sales - 67 WL
- 5/24 - 27 sales - 85 WL (also day I added pinned comment)
- 5/25 so far - 6 sales
- shorts 1
- shorts 2
- game: Monster Bullets
-    submitted by    /u/schemesmith  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : gamedev</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Any resources to sum up changes in .NET and C# in the last year?]]></title>
-        <id>https://www.reddit.com/r/csharp/comments/1d0jil6/any_resources_to_sum_up_changes_in_net_and_c_in/</id>
-        <link href="https://www.reddit.com/r/csharp/comments/1d0jil6/any_resources_to_sum_up_changes_in_net_and_c_in/"/>
-        <updated>2024-05-25T19:26:55.000Z</updated>
-        <summary type="html"><![CDATA[I've been on a front end NextJS project for about 9 months and haven't written any C# in that time. I'll eventually be back on working on .NET backend soon so I'd like to have a general overview of any changes in the last 9 months. Or should I binge Nick Chapsas et al?
-    submitted by    /u/coffeefuelledtechie  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : csharp</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[kubernetesTwitterAccountIsDeactivatedBecauseTheyChangedTheBirthday]]></title>
-        <id>https://www.reddit.com/r/ProgrammerHumor/comments/1d0jdap/kubernetestwitteraccountisdeactivatedbecausetheych/</id>
-        <link href="https://www.reddit.com/r/ProgrammerHumor/comments/1d0jdap/kubernetestwitteraccountisdeactivatedbecausetheych/"/>
-        <updated>2024-05-25T19:19:53.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/Dilutant  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : ProgrammerHumor</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Figuring out waterfall shaders!]]></title>
-        <id>https://www.reddit.com/r/godot/comments/1d0iu3o/figuring_out_waterfall_shaders/</id>
-        <link href="https://www.reddit.com/r/godot/comments/1d0iu3o/figuring_out_waterfall_shaders/"/>
-        <updated>2024-05-25T18:54:47.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/yauoiyi  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : godot</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[What are your testing pro tips?]]></title>
-        <id>https://www.reddit.com/r/ExperiencedDevs/comments/1d0im4h/what_are_your_testing_pro_tips/</id>
-        <link href="https://www.reddit.com/r/ExperiencedDevs/comments/1d0im4h/what_are_your_testing_pro_tips/"/>
-        <updated>2024-05-25T18:44:12.000Z</updated>
-        <summary type="html"><![CDATA[That's me again with yet another discussion provoking thread. Hopefully, based on the upvotes, this is fine :) 
- I have finally read all the responses in that thread about the tips for writing better code. A lot of people mentioned testing, but the opinions themselves were really different. 
- My recent project proved to me that unit tests are very tricky to get right. It's very simple to write them and increase the coveted code coverage so that fellow devs can applaud and be confident that something good is happening. That said, a lot of tests are either meaningless in that they pass whatever what, or so flaky that maintaining them becomes such a burden that you just want to delete them. 
- Recently, it has happened several times that I just ditched all unit tests and mocks and fired testcontainers with a real PG instance. 
- Of course, unit tests have their place for business logic where no external dependencies are involved. In such cases, it also helps to use fuzzy testing and property-based testing. 
- Now I am rereading the wonderful article by Fowler on tests, but I am sure some of you might have a lot of insightful things to say on the topic.
-    submitted by    /u/dondraper36  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : ExperiencedDevs</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[need to choose what to do for new computer]]></title>
-        <id>https://www.reddit.com/r/archlinux/comments/1d0ihur/need_to_choose_what_to_do_for_new_computer/</id>
-        <link href="https://www.reddit.com/r/archlinux/comments/1d0ihur/need_to_choose_what_to_do_for_new_computer/"/>
-        <updated>2024-05-25T18:38:49.000Z</updated>
-        <summary type="html"><![CDATA[sooo, im going to get a new pc sometime soon. i need a suggestion: should i dual boot arch+windows or get only one of them? 
- for context, i very much need a windows install due to many games/programs that work only on windows (ive tried to use wine on them, no luck) but since my budget is very tight, i would like to not buy 2 drives for both. (yes, i know you can dual boot with one drive, but i had a lot of issues)
-    submitted by    /u/FippiOmega  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : archlinux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Do I have to build my own iso to make use of network-console (Debian installation over SSH)?]]></title>
-        <id>https://www.reddit.com/r/debian/comments/1d0hqxx/do_i_have_to_build_my_own_iso_to_make_use_of/</id>
-        <link href="https://www.reddit.com/r/debian/comments/1d0hqxx/do_i_have_to_build_my_own_iso_to_make_use_of/"/>
-        <updated>2024-05-25T18:04:22.000Z</updated>
-        <summary type="html"><![CDATA[I am trying to do something very basic but it's a pain to do for no reason. I just want to do a simple headless installation of Debian over SSH with the latest stable netinst iso. 
- This is way harder than I expected, I've read many articles (all very confusing) but the consensus seems to be that I should to use a preseed.cfg file. So, I did just that (example taken from here). 
- ### Network console # Use the following settings if you wish to make use of the network-console # component for remote installation over SSH. This only makes sense if you # intend to perform the remainder of the installation manually. d-i anna/choose_modules string network-console d-i network-console/authorized_keys_url string http://192.168.1.141:8000/openssh-key.pub d-i network-console/password password r00tme #…]]></summary>
-        <author>
-            <name>top scoring links : debian</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[I scraped all DevOps Interview Questions for Meta, Amazon, Google, Yahoo... here they are..]]></title>
-        <id>https://www.reddit.com/r/devops/comments/1d0honl/i_scraped_all_devops_interview_questions_for_meta/</id>
-        <link href="https://www.reddit.com/r/devops/comments/1d0honl/i_scraped_all_devops_interview_questions_for_meta/"/>
-        <updated>2024-05-25T18:01:32.000Z</updated>
-        <summary type="html"><![CDATA[Hi Folks, 
- Some time ago I wrote here on r/devops about my Google's SRE, System Engineering Interview experience and questions they asked.
- For past month I was scraping interview questions for Amazon, Google, Meta, Netflix, Yahoo, Cloudflare, Accenture etc.. in various sources, filtering useful questions (imho) and rewriting them in more details with solutions. 
- publishing it here: https://prepare.sh/engineering/devops (if you'll have issues with login please clean cookies)
- Also I will keep adding companies/question to have around 50+ top companies with their interview questions, so its work in progress.. If you find this type of content useful and want to help me with code/content/etc pls dm me :)
-    submitted by    /u/Dubinko  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : devops</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Abusing Go's infrastructure]]></title>
-        <id>https://www.reddit.com/r/golang/comments/1d0h9wl/abusing_gos_infrastructure/</id>
-        <link href="https://www.reddit.com/r/golang/comments/1d0h9wl/abusing_gos_infrastructure/"/>
-        <updated>2024-05-25T17:41:59.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/samuelberthe  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : golang</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[A Hardware-Generated JSON CPU Test Suite for the NEC V20]]></title>
-        <id>https://www.reddit.com/r/EmuDev/comments/1d0h19h/a_hardwaregenerated_json_cpu_test_suite_for_the/</id>
-        <link href="https://www.reddit.com/r/EmuDev/comments/1d0h19h/a_hardwaregenerated_json_cpu_test_suite_for_the/"/>
-        <updated>2024-05-25T17:30:23.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/Glorious_Cow  
- [link]   [comments]]]></summary>
-        <author>
-            <name>Developing Emulators</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[I'm trying to learn coding but I'm not very motivated.]]></title>
-        <id>https://www.reddit.com/r/learnprogramming/comments/1d0g9ie/im_trying_to_learn_coding_but_im_not_very/</id>
-        <link href="https://www.reddit.com/r/learnprogramming/comments/1d0g9ie/im_trying_to_learn_coding_but_im_not_very/"/>
-        <updated>2024-05-25T16:54:02.000Z</updated>
-        <summary type="html"><![CDATA[For context, I'm 15 years old and have a sister in tech. She's been trying to get me to learn how to code because it pays well and she says it's fun. I don't see it that way though. 
- I took computer studies in school during my first semester, but the teacher I had was boring and made classes very uninteresting. Even though it was an open course, it was obvious that he expected us to know some code, and I knew nothing. His lessons were just written on pdfs, and he expected us to understand. Additionally, I found him to be quite unapproachable when it came to asking for help. All around me were coding geniuses, and I couldn't understand anything. It made the classes hell for me, and overall, it just distanced me from coding.
- A few weeks ago, I started to try to learn again by enrolling in the Harvard CS50 course on EdX. But I can't seem to find time to do it, and again, coding just doesn't seem interesting. Plus, I'm really burned out from school right now. The only motivation I have for coding is its pay. I want to like it and I want to learn, but I can't pick up on anything, and I still haven't developed an interest in it. 
- I really needed to get all of this off my chest, as my sister doesn't understand why I don't want to do it, and I'm just really stressed right now with exams coming up and schoolwork in general. 
- I really want to know if anybody was in a similar situation. 
- Thanks for reading all of this
-    submitted by    /u/yuzzy21  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : learnprogramming</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Entity and ado.net]]></title>
-        <id>https://www.reddit.com/r/csharp/comments/1d0g7vc/entity_and_adonet/</id>
-        <link href="https://www.reddit.com/r/csharp/comments/1d0g7vc/entity_and_adonet/"/>
-        <updated>2024-05-25T16:51:50.000Z</updated>
-        <summary type="html"><![CDATA[So am I correct in my understanding that entity is a framework which makes things easier however it runs on ado.net the same as how blazor runs asp.net? Is there any other key details I should know about what the difference between the two are? My understanding is that entity is used for crud apps and may be quicker than ado.net but a bit of less control.
-    submitted by    /u/coreyscv  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : csharp</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Atm simulator for project.]]></title>
-        <id>https://www.reddit.com/r/cpp_questions/comments/1d0g2cl/atm_simulator_for_project/</id>
-        <link href="https://www.reddit.com/r/cpp_questions/comments/1d0g2cl/atm_simulator_for_project/"/>
-        <updated>2024-05-25T16:44:41.000Z</updated>
-        <summary type="html"><![CDATA[So bottom line is I wanna develop a cpp program that use Database for the data of the Atm and has an interface but the thing is else that coding in simple cpp I don't know a single thing on how to connect it to a database and make its interface. I am truly lost. Everyone on YT is doing a different thing and its hella confusing.
-    submitted by    /u/Accomplished_Lynx753    to    r/cpp_questions  
- [link]   [comments]]]></summary>
-        <author>
-            <name>posts from cpp, cpp_questions</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Prototype of a Movement Shooter I'm Working On]]></title>
-        <id>https://www.reddit.com/r/godot/comments/1d0fqz7/prototype_of_a_movement_shooter_im_working_on/</id>
-        <link href="https://www.reddit.com/r/godot/comments/1d0fqz7/prototype_of_a_movement_shooter_im_working_on/"/>
-        <updated>2024-05-25T16:29:38.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/RetoRadial  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : godot</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Good way to integrate sharepoint into asp.net mvc app (c#).]]></title>
-        <id>https://www.reddit.com/r/csharp/comments/1d0fixz/good_way_to_integrate_sharepoint_into_aspnet_mvc/</id>
-        <link href="https://www.reddit.com/r/csharp/comments/1d0fixz/good_way_to_integrate_sharepoint_into_aspnet_mvc/"/>
-        <updated>2024-05-25T16:18:54.000Z</updated>
-        <summary type="html"><![CDATA[I want to access (read and write) data to our company's sharepoint site (document libraries for a start). We are a small company that uses the standard sharepoint that comes with M365. 
- The mvc app already uses the M365 authentication (AddMicrosoftIdentityWebApp) which is also the way to connect to sharepoint. So I thought, this should not be a problem...
- I've been digging around the internet for some time on how to integrate/access sharepoint from my app, and tried graphservice client without any luck. It is so hard to find good examples for my case, due the various versions of the technologies over time. So you spent hours with an example from the web just to learn that is does not work with .net core.
- Can you guys point me in the right direction on how to establish the connection to sharepoint? What technology should I use (graph, rest api). What works best for you?
-    submitted by    /u/mister832  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : csharp</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Compiling Libimobiledevice]]></title>
-        <id>https://www.reddit.com/r/C_Programming/comments/1d0fib1/compiling_libimobiledevice/</id>
-        <link href="https://www.reddit.com/r/C_Programming/comments/1d0fib1/compiling_libimobiledevice/"/>
-        <updated>2024-05-25T16:18:05.000Z</updated>
-        <summary type="html"><![CDATA[Libimobiledevice is a open source program Witten in c language. It can be installed on Mac using "brew install libimobiledevice". When brew does is installs precompiles bimaties for this and all it's dependencies. And these are linked with each other via information stored in .dylib files. But problem is that brew compiled code is outdated, and I need to recompile it each time using "brew install --head libimobiledevice". What my problem is that whenever I want to run this on another Mac I have to install all the dev tools and after that I can install it. I want a way to compile these ao whenever I copy binaries to another Mac they work out of the box. I have tried to understand how autogen.sh, make and make install work. But I am just succeeding in spinning my head. It will be very helpful if someone can leave a tip or point to resources I should look at.
-    submitted by    /u/mush130  
- [link]   [comments]]]></summary>
-        <author>
-            <name>C</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Rust is fun, but I feel like I'm missing something]]></title>
-        <id>https://www.reddit.com/r/rust/comments/1d0ffj9/rust_is_fun_but_i_feel_like_im_missing_something/</id>
-        <link href="https://www.reddit.com/r/rust/comments/1d0ffj9/rust_is_fun_but_i_feel_like_im_missing_something/"/>
-        <updated>2024-05-25T16:14:26.000Z</updated>
-        <summary type="html"><![CDATA[Hollo, Rustacians! 
- I'm a backend developer, and I mainly use Go. I had read the Rust Book multiple times before, as I find it be insightful and interesting. Last week I had some free time, so I decided to work on my first actual project in Rust. It was a simple HTTP server. 
- Overall, it was a fun experience. The type system is powerful. I felt at home with defining types and attaching methods to them. Enums are great as well. The Option type for gracefully handling null values and the Result type for more flexible error handling. It was satisfying to refactor my code to remove cloning or to use ? for early returns.
- Although, I found the compiler to be too much in the way. At some points, my speed grinded to a halt, trying to understand what I did wrong and how should I fix it. Granted, I'm new, and it's only natural to face such problems. But in many cases, I had to alter the solution I had in my mind to match what the compiler expected of me, which required so much mental energy. It was challenging in a fun way, but my productivity plummeted.
- Now that I'm fairly done with the project, it feels like I'm missing something about Rust. Surely, I'll continue to use it for my side projects, but I don't get the hype around it. What makes it so great? Is it just the challenge of writing more idiomatic code and constant refactoring, or is there something that Rust does that I'm not appreciating?
-    submitted by    /u/hossein1376  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : rust</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[The long-overdue problem coming for some people in Go 1.23]]></title>
-        <id>https://www.reddit.com/r/golang/comments/1d0f4t1/the_longoverdue_problem_coming_for_some_people_in/</id>
-        <link href="https://www.reddit.com/r/golang/comments/1d0f4t1/the_longoverdue_problem_coming_for_some_people_in/"/>
-        <updated>2024-05-25T16:00:31.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/skeeto  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : golang</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Equivalent of PEP-8 (or something similar) for C++?]]></title>
-        <id>https://www.reddit.com/r/cpp_questions/comments/1d0evjp/equivalent_of_pep8_or_something_similar_for_c/</id>
-        <link href="https://www.reddit.com/r/cpp_questions/comments/1d0evjp/equivalent_of_pep8_or_something_similar_for_c/"/>
-        <updated>2024-05-25T15:47:54.000Z</updated>
-        <summary type="html"><![CDATA[I'm talking about a style standard that's either endorsed by the standards committee or the vast majority of developers follow. Things like when should be camel case vs snake case vs all caps, indentation, when and where braces should be placed, line length, etc..
-    submitted by    /u/korkvid    to    r/cpp_questions  
- [link]   [comments]]]></summary>
-        <author>
-            <name>posts from cpp, cpp_questions</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[What am I doing wrong? Headfirst into C# (4th edition)]]></title>
-        <id>https://www.reddit.com/r/csharp/comments/1d0efih/what_am_i_doing_wrong_headfirst_into_c_4th_edition/</id>
-        <link href="https://www.reddit.com/r/csharp/comments/1d0efih/what_am_i_doing_wrong_headfirst_into_c_4th_edition/"/>
-        <updated>2024-05-25T15:26:21.000Z</updated>
-        <summary type="html"><![CDATA[​
- I renamed the grid to mainGrid already but it still gives me an error. I also have no idea what's wrong with the InitializeComponent(). It works fine when i start it
-    submitted by    /u/Juras_Dss  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : csharp</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Is this ListView clicking behaviour normal?]]></title>
-        <id>https://www.reddit.com/r/csharp/comments/1d0ebra/is_this_listview_clicking_behaviour_normal/</id>
-        <link href="https://www.reddit.com/r/csharp/comments/1d0ebra/is_this_listview_clicking_behaviour_normal/"/>
-        <updated>2024-05-25T15:21:14.000Z</updated>
-        <summary type="html"><![CDATA[I'm running .NET 4.8 WinForms Net Framework with an uptodate VS 2022 Version 17.10 on an uptodate Windows 11. I have a ListView with two columns and two rows and it's showing details view. I've set FullRowSelect = true and MultiSelect = false.
- I've got an event triggering on SelectIndexChanged. This is the code for the event handler.
- private void listView1_SelectedIndexChanged(object sender, EventArgs e)
- {
- var count= (listView1.SelectedIndices.Count);
- MessageBox.Show($"Count={count}");
- }
- Nothing else except the Form constructor which does InitilizeComponent as you'd expect.
- When I run it and first click a row it pops up a Count=1, as you'd expect. If I now click another row it pops up a Count=0 then when I close the MessageBox it immediately pops up a Count =1. I did not expect the Count=0. I also get the same behavious with SelectedItems.Count.
-    submitted by    /u/Flashy_Pool7709  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : csharp</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[My new game CHEFWARE just released on browser!]]></title>
-        <id>https://www.reddit.com/r/godot/comments/1d0e9cw/my_new_game_chefware_just_released_on_browser/</id>
-        <link href="https://www.reddit.com/r/godot/comments/1d0e9cw/my_new_game_chefware_just_released_on_browser/"/>
-        <updated>2024-05-25T15:18:01.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/GeckoMaster64  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : godot</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[How Python Compares Floats and Ints: Why It Can Give Surprising Results]]></title>
-        <id>https://www.reddit.com/r/programming/comments/1d0e2jv/how_python_compares_floats_and_ints_why_it_can/</id>
-        <link href="https://www.reddit.com/r/programming/comments/1d0e2jv/how_python_compares_floats_and_ints_why_it_can/"/>
-        <updated>2024-05-25T15:08:56.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/FoxInTheRedBox  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : programming</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Jobs in c++]]></title>
-        <id>https://www.reddit.com/r/cpp/comments/1d0ds76/jobs_in_c/</id>
-        <link href="https://www.reddit.com/r/cpp/comments/1d0ds76/jobs_in_c/"/>
-        <updated>2024-05-25T14:55:14.000Z</updated>
-        <summary type="html"><![CDATA[I’m at my first job, already a year in. I’m currently not liking it. I just don’t like that they don’t use stls or even c++ features and instead it’s mostly written like c++98 or C really. I like working in c++, python, and even rust. How are the opportunities in those languages, especially in c++? 
-    submitted by    /u/DankMagician2500    to    r/cpp  
- [link]   [comments]]]></summary>
-        <author>
-            <name>posts from cpp, cpp_questions</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Who's hiring right now? (US markets)]]></title>
-        <id>https://www.reddit.com/r/devops/comments/1d0dp6d/whos_hiring_right_now_us_markets/</id>
-        <link href="https://www.reddit.com/r/devops/comments/1d0dp6d/whos_hiring_right_now_us_markets/"/>
-        <updated>2024-05-25T14:51:09.000Z</updated>
-        <summary type="html"><![CDATA[Been out of market for sometime and applied few roles. But havent heard back from recruiting team yet. 
- Want to find out how the current DevOps market is right now? I know as a whole things are really slow, but some development roles are opening up a bit around the country.
- 🙋‍♂️
-    submitted by    /u/Acrobatic_Floor_7447  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : devops</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[The C++ Object Lifecycle | Basit Ayantunde]]></title>
-        <id>https://www.reddit.com/r/cpp/comments/1d0dp5g/the_c_object_lifecycle_basit_ayantunde/</id>
-        <link href="https://www.reddit.com/r/cpp/comments/1d0dp5g/the_c_object_lifecycle_basit_ayantunde/"/>
-        <updated>2024-05-25T14:51:07.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/pavel_v    to    r/cpp  
- [link]   [comments]]]></summary>
-        <author>
-            <name>posts from cpp, cpp_questions</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Fixing locale name error]]></title>
-        <id>https://www.reddit.com/r/cpp_questions/comments/1d0dowm/fixing_locale_name_error/</id>
-        <link href="https://www.reddit.com/r/cpp_questions/comments/1d0dowm/fixing_locale_name_error/"/>
-        <updated>2024-05-25T14:50:46.000Z</updated>
-        <summary type="html"><![CDATA[I'm trying to imbue a locale like this:
- std::cout.imbue(std::locale("en_US.utf8"));
- But I keep getting this error:
- locale::facet::_S_create_c_locale name not valid
- I've tried other locale names like en_US, en-US, en_US.UTF-8, en_US.UTF8 but the error persists.
- Also I've previously used
- infile.imbue(std::locale("en_US.UTF8"));
- in another project (infile here is an std::wifstream), and it worked fine.
- How can I fix this?
- Edit: I'm on Windows
-    submitted by    /u/Outdoordoor    to    r/cpp_questions  
- [link]   [comments]]]></summary>
-        <author>
-            <name>posts from cpp, cpp_questions</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Apparently the Amish use what looks like an old Linux version with their personally built computers to be cut off from the internet or indeed any cooperation.]]></title>
-        <id>https://www.reddit.com/r/linux/comments/1d0dh5f/apparently_the_amish_use_what_looks_like_an_old/</id>
-        <link href="https://www.reddit.com/r/linux/comments/1d0dh5f/apparently_the_amish_use_what_looks_like_an_old/"/>
-        <updated>2024-05-25T14:40:13.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/Suitedbadge401  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : linux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[My own implementation of Conway's Game of Life written in C with SDL2]]></title>
-        <id>https://www.reddit.com/r/C_Programming/comments/1d0dey3/my_own_implementation_of_conways_game_of_life/</id>
-        <link href="https://www.reddit.com/r/C_Programming/comments/1d0dey3/my_own_implementation_of_conways_game_of_life/"/>
-        <updated>2024-05-25T14:37:17.000Z</updated>
-        <summary type="html"><![CDATA[https://reddit.com/link/1d0dey3/video/jjwfp3wz1l2d1/player
- Looks pretty cool, so I thought I'd share it here
- Repo: https://github.com/ndr3www/game-of-life
-    submitted by    /u/ndr3www  
- [link]   [comments]]]></summary>
-        <author>
-            <name>C</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[How to uninstall a package from a metapackage without uninstalling the metapackage itself?]]></title>
-        <id>https://www.reddit.com/r/debian/comments/1d0dejf/how_to_uninstall_a_package_from_a_metapackage/</id>
-        <link href="https://www.reddit.com/r/debian/comments/1d0dejf/how_to_uninstall_a_package_from_a_metapackage/"/>
-        <updated>2024-05-25T14:36:43.000Z</updated>
-        <summary type="html"><![CDATA[I'm trying to do a minimal Gnome install, so I installed gnome-core. However it includes a few packages I don't care about, such as totem, gnome-sushi, yelp. But uninstalling those also tries to uninstall gnome-core.
- My first thought was to create a new deb package called gnome-core-overrides that includes those 3 packages in the "provides" field, but that didn't work. Neither did including it in the "replaces" field. This reddit comment implies this is possible, but it's not working for me. I also followed the steps from this tutorial.
- I also tried creating blank packages called totem, gnome-sushi, yelp, but when installing them, apt tries to be smart and tells me it's going to install the repo version rather than my local .deb file. I didn't try installing it directly with dpkg though, maybe that's worth a try (but even then, this wouldn't be my preferred way since then I would have to create a dummy deb for each package I don't want).
-    submitted by    /u/that_leaflet  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : debian</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Run loop until stream's end is reached]]></title>
-        <id>https://www.reddit.com/r/csharp/comments/1d0de57/run_loop_until_streams_end_is_reached/</id>
-        <link href="https://www.reddit.com/r/csharp/comments/1d0de57/run_loop_until_streams_end_is_reached/"/>
-        <updated>2024-05-25T14:36:08.000Z</updated>
-        <summary type="html"><![CDATA[I'm writing a library to decode a file format, and I need to run a loop until the end of a file is reached. Only answers I can find for knowing when a stream's end is reached is related to NetworkStreams, but I'm working with a FileStream, and none of the answers seem to work with the base Stream class. I would assume there's some way to know when no more data can be read from a file.
-    submitted by    /u/TinyDeskEngineer06  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : csharp</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Can someone confirm if my understanding of structs is correct: A struct by itself isn't a type right?]]></title>
-        <id>https://www.reddit.com/r/golang/comments/1d0dbc6/can_someone_confirm_if_my_understanding_of/</id>
-        <link href="https://www.reddit.com/r/golang/comments/1d0dbc6/can_someone_confirm_if_my_understanding_of/"/>
-        <updated>2024-05-25T14:32:11.000Z</updated>
-        <summary type="html"><![CDATA[I'm trying to wrap my head around the idea of struct types. I want to clarify something: a struct alone isn't a type, right? Just like how there's no array type but there is the int array of size one type or the string array of size two type and so on. For so long I've been thinking that a struct is a type and then there's just different versions of it... and yeah these might be their own types but it was never a conscious thought in my mind... they both just blurred together.
- Here, https://imgur.com/a/UTUpZcN we can see that I've got the part highlighted. I'm declaring it in the long var way just to be clear about how the type is on the left of equals and the literal is on the right. The type sentient is simply a named type for that struct. But of course this makes a whole new type. Just like how I can have two floats be different types (one Celsius and another Fahrenheit) to keep them conceptually different. They couldn't be combined. But really this is a convenience... structs in the end are all unique types based on the properties given... right?
-    submitted by    /u/HighOptical  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : golang</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[using hibernate mapping file for avoiding the creation of JPA entities classes, is a good idea?]]></title>
-        <id>https://www.reddit.com/r/java/comments/1d0d287/using_hibernate_mapping_file_for_avoiding_the/</id>
-        <link href="https://www.reddit.com/r/java/comments/1d0d287/using_hibernate_mapping_file_for_avoiding_the/"/>
-        <updated>2024-05-25T14:19:40.000Z</updated>
-        <summary type="html"><![CDATA[Hi people, I recently saw some code that use hibernate mapping file, for mapping their domain entity directly without creating a JPA entity and I thought that was awesome.
- So here my question is a good idea use the old XML files for that?
- I think that is awesome but you are forced to use XML for that configuration.
-    submitted by    /u/Dense_Age_1795  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : java</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Getting a lot of crackling on my audio interface since the last pipewire update.]]></title>
-        <id>https://www.reddit.com/r/archlinux/comments/1d0cy4x/getting_a_lot_of_crackling_on_my_audio_interface/</id>
-        <link href="https://www.reddit.com/r/archlinux/comments/1d0cy4x/getting_a_lot_of_crackling_on_my_audio_interface/"/>
-        <updated>2024-05-25T14:14:05.000Z</updated>
-        <summary type="html"><![CDATA[Here's the installed packages and versions:
- local/gst-plugin-pipewire 1:1.0.7-1 local/helvum 0.5.1-1 local/kpipewire 6.0.4-1 (plasma) local/libpipewire 1:1.0.7-1 local/libwireplumber 0.5.2-2 local/pipewire 1:1.0.7-1 local/pipewire-alsa 1:1.0.7-1 local/pipewire-audio 1:1.0.7-1 local/pipewire-jack 1:1.0.7-1 local/pipewire-pulse 1:1.0.7-1 local/pipewire-session-manager 1:1.0.7-1 local/qemu-audio-pipewire 9.0.0-1 local/wireplumber 0.5.2-2 
- I haven't tried low latency applications yet, but audio on youtube, and in games crackles. It didn't do that until this update...
- Anyone else have this issue? Any tips on dealing with it?
-    submitted by    /u/Veprovina  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : archlinux</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Report on variadic generics discussion at RustNL.]]></title>
-        <id>https://www.reddit.com/r/rust/comments/1d0coao/report_on_variadic_generics_discussion_at_rustnl/</id>
-        <link href="https://www.reddit.com/r/rust/comments/1d0coao/report_on_variadic_generics_discussion_at_rustnl/"/>
-        <updated>2024-05-25T14:00:30.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/CouteauBleu  
- [link]   [comments]]]></summary>
-        <author>
-            <name>top scoring links : rust</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[A roadmap on how I learnt C (+ x86-64 Assembly and OS Internals) from scratch]]></title>
-        <id>https://www.reddit.com/r/C_Programming/comments/1d0cn61/a_roadmap_on_how_i_learnt_c_x8664_assembly_and_os/</id>
-        <link href="https://www.reddit.com/r/C_Programming/comments/1d0cn61/a_roadmap_on_how_i_learnt_c_x8664_assembly_and_os/"/>
-        <updated>2024-05-25T13:59:00.000Z</updated>
-        <summary type="html"><![CDATA[submitted by    /u/dismalpenpen  
- [link]   [comments]]]></summary>
-        <author>
-            <name>C</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Is the output of this code defined?]]></title>
-        <id>https://www.reddit.com/r/cpp_questions/comments/1d0cbkc/is_the_output_of_this_code_defined/</id>
-        <link href="https://www.reddit.com/r/cpp_questions/comments/1d0cbkc/is_the_output_of_this_code_defined/"/>
-        <updated>2024-05-25T13:42:24.000Z</updated>
-        <summary type="html"><![CDATA[#include <iostream> using namespace std; struct node{ int size; node(int size) : size(size){} static const node nil; }; const node node::nil = node(0); template<const node* p_nil> bool is_nil(const node& l){ return &l == p_nil; } int main(){ cout << node::nil.size << '\n'; node some_node = node::nil; cout << is_nil<&node::nil>(some_node) << '\n'; cout << is_nil<&node::nil>(node::nil) << '\n'; return 0; } 
-    submitted by    /u/TopOccasion4144    to    r/cpp_questions  
- [link]   [comments]]]></summary>
-        <author>
-            <name>posts from cpp, cpp_questions</name>
         </author>
     </entry>
 </feed>
