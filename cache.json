@@ -6,6 +6,36 @@
       "siteUrl": "https://www.reddit.com/r/C_Programming/",
       "articles": [
         {
+          "id": "https://www.reddit.com/r/C_Programming/comments/1dpot9i/problem_with_printing_structures/",
+          "author": null,
+          "description": "So I wanted to print the information in a structure (seperate code, not this one, this is just an example), and in the first line I wanted to print the name of the structure variable? (I believe that is what it's called, I will point out what I'm talking about in the code, please correct me if I'm wrong)\n Code:\n #include <stdio.h> struct abcd{ int x; int y; int z; } m,n; // <--- These are what I mean when I say structure variables void printstructure(struct abcd random){ printf(\"%s: \", random); } int main(){ printstructure(m); return 0; } So obviously %s didn't work but it was worth a try, and I wanted to ask what should I write so that I can print the name of whichever structure variable gets passed to the funcion. Thanks \n    submitted by    /u/ARPlayz14  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/C_Programming/comments/1dpot9i/problem_with_printing_structures/",
+          "publishedOn": "2024-06-27T11:17:37.000Z",
+          "wordCount": null,
+          "title": "Problem with printing structures",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/C_Programming/comments/1dpn7ob/how_do_you_feel_about_this_arraylist/",
+          "author": null,
+          "description": "I have been playing around with data structures, and wanted to see if I could find a way to store copies of any type in an array list. The typical implementation that I see allocates as the underlying array an array of void pointers, but this has the limitation of only being able to store pointers. What if you wanted to populate a list with long longs created inside a loop? Those values would go out of scope after the loop terminates; you could malloc those values and store their pointers, but it would be nice to have the long longs all in a row in the underlying array.\n My solution has been to cast the underlying array (void *collection) to a char array (where each element is one byte), use that with the size of the element type to find the appropriate place in memory to store an incoming…",
+          "link": "https://www.reddit.com/r/C_Programming/comments/1dpn7ob/how_do_you_feel_about_this_arraylist/",
+          "publishedOn": "2024-06-27T09:34:56.000Z",
+          "wordCount": null,
+          "title": "How do you feel about this ArrayList implementation? Specifically, casting void* to char* in the underlying array",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/C_Programming/comments/1dpfq99/having_a_single_header_file_for_the_whole/",
+          "author": null,
+          "description": "I am writing a small application (not library) which will have maybe five or six different source `.c` files. What I normally see recommended is for each `.c` to have a corresponding header file, with one of the justifications being that it makes it clearer to see the overall functionality / interface at a glance. I am wondering your opinions on having a single `.h` file for the whole project which is shared by each `.c` file (so all that each source file does is `#include \"bigheader.h\"`. I was reading K & R and they suggested this approach for small projects too. To me this seems good when each `.h` file will only have a few functions and thus the corresponding big header will not be very large. Also the project is small enough that compilation times won't be a factor.\n Note: I am not asking about single header libraries, which is what my google searches showed when asking about this topic.\n    submitted by    /u/Logical_Ask_1194  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/C_Programming/comments/1dpfq99/having_a_single_header_file_for_the_whole/",
+          "publishedOn": "2024-06-27T01:51:26.000Z",
+          "wordCount": null,
+          "title": "Having a single header file for the whole application",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/C_Programming/comments/1dpebcd/notification_when_socket_send_queue_is_empty_in/",
           "author": null,
           "description": "Is there a way to be notified asynchronously (such as with a signal or by a syscall unblocking) when the outgoing send queue for a socket has been emptied? I would rather not poll it in a loop like I am doing currently:\n int remaining; do { usleep(100000); ioctl(socketfd, SIOCOUTQ, &remaining); } while (remaining > 0); \n Solutions that require superuser privileges or inject any kind of hook into the kernel with something like ftrace won't work.\n Note that SIOCOUTQ returns the sum of the number of bytes that have not been sent and the number of bytes that have been sent but not ACKed, thus polling the file descriptor with select et al is not sufficient. See here.\n    submitted by    /u/Impressive-Care-5914  \n [link]   [comments]",
@@ -3384,76 +3414,6 @@
           "wordCount": null,
           "title": "Making an apple pie from scratch on Windows - getting to C from the entrypoint without any imports",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/C_Programming/comments/1d2yd3m/should_i_start_my_programming_journey_in_c/",
-          "author": null,
-          "description": "I’ve taken a course in C programming 2 times and I failed both times. I don’t want to give up on programming though. What context am I missing to succeed in this field? What do I need to tackle first? How do I improve at programming? Please provide feedback.\n    submitted by    /u/N-4551-R  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/C_Programming/comments/1d2yd3m/should_i_start_my_programming_journey_in_c/",
-          "publishedOn": "2024-05-28T23:49:41.000Z",
-          "wordCount": null,
-          "title": "Should I start my programming journey in C?",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/C_Programming/comments/1d2xgrz/why_string_management_is_so_confusing_in_c/",
-          "author": null,
-          "description": "im just trying to :\n  \nread from a file\n store each charachter in a array (char)\n checks if its equal to a word,if its not,clean the array\n  \njust this,but when i clean it,it just bugs and it dont want to store any charachter now.\n am sorry if i am doing something wrong,im still learning ; )\n heres the code:\n #include <stdio.h> #include \"include/file_funcs.c\" #include <string.h> int main(){ FILE *fptr; fptr = fopen(\"test.txt\", \"r\"); int file_contents; char cur[50]; int i = 0; while(file_contents != 'e') { file_contents = fgetc(fptr); cur[i] = file_contents; if (file_contents == 'end'){ break; } printf(\"%s\\n\",cur); if ( (strcmp(cur,\"put(\") ) == 0){ printf(\"put(\"); } else { strcpy(cur,\"\"); } ++i; } fclose(fptr); return 0; } \n    submitted by    /u/Nyglue  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/C_Programming/comments/1d2xgrz/why_string_management_is_so_confusing_in_c/",
-          "publishedOn": "2024-05-28T23:08:42.000Z",
-          "wordCount": null,
-          "title": "Why string management is so confusing in C?",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/C_Programming/comments/1d2ozs8/multithreading_how_best_to_coordinate_ending/",
-          "author": null,
-          "description": "I tried to go a bit further with last week's project. Now, instead of all threads having to finish all of their work, I want to stop the others when one of them finds a solution and returns.\n So previously I didn't need any synchronisation, I could simply join all threads in any order in main because I would have to wait for all of them to finish anyway. But now I want to signal/message/abort/kill all the other threads when one of them returns. Because the threads are completely independent, I don't think I need any condition variables, mutexes or message queues. What I did is: have one global atomic bool running = true and set it to false in one thread when a solution is found. The other threads check for this condition in their inner loop (so, often) and return when it's false.\n This works, but is it the best solution? Polling the global bool so often seems wasteful, but is signalling/messaging a better option? And I'm not quite sure where to start. Install a signal handler on every thread?\n Single file source code at https://github.com/ednl/c/blob/master/tetrafind.c\n    submitted by    /u/ednl  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/C_Programming/comments/1d2ozs8/multithreading_how_best_to_coordinate_ending/",
-          "publishedOn": "2024-05-28T17:24:43.000Z",
-          "wordCount": null,
-          "title": "Multi-threading: how best to coordinate ending independent threads",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/C_Programming/comments/1d2n8v4/how_can_i_make_2_commands_repeat/",
-          "author": null,
-          "description": "I want to make a code in wich the output's background flashes with 2 colors For the colors, I know the command, but for the repeating i tried\n for(i=1;i<=25:i++) {system(\"color f0\"); system(\"color f5\")}\n but it just did the commands 1 by 1 very slowly once. I want it to go to both of them, flashing really fast.\n For everyone wondering why I shouldn't do something like\n system(\"color f0\"); system(\"color f5\"); system(\"color f0\"); system(\"color f5\"); system(\"color f0\"); system(\"color f5\"); system(\"color f0\"); system(\"color f5\"); system(\"color f0\"); system(\"color f5\")\n that, I don't want my code filled up with a spam and my teacher is gonna see this so I don't want him to go crazy about it. Please help! Thanks!\n    submitted by    /u/Pet_m1  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/C_Programming/comments/1d2n8v4/how_can_i_make_2_commands_repeat/",
-          "publishedOn": "2024-05-28T16:11:29.000Z",
-          "wordCount": null,
-          "title": "How can I make 2 commands repeat",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/C_Programming/comments/1d2kq5d/what_most_programming_courses_missed/",
-          "author": null,
-          "description": "For the beginners out there, where are most of online programming courses failing at? \n    submitted by    /u/Traditional-Top-1504  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/C_Programming/comments/1d2kq5d/what_most_programming_courses_missed/",
-          "publishedOn": "2024-05-28T14:24:20.000Z",
-          "wordCount": null,
-          "title": "What most programming courses missed",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/C_Programming/comments/1d2jj16/using_object_oriented_programming_on_c_is/",
-          "author": null,
-          "description": "the first time i read somewhere that i could use oop in c, i jumped from my desk and started reading and i found that it was far more intuitive and logic than any other \"oop native\" language i don't knowe it felt natural respect to other langauge. did you have the same experience? \n    submitted by    /u/cinghialotto03  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/C_Programming/comments/1d2jj16/using_object_oriented_programming_on_c_is/",
-          "publishedOn": "2024-05-28T13:30:14.000Z",
-          "wordCount": null,
-          "title": "using object oriented programming on C is beautiful",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/C_Programming/comments/1d2jifo/what_questions_would_you_ask_a_recent_grad_for_an/",
-          "author": null,
-          "description": "I have an interview coming up for a company that mostly uses C. I have been told to expect questions about C, testing the code, compilers, linux internals. The company provides consulting on system software performance so I'm also expecting some questions about that\n    submitted by    /u/Beautiful_Tip178  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/C_Programming/comments/1d2jifo/what_questions_would_you_ask_a_recent_grad_for_an/",
-          "publishedOn": "2024-05-28T13:29:27.000Z",
-          "wordCount": null,
-          "title": "What questions would you ask a recent grad for an interview",
-          "imageUrl": null
         }
       ]
     },
@@ -3462,6 +3422,96 @@
       "feedUrl": "https://www.reddit.com/r/cpp+cpp_questions/.rss",
       "siteUrl": "https://www.reddit.com/r/cpp+cpp_questions/",
       "articles": [
+        {
+          "id": "https://www.reddit.com/r/cpp/comments/1dppjkk/will_you_use_c26_rcu_library/",
+          "author": null,
+          "description": "View Poll\n    submitted by    /u/vickoza    to    r/cpp  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp/comments/1dppjkk/will_you_use_c26_rcu_library/",
+          "publishedOn": "2024-06-27T11:59:44.000Z",
+          "wordCount": null,
+          "title": "Will you use C++26 rcu library?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp/comments/1dpnoso/lifting_the_pipes_beyond_senderreceiver_and/",
+          "author": null,
+          "description": "submitted by    /u/wrng_    to    r/cpp  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp/comments/1dpnoso/lifting_the_pipes_beyond_senderreceiver_and/",
+          "publishedOn": "2024-06-27T10:07:22.000Z",
+          "wordCount": null,
+          "title": "Lifting the Pipes - Beyond Sender/Receiver and Expected Outcome",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp/comments/1dpnmt9/default_member_initializer_compiler_consistency/",
+          "author": null,
+          "description": "https://cpp.godbolt.org/z/bMvdzz86c\n    submitted by    /u/d1fferential    to    r/cpp  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp/comments/1dpnmt9/default_member_initializer_compiler_consistency/",
+          "publishedOn": "2024-06-27T10:03:37.000Z",
+          "wordCount": null,
+          "title": "Default member initializer compiler consistency shootout",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp_questions/comments/1dpm6ui/trying_to_understand_templates_some_questions/",
+          "author": null,
+          "description": "I want to make a cAdvRect class, which is an Advanced Rectangle class with Left, Top, Right and Bottom coordinates and various method to manipulate it like shrink, enlarge, move, center, rotate, scale, etc.\n The cAdvRect class will use cAdvPoint, which is a 2D coordinate (X,Y) with some added check and methods, and cAdvSize, which represents a 2D ... size (Width,Height) and has his methods.\n This all should works with int and double, which seems fairly straightforwaerd.\n But there's things i can't sort out:\n 1) How can i \"force\" that all these classes uses the same Type? So that if i use a cAdvRect<double> then i'll have cAdvSize and cAdvPoint using double as well?\n 2) If 1) is not possible, how should i write methods like:\n cAdvRect::CenterTo(const cAdvPoint Center)\n if cAdvRect and cAdvPoint uses different types?\n 3) How can i \"block\" unwanted types (as example, longlong or uint_8t)?\n Thanks\n    submitted by    /u/TheRedParduz    to    r/cpp_questions  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp_questions/comments/1dpm6ui/trying_to_understand_templates_some_questions/",
+          "publishedOn": "2024-06-27T08:21:06.000Z",
+          "wordCount": null,
+          "title": "Trying to understand Templates: some questions?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp_questions/comments/1dpjr11/c_to_rust_whats_it_like_what_to_avoid/",
+          "author": null,
+          "description": "As a challenge to myself before university, I’ve decided to try out a “C++ killer” (Rust). I’ve been learning C++ for about 3-4 years, and wanna expand my toolbox so to speak.\n I’m curious about other people’s experiences regarding this kind of transition. What should I avoid? Are there any thought patterns I should keep in mind? I’ve gone through most of the theoretical/practical beginner material, and want to have a more general grasp of what to expect.\n Thanks in advance!\n Note: I’m not stopping C++, I still have lots to learn, I’m actively learning both in tandem to improve my overall skills.\n    submitted by    /u/TabletPencil    to    r/cpp_questions  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp_questions/comments/1dpjr11/c_to_rust_whats_it_like_what_to_avoid/",
+          "publishedOn": "2024-06-27T05:33:21.000Z",
+          "wordCount": null,
+          "title": "C++ to Rust, what’s it like? What to avoid?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp_questions/comments/1dpjopu/namespace_level_constants_inline_constexpr_and/",
+          "author": null,
+          "description": "Hey all. I've been looking into the ways to create \"global\" (not truly global but in a namespace) constants. My understanding is that simply declaring something as const or constexpr is not enough, as const implies static, and therefore you can run into ODR violations if the address of such a constant is ever required.\n So from what I've read it seems that the preferable solution is to mark constants at the namespace level as inline constexpr, as this will cause the compiler to inline the constant value where-ever it is used, effectively eliminating the need to resolve symbol definition. For situations where constexpr is not available (such as std::map), or where inlining is not appropriate, the next best solution is to declare it as extern const and defining it in a single .cpp file. Additionally, if a constant is declared in used only in a single .cpp file, then it should be marked as static and/or wrapped in an annoymous namespace.\n How correct is this understanding? I've found it a bit confusing understanding how static and inline change meaning and function between namespace, class and function contexts. Have I understood what inline does correctly?\n    submitted by    /u/FernwehSmith    to    r/cpp_questions  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp_questions/comments/1dpjopu/namespace_level_constants_inline_constexpr_and/",
+          "publishedOn": "2024-06-27T05:29:13.000Z",
+          "wordCount": null,
+          "title": "Namespace level constants, `inline constexpr` and `extern const`",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp_questions/comments/1dpj2nb/very_very_simple_question_about_xmake/",
+          "author": null,
+          "description": "so my xmake file is like this I just started to using xmake litterally an hour ago and I searched on the internet and can't find the issue\n  target(\"MyLib\") set_kind(\"shared\") add_files(\"lib/source.cpp\") target(\"Learning_Xmake\") set_kind(\"binary\") add_deps(\"MyLib\") add_files(\"main.cpp\") \n it says\n \"LINK : fatal error LNK1104: cannot open file \"MyLib.lib\" \"\n it says MyLib.lib although it is supposed to be .dll and it is correctly generating the dll file but it tries to find the .lib file\n    submitted by    /u/_Noreturn    to    r/cpp_questions  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp_questions/comments/1dpj2nb/very_very_simple_question_about_xmake/",
+          "publishedOn": "2024-06-27T04:51:30.000Z",
+          "wordCount": null,
+          "title": "،very very simple question about xmake",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp_questions/comments/1dphlw5/lvalue_and_dangling_pointer_errorswarnings/",
+          "author": null,
+          "description": "I need to read in an entire file into a string, which I do so like this:\n std::ifstream vertexShaderFile(vertexShaderFilePath); std::stringstream vertexShaderStream; vertexShaderStream << vertexShaderFile.rdbuf(); \n This works correctly. However, I then need to pass a const char** to an OpenGL function, glShaderSource(...). I tried the following:\n glShaderSource(..., ..., &vertexShaderStream.str().c_str(), ...); \n But this gives the following error: \"expression must be an lvalue or a function designator\". Why?\n Additionally, I tried the following:\n const char* vertexShaderSource = vertexShaderStream.str().c_str(); glShaderSource(..., ..., &vertexShaderSource, ...); \n But then the first line gives this error: \"The pointer is dangling because it points at a temporary instance which was destroyed.\" I'm not sure why this is either?\n I ended up with the following, is this the way it should be done?:\n std::ifstream vertexShaderFile(vertexShaderFilePath); std::stringstream vertexShaderStream; vertexShaderStream << vertexShaderFile.rdbuf(); vertexShaderFile.close(); std::string vertexShaderSourceString = vertexShaderStream.str(); const char* vertexShaderSource = vertexShaderSourceString.c_str(); // Create and compile vertex shader. unsigned int vertexShader = glCreateShader(GL_VERTEX_SHADER); glShaderSource(vertexShader, 1, &vertexShaderSource, nullptr); \n    submitted by    /u/UtahTeapots    to    r/cpp_questions  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp_questions/comments/1dphlw5/lvalue_and_dangling_pointer_errorswarnings/",
+          "publishedOn": "2024-06-27T03:28:55.000Z",
+          "wordCount": null,
+          "title": "Lvalue and Dangling Pointer Errors/Warnings",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cpp_questions/comments/1dpfqkm/what_can_i_do_with_c/",
+          "author": null,
+          "description": "So I recently decided to learn c++ using my phone for fun but now that Im quite far on the course that Im taking, I began to wonder what can I really do with c++ specially when Im using an android phone, so far I already made some simple text based program like currency converter, a simple scramble game, etc. You guys have any idea on what can I do? \n Tnx.\n    submitted by    /u/Turn_Outside    to    r/cpp_questions  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cpp_questions/comments/1dpfqkm/what_can_i_do_with_c/",
+          "publishedOn": "2024-06-27T01:51:53.000Z",
+          "wordCount": null,
+          "title": "What can I do with c++",
+          "imageUrl": null
+        },
         {
           "id": "https://www.reddit.com/r/cpp_questions/comments/1dpetlh/are_stdatomict_thread_safe_in_shared_memory/",
           "author": null,
@@ -9531,196 +9581,6 @@
           "wordCount": null,
           "title": "Compact data structure to store a variable consisting of several elements with \"non-basic\" size.",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/cpp/comments/1d2ysd9/memory_arenas_talk/",
-          "author": null,
-          "description": "Hi everyone, I found this in the C group on Reddit, and thought you may enjoy this talk as much as I did. What's particularly nice is the extensive Q&A at the end.\n https://www.rfleury.com/p/enter-the-arena-talk\n    submitted by    /u/multi-paradigm    to    r/cpp  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/cpp/comments/1d2ysd9/memory_arenas_talk/",
-          "publishedOn": "2024-05-29T00:09:30.000Z",
-          "wordCount": null,
-          "title": "Memory Arenas talk",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/cpp_questions/comments/1d2yeds/issues_with_compiling_qcustomplot/",
-          "author": null,
-          "description": "Hi,\n I came across some problems while writing a project using qcustomplot library. More specifically, the issues are related to compiling code.\n I started off writing code that used only Qt5, for which I had following CMake file:\n cmake_minimum_required(VERSION 3.10) project(FunctionPlotter) set(CMAKE_CXX_STANDARD 20) find_package(Qt5Widgets REQUIRED) find_package(Qt5Core REQUIRED) find_package(Qt5Gui REQUIRED) find_package(Qt5PrintSupport REQUIRED) add_executable(FunctionPlotter main.cpp CHFinding_app_window.cpp) target_link_libraries(FunctionPlotter Qt5::Widgets Qt5::Core Qt5::Gui Qt5::PrintSupport) \n Up to that point everything worked fine. However, when I added qcustomplot.h and qcustomplot.cpp files into the same working directory and modified CMake file like that:\n cmake_minimum_required(VERSION 3.10) project(FunctionPlotter) set(CMAKE_CXX_STANDARD 20) set(CMAKE_AUTOMOC ON) # added set(CMAKE_AUTOUIC ON) # added set(CMAKE_AUTORCC ON) # added find_package(Qt5Widgets REQUIRED) find_package(Qt5Core REQUIRED) find_package(Qt5Gui REQUIRED) find_package(Qt5PrintSupport REQUIRED) add_executable(FunctionPlotter main.cpp CHFinding_app_window.cpp) add_library(QCustomPlot qcustomplot.cpp qcustomplot.h) # added target_link_libraries(FunctionPlotter QCustomPlot Qt5::Widgets Qt5::Core Qt5::Gui Qt5::PrintSupport) # QCustomPlot added target_include_directories(FunctionPlotter PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}) # added \n I started getting an error saying: QtCore/qglobal.h - no such file or directory (relating to this line of code: #include <QtCore/qglobal.h>). This is even weirded considering that adding that line to main.cpp caused no issues at all.\n Does anyone know what could this issue stem from? ChatGPT was not rellay helpful, I found nothing on Stack and the official website does not have this issue discussed. \n    submitted by    /u/darealkrkchnia    to    r/cpp_questions  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/cpp_questions/comments/1d2yeds/issues_with_compiling_qcustomplot/",
-          "publishedOn": "2024-05-28T23:51:22.000Z",
-          "wordCount": null,
-          "title": "Issues with compiling qcustomplot",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/cpp_questions/comments/1d2xt80/protocol_buffer_error_gtfs/",
-          "author": null,
-          "description": "Option verification unknown error displays when running protoc --cpp_out=. gtfs-realtime.proto \n or \n protoc -I=. --cpp_out=. gtfs-realtime.proto gives the same error \n    submitted by    /u/Chemical-Rock6946    to    r/cpp_questions  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/cpp_questions/comments/1d2xt80/protocol_buffer_error_gtfs/",
-          "publishedOn": "2024-05-28T23:23:58.000Z",
-          "wordCount": null,
-          "title": "Protocol Buffer Error (gtfs)",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/cpp_questions/comments/1d2ucu5/returning_a_vectorthread_from_a_recursive_function/",
-          "author": null,
-          "description": "Hello everyone. I'm in the process of learning c++. I am fairly proficient at Rust, so I am trying to rewrite one of my personal scripts in c++ as a learning experience.\n The exact thing I am trying to do is recurse through a directory. For any files encountered that match a condition, I want to spawn a thread to do some work. (I am aware of how this can blow up, but for my small, limited application, the method works quite well.)\n I've implemented the c++ the same way I implemented the function in Rust, however I am getting a compiler error. Below is my code and the error. Thanks for your insight!\n vector<thread> recurse_and_spawn_thread(string dirname) { vector<thread > thread_vector; for (const auto & entry : std::filesystem::directory_iterator(dirname)) { auto fullpath = std::filesystem::absolute(entry.path()); if(entry.is_directory()) { auto more_threads = recurse_and_spawn_thread(fullpath); thread_vector.insert(thread_vector.end(), more_threads.begin(), more_threads.end()); } else if(entry.is_regular_file() && <SOME ADDITIONAL CONDITION>) { std::thread thread_object {do_work_function}; thread_vector.push_back(std::move(thread_object)); } } return thread_vector; } \n And the error (which, admittedly, I don't understand without google's help):\n /usr/include/c++/11/bits/stl_algobase.h:385:25: error: use of deleted function ‘std::thread& std::thread::operator=(const std::thread&)’ 385 | *__result = *__first; | ~~~~~~~~~~^~~~~~~~~~ \n Apparently this stems from trying to copy a thread object, but that is why I call std::move(thread_object) in the function.\n    submitted by    /u/planetoftheshrimps    to    r/cpp_questions  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/cpp_questions/comments/1d2ucu5/returning_a_vectorthread_from_a_recursive_function/",
-          "publishedOn": "2024-05-28T20:57:03.000Z",
-          "wordCount": null,
-          "title": "Returning a vector<thread> from a recursive function",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/cpp_questions/comments/1d2tgm6/print_the_names_of_the_months_using_a_locale_c17/",
-          "author": null,
-          "description": "Is there a standard way to print the names of the months given a particular locale, eg February for en_US but fevrier for fr_FR? I know I can do this in chrono in c++20 but I need to be able to do it in c++17. And yes I could import Howard Hinnant’s date library but I would prefer to use either std or at a pinch Linux specific function calls in order to minimise integration overhead. \n    submitted by    /u/bert8128    to    r/cpp_questions  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/cpp_questions/comments/1d2tgm6/print_the_names_of_the_months_using_a_locale_c17/",
-          "publishedOn": "2024-05-28T20:21:12.000Z",
-          "wordCount": null,
-          "title": "Print the names of the months using a locale - c++17",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/cpp_questions/comments/1d2qwwb/libc_deployment_on_macos/",
-          "author": null,
-          "description": "Xcode is paired with specific clang and libc++ versions on macOS (see \"Toolchain versions\" in https://en.wikipedia.org/wiki/Xcode), and deploying an application that uses a newer clang and libc++ than the one supported by Xcode is very hard or impossible - we can install a more recent llvm using homebrew or macports, but then deploying the universal libc++ binary for that is hard to do and might creating mismatches with the system libc++ in /usr/lib/libc++.1.dylib.\n However, you can develop an app on a more recent Xcode/libc++ and deploy to older OS's. Wouldn't this also break the application, since the app would use the libc++ deployed by the OS, located at /usr/lib/libc++.1.dylib? What am I missing here?\n    submitted by    /u/felipefarinon    to    r/cpp_questions  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/cpp_questions/comments/1d2qwwb/libc_deployment_on_macos/",
-          "publishedOn": "2024-05-28T18:42:11.000Z",
-          "wordCount": null,
-          "title": "libc++ deployment on macOS",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/cpp_questions/comments/1d2qtov/is_this_readable_enough/",
-          "author": null,
-          "description": "The other day I posted here asking about proper use of lambdas and put this for my example code. The main takeaway was that everyone said it was not clear/readable enough. u/squeasy_2202 was kind enough to provide me their more readable and optimized refactoring here on which I based this my latest version.\n Is my latest version readable enough?\n edit: I just realized that my concept of x,y coordinates has been reversed from the norm in every version I have done of this as of yet, oops :)\n    submitted by    /u/setdelmar    to    r/cpp_questions  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/cpp_questions/comments/1d2qtov/is_this_readable_enough/",
-          "publishedOn": "2024-05-28T18:38:35.000Z",
-          "wordCount": null,
-          "title": "Is this readable enough?",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/cpp_questions/comments/1d2qr75/fixing_dllimport_error/",
-          "author": null,
-          "description": "(Fixed by using wstrings instead of u16strings)\n I have a function that reads from a file. Initially it used std::stringstream for this, and everything worked fine, but then I switched to std::u16string, and changed the stream type to basic_stringstream<char16\\_t> accordingly. After that I started getting this error:\n Error C2491 'std::numpunct<_Elem>::id': definition of dllimport static data member not allowed\n What is causing this and how can I fix it?\n The whole function looks like this:\n std::basic_stringstream<char16_t> fcontents; std::ifstream file(path); fcontents << file.rdbuf(); contents = fcontents.str(); \n    submitted by    /u/Outdoordoor    to    r/cpp_questions  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/cpp_questions/comments/1d2qr75/fixing_dllimport_error/",
-          "publishedOn": "2024-05-28T18:35:47.000Z",
-          "wordCount": null,
-          "title": "Fixing dllimport error",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/cpp_questions/comments/1d2qecv/use_of_views_results_in_4x_the_number_of_assembly/",
-          "author": null,
-          "description": "I have two functions that more-or-less do the same thing and are called in exactly the same way: https://godbolt.org/z/o9Mhc9x4b. The function x() uses views to build out the result while the function y() uses containers to build out (essentially) the same result. You can switch between them by commenting/uncommenting lines 61 and 62.\n My hope was that the compiler would boil down x() and y() to the same instructions once the optimization-level gets turned up, but that doesn't seem to be the case. x() generates a lot more instructions than y() regardless of which optimization level you use: O2, O3, Os, and Ofast.\n Why doesn't the compiler compile these down to the same (or similar) instructions? Will I always be paying a penalty when I use chained views like this?\n    submitted by    /u/korkvid    to    r/cpp_questions  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/cpp_questions/comments/1d2qecv/use_of_views_results_in_4x_the_number_of_assembly/",
-          "publishedOn": "2024-05-28T18:21:33.000Z",
-          "wordCount": null,
-          "title": "Use of views results in 4x the number of assembly instructions?",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/cpp/comments/1d2p5ox/workflow_v0114_released_easier_to_express/",
-          "author": null,
-          "description": "It has been 2 years past since last post. So here let me add some background information here : Workflow is a C++ Parallel Computing and Asynchronous Networking Engine, which we have spent nearly 4 years developing and maintaining.\n Using C++ to better express concurrency semantics is the dream of every C++ developer. Workflow uses asynchronous tasks with simple interfaces and efficient internal resource management to combine the calculations and networks.\n Recently, it also supports selection semantics for concurrency, which can achieve correct branch processing and perfect resource recycling in concurrent scenarios. Hope you are interested.\n Reference: https://github.com/sogou/workflow/releases/tag/v0.11.4\n New Features\n  \nAdd WFSelectorTask.\n Support setting DNS message's records. Enable users to make a fully functional DNS server by using WFDnsServer.\n Enable setting specific SSL_CTX for each network task.\n WFMySQLConnection and WFKafkaClient enable setting a specific SSL_CTX.\n JSON parser adds 'json_value_copy()'.\n  \nImprovements\n  \nMore compatible with some rediculous HTTP server.\n Simplify Communicator's codes.\n  \nBug Fixes\n  \nFix bug when creating a client task with IPv6 address string.\n Fix kafka client bug when a broker is IPv6.\n Fix DNS parser potensial recursive bug.\n  \nYou may also refer to issues:FAQs for more interesting usages\n    submitted by    /u/liyingxin1412    to    r/cpp  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/cpp/comments/1d2p5ox/workflow_v0114_released_easier_to_express/",
-          "publishedOn": "2024-05-28T17:31:22.000Z",
-          "wordCount": null,
-          "title": "Workflow v0.11.4 Released, Easier to Express Selection Semantics by Asynchronous Tasks in Concurrency.",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/cpp_questions/comments/1d2oppp/help_i_cannot_use_boost_python_cannot_open_source/",
-          "author": null,
-          "description": "I installed boost using macports and all the libraries included are working fine except for boost-python. When I type \"python3.10-config --includes --libs\" into my terminal window this is the output:\n -I/Users/bradyburns/.pyenv/versions/3.10-dev/include/python3.10 -I/Users/bradyburns/.pyenv/versions/3.10-dev/include/python3.10 -lintl -ldl -L/Users/bradyburns/.pyenv/versions/3.10-dev/lib -Wl,-rpath,/Users/bradyburns/.pyenv/versions/3.10-dev/lib -L/opt/homebrew/lib -Wl,-rpath,/opt/homebrew/lib -framework CoreFoundation \n for more information that may be helpful, \"port contents boost\" outputs:\n Port boost contains: /opt/local/include/boost /opt/local/lib/libboost_atomic-mt.dylib /opt/local/lib/libboost_chrono-mt.dylib /opt/local/lib/libboost_container-mt.dylib /opt/local/lib/libboost_context-…",
-          "link": "https://www.reddit.com/r/cpp_questions/comments/1d2oppp/help_i_cannot_use_boost_python_cannot_open_source/",
-          "publishedOn": "2024-05-28T17:13:11.000Z",
-          "wordCount": null,
-          "title": "Help! I cannot use Boost python - cannot open source file \"pyconfig.h\" (dependency of \"boost/python.hpp\")",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/cpp_questions/comments/1d2o8g5/preparing_for_written_exam/",
-          "author": null,
-          "description": "I am writing a c++ exam in a few days, written. I would like help on how to remember the stl containers and how to use them with smart pointers to objects of custom classes. I don't know which of the containers will be examined, I've mastered maps, vectors, and sets. Is there any advice for how to learn and remember the other containers? Or any other advice for c++ written exams? \n    submitted by    /u/Different_Primary253    to    r/cpp_questions  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/cpp_questions/comments/1d2o8g5/preparing_for_written_exam/",
-          "publishedOn": "2024-05-28T16:52:58.000Z",
-          "wordCount": null,
-          "title": "Preparing for written exam.",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/cpp_questions/comments/1d2nzy2/where_to_start/",
-          "author": null,
-          "description": "Hi All,\n I'm sure you're probably thinking, \"Oh, great, another beginner.\" Or not, tis fine too. I shall spare you the boring details! I am just starting to embark on the journey of learning c++, it is going to be for a project for someone who has, for lack of better words, given up on a dream. I will not, and do not expect to be paid for this, I simply... want to give it my best shot, if it benefits me in any other way, cool. If not, at least I got to help someone realize it's never too late to try and make your dreams come true. SO...\n TLDR:\n Where is the best place to start? I have tried grasshopper, enjoyed it but got only about 45 exercises in until someone basically said it wasn't going to help. Suggestions? Advice? TYSM in advance :)\n    submitted by    /u/Charming-Mix5057    to    r/cpp_questions  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/cpp_questions/comments/1d2nzy2/where_to_start/",
-          "publishedOn": "2024-05-28T16:42:54.000Z",
-          "wordCount": null,
-          "title": "Where to start :)",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/cpp_questions/comments/1d2n8z6/reading_images/",
-          "author": null,
-          "description": "I'm new to cpp and I'm trying to make a small project that will take an image path as input, read that image and return to me the base colors of it.\n I'm wondering what should I use to read the image for small project like this?\n I looked into OpenCV and it seems very large for my small project so I wasn't sure if I should stick with it or not.\n Edit: The files I'm trying to read is the basic image types like jpeg jpg png or webp\n    submitted by    /u/LuayKelani    to    r/cpp_questions  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/cpp_questions/comments/1d2n8z6/reading_images/",
-          "publishedOn": "2024-05-28T16:11:38.000Z",
-          "wordCount": null,
-          "title": "Reading Images",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/cpp_questions/comments/1d2n692/trying_to_understand_addressof_operator_returning/",
-          "author": null,
-          "description": "I am trying to comprehend the C++ Primer 5th Edition page 135 where it says:\n  \naddress-of operator requires an lvalue operand and returns a pointer to its operand as an rvalue.\n  \nNow, I know that the address-of operator returns the address of a variable, reading up the [docs](https://learn.microsoft.com/en-us/cpp/cpp/address-of-operator-amp?view=msvc-170) says that what is being returned is actually a pointer to the variable. So for example:\n int ivar = 10; int* p = &ivar; \n Can I understand this as:\n  \naddress-of operator gets the address of ivar and creates a temporary pointer to the variable\n temporary pointer is assigned to p which copies over the values of the temporary pointer, which is the memory address?\n we are using the values of the temporary pointer (the memory address it points to) rather than the object's identity (its location in memory) - referring to the temp pointer; so that is why the returned temp pointer is an rvalue?\n  \n   submitted by    /u/SeanTYH    to    r/cpp_questions  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/cpp_questions/comments/1d2n692/trying_to_understand_addressof_operator_returning/",
-          "publishedOn": "2024-05-28T16:08:33.000Z",
-          "wordCount": null,
-          "title": "Trying to understand address-of operator returning a pointer as rvalue",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/cpp_questions/comments/1d2lv2o/cant_seem_to_statically_link_stdlib/",
-          "author": null,
-          "description": "I am runing \n g++-14 -c -g2 -static -Wall -static -static-libstdc++ algos.cpp -o algos.o\n and I then get all kinds of linker error aginst stdlib when doing \n gcc -g2 test_turing.c user_gene.o algos.o -o test_turing\n no idea why it insists on doing this I cant get it to just not link stdlib\n    submitted by    /u/rejectedlesbian    to    r/cpp_questions  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/cpp_questions/comments/1d2lv2o/cant_seem_to_statically_link_stdlib/",
-          "publishedOn": "2024-05-28T15:13:00.000Z",
-          "wordCount": null,
-          "title": "cant seem to statically link stdlib...",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/cpp_questions/comments/1d2kuu2/c_how_to_make_nonenglish_text_work_in_windows/",
-          "author": null,
-          "description": "If special characters ø, ¿, á or similars don’t display correctly then you’re probably using Windows.\n Many ask about this, so I wrote up a 5 point how-to:\n  \nHow to display non-English characters in the console.\n How to format fixed width fields (regardless of Windows/*nix/whatever platform).\n How to input non-English characters from the console.\n How to get the main arguments UTF-8 encoded.\n How to make std::filesystem::path (do the) work.\n  \nThere are explanations and C++ code examples, but intentionally almost no cookbook recipes.\n    submitted by    /u/alfps    to    r/cpp_questions  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/cpp_questions/comments/1d2kuu2/c_how_to_make_nonenglish_text_work_in_windows/",
-          "publishedOn": "2024-05-28T14:30:09.000Z",
-          "wordCount": null,
-          "title": "C++ how to — make non-English text work in Windows.",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/cpp/comments/1d2kcia/accepting_presentation_proposals_for_c_boston/",
-          "author": null,
-          "description": "Presentation proposals are open for C++ Boston Group!\n We are accepting presentation proposals for future meetups! Do you have something awesome to share? Best practices that you feel others may benefit from? Please submit your proposal below and we will take it into consideration for upcoming meetups!\n https://forms.gle/uSXitfPWBzV525NR9\n    submitted by    /u/cpp_ug_boston    to    r/cpp  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/cpp/comments/1d2kcia/accepting_presentation_proposals_for_c_boston/",
-          "publishedOn": "2024-05-28T14:07:51.000Z",
-          "wordCount": null,
-          "title": "Accepting presentation proposals for C++ Boston Meetup",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/cpp_questions/comments/1d2k5ox/people_who_program_on_c_what_is_it_like/",
-          "author": null,
-          "description": "I program on Python. I have been thinking about learning C++ just because I am very curious to learn it. What is it like to program on it? Why do you like it? What kind of programs do you usually build with it?\n Interested to hear personal opinions, and not textbook definition.\n    submitted by    /u/AthanmichPC    to    r/cpp_questions  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/cpp_questions/comments/1d2k5ox/people_who_program_on_c_what_is_it_like/",
-          "publishedOn": "2024-05-28T13:59:55.000Z",
-          "wordCount": null,
-          "title": "People who program on C++, what is it like?",
-          "imageUrl": null
         }
       ]
     },
@@ -9729,6 +9589,16 @@
       "feedUrl": "https://www.reddit.com/r/golang/top/.rss?t=week",
       "siteUrl": "https://www.reddit.com/r/golang/top/?t=week",
       "articles": [
+        {
+          "id": "https://www.reddit.com/r/golang/comments/1dpfz28/a_silly_mistake_that_i_made_with_ioteereader/",
+          "author": null,
+          "description": "submitted by    /u/scriptnull  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/golang/comments/1dpfz28/a_silly_mistake_that_i_made_with_ioteereader/",
+          "publishedOn": "2024-06-27T02:03:27.000Z",
+          "wordCount": null,
+          "title": "A silly mistake that I made with io.TeeReader",
+          "imageUrl": null
+        },
         {
           "id": "https://www.reddit.com/r/golang/comments/1doycsa/periodic_reminder_have_a_look_at_the_new_to_go/",
           "author": null,
@@ -9747,6 +9617,16 @@
           "publishedOn": "2024-06-26T11:22:25.000Z",
           "wordCount": null,
           "title": "Is there a demand for Go developers with network programming skills?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/golang/comments/1dolj0j/message_queue_architecture_redis_vs_nats_vs/",
+          "author": null,
+          "description": "I have an existing web server with an internal message queue and worker process. It's all a single binary. A request comes in, the web server places it in the message queue (via channel), the worker picks up the job, processes it, etc.\n I also have a websocket that can be opened to listen to the status of a job and uses a simple, homegrown pubsub to update subscribers. When the worker changes the status, it announces the status updates over any websockets.\n It's a very straightforward architecture, clean code, and it works well.\n Now I have a couple of extra requirements:\n  \nSome workers will be running on remote machines and will need to be notified of new jobs, pick them up, process them, and update on completion. These workers will need to subscribe/register themselves to the central qu…",
+          "link": "https://www.reddit.com/r/golang/comments/1dolj0j/message_queue_architecture_redis_vs_nats_vs/",
+          "publishedOn": "2024-06-26T00:36:08.000Z",
+          "wordCount": null,
+          "title": "Message queue architecture - Redis, vs NATS, vs goroutines and websockets",
           "imageUrl": null
         },
         {
@@ -10978,26 +10858,6 @@
           "wordCount": null,
           "title": "zrok VPN - We added preview of VPN mode to zrok (Go-based open source p2p sharing platform)",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/golang/comments/1d2xjfw/where_do_you_guys_deploy_go_apps/",
-          "author": null,
-          "description": "I had the pleasure of working with Go for migrating one of our services to Go from Typescript. Project is done and all that, but where should I deploy it? I was looking at Vercel Functions because we already host most of our services there, but it didnt seem to quite work. Its a REST api.\n    submitted by    /u/Capable_Bad_4655  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/golang/comments/1d2xjfw/where_do_you_guys_deploy_go_apps/",
-          "publishedOn": "2024-05-28T23:11:56.000Z",
-          "wordCount": null,
-          "title": "Where do you guys deploy Go apps?",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/golang/comments/1d2q4r1/what_if_gomaxprocs_actual_cpu_cores/",
-          "author": null,
-          "description": "Suppose I have a 8 core machine and I do:\n runtime.GOMAXPROCS(100) \n This \"excessive\" P's will work, but they will spend MUCH more time idle, right? Because underlying M's will be starved.\n But they will still work, it's not that GOMAXPROCS > actual cpu cores doesn't create additional P's and (as consequence) M's. It does, that's just not effective, right?\n    submitted by    /u/urinabalerina  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/golang/comments/1d2q4r1/what_if_gomaxprocs_actual_cpu_cores/",
-          "publishedOn": "2024-05-28T18:10:43.000Z",
-          "wordCount": null,
-          "title": "What if GOMAXPROCS > actual cpu cores?",
-          "imageUrl": null
         }
       ]
     },
@@ -12205,26 +12065,6 @@
           "wordCount": null,
           "title": "Writing an NVMe Driver in Rust [PDF]",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/rust/comments/1d2z36w/2023_comparison_of_rust_cli_prompts_cliclack/",
-          "author": null,
-          "description": "submitted by    /u/sridcaca  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/rust/comments/1d2z36w/2023_comparison_of_rust_cli_prompts_cliclack/",
-          "publishedOn": "2024-05-29T00:23:51.000Z",
-          "wordCount": null,
-          "title": "[2023] Comparison of Rust 🦀 CLI Prompts: cliclack, dialoguer, promptly, and inquire",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/rust/comments/1d2qb9i/welcome_james_munns_to_the_leadership_council/",
-          "author": null,
-          "description": "submitted by    /u/ehuss  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/rust/comments/1d2qb9i/welcome_james_munns_to_the_leadership_council/",
-          "publishedOn": "2024-05-28T18:18:03.000Z",
-          "wordCount": null,
-          "title": "Welcome James Munns to the Leadership Council",
-          "imageUrl": null
         }
       ]
     },
@@ -12233,6 +12073,66 @@
       "feedUrl": "https://www.reddit.com/r/csharp/top/.rss?t=week%22",
       "siteUrl": "https://www.reddit.com/r/csharp/top/?t=week%22",
       "articles": [
+        {
+          "id": "https://www.reddit.com/r/csharp/comments/1dpp5ln/resources_to_learn_c_sharp/",
+          "author": null,
+          "description": "What are the resources as a beginner to learn c sharp? Can some provide some step by step approach to learn c sharp?\n    submitted by    /u/That_Molasses_1011  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/csharp/comments/1dpp5ln/resources_to_learn_c_sharp/",
+          "publishedOn": "2024-06-27T11:38:08.000Z",
+          "wordCount": null,
+          "title": "Resources to learn c sharp",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/csharp/comments/1dpoj19/getenumerator_for_a_bst/",
+          "author": null,
+          "description": "This is the right code for a Binary Search Tree GetEnumerator<T> function (using inorder transversal):\n private static IEnumerable<T> InorderTransversal(Node node) { if (node != null) { if (node.left != null) { foreach (var lvalue in InorderTransversal(node.left)) { yield return lvalue; } } yield return node.value; if (node.right != null) { foreach (var rvalue in InorderTransversal(node.right)) { yield return rvalue; } } } } \n I wonder, however, why this doesn't work:\n IEnumerator<T> foo(Node node) { if (node != null) { foo(node.left); yield return node.value; foo(node.right); } } \n Can someone explain both code examples to me?\n    submitted by    /u/MarinoAndThePearls  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/csharp/comments/1dpoj19/getenumerator_for_a_bst/",
+          "publishedOn": "2024-06-27T11:01:00.000Z",
+          "wordCount": null,
+          "title": "GetEnumerator for a BST",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/csharp/comments/1dpoda9/prevent_log_in_debug/",
+          "author": null,
+          "description": "I have a logger class and logs usage every time the tool is run. But I do not want to run the log method when I am in Debug mode. I don't want to set a variable and change it every time i need to push to Production. The code I have now looks like this:\n public static bool IsDebugMode { get { #if DEBUG return true; #else return false; #endif } } \n  \nIs this a good practice?\n  \n2, Is there a better way to manage this?\n    submitted by    /u/mshetty  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/csharp/comments/1dpoda9/prevent_log_in_debug/",
+          "publishedOn": "2024-06-27T10:51:21.000Z",
+          "wordCount": null,
+          "title": "Prevent Log in Debug",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/csharp/comments/1dpocd8/what_next_c_and_oop/",
+          "author": null,
+          "description": "I finished c# bascis and oop what next should i do ?\n    submitted by    /u/AdministrativeAsk371  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/csharp/comments/1dpocd8/what_next_c_and_oop/",
+          "publishedOn": "2024-06-27T10:49:53.000Z",
+          "wordCount": null,
+          "title": "What next c# and oop?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/csharp/comments/1dpo5sc/need_help_understanding_oop/",
+          "author": null,
+          "description": "I have the basic knowledge of inheritance and polymorphism and other OOP concepts my problem is I struggle with the actual architecture like what classes do I need which class should inherit from what class which method should be private and which should be public this kind of stuff, my question is how do you approach your project and decide which classes do you need and how to link them?\n    submitted by    /u/FlashFox_22  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/csharp/comments/1dpo5sc/need_help_understanding_oop/",
+          "publishedOn": "2024-06-27T10:38:24.000Z",
+          "wordCount": null,
+          "title": "Need help understanding OOP",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/csharp/comments/1dpmv01/best_way_to_bind_viewmodel_to_view_in_my_maui_app/",
+          "author": null,
+          "description": "I'm pretty new to C# and really new to MVVM. So far I'm hating MVVM but trying to power through. \n I added my ViewModels as services\n builder.Services.AddTransient<MainPageViewModel>();\n And then tried to add them to my code behind files\n public partial class MainPage : ContentPage { public MainPage(MainPageViewModel vm) { InitializeComponent(); BindingContext = vm; } } \n Doing this seems to give errors on my commands in my XAML though, \"No DataContext found for Binding SignInCommand\".\n If I do away with injecting my viewmodel and instead use this\n  <ContentPage.BindingContext> <vm:MainPageViewModel /> </ContentPage.BindingContext> \n This solves the error but would create new viewmodel every time the page is visited, correct? Is this an acceptable way to handle binding? \n    submitted by    /u/IshTing  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/csharp/comments/1dpmv01/best_way_to_bind_viewmodel_to_view_in_my_maui_app/",
+          "publishedOn": "2024-06-27T09:09:46.000Z",
+          "wordCount": null,
+          "title": "Best way to bind viewmodel to view in my MAUI app?",
+          "imageUrl": null
+        },
         {
           "id": "https://www.reddit.com/r/csharp/comments/1dpekf1/c_or_c/",
           "author": null,
@@ -16712,96 +16612,6 @@
           "wordCount": null,
           "title": "2D array with a negative starting point",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/csharp/comments/1d2wzi3/winform_error/",
-          "author": null,
-          "description": "This morning when I was designing in Form1.cs and suddenly this error appeared. \"SUDDENLY! \"\n Because I don't edit the code, just the design and then i got this.\n https://preview.redd.it/82meyc1nx83d1.png?width=1845&format=png&auto=webp&s=7a8c06131983d2abf3ac604fdadbb97951164b08\n    submitted by    /u/Kim-Thien-Lang  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/csharp/comments/1d2wzi3/winform_error/",
-          "publishedOn": "2024-05-28T22:47:57.000Z",
-          "wordCount": null,
-          "title": "Winform Error",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/csharp/comments/1d2s2ew/i_built_a_simply_commandline_tool/",
-          "author": null,
-          "description": "I call this tool AOs.\n Originally the project was written in Python but then later I changed to C#. I also started working this as a hobby project back in 2020.\n I kept some imaginary costumers in my mind and at first tried to create a more of a dummy-like CMD clone which couldn't do really anything but then it slowly turned into something that could actually do something.\n The goal of AOs is simple. To better customize command-line along with some basic features like syntax highlighliting and autocomplete suggestions.\n Currently it only supports windows.\n I would be really happy if anyone can rip apart the code and give me some feedback on the project and the code. I'm open for all criticism.\n NOTE: I once posted about it from my another account and it did got a lot of well deserved criticism, specially on its README so I've spent some time (not longer than I would like to admit) to rewrite the README.\n    submitted by    /u/SrijSriv211  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/csharp/comments/1d2s2ew/i_built_a_simply_commandline_tool/",
-          "publishedOn": "2024-05-28T19:28:40.000Z",
-          "wordCount": null,
-          "title": "I built a simply command-line tool.",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/csharp/comments/1d2r9d8/learning_c/",
-          "author": null,
-          "description": "What good website/course would be best if I wanted to start learning C# as a beginner? \n Are there some I should avoid and are there tips I should keep in mind while learning?\n    submitted by    /u/SpaceTheGrape  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/csharp/comments/1d2r9d8/learning_c/",
-          "publishedOn": "2024-05-28T18:56:07.000Z",
-          "wordCount": null,
-          "title": "Learning C#",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/csharp/comments/1d2q077/whats_new_in_c_13_enhanced_params_performance/",
-          "author": null,
-          "description": "submitted by    /u/almirvuk  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/csharp/comments/1d2q077/whats_new_in_c_13_enhanced_params_performance/",
-          "publishedOn": "2024-05-28T18:05:38.000Z",
-          "wordCount": null,
-          "title": "What's New in C# 13: Enhanced Params, Performance Boosts, and New Extension Types",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/csharp/comments/1d2prbr/long_running_aspnet_6_endpoint_hosted_in_iis_does/",
-          "author": null,
-          "description": "What it says on the title. Basically I'm running a pretty intensive process in a POST request. Takes about 10 minutes to complete. Looking at the database, I can see that a run of it finished, but then Postman (and .NET Framework 4.7 HttpClient) are still stuck waiting on a response. Not when I kick it off with curl though: I get the response with the summary of the run there.\n I tried running it in Postman with the exact same headers curl is using but no luck. Anything I can tweak in IIS to make this work? It's so strange that it works with curl.\n    submitted by    /u/AntiDyatlov  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/csharp/comments/1d2prbr/long_running_aspnet_6_endpoint_hosted_in_iis_does/",
-          "publishedOn": "2024-05-28T17:55:54.000Z",
-          "wordCount": null,
-          "title": "Long running ASP.NET 6 endpoint hosted in IIS does not respond with Postman or HttpClient, but it does with curl.",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/csharp/comments/1d2mlg0/c_wpf_is_using_exe_from_bindebug_folder_okay/",
-          "author": null,
-          "description": "Hi it's my first time creating and deploying an app and I'm wondering if it's Ok to just copy the Debug folder that contains all the DLL files and EXE file when installing application on the customer's PC. I'm wondering why I need to separately deploy the app when there's already exe file in the debug folder\n    submitted by    /u/Plastic-Ad5931  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/csharp/comments/1d2mlg0/c_wpf_is_using_exe_from_bindebug_folder_okay/",
-          "publishedOn": "2024-05-28T15:44:19.000Z",
-          "wordCount": null,
-          "title": "C# WPF is using Exe from bin/Debug folder okay?",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/csharp/comments/1d2m4du/db_query_in_the_catch_block/",
-          "author": null,
-          "description": "Hi,\n I would like to ask what do you think about this solution below?\n try\n { some code with \"write\" db operations }\n catch(CustomException ex)\n { call a db operation \"delete\" to clean the db up }\n I think it is a good simple solution but I was thinking about to make db operation in the catch not the best one.\n The other thing what is in my mind is to use a bool wasCustomException and set it in the catch block and making cleanup after the try-catch block.\n The bool wasCustomException solution is necessary if I would like to make the cleanup after the finally block if an exception occurred.\n Do you have any better solution ?\n    submitted by    /u/zsome  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/csharp/comments/1d2m4du/db_query_in_the_catch_block/",
-          "publishedOn": "2024-05-28T15:23:54.000Z",
-          "wordCount": null,
-          "title": "db query in the catch block ?",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/csharp/comments/1d2lrtv/newer_programmer/",
-          "author": null,
-          "description": "So, I’m newish to programming, even newer to C#. I have an idea for a project that is definitely out of my scope at the moment, but I’m kind of wondering exactly how hard it would be to do it. I want to build a terminal emulator. Something similar to HyperTerm or Windows Terminal, but with more built in customization features. Custom commands, custom UI, etc. \n So am I treading into ocean deep waters here? Or am I making it out to be harder than it is in my head? \n I know I have a lot to learn, but man it just seems like navigating a PC from the CLI can’t be the most difficult thing ever. \n    submitted by    /u/zakkmylde2000  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/csharp/comments/1d2lrtv/newer_programmer/",
-          "publishedOn": "2024-05-28T15:09:14.000Z",
-          "wordCount": null,
-          "title": "Newer Programmer",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/csharp/comments/1d2llzg/can_someone_review_my_first_aspnet_mvc_project/",
-          "author": null,
-          "description": "I wrote my first ASP.NET MVC project and now I am searching for a place where someone wants to check my project and tell me what can I improve.\n https://github.com/radoslawsmoronski/portfolio\n This is a dynamic portfolio with admin panel to change values, image and email functionality. More information in readme file in repository.\n Thank you for your review!\n    submitted by    /u/RadoslawSmoronski  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/csharp/comments/1d2llzg/can_someone_review_my_first_aspnet_mvc_project/",
-          "publishedOn": "2024-05-28T15:02:24.000Z",
-          "wordCount": null,
-          "title": "Can someone review my first ASP.NET MVC project?",
-          "imageUrl": null
         }
       ]
     },
@@ -16810,6 +16620,16 @@
       "feedUrl": "https://www.reddit.com/r/java/top/.rss?t=week%22",
       "siteUrl": "https://www.reddit.com/r/java/top/?t=week%22",
       "articles": [
+        {
+          "id": "https://www.reddit.com/r/java/comments/1dpowjk/hashtag_jakarta_ee_234/",
+          "author": null,
+          "description": "submitted by    /u/henk53  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/java/comments/1dpowjk/hashtag_jakarta_ee_234/",
+          "publishedOn": "2024-06-27T11:23:16.000Z",
+          "wordCount": null,
+          "title": "Hashtag Jakarta EE #234",
+          "imageUrl": null
+        },
         {
           "id": "https://www.reddit.com/r/java/comments/1dpbovh/improving_openjdk_scalar_replacement_part_2/",
           "author": null,
@@ -17789,16 +17609,6 @@
           "wordCount": null,
           "title": "Blazingly-fast serialization framework: Apache Fury 0.5.1 released",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/java/comments/1d2ottu/new_eclipse_temurin_openjdk_build_released/",
-          "author": null,
-          "description": "submitted by    /u/Active-Fuel-49  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/java/comments/1d2ottu/new_eclipse_temurin_openjdk_build_released/",
-          "publishedOn": "2024-05-28T17:17:56.000Z",
-          "wordCount": null,
-          "title": "New Eclipse Temurin OpenJDK Build Released",
-          "imageUrl": null
         }
       ]
     },
@@ -17808,6 +17618,16 @@
       "siteUrl": "https://www.reddit.com/r/cscareerquestions/top/?t=week",
       "articles": [
         {
+          "id": "https://www.reddit.com/r/cscareerquestions/comments/1dpatjv/bay_areas_tech_surge_has_slashes_salaries/",
+          "author": null,
+          "description": "Salaries are lower while cost of living keeps rising. Most affected are those less than 6 years experience and women. https://www.sfgate.com/tech/article/tech-salaries-down-layoff-surge-19541241.php#\n    submitted by    /u/Pigglewiggy  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cscareerquestions/comments/1dpatjv/bay_areas_tech_surge_has_slashes_salaries/",
+          "publishedOn": "2024-06-26T21:58:58.000Z",
+          "wordCount": null,
+          "title": "Bay Area’s Tech Surge Has Slashes Salaries",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/cscareerquestions/comments/1doy9ro/amazon_and_google_suspended_green_card/",
           "author": null,
           "description": "Link: https://www.businesstoday.in/nri/visa/story/amazon-google-halt-us-green-card-applications-for-immigrants-amid-layoffs-in-it-sector-428246-2024-05-04\n    submitted by    /u/coding_for_lyf  \n [link]   [comments]",
@@ -17815,6 +17635,16 @@
           "publishedOn": "2024-06-26T13:11:29.000Z",
           "wordCount": null,
           "title": "Amazon and Google suspended Green Card applications last month",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/cscareerquestions/comments/1doxlz9/when_i_ask_myself_so_what_about_what_ive_done_i/",
+          "author": null,
+          "description": "So I'm 4 YOE software engineer and thinking about looking for my next job soon. Some advice I've heard when describing your experience, is to answer the question \"So what?\" after you describe what you've accomplished. \"I worked on C# API.\" \"Okay, so what?\". I just feel like I have nothing under my belt that I can answer \"so what?\" with any real non-bullshit answer (Being measurable, etc). I've kinda been a ticket monkey for a lot of my job, and I'm currently working on a team that is life-supporting some shit before its sunsetted, so not the most dynamic and opportunity filled position. Any initiative I've taken has been on less technical stuff like trying to improve documentation. \n How do I escape the ticket monkey trap?\n    submitted by    /u/neverDiedInOverwatch  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/cscareerquestions/comments/1doxlz9/when_i_ask_myself_so_what_about_what_ive_done_i/",
+          "publishedOn": "2024-06-26T12:39:39.000Z",
+          "wordCount": null,
+          "title": "When I ask myself \"So what?\" about what I've done, I don't have a good answer.",
           "imageUrl": null
         },
         {
@@ -19045,56 +18875,6 @@
           "publishedOn": "2024-05-29T01:09:20.000Z",
           "wordCount": null,
           "title": "Cloud computing seems like a bigger threat to jobs",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/cscareerquestions/comments/1d2z9yt/all_these_new_gradsjuniors_are_dead_in_the_water/",
-          "author": null,
-          "description": "I can’t even imagine how on Earth any employer would ever hire a new grad/junior right now when they have a sizable amount of mid level and even senior engineers applying for those same jobs. \n By the time the job market gets better, these new grads will have a 2-5+ year long career gap.\n In any SWE/IT job, you have 2000 applications. 600 are international Indians/H1B/bootcampers/self taught who all stand no chance, 1000 are new grads/juniors, 300 are mid level engineers and 100 are seniors. Who in the right mind would hire some new grad who will take 12 months to bring up to speed on working in general? A lot of them have no work experience in general. \n Where will the new grads and juniors go? \n    submitted by    /u/ComputerTrashbag  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/cscareerquestions/comments/1d2z9yt/all_these_new_gradsjuniors_are_dead_in_the_water/",
-          "publishedOn": "2024-05-29T00:32:53.000Z",
-          "wordCount": null,
-          "title": "All these new grads/juniors are dead in the water in this market",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/cscareerquestions/comments/1d2x7fx/for_those_in_their_50s_and_60s_what_are_you_doing/",
-          "author": null,
-          "description": "So I worked my ass off to get into management. It's not for everyone and I've settled into a comfy position. Truthfully I'm tired of IT but it pays really well. I like leading a team and being more of a peoples manager as opposed to writing code nowadays. The allure of learning a new programming language or figuring out k8s isn't my thing anymore. I moved into management knowing this but also to sort of future proof my career because at 55 picking up a new skillset won't come as easy as it did when I was in my 20s or early 30s \n For those inching towards retirement age what are you guys doing nowadays? I don't strive to be a CTO, I'm happy as a middle manager but would love to work towards a position where I'm managing managers as opposed to ICs. What do I need to make myself marketable as I start to inch towards 50 (I'm 44).\n    submitted by    /u/NearbyImagination585  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/cscareerquestions/comments/1d2x7fx/for_those_in_their_50s_and_60s_what_are_you_doing/",
-          "publishedOn": "2024-05-28T22:57:48.000Z",
-          "wordCount": null,
-          "title": "For those in their 50s and 60s, what are you doing nowadays",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/cscareerquestions/comments/1d2p7lg/is_the_tech_job_market_actually_two_major_markets/",
-          "author": null,
-          "description": "Looking for insight into this. \n There seem to be two major classes of software devs in tech.\n  \nFAANG & former FAANG\n other\n  \nIn FAANG & former FAANG circles, we see people with TC $150K starting out, which then quickly grows to $300K and then tops out around $450K.\n In non-FAANG circles, it's more like $80K then $130k then $210k.\n I think a lot of the chaos and confusion in the market now is due to this.\n FAANG-class jobs have always been coveted, but now there is even more pressure.\n FAANG layoffs have FAANG staff all circulating and applying to the same small pool of companies which pay at FAANG levels. The cream of the crop are of course getting jobs at or above their previous TC, but \"middle of the pack\" staff aren't getting traction\n Non-FAANG are having a much harder time flipping from the \"other\" tech jobs into the \"FAANG & former FAANG\" pool since so many people already in those jobs are circulating & looking for them. \n FAANG and former FAANG may be taking paycuts and working the \"other\" jobs for a while, but I am pretty sure they would still be actively job hunting and working their networks to get a FAANG class job to get back their previous lifestyles.\n The overall effect is everyone is having trouble finding jobs that pay at or more than they were making before.\n So there is some impact on the non-FAANG markets as well. But predominantly what we have been seeing is FAANG-class job markets becoming extremely competitive, even when compared to how competitive they have always been, whereas the non-FAANG class jobs are somewhat more competitive but not nearly as much.\n If anyone has any research or thoughts on this I would love to see / hear it.\n    submitted by    /u/NormalUserThirty  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/cscareerquestions/comments/1d2p7lg/is_the_tech_job_market_actually_two_major_markets/",
-          "publishedOn": "2024-05-28T17:33:36.000Z",
-          "wordCount": null,
-          "title": "Is the \"tech job market\" actually two major markets?",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/cscareerquestions/comments/1d2ojar/what_are_the_mustread_computer_science_books/",
-          "author": null,
-          "description": "title.\n    submitted by    /u/Notalabel_4566  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/cscareerquestions/comments/1d2ojar/what_are_the_mustread_computer_science_books/",
-          "publishedOn": "2024-05-28T17:05:45.000Z",
-          "wordCount": null,
-          "title": "What are the \"must-read\" computer science books?",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/cscareerquestions/comments/1d2n6vl/i_am_on_the_verge_of_quitting_with_no_job_lined/",
-          "author": null,
-          "description": "I see these posts are common, but here I am.\n I work at big tech and make more money than I have ever imagined. However, like many big tech engineers I am overworked and miserable.\n  \nEvery daily standup its something new added onto my plate.\n Every oncall (one week every month) new things break that require hours of investigation to even start fixing.\n All our tech is propriety, none of the skills I am learning transfer anywhere.\n  \nWorst part is, I am the exception in my team. My team is full of f%*$*#*g coding prodigies. I just grinded leetcode and got lucky. They work long hours, but they always accomplish extra tasks every sprint. They lead meetings and propose new features.\n On paper my job is amazing. I get to work from home. Crazy benefits and stock compensation. I am just miserabl…",
-          "link": "https://www.reddit.com/r/cscareerquestions/comments/1d2n6vl/i_am_on_the_verge_of_quitting_with_no_job_lined/",
-          "publishedOn": "2024-05-28T16:09:15.000Z",
-          "wordCount": null,
-          "title": "I am on the verge of quitting with no job lined up. Why am I being pathetic?",
           "imageUrl": null
         }
       ]
@@ -20383,36 +20163,6 @@
           "wordCount": null,
           "title": "What are the most common/important language to learn as a software engineer?",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/csMajors/comments/1d2wpc1/how_can_a_swe_catch_up_to_a_doctor/",
-          "author": null,
-          "description": "A lot of people say that if a swe puts in the same effort in as a doctor, they will out earn a doctor in the long run. What exactly would the swe need to put this effort in for this to happen?\n    submitted by    /u/Flaky_Ratio  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/csMajors/comments/1d2wpc1/how_can_a_swe_catch_up_to_a_doctor/",
-          "publishedOn": "2024-05-28T22:35:13.000Z",
-          "wordCount": null,
-          "title": "How can a swe catch up to a doctor",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/csMajors/comments/1d2ramn/unemployed_newgrads_what_now_how_are_you_paying/",
-          "author": null,
-          "description": "Offer rescinded, no interviews. Looking to get a job to pay the bills while I prep for interviews and work on side projects. What is a laid-back job that would give me the flexibility I need? Salary is not important\n    submitted by    /u/festivelo  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/csMajors/comments/1d2ramn/unemployed_newgrads_what_now_how_are_you_paying/",
-          "publishedOn": "2024-05-28T18:57:31.000Z",
-          "wordCount": null,
-          "title": "Unemployed newgrads, what now? How are you paying your bills?",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/csMajors/comments/1d2kdr0/my_parents_are_forcing_me_to_get_degree_bachelors/",
-          "author": null,
-          "description": "To expand on this a bit more, I'm from a third world country and for people here anything that has to do with \"big money\" is the best and the only thing that one should follow/chase in their life. Some of my friends are very much into CS (according to them, this is the \"easiest\" science subject out there) and the parents of these friends discussed to my parents that studying CS in university (abroad) is the best way to earn a million dollars, every kid in the US or Europe is earning 6 figures and buying lamborghinis blah blah blah you get the point. My parents are shoving \"YOU MUST STUDY CS IN UNIVERSITY OR ELSE YOU'LL BE UNEMPLOYED WORKING MIN WAGE\" down my throat because I don't really enjoy or like CS and I don't want a degree on it.\n Why do I not like CS? Well, there's not too deep of …",
-          "link": "https://www.reddit.com/r/csMajors/comments/1d2kdr0/my_parents_are_forcing_me_to_get_degree_bachelors/",
-          "publishedOn": "2024-05-28T14:09:24.000Z",
-          "wordCount": null,
-          "title": "My parents are forcing me to get degree (bachelors) in CS at university FOR THE MONEY and I don't really enjoy/like computer science.",
-          "imageUrl": null
         }
       ]
     },
@@ -20889,6 +20639,36 @@
           "imageUrl": null
         },
         {
+          "id": "https://www.reddit.com/r/devops/comments/1dp16vj/tenurebased_pto_policies_seem_like_a_massive_red/",
+          "author": null,
+          "description": "If you're a company offering tenure-based PTO starting at two weeks and scaling up to four weeks after 15-20 years of service, you're only going to be hiring new graduates and middling experienced employees. You largely shut yourself off not only from the best employees, but also from the experience and lessons learned in the outside industry. Even if you hire high-quality entry-level employees and by some miracle several of them stick around for ten years, they're not going to be as productive as comparable employees with ten years of diverse work experience. And these policies which presumably are meant to retain employees are almost certainly only going to retain the lowest quality employees as the others can find gainful employment with dramatically better PTO (and almost invariably better pay) anywhere else in the industry. \n This has been my experience when I worked for a tenure-based PTO company fresh out of school, and this is why I regard tenure-based PTO policies as a massive red flag when applying for jobs--even if I was willing to take a huge pay cut and a huge PTO cut to work on interesting problems, I can be reasonably certain that I'm going to be working in a sub-par environment with wildly outdated software development tools and practices under management that is actively fostering that environment.\n I'm curious what others think--am I way off base? Or does this align with your experiences?\n    submitted by    /u/weberc2  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/devops/comments/1dp16vj/tenurebased_pto_policies_seem_like_a_massive_red/",
+          "publishedOn": "2024-06-26T15:20:39.000Z",
+          "wordCount": null,
+          "title": "Tenure-based PTO policies seem like a massive red flag",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/devops/comments/1doxejx/do_you_know_any_big_devops_projects/",
+          "author": null,
+          "description": "I'm a beginner and I want to learn by looking through the code of others more experienced than me to see how they approach things. Looking for something that combines kubernetes, cloud and CI/CD (basically lots of devops tools). Found a few projects on GitHub, but they're all too simple (nothing complex or advances, just scratching the surface).\n Do you know or have any big devops projects that I can take a look at? \n    submitted by    /u/Ok-Eggplant-707  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/devops/comments/1doxejx/do_you_know_any_big_devops_projects/",
+          "publishedOn": "2024-06-26T12:29:12.000Z",
+          "wordCount": null,
+          "title": "Do you know any big DevOps projects?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/devops/comments/1doi5ae/feeling_guilty_and_useless/",
+          "author": null,
+          "description": "A junior being given more and more responsibilities. I don’t usually respond back to pings immediately unless I’m sure of the answer. But it’s all blurring and trying to figure out when I should be taking vacation,how many days (week or two) , and how much is too much. \n I have 3/4 certs which I want to get to hit milestones but I am also expecting a baby boy soon in 6 months. How to keep work and life separate? \n What are you guys doing to stay on top of things, learning new things without feeling like a dumbass. At what point do you ask for help - currently stuck on something new to me but I’m sure trivial for others. Damn this feeling sucks lol, just looking for advice is it really - how the hell do you manage \n    submitted by    /u/nipaellafunk  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/devops/comments/1doi5ae/feeling_guilty_and_useless/",
+          "publishedOn": "2024-06-25T22:01:29.000Z",
+          "wordCount": null,
+          "title": "Feeling guilty and useless",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/devops/comments/1dofn9b/live_coding_interview_confused/",
           "author": null,
           "description": "So I just had the second round of interviews in the hiring process and it was really not what I was expecting… I was prepared to write something related to automation, pipelines, IaC but the first question was to write some code that I would expect that a SWE wouldn’t have trouble to come up with a solution. I ran out of time, and moved to the next problem which was a follow-up on the first. I tried really hard to write something and even tried to explain my approach to the problem, but no working code came out at the time. I let the interviewer know that this isn’t something that would be part of the day of a DevOps person and he even agreed but 🤷🏻‍♂️ I’m super sad now because I was really looking forward to work with these folks and I left the call with the feeling that I did horribly bad. That’s it, sorry. I just needed to vent :( \n    submitted by    /u/Ultima-Fan  \n [link]   [comments]",
@@ -20916,6 +20696,16 @@
           "publishedOn": "2024-06-25T11:25:09.000Z",
           "wordCount": null,
           "title": "great o'reilly ebook deal on humble bundle",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/devops/comments/1do0p9f/migrating_to_gitops_for_the_first_time/",
+          "author": null,
+          "description": "Currently, I've been doing the CD part in this traditional way: deploy the chart using Helm and combine the values either from files such as values-dev.yaml, values-prod.yaml etc. These files contained the secret and non secret data, the non secret data are just empty strings and they get \"injected\" during the pipeline run from the secret libraries such as Azure Pipelines Library. \n Pods have defined env vars or volumes and I inject the values into these from the values files using Helm syntax. \n I am now looking to migrate this towards the GitOps world, so once again I will have the Helm chart defined in the repo, but this time I will be deploying it using ArgoCD installed on my k8 cluster where the Hem chart is also going to be deployed. \n But I am now confused, how do I handle the secret values such as connection strings etc. which were before residing in the Azure Pipelines Library which was a part of pipeline. I can still use the files such as values-dev,yaml etc. because I can define them inside the ArgoCD CRD Application, but I can't inject the secret values into them anymore.\n Am I doing this wrong, do I need to totally change the approach and ditch this way of using value files and secret data injection.? If yes, what would be the correct GitOps approach then?\n    submitted by    /u/beskucnik_na_feru  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/devops/comments/1do0p9f/migrating_to_gitops_for_the_first_time/",
+          "publishedOn": "2024-06-25T08:04:56.000Z",
+          "wordCount": null,
+          "title": "Migrating to GitOps for the first time",
           "imageUrl": null
         },
         {
@@ -22117,16 +21907,6 @@
           "wordCount": null,
           "title": "Introducing Beta9 - Open Source Serverless GPU Container Runtime",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/devops/comments/1d2s336/what_do_you_use_at_your_org_azure_devops_or/",
-          "author": null,
-          "description": "I am working with a team of devs and we have been using GitHub teams for some time. In the beginning it was pretty good. But now it is not enough anymore. \n  \nThe team is not happy with the project management tools provided by GitHub.\n Resources for GitHub actions are not enough, we are exclusively using self-hosted runners. \n We are worried about GitHub packages and the storage limit set for it. \n Basically we are paying 4 USD per user just for version controlling.\n  \nTo all the devs working in organizations, what has your experience been like? Would you prefer working with Azure DevOps instead? \n Oh and if it helps, we use Azure for all our resource requirements. \n Thanks for your time!\n    submitted by    /u/Trainee_Ninja  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/devops/comments/1d2s336/what_do_you_use_at_your_org_azure_devops_or/",
-          "publishedOn": "2024-05-28T19:29:28.000Z",
-          "wordCount": null,
-          "title": "What do you use at your org? Azure DevOps or GitHub Team?",
-          "imageUrl": null
         }
       ]
     },
@@ -22135,6 +21915,36 @@
       "feedUrl": "https://www.reddit.com/r/ExperiencedDevs/top/.rss?t=week",
       "siteUrl": "https://www.reddit.com/r/ExperiencedDevs/top/?t=week",
       "articles": [
+        {
+          "id": "https://www.reddit.com/r/ExperiencedDevs/comments/1dpljdh/interviewers_thinking_you_dont_know_something/",
+          "author": null,
+          "description": "I had a 2nd round interview with a non-tech national brand recently. Interview seems to be going great, they have obscure needs and I happen to have experience in them all. Rapport is good and conversation is flowing. \n Anyways, throughout the interview I have been talking extensively about Postgres and other database related things as it’s a data engineering role. \n Eventually they ask me if I have experience with PSQL — they say it as this acronym. First I assume Postgres of course, but I have been talking about that the entire interview, why would they be asking that? I was unsure, so I asked for clarity on what they meant specifically and how it related to sql. Interviewer talks for a minute about how it’s a “batch data processing tool used to parse through chunks of data, as compared to regular sql.” At this point I am extremely confused, thinking it’s some type of 3rd party stored procedure tool. I respond that I’m afraid I do not have experience with this technology, although I do have experience with many tools that are similar.\n I go on and finish the interview talking extensively about Postgres use cases and functions. I mention Postgres by name multiple times. \n I get a call an hour later saying I was rejected for not knowing PSQL. It turns out they meant Postgres. 🤦‍♂️\n What do? \n    submitted by    /u/CourageNo9668  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/ExperiencedDevs/comments/1dpljdh/interviewers_thinking_you_dont_know_something/",
+          "publishedOn": "2024-06-27T07:33:17.000Z",
+          "wordCount": null,
+          "title": "Interviewers thinking you don’t know something because they can’t explain it themselves",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/ExperiencedDevs/comments/1dpj2ir/there_are_so_many_people_that_despise_coding_in/",
+          "author": null,
+          "description": "Just something I've noticed over the past 5ish years (I have 14 YOE). like over half of the young bucks legit seem to hate coding and software. These people have always been around but never in these numbers and it kinda worries me, tbh. Anyone else?\n    submitted by    /u/Khorvo  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/ExperiencedDevs/comments/1dpj2ir/there_are_so_many_people_that_despise_coding_in/",
+          "publishedOn": "2024-06-27T04:51:17.000Z",
+          "wordCount": null,
+          "title": "There are so many people that despise coding in the industry now",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/ExperiencedDevs/comments/1dpbgx1/i_suspect_i_may_be_pipd_is_it_a_mistake_to_admit/",
+          "author": null,
+          "description": "4 YOE at near-FAANG. I found out about a higher quota for PIPs for the mid-year performance review and my manager is suddenly acting suspicious, for example raising the profile of a small incident I caused and not giving me important work.\n BUT... I've already accepted another position to start in a few months* and was planning to leave my job in September anyway. Leaving now AND getting severance would be wonderful. I could travel and have time for self exploration.\n I would never admit that I'm leaving anyway, but in the event I get PIP'd, should I tell my manager that I'm OK with leaving without all the drama if I get severance? Or is it better to go through the motions?\n *Without going into detail, the time delay makes sense for the position in question.\n    submitted by    /u/ordinary_albert  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/ExperiencedDevs/comments/1dpbgx1/i_suspect_i_may_be_pipd_is_it_a_mistake_to_admit/",
+          "publishedOn": "2024-06-26T22:27:06.000Z",
+          "wordCount": null,
+          "title": "I suspect I may be PIP'd. Is it a mistake to admit I'm down to be laid off?",
+          "imageUrl": null
+        },
         {
           "id": "https://www.reddit.com/r/ExperiencedDevs/comments/1dp7k2x/experienced_developers_with_adhd_what_was_your/",
           "author": null,
@@ -23564,36 +23374,6 @@
           "wordCount": null,
           "title": "Experienced web dev team is going down a road that I don't think I agree with but I'm seemingly the only one",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/ExperiencedDevs/comments/1d2uipt/how_boneheaded_would_it_be_if_i_quit_my_job_for/",
-          "author": null,
-          "description": "35M here with 10+YOE in frontend. No kids. Wife is a stay at home dog mom.\n We have 50k liquid, 150k in HYSA, 300k in 401k, 300k in personal brokerage.\n I don't so much worry about going broke, it's obviously not ideal to plunder your savings and not have work sponsored health insurance (yay, 'merica), but I'm beyond ready for a break from the rat race. \n The weather is starting to get nice, but seemingly only when I'm working, not during weekends or holidays. My manager can not help themselves but to ping me nonstop throughout the day. All I want to do is my actual work, and I can never get it done. I'm sick of doing interviews for folks that we never hire even though half are qualified enough. A week of PTO is never enough to recharge. I know a new job won't fix the burnout I'm feeling.\n Yeah, I know this goes against the traditional knee-jerk advice. Never quit your job without another lined up. Just change teams or change jobs. Never quit. Always be employed. Why? As a millennial, I don't think I'll ever truly retire, so I can't help but wonder if taking mini \"retirements\" throughout my career is the best way to get the most out of life. \n I plan to not just put my feet up, but to work on side projects that I've made great progress on, but will probably never hit the market in time, since my W2 sucks the life and time out of me.\n I have to imagine some of you do this, or have done this. How did it work out? Yeah, the market isn't ideal, but is there ever a good time to do this (besides 2021)?\n    submitted by    /u/bestmankiller  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/ExperiencedDevs/comments/1d2uipt/how_boneheaded_would_it_be_if_i_quit_my_job_for/",
-          "publishedOn": "2024-05-28T21:03:27.000Z",
-          "wordCount": null,
-          "title": "How boneheaded would it be if I quit my job for the summer?",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/ExperiencedDevs/comments/1d2rtpq/what_are_some_mistakesmisconceptions_that_you/",
-          "author": null,
-          "description": "Let me clarify a bit. There are some obvious blunders that at some point all developers learn as mantras like \"global variables are bad\", \"eval is evil\" (jokingly), etc. Lame examples, I know, but the idea is that there are some obvious fallacies like N+1 queries that any experienced developer learns to deal with. \n However, there are some trickier ones that even more or less experienced devs either don't pay enough attention to or just are not aware of. One somewhat unexpected example is that some even pretty experienced (at least nominally) devs don't really understand how indexes work in Postgres/mysql. Some don't even really understand JOINs apart from the inner one. \n My personal source of shame is how I used deployed a service that repeatedly executes fat queries in BQ, but didn't really introduce any retries, backoffs and alerting. Needless to say, the queries turned out to be costly. \n What are your observations?\n    submitted by    /u/dondraper36  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/ExperiencedDevs/comments/1d2rtpq/what_are_some_mistakesmisconceptions_that_you/",
-          "publishedOn": "2024-05-28T19:18:45.000Z",
-          "wordCount": null,
-          "title": "What are some mistakes/misconceptions that you encounter even in experienced developers?",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/ExperiencedDevs/comments/1d2khv1/am_i_holding_back_team_velocity/",
-          "author": null,
-          "description": "Some context: we are working in a cross functional team. Another guy and I are focussing on backend development. I have about 5 YOE, the other developer 10+ years. Since I've started getting more comfortable in our code base i feel like I am holding back our Merge Request process by addressing various problems in my colleague's MRs. Sometimes the discussions go on for days or weeks before we come to a consensus. My personal feeling is that my colleague is sometimes very shortsighted in what he is developing and is focussing on solving symptoms instead of root causes. I prioritize code quality and try to enforce certain standard throughout our code base in order to make maintenance work easier. Should I trust my colleague's work more? I have no proof but I am quite certain that we would have had some production incidents already if I would have let every MR through without discussing them extensively. Should I let go of my ego?\n    submitted by    /u/DmMeUrRoesti  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/ExperiencedDevs/comments/1d2khv1/am_i_holding_back_team_velocity/",
-          "publishedOn": "2024-05-28T14:14:21.000Z",
-          "wordCount": null,
-          "title": "Am I holding back team velocity?",
-          "imageUrl": null
         }
       ]
     },
@@ -23603,6 +23383,26 @@
       "siteUrl": "https://www.reddit.com/r/gamedev/top/?t=week",
       "articles": [
         {
+          "id": "https://www.reddit.com/r/gamedev/comments/1dpjhe7/need_advice_for_sudden_rule_change_after_company/",
+          "author": null,
+          "description": "So the company I'm working at as a full time salaried employee with a contract (video game developer) was recently bought out by a larger company with an enormous portfolio spanning multiple media fields (this is relevant as you will soon see). As terms of my continued employment, I must sign an inventions clause saying this new company owns any invention I make of any form at any time during my employment (outside of work). Not just video games. Comic books. Movies. Recipes. Anything. I find this highly, comically unethical, so I am not going to sign. I was told if I don't sign, that will count as \"resigning\", which is BS because I'm not resigning.\n This matters because if I resign, I am not owed severance. But I am not resigning. In my mind, if they want my employment to end because I don't consent to such a draconian state being forced on me due to a purchase, then I think they should have to terminate me without cause and give severance.\n So my questions are:\n 1.) Are these types of clauses even enforceable? Really? ANYTHING I work on?\n 2.) Can they legally decide that I implicitly resign with some sort of trap card? This is like my opponent moving my piece in chess. How is that allowed? I'm not resigning; you can't just say that you interpret an action I don't take as resigning and make that legally count -- right?\n https://imgur.com/a/PeJA5ug\n    submitted by    /u/wallthehero  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/gamedev/comments/1dpjhe7/need_advice_for_sudden_rule_change_after_company/",
+          "publishedOn": "2024-06-27T05:16:10.000Z",
+          "wordCount": null,
+          "title": "Need advice for sudden rule change after company buy out",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/gamedev/comments/1dpd6wz/as_a_software_engineer_how_do_yall_find_the/",
+          "author": null,
+          "description": "I’ve been a software engineer in e-commerce for over 10 years.\n Every time I go to pick up game dev as a hobby, it always fizzles out due to never having energy by the end of the day. The “muscles” I’m using in my day job are the same I’m using to learn a new system/language/engine, and after a certain time of day they are just OFF. They’re done. No more.\n For my fellow experienced engineers who picked this up as a hobby, how did you do it while managing your day job?\n    submitted by    /u/azmiir  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/gamedev/comments/1dpd6wz/as_a_software_engineer_how_do_yall_find_the/",
+          "publishedOn": "2024-06-26T23:45:37.000Z",
+          "wordCount": null,
+          "title": "As a software engineer… how do y’all find the energy to *learn*?",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/gamedev/comments/1dp44ln/my_issue_with_the_all_engines_are_created_equal/",
           "author": null,
           "description": "When you first start learning game development, a lot of instructors will say that any engine is just as viable as any other for game development (aside from the extreme examples like Scratch, which are clearly just instructional tools.) To put it simply: I disagree. Engines, like any other tool, digital or physical, have their appropriate use cases, and I think it's important to describe this difference to newcomers before they end up picking the wrong tool for the wrong job. \n For example, the Unreal engine is miserable for students and indie game developers, for one very simple reason; it has the worst documentation I have ever seen from anything even slightly software-related. Forget comparing Unreal's documentation to Unity's or Godot's, I've had an easier time with the Win32 API and …",
@@ -23610,6 +23410,16 @@
           "publishedOn": "2024-06-26T17:19:55.000Z",
           "wordCount": null,
           "title": "My issue with the \"All engines are created equal\" belief",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/gamedev/comments/1doz3qh/if_you_were_to_recommend_only_1_book_on_game/",
+          "author": null,
+          "description": "i ust read the making of Prince of persia by the dev who made it. It was informative and helped gas me up to plug away more.\n I have credits to burn and figured I'd make it fun\n What reads have helped or have motivate you?\n I just read the making of Prince of persia by the dev who made it. It was informative and helped gassed me up to plug away at my own project. \n    submitted by    /u/GhoulArtist  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/gamedev/comments/1doz3qh/if_you_were_to_recommend_only_1_book_on_game/",
+          "publishedOn": "2024-06-26T13:50:38.000Z",
+          "wordCount": null,
+          "title": "If you were to recommend only 1 book on game design. What would it be?",
           "imageUrl": null
         },
         {
@@ -24861,26 +24671,6 @@
           "wordCount": null,
           "title": "How big is your game? (Code)",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/gamedev/comments/1d2yvth/currently_learning_unreal_after_working_with/",
-          "author": null,
-          "description": "Currently learning Unreal through online courses on Udemy. The first modules taught me Blueprints, now I'm at the first module that uses C++... and I must be missing something, because there's no way developpers work with those steps everytime they want to create a new class or make some change in their code??\n In Unity, creating a class goes like this:\n  \nRight click in Project > Create > C# Script\n \nEnter name\n \nYour class now exists.\n \n Meanwhile in Unreal (according to the course I'm following):\n  \nTools > New C++ Class\n \nChoose parent class\n \nEnter details\n \nTools > Refresh Visual Studio Code Project\n \nClose Unreal\n \nIn VS Code: Terminal > Run Build Task > ProjectNameEditor Win64 Development Build\n \nWait for it to compile\n \nReopen Unreal\n \nYour class now exists.\n \n Isn't that completely insane and unpractical? Or did the guy overly explain something that can be done in a much easier way?\n Thanks\n    submitted by    /u/BasuKun  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/gamedev/comments/1d2yvth/currently_learning_unreal_after_working_with/",
-          "publishedOn": "2024-05-29T00:14:05.000Z",
-          "wordCount": null,
-          "title": "Currently learning Unreal after working with Unity for yearts, am I crazy or are the steps to create a new class absolutely stupid?",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/gamedev/comments/1d2m09c/i_read_steams_marketing_docs_so_you_dont_have_to/",
-          "author": null,
-          "description": "Hhere is recap of Steam's article on marketing, so you'll understand how it works to sell your game there.\n Tl;dr\n  \n- Steam recommendations are based on time and money which determines interest, Steam doesn't forecast successes.\n \nCurated visibility is shown to everyone and is the best marketing tool, and yes you can ask Steam to get featured there once you've reached a certain popularity.\n \n- There are ways to improve your discoverability like managing your tags well, localization and regional pricing.\n \nDiscovery queue is the strongest lever you can activate prelaunch.\n \nWishlists numbers don't matter as much as you think.\n \n I'll go through the Steam's store possibilities first and then have a quick run down of Steam's advice on marketing (spoiler: nothing new here)\n If you want to dee…",
-          "link": "https://www.reddit.com/r/gamedev/comments/1d2m09c/i_read_steams_marketing_docs_so_you_dont_have_to/",
-          "publishedOn": "2024-05-28T15:19:07.000Z",
-          "wordCount": null,
-          "title": "I read Steam's marketing docs so you don't have to",
-          "imageUrl": null
         }
       ]
     },
@@ -24889,6 +24679,26 @@
       "feedUrl": "https://www.reddit.com/r/godot/top/.rss?t=week",
       "siteUrl": "https://www.reddit.com/r/godot/top/?t=week",
       "articles": [
+        {
+          "id": "https://www.reddit.com/r/godot/comments/1dpfkbz/thread_why_isnt_an_interactive_credit_scene_a/",
+          "author": null,
+          "description": "submitted by    /u/anisaous  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/godot/comments/1dpfkbz/thread_why_isnt_an_interactive_credit_scene_a/",
+          "publishedOn": "2024-06-27T01:43:14.000Z",
+          "wordCount": null,
+          "title": "Thread: Why Isn't an Interactive Credit Scene a Thing in Games?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/godot/comments/1dp632a/couldnt_find_anyone_who_made_a_pixelated_water/",
+          "author": null,
+          "description": "submitted by    /u/taillight_games  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/godot/comments/1dp632a/couldnt_find_anyone_who_made_a_pixelated_water/",
+          "publishedOn": "2024-06-26T18:41:33.000Z",
+          "wordCount": null,
+          "title": "Couldn't find anyone who made a pixelated water system, so I made my own!",
+          "imageUrl": null
+        },
         {
           "id": "https://www.reddit.com/r/godot/comments/1dp547o/i_made_a_free_model_of_the_godot_plush_for_you_to/",
           "author": null,
@@ -26148,16 +25958,6 @@
           "wordCount": null,
           "title": "First look at my grappling-based action-platformer!",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/godot/comments/1d2nn4n/ah_right_accessibility_is_easy/",
-          "author": null,
-          "description": "submitted by    /u/ar_aslani  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/godot/comments/1d2nn4n/ah_right_accessibility_is_easy/",
-          "publishedOn": "2024-05-28T16:27:51.000Z",
-          "wordCount": null,
-          "title": "Ah.. Right... Accessibility is Easy ;)",
-          "imageUrl": null
         }
       ]
     },
@@ -26166,6 +25966,26 @@
       "feedUrl": "https://www.reddit.com/r/hacking/top/.rss?t=week",
       "siteUrl": "https://www.reddit.com/r/hacking/top/?t=week",
       "articles": [
+        {
+          "id": "https://www.reddit.com/r/hacking/comments/1dpf6eu/south_korean_isp_infected_torrenting_subscribers/",
+          "author": null,
+          "description": "submitted by    /u/KeyboardGunner  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/hacking/comments/1dpf6eu/south_korean_isp_infected_torrenting_subscribers/",
+          "publishedOn": "2024-06-27T01:23:45.000Z",
+          "wordCount": null,
+          "title": "South Korean ISP Infected Torrenting Subscribers with Malware",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/hacking/comments/1dpey57/curpsuite_not_opening_in_kali_stuck_on_splash/",
+          "author": null,
+          "description": "I've run update, upgrade, and even dist upgrade. I'm running java 23-ea. I don't see any errors when running from terminal.\n https://preview.redd.it/8fz2x8pml09d1.png?width=1329&format=png&auto=webp&s=e9fd76c0f12c05239835e3f43ac0fa164c1fb9aa\n    submitted by    /u/Jedihunter16  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/hacking/comments/1dpey57/curpsuite_not_opening_in_kali_stuck_on_splash/",
+          "publishedOn": "2024-06-27T01:11:44.000Z",
+          "wordCount": null,
+          "title": "Curpsuite not opening in kali. Stuck on Splash screen",
+          "imageUrl": null
+        },
         {
           "id": "https://www.reddit.com/r/hacking/comments/1dpad1a/polyfill_supply_chain_attack_hits_100k_sites/",
           "author": null,
@@ -27545,36 +27365,6 @@
           "wordCount": null,
           "title": "Traffic interception on a mobile app",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/hacking/comments/1d2raj0/otp_encoder_to_bypass_windows_defender/",
-          "author": null,
-          "description": "Hey guys I recently started with my journey to become a pentester. However all encoders I found out there all are getting flagged by the Windows Defender as I assume their signature is already well known. I therefore wrote my own encoder which is using OTP to encrypt the payload and then dynamically executes the payload from the stack using a malicious C program. I even managed to run a meterpreter session on a windows machine without the defender flagging the program with this. Feel free to check it out and provide some feedback :)\n https://github.com/tomLamprecht/OTPPayloadInjector\n Disclaimer: I'm well aware that by publicly uploading this encoder it might get flagged by the windows defender soon as well but who cares, it's all about the fun! \n    submitted by    /u/Lampard557  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/hacking/comments/1d2raj0/otp_encoder_to_bypass_windows_defender/",
-          "publishedOn": "2024-05-28T18:57:24.000Z",
-          "wordCount": null,
-          "title": "OTP Encoder to bypass Windows Defender",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/hacking/comments/1d2k4in/trying_to_find_the_2021_pixlr_data_dump/",
-          "author": null,
-          "description": "Hi all, I've been searching on every forum I know what that's still up for the 2021 pixlr data dump. It got dumped on breachforums, but since then (with the site seized and all) I can't find anything about it. I've tried dread, the archive, and all kinds of other forums, including here on reddit, and I still can't find it. It has to be out there, im sure of that, but I guess I don't know where to look. \n Any advice/help?\n    submitted by    /u/Static_25  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/hacking/comments/1d2k4in/trying_to_find_the_2021_pixlr_data_dump/",
-          "publishedOn": "2024-05-28T13:58:18.000Z",
-          "wordCount": null,
-          "title": "Trying to find the 2021 pixlr data dump",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/hacking/comments/1d2jukn/looking_for_commercial_solutions_of_faraday_cage/",
-          "author": null,
-          "description": "Hello everyone,\n I'm looking for a solution to test one product against jamming attacks. I've been asked to test the jamming consequences on the product with BLE, GPS, and LTE. The first solution is to get an FCC experimental license and conduct real jamming. The second option is to use a Faraday cage, but I'm looking for one that can block specific bands individually.\n Thanks in advance.\n    submitted by    /u/Xander_H1  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/hacking/comments/1d2jukn/looking_for_commercial_solutions_of_faraday_cage/",
-          "publishedOn": "2024-05-28T13:45:24.000Z",
-          "wordCount": null,
-          "title": "Looking for commercial solutions of faraday cage blocking only a certain bands",
-          "imageUrl": null
         }
       ]
     },
@@ -27583,6 +27373,16 @@
       "feedUrl": "https://www.reddit.com/r/programming/top/.rss?t=week",
       "siteUrl": "https://www.reddit.com/r/programming/top/?t=week",
       "articles": [
+        {
+          "id": "https://www.reddit.com/r/programming/comments/1dp59j6/forget_about_y2038_we_have_bigger_problems/",
+          "author": null,
+          "description": "submitted by    /u/Oknitram  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/programming/comments/1dp59j6/forget_about_y2038_we_have_bigger_problems/",
+          "publishedOn": "2024-06-26T18:06:58.000Z",
+          "wordCount": null,
+          "title": "Forget about Y2038, we have bigger problems",
+          "imageUrl": null
+        },
         {
           "id": "https://www.reddit.com/r/programming/comments/1dovypp/polyfill_js_supply_chain_attack_affects_over/",
           "author": null,
@@ -28771,26 +28571,6 @@
           "publishedOn": "2024-05-29T05:00:05.000Z",
           "wordCount": null,
           "title": "Google will discontinue Cloud Source Repositories",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/programming/comments/1d2xtpe/github_copilot_reenables_itself_after_being/",
-          "author": null,
-          "description": "submitted by    /u/brokenisthenewnormal  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/programming/comments/1d2xtpe/github_copilot_reenables_itself_after_being/",
-          "publishedOn": "2024-05-28T23:24:33.000Z",
-          "wordCount": null,
-          "title": "Github CoPilot Re-Enables Itself After Being Disabled",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/programming/comments/1d2nxvb/hash_collisions_how_large_is_a_160_bit_number/",
-          "author": null,
-          "description": "submitted by    /u/zachm  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/programming/comments/1d2nxvb/hash_collisions_how_large_is_a_160_bit_number/",
-          "publishedOn": "2024-05-28T16:40:28.000Z",
-          "wordCount": null,
-          "title": "Hash Collisions: How Large is a 160 Bit Number?",
           "imageUrl": null
         }
       ]
@@ -30069,36 +29849,6 @@
           "wordCount": null,
           "title": "is it only me feel that Udemy instructors speaks extraordinaly slow?",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/learnprogramming/comments/1d2xvi2/my_exact_path_from_no_code_to_software_developer/",
-          "author": null,
-          "description": "figured I would post this because it would have been a nice resource for me to come across in the position i was in when i started. last summer i was a newgrad with an unrelated degree working as a labourer in a graveyard, this summer i am a software developer intern and here is my exact path:\n  \ntake all of cs50\n take most of cs50p\n take NeetCodes intro to DSA course until binary trees (pirated it)\n start applying to internships: put cs50s final project and cs50s finance project on your resume\n do one personal project all on your own for resume (i made a basic fullstack website quiz minigame)\n do leetcode aiming to solve 5 questions weekly (I followed neetcodes roadmap up until binary trees)\n apply to 3-5 internships daily\n as you get interviews, study what you think the company can ask you (ex if the posting mentions REST api and OO programming memorize what rest apis do and the pillars of oop)\n go to recruiting events if youre a student (even a non cs student)\n  \nthis path got me hired in one of the worst job markets as a self taught developer. all the info is out there for free if you want it\n    submitted by    /u/Pioneer64  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/learnprogramming/comments/1d2xvi2/my_exact_path_from_no_code_to_software_developer/",
-          "publishedOn": "2024-05-28T23:26:48.000Z",
-          "wordCount": null,
-          "title": "My exact path from no code to software developer intern in 10 months",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/learnprogramming/comments/1d2nc0l/25_years_of_cobol/",
-          "author": null,
-          "description": "Not a programmer but studying. I had a player today who discussed with me her 25 year career in the medical field writing COBOL programs that manage health databases and prepare reports for doctors.\n I regaled all I have learned, name dropped the Commodore 64 I had seen on The Coding Train and she lit up. She told stories of code taking hours to compile, and how big her leap to Atari ST was.\n She was jovial and laughed that she was teaching history lessons and that I actually read about her workflows in books. What a cool connection.\n    submitted by    /u/Table-Games-Dealer  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/learnprogramming/comments/1d2nc0l/25_years_of_cobol/",
-          "publishedOn": "2024-05-28T16:15:07.000Z",
-          "wordCount": null,
-          "title": "25 years of COBOL",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/learnprogramming/comments/1d2kqka/what_most_programming_courses_missed/",
-          "author": null,
-          "description": "For the beginners out there, where are most of online programming courses failing at?\n    submitted by    /u/Traditional-Top-1504  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/learnprogramming/comments/1d2kqka/what_most_programming_courses_missed/",
-          "publishedOn": "2024-05-28T14:24:52.000Z",
-          "wordCount": null,
-          "title": "What most programming courses missed",
-          "imageUrl": null
         }
       ]
     },
@@ -30108,6 +29858,16 @@
       "siteUrl": "https://www.reddit.com/r/ProgrammerHumor/top/?t=week",
       "articles": [
         {
+          "id": "https://www.reddit.com/r/ProgrammerHumor/comments/1dp76yc/mathsandml/",
+          "author": null,
+          "description": "submitted by    /u/ExtensionBuffalo4297  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/ProgrammerHumor/comments/1dp76yc/mathsandml/",
+          "publishedOn": "2024-06-26T19:27:08.000Z",
+          "wordCount": null,
+          "title": "mathsAndML",
+          "imageUrl": null
+        },
+        {
           "id": "https://www.reddit.com/r/ProgrammerHumor/comments/1dp2ym8/earlydaysoflearningalgorithms/",
           "author": null,
           "description": "submitted by    /u/Devil-Eater24  \n [link]   [comments]",
@@ -30115,6 +29875,16 @@
           "publishedOn": "2024-06-26T16:31:35.000Z",
           "wordCount": null,
           "title": "earlyDaysOfLearningAlgorithms",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/ProgrammerHumor/comments/1doyb6c/lookinataboutfiftyunresolvedthreadsonmymergereques/",
+          "author": null,
+          "description": "submitted by    /u/TobyWasBestSpiderMan  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/ProgrammerHumor/comments/1doyb6c/lookinataboutfiftyunresolvedthreadsonmymergereques/",
+          "publishedOn": "2024-06-26T13:13:25.000Z",
+          "wordCount": null,
+          "title": "lookinAtAboutFiftyUnresolvedThreadsOnMyMergeRequest",
           "imageUrl": null
         },
         {
@@ -31386,26 +31156,6 @@
           "wordCount": null,
           "title": "useShift",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/ProgrammerHumor/comments/1d2rqwm/rewritefsdwithoutcnn/",
-          "author": null,
-          "description": "submitted by    /u/CodiQu  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/ProgrammerHumor/comments/1d2rqwm/rewritefsdwithoutcnn/",
-          "publishedOn": "2024-05-28T19:15:23.000Z",
-          "wordCount": null,
-          "title": "rewriteFSDWithoutCNN",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/ProgrammerHumor/comments/1d2odf9/imsuperuser/",
-          "author": null,
-          "description": "submitted by    /u/yuva-krishna-memes  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/ProgrammerHumor/comments/1d2odf9/imsuperuser/",
-          "publishedOn": "2024-05-28T16:58:59.000Z",
-          "wordCount": null,
-          "title": "imSuperUser",
-          "imageUrl": null
         }
       ]
     },
@@ -31442,6 +31192,16 @@
           "publishedOn": "2024-06-25T16:39:18.000Z",
           "wordCount": null,
           "title": "KDE Plasma 6.1.1 has been released!",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/linux/comments/1do8a63/shoutout_to_onlyoffice/",
+          "author": null,
+          "description": "My dear Arch laptop did not let me down once again. I had to work on some files made in Word and whatnot for the first time since I switched from Windows. I had LibreOffice installed and until now it was enough for basic needs. But this time it didn't quite provide enough. The document was messed up and it was tricky to work with. So I tried OnlyOffice and everything was fine! I know there are other workarounds, but this worked by far the best for me.\n    submitted by    /u/XoZu  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/linux/comments/1do8a63/shoutout_to_onlyoffice/",
+          "publishedOn": "2024-06-25T15:07:55.000Z",
+          "wordCount": null,
+          "title": "Shoutout to OnlyOffice",
           "imageUrl": null
         },
         {
@@ -32743,16 +32503,6 @@
           "wordCount": null,
           "title": "Hacking the Spotify car thing",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/linux/comments/1d2s1hw/create_gifs_on_linux/",
-          "author": null,
-          "description": "https://preview.redd.it/yxz2fhpbx73d1.png?width=730&format=png&auto=webp&s=175c887d2ee966228a015830216c6226eaed2147\n Hello everyone, I hope you are well. I have created this program to make GIFs on Linux. It is very simple and practical. I decided to create this program because there are few tools on Linux that perform this function. Below, you will find the code and instructions on how to use it.\n import tkinter as tk from tkinter import filedialog, messagebox, Listbox, Scrollbar, Frame, Canvas, SINGLE, Menu from PIL import Image, ImageTk, ImageSequence import os class GIFEditor: def __init__(self, master): \"\"\"Initialize the GIF editor with the main window and UI setup.\"\"\" self.master = master self.master.title(\"GIFCraft - GIF Editor\") self.frame_index = 0 self.frames = [] self.delays = […",
-          "link": "https://www.reddit.com/r/linux/comments/1d2s1hw/create_gifs_on_linux/",
-          "publishedOn": "2024-05-28T19:27:39.000Z",
-          "wordCount": null,
-          "title": "Create GIFs on Linux",
-          "imageUrl": null
         }
       ]
     },
@@ -32761,6 +32511,26 @@
       "feedUrl": "https://www.reddit.com/r/archlinux/top/.rss?t=week",
       "siteUrl": "https://www.reddit.com/r/archlinux/top/?t=week",
       "articles": [
+        {
+          "id": "https://www.reddit.com/r/archlinux/comments/1dpaeln/is_having_arch_just_as_a_second_os_even_worth_it/",
+          "author": null,
+          "description": "Recently, I've been recommended Arch Linux. I was shown how great it runs on a laptop that couldn't even run any up-to-date Windows OS good enough. Because of that I wanted to see how it is myself. I decided to dualboot Arch with Windows 11, it all went smoothly. For the past few days I've been experimenting with a lot of stuff on Arch and I love how it all works. The terminal is great, customization is great, community is great, and I just appreciate the fact that something like Arch exists. However I still end up using Windows 11 for the regular stuff I do. Playing games, watching stuff, communication and many other due to how a most of the stuff is designed with just or mostly Windows in mind. However as always, there are workarounds and alternatives for a lot of these things. Not all unfortunately and that's why I think I'll always have to have a dualboot even if I end up liking Arch so much that it could be my single OS because of some of the things that you can't really do on it.\n I don't really have any things that require me to have Arch Linux or just a Linux in particular, I feel alright with what I can get using Windows, but I also somehow feel like I'd want to use Linux (Arch in particular) and get familiar with it. See how I can use it and whether I'll enjoy it or not. I'm neither a full Linux beginner or experienced. \n What do you think? Would it be a good idea to make Arch my main OS for a while and see how it goes? Try to transfer most of the stuff I do on Windows to Linux? Or should I just stay with Windows? Maybe find an old PC/Laptop and get Arch there? \n I'm really sorry if this seems like a \"stupid\" question. I really ended up liking Arch and Linux as a whole and would like to learn more, I see how it is better but I just don't know what I should do with this due to the fact that I'm really used to and feel dependent on Windows.\n Thank you for your time.\n    submitted by    /u/JxPV521  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/archlinux/comments/1dpaeln/is_having_arch_just_as_a_second_os_even_worth_it/",
+          "publishedOn": "2024-06-26T21:41:07.000Z",
+          "wordCount": null,
+          "title": "Is having Arch just as a second OS even worth it? Should I try adapting to it, or just stay on Windows?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/archlinux/comments/1dp4d63/just_another_basic_arch_installer_written_in_rust/",
+          "author": null,
+          "description": "I wrote a basic installer for Arch in Rust. It's basically a bash script wrapped around some rust code. \n It installs and sets up a very basic system for use. I would've added screenshots, but for some reason it's disabled on this sub.\n Try it out if you have time.\n    submitted by    /u/ParaPsychic  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/archlinux/comments/1dp4d63/just_another_basic_arch_installer_written_in_rust/",
+          "publishedOn": "2024-06-26T17:29:57.000Z",
+          "wordCount": null,
+          "title": "Just another basic Arch installer, written in Rust",
+          "imageUrl": null
+        },
         {
           "id": "https://www.reddit.com/r/archlinux/comments/1dp2qyv/arch_is_amazing/",
           "author": null,
@@ -34100,16 +33870,6 @@
           "wordCount": null,
           "title": "RTL8822CE module",
           "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/archlinux/comments/1d2vqn7/apple_sidecar_but_for_linux/",
-          "author": null,
-          "description": "Is there something like apples \"sidecar\" (using an iPad as a secondary monitor for a MacBook) for Linux which allows me to use my iPad as a secondary screen? \n Thanks!\n    submitted by    /u/A4orce84  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/archlinux/comments/1d2vqn7/apple_sidecar_but_for_linux/",
-          "publishedOn": "2024-05-28T21:54:06.000Z",
-          "wordCount": null,
-          "title": "Apple \"sidecar\" but for Linux?",
-          "imageUrl": null
         }
       ]
     },
@@ -34118,6 +33878,36 @@
       "feedUrl": "https://www.reddit.com/r/debian/top/.rss?t=week",
       "siteUrl": "https://www.reddit.com/r/debian/top/?t=week",
       "articles": [
+        {
+          "id": "https://www.reddit.com/r/debian/comments/1dpet0q/has_it_ever_happened_to_you_that_apache2_was/",
+          "author": null,
+          "description": "After a power failure I had some downtime because port 80 was already used and certbot could not generate new certs, I just want to know if I'm not the only one\n    submitted by    /u/FisionX  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/debian/comments/1dpet0q/has_it_ever_happened_to_you_that_apache2_was/",
+          "publishedOn": "2024-06-27T01:04:29.000Z",
+          "wordCount": null,
+          "title": "Has it ever happened to you that apache2 was activated on its own on systemd?",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/debian/comments/1dp9rus/how_can_you_tell_when_a_package_will_probably_be/",
+          "author": null,
+          "description": "I'm a DigiKam user and I use Debian stable, where 7.9 is the latest release.\n 7.9 is from 2022 and there are many new features I hope to make use of.\n But I have no idea when this update will take place. I'm starting to think I have to wait for Trixie.\n Is there any way to have some sort of idea what the progress is. I haven't found anything about this.\n    submitted by    /u/liptoniceicebaby  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/debian/comments/1dp9rus/how_can_you_tell_when_a_package_will_probably_be/",
+          "publishedOn": "2024-06-26T21:14:42.000Z",
+          "wordCount": null,
+          "title": "How can you tell when a package will probably be updated",
+          "imageUrl": null
+        },
+        {
+          "id": "https://www.reddit.com/r/debian/comments/1dp4hey/windows_dual_boot_with_debain/",
+          "author": null,
+          "description": "https://preview.redd.it/4rb17n20cy8d1.png?width=1519&format=png&auto=webp&s=946b4d827f84f53104699da57d87c8ad31723a21\n I never do partitions or OperatingSystems things before. Help me with partition, between both disk are ssd and debain will be my primary/only workspace\n    submitted by    /u/ZeRoGrAvItY_00  \n [link]   [comments]",
+          "link": "https://www.reddit.com/r/debian/comments/1dp4hey/windows_dual_boot_with_debain/",
+          "publishedOn": "2024-06-26T17:34:50.000Z",
+          "wordCount": null,
+          "title": "Windows dual boot with debain",
+          "imageUrl": null
+        },
         {
           "id": "https://www.reddit.com/r/debian/comments/1dp2hex/hyprland_on_debian/",
           "author": null,
@@ -35476,26 +35266,6 @@
           "publishedOn": "2024-05-29T07:18:50.000Z",
           "wordCount": null,
           "title": "(Question) - Do backported kernels receive security updates?",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/debian/comments/1d2t7sr/trying_to_get_a_clean_and_printable_log_of_a/",
-          "author": null,
-          "description": "Here a preview of qemu without additional parameters, i could manually select the text from serial0 and paste it on my host without formatting issues, no ANSI garbage, clean output, but i need to automate the log creation and the system need to be run inside a terminal.\n boot_loader_serial0\n htop_in_serial0\n here my /boot/grub/grub.cfg.\n GRUB_TIMEOUT_STYLE=list GRUB_CMDLINE_LINUX_DEFAULT=\"console=tty0 console=ttyS0,9600n8\" GRUB_CMDLINE_LINUX=\"quiet\" GRUB_TERMINAL=\"serial console\" GRUB_TERMINAL_COLOR=\"dumb\" \n Here the qemu script for running linux in the terminal and log it':\n DRIVE=\"$HOME/Documents/DONE/debian_stable_debootstrap_bios/deb_stable_bios.img\" sudo qemu-system-x86_64 \\ -m 2G \\ -smp 2 \\ -drive file=\"$DRIVE\",format=raw,if=virtio \\ -net user,host=10.0.2.10,hostfwd=tcp:127.0.0.1:100…",
-          "link": "https://www.reddit.com/r/debian/comments/1d2t7sr/trying_to_get_a_clean_and_printable_log_of_a/",
-          "publishedOn": "2024-05-28T20:12:01.000Z",
-          "wordCount": null,
-          "title": "Trying to get a clean and printable log of a virtualised linux system",
-          "imageUrl": null
-        },
-        {
-          "id": "https://www.reddit.com/r/debian/comments/1d2p3ri/why_is_debian_testing_missing_so_many_packages/",
-          "author": null,
-          "description": "I use testing and for a while now I have noticed that a handful of packages I use simply do not exist on testing but do exist on stable and unstable. Anyone know why?\n trash-cli\n stable\n testing\n unstable\n gsmartcontrol is another one.\n    submitted by    /u/nuL808  \n [link]   [comments]",
-          "link": "https://www.reddit.com/r/debian/comments/1d2p3ri/why_is_debian_testing_missing_so_many_packages/",
-          "publishedOn": "2024-05-28T17:29:14.000Z",
-          "wordCount": null,
-          "title": "Why is Debian Testing missing so many packages?",
           "imageUrl": null
         }
       ]
